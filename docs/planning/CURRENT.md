@@ -1,71 +1,52 @@
-# Current work — M209 complete: sleep loss changes action
-Base621842a4. Build sleep -> current permitted evidence -> existing control/choice.
-Three capabilities: body-owned sleep kinetics; C1 current readiness evidence;
-actual candidate inhibition while retained learned history remains available.
-This is a bounded connection toward BRIEF-12.1-6, not full sleep/family acceptance.
-M208 retains all20 original sleep cases/52 prefixes and intoxication obligations.
+# Current work — M210: observed demand joins sleep readiness
+Base19003af4. Complete the missing nonzero-load connection toward BRIEF-12.1-6.
+One capability: current observed task demand changes the existing inhibition and
+actual action while sleep, acquired skill and workspace occupancy stay fixed.
+Original protective identity, explicit withhold and20-run/52-prefix cohort remain
+required. CommitmentFidelity is not protective identity; do not relabel it.
 
 ## Receiving contract before code
-assembled-sleep-control/0.1; rules/registry0.136-candidate.
-BODY_OWNER gains455/3: time, sleep debt, circadian phase, stationary burden/arousal.
-Stationary physical operands are explicit initial body values, sensed normally;
-no exposure/arousal kinetics or motor claim. Existing455/2 stress is materialized
-from its accepted decay, read only by the sensor; no second stress authority.
-Full biology sleep accumulation/recovery/circadian law; exact integer domains.
-Current capacity uses original biological formula at load0. No workspace exchange
-rate: native occupied slots keep the existing maintenance/spare-slot predicate.
-Conjoin readiness with existing maintenance, spare slot and remembered-fatigue
-checks. Missing current readiness makes the inhibition condition unavailable.
-NoReadiness removes only this new condition; it is not original NoControl.
-Original load800 acquisition correspondence and full cohort remain pending.
-Versioned contract: docs/formal/ASSEMBLED_SLEEP_CONTROL_CONTRACT.md.
+Append assembled-sleep-control/0.2-candidate, rules/registry0.137-candidate.
+Use original capacity=clamp(1000-roundEven(physiological sum/2)-load).
+Load is integer0..1000 current task demand, not a workspace-slot conversion,
+physical state, perceived capacity, learned belief or second resource owner.
+Extend the existing control instruction/observation with explicitly visible demand.
+New version requires seven-position control sources, last position demand.
+Invisible or absent current instruction leaves load unknown; no implicit zero.
+Observation20 carries only permitted demand; workspace40 consumes that receipt.
+No carry of yesterday's load. Old versions retain six-position sources and load0.
+One shared scheduler/state/save; no new state leaf or mutation authority.
 
-## Native comparison declared
-Use current M200 trained/free physical scenario (actual practice12, seed0).
-Three nonsocial tasks; original reserve10/rate0, A-only route, difficulty1/2.
-No learned S0; only existing permitted outcomes teach. Workspace6.
-Add goal adoption13, reminders14/16. Sleep sources every integer1..16,
-accumulation100/recovery1000/nightDrive0, threshold800/resolution10.
-All arms sleep through8; Rested continues; Deprived wakes9 onward;
-Recovered sleeps again at consequence14. Thus14 readiness950/700/700,
-recovery does not revise14; at16 Rested/Recovered inhibit, Deprived does not.
-Assert actual acquired skill and original shared history equal through12,
-live maintained goal/spare slot/target candidate in each compared arm.
-Require target choice versus withheld target, or exact actual-input probability
-difference; sampled-choice claims only with no dice or proven coupled actual draws.
-Retain private physical differences with denied evidence, biased sleep signal,
-NoReadiness and lost-maintenance controls. Rested plus retained grade2 fatigue must still impair control.
-Exact save12 ->16 continuation; repeat determinism through12.
-No post-result law/seed tuning; ordinary setup repairs recorded before rerun.
+## Predeclared comparison
+Reuse M209 Rested scene: three nonsocial tasks, reserve10/rate0, A-only route,
+actual skill practice12, no learned S0, workspace6, seed0; sleep every consequence.
+Current body channels live. Adopt protective control goal13, reminders14/16.
+At14 compare visible demand0 versus800, holding every other source/law fixed.
+Require live goal, maintenance, spare slot, current readiness and target candidate;
+capacity950 versus150; original target inhibited versus actually chosen.
+At16 both demand0: capacity950 and inhibition returns without readoption.
+Capture actual consumed receipt/causal parents and prove no physical-truth reads.
+No dice expected at these automatic choices; assert that before a choice claim.
+Exact repeat12 and save12->14->16 equality of state/outputs/trace/save.
+Controls: invisible800 and absent14 receipt leave load unavailable (not0);
+a later visible0 recovers. Original0.136 M209 native witness remains unchanged.
+Math oracle uses original biology appraise at loads0/1/199/200/800/1000, including
+rounding/clamp/equality/missing operands. Invalid loads/version/source arity reject.
+No seed search, coefficient tuning, new identity interpretation or cohort closure.
 
-## Files, checks, budgets
-<=10 production/test files (within12): sleepControl.ts, body.ts, model.ts, state.ts, inputs.ts,
-runtime.ts, controlExecution.ts, traceBinding.ts; one fixture and one test. No C2/C3 source changes.
-Formal contract plus CURRENT/register/ledger/obligation link/result/raw log.
-Types<=120s; focused math/admission/ownership/C1/rollback<=300s;
-native witness/restore and controls serial, each<=600s; total<=1800s including
-failures/diagnoses. <=20 evidence files/5MiB. Plan committed before implementation.
-Repair: add0.136 to existing exact trace binding admission; first boundary run
-rejected the omitted version. Native inspection then hit an obsolete test decoder;
-use the existing assembled decoder. Retain failures; no law/comparison change.
-Input-only source added to scheduler rejection guard. Review also requires an
-explicit existing BODY_OBSERVER-to-holder read before sensing (C1 boundary).
-Rerun affected native/continuation after that guard; no fixture/law amendment.
-Second native inspection used list access on a record-shaped trace projection.
-Repair the reader; one deprived-arm diagnostic checks it before the full rerun.
-Check preserved M55 fatigue witness and affected stress test only if dependency
-changes invalidate them; legacy version path unchanged, full frozen C2 not rerun.
-FND1–6: exact arithmetic, phase/atomicity/read-write trace, governed admission and
-hidden-truth controls affected. No UI/peer work, new scheduler or second save.
-R3 engineering default, no superiority. MEC001/003/011..019/022 retained.
+## Files and checks
+At most8 production/test files: sleepControl.ts, model.ts, control.ts,
+controlExecution.ts, inputs.ts, traceBinding.ts; one new fixture and one new test.
+Contract append plus CURRENT/register/ledger/review/result/raw log.
+Types<=120s; math/admission<=180s; native/continuation<=600s;
+privacy/missing-current<=400s; original M209 native<=600s, serial.
+Total<=1800s including diagnoses/repairs; <=20 evidence files/5MiB.
+FND1..6: exact math, source versioning, observed-only consumption, atomic phases,
+one authority, exact continuation. Existing M209 physical rollback remains valid:
+no changes to physical handler, state writes or child emission.
+No C2/C3/substrate/OBS/SEM changes; frozen-control suite not invalidated.
+MEC001/003/011..019/022 retain ports/controls/corpus/comparators; no reduction.
 RO008/009/012/013/020 conditional; historical019/021 remain closed.
-Done: native causal comparison, boundary/privacy/restore/types/preservation PASS.
-Verification1549.184/1800s including failures; no timeout/extension.
-Result: ASSEMBLED_CHARACTER_M209_RESULT.md. Stop verification.
-Next: original sleep cohort, protective identity and acquisition-load correspondence;
-intoxication follows its explicit motor-boundary reconciliation.
-12.1-6 is now PARTIAL (native connection; original cohort pending).
-21/15/132; E71/P36/N12/U13;3 accepted families, original version scopes.
-| Status | Count |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+Done: causal action gate, missing/private evidence, exact continuation, legacy
+witness, types/preservation/research/size PASS. Stop verification on pass.
+21/15/132; E71/P36/N12/U13;3 accepted families retain their original versions.

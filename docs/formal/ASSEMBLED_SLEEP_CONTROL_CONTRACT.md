@@ -54,3 +54,29 @@ do not admit the new slot, source or body leaf; no Campaign3 factory is imported
 M208's original comparisons, identity/dice and strict intoxication execution boundary
 remain required. No family acceptance, general biology, autonomous sleep policy,
 clinical units or full interaction coherence is established by this amendment.
+
+## M210 receiving extension — 0.2-candidate
+Rules/registry0.137-candidate uses declaration tag assembled-sleep-control/0.2,
+with the same seven declaration positions and physical semantics as0.1.
+Physical source/anchor/sample/receipt tags and the physical seam remain0.1.
+Only the receiving control seam advances to0.2. Earlier versions retain0.1.
+
+Control source is [controlTag,instruction,reminder,support,card,visible,demand],
+with demand integer0..1000. This is externally presented task demand through the
+existing control observation channel, not an authored belief or capacity.
+Observe20 appends [demand] when visible, [] otherwise. Workspace40 requires that
+current observation; no receipt or invisible demand makes readiness unavailable.
+Instruction, maintenance and card semantics retain their existing behavior.
+No persistent demand store, new authority, slot conversion or resource reservation.
+
+Capacity=clamp(1000-roundEven((sleep+stress+burden+abs(arousal-500))/2)-demand).
+The original biological integration load operand is preserved numerically.
+All five operands must be known; enabled=false still ablates readiness only.
+Existing maintained-goal, spare-slot and remembered-fatigue predicates remain.
+Control input/output traces retain the consumed demand receipt and delivery parent.
+A later visible demand changes only that later decision. Missing current demand
+never inherits an earlier value. Model identity distinguishes this input contract.
+
+This extension closes neither acquired protective identity nor explicit withholding.
+Current CommitmentFidelity is a different identity channel. Full original cohort
+and its identity/dice/history controls remain mandatory before12.1-6 acceptance.
