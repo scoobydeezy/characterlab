@@ -8,7 +8,7 @@ import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 import {fixture,start,cases,caseKey,main,state,decode,items,key,enc,list,text,u,C,rec,f,uint,at,type Case,type Run} from './fixtures/assembledSleepCohort';
 import {restorePreparedCharacterRun,characterModelIdentity} from '../assembled/character';
 import {cachedMemory} from './fixtures/assembledMemoryFinal';
-import {SKILL_ACTUAL,SKILL_UPDATE} from '../assembled/skill';
+import {sid,SKILL_ACTUAL,SKILL_UPDATE} from '../assembled/skill';
 import {OPPORTUNITY_RESULT} from '../assembled/externalObstruction';
 import {ACTION_BODY} from '../assembled/actionBody';
 import {sleepAnchor,sleepPath,SLEEP_SAMPLE,SLEEP_RECEIPT,READINESS} from '../assembled/sleepControl';
@@ -29,11 +29,13 @@ const tag=(v:CanonicalValue)=>typeof v!=='boolean'&&v.kind==='list'&&typeof v.it
 const tagged=(out:readonly CanonicalValue[],name:string)=>out.filter(v=>tag(v)===name).map(v=>items(v,'list'));
 const records=(out:readonly CanonicalValue[],type:bigint)=>out.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===type).map(v=>rec(v,type));
 const rational=(v:CanonicalValue)=>{const a=readQ(v);return a.numerator+'/'+a.denominator;};
-const positive=key(items(items(decode(fixture(cases[0]).s.registry),'list')[57],'list')[1]);
+const positive=key(sid(1027,'definition/protocol-contact-one'));
 const action=(v:CanonicalValue)=>key(f(rec(v,395n),2n))===positive?'drug':'withhold';
 const jp=journalPath(r(412,[C,PROTECTION_CHANNEL],2));
-const privateTags=new Set(['assembled-reward-experience/0.1/physical','assembled-action-body/0.1','assembled-action-body-receipt/0.1',SKILL_ACTUAL,SKILL_UPDATE,'execution-opportunity-result/0.1','external-obstruction-result/0.1','assembled-regulatory-stress/0.1/applied']);
-function safe(run:Run,out:readonly CanonicalValue[]){return enc(list([list(out.filter(v=>!privateTags.has(tag(v)??'')&&!(typeof v!=='boolean'&&v.kind==='record'&&[433n,454n,457n].includes(v.schema.typeId)))),decode(run.decisionHistory()),decode(run.decisionPresentation())]));}
+const privateTags=new Set(['assembled-tolerance-effect/0.1','assembled-reward-experience/0.1/physical','assembled-action-body/0.1','assembled-action-body-receipt/0.1',SKILL_ACTUAL,SKILL_UPDATE,'execution-opportunity-result/0.1','external-obstruction-result/0.1','assembled-regulatory-stress/0.1/applied']);
+const observerOutput=(v:CanonicalValue)=>!privateTags.has(tag(v)??'')&&!(typeof v!=='boolean'&&v.kind==='record'&&[433n,454n,457n].includes(v.schema.typeId));
+function safe(run:Run,out:readonly CanonicalValue[]){return enc(list([list(out.filter(observerOutput)),decode(run.decisionHistory()),decode(run.decisionPresentation())]));}
+function normalizeStoredStream(compressed:string){const a=items(decode(inflateSync(Uint8Array.from(atob(compressed),c=>c.charCodeAt(0)))),'list');return enc(list([list(items(a[0],'list').filter(observerOutput)),...a.slice(1)]));}
 function capture(run:Run,logical:number){
  const snap=run.snapshot(),out=items(decode(snap.outputs),'list'),now=BigInt(logical+1),s=state(run),cv=tagged(out,CONTROL_VIEW).find(a=>uint(a[1])===now)!;
  expect(cv,'live current control').toBeDefined();const rd=items(cv.find(v=>tag(v)===READINESS)!,'list'),sample=items(items(rd[4],'list')[3],'list'),axes=items(sample[4],'list').map(v=>{const x=items(v,'list');return x.length?Number(uint(x[0])):null;});
@@ -44,7 +46,7 @@ function capture(run:Run,logical:number){
 }
 async function runCase(c:Case){
  const began=performance.now(),x=await start(fixture(c)),prefixes:number[]=c.law==='Full'&&c.seed===0&&main.includes(c.scenario as never)?[0,2,7,8,9]:[0],rows:ReturnType<typeof capture>[]=[],checks:any[]=[];let pending:Run|undefined,pendingRow:any;
- console.info('M215 START',caseKey(c));
+ expect(key(items(items(decode(x.b.s.registry),'list')[57],'list')[1])).toBe(positive);console.info('M215 START',caseKey(c));
  for(let native=1;native<=13;native++){
   expect(await x.run.settleNextInstant()).toBe(true);expect(x.run.snapshot().clock).toBe(BigInt(native));
   if(pending){expect(await pending.settleNextInstant()).toBe(true);const a=x.run.save(),b=pending.save();eqbytes(a,b);pendingRow.next=hash(a);pending=undefined;}
@@ -78,11 +80,12 @@ it('compare215 full frozen twenty-case gate',()=>{
   for(const at of [9,12]){expect(row('Recovered',at,seed).inhibited).toBe(true);expect(row('Recovered',at,seed).capacity).toBe(950);}
   for(let at=1;at<=12;at++){const a=row('Rested',at,seed);for(const name of ['Deprived','Recovered']){const b=row(name,at,seed);expect(b.learned).toBe(a.learned);expect(b.journal).toBe(a.journal);expect(b.formation).toBe(a.formation);expect(b.goal).toBe(a.goal);}if(at>=3)expect(a.sleep.slice(1)).toEqual([0,0,500]);}
  }
- const stream=(name:string)=>inflateSync(Uint8Array.from(atob(get(name).safeCompressed!),c=>c.charCodeAt(0)));eqbytes(stream('BlindRested'),stream('BlindDeprived'));expect(get('BlindRested').safe).toBe(get('BlindDeprived').safe);expect(row('BlindRested',8).physicalDebt).not.toBe(row('BlindDeprived',8).physicalDebt);expect(row('BlindRested',8).capacity).toBeNull();expect(row('BlindDeprived',8).capacity).toBeNull();
+ const stream=(name:string)=>normalizeStoredStream(get(name).safeCompressed!);eqbytes(stream('BlindRested'),stream('BlindDeprived'));expect(get('BlindRested').safe).toBe(get('BlindDeprived').safe);expect(row('BlindRested',8).physicalDebt).not.toBe(row('BlindDeprived',8).physicalDebt);expect(row('BlindRested',8).capacity).toBeNull();expect(row('BlindDeprived',8).capacity).toBeNull();
  const falseRested=row('FalseRested',8);expect(falseRested.physicalDebt).toBe(600);expect(falseRested.sleep[0]).toBe(0);expect(falseRested.capacity).toBe(1000);expect(falseRested.inhibited).toBe(true);
  expect(get('FailedExecution').decisions).toBe(get('Recovered').decisions);expect(get('FailedExecution').presentation).toBe(get('Recovered').presentation);expect(get('FailedExecution').safe).not.toBe(get('Recovered').safe);expect(get('FailedExecution').physical[0]).toMatchObject({logical:8,available:false,status:'Blocked',chosen:'drug'});expect(get('Recovered').physical[0]).toMatchObject({logical:8,available:true,status:'Applied',chosen:'drug'});const failedSafe=items(decode(stream('FailedExecution')),'list'),recoveredSafe=items(decode(stream('Recovered')),'list'),fo=items(failedSafe[0],'list'),ro=items(recoveredSafe[0],'list');expect(fo.length).toBe(ro.length);const differences:string[]=[];for(let i=0;i<fo.length;i++)if(key(fo[i])!==key(ro[i])){const a=tag(fo[i]),b=tag(ro[i]);expect(a).toBe(b);expect(a?.startsWith('assembled-reward-experience/0.1')||a?.startsWith('assembled-numeric-reward/0.1')).toBe(true);differences.push(a!);}expect(differences.length).toBeGreaterThan(0);expect(failedSafe.slice(1)).toEqual(recoveredSafe.slice(1));console.info('M215 execution sensory interaction',JSON.stringify([...new Set(differences)]));const whole=JSON.parse(readFileSync(file,'utf8'));expect(whole.inertExecution?.pass).toBe(true);
  const unmaintained=row('Unmaintained',9);expect(unmaintained.active).toBe(true);expect(unmaintained.maintained).toBe(false);expect(unmaintained.inhibited).toBe(false);expect(unmaintained.capacity).toBe(950);
  for(const name of main){const a=row(name,8,0,'NoControl');expect(a.inhibited).toBe(false);expect(a.probabilities).toEqual(row('Rested',8,0,'NoControl').probabilities);expect(a.chosen).toEqual(row('Rested',8,0,'NoControl').chosen);expect(a.draws).toBe(row('Rested',8,0,'NoControl').draws);expect(row(name,2,0,'NoControl').journal).toBe(row(name,2).journal);}expect(row('Rested',8,0,'NoControl').capacity).not.toBe(row('Deprived',8,0,'NoControl').capacity);
+ whole.qualification={pass:true,originalRuns:20,selectedPrefixes:52,advancing:32,terminal:20,observerPrivateTags:[...privateTags],observerStreams:Object.fromEntries(['BlindRested','BlindDeprived','Recovered','FailedExecution'].map(name=>{const b=stream(name);return [name,{sha256:hash(b),bytes:b.length}];})),executionDifferenceTags:[...new Set(differences)],supplementaryInertRuns:2};writeFileSync(file,JSON.stringify(whole,null,2)+'\n');
  console.info('M215 COMPLETE20/52: all original main, hidden/biased sensing, execution, maintenance and NoControl comparisons; held acquired histories; actual probability differences;32 advancing/20 true terminal saves');
 });
 

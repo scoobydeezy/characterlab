@@ -1,6 +1,7 @@
 # Current work — M215 full sleep/control qualification
 M214 complete3ad48d33;0.141. A1 passed3 main seed0 runs/18 prefixes,1020.288s.
-A2 active: remaining9 main runs/18 prefixes. Owner delegates full sleep acceptance.
+A2 passed9 main runs/18 prefixes,1292.813s. B active:8 controls/16 prefixes,
+supplementary inert pair and final gate. Owner delegates full sleep acceptance.
 ## Bounded card — before implementation
 Observable capability: genuinely learned pleasure and protective identity persist
 while prior wake/recovery changes sensed control, inhibition and actual decision
