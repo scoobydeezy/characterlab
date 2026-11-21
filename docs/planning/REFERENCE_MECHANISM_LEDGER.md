@@ -1259,3 +1259,12 @@ histories to0.134. Known0/1, Unknown and unbound reports stay distinct; hidden
 causes/denied content preserve whole safe history. Negative acquisition survives
 rollback/restore. MEC004/015/017/019/022 unchanged; no law/code/family closure.
 Original route-context/goal/terminal histories remain. [Result](ASSEMBLED_CHARACTER_M203_RESULT.md).
+
+M204 ports original acquired-context semantics into0.135 knowledge1000/7.
+Actual outcomes acquire visible scope or absence; later reports/current context
+cannot repair absent scope. Other-scope episodes are excluded from later appraisal;
+goal0 preserves expectation and zeroes appraisal. Same-instant witness/acquisition,
+privacy and atomic continuation pass. Earlier versions/controls remain unchanged.
+MEC004/015/017/019/022 stay PORT/CONTRACT/CORPUS; original four laws retained.
+Family gate and remaining terminal/current-version comparisons stay open.
+[Result](ASSEMBLED_CHARACTER_M204_RESULT.md).

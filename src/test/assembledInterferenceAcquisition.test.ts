@@ -99,7 +99,10 @@ it('M204 native scope filtering and goal separation',async()=>{
  const extra=list([text(INTERFERENCE_OBS),u(18),task,u(14),u(4),false,observed(h[4]).outcome!]);
  const rewrite=list([text(INTERFERENCE),list([list(changed),...h.slice(1),extra])]),patch={operations:[{kind:'set' as const,path:p,expected:{presence:true as const,value:prior},newValue:rewrite}]};
  expect(()=>component.stateModel.applyPatch(state,patch,KNOWLEDGE_OWNER)).toThrow('interference append only');
- expect(()=>component.stateModel.applyPatch(state,patch,sid(1034,'foreign-owner'))).toThrow();
+ const valid={operations:[{...patch.operations[0],newValue:list([text(INTERFERENCE),list([...h,extra])])}]};
+ expect(()=>component.stateModel.applyPatch(state,valid,sid(1034,'foreign-owner'))).toThrow();
+ expect(()=>component.stateModel.applyPatch(state,valid,KNOWLEDGE_OWNER,{writableRoots:[1000n],targetPaths:[]})).toThrow('write scope');
+ expect(()=>component.stateModel.applyPatch(state,valid,KNOWLEDGE_OWNER)).not.toThrow();
  const forged=[...items(acquisition,'list')],outcome=[...items(forged[3],'list')];outcome[1]=typedIdentifier(1164,u(999999));forged[3]=list(outcome);
  const invalid=new AuthoritativeState(state.entries().map(e=>eq(statePathValue(e.path),statePathValue(p))?{...e,value:list([text(INTERFERENCE),list([list(forged),...h.slice(1).map(v=>{const x=[...items(v,'list')];if(eq(x[6]??list([]),items(acquisition,'list')[3]))x[6]=list(outcome);return list(x);})])])}:e));
  expect(()=>component.stateModel.validateState(invalid)).toThrow('interference original support mismatch');
@@ -116,6 +119,8 @@ it('M204 acquisition and witness survive atomic rollback and exact continuation'
  // Actual same-instant acquisition + direct witness, not an authored state row.
  const h=interferenceJournal(view(repeat).state.read(interferencePath(taskB)).value,taskB,LIMIT,b.people,true),o=h.map(v=>interferenceObservation(v,taskB,LIMIT,b.people,true));
  expect(o.filter(x=>x.at===10n).map(x=>x.acquisition)).toEqual([true,false]);expect(items(h[1],'list')[0]).toEqual(text(INTERFERENCE_WITNESS));expect(o[1].positive).toBe(true);
+ const joint=view(repeat).traces.find(t=>{const e=rec(f(t,4n),130n);return eq(f(e,2n),signed(10))&&uint(f(e,3n))===140n&&items(f(t,13n),'list').some(v=>eq(v,list([text(INTERFERENCE),list(h.slice(0,2))])));});
+ expect(joint,'joint acquired+witness learning trace').toBeDefined();const input=items(f(joint!,12n),'list');expect(items(input[1],'list')).toEqual(h.slice(0,2));
  const saved=a.save();await through(a,13n);const before=view(a).snapshot;let reached=false;const originalTrace=traceModule.traceRecordValue;
  const spy=vi.spyOn(traceModule,'traceRecordValue').mockImplementation(v=>{const row=originalTrace(v);if(eq(v.event.eventTypeId,INTERFERENCE_ACQUIRE_LEARN)&&v.event.dueAt===14n){reached=true;throw Error('M204 acquisition140');}return row;});
  try{await expect(next(a)).rejects.toThrow('M204 acquisition140');expect(reached).toBe(true);snapshot({...a.snapshot(),status:before.status},before);}finally{spy.mockRestore();}

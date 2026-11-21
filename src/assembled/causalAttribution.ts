@@ -128,7 +128,7 @@ export function createCausalExecution(C:CanonicalValue,routes:Strategy,stateMode
    return {execute(ctx:EventHandlerContext<AuthoritativeState>){if(finished||cursor>=events.length||fp(ctx.event)!==fp(events[cursor++]))fail('scoped learning association');return {nextState:B0,outputs:[],emittedEvents:[],traceContributions:[]};},
     finish(state:AuthoritativeState){if(cursor!==events.length||finished)fail('scoped learning finish');finished=true;let next=state;
      const applied=candidates.map(c=>{const result=stateModel.applyPatch(next,c.patch,KNOWLEDGE_OWNER,{writableRoots:[1000n],targetPaths:[c.p]});next=result.state;return {c,diffs:result.diffs};});
-     rows=events.map(e=>{const own=applied.filter(x=>fp(x.c.last)===fp(e));return trace(e,e.payload,list(own.map(x=>x.c.next)),[],own.map(x=>x.c.prior.record),{operations:own.flatMap(x=>x.c.patch.operations)},own.flatMap(x=>x.diffs),key(e.eventTypeId)!==key(CAUSAL_LEARN));});return next;},
+     rows=events.map(e=>{const own=applied.filter(x=>fp(x.c.last)===fp(e));return trace(e,own.some(x=>x.c.fresh.length>1)?list([e.payload,list(own.flatMap(x=>x.c.fresh))]):e.payload,list(own.map(x=>x.c.next)),[],own.map(x=>x.c.prior.record),{operations:own.flatMap(x=>x.c.patch.operations)},own.flatMap(x=>x.diffs),key(e.eventTypeId)!==key(CAUSAL_LEARN));});return next;},
     traces(){if(!finished)fail('trace before scoped finish');return rows;}
    };
   }
