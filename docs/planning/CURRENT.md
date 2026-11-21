@@ -1,33 +1,35 @@
-# Current work — M200 complete: competence and opportunity preserved on0.134
-The current character distinguishes learned competence, external blocking and
-opportunity loss while preserving frozen choices and observer boundaries.
-[Result](ASSEMBLED_CHARACTER_M200_RESULT.md); [checks](ASSEMBLED_CHARACTER_M200_CHECKS.txt).
-Test-only transfer; all production, laws and original scenarios unchanged.
+# Current work — M201 agency-family acceptance review
+The current character has native competence, prevention, observer knowledge and
+repeated-interference connections. This milestone checks whether their evidence
+satisfies the complete pinned agency family, rather than inferring acceptance.
 
-## Completed transfers
-Real practice12 ->K1/2 versus0 at fixed difficulty1/2 and prior belief1.
-At14 trained/free succeeds; trained/blocked and both untrained cases fail.
-All failed outcome-only views agree. Denied success/failure produces identical
-Unknown queries and no observation/evidence/learned passive leaf.
-Same actual Auto choice/intent/expression/plan; no random-choice claim.
-Opportunity loss100 after frozen choice90 blocks competent execution110;
-same nonempty actual draws, intent and skill, authentic learned outcome1 versus0.
-Nonchosen loss, absent source, denied feedback and admission guards pass.
-Delay2: blocked10 never queues; admitted10 receipt still arrives12 after loss12.
-Full repeat/save/recovery/rollback through101, types and preservation pass.
+## Bounded card (before work)
+Base7d7342ae; rules/registry0.134-candidate. One review capability, no code changes.
+Scope: BRIEF-12.14-1..8, agency-public0.3's19 original runs/five candidates,
+and the repeated-interference component's required comparisons (clause5).
+Compare original source requirements with M192–M200 tests/results and their actual
+production consumers. Classify equivalent semantics, traced interactions, defects,
+law conflicts and missing mappings individually. No rerun merely for a new label.
+Retain GroupedMean/LastClaim/OutcomeOnly/OmniscientCause/SuccessAsIntent and
+AcrossEpisodeMean/LatestEpisode/EpisodeOnly/NoLearning alternatives and controls.
+No new law, fixture amendment, denominator change or historical qualification edit.
 
-## Next bounded gate
-Review/classify all original agency comparisons and all eight12.14 clauses
-against0.134 using M198 correction/visibility, M199 repetition/nonrecipient and
-M200 competence/hidden-success/opportunity/delay evidence. No new breadth.
-Retain the original law alternatives and violation controls. Missing mappings or
-unclassified differences block family acceptance; do not infer it from passing
-component cases. Keep the map in the existing register/one compact result.
-No rerun of passing tests without a specific new invalidation reason.
-Whole-character replay remains a separate gate. No UI or autonomous peer.
-E71/P35/N13/U13=132;21members/15families; accepted families2/15 unchanged.
-Memory0.126 and AFFECT/DECISION member0.129 retain their accepted scopes.
+## Files, checks and budgets
+Only CURRENT, reconciliation, mechanism ledger, research-obligation report link,
+one M201 result and one raw check log; zero production/test/formal paths.
+90 minutes source review; <=600s/check and <=1800s total verification, one job.
+At most2 evidence files/5MiB. Register <=250 lines/65536 CRLF bytes.
+Read pinned original scenarios and comparison assertions; inspect native assertions
+and source dependencies. Risk: mistaking narrower witnesses for original coverage.
+One preservation check: original pin hashes, unchanged production/tests/contracts,
+unchanged other family/member dispositions, exact clause/run mapping inventory,
+research/boundary, document/evidence budgets, staged size and whitespace.
+Types/runtime/frozen-control reruns are inapplicable unless source changes.
+Done: a complete eight-clause and original-comparison classification with either
+version-scoped acceptance or explicit missing requirements blocking acceptance.
+If a transfer is missing, record its exact next bounded implementation; do not
+invent equivalence or add breadth inside this review. Passing ends verification.
 
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+21members/15families/132clauses; E71/P35/N13/U13; accepted families2/15 unchanged
+until the review establishes otherwise. No whole-character acceptance or UI.
+Research obligations:0 active/18 conditional/0 unowned.
