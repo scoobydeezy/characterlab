@@ -1,36 +1,53 @@
-# Current work — M205 complete: terminal receipts and current histories
-The character preserves the difference between receiving evidence and using it.
-Terminal duplicate/new receipts cannot rewrite that instant's earlier appraisal.
-A later readout counts three episodes despite added support; an older-episode
-correction changes later probability2/3 to1/2 without rewriting the past.
-[Result](ASSEMBLED_CHARACTER_M205_RESULT.md); [checks](ASSEMBLED_CHARACTER_M205_CHECKS.txt).
+# Current work — M206: finite agency acceptance and version carry
+Base0ca51b31; review and bounded comparison before code.
+Decide family12.14 acceptance from eight clauses,19 agency mappings and the
+completed13+2 interference histories. No new phenomenon or reference-law choice.
 
-Rules/registry0.135 and all production/formal files unchanged from M204.
-Twelve primary/successor histories now run through the current character:
-main, clear, blocked, hidden, withheld, withheldChanged, noOpportunity,
-correction, primary duplicate/repeat and successor duplicate/repeat.
-M204's noContext/otherContext/goalZero complete the original13+2 finite map.
-Known0/1, Unknown, unbound reports and acquisitions without causal support remain
-distinct. Hidden/denied input changes preserve the complete permitted histories.
-Repeat/save15, reached correction16 learning140 rollback and exact full101
-continuation pass. Reference laws, seed0, original sources/controls are retained.
+## Concrete invalidation and comparison
+M204 changes only acquisition context/journal handling, composition/version
+binding and traces. Physical, skill, observer, arbitration/RNG code is unchanged.
+New events require explicit cross-version carry proof; old results stay0.134.
+RNG uses runtime resolution IDs, not scheduled event IDs; acquisition adds no
+runtime-ID allocation or draw. Verify actual addressed draws, never assume coupling.
+Three capabilities: physical carry, observer carry, finite family classification.
 
-## Next bounded work
-Perform the finite family12.14 acceptance review against M201's eight clauses,
-nineteen original agency runs and now-complete13+2 interference-history map.
-Keep M198–M200 physical/observer proofs labelled0.134. Classify their carry to
-0.135 explicitly; identify any concrete invalidation from added acquisitions,
-event identities or trace records before running affected checks. No automatic
-whole-family rerun and no silent promotion of old-version evidence.
-Do not add phenomena, autonomous peers, mitigation-choice gates or UI.
-Family12.14 stays UNRESOLVED until that review and any required repair pass.
+Paired0.134/0.135 runs use identical registry/S0/ordered input/seed bytes; change
+only rules/registry version strings. Use original unamended fixtures:
+M199 repeatedStakeholder main; M198 stakeholderKnowledge main;
+M200 competence trained/free and untrained/blocked; M200 opportunity available/lost.
+Each full calendar101; no seed search, parameter tuning or authored intermediates.
+At every settled instant compare all non-interference authoritative state bytes;
+journal1000/7 after removing new acquisition records equals old support (empty
+acquisition-only maps to old absence). Compare full outputs after removing
+acquisition rows and acquisition rows in appraisal history, plus complete
+decision history/presentation and nonempty actual draw equality where present.
+New acquisition records must bind exact current observed outcomes, correct
+visible scope or explicit absence. Do not compare changed model/run/trace/event
+identity bytes across versions. No generic numeric-ID erasure.
+Also assert actual physical effects and observer beliefs from source expectations:
+repeated real failures/two episodes; false reports/correction/duplicates;
+trained intrinsic success/free versus untrained intrinsic failure/blocked;
+post-choice opportunity changes Applied/Blocked with skill held competent.
+Compare captured actual stakeholder evidence against original GroupedMean.
+Existing M198/M199/M200 controls/alternatives carry only through unchanged
+dependencies plus these full comparisons; never relabel historical receipts.
 
-Plan <=3 capabilities/12 code paths,600s/check,1800s cumulative,2 evidence files
-by default. Keep scoped proofs, original alternatives and failed evidence.
-E71/P35/N13/U13=132;21members/15families; accepted families2/15 unchanged.
-Memory0.126, AFFECT0.129 and DECISION member0.129 retain scoped acceptance.
-Final whole-candidate replay remains separate.
-
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Files, checks and stop
+Two new test/helper files assembledAgencyVersionCarry.test.ts and
+fixtures/assembledAgencyVersionCarry.ts; no production/formal change planned.
+Existing0.135 M204/M205 results retained without rerun.
+Five serial checks: repeated pair plus new-version save11/continuation;
+passive-report pair; two competence pairs; two opportunity pairs (split command).
+Types, research/reference boundary/pins/size/staged integrity.
+Approx1400s functional +40s types/preservation;600s/check,1800s cumulative,
+two evidence files/5MiB, <=12 code paths. CURRENT80/register250lines/64KiB.
+Each failure must be classified before a bounded repair; no masking of unexplained
+state/output/draw differences. If unsafe to carry a required proof, record exact
+remaining case and hold acceptance rather than weakening the gate.
+Done: finite classification with no unresolved required difference, or explicit
+failed acceptance and named missing proof. Acceptance only if all required
+phenomena/comparators/foundations are supported under the declared projection.
+MEC004/015/017/019/022 retained. RO010/011/013/014/020 conditional;
+RO018/019/021 historical closures unchanged. No new verdict or reduction.
+21/15/132 and E71/P35/N13/U13 fixed; only family12.14 acceptance may change.
+No UI, autonomous characters or whole-assembly acceptance.
