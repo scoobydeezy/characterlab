@@ -36,3 +36,32 @@ AssertionError: repeated outputs at12: expected '07dc0207070521617373656d626c656
    Start at  07:39:53
    Duration  171.51s (transform 3.43s, setup 0ms, collect 5.15s, tests 165.89s, environment 0ms, prepare 107ms)
 
+
+M206 repeated-corrected exit=1 elapsed=119.057s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledAgencyVersionCarry.test.ts (11 tests | 1 failed | 10 skipped) 113206ms
+   × M206 repeated pair and current continuation 113205ms
+     → Cannot read properties of undefined (reading 'initialState')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledAgencyVersionCarry.test.ts > M206 repeated pair and current continuation
+TypeError: Cannot read properties of undefined (reading 'initialState')
+ ❯ Module.pair src/test/fixtures/assembledAgencyVersionCarry.ts:58:96
+     56|   bytes(old.decisionHistory(),current.decisionHistory());bytes(old.dec…
+     57|   expect(draws(current),name+' addressed draws at'+at).toEqual(draws(o…
+     58|   if(continuation&&at===11n&&!restored){restored=await restoreCharacte…
+       |                                                                                                ^
+     59|   if(restored)exact(current,restored);
+     60|   expect(instants++).toBeLessThan(64);const more=await next(old);expec…
+ ❯ src/test/assembledAgencyVersionCarry.test.ts:19:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  07:44:30
+   Duration  118.50s (transform 3.33s, setup 0ms, collect 4.94s, tests 113.21s, environment 0ms, prepare 105ms)
+

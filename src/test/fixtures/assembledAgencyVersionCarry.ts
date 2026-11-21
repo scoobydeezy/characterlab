@@ -10,6 +10,7 @@ import {prepareCharacterModel,createCharacterRun,restoreCharacterRun} from '../.
 import {compileCharacterModel,INTERFERENCE_ACQUISITION_RULES,INTERFERENCE_ACQUISITION_REGISTRY} from '../../assembled/model';
 import {AuthoritativeState,restoreAuthoritativeState} from '../../substrate/state';
 import {INTERFERENCE,INTERFERENCE_ACQUISITION,INTERFERENCE_APPRAISAL,INTERFERENCE_QUERY} from '../../assembled/interferenceExpectation';
+import {SKILL_ACTUAL} from '../../assembled/skill';
 import {PERFORMANCE_OBS} from '../../assembled/performance';
 import {stakeholderPath,stakeholderJournal,stakeholderBeliefs} from '../../assembled/stakeholderKnowledge';
 import {EXTENDED_TIME_LIMIT} from '../../assembled/timeDomain';
@@ -32,6 +33,12 @@ function stateProjection(r:Run){return new AuthoritativeState(view(r).state.entr
  return rows.length?[{...e,value:list([a[0],list(rows)])}]:[];
 })).canonicalValue();}
 function outputProjection(r:Run){return list(supports(view(r).out).map(v=>{
+ if(tagged(v,SKILL_ACTUAL)){
+  const a=[...items(v,'list')],events=view(r).trace.map(t=>rec(f(t,4n),130n)).filter(e=>eq(f(e,1n),a[1]));
+  expect(events.length,'skill event binding').toBeGreaterThan(0);
+  const coordinates=events.map(e=>list([f(e,2n),f(e,3n),f(e,5n),f(e,6n),f(e,7n)]));
+  expect(new Set(coordinates.map(key)).size,'unique skill event').toBe(1);a[1]=coordinates[0];return list(a);
+ }
  if(!tagged(v,INTERFERENCE_APPRAISAL))return v;const a=[...items(v,'list')];a[8]=list(supports(items(a[8],'list')));return list(a);
 }));}
 const draws=(r:Run)=>list(view(r).trace.flatMap(t=>items(f(t,14n),'list')));
@@ -44,7 +51,8 @@ export async function pair(name:Case,continuation=false){
  for(;;){
   const at=view(old).s.clock;expect(view(current).s.clock).toBe(at);
   expect(key(stateProjection(current)),name+' state at'+at).toBe(key(stateProjection(old)));
-  expect(key(outputProjection(current)),name+' outputs at'+at).toBe(key(outputProjection(old)));
+  const a=items(outputProjection(current),'list'),b=items(outputProjection(old),'list');expect(a.length).toBe(b.length);
+  a.forEach((row,i)=>{if(!eq(row,b[i]))throw Error(name+' outputs at'+at+' row'+i+' old='+key(b[i])+' new='+key(row));});
   bytes(old.decisionHistory(),current.decisionHistory());bytes(old.decisionPresentation(),current.decisionPresentation());
   expect(draws(current),name+' addressed draws at'+at).toEqual(draws(old));
   if(continuation&&at===11n&&!restored){restored=await restoreCharacterRun(s,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:current.save()});exact(current,restored);}
