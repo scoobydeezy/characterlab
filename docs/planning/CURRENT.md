@@ -60,3 +60,7 @@ Second representation finding: stress applied13 embeds appraisal event292->294
 in packet[3]; all state, threat, dose and arithmetic equal. Apply the same traced
 event correspondence only there; require source50 and its exact appraisal output.
 Helper shadowing failure is repaired separately; all failed receipts count.
+Full repeated carry/restore passed21 instants/101,2 acquisitions,2 exact draws;
+post-check counted duplicate trace projections as two skill events. Bind physical
+assertions to actual output/execution and rerun only current through16 claims;
+retain completed carry rather than repeat its already-passing full101 checks.
