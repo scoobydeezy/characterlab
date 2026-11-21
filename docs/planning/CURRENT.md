@@ -1,32 +1,41 @@
-# Current work — M207 complete: agency family accepted
-The character preserves intent through success, incapacity, lost opportunity and
-external prevention; permitted explanations and repeated interference change
-later attribution/expectation. Family12.14 is accepted on0.135 in its pinned scope.
+# Current work — M208: pin sleep/intoxication receiving boundaries
+Base08470f45. Complete the required source/receiving reconciliation before new
+physiology is implemented. No new character behavior or family acceptance claimed.
+The0.135 character has reserve/stress and experienced-fatigue control; it has no
+native sleep-debt/intoxicant trajectory. Grade substitution is not a valid port.
 
-[Result](ASSEMBLED_CHARACTER_M207_RESULT.md) and
-[checks](ASSEMBLED_CHARACTER_M207_CHECKS.txt).
-Plan6f24b1a6; base522edcc6. Lost-opportunity full101 pair and available-current
-physical assertion pass. M206's five full carries, exact continuation and repaired
-assertions are retained. All8 clauses,19 agency mappings and13+2 interference
-histories are classified. No production/formal/fixture/law/seed change.
+## Bounded comparison and deliverable
+Two capabilities of this review: exact original comparison map; successor owner/
+consumer boundary with explicit unresolved semantics. No simulation implementation.
+Map BRIEF-12.1-6/7 to accepted sleep-control/intoxication-control0.1 experiments:
+20 original runs each, all seeds/control laws and52/55 selected prefixes retained.
+Read source fixtures, contracts, frozen plans/results and existing assembled
+body/control/skill paths. Distinguish physical truth, sensed readiness, retained
+fatigue, workspace maintenance, inhibition, procedural skill and motor execution.
+Check exact boundaries: sleep recovery after8 affects9; intoxication exposure
+after7 affects8, execution recovers10 and inhibition11 in slow clearance.
+Do not collapse strict BIO execution into inclusive SKILL or convert0..1000
+biological load into0..32 workspace slots without a justified correspondence.
+No new gates, clinical interpretation, native acceptance or variant-only closure.
 
-Only one test entry added to the existing test file; no new helper or framework.
-Types, both functional checks and preservation pass first time:249.783/600s.
-No active simulation job; passing checks end verification.
+## Files, checks and limits
+CURRENT, existing reconciliation and mechanism ledger, obligations review link;
+one compact M208 result and raw source/preservation check (2 files/5MiB).
+Zero production/test/formal changes; no new tests, source copies or framework.
+Analysis<=90min; one serial source/preservation/research/reference/pin/size check
+<=60s, cumulative<=120s including repairs. No old native cohort rerun: its code
+and dependencies are unchanged and this is mapping, not new behavioral evidence.
+CURRENT80/register250 lines and65536 CRLF bytes/work order250.
+Done: both complete original cohorts and exact receiving gaps mapped, next sleep
+connection bounded, intoxication execution boundary explicitly unresolved before
+implementation. No closure from a count. Stop this review; no further audit chain.
 
-## Next integration milestone
-Embodiment/regulation family12.1: map the pinned sleep-loss and intoxication/control
-comparisons to existing BIO/attention/control mechanisms, then declare the next
-bounded causal connection before implementation. Existing witnessed clauses remain
-in scope; do not invent extra physiology or close the family from partial breadth.
-
-## Preserved scope
-21 members/15 families/132 clauses; E71/P35/N13/U13 unchanged.
-Accepted families3/15: memory12.3@0.126, AFFECT12.5@0.129, agency12.14@0.135.
-DECISION member remains@0.129. Other12 family gates and final candidate replay open.
-MEC004/015/017/019/022 preserved; RO010/011/013/014/020 conditional;
-RO018/019/021 historical closures unchanged. No new verdict or reduction.
-One model/state/scheduler/trace/save. No UI or autonomous peers authorized.
+## Preserved authority
+R3 Full biology remains the first-use reference, engineering default not superiority.
+MEC001/003/011..019/022 retain original roles. FND1..6 unchanged (no code).
+RO008/009/012/013/020 conditional; RO019/021 historical closures remain.
+21 members/15 families/132 clauses; E71/P35/N13/U13 and3/15 accepted unchanged.
+No UI/autonomous peer work, reduction or alternative runtime.
 | Status | Count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
