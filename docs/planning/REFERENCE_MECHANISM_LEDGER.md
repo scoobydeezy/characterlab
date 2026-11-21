@@ -1253,3 +1253,9 @@ older-episode correction changes later appraisal to1/2 without rewriting intent.
 MEC004/015/017/019/022 remain; original four laws diagnose captured own evidence.
 No production/law change or family acceptance; M201 boundary histories remain.
 [Result](ASSEMBLED_CHARACTER_M202_RESULT.md).
+
+M203 transfers clear/blocked, hidden/withheld/changed-denied and noOpportunity
+histories to0.134. Known0/1, Unknown and unbound reports stay distinct; hidden
+causes/denied content preserve whole safe history. Negative acquisition survives
+rollback/restore. MEC004/015/017/019/022 unchanged; no law/code/family closure.
+Original route-context/goal/terminal histories remain. [Result](ASSEMBLED_CHARACTER_M203_RESULT.md).
