@@ -67,9 +67,10 @@ function correspondence(variant:Variant){
  expect(rows.filter(a=>eq(a[2],INTERFERENCE_SOURCE))).toHaveLength(4);return b;
 }
 async function scenario(variant:Variant){
- const b=correspondence(variant),r=await createCharacterRun(await prepareCharacterModel(b.s),b.d),frames:Frame[]=[],attempts:ReturnType<typeof live>[]=[],prior:CanonicalValue[]=[];
+ const b=correspondence(variant),r=await createCharacterRun(await prepareCharacterModel(b.s),b.d),frames:Frame[]=[],attempts:ReturnType<typeof live>[]=[];let prior:CanonicalValue[]=[];let prefix:{state:Uint8Array;outputs:Uint8Array;history:Uint8Array;draws:CanonicalValue}|undefined;
  for(let t=10;t<=17;t++){await through(r,BigInt(t));if([10,12,14].includes(t))attempts.push(live(r,t));
   if(t===10)appraisal(r,t,0,1,0);if(t===12||t===14)appraisal(r,t,1,1,t===12?1:2);
+  if(t===15)prefix={state:view(r).snapshot.state,outputs:view(r).snapshot.outputs,history:r.decisionHistory(),draws:list(view(r).traces.flatMap(t=>items(f(t,14n),'list')))};
   if(t===16){appraisal(r,t,2,3,3);prior=labelled(r,INTERFERENCE_APPRAISAL).filter(a=>uint(a[1])<=16n).map(list);}
   if(t===17)appraisal(r,t,variant==='correction'?1:2,variant==='correction'?2:3,3);
   frames.push(frame(r));
@@ -80,9 +81,11 @@ async function scenario(variant:Variant){
  for(const a of attempts){expect(outputs(list(view(r).out),425n)).toContainEqual(a.intent);expect(outputs(list(view(r).out),426n)).toContainEqual(a.expression);}
  for(const a of prior)expect(view(r).out).toContainEqual(a);
  console.info('M202 '+variant+' PASS three actual K0/difficulty1 failures10/12/14 -> positive/positive/negative reports -> prior16=2/3, later17='+(variant==='correction'?'1/2':'2/3')+'; original four laws on actual admitted frames; full101.');
+ return prefix!;
 }
-it('M202 main and duplicate preserve three native episode samples',async()=>{await scenario('main');await scenario('duplicate');},570000);
-it('M202 distinct report and older correction reach the later native appraisal',async()=>{await scenario('repeat');await scenario('correction');},570000);
+function prefixEqual(a:Awaited<ReturnType<typeof scenario>>,b:Awaited<ReturnType<typeof scenario>>){bytes(a.state,b.state);bytes(a.outputs,b.outputs);bytes(a.history,b.history);expect(a.draws).toEqual(b.draws);}
+it('M202 main and duplicate preserve three native episode samples',async()=>{const a=await scenario('main'),b=await scenario('duplicate');prefixEqual(a,b);},570000);
+it('M202 distinct report and older correction reach the later native appraisal',async()=>{const a=await scenario('repeat'),b=await scenario('correction');prefixEqual(a,b);},570000);
 function snapshot(a:ReturnType<Run['snapshot']>,b:ReturnType<Run['snapshot']>){const {state:as,outputs:ao,trace:at,...am}=a,{state:bs,outputs:bo,trace:bt,...bm}=b;expect(am).toEqual(bm);bytes(as,bs);bytes(ao,bo);bytes(at,bt);}
 function exact(a:Run,b:Run){snapshot(view(a).snapshot,view(b).snapshot);bytes(a.save(),b.save());bytes(a.runIdentity(),b.runIdentity());bytes(a.decisionHistory(),b.decisionHistory());bytes(a.decisionPresentation(),b.decisionPresentation());}
 it('M202 late report rollback and continuation preserve complete three-episode history',async()=>{

@@ -1,3 +1,42 @@
 
 M202 types exit=2 elapsed=20.935s cap=120
 src/test/assembledInterferenceHistory.test.ts(73,35): error TS2588: Cannot assign to 'prior' because it is a constant.
+
+M202 types-repair exit=0 elapsed=20.771s cap=120
+
+M202 main-duplicate exit=1 elapsed=65.000s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledInterferenceHistory.test.ts (8 tests | 1 failed | 7 skipped) 59173ms
+   × M202 main and duplicate preserve three native episode samples 59173ms
+     → unknown record schema 973/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledInterferenceHistory.test.ts > M202 main and duplicate preserve three native episode samples
+CanonicalEncodingError: unknown record schema 973/1
+ ❯ fail src/substrate/canonicalEncoding.ts:430:9
+    428| 
+    429| function fail(message: string): never {
+    430|   throw new CanonicalEncodingError(message);
+       |         ^
+    431| }
+    432| 
+ ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:348:18
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
+ ❯ src/substrate/canonicalEncoding.ts:254:90
+ ❯ Reader.readMany src/substrate/canonicalEncoding.ts:367:64
+ ❯ Reader.readValue src/substrate/canonicalEncoding.ts:254:39
+ ❯ Module.canonicalDecode src/substrate/canonicalEncoding.ts:107:24
+ ❯ Module.decodeCognitive src/assembled/codecs.ts:165:79
+ ❯ correspondence src/test/assembledInterferenceHistory.test.ts:62:18
+ ❯ scenario src/test/assembledInterferenceHistory.test.ts:70:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  19:21:43
+   Duration  64.44s (transform 3.33s, setup 0ms, collect 4.95s, tests 59.17s, environment 0ms, prepare 105ms)
+
