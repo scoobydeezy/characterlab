@@ -64,3 +64,6 @@ Full repeated carry/restore passed21 instants/101,2 acquisitions,2 exact draws;
 post-check counted duplicate trace projections as two skill events. Bind physical
 assertions to actual output/execution and rerun only current through16 claims;
 retain completed carry rather than repeat its already-passing full101 checks.
+Skill pairs pass27 instants/101 each,6 acquisitions,Auto0 draws; post-assertion
+wrongly counts both task reports. Restore original M200 task-specific selection;
+rerun current assertions only through14. 1435.773s used; no budget extension.
