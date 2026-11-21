@@ -1,69 +1,35 @@
-# Current work — M206: finite agency acceptance and version carry
-Base0ca51b31; review and bounded comparison before code.
-Decide family12.14 acceptance from eight clauses,19 agency mappings and the
-completed13+2 interference histories. No new phenomenon or reference-law choice.
+# Current work — M206 checkpoint: opportunity proof remains
+The character retains its integrated agency behavior on0.135 in five completed
+cross-version carries. Family12.14 remains UNRESOLVED: the last command timed out
+before the lost-opportunity case produced a completed result. No new behavior/code.
 
-## Concrete invalidation and comparison
-M204 changes only acquisition context/journal handling, composition/version
-binding and traces. Physical, skill, observer, arbitration/RNG code is unchanged.
-New events require explicit cross-version carry proof; old results stay0.134.
-RNG uses runtime resolution IDs, not scheduled event IDs; acquisition adds no
-runtime-ID allocation or draw. Verify actual addressed draws, never assume coupling.
-Three capabilities: physical carry, observer carry, finite family classification.
+[Result](ASSEMBLED_CHARACTER_M206_RESULT.md) and
+[raw checks](ASSEMBLED_CHARACTER_M206_CHECKS.txt).
+Plan1ca566b7; original bounded gate preserved. Candidate0.135; no law/scenario change.
+Repeated and passive histories, trained/free, untrained/blocked and available
+opportunity complete full-calendar carry. Repeated save11 continues exactly.
+Traced skill/stress event references account for representation differences;
+test-helper errors and corrected physical assertions remain recorded.
 
-Paired0.134/0.135 runs use identical registry/S0/ordered input/seed bytes; change
-only rules/registry version strings. Use original unamended fixtures:
-M199 repeatedStakeholder main; M198 stakeholderKnowledge main;
-M200 competence trained/free and untrained/blocked; M200 opportunity available/lost.
-Each full calendar101; no seed search, parameter tuning or authored intermediates.
-At every settled instant compare all non-interference authoritative state bytes;
-journal1000/7 after removing new acquisition records equals old support (empty
-acquisition-only maps to old absence). Compare full outputs after removing
-acquisition rows and acquisition rows in appraisal history, plus complete
-decision history/presentation and nonempty actual draw equality where present.
-New acquisition records must bind exact current observed outcomes, correct
-visible scope or explicit absence. Do not compare changed model/run/trace/event
-identity bytes across versions. No generic numeric-ID erasure.
-Also assert actual physical effects and observer beliefs from source expectations:
-repeated real failures/two episodes; false reports/correction/duplicates;
-trained intrinsic success/free versus untrained intrinsic failure/blocked;
-post-choice opportunity changes Applied/Blocked with skill held competent.
-Compare captured actual stakeholder evidence against original GroupedMean.
-Existing M198/M199/M200 controls/alternatives carry only through unchanged
-dependencies plus these full comparisons; never relabel historical receipts.
+Total verification1791.719/1800s including failures/timeout; final preservation PASS.
+No extension, acceptance waiver or new contrast. No long-running job remains.
 
-## Files, checks and stop
-Two new test/helper files assembledAgencyVersionCarry.test.ts and
-fixtures/assembledAgencyVersionCarry.ts; no production/formal change planned.
-Existing0.135 M204/M205 results retained without rerun.
-Five serial checks: repeated pair plus new-version save11/continuation;
-passive-report pair; two competence pairs; two opportunity pairs (split command).
-Types, research/reference boundary/pins/size/staged integrity.
-Approx1400s functional +40s types/preservation;600s/check,1800s cumulative,
-two evidence files/5MiB, <=12 code paths. CURRENT80/register250lines/64KiB.
-Each failure must be classified before a bounded repair; no masking of unexplained
-state/output/draw differences. If unsafe to carry a required proof, record exact
-remaining case and hold acceptance rather than weakening the gate.
-Done: finite classification with no unresolved required difference, or explicit
-failed acceptance and named missing proof. Acceptance only if all required
-phenomena/comparators/foundations are supported under the declared projection.
-MEC004/015/017/019/022 retained. RO010/011/013/014/020 conditional;
-RO018/019/021 historical closures unchanged. No new verdict or reduction.
-21/15/132 and E71/P35/N13/U13 fixed; only family12.14 acceptance may change.
-No UI, autonomous characters or whole-assembly acceptance.
+## Next bounded package
+Finish the original opportunity proof: unchanged lost-opportunity0.134/0.135
+pair through101 with its physical assertion; current available physical assertion
+at10. Retain its completed full carry; do not rerun the other completed pairs.
+Then resolve clause3/current carry and the finite family12.14 acceptance review.
+Use the same laws, inputs, seed0, trace-bound event correspondence and live gates.
+No new fixture, retuning, broader review track or intermediate factory.
 
-Self-approved representation amendment after c3fd4c87: repeated12 differs only
-in SKILL_ACTUAL[1], scheduler event310->312. Compare that field through its
-unique traced event time/phase/type/payload/dependencies, preserving every other
-field. No generic ID erasure; fail on absent/ambiguous event. Failed raw retained.
-Second representation finding: stress applied13 embeds appraisal event292->294
-in packet[3]; all state, threat, dose and arithmetic equal. Apply the same traced
-event correspondence only there; require source50 and its exact appraisal output.
-Helper shadowing failure is repaired separately; all failed receipts count.
-Full repeated carry/restore passed21 instants/101,2 acquisitions,2 exact draws;
-post-check counted duplicate trace projections as two skill events. Bind physical
-assertions to actual output/execution and rerun only current through16 claims;
-retain completed carry rather than repeat its already-passing full101 checks.
-Skill pairs pass27 instants/101 each,6 acquisitions,Auto0 draws; post-assertion
-wrongly counts both task reports. Restore original M200 task-specific selection;
-rerun current assertions only through14. 1435.773s used; no budget extension.
+## Preserved scope
+21 members/15 families/132 clauses; E71/P35/N13/U13. Accepted families2/15:
+memory12.3@0.126, AFFECT12.5@0.129. DECISION member@0.129.
+M204/M205 all13+2 interference histories remain passed; M201 maps19 agency runs.
+MEC004/015/017/019/022 preserved; RO010/011/013/014/020 conditional;
+RO018/019/021 historical closures unchanged. Final whole-candidate replay open.
+One model/state/scheduler/trace/save. No UI, autonomous peers or reduction.
+
+| Status | Count |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |

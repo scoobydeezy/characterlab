@@ -1276,3 +1276,10 @@ later2/3 to1/2. Hidden/denied privacy, unbound opportunity and exact continuatio
 MEC004/015/017/019/022 and original four laws retain their roles. M204/M205 now map
 all13+2 interference histories; M201's19 agency mappings retain version scope.
 Family acceptance remains open. [Result](ASSEMBLED_CHARACTER_M205_RESULT.md).
+
+M206 preserves five complete0.134/0.135 agency carries, actual addressed draws
+and repeated exact continuation. Skill/stress event references are trace-bound;
+physical assertion repairs retained. Lost-opportunity completion and available
+physical assertion remain after timeout; family gate stays open. No production
+change or reduction; MEC004/015/017/019/022 and all comparator roles retained.
+[Result](ASSEMBLED_CHARACTER_M206_RESULT.md).
