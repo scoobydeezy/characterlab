@@ -1,36 +1,51 @@
-# Current work — M203 complete: known zero, Unknown and missing opportunity
-Three observed failures with negative reports produce known0; positive reports
-produce known1. Denied reports leave Unknown. Received reports without observed
-outcomes remain unbound and cannot create eligible interference episodes.
-[Result](ASSEMBLED_CHARACTER_M203_RESULT.md); [checks](ASSEMBLED_CHARACTER_M203_CHECKS.txt).
+# Current work — M204: acquired context constrains later interference appraisal
+Base05e9114a; one active package, before implementation.
+The character must retain the visible scope at first observed outcome, including
+absence, then use only matching scoped episodes in later appraisal.
 
-## Completed boundary histories
-Current0.134 main/clear/blocked/hidden/withheld/withheldChanged/noOpportunity.
-Same three actual taskB/route1 failures, K0/difficulty1, fixed laws/seed0/full101.
-Changed hidden blockers and denied report contents preserve whole safe state,
-outputs, history, presentation and actual draws at every settled instant.
-The missing-opportunity case has three real attempts and three received reports,
-no main outcome leaf, no bound support,0 eligible episodes and later Unknown.
-Repeat/save12/reached report13 rollback/recovery preserve all later complete bytes.
-All four original laws diagnose captured native evidence. No production change.
+## Scope and comparison
+Family12.14/1..8 retains M201 finite original13+2 map. Three capabilities:
+acquired scope, cross-scope filtering, goal/evidence separation.
+Rules/registry0.135-candidate; interference-acquisition/0.1-candidate.
+Existing0.134 and older semantics remain; original component0.1 equations fixed.
+M202 actual nonsocial taskB/route1 failures10/12/14, reports11/13/15,+,+,-,
+body30/cap100/rate10/delivery90@9, K0/difficulty1, reference laws/seed0/full101.
+Main context1 throughout ->2/3/3 episodes. OtherContext marks third outcome0,
+then query1 ->1/2 episodes. NoContext stays absent ->Unknown/0.
+Recovery has absent acquisition context but query1 at16/17 ->Unknown/0;
+the known physical action route or later report must not repair that absence.
+GoalZero uses main evidence, goal0 ->same2/3, zero appraisal coordinates.
+Hidden-context control changes unseen blockers with identical permitted evidence.
+Capture actual observations for all four original-law diagnostic comparisons.
+Every gate asserts actual attempt, outcome and live appraisal before comparison.
+No downstream choice claim, seed search, calibration or missing-consumer substitute.
 
-## Next bounded work
-M201 retains the original13+2 history inventory and19 agency run dispositions.
-M202/M203 now cover three-episode report weighting/correction and the evidence
-boundaries above. Remaining: absent acquisition context, mixed-route history,
-goal-zero appraisal with unchanged evidence, exact primary terminal-case timing.
-Address route scope when an opportunity is observed, then its later consumer;
-an absent query alone does not prove missing acquisition context.
-Retain original cases, reference laws and meaningful alternatives; no invented
-belief or source truth shortcut. Finish that finite map before family acceptance.
-Plan <=3 capabilities/12 code paths,600s/check,1800s cumulative,2 evidence files
-by default. Split before running if necessary; no unrelated breadth or seed search.
-No extra choice-change gate beyond the pinned actual-appraisal requirement.
+## Design and files
+Commit versioned formal amendment before code. Capture permitted outcome plus
+current admitted context at120; common knowledge140 appends existing1000/7.
+Acquisitions carry no causal polarity. Reports/witnesses supply support as before.
+One state/scheduler/save; acquisition and same-instant witness coexist atomically.
+Journal limit retains16 supports plus at most8 original outcomes; no side store.
+Production: model, state, runtime, inputs, performance, causalAttribution,
+interferenceExpectation (7). Tests: new fixture and test (2); max12 code paths.
+Formal: ASSEMBLED_INTERFERENCE_ACQUISITION_CONTRACT.md.
+Planning: CURRENT, register, mechanism ledger, obligation report review, result/log.
+MEC004/015/017/019/022 retained; RO010/011/013/014/020 conditional;
+RO018/019/021 historical closures unchanged. No new verdict or reduction.
 
-E71/P35/N13/U13=132;21members/15families; accepted families2/15 unchanged.
-Memory0.126, AFFECT0.129 and DECISION member0.129 retain scoped acceptance.
-Final whole-candidate replay remains separate. No UI or autonomous peer.
-
-| Record | Status |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+## Checks, risks, limits and done
+Types; focused source/admission/owner tests; native main/mixed/goal comparison;
+absent/recovery/hidden context; acquisition-save/rollback/recovery full101;
+current direct-witness plus acquisition coexistence; existing M203 clear/blocked
+on unchanged0.134; research/reference boundary/pins/size/staged integrity.
+Negative checks: malformed scope, legacy scope rejection, foreign outcome support,
+immutable acquisition, no causal support from outcome alone, prior-only timing.
+Repeat/save at12; injected acquisition140 failure14 reaches and rolls back;
+restored run agrees on every later complete state/output/trace/save byte.
+Frozen dependency closure unchanged; retain frozen-control evidence.
+One validation command at a time,600s each/1800s cumulative including failures.
+Two evidence files/5MiB; CURRENT80/register250lines/64KiB, no extra framework.
+Done only with observed scope affecting actual later appraisal, negative controls
+and exact continuation passing; retain any failures and bounded repairs.
+E71/P35/N13/U13;21/15/132; accepted families2/15 unchanged. Family12.14 stays
+UNRESOLVED pending terminal timing and finite reconciliation. No UI or peer.
