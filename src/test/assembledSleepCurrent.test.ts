@@ -12,7 +12,7 @@ import {cachedMemory} from './fixtures/assembledMemoryFinal';
 import {sid,SKILL_ACTUAL,SKILL_UPDATE} from '../assembled/skill';
 import {OPPORTUNITY_RESULT} from '../assembled/externalObstruction';
 import {ACTION_BODY} from '../assembled/actionBody';
-import {MOTOR,sleepAnchor,sleepPath,SLEEP_SAMPLE,SLEEP_RECEIPT,READINESS} from '../assembled/sleepControl';
+import {SLEEP,SLEEP_SOURCE,MOTOR,sleepAnchor,sleepPath,SLEEP_SAMPLE,SLEEP_RECEIPT,READINESS} from '../assembled/sleepControl';
 import {CONTROL_VIEW,controlGoalPath,maintenancePath} from '../assembled/control';
 import {habitJournal,habitPath,rewardPath,rewardValue,OBSERVED_REWARD as NUMERIC_REWARD} from '../assembled/habit';
 import {REWARD_RECEIPT} from '../assembled/rewardExperience';
@@ -47,7 +47,7 @@ function capture(run:Run,logical:number,allowNoReasons=false){
  return {logical,sleep:axes,capacity:items(rd[2],'list').length?Number(uint(items(rd[2],'list')[0])):null,inhibited:cv[9],active:cv[2],maintained:cv[3],spare:Number(uint(cv[8])),options:items(f(pool,3n),'list').map(v=>action(f(rec(v,397n),1n))),outcome:outcome===3n?'Chosen':'NoReasons',chosen:chosen?action(f(chosen,1n)):null,probabilities:(chosen?items(f(chosen,2n),'list'):[]).map(v=>{const p=rec(v,421n);return {action:action(f(p,1n)),p:rational(f(p,2n))};}),draws:vh(chosen?f(chosen,9n):list([])),drawCount:chosen?items(f(chosen,9n),'list').length:0,journal:vh(s.read(jp).value??list([])),journalCount:journal.length,identity:formed.P.numerator+'/'+formed.P.denominator,formation:vh(s.read(formationPath(C,PROTECTION_CHANNEL)).value??list([])),learned:vh(list([s.read(habitPath(C)).value??list([]),s.read(rewardPath(C)).value??list([])])),mean:reward?.mean===undefined?null:Number(reward.mean),physicalDebt:physical.debt,goal:vh(s.read(controlGoalPath(C)).value??list([])),maintenance:vh(s.read(maintenancePath(C)).value??list([])),rewardReason:rational(rr![5])};
 }
 async function runCase(c:Case){
- const began=performance.now(),x=await start(fixture(c)),prefixes:number[]=c.law==='Full'&&c.seed===0&&main.includes(c.scenario as never)?[0,2,7,8,9]:[0],rows:ReturnType<typeof capture>[]=[],checks:any[]=[];let pending:Run|undefined,pendingRow:any;
+ const began=performance.now(),b=fixture(c),original=JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M215_EVIDENCE.json','utf8')).runs[caseKey(c)];const legacy=items(decode(b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(SLEEP_SOURCE)){const p=[...items(a[3],'list')];expect(uint(p.pop()!)).toBe(0n);p[0]=text(SLEEP);a[3]=list(p);}return list(a);});expect(hash(enc(list(legacy))),'exact original scenario inputs after declaration-only normalization').toBe(original.input);expect(hash(b.d.initialState)).toBe(original.initial);const x=await start(b),prefixes:number[]=c.law==='Full'&&c.seed===0&&main.includes(c.scenario as never)?[0,2,7,8,9]:[0],rows:ReturnType<typeof capture>[]=[],checks:any[]=[];let pending:Run|undefined,pendingRow:any;
  expect(key(items(items(decode(x.b.s.registry),'list')[57],'list')[1])).toBe(positive);console.info('M218 START',caseKey(c));
  for(let native=1;native<=13;native++){
   expect(await x.run.settleNextInstant()).toBe(true);expect(x.run.snapshot().clock).toBe(BigInt(native));

@@ -1366,3 +1366,8 @@ permitted benefit, never hidden Applied. Full original intoxication20/55 passes 
 Old0.1 disclosure failure and all original competitors remain; no reduction.
 MEC001/003/011..019/022 retain their roles. Whole12.1 current-version gate remains.
 [Result](ASSEMBLED_CHARACTER_M217_RESULT.md).
+
+M218 replays reserve/sensing1..5 and original sleep20/52 on0.143, preserving all
+MEC001/003/011..019/022 roles, original controls and failed tolerance setups.
+Current earned tolerance remains open; no family acceptance or reduction.
+[Result](ASSEMBLED_CHARACTER_M218_RESULT.md).

@@ -41,10 +41,10 @@ for(const profile of ['alias41','alias49','fine41','denied','unavailable'] as co
 
 it('tolerance218 current earned delivery and receiving',async()=>{const result:any={};for(const law of ['Reciprocal','Unattenuated'] as const){const x=await start(tolerance(law));await through(x.run,7n);const effects=labels(x.run,'assembled-tolerance-effect/0.1').map(a=>({at:Number(at(a[1])),magnitude:Number(uint(a[4])),requested:fraction(a[5]),potential:fraction(a[6])})),rows=[3n,5n,7n].map(t=>capture(x.run,t));console.info('M218 TOLERANCE',law,JSON.stringify({effects,rows}));expect(effects.length).toBeGreaterThanOrEqual(3);expect(effects[0].magnitude).toBeGreaterThan(0);expect(effects[1].magnitude).toBeGreaterThan(effects[0].magnitude);for(const e of effects){expect(e.requested).toBe('40/1');expect(traceAt(x.run,BigInt(e.at)).some(t=>items(f(t,11n),'list').some(v=>uint(f(rec(f(rec(v,147n),2n),140n),1n))===302n))).toBe(true);}for(const r of rows){expect(r.rows.length).toBeGreaterThan(0);for(const a of r.rows)expect(a).toHaveLength(5);expect(r.joins.every(Boolean)).toBe(true);expect(r.net.length).toBeGreaterThan(0);}await finish(x.run);result[law]={effects,rows,input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),registry:hash(x.b.s.registry),terminal:hash(x.run.save())};}expect(result.Reciprocal.effects.map((e:any)=>e.magnitude)).toEqual(result.Unattenuated.effects.map((e:any)=>e.magnitude));expect(result.Reciprocal.effects[0].potential).not.toBe(result.Unattenuated.effects[0].potential);expect(result.Reciprocal.rows[1].net).not.toEqual(result.Unattenuated.rows[1].net);put('tolerance',result);},600000);
 
-it('compareEmbodiment218 finite current receiving gate',()=>{
+it('compareReserve218 finite current reserve gate',()=>{
  const d=JSON.parse(readFileSync(file,'utf8'));
- const fast=reserve('fast'),slow=reserve('slow');eqbytes(fast.d.initialState,slow.d.initialState);eqbytes(fast.d.orderedInputs,slow.d.orderedInputs);eqbytes(fast.d.runSeed,slow.d.runSeed);
- expect(Object.keys(d).sort()).toEqual(['fast','slow','no-delivery','alias41','alias49','fine41','denied','unavailable','tolerance'].sort());
+ const fast=reserve('fast'),slow=reserve('slow');eqbytes(fast.d.initialState,slow.d.initialState);eqbytes(fast.d.orderedInputs,slow.d.orderedInputs);eqbytes(fast.d.runSeed,slow.d.runSeed);for(const [name,b]of [['fast',fast],['slow',slow]]as const){expect(d[name].input).toBe(hash(b.d.orderedInputs));expect(d[name].initial).toBe(hash(b.d.initialState));expect(d[name].registry).toBe(hash(b.s.registry));}
+ expect(Object.keys(d).sort()).toEqual(['fast','slow','no-delivery','alias41','alias49','fine41','denied','unavailable'].sort());
  const row=(p:string,t:number)=>d[p].rows.find((r:any)=>r.t===t);
  expect(row('fast',31).level).toBe(row('no-delivery',31).level);
  expect(row('fast',41).net).not.toEqual(row('no-delivery',41).net);
@@ -57,8 +57,8 @@ it('compareEmbodiment218 finite current receiving gate',()=>{
  expect([row('alias41',12).level,row('alias49',12).level]).toEqual(['39/1','47/1']);
  expect(row('alias41',12).interval).not.toBe(row('alias49',12).interval);
  expect(row('alias41',12).net).not.toEqual(row('alias49',12).net);
- d.qualification={pass:true,candidate:'0.143',clauses:[1,2,3,4,5,8],claim:'live appraisal and actual reason; no cross-model sampled-choice causality',originalControls:['M117 sixteen/79','M39 original80 null and laws']};
- writeFileSync(file,JSON.stringify(d,null,2)+'\n');console.info('M218 EMBODIMENT finite current six-clause gate PASS');
+ d.reserveQualification={pass:true,candidate:'0.143',clauses:[1,2,3,4,5],claim:'live appraisal and actual reason; no cross-model sampled-choice causality',originalControls:['M117 sixteen/79','M39 original80 null and laws']};
+ writeFileSync(file,JSON.stringify(d,null,2)+'\n');console.info('M218 RESERVE current five-clause gate PASS; tolerance remains open');
 });
 
 it('diagnostic218 missing live appraisal source inventory',async()=>{
@@ -68,3 +68,13 @@ it('diagnostic218 missing live appraisal source inventory',async()=>{
   console.info('M218 SOURCE INVENTORY',name,JSON.stringify(groups));
  }
 });
+
+it('diagnosticTolerance218 actual no-action chain',async()=>{
+ const x=await start(tolerance());await through(x.run,3n);const ts=traceAt(x.run,3n),vs=ts.flatMap(projected),tags=['assembled-strategy-evaluation/0.1','assembled-priority-motive/0.1','assembled-control-view/0.1','assembled-habit-options/0.1'];
+ const simple=(v:CanonicalValue):any=>typeof v==='boolean'?v:v.kind==='rational'?fraction(v):v.kind==='text'?v.value:v.kind==='unsigned'||v.kind==='signed'?String(v.value):v.kind==='typedIdentifier'?simple(v.payload):v.kind==='list'||v.kind==='set'?v.items.map(simple):v.kind==='record'?Object.fromEntries([...v.fields].map(([k,v])=>[String(k),simple(v)])):key(v);
+ const result=vs.filter(v=>typeof v!=='boolean'&&v.kind==='list'&&v.items.length&&tags.some(t=>key(v.items[0])===key(text(t)))).map(simple);
+ const typed=vs.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&[394n,398n,408n].includes(v.schema.typeId)).map(v=>{const r=rec(v,(v as any).schema.typeId);return {type:String(r.schema.typeId),rows:simple(f(r,3n))};});
+ console.info('M218 NO ACTION CHAIN',JSON.stringify({result,typed}));
+});
+
+it('compareEmbodiment218 finite current receiving gate',()=>{const d=JSON.parse(readFileSync(file,'utf8'));expect(d.reserveQualification?.pass).toBe(true);expect(d.tolerance).toBeDefined();expect(Object.keys(d.tolerance).sort()).toEqual(['Reciprocal','Unattenuated']);});
