@@ -1,48 +1,40 @@
-# Current work — M221 direct Need receiving
-The next connection lets permitted bodily pressure support actions independently
-of task Commitment, through the character's existing reasons, decision and execution.
-Owner2026-11-22 delegates family12.2 completion and bounded self-approved amendments.
-One active package; no UI, alternate runtime, stored Need meter or new psychology law.
+# Current work — M221 direct Need receiving complete
+Selected bodily pressure now supports actions without task adoption, through the
+same candidate control, reason compiler, decision and execution as other motives.
+Need and Commitment remain distinct even when supporting the same option.
+[Result](ASSEMBLED_CHARACTER_M221_RESULT.md); model/registry0.145; Need receiving0.1.
+One character/state/scheduler/trace/save. Owner bounded self-approval continues.
 
-## Bounded card (before implementation)
-Baseline59751add; family12.2 clauses3/6; preserve E1/2/4/5 and21/15/132 denominator.
-Three capabilities: direct interoceptive Need; one Need/two adopted responses;
-Need plus independent Commitment on the same option in the common decision path.
-Use existing deficitPressure, SourceCoverage, task dice and reference0.85.
-Reference BODY ownership/EMB receiving and MULTISOURCE contracts; MEC001/003/011..020/022
-retain control/port/corpus roles. No stored-pressure or task-as-Need reduction.
-Version model/registry0.145, Need receiving0.1; immutable adopted response references
-are governed instructions, never authored psychological intermediates or fake tasks.
-No response declaration means no response; unselected/missing pressure stays unknown.
+## Completed connection
+Positive selected pressure supports two adopted responses with exact1/2 probabilities.
+One response, no response, KnownZero and Unavailable remain distinct. Common inhibition
+removes an option before raw receiving. Need adds no task surrogate or stored meter.
+Independent task sources stay unchanged when Need changes decision probabilities.
+Hidden body levels within one bin leave character receiving equal. Actual permitted
+protocol execution1 versus blocked0 preserves the same Need/reasons/choice.
+The two-response witness includes withholding; no two-satisfier/learned-relief claim.
+Original physical-opportunity1/1 null and all failed checks remain recorded.
+Repeat, full continuation, rollback, old-version/forged-input rejection, original
+receiving-kernel correspondence and no-Need0.144 semantic preservation pass.
+23 distinct native/control/historical checks pass; final repository receipts in result.
+Nine production and three test/helper files; evidence within20/5MiB;1800s total cap.
+No new law, state owner, alternate runtime, UI or whole-family acceptance.
 
-Production boundary: model, codecs, need, reasons, execution, random (<=6 files).
-Tests: fixture, native receiving, boundary/control tests (<=3); <=12 total.
-Contract ASSEMBLED_NEED_RECEIVING_V0_145.md before implementation.
-No change to original C0–C3 control dependencies or previously accepted model bundles.
+## Next family12.2 gate
+Reconcile all six clauses on the current candidate, especially retained importance
+versus fresh urgency and independent learned motives, with the pinned comparisons.
+Preserve original BODY/MULTISOURCE, substitution/goal and importance/urgency controls;
+do not equate declared response instructions with learned action efficacy.
+All six clauses now have version-scoped integrated witnesses. Family acceptance
+still requires the current comparisons/difference dispositions; breadth is not completion.
+No further validation of M221 follows its passing checks absent a concrete failure/change.
 
-## Predeclared comparisons and gate
-Nonsocial tasks; ordinary body channel; reserve10/cap100/rate0/threshold60/width1;
-seed0. Both response instructions act through the ordinary declared protocol.
-At a fixed opportunity, compare two responses, one response, no responses;
-positive versus zero/denied/unselected pressure; independent goal adoption on/off.
-Assert current selected sample and actual raw/base/nucleus liveness before comparing.
-Two responses share one Need identity, distinct option keys; adopted task support
-has a different motive/ground. Show exact production decision probabilities and
-actual execution, not a seed-search claim. Positive Need remains when goals absent.
-Hidden levels inside one bin must give identical character receiving; pressure
-without an adopted response and task modifiers without Base cannot create motives.
-Unknown and known zero remain separately reported. Task meaning/identity unchanged.
-Compare accepted pressure/receiving kernels on captured operands; retain named controls.
-Repeat and checkpoint continuation exact within0.145; fault rollback; invalid
-instruction/duplicates/forged input and source-grammar rejection; current no-Need
-semantic correspondence versus0.144. No whole M220 replay absent an invalidating edge.
+## Pinned scope
+E75/P33/N11/U13=132;21 members/15 families remain.
+Accepted4/15:12.1@0.144,12.3@0.126,12.5@0.129,12.14@0.135.
+Whole-candidate replay/assembly remains open. Reference0.85, SourceCoverage and
+adopted law dispositions are unchanged. Conditional obligations retain their triggers.
 
-## Checks, budgets and stop
-One check at a time, <=600s/command,1800s cumulative validation initially.
-Types first; narrow native tests; source/ownership/epistemic negatives; relevant
-historical codec/reason tests; boundary/research/preservation/git-size checks.
-If measured fixture cost requires a split, record before execution; preserve failures.
-<=20 evidence files/5MiB, one compact result. Passing checks ends verification.
-M221 completes the receiving connection, not automatic family acceptance: reconcile
-all six clauses and required original comparisons on the resulting candidate next.
-Accepted families4/15 remain version-scoped; final assembly/full-candidate replay open.
+| Registry | Current count |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |

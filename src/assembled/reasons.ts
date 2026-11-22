@@ -60,22 +60,22 @@ const min=(a:Q,b:Q)=>a.compare(b)<0?a:b,max=(a:Q,b:Q)=>a.compare(b)>0?a:b;
  * No world/state/RNG reader. Only authenticated raw input arrives from execution. */
 export function compileDescribedReasons(value:CanonicalValue,taskDice:CanonicalValue,maxDomain=3,coverageLaw:'Jaccard'|'SourceCoverage'='Jaccard',contextReasons=false,rounding=false){
  if(coverageLaw!=='Jaccard'&&coverageLaw!=='SourceCoverage')reject('coverage law');
- const raw=receivingRecord(cloneCognitive(value),403n);if(raw.schema.schemaVersion!==3n)reject('requires described raw403/3');
- const descriptions=items(f(raw,6n),'list'),actions=new Set<string>(),tasks=new Set<string>();
+ const raw=receivingRecord(cloneCognitive(value),403n);if(![3n,4n].includes(raw.schema.schemaVersion))reject('requires described raw403/3 or /4');
+ const descriptions=[...items(f(raw,6n),'list'),...(raw.schema.schemaVersion===4n?items(f(raw,7n),'list'):[])],actions=new Set<string>(),tasks=new Set<string>();
  const rows=descriptions.map(value=>{
-  const d=items(value,'list'),signal=rec(d[2],402n),source=rec(f(signal,1n),401n),candidate=rec(f(source,1n),395n),task=rec(f(source,2n),371n);
+  const d=items(value,'list'),signal=rec(d[2],402n),source=rec(f(signal,1n),401n),candidate=rec(f(source,1n),395n),need=source.schema.schemaVersion===3n,task=need?undefined:rec(f(source,2n),371n);
   if(uint(f(source,3n))===4n&&!contextReasons)reject('context role requires successor');
-  if(key(f(candidate,1n))!==key(f(task,1n)))reject('actor mismatch');
-  actions.add(key(candidate));tasks.add(key(task));
+  if(task&&key(f(candidate,1n))!==key(f(task,1n)))reject('actor mismatch');
+  actions.add(key(candidate));if(task)tasks.add(key(task));
   const b=f(rec(f(signal,3n),400n),1n);if(typeof b==='boolean'||b.kind!=='map'||b.entries.length>64)reject('basis domain');
   const weights=new Map<string,Q>();
   for(const [atom,weight] of (b as Extract<CanonicalValue,{kind:'map'}>).entries){const w=readQ(weight);if(w.compare(ZERO)<=0)reject('positive basis weights');weights.set(key(atom),w);}
-  return {id:descriptionIdentity(value),source,signal,candidate,referent:f(task,2n),motive:d[1],role:uint(f(source,3n)),strength:readQ(f(signal,2n)),weights};
+  return {id:descriptionIdentity(value),source,signal,candidate,referent:need?f(source,2n):f(task!,2n),need,motive:d[1],role:uint(f(source,3n)),strength:readQ(f(signal,2n)),weights};
  });
  if(actions.size>maxDomain||tasks.size>maxDomain)reject('action/task domain');
  const groups=new Map<string,typeof rows>();
  for(const row of rows){const k=key(list([row.candidate,row.motive,row.referent])),g=groups.get(k)??[];g.push(row);groups.set(k,g);}
- if(groups.size>maxDomain*maxDomain+1)reject('group domain');
+ if(groups.size>maxDomain*maxDomain+1+(raw.schema.schemaVersion===4n?2:0))reject('group domain');
  const nuclei:CanonicalValue[]=[],reports:CanonicalValue[]=[];
  for(const group of groups.values()){
   if(group.length>6)reject('group description capacity');
@@ -102,7 +102,7 @@ export function compileDescribedReasons(value:CanonicalValue,taskDice:CanonicalV
    return {net:bounded(total),traces};
   }
   const base=role(1n),standing=role(3n),situation=role(2n),context=contextReasons?role(4n):{net:ZERO,traces:[] as CanonicalValue[]},relevance=absolute(base.net).add(absolute(standing.net)).add(absolute(situation.net)).add(absolute(context.net));
-  const direction=base.net.compare(ZERO)<0?-1n:1n,nk=r(404,[first.candidate,first.motive,first.referent,unsigned(direction>0n?1:2)],isValue?2:1);
+  const direction=base.net.compare(ZERO)<0?-1n:1n,nk=r(404,[first.candidate,first.motive,first.referent,unsigned(direction>0n?1:2)],first.need?3:isValue?2:1);
   const status=base.net.equals(ZERO)?'ZeroBase':relevance.compare(threshold)<0?'BelowThreshold':'Active';
   reports.push(list([nk,text(status),qValue(relevance),list(coverage)]));
   if(status!=='Active')continue;

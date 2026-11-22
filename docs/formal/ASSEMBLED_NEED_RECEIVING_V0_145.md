@@ -46,3 +46,9 @@ MULTISOURCE competitors remain controls with their existing qualified domains.
 This port does not establish general Need ontology, learned relief or family acceptance.
 RO008/020 representation and broader-domain conditions, RO001 source receiving and
 RO010/012/014/015 epistemic/causal distinctions remain; RO019 pinned scope unchanged.
+
+Existing-consumer clarification before the corrected native comparison: insert body
+options before habit/control candidate filtering; otherwise inhibition could be bypassed.
+Protection continues reading field6 on403/4; field7 never becomes protective meaning.
+Observer history/presentation0.5 discloses Need sources/nuclei without physical truth,
+private execution status or registry trees. Older observer versions remain unchanged.

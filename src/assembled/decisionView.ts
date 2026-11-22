@@ -4,6 +4,7 @@ import {list,text,typedIdentifier,type CanonicalValue} from '../substrate/canoni
 import {dataField as f,dataItems as items,dataKey as key,dataUnsigned as uint,dataText as txt,invalidModel} from '../campaign2/canonicalData';
 import {receivingRecord as rec,randomDrawRecord} from './codecs';
 import {PROTOCOL_OBSERVATION_VERSION,validatePermittedEvidenceRecordClosure} from '../observation/observation';
+export const NEED_DECISION_VIEW_VERSION='assembled-decision-view/0.5-candidate';
 export const RECEIPT_DECISION_VIEW_VERSION='assembled-decision-view/0.4-candidate';
 export const ROUNDING_DECISION_VIEW_VERSION='assembled-decision-view/0.3-candidate';
 export const CONTEXT_DECISION_VIEW_VERSION='assembled-decision-view/0.2-candidate';
@@ -16,7 +17,7 @@ export function validateDecisionView(value:CanonicalValue):void {
  if(typeof value==='boolean')return;
  if(value.kind==='record'){
   const receipt=value.schema.typeId===399n&&value.schema.schemaVersion===2n;if(receipt){const atom=value,source=f(atom,2n);if(atom.fields.size!==2||uint(f(atom,1n))!==3n||typeof source==='boolean'||source.kind!=='typedIdentifier'||source.namespaceId!==1164n||typeof source.payload==='boolean'||source.payload.kind!=='unsigned'||source.payload.value===0n)fail('receipt atom domain');}
-  if(!allowed.has(value.schema.typeId)||!(receipt||value.schema.schemaVersion===1n||[401n,404n].includes(value.schema.typeId)&&value.schema.schemaVersion===2n))fail('unsupported nested record');
+  if(!allowed.has(value.schema.typeId)||!(receipt||value.schema.schemaVersion===1n||[401n,404n].includes(value.schema.typeId)&&[2n,3n].includes(value.schema.schemaVersion)))fail('unsupported nested record');
   for(const v of value.fields.values())validateDecisionView(v);
  }else if(value.kind==='typedIdentifier')validateDecisionView(value.payload);
  else if(value.kind==='list'||value.kind==='set')value.items.forEach(validateDecisionView);
@@ -29,11 +30,11 @@ function chosen(decision:CanonicalValue){
 }
 function expression(value:CanonicalValue){
  const e=rec(value,426n),intent=rec(f(e,2n),425n),d=rec(f(intent,2n),409n),data=chosen(d),context=rec(f(d,3n),408n),raw=rec(f(context,2n),403n);
- const reasons=items(f(raw,3n),'set').map(v=>{const r=rec(v,402n);return list([f(r,1n),f(r,2n),f(r,3n)]);});
+ const reasons=[...items(f(raw,3n),'set'),...(raw.schema.schemaVersion===4n?items(f(raw,7n),'list').map(v=>items(v,'list')[2]):[])].map(v=>{const r=rec(v,402n);return list([f(r,1n),f(r,2n),f(r,3n)]);});
  const nuclei=items(f(context,3n),'list').map(v=>{const n=rec(v,407n),roles=rec(f(n,2n),406n);return list([f(n,1n),list([f(roles,1n),f(roles,2n),f(roles,3n),...(n.schema.schemaVersion>=2n?[f(roles,5n)]:[])]),f(n,4n),f(n,5n),f(n,6n),f(n,7n),...(n.schema.schemaVersion>=2n?[f(n,8n)]:[]),...(n.schema.schemaVersion===3n?[f(n,9n),f(n,10n)]:[])]);});
  const probabilities=items(f(data,2n),'list').map(v=>{const p=rec(v,421n);return list([f(p,1n),f(p,2n)]);});
  const channels=items(f(e,3n),'list').map(v=>{const c=rec(v,427n);return list([f(c,1n),f(c,2n)]);});
- return {e,intent,d,receipt:reasons.some(v=>{const a=items(v,'list'),basis=f(rec(a[2],400n),1n);return typeof basis!=='boolean'&&basis.kind==='map'&&basis.entries.some(([k])=>typeof k!=='boolean'&&k.kind==='record'&&k.schema.typeId===399n&&k.schema.schemaVersion===2n);}),rounding:items(f(context,3n),'list').some(v=>rec(v,407n).schema.schemaVersion===3n),contextual:items(f(context,3n),'list').some(v=>rec(v,407n).schema.schemaVersion>=2n),value:list([f(e,1n),f(data,1n),list(reasons),list(nuclei),list(probabilities),...([3n,4n,5n,6n,7n,8n].map(n=>f(data,n))),list(channels),f(e,4n)])};
+ return {e,intent,d,need:raw.schema.schemaVersion===4n,receipt:reasons.some(v=>{const a=items(v,'list'),basis=f(rec(a[2],400n),1n);return typeof basis!=='boolean'&&basis.kind==='map'&&basis.entries.some(([k])=>typeof k!=='boolean'&&k.kind==='record'&&k.schema.typeId===399n&&k.schema.schemaVersion===2n);}),rounding:items(f(context,3n),'list').some(v=>rec(v,407n).schema.schemaVersion===3n),contextual:items(f(context,3n),'list').some(v=>rec(v,407n).schema.schemaVersion>=2n),value:list([f(e,1n),f(data,1n),list(reasons),list(nuclei),list(probabilities),...([3n,4n,5n,6n,7n,8n].map(n=>f(data,n))),list(channels),f(e,4n)])};
 }
 const eventType=(name:string)=>key(typedIdentifier(1001,text('event/'+name)));
 export function decisionHistoryView(outputs:readonly CanonicalValue[],traces:readonly CanonicalValue[]):CanonicalValue {
@@ -64,7 +65,7 @@ export function decisionHistoryView(outputs:readonly CanonicalValue[],traces:rea
   const ek=key(f(evidence,1n));if(seen.has(ek))fail('ambiguous observation');seen.add(ek);
   observed.set(k,[...(observed.get(k)??[]),evidence]);
  }
- const view=list([text((expressions.some(e=>e.receipt)?RECEIPT_DECISION_VIEW_VERSION:expressions.some(e=>e.rounding)?ROUNDING_DECISION_VIEW_VERSION:expressions.some(e=>e.contextual)?CONTEXT_DECISION_VIEW_VERSION:DECISION_VIEW_VERSION)+'/history'),list(expressions.map(e=>list([f(e.d,1n),f(e.d,2n),f(e.intent,1n),e.value,list(observed.get(key(f(e.d,1n)))??[])])))]);
+ const view=list([text((expressions.some(e=>e.need)?NEED_DECISION_VIEW_VERSION:expressions.some(e=>e.receipt)?RECEIPT_DECISION_VIEW_VERSION:expressions.some(e=>e.rounding)?ROUNDING_DECISION_VIEW_VERSION:expressions.some(e=>e.contextual)?CONTEXT_DECISION_VIEW_VERSION:DECISION_VIEW_VERSION)+'/history'),list(expressions.map(e=>list([f(e.d,1n),f(e.d,2n),f(e.intent,1n),e.value,list(observed.get(key(f(e.d,1n)))??[])])))]);
  validateDecisionView(view);return view;
 }
 export function decisionPresentationView(outputs:readonly CanonicalValue[]):CanonicalValue {
@@ -79,5 +80,6 @@ export function decisionPresentationView(outputs:readonly CanonicalValue[]):Cano
   const tie=rec(f(data,10n),423n);
   rows.push(list([f(decision,1n),f(data,1n),list(faces),list(uint(f(tie,1n))===2n?[f(tie,4n)]:[])]));
  }
- const view=list([text((rounding?ROUNDING_DECISION_VIEW_VERSION:contextual?CONTEXT_DECISION_VIEW_VERSION:DECISION_VIEW_VERSION)+'/player'),list(rows)]);validateDecisionView(view);return view;
+ const need=outputs.filter(v=>is(v,409n)).some(v=>rec(f(rec(f(rec(v,409n),3n),408n),2n),403n).schema.schemaVersion===4n);
+ const view=list([text((need?NEED_DECISION_VIEW_VERSION:rounding?ROUNDING_DECISION_VIEW_VERSION:contextual?CONTEXT_DECISION_VIEW_VERSION:DECISION_VIEW_VERSION)+'/player'),list(rows)]);validateDecisionView(view);return view;
 }

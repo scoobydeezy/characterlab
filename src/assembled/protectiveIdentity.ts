@@ -18,7 +18,7 @@ export function compileProtection(v:CanonicalValue,actions:readonly {action:Cano
 }
 export function protectionMeanings(rawValue:CanonicalValue){
  const raw=rec(rawValue,403n),options=items(f(rec(f(raw,2n),398n),3n),'list').map(v=>f(rec(v,397n),1n)),meaning=new Map(options.map(c=>[key(c),ZERO]));
- if(raw.schema.schemaVersion===3n)for(const value of items(f(raw,6n),'list')){const d=items(value,'list');if(txt(d[0])!==PROTECTION_GOAL)continue;const s=rec(d[2],402n),candidate=f(rec(f(s,1n),401n),1n);if(!meaning.has(key(candidate)))invalidModel('protective source absent candidate');meaning.set(key(candidate),meaning.get(key(candidate))!.add(readQ(f(s,2n))));}
+ if(raw.schema.schemaVersion>=3n)for(const value of items(f(raw,6n),'list')){const d=items(value,'list');if(txt(d[0])!==PROTECTION_GOAL)continue;const s=rec(d[2],402n),candidate=f(rec(f(s,1n),401n),1n);if(!meaning.has(key(candidate)))invalidModel('protective source absent candidate');meaning.set(key(candidate),meaning.get(key(candidate))!.add(readQ(f(s,2n))));}
  return meaning;
 }
 export function protectiveExpression(expression:CanonicalValue){

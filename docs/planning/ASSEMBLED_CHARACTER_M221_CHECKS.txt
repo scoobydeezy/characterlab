@@ -1,0 +1,319 @@
+
+M221 types first exit=2 elapsed=21.687s cap=120
+src/assembled/codecs.ts(164,50): error TS18048: 'ds' is possibly 'undefined'.
+src/assembled/codecs.ts(164,53): error TS2339: Property 'items' does not exist on type 'CanonicalValue'.
+  Property 'items' does not exist on type 'false'.
+src/assembled/codecs.ts(167,231): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+
+M221 types receiving and fixture exit=0 elapsed=21.574s cap=120
+
+M221 primary receiving exit=1 elapsed=70.870s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledNeed.test.ts (12 tests | 1 failed | 11 skipped) 64833ms
+   × need221 primary direct pressure supports two actions without a task 64832ms
+     → requires 459/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledNeed.test.ts > need221 primary direct pressure supports two actions without a task
+SchedulerContractError: requires 459/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ src/assembled/inputs.ts:73:26
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:71:24
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledNeed.ts:31:114
+ ❯ src/test/assembledNeed.test.ts:7:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 skipped (12)
+   Start at  15:23:30
+   Duration  70.28s (transform 3.35s, setup 0ms, collect 5.00s, tests 64.83s, environment 0ms, prepare 146ms)
+
+
+M221 primary corrected sample envelope exit=1 elapsed=70.535s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledNeed.test.ts (12 tests | 1 failed | 11 skipped) 64522ms
+   × need221 primary direct pressure supports two actions without a task 64522ms
+     → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledNeed.test.ts > need221 primary direct pressure supports two actions without a task
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:34:2799
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:127:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.start src/test/fixtures/assembledNeed.ts:32:224
+ ❯ src/test/assembledNeed.test.ts:7:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 skipped (12)
+   Start at  15:25:14
+   Duration  69.95s (transform 3.34s, setup 0ms, collect 4.99s, tests 64.52s, environment 0ms, prepare 143ms)
+
+
+M221 primary version binding and common consumers repaired exit=1 elapsed=71.426s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledNeed.test.ts (12 tests | 1 failed | 11 skipped) 65396ms
+   × need221 primary direct pressure supports two actions without a task 65395ms
+     → requires 403/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledNeed.test.ts > need221 primary direct pressure supports two actions without a task
+SchedulerContractError: requires 403/1
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665|
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669|
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:425:11
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledNeed.ts:33:138
+ ❯ src/test/assembledNeed.test.ts:7:24
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 skipped (12)
+   Start at  15:27:23
+   Duration  70.83s (transform 3.35s, setup 0ms, collect 4.99s, tests 65.40s, environment 0ms, prepare 145ms)
+
+
+M221 native receiving matrix after exact trace envelope repair exit=0 elapsed=116.121s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledNeed.test.ts > need221 primary direct pressure supports two actions without a task
+M221 PRIMARY PASS 2 Need nuclei; exact probabilities1/2,1/2; no task sources; ordinary execution
+
+stdout | src/test/assembledNeed.test.ts > need221 response and evidence gates preserve zero versus unknown
+M221 GATE {"responses":1} Positive Need 1
+
+stdout | src/test/assembledNeed.test.ts > need221 response and evidence gates preserve zero versus unknown
+M221 GATE {"responses":0} Positive Need 0
+
+stdout | src/test/assembledNeed.test.ts > need221 response and evidence gates preserve zero versus unknown
+M221 GATE {"reserve":100} KnownZero Need 0
+
+stdout | src/test/assembledNeed.test.ts > need221 response and evidence gates preserve zero versus unknown
+M221 GATE {"permitted":false} Unavailable Need 0
+
+stdout | src/test/assembledNeed.test.ts > need221 response and evidence gates preserve zero versus unknown
+M221 GATE {"selected":false} Unavailable Need 0
+
+stdout | src/test/assembledNeed.test.ts > need221 psychological adoption and direct Need have independent grounds
+M221 JOINT PASS exact probabilities [
+  { kind: 'rational', numerator: 377n, denominator: 432n },
+  { kind: 'rational', numerator: 55n, denominator: 432n }
+] [ { kind: 'rational', numerator: 1n, denominator: 1n } ] distinct Need/Commitment; task sources preserved
+
+stdout | src/test/assembledNeed.test.ts > need221 hidden truth does not change pressure or reasons
+M221 PRIVACY PASS levels11/19, same selected bin, exact Need/receiving/probabilities
+
+stdout | src/test/assembledNeed.test.ts > need221 repeat full continuation and rollback preserve the shared run
+M221 PERSISTENCE PASS repeat1; every full state/output/trace/save through terminal; rollback
+
+ ✓ src/test/assembledNeed.test.ts (16 tests | 11 skipped) 109884ms
+   ✓ need221 primary direct pressure supports two actions without a task 65522ms
+   ✓ need221 response and evidence gates preserve zero versus unknown 13129ms
+   ✓ need221 psychological adoption and direct Need have independent grounds 10314ms
+   ✓ need221 hidden truth does not change pressure or reasons 5297ms
+   ✓ need221 repeat full continuation and rollback preserve the shared run 15622ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 11 skipped (16)
+   Start at  15:30:09
+   Duration  115.55s (transform 3.48s, setup 0ms, collect 5.19s, tests 109.88s, environment 0ms, prepare 147ms)
+
+
+M221 types complete seam and boundaries exit=0 elapsed=21.303s cap=120
+
+M221 receiving correspondence boundaries and final-trace continuation exit=0 elapsed=106.349s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledNeedBoundary.test.ts > need221 primary direct pressure supports two actions without a task
+M221 PRIMARY PASS 2 Need nuclei; exact probabilities1/2,1/2; no task sources; ordinary execution
+
+stdout | src/test/assembledNeedBoundary.test.ts > need221 repeat full continuation and rollback preserve the shared run
+M221 PERSISTENCE PASS repeat1; every full state/output/trace/save through terminal; rollback
+
+stdout | src/test/assembledNeedBoundary.test.ts > need221 boundary admitted Need agrees with the original receiving kernel
+M221 KERNEL PASS captured selected observation/pressure -> original coveredRole and native Base, no protective credit
+
+stdout | src/test/assembledNeedBoundary.test.ts > need221 boundary no-response successor preserves existing semantic state and receiving
+M221 PRESERVATION PASS exact semantic state/outputs and all trace fields except declared identity/version/input-projection extension; no responses
+
+stdout | src/test/assembledNeedBoundary.test.ts > need221 boundary closed sources versions and ordinary ingress
+M221 ADMISSION PASS fixed source identities, duplicate/foreign responses, old bundle, forged original input
+
+stdout | src/test/assembledNeedBoundary.test.ts > need221 boundary Need options pass through common inhibition
+M221 INHIBITION PASS two Need responses offered, common control removes A, only B reaches reasons/choice
+
+ ✓ src/test/assembledNeedBoundary.test.ts (20 tests | 14 skipped) 100238ms
+   ✓ need221 primary direct pressure supports two actions without a task 65015ms
+   ✓ need221 repeat full continuation and rollback preserve the shared run 15724ms
+   ✓ need221 boundary admitted Need agrees with the original receiving kernel 1971ms
+   ✓ need221 boundary no-response successor preserves existing semantic state and receiving 13568ms
+   ✓ need221 boundary closed sources versions and ordinary ingress 2037ms
+   ✓ need221 boundary Need options pass through common inhibition 1921ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 14 skipped (20)
+   Start at  15:35:56
+   Duration  105.78s (transform 3.38s, setup 0ms, collect 5.03s, tests 100.24s, environment 0ms, prepare 165ms)
+
+
+M221 affected codec Value and reason regressions exit=0 elapsed=92.209s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/campaign2CognitiveCodecs.test.ts (9 tests) 423ms
+stdout | src/test/assembledStandingRounding.test.ts > M103 exact law: symmetric bounded rounding retains integer and zero endpoints
+M103 KERNEL PASS signed mean error<2^-32, normalization, integer/cap/zero/Avoid and threshold boundaries
+
+ ✓ src/test/assembledStandingRounding.test.ts (11 tests | 10 skipped) 7ms
+stdout | src/test/assembledReasonSources.test.ts > M85 grammar: closed descriptions, producer support and prior admission
+M85 GRAMMAR PASS closed tuples/identities/roles/projections/old admission; empty-basis repetition rejected, no invented citation
+
+stdout | src/test/assembledReasonSources.test.ts > M85 math: the shared compiler preserves existing Value and native strength domains
+M85 MATH PASS actual retained Value/Commitment operands and raw strength4 preserve old compilation; no authored operand entered a run
+
+ ✓ src/test/assembledReasonSources.test.ts (9 tests | 7 skipped) 86987ms
+   ✓ M85 grammar: closed descriptions, producer support and prior admission 68736ms
+   ✓ M85 math: the shared compiler preserves existing Value and native strength domains 18251ms
+
+ Test Files  3 passed (3)
+      Tests  12 passed | 17 skipped (29)
+   Start at  15:38:13
+   Duration  91.65s (transform 3.75s, setup 0ms, collect 9.14s, tests 87.42s, environment 0ms, prepare 434ms)
+
+
+M221 positive execution versus world obstruction exit=1 elapsed=72.895s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledNeedBoundary.test.ts (21 tests | 1 failed | 20 skipped) 66846ms
+   × need221 boundary actual execution differs from a blocked attempt 66845ms
+     → expected [ { kind: 'unsigned', value: 1n } ] to deeply equal [ { kind: 'unsigned', value: 0n } ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledNeedBoundary.test.ts > need221 boundary actual execution differs from a blocked attempt
+AssertionError: expected [ { kind: 'unsigned', value: 1n } ] to deeply equal [ { kind: 'unsigned', value: 0n } ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "kind": "unsigned",
+-     "value": 0n,
++     "value": 1n,
+    },
+  ]
+
+ ❯ src/test/assembledNeedBoundary.test.ts:62:205
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 20 skipped (21)
+   Start at  15:42:55
+   Duration  72.31s (transform 3.37s, setup 0ms, collect 5.02s, tests 66.85s, environment 0ms, prepare 156ms)
+
+
+M221 correct protocol permission and retained physical-opportunity null exit=0 elapsed=79.001s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledNeedBoundary.test.ts > need221 execution physical-opportunity null preserves the original failed count comparison
+M221 EXECUTION NULL PASS physical-opportunity true/false leaves protocol count1/1; original failed0 expectation preserved
+
+stdout | src/test/assembledNeedBoundary.test.ts > need221 execution actual protocol permission separates outcome from the same choice
+M221 EXECUTION PASS actual protocol permission1/0, identical positive Need/reasons/choice; no claim of relief efficacy
+
+ ✓ src/test/assembledNeedBoundary.test.ts (22 tests | 20 skipped) 72927ms
+   ✓ need221 execution physical-opportunity null preserves the original failed count comparison 67564ms
+   ✓ need221 execution actual protocol permission separates outcome from the same choice 5362ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 20 skipped (22)
+   Start at  15:45:07
+   Duration  78.44s (transform 3.40s, setup 0ms, collect 5.06s, tests 72.93s, environment 0ms, prepare 145ms)
+
+
+M221 final types exit=0 elapsed=21.870s cap=120
+
+M221 boundaries research preservation and artifact limits exit=1 elapsed=6.893s cap=120
+CHECK ['node', 'scripts/check-reference-boundary.mjs']
+Reference boundary check passed.
+CHECK ['node', 'scripts/check-research-obligations.mjs']
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+    print('CHECK',command,flush=True);subprocess.run(command,check=True)
+                                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\scoob\AppData\Local\Python\pythoncore-3.15-64\Lib\subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command ['node', 'scripts/check-research-obligations.mjs'] returned non-zero exit status 1.
+
+M221 correct CURRENT registry row and complete preservation exit=0 elapsed=4.290s cap=120
+CHECK ['node', 'scripts/check-research-obligations.mjs']
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4441}
+CHECK ['git', 'diff', '--check']
+PASS12 production/test files; frozen controls/contracts;21/15/132; document/evidence limits; recorded seconds 772.7330000000001
+
+M221 staged Git size exit=0 elapsed=0.376s cap=30
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+
+M221 final packaging whitespace exit=2 elapsed=1.000s cap=30
+Conservative overhead for final unstaged-document writes/staging/check. The staged
+check found only two trailing spaces in captured blank Vitest source-frame lines:
+CHECKS.txt85 source665 and CHECKS.txt90 source669 (each ends with pipe then U+0020).
+Trailing horizontal whitespace removed from the log; every diagnostic line retained.
+No code, scenario, law, comparison or frozen evidence changed.
+
+M221 FINAL Functional23/repository checks pass; total778.399/1800s, including failures and conservative final packaging overhead. No extension.
