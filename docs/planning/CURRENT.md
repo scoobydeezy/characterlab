@@ -1,40 +1,62 @@
-# Current work — M222 current importance/urgency comparison complete
-The current character retains observed goal importance while reacting to fresh
-urgency. Equal initial motives can produce different later decision probabilities
-under the same new urgency. Missing or denied urgency is not reused.
-[Result](ASSEMBLED_CHARACTER_M222_RESULT.md); model/registry0.145 unchanged.
-One character/state/scheduler/trace/save; owner bounded self-approval continues.
+# Current work — M223 acquired motives on the current character
+Replay genuine acquired Commitment/Value sources in the same current0.145 character.
+M222 complete0d47f0fd. Family12.2 remains open; owner bounded self-approval continues.
 
-## Completed comparison
-Four histories, six opportunities each: all24 consumed motives match the original
-Factored component exactly after unit/time mapping. Refold remains equivalent;
-ImportanceOnly, UrgencyOnly and FrozenProduct remain test controls.
-The initial collision produces probabilities1/2,1/2. Later common urgency1 yields
-377/432,55/432 versus1/2,1/2, using exact actual production inputs.
-Lower motive1/2 becomes relevance1/3 BelowThreshold; motive1 becomes1/2 Active.
-Both comparisons reach normal execution. No seed search or sampled-choice claim.
-Known zero/absent importance, denied adoption/urgency and missing display controls pass.
-Exact repeat and restore at1/5 preserve every settled state/output/trace/save
-through terminal101. All9 original component controls pass.
-Three test/helper files; no production, law or calibration change.
-Extraction/type failures and one interrupted slow comparison are retained.
-Direct exact byte equality repairs test overhead without removing checkpoints.
-13 distinct functional checks pass. Repository checks/verification accounting in result.
-No further behavioral verification follows these passes without a concrete change/failure.
+## Bounded card (before code)
+Capabilities: independent motives sharing an option retain their own grounds;
+duplicate/shared receipt descriptions do not manufacture extra support; acquired
+Value linkage changes actual current decision probabilities.
+Scope: BRIEF-12.2-4/5, C-MULTI required comparisons via unchanged M150 scenarios.
+Contracts: receipt-reasons0.1/model0.112 control, current model/registry0.145,
+SourceCoverage0.5, reference0.85; existing Value, performance and evidence contracts.
+No production/law/parameter retuning planned. At most4 test/helper files, zero
+production expected; CURRENT/register/obligation report link and one result/check log.
 
-## Next family12.2 gate
-Replay acquired Commitment/Value motives on0.145 with explicit schema/action mapping
-from M150, preserving shared/independent receipts and the original competitors.
-Then reconcile all six clauses and pinned BODY/MULTISOURCE, substitution/goal and
-importance/urgency comparisons. Declared Need responses are not learned efficacy.
-All six clauses have version-scoped witnesses; family acceptance remains OPEN.
-This package split does not waive the acquired-motive replay or final scope.
+Scenario: M150 body10/seed0, two social tasks, third unknown; recognized permitted
+stand-in reports1..3. A-only opportunities4/6 acquire actual performance reports;
+only6 is Value-linked. Both tasks/appraisals must be live at8 before comparisons.
+Preserve every original input, task, action, actuator, gain and starting entry.
+Adapter52->59: calibrated sensor bias0; retention kind budgets; position access
+PresentationFrequency; empty rehearsal/reported meaning; current stress/sleep/reward
+declarations and physical anchors only; empty adopted Need responses.
+Add an unused governed zero-request action/procedure for the protective declaration,
+leaving original actions/plans intact. It must never become a candidate in this scene.
+No authored beliefs, receipt history, Value, motives or raw reasons.
+Any admission conflict is diagnosed explicitly; no silent changes to old action meaning.
+
+Compare first/last/collective/duplicate sources at gains3/4,2/3,1/4, plus negative,
+zero, none, denied performance, hidden truth and Value-link-off controls from M150.
+Actual received descriptions/nuclei -> exact arbitration -> actual execution required.
+Original kernels: GroundAggregate/Pairwise/Uncovered/FamilyNormalized; description
+dice control retained. Compare complete captured common-domain inputs, not subsets.
+Expect first/last/duplicate probability equality; union overlap1/effective0 under
+SourceCoverage; alternative residuals/family normalization remain observable.
+Value-link-off preserves receipts/Commitment while removing Value and changing
+production probabilities. Seed0 fixed; no sampled-choice or coupling claim.
+Across0.112->0.145 compare semantic sources/grounds/probabilities, not identities or
+extended trace bytes. raw403/3 maps to403/4 with empty Need field; receipt trace
+is checked before that extension. Differences need explicit disposition.
+Repeat and restore after acquired receipt6 through terminal: every settled
+state/output/trace/save exact within0.145, direct byte equality (no deep byte objects).
+Negative controls catch private truth, unacquired receipts and zero/absent conflation.
+
+Serial checks: admission/primary<=600s; remaining native comparisons<=600s;
+persistence<=600s; types<=180s; boundaries/research/size<=180s each.
+Cumulative verification<=1800s including failures; one long job;20files/5MiB evidence.
+Use anchored filters; do not execute imported historical artifact writers.
+Original M150 kernels/fixtures and frozen Campaign2 closure unchanged: retain their
+full-byte receipts; affected original kernel correspondence executes on current inputs.
+MEC001/011..020/022 retain roles; RO001/008/010/012/014/015/019/020/021 conditional.
+Risks: obsolete schema, unsupported new-action reference, missing live appraisals,
+new receiving interaction, evidence leakage, continuation drift. Diagnose under
+self-approval, record amendment before changed comparison, no seed/magnitude search.
+Done: declared native comparisons, controls and repository checks pass with classified
+differences, or checkpoint the precise unresolved gate within budget. Stop on pass.
+No whole12.2 acceptance until remaining pinned BODY/substitution/goal reconciliation.
 
 ## Pinned scope
-E75/P33/N11/U13=132;21members/15families.
-Accepted4/15:12.1@0.144,12.3@0.126,12.5@0.129,12.14@0.135.
-Whole-candidate acceptance remains open. Reference0.85/SourceCoverage unchanged.
-Conditional research obligations retain their triggers; no reduction or UI.
+E75/P33/N11/U13=132;21members/15families; accepted4/15 on recorded versions.
+One model/state/scheduler/trace/save. No UI, reduction or autonomous peer work.
 
 | Registry | Current count |
 |---|---|
