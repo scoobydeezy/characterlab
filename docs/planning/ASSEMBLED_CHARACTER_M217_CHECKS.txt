@@ -98,3 +98,60 @@ M214 OWNER PASS no learned S0 or altered physical baseline; wrong writer, scope 
 
 
 M217 A-types-final exit=0 elapsed=21.037s cap=120
+
+M217 B-Sober0 exit=0 elapsed=388.486s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/Sober/0
+M217 START Full/Sober/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/Sober/0
+M217 PASS Full/Sober/0 7 prefixes; safe bytes 758213 seconds 382.493 probe8 {"logical":8,"sleep":[0,0,0,500],"capacity":1000,"inhibited":true,"active":true,"maintained":true,"spare":2,"options":["withhold"],"outcome":"Chosen","chosen":"withhold","probabilities":[{"action":"withhold","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","drawCount":0,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":0,"challenge":0,"competence":300,"motorAllowed":true,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledIntoxicationCohort.test.ts (32 tests | 31 skipped) 382498ms
+   ✓ cohort217 Full/Sober/0 382497ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 31 skipped (32)
+   Start at  22:11:29
+   Duration  387.95s (transform 3.35s, setup 0ms, collect 5.01s, tests 382.50s, environment 0ms, prepare 102ms)
+
+
+M217 B-Slow0 exit=0 elapsed=394.455s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/Slow/0
+M217 START Full/Slow/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/Slow/0
+M217 PASS Full/Slow/0 7 prefixes; safe bytes 848772 seconds 388.469 probe8 {"logical":8,"sleep":[0,0,700,500],"capacity":650,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":700,"challenge":350,"competence":300,"motorAllowed":false,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledIntoxicationCohort.test.ts (32 tests | 31 skipped) 388474ms
+   ✓ cohort217 Full/Slow/0 388473ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 31 skipped (32)
+   Start at  22:17:58
+   Duration  393.91s (transform 3.36s, setup 0ms, collect 5.03s, tests 388.47s, environment 0ms, prepare 103ms)
+
+
+M217 B-Fast0 exit=0 elapsed=388.735s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/Fast/0
+M217 START Full/Fast/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/Fast/0
+M217 PASS Full/Fast/0 7 prefixes; safe bytes 758221 seconds 382.701 probe8 {"logical":8,"sleep":[0,0,400,500],"capacity":800,"inhibited":true,"active":true,"maintained":true,"spare":2,"options":["withhold"],"outcome":"Chosen","chosen":"withhold","probabilities":[{"action":"withhold","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","drawCount":0,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":400,"challenge":200,"competence":300,"motorAllowed":true,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledIntoxicationCohort.test.ts (32 tests | 31 skipped) 382705ms
+   ✓ cohort217 Full/Fast/0 382705ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 31 skipped (32)
+   Start at  22:24:32
+   Duration  388.19s (transform 3.40s, setup 0ms, collect 5.07s, tests 382.71s, environment 0ms, prepare 103ms)
+

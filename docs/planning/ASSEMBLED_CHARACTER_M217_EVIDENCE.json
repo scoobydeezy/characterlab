@@ -1,7 +1,1842 @@
 {
   "contract": "assembled-intoxication-cohort/0.1",
   "candidate": "0.143",
-  "runs": {},
+  "runs": {
+    "Full/Sober/0": {
+      "scenario": "Sober",
+      "law": "Full",
+      "seed": 0,
+      "key": "Full/Sober/0",
+      "model": "030702eaf38fa88426424d733b180f0ab0cb6ebfa545aa32dae882a9ca50834e",
+      "input": "163a3eca455841ae74d2ffea81960ba4a262615338addbc7abbabf5474ed1b04",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "66d4935cb03a8ebf0c25907578d19da555734b4f2a40c64858663d117eedf1cf",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "1dbfe8f5e03629eee531b979a9f29cfdf442bb96ebb8477599aa93c918dd0c2d",
+          "drawCount": 2,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "75099e5592d6bf0a3757b5ca9d1f48cdcfb135faa83c70af2ccc5d954c2d45e6",
+      "presentation": "f2addeb2c16ef50aba4063eaeacbc37cb9fefd6388567346a9e10b4ee8ee9c1c",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91879,
+          "save": "1fe62ef8697eaa077cff1cb85f95c855ac28777d9b5b8e3104888de1e9f3ab54",
+          "terminal": false,
+          "next": "d65c6bed0077906d9d0e07fad6a57b4b6c233405cd39194f3b413925cb08ba8f"
+        },
+        {
+          "logical": 2,
+          "native": 3,
+          "bytes": 1288418,
+          "save": "bb40b698174ece1bf352edf964f4987731eb1343207e5d320b66f4de334c7a61",
+          "terminal": false,
+          "next": "c00ba4d5754b249017119f79210a2c9ae50a3bbf4df032a4763b5ff6e4b5e1eb"
+        },
+        {
+          "logical": 7,
+          "native": 8,
+          "bytes": 3974474,
+          "save": "9aeb7c82ed24fbeb3edeff4133f615306a1a01e30277c5a380cc4deb5e89008f",
+          "terminal": false,
+          "next": "8adcd0df62cc96064bf74402652eefc079fae7eb4142651ffae81d373d91ccbb"
+        },
+        {
+          "logical": 8,
+          "native": 9,
+          "bytes": 4512392,
+          "save": "8adcd0df62cc96064bf74402652eefc079fae7eb4142651ffae81d373d91ccbb",
+          "terminal": false,
+          "next": "7c5b563a55d88636576bd005e45b0c17aca8e760c92897f329fa483f85dfc33e"
+        },
+        {
+          "logical": 10,
+          "native": 11,
+          "bytes": 5588228,
+          "save": "7c474de1d23bda3b84191dfa3685d09651072bd14f6d4f94320808e9deee2f79",
+          "terminal": false,
+          "next": "1064040c54016cba950715a49bce9de4ed6be6c475d0e88d1c68fca57b303809"
+        },
+        {
+          "logical": 11,
+          "native": 12,
+          "bytes": 6126146,
+          "save": "1064040c54016cba950715a49bce9de4ed6be6c475d0e88d1c68fca57b303809",
+          "terminal": false,
+          "next": "56749b2558571c179f3047e4856a34794c242de1b98f35073883a897ca3a1cac"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 6680466,
+          "save": "a356edf906a9ea8e8d8ef3f86b7ccb5072251e80aafda1d504be3abdcff808ae",
+          "next": "a356edf906a9ea8e8d8ef3f86b7ccb5072251e80aafda1d504be3abdcff808ae",
+          "terminal": true
+        }
+      ],
+      "safe": "711bb0a262cebcc1a4d1b5f48401c42a9e3e8c14b9e52c31295df3d187a946aa",
+      "safeBytes": 758213,
+      "safeCompressed": "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",
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 382.493353
+    },
+    "Full/Slow/0": {
+      "scenario": "Slow",
+      "law": "Full",
+      "seed": 0,
+      "key": "Full/Slow/0",
+      "model": "030702eaf38fa88426424d733b180f0ab0cb6ebfa545aa32dae882a9ca50834e",
+      "input": "d9d000718aca8df77416d399adaef9f84cd72749cadf3705ad5586f835735044",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "804cb74d52ceee58869f4c5a3c7a76a24197ec78c5e926339b521bbe144bec95",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "1dbfe8f5e03629eee531b979a9f29cfdf442bb96ebb8477599aa93c918dd0c2d",
+          "drawCount": 2,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 800,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            700,
+            500
+          ],
+          "capacity": 650,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "32886777347/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "35832699389/68719476736"
+            }
+          ],
+          "draws": "376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2",
+          "drawCount": 2,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 700,
+          "challenge": 350,
+          "competence": 300,
+          "motorAllowed": false,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            600,
+            500
+          ],
+          "capacity": 700,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "32886777347/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "35832699389/68719476736"
+            }
+          ],
+          "draws": "330f4b0a552aa614edc38e5540016f20255e0679f1725d014adfef03e42ebaae",
+          "drawCount": 2,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 600,
+          "challenge": 300,
+          "competence": 300,
+          "motorAllowed": false,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            500,
+            500
+          ],
+          "capacity": 750,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "32886777347/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "35832699389/68719476736"
+            }
+          ],
+          "draws": "24cef914f5f4df1efa80404dbc743d71496145d3284a210aaf8964403467bd50",
+          "drawCount": 2,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 500,
+          "challenge": 250,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "capacity": 800,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 400,
+          "challenge": 200,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            300,
+            500
+          ],
+          "capacity": 850,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 300,
+          "challenge": 150,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Blocked",
+          "chosen": "drug"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "b25b6c13d99f20c02352171d01519c3abde22acc6eeb5d876af2aa35ba09367b",
+      "presentation": "723a578c4b807f07e2bbcbb3638c3bccf37c496f73a883d6a70a2973911a3c2b",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91880,
+          "save": "f64c55ef9ab9fcefc3f98856291b7e362a19e82c0f4760adfb1727fa2d4e5553",
+          "terminal": false,
+          "next": "6020bc1d172e8b7152932219962e332117fdb14c47b3a2e716baaa4f323bdae8"
+        },
+        {
+          "logical": 2,
+          "native": 3,
+          "bytes": 1288419,
+          "save": "f5e2f9f112310f048652e70d0bcd03247f9af37f8ba973799230c8ce2e2b5961",
+          "terminal": false,
+          "next": "53947a959b8f34e6d3a07eda469716ddba8d338226b1a6fb050f3509b5f5241d"
+        },
+        {
+          "logical": 7,
+          "native": 8,
+          "bytes": 3974482,
+          "save": "4eec770f8d0d1aff6c35acf6fc13f3f2f208fed5a2318bc207d516e2b9a792cb",
+          "terminal": false,
+          "next": "0c3dae5f5ddfbeb2cb0af3ce32c780126d82c27d7a63e666fa03a93e321fc732"
+        },
+        {
+          "logical": 8,
+          "native": 9,
+          "bytes": 4733498,
+          "save": "0c3dae5f5ddfbeb2cb0af3ce32c780126d82c27d7a63e666fa03a93e321fc732",
+          "terminal": false,
+          "next": "3c877b19e53de4b78dad3ac30e248b054408bd8a98bb5c378a37f37e5fea661c"
+        },
+        {
+          "logical": 10,
+          "native": 11,
+          "bytes": 6241874,
+          "save": "16916804d361b6d46ace6ebb9434486dc3a861f8c543c2b446321dc401312d43",
+          "terminal": false,
+          "next": "cdf79799c47b0238ffe53455fb4855c5298355a99699ac6bab64c8352121110e"
+        },
+        {
+          "logical": 11,
+          "native": 12,
+          "bytes": 6779851,
+          "save": "cdf79799c47b0238ffe53455fb4855c5298355a99699ac6bab64c8352121110e",
+          "terminal": false,
+          "next": "714991f37f7ce84088c6a4759e894d133079d9f1465cf652ce7fa0094c8d7015"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 7334230,
+          "save": "700d9749e6623442543ccb885d2d0d515329d0cdd2b8b20b0308ef2969f0f962",
+          "next": "700d9749e6623442543ccb885d2d0d515329d0cdd2b8b20b0308ef2969f0f962",
+          "terminal": true
+        }
+      ],
+      "safe": "0c73c2f4175d2f4d30ad5b53467d86f1ee00e10ca1f5b72a8825dec4917f604c",
+      "safeBytes": 848772,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 388.4689424
+    },
+    "Full/Fast/0": {
+      "scenario": "Fast",
+      "law": "Full",
+      "seed": 0,
+      "key": "Full/Fast/0",
+      "model": "fc8e529b0e5d6163d19a9a5cbff9f1e446597a6c229586bae7fe4580abb4a0cd",
+      "input": "d9d000718aca8df77416d399adaef9f84cd72749cadf3705ad5586f835735044",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "134cdbc9bd8face9510c935fdc9a9f99a9ab9d5e87c991ab9bfff49fbc4b547c",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "1dbfe8f5e03629eee531b979a9f29cfdf442bb96ebb8477599aa93c918dd0c2d",
+          "drawCount": 2,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 800,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "capacity": 800,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 400,
+          "challenge": 200,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "75099e5592d6bf0a3757b5ca9d1f48cdcfb135faa83c70af2ccc5d954c2d45e6",
+      "presentation": "f2addeb2c16ef50aba4063eaeacbc37cb9fefd6388567346a9e10b4ee8ee9c1c",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91880,
+          "save": "c7930a5b8e256d7d55c7c4f145f11f694b61e5ebbac19c28ab2838643496d787",
+          "terminal": false,
+          "next": "5ada1b9bea5e539347c22973722019e8b12d89e9299683c1fe96577c9f2d1edf"
+        },
+        {
+          "logical": 2,
+          "native": 3,
+          "bytes": 1288419,
+          "save": "a738353ade7d4f742e99970867151c01a42651203e5f05bf2dddac97d6a2ca0c",
+          "terminal": false,
+          "next": "e8e820bba12d78a1b7a903db8cc84dcafc56a12f88ab580f7e89c090fcbb7dbd"
+        },
+        {
+          "logical": 7,
+          "native": 8,
+          "bytes": 3974482,
+          "save": "603b574acaf6ddd71e0e85bde182907880eb007e5753561c8b723b7178b4fff4",
+          "terminal": false,
+          "next": "15eeaad40d04e0fdab30abdf3d860ca457f06515db568c77d89473945477c80f"
+        },
+        {
+          "logical": 8,
+          "native": 9,
+          "bytes": 4512459,
+          "save": "15eeaad40d04e0fdab30abdf3d860ca457f06515db568c77d89473945477c80f",
+          "terminal": false,
+          "next": "ee4f937b943ed6ac6a297495d8a676b43fe91c2c2d3b3cd05a7be9b2ef426cd2"
+        },
+        {
+          "logical": 10,
+          "native": 11,
+          "bytes": 5588297,
+          "save": "f90e4a2cda7b7c152e4ab6ef5315dff757015c66f17e2aa711cfa8b9ebed467c",
+          "terminal": false,
+          "next": "09fc5bb71814fcaa66d3316f16b314250fb27602f5a869a1ca2d767e44ae9b5f"
+        },
+        {
+          "logical": 11,
+          "native": 12,
+          "bytes": 6126215,
+          "save": "09fc5bb71814fcaa66d3316f16b314250fb27602f5a869a1ca2d767e44ae9b5f",
+          "terminal": false,
+          "next": "c5c3a4b6f5aab7bcefbe4b141ee7cfcf7e0ac9d9090d8e9e9b9d2a4e1b9065c3"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 6680535,
+          "save": "cfc54a6eae6fc73771bbbd82c4bf6eb048a66ead4fc63233e833070e6140901f",
+          "next": "cfc54a6eae6fc73771bbbd82c4bf6eb048a66ead4fc63233e833070e6140901f",
+          "terminal": true
+        }
+      ],
+      "safe": "4f64a231fc8f9d9f80579828ec4099e39171adfc6f194353b6291d635c4ba795",
+      "safeBytes": 758221,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 382.7006074
+    }
+  },
   "boundary": {
     "legacyDisclosure": {
       "reproduced": true,
