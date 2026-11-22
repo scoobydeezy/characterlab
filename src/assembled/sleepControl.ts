@@ -17,16 +17,17 @@ import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 export const SLEEP='assembled-sleep-control/0.1',SLEEP_VERSION=SLEEP+'-candidate',SLEEP_SAMPLE=SLEEP+'/sample',SLEEP_RECEIPT=SLEEP+'/receipt',READINESS=SLEEP+'/readiness';
 export const SLEEP_ACQUISITION='assembled-sleep-control/0.3',SLEEP_ACQUISITION_VERSION=SLEEP_ACQUISITION+'-candidate';
 export const SLEEP_LOAD='assembled-sleep-control/0.2',SLEEP_LOAD_VERSION=SLEEP_LOAD+'-candidate';
+export const INTOXICATION='assembled-sleep-control/0.4',INTOXICATION_VERSION=INTOXICATION+'-candidate',MOTOR=INTOXICATION+'/motor';
 export const SLEEP_SOURCE=bodyId(1001,'event/assembled-sleep-source');
 const phases=[11n,12n,13n,14n,20n,120n],internal=phases.map(p=>bodyId(1001,'event/assembled-sleep-'+p));
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','sleep: '+s);};
 const bounded=(v:CanonicalValue,max=1000n)=>{const n=uint(v);if(n>max)fail('integer domain');return Number(n);};
 const time=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed'||v.value<0n||v.value>1000001n)fail('anchor time');return (v as {value:bigint}).value;};
 const clamp=(n:number)=>Math.max(0,Math.min(1000,n)),fp=(e:ScheduledEvent)=>key(scheduledEventValue(e));
-export function compileSleep(value:CanonicalValue,loadEnabled=false,immediateAdoption=false){
- const a=items(value,'list');if(a.length!==(immediateAdoption?8:7)||txt(a[0])!==(immediateAdoption?SLEEP_ACQUISITION:loadEnabled?SLEEP_LOAD:SLEEP)||typeof a[1]!=='boolean'||immediateAdoption&&typeof a[7]!=='boolean')fail('declaration');
+export function compileSleep(value:CanonicalValue,loadEnabled=false,immediateAdoption=false,intoxication=false){
+ const a=items(value,'list');if(a.length!==(intoxication?10:immediateAdoption?8:7)||txt(a[0])!==(intoxication?INTOXICATION:immediateAdoption?SLEEP_ACQUISITION:loadEnabled?SLEEP_LOAD:SLEEP)||typeof a[1]!=='boolean'||immediateAdoption&&typeof a[7]!=='boolean')fail('declaration');
  const [accumulation,recovery,nightDrive,threshold,resolution]=a.slice(2,7).map(v=>bounded(v));if(!resolution)fail('resolution');
- return Object.freeze({immediateAdoption,controlEnabled:immediateAdoption?a[7]===true:true,loadEnabled,enabled:a[1] as boolean,accumulation,recovery,nightDrive,threshold,resolution});
+ return Object.freeze({intoxication,clearance:intoxication?bounded(a[8]):0,motorCompetence:intoxication?bounded(a[9]):undefined,immediateAdoption,controlEnabled:immediateAdoption?a[7]===true:true,loadEnabled,enabled:a[1] as boolean,accumulation,recovery,nightDrive,threshold,resolution});
 }
 export type SleepDeclaration=ReturnType<typeof compileSleep>;
 export const sleepPath=(C:CanonicalValue):StatePath=>({rootStateTypeId:455n,fieldId:3n,selectors:[{kind:'mapKey',key:C}]});
@@ -35,14 +36,14 @@ export const sleepValue=(at:bigint,debt:number,phase=8,burden=0,arousal=500)=>li
 /** Exact port of Full elapsed sleep/phase and consequence recovery, without other owners. */
 export function sleepElapsed(value:CanonicalValue,at:bigint,d:SleepDeclaration){
  const p=sleepAnchor(value);if(at<p.at||at>1000000n)fail('elapsed time');const dt=Number(at-p.at);
- return sleepValue(at,clamp(p.debt+dt*d.accumulation),(p.phase+dt)%24,p.burden,p.arousal);
+ return sleepValue(at,clamp(p.debt+dt*d.accumulation),(p.phase+dt)%24,d.intoxication?clamp(p.burden-dt*d.clearance):p.burden,p.arousal);
 }
-export function sleepRecover(value:CanonicalValue,asleep:boolean,d:SleepDeclaration){const p=sleepAnchor(value);return sleepValue(p.at,clamp(p.debt-(asleep?d.recovery:0)),p.phase,p.burden,p.arousal);}
-export function sleepSource(value:CanonicalValue){
- const a=items(value,'list');if(a.length!==4||txt(a[0])!==SLEEP||typeof a[1]!=='boolean')fail('source');
+export function sleepRecover(value:CanonicalValue,asleep:boolean,d:SleepDeclaration,exposure=0){if(!Number.isInteger(exposure)||exposure<0||exposure>1000||!d.intoxication&&exposure!==0)fail('exposure domain/version');const p=sleepAnchor(value);return sleepValue(p.at,clamp(p.debt-(asleep?d.recovery:0)),p.phase,clamp(p.burden+exposure),p.arousal);}
+export function sleepSource(value:CanonicalValue,intoxication=false){
+ const a=items(value,'list');if(a.length!==(intoxication?5:4)||txt(a[0])!==(intoxication?INTOXICATION:SLEEP)||typeof a[1]!=='boolean')fail('source');
  const permitted=items(a[2],'list'),bias=items(a[3],'list');if(permitted.length!==4||permitted.some(v=>typeof v!=='boolean')||bias.length!==4)fail('sensor axes');
  const offsets=bias.map(v=>{if(typeof v==='boolean'||v.kind!=='signed'||v.value< -1000n||v.value>1000n)fail('sensor bias');return Number((v as {value:bigint}).value);});
- return {asleep:a[1] as boolean,permitted:permitted as readonly boolean[],bias:offsets};
+ return {exposure:intoxication?bounded(a[4]):0,asleep:a[1] as boolean,permitted:permitted as readonly boolean[],bias:offsets};
 }
 export function readiness(values:readonly (number|undefined)[],d:SleepDeclaration,load:number|undefined=d.loadEnabled?undefined:0){
  if(values.length!==4)fail('readiness operands');const known=values.every(v=>v!==undefined)&&load!==undefined;
@@ -53,6 +54,8 @@ export function readiness(values:readonly (number|undefined)[],d:SleepDeclaratio
  return {known,capacity,allowed:!d.enabled||capacity!==undefined&&capacity>=d.threshold,
   quant:sum===undefined?[]:[list([text('ties-even'),signed(sum),u(2),signed(penalty!)])]};
 }
+/** Existing BIO strict physical challenge; distinct from inclusive learned procedural K. */
+export function motorAssessment(value:CanonicalValue,at:bigint,d:SleepDeclaration){if(!d.intoxication||d.motorCompetence===undefined)fail('motor version');const physical=sleepAnchor(sleepElapsed(value,at,d)),challenge=Number(roundEven(BigInt(physical.burden),2n));return {burden:physical.burden,challenge,competence:d.motorCompetence,allowed:challenge<d.motorCompetence!};}
 export interface SleepEvidence {receipt:CanonicalValue;values:readonly (number|undefined)[];event:ScheduledEvent;}
 export function createSleepExecution(d:SleepDeclaration,stress:StressDeclaration,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue){
  const path=sleepPath(C);let active=false,at=0n,unbound=0,current:SleepEvidence|undefined;
@@ -71,7 +74,7 @@ export function createSleepExecution(d:SleepDeclaration,stress:StressDeclaration
    function write(prior:CanonicalValue,value:CanonicalValue){patch={operations:[{kind:'set',path,expected:{presence:true,value:prior},newValue:value}]};const applied=stateModel.applyPatch(state,patch,BODY_OWNER,{writableRoots:[455n],targetPaths:[path]});nextState=applied.state;diffs=applied.diffs;}
    if(source){
     const roster:StatePath={rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:BODY_OBSERVER}]},binding=read(state,roster);if(key(f(rec(binding.value,267n),1n))!==key(C))fail('observer holder binding');reads.push(...binding.reads);
-    const setting=sleepSource(e.payload),prior=read(state,path),elapsed=sleepElapsed(prior.value,at,d),physical=sleepAnchor(elapsed);reads.push(...prior.reads);write(prior.value,elapsed);
+    const setting=sleepSource(e.payload,d.intoxication),prior=read(state,path),elapsed=sleepElapsed(prior.value,at,d),physical=sleepAnchor(elapsed);reads.push(...prior.reads);write(prior.value,elapsed);
     let stressLevel:number|undefined;
     if(setting.permitted[1]){const s=read(state,stressPath(C)),transition=stressTransition(s.value,at,undefined,stress);reads.push(...s.reads);stressLevel=stressAnchor(transition.value).level;quant.push(...transition.quant);}
     const truth=[clamp(physical.debt+(physical.phase<6?d.nightDrive:0)),stressLevel,physical.burden,physical.arousal];
@@ -79,10 +82,10 @@ export function createSleepExecution(d:SleepDeclaration,stress:StressDeclaration
     for(let i=0;i<4;i++)if(values[i]!==undefined)quant.push(list([text('sleep-sensor-floor'),u(i),u(truth[i]!),signed(setting.bias[i]),u(d.resolution),u(values[i]!)]));
     const observation=typedIdentifier(1115,u(context.allocateRuntimeId())),reservation=admitObservationLane({observerId:txt(BODY_OBSERVER.payload),lane:'Current',dueAt:at,emitsCharacterAccessibleEvidence:true},()=>context.allocateRuntimeId()).reservation!;reservations.push(reservation);
     const sample=list([text(SLEEP_SAMPLE),observation,C,signed(at),list(values.map(v=>list(v===undefined?[]:[u(v)])))]);
-    outputs=[sample];emit(0,list([sample,u(reservation.experienceId)]));emit(5,list([text(SLEEP),setting.asleep]));
+    outputs=[sample];emit(0,list([sample,u(reservation.experienceId)]));emit(5,list([text(SLEEP),setting.asleep,...(d.intoxication?[u(setting.exposure)]:[])]));
    }else if(index===5){
-    const p=items(e.payload,'list');if(p.length!==2||txt(p[0])!==SLEEP||typeof p[1]!=='boolean')fail('consequence');const prior=read(state,path);if(sleepAnchor(prior.value).at!==at)fail('consequence without elapsed');
-    reads=prior.reads;write(prior.value,sleepRecover(prior.value,p[1] as boolean,d));
+    const p=items(e.payload,'list');if(p.length!==(d.intoxication?3:2)||txt(p[0])!==SLEEP||typeof p[1]!=='boolean')fail('consequence');const prior=read(state,path);if(sleepAnchor(prior.value).at!==at)fail('consequence without elapsed');
+    reads=prior.reads;write(prior.value,sleepRecover(prior.value,p[1] as boolean,d,d.intoxication?bounded(p[2]):0));
    }else{
     const carrier=items(e.payload,'list'),sample=items(carrier[0],'list');if(carrier.length!==2||sample.length!==5||txt(sample[0])!==SLEEP_SAMPLE||time(sample[3])!==at||key(sample[2])!==key(C))fail('carrier');sources=[id(sample[1])];
     if(index<3)emit(index+1,e.payload);
@@ -98,7 +101,7 @@ export function createSleepExecution(d:SleepDeclaration,stress:StressDeclaration
    unbound++;let bound=false;
    return {nextState,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){
     if(bound||children.length!==emissions.length)fail('child binding');children.forEach((child,i)=>{const expected={...emissions[i],eventId:child.eventId,eventSequence:child.eventSequence,causalParentEventIds:[e.eventId]};if(child.eventSequence<=e.eventSequence||fp(child)!==fp(expected)||pending.has(fp(child)))fail('child mismatch');pending.add(fp(child));});bound=true;unbound--;
-    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:e,seamId:bodyId(1036,'seam/assembled-sleep'),seamVersion:SLEEP_VERSION,recordKind:e.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:reads.map(r=>pattern(r.path)),actualReadRecords:reads,inputProjection:e.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quant,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
+    return [traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event:e,seamId:bodyId(1036,'seam/assembled-sleep'),seamVersion:d.intoxication?INTOXICATION_VERSION:SLEEP_VERSION,recordKind:e.eventTypeId,subjectIds:[id(C),BODY_OBSERVER],sourceRecordIds:sources,registeredReadDomain:reads.map(r=>pattern(r.path)),actualReadRecords:reads,inputProjection:e.payload,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:quant,statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]})];
    }};
   },
   prepareCommit(){if(!active||pending.size||unbound||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unfinished instant');validateSuccessfulExperienceSettlement(reservations,staged);},

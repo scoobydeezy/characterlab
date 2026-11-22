@@ -1,57 +1,47 @@
-# Current work — M216 intoxication, inhibition and physical execution
-M215 accepted sleep/control on0.141 (fa991b1a). Owner continuation authorizes the next
-bounded integration under standing self-approval. M216 is active; no full12.1 closure.
+# Current work — M216 intoxication connection complete
+The shared character now clears external intoxication, senses permitted burden and
+changes inhibition; physical execution can fail despite a successful procedural
+assessment and an unchanged intention. Same state/scheduler/trace/save on0.142.
 
-## Bounded card — before implementation
-Capability: external intoxicant exposure clears over time, reaches permitted current
-sensing/control, and independently prevents physical execution of a frozen intention.
-Baseline BRIEF12.1-7; original intoxication-control0.1, M208 map. Shared model0.142.
-Local disposition: retain fixed BIO physical competence as immutable motor threshold,
-separate from learned procedural K. Actual success requires BOTH existing inclusive
-procedural success and original strict physical challenge < fixed competence.
-No second learned competence owner, skill rewrite, epsilon or intoxication counted
-again as procedural impairment. Architecture13.3 and biological-integration0.1 support
-this distinct physical check. Motor threshold is a bounded original parameter, not
-a claim about general learned skill or a replacement for K. Damage integration pending.
+## Completed bounded gate
+M216 plan b080fd56; parent fa991b1a. Contract assembled-sleep-control/0.4-candidate.
+Sober/Slow/Fast seed0 execute original1..12 (native2..13) after the real acquired
+reward/identity prelude. Slow motor permission returns10, inhibition11. Seed0
+withholds at9/10; this is not a claim of performed positive execution at10.
+Original seed1 HighCompetence changes positive Blocked->Applied with identical
+first exposed choice/probabilities/dice; a procedural-failure control still blocks.
+Both gates are required. Fixed BIO competence is not a second learned K store.
 
-Scope: (1) exposure/clearance in existing455/3 BODY_OWNER burden, (2) C1 burden ->
-existing readiness -> actual option/probability, (3) independent motor gate at110.
-Contracts: new ASSEMBLED_INTOXICATION_CONTRACT.md; old sleep0.1-0.3 unchanged.
-Production files: sleepControl.ts, model.ts, inputs.ts, body.ts, state.ts (at most5).
-Tests: new assembledIntoxication.test.ts and fixture (at most2); <=12 total.
-No new factory, scheduler, state family, owner, learned S0 or UI. Two test/evidence
-artifacts plus compact result/log; <=20 evidence files/5MiB. Frozen C0-C3 untouched.
+216 original Full kinetic/boundary comparisons; current denied/biased sensing;
+wrong-version/domain/S0/owner rejection; exact repeat8, restore8->9 and post-exposure
+rollback/recovery. Retained M209 math and M214 native reward regression pass. Types,
+source/reference/research preservation and Git size checked. All failures retained.
+The completed native triplet's final assertion was repaired on its lossless captured
+rows: zero-request withholding is not a failed engaged procedural action. No rerun.
+The injected-failure test correctly uses a fresh checkpoint restore, not saving or
+retrying a failed scheduler. No law, seed, calibration or scenario retuning.
 
-Scenario: nonsocial tasks1..25, reserve10/rate0, pleasure300/500/dose600; current
-sleep/stress/arousal channels live, no sleep accumulation, stress0/arousal500.
-Reward practice logical1, contested protective acquisition2, histories then held.
-Original source exposure800 after execution7, clearance100 vs400, fixed motor300;
-HighCompetence850. Seed0 fixed, plus original HighCompetence seed1 when applicable.
-No calibration/law/seed search; Threshold/Ramp, reference0.85, feedback TRUE.
-Compared probes8..12 must have live control rows/decisions and physical assessments.
-Expected slow burden700/600/500/400/300; challenge350/300/250/200/150; capacity
-650/700/750/800/850. Strict motor first succeeds10; inhibition first recovers11.
-Fast burden400 at8 permits inhibition; source7 cannot affect earlier choice7.
-Original quantitative D3/dice differences retain M215 disposition.
+[Result](ASSEMBLED_CHARACTER_M216_RESULT.md), [checks](ASSEMBLED_CHARACTER_M216_CHECKS.txt),
+[evidence](ASSEMBLED_CHARACTER_M216_EVIDENCE.json). Six production/two test files;
+three evidence artifacts <5MiB. Verification 1167.596/1800s including failures;
+600s/command, one job.
+BRIEF-12.1-7 N -> P. E72/P36/N11/U13; pinned21 members/15 families/132 clauses.
+Accepted families12.3@0.126,12.5@0.129,12.14@0.135 and sleep6@0.141 retain their
+version scopes. No full intoxication, whole12.1, final replay or UI acceptance.
 
-Predeclared checks: exact kinetic/kernel boundary comparison with original Full,
-Sober/Slow/Fast native seed0 through12 (native13), held histories, live probability
-change and actual motor vs inclusive procedural assessment; exact repeat at exposed
-prefix and full save/next equality. Fixed high-competence control changes motor gate,
-not first exposed intention. A procedural-failure control must still fail despite
-physical permission. Denied/bias current sensing and malformed/version/S0/owner
-controls; affected old sleep/reward regression once. Types, research, boundary,size.
-Native variants share reference laws; sampled differences require equal actual draws.
-Full20 original intoxication runs/55 prefixes remain the subsequent acceptance gate;
-M216 cannot close12.1-7 or claim whole blind-stream equality before downstream mask.
+## Next gate — before more breadth
+No active milestone. Resolve the original whole masked observer comparison first:
+rewardExperience emits actual outcome/performed metadata; habitExecution uses
+performed in receipt admission. Denied burden alone is insufficient to establish
+conditional noninterference. Preserve actual physical diagnostics while qualifying
+observer/evidence correspondence; no masking away admitted cognitive outputs.
+Then complete original20 intoxication runs/55 selected prefixes, all seeds/controls
+and classified receiving differences. M208's map remains fixed. Do not conflate
+motor permission with executed action or strict BIO with inclusive procedural K.
+Same bounded self-approval; write the next card before code. Preserve original
+controls, reference0.85/feedback TRUE and one continuing character. No new law or
+scope reduction follows from this partial integration.
 
-Budgets: 1800s cumulative verification,600s/command, one job. Split before exceeding
-12 files or expected time; preserve failures and passing receipts, no blind retries.
-Done when the three connections and targeted controls pass with explicit limits;
-then report partial12.1-7 and the remaining20/55 gate. No further breadth this package.
-MEC001/003/011..019/022 ports/controls/corpus/comparators retained; no reduction.
-RO008/009/012/013/020 conditional, historical019/021 unchanged.21/15/132.
-Current evidence E72/P35/N12/U13; accepted families12.3@0.126,12.5@0.129,12.14@0.135.
 | Status | Count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

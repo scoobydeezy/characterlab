@@ -1,0 +1,211 @@
+
+M216 types-initial exit=2 elapsed=21.462s cap=120
+src/assembled/sleepControl.ts(58,353): error TS18048: 'd.motorCompetence' is possibly 'undefined'.
+
+M216 types-tests exit=0 elapsed=21.389s cap=120
+
+M216 kernel exit=0 elapsed=6.119s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxication.test.ts > kernel216 original Full clearance and strict motor boundary remain exact
+M216 KERNEL PASS 216
+
+ ✓ src/test/assembledIntoxication.test.ts > kernel216 original Full clearance and strict motor boundary remain exact
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 15 skipped (16)
+   Start at  18:47:40
+   Duration  5.57s (transform 3.42s, setup 0ms, collect 5.09s, tests 63ms, environment 0ms, prepare 140ms)
+
+
+M216 native exit=1 elapsed=69.525s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledIntoxication.test.ts > native216 original main triplet separates motor recovery from inhibition 63533ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIntoxication.test.ts > native216 original main triplet separates motor recovery from inhibition
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:34:2738
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:127:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.rewardStart src/test/assembledRewardExperience.test.ts:58:214
+ ❯ src/test/assembledIntoxication.test.ts:43:170
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 15 skipped (16)
+   Start at  18:47:54
+   Duration  68.96s (transform 3.35s, setup 0ms, collect 4.99s, tests 63.53s, environment 0ms, prepare 121ms)
+
+
+M216 native-binding-repair exit=1 elapsed=251.231s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxication.test.ts > native216 original main triplet separates motor recovery from inhibition
+M216 NATIVE Sober [{"logical":7,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":8,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":9,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":10,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":11,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":12,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}}]
+
+stdout | src/test/assembledIntoxication.test.ts > native216 original main triplet separates motor recovery from inhibition
+M216 NATIVE Slow [{"logical":7,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":8,"capacity":[650],"inhibited":false,"physical":700,"challenge":350,"competence":300,"motor":false,"skill":true,"status":"Blocked","chosen":"22ef5e3c9ef3df835664202eacc9432145675d183fe2b31fe4971037d39c0f4e","probabilities":[{"action":"22ef5e3c9ef3df835664202eacc9432145675d183fe2b31fe4971037d39c0f4e","p":"32886777347/68719476736"},{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":9,"capacity":[700],"inhibited":false,"physical":600,"challenge":300,"competence":300,"motor":false,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"22ef5e3c9ef3df835664202eacc9432145675d183fe2b31fe4971037d39c0f4e","p":"32886777347/68719476736"},{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"35832699389/68719476736"}],"draws":"330f4b0a552aa614edc38e5540016f20255e0679f1725d014adfef03e42ebaae","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":10,"capacity":[750],"inhibited":false,"physical":500,"challenge":250,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"22ef5e3c9ef3df835664202eacc9432145675d183fe2b31fe4971037d39c0f4e","p":"32886777347/68719476736"},{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"35832699389/68719476736"}],"draws":"24cef914f5f4df1efa80404dbc743d71496145d3284a210aaf8964403467bd50","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":11,"capacity":[800],"inhibited":true,"physical":400,"challenge":200,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":12,"capacity":[850],"inhibited":true,"physical":300,"challenge":150,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}}]
+
+stdout | src/test/assembledIntoxication.test.ts > native216 original main triplet separates motor recovery from inhibition
+M216 NATIVE Fast [{"logical":7,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":8,"capacity":[800],"inhibited":true,"physical":400,"challenge":200,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":9,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":10,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":11,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}},{"logical":12,"capacity":[1000],"inhibited":true,"physical":0,"challenge":0,"competence":300,"motor":true,"skill":false,"status":"Withheld","chosen":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","probabilities":[{"action":"1f00a184ca6f52a715bcb9e8309a42f0934b4f231b1221d01ae75672e85611d0","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","held":{"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","habit":"3b79abb4398a43cbd22d9a068c609fd3efefed7bf164401c08ea817dbdaf8bef","belief":"58a018e9f15a9810ce443875b4001094cb857946d5632f7a942e0baac2128108"}}]
+
+ × src/test/assembledIntoxication.test.ts > native216 original main triplet separates motor recovery from inhibition 245222ms
+   → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIntoxication.test.ts > native216 original main triplet separates motor recovery from inhibition
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/test/assembledIntoxication.test.ts:46:473
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 15 skipped (16)
+   Start at  18:49:35
+   Duration  250.68s (transform 3.34s, setup 0ms, collect 4.97s, tests 245.22s, environment 0ms, prepare 131ms)
+
+
+M216 self-approved assertion repair before comparison: native triplet completed all13 instants per arm and all acquisition/held-history/liveness checks. Final every(skill=true) conflated Withheld zero request (not engaged) with positive procedural failure. Retain raw rows and failed assertion, re-evaluate exact captured rows; do not rerun native simulations. No scenario, law, seed or production change. Motor permission10 is not a claim of a sampled positive execution at10 (seed0 withheld).
+
+M216 main-comparison exit=0 elapsed=5.976s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxication.test.ts > compare216 captured main rows repair zero-request skill assertion
+M216 MAIN PASS motor permission10 vs inhibition11; positive request blocked8; explicit withholding at9/10; held histories
+
+ ✓ src/test/assembledIntoxication.test.ts > compare216 captured main rows repair zero-request skill assertion
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 16 skipped (17)
+   Start at  18:54:26
+   Duration  5.42s (transform 3.37s, setup 0ms, collect 5.02s, tests 7ms, environment 0ms, prepare 130ms)
+
+
+M216 independent-gates exit=0 elapsed=179.451s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxication.test.ts > controls216 fixed competence and procedural permission stay distinct
+M216 GATES PASS unchanged first exposed intention; independent fixed physical and procedural failures
+
+ ✓ src/test/assembledIntoxication.test.ts > controls216 fixed competence and procedural permission stay distinct 173433ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 16 skipped (17)
+   Start at  18:54:41
+   Duration  178.91s (transform 3.35s, setup 0ms, collect 4.99s, tests 173.43s, environment 0ms, prepare 133ms)
+
+
+M216 persistence exit=1 elapsed=127.269s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledIntoxication.test.ts > persistence216 repeat full restore and exposure rollback are exact 121255ms
+   → only an active quiescent run can produce a continuation save
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIntoxication.test.ts > persistence216 repeat full restore and exposure rollback are exact
+SaveContractError: only an active quiescent run can produce a continuation save
+ ❯ saveFail src/substrate/persistence.ts:267:9
+    265| 
+    266| function saveFail(message: string): never {
+    267|   throw new SaveContractError(message);
+       |         ^
+    268| }
+    269| 
+ ❯ Module.createCanonicalSave src/substrate/persistence.ts:91:46
+ ❯ Object.save src/assembled/runtime.ts:523:14
+ ❯ Object.save src/assembled/character.ts:48:20
+ ❯ src/test/assembledIntoxication.test.ts:51:735
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 16 skipped (17)
+   Start at  18:57:57
+   Duration  126.71s (transform 3.36s, setup 0ms, collect 5.01s, tests 121.26s, environment 0ms, prepare 134ms)
+
+
+M216 persistence repair: faulted scheduler correctly prohibits continuation saves/retry. Original test incorrectly attempted save after injected trace failure. Compare committed state/output/trace/clock byte-for-byte instead, require save rejection, restore the valid pre-fault checkpoint into a fresh run, then verify exact continuation. No production fix or semantics change; failure retained.
+
+M216 persistence-lifecycle-repair exit=0 elapsed=204.914s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxication.test.ts > persistence216 repeat full restore and exposure rollback are exact
+M216 PERSISTENCE PASS full repeat8/restore8->9 and post-exposure rollback
+
+ ✓ src/test/assembledIntoxication.test.ts > persistence216 repeat full restore and exposure rollback are exact 198808ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 16 skipped (17)
+   Start at  19:00:42
+   Duration  204.37s (transform 3.37s, setup 0ms, collect 5.03s, tests 198.81s, environment 0ms, prepare 123ms)
+
+
+M216 boundaries exit=0 elapsed=141.836s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxication.test.ts > boundary216 sensor masks domains and owner preserve evidence boundary
+M216 BOUNDARY PASS unknown vs biased evidence, private physical failure, version/domain/S0/owner rejection; whole masked observer gate remains pending
+
+ ✓ src/test/assembledIntoxication.test.ts > boundary216 sensor masks domains and owner preserve evidence boundary 135837ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 16 skipped (17)
+   Start at  19:04:19
+   Duration  141.29s (transform 3.35s, setup 0ms, collect 4.99s, tests 135.84s, environment 0ms, prepare 131ms)
+
+
+M216 retained-regression exit=0 elapsed=109.416s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepControl.test.ts > math209 exact original sleep phases and readiness boundaries
+M209 MATH PASS 24 original elapsed/consequence steps;81 capacity/threshold cases; current missing operands stay unavailable
+
+ ✓ src/test/assembledSleepControl.test.ts > math209 exact original sleep phases and readiness boundaries
+stdout | src/test/assembledRewardExperience.test.ts > native214 performed pleasure learns once and changes a later real decision
+M214 prelude 1 600
+
+stdout | src/test/assembledRewardExperience.test.ts > native214 performed pleasure learns once and changes a later real decision
+M214 NATIVE PASS actual600 pleasure, mean3/5, live later shared reason and changed exact probability; protective acquisition3; held history4; repeat2/restore2->3->4
+
+ ✓ src/test/assembledRewardExperience.test.ts > native214 performed pleasure learns once and changes a later real decision 103637ms
+
+ Test Files  2 passed (2)
+      Tests  2 passed | 19 skipped (21)
+   Start at  19:06:53
+   Duration  108.87s (transform 3.54s, setup 0ms, collect 9.54s, tests 103.67s, environment 0ms, prepare 249ms)
+
+
+M216 types-final exit=0 elapsed=21.404s cap=120
+
+M216 preservation exit=0 elapsed=7.604s cap=60
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4436}
+PASS: Git index contains no files at or above50,000,000 bytes.
+M216 PRESERVATION PASS:6 production/2 test files; frozen C0-C3/reference/controls unchanged; clause7 N->P only; original20/55 and masked-observer qualification remain;21/15/132; all failures retained; verification seconds 1159.992

@@ -1351,3 +1351,11 @@ identity, shared control/arbitration and one state/save; no production change.
 MEC001/003/011..019/022 retain ports/controls/corpus/comparators, no reduction.
 Whole12.1/intoxication and final replay remain open.
 [Result](ASSEMBLED_CHARACTER_M215_RESULT.md).
+
+M216 ports exposure/clearance into existing BODY_OWNER455/3 and composes original
+strict fixed BIO motor competence with unchanged inclusive procedural K/difficulty.
+No second learned competence owner, reduction or alternative runtime. Original
+216 kinetic/boundary cases, live main/competence/skill/sensing controls and exact
+repeat/restore/rollback pass. MEC001/003/011..019/022 retain all roles. Full20/55 and
+whole masked observer/reward-receipt correspondence remain open;12.1-7 only partial.
+[Result](ASSEMBLED_CHARACTER_M216_RESULT.md).
