@@ -20,9 +20,9 @@ export const skillPath=(C:CanonicalValue,procedure?:CanonicalValue):StatePath=>(
 export const phasePath=(C:CanonicalValue):StatePath=>({...skillPath(C),rootStateTypeId:1500n});
 export const pattern=(p:StatePath):StatePathPattern=>({...p,selectors:p.selectors.map(selector=>({kind:'exact',selector}))});
 export const q=(v:Q)=>rational(v.numerator,v.denominator);
-export function compileProcedures(v:CanonicalValue,actions:readonly CanonicalValue[]):Procedures {
+export function compileProcedures(v:CanonicalValue,actions:readonly CanonicalValue[],actionLimit=3):Procedures {
  const a=items(v,'list');if(a.length!==2||txt(a[0])!==PROCEDURES)invalidModel('procedures declaration');
- const rows=items(a[1],'list');if(rows.length!==actions.length||rows.length<1||rows.length>3)invalidModel('procedures complete action coverage');
+ const rows=items(a[1],'list');if(rows.length!==actions.length||rows.length<1||rows.length>actionLimit)invalidModel('procedures complete action coverage');
  const seen=new Set<string>();return rows.map(v=>{const x=items(v,'list');if(x.length!==2||!actions.some(action=>key(action)===key(x[0]))||seen.has(key(x[0])))invalidModel('procedures duplicate/foreign action');seen.add(key(x[0]));const p=id(x[1]);if(p.namespaceId!==1027n||typeof p.payload==='boolean'||p.payload.kind!=='text'||!/^definition\/procedure\/.+$/.test(p.payload.value))invalidModel('procedures identifier');return {action:x[0],procedure:x[1]};}).sort((a,b)=>key(a.action)<key(b.action)?-1:1);
 }
 export function compileSkill(v:CanonicalValue){const a=items(v,'list');if(a.length!==1||txt(a[0])!==SKILL)invalidModel('procedural declaration');return true as const;}

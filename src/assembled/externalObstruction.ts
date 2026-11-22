@@ -30,14 +30,14 @@ export function obstructionSource(v:CanonicalValue,C:CanonicalValue,people:reado
  const causes=causal?items(a[6],'list'):[];if(causal){if(causes.length!==2||causes.some(x=>typeof x!=='boolean'))invalidModel('stakeholder cause access');stakeholderReportSlots(a[7]);}
  return {blocker:blockers[0],witnessTask:seen[0],stakeholderTask:passive?a[4]:undefined,access:access as boolean[],causes:causes as boolean[],reports:causal?a[7]:undefined};
 }
-export function opportunitySource(v:CanonicalValue,C:CanonicalValue,actions:readonly CanonicalValue[]){
+export function opportunitySource(v:CanonicalValue,C:CanonicalValue,actions:readonly CanonicalValue[],actionLimit=3){
  const a=items(v,'list');if(a.length!==3||txt(a[0])!==OPPORTUNITY||!eq(a[1],C))invalidModel('execution opportunity holder/grammar');
  const rows=items(a[2],'set'),seen=new Set<string>();
- if(!actions.length||actions.length>3||rows.length!==actions.length)invalidModel('execution opportunity complete action coverage');
+ if(!actions.length||actions.length>actionLimit||rows.length!==actions.length)invalidModel('execution opportunity complete action coverage');
  const result=rows.map(v=>{const r=items(v,'list');if(r.length!==2||typeof r[1]!=='boolean'||!actions.some(x=>eq(x,r[0]))||seen.has(key(r[0])))invalidModel('execution opportunity declared action/availability');seen.add(key(r[0]));return {action:r[0],available:r[1] as boolean};});
  return result;
 }
-export function createExternalObstruction(C:CanonicalValue,people:readonly CanonicalValue[],originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,tasks?:readonly CanonicalValue[],actions?:readonly CanonicalValue[],observers?:SocialWitness,knowledge?:{stateModel:ReturnType<typeof compileCampaign2StateModel>;timeLimit:TimeLimit}){
+export function createExternalObstruction(C:CanonicalValue,people:readonly CanonicalValue[],originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,tasks?:readonly CanonicalValue[],actions?:readonly CanonicalValue[],observers?:SocialWitness,knowledge?:{stateModel:ReturnType<typeof compileCampaign2StateModel>;timeLimit:TimeLimit},actionLimit=3){
  const learned=knowledge?createStakeholderKnowledge(C,observers!,model,run,knowledge.stateModel,knowledge.timeLimit):undefined;
  const stakeholders=learned??(observers?createExecutionStakeholder(C,observers,model,run):undefined);
  let active=false,at=0n,current:ScheduledEvent|undefined,opportunity:ScheduledEvent|undefined,effectAction:CanonicalValue|undefined;
@@ -52,7 +52,7 @@ export function createExternalObstruction(C:CanonicalValue,people:readonly Canon
   execute(context:EventHandlerContext<AuthoritativeState>){
    const e=context.event;if(learned&&stakeholderEvents.some(t=>eq(t,e.eventTypeId)))return learned.execute(context);if(eq(e.eventTypeId,STAKEHOLDER_EVIDENCE)){if(!stakeholders)fail('stakeholder version');return stakeholders!.execute(context);}const isOpportunity=eq(e.eventTypeId,OPPORTUNITY_SOURCE);
    if(!active||e.dueAt!==at||e.phase!==(isOpportunity?100n:30n)||!(isOpportunity?actions: eq(e.eventTypeId,OBSTRUCTION_SOURCE))||(isOpportunity?opportunity:current)||used.has(e.eventId)||!originals.some(x=>fp(x)===fp(e)))fail('unbound source');
-   if(isOpportunity){opportunitySource(e.payload,C,actions!);opportunity=structuredClone(e);}else{obstructionSource(e.payload,C,people,tasks,!!observers,!!knowledge);current=structuredClone(e);}used.add(e.eventId);
+   if(isOpportunity){opportunitySource(e.payload,C,actions!,actionLimit);opportunity=structuredClone(e);}else{obstructionSource(e.payload,C,people,tasks,!!observers,!!knowledge);current=structuredClone(e);}used.add(e.eventId);
    if(learned&&!isOpportunity){const source=obstructionSource(e.payload,C,people,tasks,true,true);if(source.reports)return learned.source(context,source.reports);}
    return {nextState:context.state,outputs:[],emittedEvents:[],traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){
     if(children.length)fail('source children');
@@ -74,7 +74,7 @@ export function createExternalObstruction(C:CanonicalValue,people:readonly Canon
    if(!active||e.dueAt!==at||e.phase!==110n||!eq(e.eventTypeId,ACTION_BODY_EVENT)||assessed.has(e.eventId))fail('effect lifecycle');
    assessed.add(e.eventId);effectAction=effect.action;if(!current&&!opportunity)return undefined;
    const blocker=current?obstructionSource(current.payload,C,people,tasks,!!observers,!!knowledge).blocker:undefined;
-   const available=opportunity?opportunitySource(opportunity.payload,C,actions!).find(r=>eq(r.action,effect.action))?.available:true;
+   const available=opportunity?opportunitySource(opportunity.payload,C,actions!,actionLimit).find(r=>eq(r.action,effect.action))?.available:true;
    if(available===undefined)fail('selected action absent');
    return {blocked:!!blocker,unavailable:!available,
     report:current?list([text(OBSTRUCTION_RESULT),u(current.eventId),effect.outcomeId,effect.attemptId,effect.action,list(blocker?[blocker]:[]),!!blocker]):undefined,

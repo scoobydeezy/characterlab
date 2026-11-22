@@ -6,7 +6,8 @@ reappraisal in one character. This widens a configuration domain, not a law.
 The0.144 successor retains all0.143 schemas,58 registry slots, state owners,
 source authentication, phases, reference parameters and mathematics. It admits
 1..4 distinct governed protocol actions instead of1..3. Actuator and procedural
-mappings must each cover exactly those actions. Definitions/instructions retain
+mappings and any supplied execution-opportunity source must each cover exactly
+those actions. Opportunity checks use the same versioned limit at input and execution. Definitions/instructions retain
 namespace, role and reference validation; instruction count remains1..6 and
 existing task domain1..5, two plans/task. No new initial learned state is permitted.
 One compiled actionLimit=4 is passed to action admission and existing arbitration.

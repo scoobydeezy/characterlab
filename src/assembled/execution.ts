@@ -278,7 +278,7 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
     else output=r(408,[occurrence,event.payload,list((model.valueReceiving?valueReasons(event.payload,definition('task-reason-dice'),3):model.habit?compileAssembledReasons(items(f(rec(event.payload,403n),3n),'set'),definition('task-reason-dice'),model.configurationEnabled?3:2):compileReasonNuclei(items(f(rec(event.payload,403n),3n),'set'),definition('task-reason-dice'))))]);
    }
    else if(i===7){
-    output=await arbitrationOutput(occurrence,instant,event.payload,definition('task-arbitration'),random.forResolution(occurrence,event.payload),model.configurationEnabled?3:2);
+    output=await arbitrationOutput(occurrence,instant,event.payload,definition('task-arbitration'),random.forResolution(occurrence,event.payload),model.actionLimit);
     self?.decision(event,output);const result=rec(f(rec(output,409n),4n),419n);chosen=u(f(result,1n))===3n;if(chosen){const data=rec(f(result,2n),420n);randomDrawRecords=items(f(data,9n),'list').flatMap(v=>{const d=rec(v,422n);return [f(d,5n),...(d.schema.schemaVersion===3n?items(f(d,9n),'list'):[])];});const tie=rec(f(data,10n),423n);if(u(f(tie,1n))===2n)randomDrawRecords.push(f(tie,3n));}
    }else if(i===8)output=intentOutput(occurrence,event.payload);
    else if(i===9){output=expressionOutput(occurrence,event.payload);if(model.protection)output=protectiveExpression(output);if(model.eligibilityEnabled){if(!contextEvent)fail('identity expression missing current context');extraOutputs.push(frozenIdentityExpression(output,contextEvent!.eventId,contextEvent!.payload,!!model.protection));}}

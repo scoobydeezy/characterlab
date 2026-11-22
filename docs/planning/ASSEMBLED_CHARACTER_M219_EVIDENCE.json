@@ -1,0 +1,196 @@
+{
+  "admission": {
+    "pass": true,
+    "model": "0.144",
+    "actions": 4,
+    "predecessorRejectsFourth": true
+  },
+  "tolerance": {
+    "arbitration": {
+      "probabilities": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "scope": "exact production arbitration of four equal captured reason bundles; not four simultaneously native eligible roles"
+    },
+    "Reciprocal": {
+      "effects": [
+        {
+          "at": 4,
+          "magnitude": 2,
+          "requested": "40/1",
+          "potential": "40/3"
+        },
+        {
+          "at": 5,
+          "magnitude": 3,
+          "requested": "40/1",
+          "potential": "10/1"
+        },
+        {
+          "at": 6,
+          "magnitude": 4,
+          "requested": "40/1",
+          "potential": "8/1"
+        },
+        {
+          "at": 7,
+          "magnitude": 5,
+          "requested": "40/1",
+          "potential": "20/3"
+        }
+      ],
+      "views": [
+        {
+          "at": 3,
+          "factors": [
+            "7/10",
+            "5/6",
+            "77/120",
+            "77/120"
+          ],
+          "net": [
+            "77/197"
+          ]
+        },
+        {
+          "at": 5,
+          "factors": [
+            "7/10",
+            "2/3",
+            "7/12",
+            "7/12"
+          ],
+          "net": [
+            "7/19"
+          ]
+        },
+        {
+          "at": 7,
+          "factors": [
+            "7/10",
+            "1/3",
+            "7/15",
+            "7/15"
+          ],
+          "net": [
+            "7/22"
+          ]
+        }
+      ],
+      "input": "2669a0693c7e04e4e84c8929671a1ee6d76fbb23b59ddda3110252129f87675e",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "registry": "506e34c186411b1e4b6f3e6ad225b76b696bcb6df7468055dcee5f1b81a0e7b1",
+      "terminal": "6df18bb4f1c8ff800fae6ec83e0b8be7bd8067640ffec54a9482a66212e2bf79"
+    },
+    "Unattenuated": {
+      "effects": [
+        {
+          "at": 4,
+          "magnitude": 2,
+          "requested": "40/1",
+          "potential": "40/1"
+        },
+        {
+          "at": 5,
+          "magnitude": 3,
+          "requested": "40/1",
+          "potential": "40/1"
+        },
+        {
+          "at": 6,
+          "magnitude": 4,
+          "requested": "40/1",
+          "potential": "40/1"
+        },
+        {
+          "at": 7,
+          "magnitude": 5,
+          "requested": "40/1",
+          "potential": "40/1"
+        }
+      ],
+      "views": [
+        {
+          "at": 3,
+          "factors": [
+            "7/10",
+            "5/6",
+            "77/120",
+            "77/120"
+          ],
+          "net": [
+            "77/197"
+          ]
+        },
+        {
+          "at": 5,
+          "factors": [
+            "7/10",
+            "1/6",
+            "49/120",
+            "49/120"
+          ],
+          "net": [
+            "49/169"
+          ]
+        },
+        {
+          "at": 7,
+          "factors": [
+            "7/10",
+            "0/1",
+            "7/20",
+            "7/20"
+          ],
+          "net": [
+            "7/27"
+          ]
+        }
+      ],
+      "input": "2669a0693c7e04e4e84c8929671a1ee6d76fbb23b59ddda3110252129f87675e",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "registry": "ae397a5edb3080ab36a7871dc03e27b9c99d7c75d22ea9b1d4bf626708b51250",
+      "terminal": "43fdf607376366cfd7afccf457f459e431444f0beca633fd485c1bb6b7851aa0"
+    }
+  },
+  "continuation": {
+    "pass": true,
+    "checkpoint": "95ef39ec0a25697b3ab7301c146d4b21ef55f1fb48cea6f3253a81abb8d6ef41",
+    "terminal": "6df18bb4f1c8ff800fae6ec83e0b8be7bd8067640ffec54a9482a66212e2bf79",
+    "earned": "2"
+  },
+  "hidden": {
+    "pass": true,
+    "safe": "28e63506fb44527379fda165dbb65187abe1c95987c87974c2be61c33854524a",
+    "effects": [
+      [
+        "40/3",
+        "10/1",
+        "8/1",
+        "20/3"
+      ],
+      [
+        "40/1",
+        "40/1",
+        "40/1",
+        "40/1"
+      ]
+    ],
+    "view": {
+      "factors": [
+        "Unavailable"
+      ],
+      "net": [
+        "0/1"
+      ]
+    }
+  },
+  "legacy": {
+    "pass": true,
+    "candidate": "0.143",
+    "terminal": "18d87c267ba66c47b222a10971418b3d4217b7a125506340ccbd17cd25655228"
+  }
+}

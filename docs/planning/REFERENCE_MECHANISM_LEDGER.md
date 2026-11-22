@@ -1371,3 +1371,9 @@ M218 replays reserve/sensing1..5 and original sleep20/52 on0.143, preserving all
 MEC001/003/011..019/022 roles, original controls and failed tolerance setups.
 Current earned tolerance remains open; no family acceptance or reduction.
 [Result](ASSEMBLED_CHARACTER_M218_RESULT.md).
+
+M219 widens the versioned action domain to4 so an ordinary physical dose can coexist
+with reward/withholding/reappraisal. Existing execution and ADAPT302 -> delayed
+receipt -> sensed body -> actual reason pass, with pending/full restore and privacy.
+MEC001/003/011..019/022 retain all roles; no new owner/reduction, whole12.1 remains open.
+[Result](ASSEMBLED_CHARACTER_M219_RESULT.md).

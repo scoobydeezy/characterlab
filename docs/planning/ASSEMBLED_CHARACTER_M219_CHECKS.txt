@@ -1,0 +1,220 @@
+
+M219 types-initial exit=0 elapsed=22.255s cap=60
+
+M219 admission exit=0 elapsed=71.299s cap=180
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledActionDomain.test.ts (37 tests | 36 skipped) 64549ms
+   ✓ domain219 closed admission and unchanged role constraints 64548ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 36 skipped (37)
+   Start at  11:19:38
+   Duration  70.34s (transform 3.49s, setup 0ms, collect 5.25s, tests 64.55s, environment 0ms, prepare 293ms)
+
+
+M219 tolerance exit=1 elapsed=118.195s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionDomain.test.ts > tolerance219 independent action earns and receives tolerance
+M219 TOLERANCE Reciprocal {"effects":[{"at":4,"magnitude":2,"requested":"40/1","potential":"40/3"},{"at":5,"magnitude":3,"requested":"40/1","potential":"10/1"},{"at":6,"magnitude":4,"requested":"40/1","potential":"8/1"},{"at":7,"magnitude":5,"requested":"40/1","potential":"20/3"}],"views":[{"at":3,"factors":["7/10","5/6","77/120","77/120"],"net":["77/197"]},{"at":5,"factors":["7/10","2/3","7/12","7/12"],"net":["7/19"]},{"at":7,"factors":["7/10","1/3","7/15","7/15"],"net":["7/22"]}]}
+
+ ❯ src/test/assembledActionDomain.test.ts (37 tests | 1 failed | 36 skipped) 112145ms
+   × tolerance219 independent action earns and receives tolerance 112144ms
+     → requires 403/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionDomain.test.ts > tolerance219 independent action earns and receives tolerance
+SchedulerContractError: requires 403/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ Module.replace src/test/fixtures/assembledCharacter.ts:8:80
+ ❯ src/test/assembledActionDomain.test.ts:58:110
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 36 skipped (37)
+   Start at  11:21:01
+   Duration  117.63s (transform 3.41s, setup 0ms, collect 5.12s, tests 112.14s, environment 0ms, prepare 107ms)
+
+
+M219 ordinary test repair: first actual dose succeeds (four delayed receipts,
+earned magnitudes2..5, live reasons). Four-option check used legacy replace(),
+which rejects produced raw403/3. Replace fields preserving their actual schema;
+no scenario, law, calibration or production change. Rerun interrupted comparison.
+
+M219 tolerance-helper-repair exit=1 elapsed=144.357s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionDomain.test.ts > tolerance219 independent action earns and receives tolerance
+M219 TOLERANCE Reciprocal {"effects":[{"at":4,"magnitude":2,"requested":"40/1","potential":"40/3"},{"at":5,"magnitude":3,"requested":"40/1","potential":"10/1"},{"at":6,"magnitude":4,"requested":"40/1","potential":"8/1"},{"at":7,"magnitude":5,"requested":"40/1","potential":"20/3"}],"views":[{"at":3,"factors":["7/10","5/6","77/120","77/120"],"net":["77/197"]},{"at":5,"factors":["7/10","2/3","7/12","7/12"],"net":["7/19"]},{"at":7,"factors":["7/10","1/3","7/15","7/15"],"net":["7/22"]}]}
+
+ ❯ src/test/assembledActionDomain.test.ts (37 tests | 1 failed | 36 skipped) 138355ms
+   × tolerance219 independent action earns and receives tolerance 138355ms
+     → magnitude lies outside its declared lattice domain
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionDomain.test.ts > tolerance219 independent action earns and receives tolerance
+SchedulerContractError: magnitude lies outside its declared lattice domain
+ ❯ Object.validateMagnitude src/campaign2/adaptationDomains.ts:97:73
+     95|       }else{
+     96|         const maximum=spec!.value===297n?scales.get(spec!.name):spec!.…
+     97|         if(magnitude<0n||(maximum!==undefined&&magnitude>maximum))thro…
+       |                                                                         ^
+     98|       }
+     99|     },
+ ❯ src/campaign2/adaptationEvaluation.ts:95:23
+ ❯ executeNext src/campaign2/adaptationEvaluation.ts:81:47
+ ❯ Object.execute src/campaign2/adaptationEvaluation.ts:125:32
+ ❯ Object.execute src/assembled/runtime.ts:390:32
+ ❯ Object.execute src/assembled/runtime.ts:417:529
+ ❯ Object.execute src/assembled/runtime.ts:434:278
+ ❯ Object.execute src/assembled/runtime.ts:459:380
+ ❯ Object.execute src/assembled/runtime.ts:469:378
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 36 skipped (37)
+   Start at  11:23:27
+   Duration  143.78s (transform 3.41s, setup 0ms, collect 5.07s, tests 138.36s, environment 0ms, prepare 102ms)
+
+
+M219 finite-exposure amendment before rerun: the positive comparison through7 and
+four-option exact arbitration passed, but continued ordinary dose opportunities
+exceeded the frozen tolerance lattice10. Add a permitted route withdrawal at8,
+receipt3, preserving all original source events at0..7 and fixed laws/amount/delay/
+seed/probe requirements. Full queue still drains to101; no saturation/clamping law.
+Earlier helper403/3 failure and later lattice failure remain as controls/evidence.
+
+M219 tolerance-finite-exposure exit=0 elapsed=223.937s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionDomain.test.ts > tolerance219 independent action earns and receives tolerance
+M219 TOLERANCE Reciprocal {"effects":[{"at":4,"magnitude":2,"requested":"40/1","potential":"40/3"},{"at":5,"magnitude":3,"requested":"40/1","potential":"10/1"},{"at":6,"magnitude":4,"requested":"40/1","potential":"8/1"},{"at":7,"magnitude":5,"requested":"40/1","potential":"20/3"}],"views":[{"at":3,"factors":["7/10","5/6","77/120","77/120"],"net":["77/197"]},{"at":5,"factors":["7/10","2/3","7/12","7/12"],"net":["7/19"]},{"at":7,"factors":["7/10","1/3","7/15","7/15"],"net":["7/22"]}]}
+
+stdout | src/test/assembledActionDomain.test.ts > tolerance219 independent action earns and receives tolerance
+M219 TOLERANCE Unattenuated {"effects":[{"at":4,"magnitude":2,"requested":"40/1","potential":"40/1"},{"at":5,"magnitude":3,"requested":"40/1","potential":"40/1"},{"at":6,"magnitude":4,"requested":"40/1","potential":"40/1"},{"at":7,"magnitude":5,"requested":"40/1","potential":"40/1"}],"views":[{"at":3,"factors":["7/10","5/6","77/120","77/120"],"net":["77/197"]},{"at":5,"factors":["7/10","1/6","49/120","49/120"],"net":["49/169"]},{"at":7,"factors":["7/10","0/1","7/20","7/20"],"net":["7/27"]}]}
+
+ ✓ src/test/assembledActionDomain.test.ts (37 tests | 36 skipped) 217921ms
+   ✓ tolerance219 independent action earns and receives tolerance 217921ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 36 skipped (37)
+   Start at  11:26:51
+   Duration  223.38s (transform 3.42s, setup 0ms, collect 5.09s, tests 217.92s, environment 0ms, prepare 109ms)
+
+
+M219 plan-git-size exit=0 elapsed=1.544s cap=60
+Retained overexposure reproduction: fixture('Reciprocal',false,false) preserves
+the input without withdrawal; default finiteExposure=true is exactly the passing
+comparison. Only optional failed-control access added; no default bytes changed.
+
+M219 continuation exit=0 elapsed=210.520s cap=480
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledActionDomain.test.ts (37 tests | 36 skipped) 204488ms
+   ✓ continuation219 earned adaptation and pending receipt 204487ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 36 skipped (37)
+   Start at  11:32:00
+   Duration  209.96s (transform 3.41s, setup 0ms, collect 5.07s, tests 204.49s, environment 0ms, prepare 104ms)
+
+
+M219 hidden exit=1 elapsed=105.192s cap=360
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledActionDomain.test.ts (37 tests | 1 failed | 36 skipped) 99232ms
+   × hidden219 unseen later reserve stays outside cognition 99231ms
+     → compared physical task must be live: expected [ { kind: 'record', …(2) }, …(1) ] to have a length of 5 but got 2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionDomain.test.ts > hidden219 unseen later reserve stays outside cognition
+AssertionError: compared physical task must be live: expected [ { kind: 'record', …(2) }, …(1) ] to have a length of 5 but got 2
+
+- Expected
++ Received
+
+- 5
++ 2
+
+ ❯ view src/test/assembledActionDomain.test.ts:28:52
+
+ ❯ src/test/assembledActionDomain.test.ts:72:145
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 36 skipped (37)
+   Start at  11:35:31
+   Duration  104.63s (transform 3.39s, setup 0ms, collect 5.05s, tests 99.23s, environment 0ms, prepare 102ms)
+
+
+M219 negative-control test repair: hidden run produces a two-field Unavailable
+appraisal row because no current or recalled body operand is selected. The test
+mistakenly reused positive liveness. Assert explicit Unavailable in both arms and
+complete safe-stream equality despite different physical effects. Positive test
+retains mandatory five-field appraisal and nonempty actual reasons. Inputs unchanged.
+
+M219 hidden-negative-repair exit=0 elapsed=140.586s cap=300
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledActionDomain.test.ts (37 tests | 36 skipped) 134595ms
+   ✓ hidden219 unseen later reserve stays outside cognition 134594ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 36 skipped (37)
+   Start at  11:40:11
+   Duration  140.03s (transform 3.40s, setup 0ms, collect 5.08s, tests 134.60s, environment 0ms, prepare 105ms)
+
+
+M219 legacy exit=0 elapsed=123.989s cap=240
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledActionDomain.test.ts (37 tests | 36 skipped) 117930ms
+   ✓ legacy219 exact previous sleep terminal 117929ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 36 skipped (37)
+   Start at  11:42:32
+   Duration  123.43s (transform 3.45s, setup 0ms, collect 5.13s, tests 117.93s, environment 0ms, prepare 104ms)
+
+
+M219 types-final exit=0 elapsed=21.791s cap=60
+
+M219 preservation exit=0 elapsed=9.287s cap=60
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4439}
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M219 PRESERVATION PASS: 9 production/2 test files, frozen C0-C3/old contracts/controls unchanged, 3/15 families and21/15/132 unchanged, complete functional gates, failures/budget retained
