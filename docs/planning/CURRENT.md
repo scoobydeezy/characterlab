@@ -1,6 +1,7 @@
 # Current work — M217 reward evidence boundary and intoxication acceptance
 M216 complete45ca5696;0.142. Owner continuation authorizes the next bounded work.
-M217 active. One continuing character; full intoxication20/55 is the finite target.
+M217 A passed: repaired whole observer/learning boundary, persistence and retained controls.
+B/C/D pending. One continuing character; full intoxication20/55 is the finite target.
 
 ## Card before code
 Capabilities: (1) reward receipts/learning depend on known attempted action and C1
