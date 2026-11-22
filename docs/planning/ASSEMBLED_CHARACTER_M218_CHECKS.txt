@@ -1,0 +1,37 @@
+
+M218 A-types-initial exit=0 elapsed=21.215s cap=120
+
+M218 A-reserve-fast exit=1 elapsed=69.253s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbodimentCurrent.test.ts (12 tests | 1 failed | 11 skipped) 63349ms
+   × trajectory218 fast current receiving path 63348ms
+     → strategy display domain
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 fast current receiving path
+SchedulerContractError: strategy display domain
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/strategy.ts:16:44
+ ❯ Module.display src/assembled/strategy.ts:24:542
+ ❯ src/assembled/inputs.ts:83:464
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:83:30
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.rewardStart src/test/assembledRewardExperience.test.ts:58:214
+ ❯ src/test/assembledEmbodimentCurrent.test.ts:19:66
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 skipped (12)
+   Start at  08:19:01
+   Duration  68.67s (transform 3.35s, setup 0ms, collect 5.00s, tests 63.35s, environment 0ms, prepare 102ms)
+
