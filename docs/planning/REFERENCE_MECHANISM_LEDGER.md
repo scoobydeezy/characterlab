@@ -1377,3 +1377,9 @@ with reward/withholding/reappraisal. Existing execution and ADAPT302 -> delayed
 receipt -> sensed body -> actual reason pass, with pending/full restore and privacy.
 MEC001/003/011..019/022 retain all roles; no new owner/reduction, whole12.1 remains open.
 [Result](ASSEMBLED_CHARACTER_M219_RESULT.md).
+
+M220 accepts bounded embodiment/regulation12.1 on0.144: current reserve8, sleep20/52,
+intoxication20/55 and unchanged M219 earned tolerance. All prior receiving values,
+privacy and continuation controls retained; no production change or reduction.
+MEC001/003/011..019/022 retain roles; final whole-candidate replay remains open.
+[Result](ASSEMBLED_CHARACTER_M220_RESULT.md).

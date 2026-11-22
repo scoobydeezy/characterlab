@@ -1,7 +1,8 @@
+import {replay220,candidate220,correspondence220} from './fixtures/assembledEmbodimentReplay';
 import {it,expect} from 'vitest';
 // @ts-expect-error Node-only evidence.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
-import {reserve,tolerance,start,through,state,labels,decode,items,key,enc,list,text,C,rec,f,uint,at,outputs,type Run} from './fixtures/assembledEmbodimentCurrent';
+import {reserve as historicalReserve,tolerance,start,through,state,labels,decode,items,key,enc,list,text,C,rec,f,uint,at,outputs,type Run} from './fixtures/assembledEmbodimentCurrent';
 import {restorePreparedCharacterRun} from '../assembled/character';
 import {cachedMemory} from './fixtures/assembledMemoryFinal';
 import {safe,eqbytes,hash} from './assembledIntoxicationCohort.test';
@@ -11,7 +12,8 @@ import {BODY_SAMPLE} from '../assembled/body';
 import {JOINT_APPRAISAL} from '../assembled/appraisal';
 import {readQ} from '../campaign2/cognitiveMath';
 import {rational as q,type CanonicalValue} from '../substrate/canonicalEncoding';
-const file='docs/planning/ASSEMBLED_CHARACTER_M218_EVIDENCE.json';
+const reserve=(...args:Parameters<typeof historicalReserve>)=>candidate220(historicalReserve(...args));
+const file=replay220?'docs/planning/ASSEMBLED_CHARACTER_M220_BODY_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M218_EVIDENCE.json';
 const fraction=(v:CanonicalValue)=>{const x=readQ(v);return x.numerator+'/'+x.denominator;};
 const decodedStreams=new WeakMap<Uint8Array,readonly CanonicalValue[]>();
 const records=(bytes:Uint8Array,id:bigint)=>{let stream=decodedStreams.get(bytes);if(!stream){stream=items(decode(bytes),'list');decodedStreams.set(bytes,stream);}return stream.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===id).map(v=>rec(v,id));};
@@ -27,7 +29,7 @@ function capture(run:Run,t:bigint){
  return {t:Number(t),level:quant.length?fraction(f(rec(quant[0],484n),1n)):null,reads,joins,absence:records(run.snapshot().outputs,463n).map(key),interval:sample?key(f(sample,5n)):null,sample:sample?key(sample):null,rows:joint.flatMap(j=>items(j[4],'list').map(v=>items(v,'list').map(x=>typeof x!=='boolean'&&x.kind==='rational'?fraction(x):key(x)))),net:reasons.flatMap(r=>items(f(r,3n),'list').map(v=>fraction(f(rec(f(rec(v,407n),2n),406n),3n))))};
 }
 
-const put=(name:string,value:unknown)=>{const d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};expect(d[name]).toBeUndefined();d[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');};
+const put=(name:string,value:any)=>{const correspondence=correspondence220('docs/planning/ASSEMBLED_CHARACTER_M218_EVIDENCE.json',name,value);if(correspondence)value={...value,correspondence};const d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};expect(d[name]).toBeUndefined();d[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');};
 async function finish(run:Run){for(let n=0;await run.settleNextInstant();n++)expect(n).toBeLessThan(64);expect(run.snapshot().clock).toBe(101n);}
 for(const profile of ['fast','slow','no-delivery'] as const)it('trajectory218 '+profile+' full current receiving path',async()=>{
  const x=await start(reserve(profile));let checkpoint:string|undefined,next:string|undefined;
@@ -57,7 +59,7 @@ it('compareReserve218 finite current reserve gate',()=>{
  expect([row('alias41',12).level,row('alias49',12).level]).toEqual(['39/1','47/1']);
  expect(row('alias41',12).interval).not.toBe(row('alias49',12).interval);
  expect(row('alias41',12).net).not.toEqual(row('alias49',12).net);
- d.reserveQualification={pass:true,candidate:'0.143',clauses:[1,2,3,4,5],claim:'live appraisal and actual reason; no cross-model sampled-choice causality',originalControls:['M117 sixteen/79','M39 original80 null and laws']};
+ d.reserveQualification={pass:true,candidate:replay220?'0.144':'0.143',clauses:[1,2,3,4,5],claim:'live appraisal and actual reason; no cross-model sampled-choice causality',originalControls:['M117 sixteen/79','M39 original80 null and laws']};
  writeFileSync(file,JSON.stringify(d,null,2)+'\n');console.info('M218 RESERVE current five-clause gate PASS; tolerance remains open');
 });
 

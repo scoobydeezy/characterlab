@@ -1,3 +1,4 @@
+import {replay220,candidate220,correspondence220} from './fixtures/assembledEmbodimentReplay';
 import {it,expect} from 'vitest';
 // @ts-expect-error Node-only lossless evidence compression.
 import {deflateSync,inflateSync} from 'node:zlib';
@@ -6,7 +7,7 @@ import {createHash} from 'node:crypto';
 // @ts-expect-error Node-only test receipt IO.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 import {cases,caseKey,main,type Case} from './fixtures/assembledSleepCohort';
-import {currentSleep as fixture,start,state,decode,items,key,enc,list,text,u,C,rec,f,uint,at,type Run} from './fixtures/assembledEmbodimentCurrent';
+import {currentSleep as historicalFixture,start,state,decode,items,key,enc,list,text,u,C,rec,f,uint,at,type Run} from './fixtures/assembledEmbodimentCurrent';
 import {restorePreparedCharacterRun,characterModelIdentity} from '../assembled/character';
 import {cachedMemory} from './fixtures/assembledMemoryFinal';
 import {sid,SKILL_ACTUAL,SKILL_UPDATE} from '../assembled/skill';
@@ -23,7 +24,8 @@ import {EXTENDED_TIME_LIMIT} from '../assembled/timeDomain';
 import {cognitiveRecord as r} from '../assembled/codecs';
 import {readQ} from '../campaign2/cognitiveMath';
 import {CanonicalValue} from '../substrate/canonicalEncoding';
-const file='docs/planning/ASSEMBLED_CHARACTER_M218_SLEEP_EVIDENCE.json';
+const file=replay220?'docs/planning/ASSEMBLED_CHARACTER_M220_SLEEP_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M218_SLEEP_EVIDENCE.json';
+const fixture=(...args:Parameters<typeof historicalFixture>)=>candidate220(historicalFixture(...args));
 const hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),vh=(v:CanonicalValue)=>hash(enc(v));
 const eqbytes=(a:Uint8Array,b:Uint8Array)=>{expect(a.length).toBe(b.length);expect(a.every((v,i)=>v===b[i])).toBe(true);};
 const tag=(v:CanonicalValue)=>typeof v!=='boolean'&&v.kind==='list'&&typeof v.items[0]!=='boolean'&&v.items[0]?.kind==='text'?v.items[0].value:undefined;
@@ -69,7 +71,8 @@ async function runCase(c:Case){
  const save=x.run.save(),restored=await restorePreparedCharacterRun(x.handle,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save});eqbytes(save,restored.save());expect(await restored.settleNextInstant()).toBe(false);eqbytes(save,restored.save());
  checks.push({logical:12,native:Number(x.run.snapshot().clock),bytes:save.length,save:hash(save),next:hash(save),terminal:true});
  const result={...c,key:caseKey(c),model:hash(characterModelIdentity(x.handle)),input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),run:hash(x.run.runIdentity()),rows,physical,decisions:hash(x.run.decisionHistory()),presentation:hash(x.run.decisionPresentation()),prefixes:checks,safe:hash(safeBytes),safeBytes:safeBytes.length,safeCompressed:['Recovered','BlindRested','BlindDeprived','FailedExecution'].includes(c.scenario)&&c.seed===0&&c.law==='Full'?deflateSync(safeBytes).toString('base64'):undefined,closureInstants:closure,terminalClock:Number(x.run.snapshot().clock),elapsed:(performance.now()-began)/1000};
- const data=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{contract:'assembled-sleep-cohort/0.1',candidate:'0.143',runs:{}};expect(data.runs[result.key],'do not silently overwrite a passing cohort case').toBeUndefined();data.runs[result.key]=result;writeFileSync(file,JSON.stringify(data,null,2)+'\n');
+ const correspondence=correspondence220('docs/planning/ASSEMBLED_CHARACTER_M218_SLEEP_EVIDENCE.json',result.key,result,true);
+ const data=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{contract:'assembled-sleep-cohort/0.1',candidate:replay220?'0.144':'0.143',runs:{}};expect(data.runs[result.key],'do not silently overwrite a passing cohort case').toBeUndefined();data.runs[result.key]={...result,...(correspondence?{correspondence}:{})};writeFileSync(file,JSON.stringify(data,null,2)+'\n');
  console.info('M218 PASS',result.key,checks.length,'prefixes; safe bytes',safeBytes.length,'seconds',result.elapsed.toFixed(3),'probe8',JSON.stringify(rows[7]));return result;
 }
 for(const c of cases)it('sleep218 '+caseKey(c),()=>runCase(c),600000);

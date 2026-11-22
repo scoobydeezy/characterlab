@@ -1,9 +1,10 @@
+import {replay220,candidate220} from './fixtures/assembledEmbodimentReplay';
 import {it,expect,vi} from 'vitest';
 // @ts-expect-error Node-only evidence IO.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 // @ts-expect-error Node-only lossless compression.
 import {deflateSync} from 'node:zlib';
-import {cohort,start,through,labels,state,items,decode,enc,list,text,u,C,key,at,type Run} from './fixtures/assembledIntoxicationCohort';
+import {cohort as historicalCohort,start,through,labels,state,items,decode,enc,list,text,u,C,key,at,type Run} from './fixtures/assembledIntoxicationCohort';
 import {file,hash,eqbytes,safe} from './assembledIntoxicationCohort.test';
 import {OBSERVED_RECEIPT,REWARD_RECEIPT,REWARD_EVIDENCE,REWARD_EVIDENCE_VERSION,compileReward} from '../assembled/rewardExperience';
 import {habitPath,rewardPath,habitJournal,rewardValue,habitObservation,OBSERVED_OBS,NUMERIC_OBS,OBSERVED_REWARD} from '../assembled/habit';
@@ -13,7 +14,8 @@ import {EXTENDED_TIME_LIMIT} from '../assembled/timeDomain';
 import {restorePreparedCharacterRun} from '../assembled/character';
 import {cachedMemory} from './fixtures/assembledMemoryFinal';
 import * as traces from '../substrate/trace';
-const put=(name:string,value:unknown)=>{const d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{contract:'assembled-intoxication-cohort/0.1',candidate:'0.143',runs:{}};d.boundary??={};expect(d.boundary[name]).toBeUndefined();d.boundary[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');};
+const cohort=(...args:Parameters<typeof historicalCohort>)=>args[1]?.legacy?historicalCohort(...args):candidate220(historicalCohort(...args));
+const put=(name:string,value:unknown)=>{const d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{contract:'assembled-intoxication-cohort/0.1',candidate:replay220?'0.144':'0.143',runs:{}};d.boundary??={};expect(d.boundary[name]).toBeUndefined();if(replay220&&name!=='persistence'){const prior=JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M217_EVIDENCE.json','utf8')).boundary[name];expect(value).toEqual(prior);}d.boundary[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');};
 const view=(run:Run)=>safe(run,items(decode(run.snapshot().outputs),'list'));
 const learned=(run:Run,legacy=false)=>{const s=state(run),mode=legacy?true:'observed' as const;return {count:habitJournal(s.read(habitPath(C)).value,EXTENDED_TIME_LIMIT,mode).length,mean:Number(rewardValue(s.read(rewardPath(C)).value,EXTENDED_TIME_LIMIT,mode)?.mean),bytes:enc(list([s.read(habitPath(C)).value??list([]),s.read(rewardPath(C)).value??list([])]))};};
 const receipt=(run:Run,legacy=false)=>labels(run,legacy?REWARD_RECEIPT:OBSERVED_RECEIPT).find(a=>a.length===(legacy?9:8)&&at(a[2])===9n)!;
