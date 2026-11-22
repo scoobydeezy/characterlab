@@ -1,39 +1,61 @@
-# Current work — M218 checkpoint; current tolerance remains open
-The assembled character's reserve/sensing receiving path and original full sleep
-cohort pass on0.143. Whole embodiment/regulation acceptance remains incomplete.
-Owner2026-11-22 delegates bounded self-approval; laws, seeds and final scope remain.
-[Result](ASSEMBLED_CHARACTER_M218_RESULT.md) records passes, failures and next work.
+# Current work — M219 independent physical action and acquired tolerance
+Owner2026-11-22 continues under bounded self-approval. Parent4c874b49.
+One model/state/scheduler/save; Campaigns0–3 assembly; no UI or law/calibration change.
 
-## Completed scope
-Eight reserve/sensing cases: exact kinetics, actual live appraisal/reasons, hidden
-aliases, denied/unavailable sensing, full repeat and prepared continuation.
-Sleep20 cases/52 prefixes plus2 inert-withholding runs pass; original scenario
-bytes and semantic projections preserved. M217 intoxication20/55 remains valid.
-No production/formal changes, new factory, owner or UI. One character/state/save.
+## Card before code
+Capabilities: admit an independent fourth physical action alongside existing reward,
+withholding and reappraisal; earn tolerance through actual execution and consume it
+at delayed receipt; preserve predecessor behavior and exact successor continuation.
+Target BRIEF12.1-8 current receiving; whole12.1/final candidate acceptance remains open.
+Contract: assembled-action-domain/0.2-candidate; model/registry0.144-candidate.
+Predecessor0.143 and older keep their current domains/behavior. Same58 registry slots.
+Successor admits1..4 distinct governed actions, complete actuator/procedure coverage;
+existing1..6 instructions,1..5 tasks, two plans/task and all cross-field rules stay.
+One bounded actionLimit reaches declarations, actuator, procedures and arbitration.
+Existing described reasons already admits5 action/task keys; no equation change.
 
-## Open gate and diagnosed cause
-Current tolerance's third-action fixture failed: configurable-water is reappraisal.
-The planner offers it, but legitimate knowledge/opportunity gates remove it.
-Urgency repair alone did not help. All attempts and actual causal diagnostic remain.
-Reward action must be immediate; withholding has zero body effect; action domain
-admits at most3. No independent delayed physical action fits this composition.
-Do not inject reappraisal knowledge, bypass its gate or call this a law failure.
-No more fixture guesses under M218. Final tolerance receiving test remains open.
-M39 original80 null/40 comparison, pending-receipt and rollback controls retained.
+Files: src/assembled/{model,cognitiveDeclarations,actionBody,skill,execution,
+traceBinding}.ts; new src/test/assembledActionDomain.test.ts and
+src/test/fixtures/assembledActionDomain.ts. Expected8 production/test files, max12.
+Formal contract written before implementation. No frozen C0/C1/C2/C3 source changes.
+MEC001/003/011..019/022 retain port/control/corpus roles; M39/M218 failures preserved.
 
-## Next bounded direction
-Define a versioned independent physical-action domain, preserving reward,
-withholding and reappraisal roles in the same shared runtime. Audit candidate/reason
-cardinalities and exact control dependency/version boundaries before code.
-Then run the retained40/delay2, reserve10, seed0 current earned-tolerance comparison
-and affected replay. Write its finite card before implementation; no broad cleanup.
-Current M218 caps: A2900/B1100/C1600/D1600=7200s; failures count;<=600s/command,
-<=12 production/test files,<=20 evidence/5MiB. No limit reset or claimed full pass.
+## Predeclared comparison and controls
+Same fixed0.85 reference, seed0, reserve10/rate1, amount40/delay2, Reciprocal vs
+Unattenuated. Start with no learned tolerance. New ordinary physical action has
+its own governed definition/instruction/procedure; map physical task B route0.
+Reward stays immediate; withholding stays zero-effect; reappraisal gate is unchanged.
+Normal task/position/probe/body/priority channels from M218; nonsocial compared task.
+Body samples2/3/5/7; producer/opportunity events through13; settle queue to101.
+Before comparison require live task appraisal AND actual reasons in both arms.
+Require actual positive/increasing earned302, requested40 delayed receipts with
+actual302 reads, different potential and later actual appraisal/reason. No sampled
+choice causality claim across laws; no seed search or replacement psychology.
+Exact repeat plus restore with earned tolerance and pending delivery, then full
+continuation; denied final body evidence control must preserve cognition where
+permitted history matches. Preserve original80 quantization control as historical.
+If this scenario needs ordinary repairs, diagnose/record before bounded amendments;
+two unchanged blockers require a diagnosis, not another contrast.
 
-## Preserved completion scope
-F12.1 UNRESOLVED;3/15 accepted families; E73/P35/N11/U13;21/15/132 unchanged.
-Conditional008/009/010/011/012/013/015/020 and closed018/019/021/022 unchanged.
-MEC001/003/011..019/022 preserved; final assembly and whole-candidate replay open.
+Admission: legacy rejects fourth; successor rejects fifth, duplicate/foreign IDs,
+incomplete actuator/procedure coverage, nonzero withholding and delayed reward.
+Exact production four-option arbitration checks cover tie mass and chosen draw,
+with existing reference thresholds; original<=3 same equations/limit path.
+Regression: replay original M218 Full/Rested/0 on0.143 to terminal and match its
+complete saved terminal hash, plus exact current successor repeat/restore.
+Full sleep20/52 and intoxication20/55 remain accepted at0.143, not relabelled0.144.
+C0/C1 ordering/privacy and current action/authentication gates stay mandatory.
+Types, boundary, research, size and frozen-diff checks; one job/check at a time.
+
+## Budget and done
+Verification1800s cumulative including failures;<=600s/command;20 evidence/5MiB.
+One compact result, checks and evidence. Passing checks end verification.
+Done: independent action executes through shared path, earned tolerance reaches
+later live reasons with exact continuation and declared controls. Otherwise checkpoint
+precise remaining gate; no scope trimming or budget reset. No family acceptance here.
+Frozen controls rerun only for changed dependency/entry risk; old factories unchanged.
+RO008/009/010/011/012/013/015/020 conditional;018/019/021/022 closed unchanged.
+E73/P35/N11/U13,21/15/132 and3/15 accepted families remain fixed.
 
 | Registry | Current count |
 |---|---|
