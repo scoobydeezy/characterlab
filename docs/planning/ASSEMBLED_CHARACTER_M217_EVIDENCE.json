@@ -1835,6 +1835,5145 @@
       "closureInstants": 3,
       "terminalClock": 101,
       "elapsed": 382.7006074
+    },
+    "Full/Sober/1": {
+      "scenario": "Sober",
+      "law": "Full",
+      "seed": 1,
+      "key": "Full/Sober/1",
+      "model": "030702eaf38fa88426424d733b180f0ab0cb6ebfa545aa32dae882a9ca50834e",
+      "input": "163a3eca455841ae74d2ffea81960ba4a262615338addbc7abbabf5474ed1b04",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "71a237110d324005a1d85b7c718b515e947df7f8503c28c27ded05578922c756",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "409f4682d074a609df084cf4397a4a8f782420cd5e4b9e0a87b91793c448f752",
+          "drawCount": 2,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "75099e5592d6bf0a3757b5ca9d1f48cdcfb135faa83c70af2ccc5d954c2d45e6",
+      "presentation": "9f1a61ebf37bd6aabc1e8d54571355c4864d85ef6d510ef73f819c6e590b107e",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91879,
+          "save": "9fc8b72d61b9a1215a4fe3ac54116d87ac4dabfd44ec30fc7eabb5b3c8a2a0e8",
+          "terminal": false,
+          "next": "24eddd797fa64d2f0f47144fd5e266bd493e7aa1e47e29ca0b9e356bdda8fe66"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 6680466,
+          "save": "39892289b05f264f90223de84b6f058ba0454c402d5446ffb67b2946f79d9ea9",
+          "next": "39892289b05f264f90223de84b6f058ba0454c402d5446ffb67b2946f79d9ea9",
+          "terminal": true
+        }
+      ],
+      "safe": "1b421f9b8bfe092629d4baacec8902d9d139f49aa1891aa1d68aa22d3a9b9c94",
+      "safeBytes": 758213,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 183.1064382
+    },
+    "Full/Slow/1": {
+      "scenario": "Slow",
+      "law": "Full",
+      "seed": 1,
+      "key": "Full/Slow/1",
+      "model": "030702eaf38fa88426424d733b180f0ab0cb6ebfa545aa32dae882a9ca50834e",
+      "input": "d9d000718aca8df77416d399adaef9f84cd72749cadf3705ad5586f835735044",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "3df9530c02c57e28d6b5a335ae379568fb6639d499d2904f2cf0230203a8d663",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "409f4682d074a609df084cf4397a4a8f782420cd5e4b9e0a87b91793c448f752",
+          "drawCount": 2,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 800,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            700,
+            500
+          ],
+          "capacity": 650,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "32886777347/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "35832699389/68719476736"
+            }
+          ],
+          "draws": "e5b139c37195646b0a8f96b8e651fddfb0aa9b66550d1791c241fa6e359acd83",
+          "drawCount": 2,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 700,
+          "challenge": 350,
+          "competence": 300,
+          "motorAllowed": false,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            600,
+            500
+          ],
+          "capacity": 700,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "32886777347/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "35832699389/68719476736"
+            }
+          ],
+          "draws": "501b0657609c256bff26f804e94c0581e726045417f7cc74b02daebb21087972",
+          "drawCount": 2,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 600,
+          "challenge": 300,
+          "competence": 300,
+          "motorAllowed": false,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            500,
+            500
+          ],
+          "capacity": 750,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "32886777347/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "35832699389/68719476736"
+            }
+          ],
+          "draws": "641f413980b48ba515e7a93e8d77504c7053601519d38c75838673eaa8088576",
+          "drawCount": 2,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 500,
+          "challenge": 250,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "capacity": 800,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 400,
+          "challenge": 200,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            300,
+            500
+          ],
+          "capacity": 850,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 300,
+          "challenge": 150,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Blocked",
+          "chosen": "drug"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Blocked",
+          "chosen": "drug"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Applied",
+          "chosen": "drug"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "c5e991d7308c249bd8ad6ff67d1d67751342e5ee0c97730acc4244ec2bbf20e1",
+      "presentation": "d08a7ebc56df9f7c85d9baf50a5882d4795e6ee419e44a7506b81440fe74cf8a",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91880,
+          "save": "a1c5b810b30c826f2193faa2f115040bc8eb7bd9611853da1a95708fc864b67b",
+          "terminal": false,
+          "next": "9ac7397b3a61418568078f7de3287dda1e8210ad7d86eafc5c536e1a632844cf"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 7411070,
+          "save": "435c36a2a452bd79cc6b50c37e8bed866191d29ca4e295e4ade39d817dc84ef1",
+          "next": "435c36a2a452bd79cc6b50c37e8bed866191d29ca4e295e4ade39d817dc84ef1",
+          "terminal": true
+        }
+      ],
+      "safe": "88e9a8cc58fd5e4ed9de050775581bf1cbc1501778ef5208831749cd3196dd36",
+      "safeBytes": 859097,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 120.8910042
+    },
+    "Full/Fast/1": {
+      "scenario": "Fast",
+      "law": "Full",
+      "seed": 1,
+      "key": "Full/Fast/1",
+      "model": "fc8e529b0e5d6163d19a9a5cbff9f1e446597a6c229586bae7fe4580abb4a0cd",
+      "input": "d9d000718aca8df77416d399adaef9f84cd72749cadf3705ad5586f835735044",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "70b179ecfa1ee0fb2137cae1c12ab66be2b4a4000ccbc8b6092ef34aef7d7044",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "409f4682d074a609df084cf4397a4a8f782420cd5e4b9e0a87b91793c448f752",
+          "drawCount": 2,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 800,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "capacity": 800,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 400,
+          "challenge": 200,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "75099e5592d6bf0a3757b5ca9d1f48cdcfb135faa83c70af2ccc5d954c2d45e6",
+      "presentation": "9f1a61ebf37bd6aabc1e8d54571355c4864d85ef6d510ef73f819c6e590b107e",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91880,
+          "save": "58d3b37af1b48c8045bce8594214007605d9aeb8e09c9d0a73a3f4ff16306d07",
+          "terminal": false,
+          "next": "21180bc8af6ae39ef12fcf7d3c2d2f48d0a234ccc65f7eb17e21cf395bbd5d09"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 6680535,
+          "save": "391df7196bfbe485f2d4a68734864b2a6d6c491f900a0ff244c472aa88f4196d",
+          "next": "391df7196bfbe485f2d4a68734864b2a6d6c491f900a0ff244c472aa88f4196d",
+          "terminal": true
+        }
+      ],
+      "safe": "c439973bd63f91e6f33919776333237a0469bfd976dd7c111023c8ecc4dd36d7",
+      "safeBytes": 758221,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 117.28625690000004
+    },
+    "Full/Sober/2": {
+      "scenario": "Sober",
+      "law": "Full",
+      "seed": 2,
+      "key": "Full/Sober/2",
+      "model": "030702eaf38fa88426424d733b180f0ab0cb6ebfa545aa32dae882a9ca50834e",
+      "input": "163a3eca455841ae74d2ffea81960ba4a262615338addbc7abbabf5474ed1b04",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "53f7187762fdd057fbe777753451da18b5ff56d5ceb61bfa32e6c0a5e5d9c3ac",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "f12abd41ba5fc1354536357ab466c904b89c083ae258fe5ca5f45e9251143e27",
+          "drawCount": 2,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "75099e5592d6bf0a3757b5ca9d1f48cdcfb135faa83c70af2ccc5d954c2d45e6",
+      "presentation": "22c8d3774bc4cc606971b7457c468426df2e60baf416ff258415e76b00c826b7",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91879,
+          "save": "2cd85b4e135af525b1943c231295c92eaa9ac413a9017af3ce0f5bf52a0192f5",
+          "terminal": false,
+          "next": "edf01c056b46272d9533f0a5682bc254ce221a69a45e71d07a974005896db04b"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 6680529,
+          "save": "cc9c0e5ddcb898977044f1e618296578aa89f0c8e50f969d410ca2acc68dfe3b",
+          "next": "cc9c0e5ddcb898977044f1e618296578aa89f0c8e50f969d410ca2acc68dfe3b",
+          "terminal": true
+        }
+      ],
+      "safe": "f9902d392bead0c86be7f1a4f87d21b918d4876576b0cd5e36d36808b7fe9509",
+      "safeBytes": 758221,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 180.711966
+    },
+    "Full/Slow/2": {
+      "scenario": "Slow",
+      "law": "Full",
+      "seed": 2,
+      "key": "Full/Slow/2",
+      "model": "030702eaf38fa88426424d733b180f0ab0cb6ebfa545aa32dae882a9ca50834e",
+      "input": "d9d000718aca8df77416d399adaef9f84cd72749cadf3705ad5586f835735044",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "4e2c588cedf776e31706875ba89c743d5df6e4efb7b8480ab95d4e1abdda7df1",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "f12abd41ba5fc1354536357ab466c904b89c083ae258fe5ca5f45e9251143e27",
+          "drawCount": 2,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 800,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            700,
+            500
+          ],
+          "capacity": 650,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "32886777347/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "35832699389/68719476736"
+            }
+          ],
+          "draws": "31d3052a956811e95ffe8b5ca755100c1e77abe09ba0cd39c7860a71f0163844",
+          "drawCount": 2,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 700,
+          "challenge": 350,
+          "competence": 300,
+          "motorAllowed": false,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            600,
+            500
+          ],
+          "capacity": 700,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "32886777347/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "35832699389/68719476736"
+            }
+          ],
+          "draws": "6da1655a3ea7c83ad156217af70e6c61ec1f7a871b638c8a3b10801f4e20eabf",
+          "drawCount": 2,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 600,
+          "challenge": 300,
+          "competence": 300,
+          "motorAllowed": false,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            500,
+            500
+          ],
+          "capacity": 750,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "32886777347/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "35832699389/68719476736"
+            }
+          ],
+          "draws": "faf9103000201728d632c5f7e96dc1261fb9efde3451a0fc15ec0daf2fb94238",
+          "drawCount": 2,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 500,
+          "challenge": 250,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "capacity": 800,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 400,
+          "challenge": 200,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            300,
+            500
+          ],
+          "capacity": 850,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 300,
+          "challenge": 150,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Blocked",
+          "chosen": "drug"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "0bab1924793f7b1c012bb8b6f15d2c5a86ebb2728b81a0025aeb1c1862f1dd87",
+      "presentation": "d885bb247d3cbda06c3bf8860866c5f09a226ab6aeb0b3d32a671d19602329c5",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91880,
+          "save": "3af77deae2588a50c780d517d82b8c8a4f90d86552176584aa2c2c599512f15a",
+          "terminal": false,
+          "next": "73dff8d10b1f71fbb8b7b342e23d65240fef25109cbf5b72ce3f44e4df24c75e"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 7400109,
+          "save": "fc412f4fd543e452d6d2795ada26e4421801b945812785a5d5cf5743b356f7dd",
+          "next": "fc412f4fd543e452d6d2795ada26e4421801b945812785a5d5cf5743b356f7dd",
+          "terminal": true
+        }
+      ],
+      "safe": "6bb2663da3ce20e24b4c160bff40f9ffb537f7cfe76a8357796f6e083dfe9210",
+      "safeBytes": 857780,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 117.87561520000003
+    },
+    "Full/Fast/2": {
+      "scenario": "Fast",
+      "law": "Full",
+      "seed": 2,
+      "key": "Full/Fast/2",
+      "model": "fc8e529b0e5d6163d19a9a5cbff9f1e446597a6c229586bae7fe4580abb4a0cd",
+      "input": "d9d000718aca8df77416d399adaef9f84cd72749cadf3705ad5586f835735044",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "5126f098e82e932a476bf9f2841c534208d6cf60a283395a6162dbe164253b05",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "f12abd41ba5fc1354536357ab466c904b89c083ae258fe5ca5f45e9251143e27",
+          "drawCount": 2,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 800,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "capacity": 800,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 400,
+          "challenge": 200,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "84e5670472747f0e90877f7333211edd9acd53e3c7ce01779f10e6d87e22bf7c",
+          "journalCount": 1,
+          "identity": "15/224",
+          "formation": "aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "75099e5592d6bf0a3757b5ca9d1f48cdcfb135faa83c70af2ccc5d954c2d45e6",
+      "presentation": "22c8d3774bc4cc606971b7457c468426df2e60baf416ff258415e76b00c826b7",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91880,
+          "save": "bf95999f72a7c1679dbe10640dc01acb26e189ffbdd7a23ee74c91099c39e517",
+          "terminal": false,
+          "next": "ae4e10078e2f574377d1d0442b60fc3a085f9932b0907d035eb4591b74bebe6f"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 6680598,
+          "save": "84d1d947f0432e1e09068ab7b1ffa6927f85798e6e510e281c97008fbc1904db",
+          "next": "84d1d947f0432e1e09068ab7b1ffa6927f85798e6e510e281c97008fbc1904db",
+          "terminal": true
+        }
+      ],
+      "safe": "c7d00913df45edc04769f8b2062ba61086fada208b926810674294f6076bbe6e",
+      "safeBytes": 758229,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 115.10886300000001
+    },
+    "Full/Sober/3": {
+      "scenario": "Sober",
+      "law": "Full",
+      "seed": 3,
+      "key": "Full/Sober/3",
+      "model": "030702eaf38fa88426424d733b180f0ab0cb6ebfa545aa32dae882a9ca50834e",
+      "input": "163a3eca455841ae74d2ffea81960ba4a262615338addbc7abbabf5474ed1b04",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "b6c26bcf150f4e4584595008ed4ca598b22ca473ab880ad4fb3a6de5467b8d3b",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "46de5365a67c2c37dd4390f9f438388a9e8ead535b24511d916a02fe476d33ab",
+          "drawCount": 2,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "d5c5733238ca865efdc2b7fe5452aac5836847136cd148a4865c380ae1186a4d",
+      "presentation": "187010c56840689a141f90ab5face7629445d4cd6153a142aa396e2994a0b1f4",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91879,
+          "save": "ea7790f40ee90b7b8dc5d5ea896c616758d444c12024e39a4049d5185bbd14da",
+          "terminal": false,
+          "next": "e16f304f13bdfc1726d9788b2274299738038b251ed7580b88b01968749f9e2b"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 6686490,
+          "save": "13dc8f4a822b1e8d1bbd765216e228be372bbf5599b5d5846e19439aa7bc3f04",
+          "next": "13dc8f4a822b1e8d1bbd765216e228be372bbf5599b5d5846e19439aa7bc3f04",
+          "terminal": true
+        }
+      ],
+      "safe": "18ab3f078b2bf2751728c925bdf27b255a6f2af6c85124833f8fb0978b98172a",
+      "safeBytes": 758865,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 183.5090154
+    },
+    "Full/Slow/3": {
+      "scenario": "Slow",
+      "law": "Full",
+      "seed": 3,
+      "key": "Full/Slow/3",
+      "model": "030702eaf38fa88426424d733b180f0ab0cb6ebfa545aa32dae882a9ca50834e",
+      "input": "d9d000718aca8df77416d399adaef9f84cd72749cadf3705ad5586f835735044",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "1c1b65b250a7a195c386cdf1ed94441a53e96809e0fbaeb2590694f19a7a16e3",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "46de5365a67c2c37dd4390f9f438388a9e8ead535b24511d916a02fe476d33ab",
+          "drawCount": 2,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 800,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            700,
+            500
+          ],
+          "capacity": 650,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "35832699389/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "32886777347/68719476736"
+            }
+          ],
+          "draws": "520dd27f9e11f5d8b307d606f387cc6e4058e38953a5b6176292f8fe12bd4a97",
+          "drawCount": 2,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 700,
+          "challenge": 350,
+          "competence": 300,
+          "motorAllowed": false,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            600,
+            500
+          ],
+          "capacity": 700,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "35832699389/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "32886777347/68719476736"
+            }
+          ],
+          "draws": "59b0855d536c3e3ac51e37d7767035fae26ccca5f95bc74fcdb746d7c1ac1a61",
+          "drawCount": 2,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 600,
+          "challenge": 300,
+          "competence": 300,
+          "motorAllowed": false,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            500,
+            500
+          ],
+          "capacity": 750,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "35832699389/68719476736"
+            },
+            {
+              "action": "withhold",
+              "p": "32886777347/68719476736"
+            }
+          ],
+          "draws": "6b92d6c0a5710dde47bdbf93a65c5e8a1e22ae300b4d9de97f804eb5a929e47d",
+          "drawCount": 2,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 500,
+          "challenge": 250,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "capacity": 800,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 400,
+          "challenge": 200,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            300,
+            500
+          ],
+          "capacity": 850,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 300,
+          "challenge": 150,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Applied",
+          "chosen": "drug"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "62608917a210bd37d2e4a315c501b8258b043f4a893a5fd3a91f9a1c41c26bc8",
+      "presentation": "5a248ce1a37278fc56eb7d6bf4c04f12c1257d85a1ed23dd4a969dfebcc0f824",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91880,
+          "save": "54888c5c8c035f0f2ededd0b1c91468005273e88e211f145bcbc0d7703dc0afd",
+          "terminal": false,
+          "next": "a303291a583a3856d0080128e7887a43fee029c8ce63988b2de02fb280c65416"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 7345810,
+          "save": "b5224ca1124acb3dc852f15e323cf1a2d3362d7b500117ae79dd431119d6e683",
+          "next": "b5224ca1124acb3dc852f15e323cf1a2d3362d7b500117ae79dd431119d6e683",
+          "terminal": true
+        }
+      ],
+      "safe": "97fd80e94b186342ad064c956a9c383195c87b7e4a37e1e68e3165f1df692799",
+      "safeBytes": 850093,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 119.27622509999998
+    },
+    "Full/Fast/3": {
+      "scenario": "Fast",
+      "law": "Full",
+      "seed": 3,
+      "key": "Full/Fast/3",
+      "model": "fc8e529b0e5d6163d19a9a5cbff9f1e446597a6c229586bae7fe4580abb4a0cd",
+      "input": "d9d000718aca8df77416d399adaef9f84cd72749cadf3705ad5586f835735044",
+      "initial": "4e022ee4966719b4f7da0b54b36f2c519357ce9505e17b08fb44a9651eb1ae2e",
+      "run": "f762e6b22d41bef646fb39debbef3644a61a7be39744c6bad0fbf8da8818b327",
+      "rows": [
+        {
+          "logical": 1,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": false,
+          "active": false,
+          "maintained": false,
+          "spare": 3,
+          "options": [
+            "drug"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "journalCount": 0,
+          "identity": "0/1",
+          "formation": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "maintenance": "aa4274277d951b3e61902138e3dba243501281db257c60a7e3b08362699398ad",
+          "rewardReason": "1/1"
+        },
+        {
+          "logical": 2,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 200,
+          "inhibited": false,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "drug",
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "drug",
+          "probabilities": [
+            {
+              "action": "drug",
+              "p": "1/2"
+            },
+            {
+              "action": "withhold",
+              "p": "1/2"
+            }
+          ],
+          "draws": "46de5365a67c2c37dd4390f9f438388a9e8ead535b24511d916a02fe476d33ab",
+          "drawCount": 2,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "48538fecc4f2a34a6a427ed9e404dc2e315a6d7b98dee226ffb1b8580fd80046",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 3,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "dfe6b5277c867f869bd9f4081d652b96bcdea5448434128dde6b96db7d199b0d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 4,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "42f6abb490c09fd9baa55e87e41b14ccb27d71b39c89bdf20ff18178dc07aae2",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 5,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "9c84d81cab29412dd3655a98833b20c2c352ae70d66a9c86b4acc1e0631e8934",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 6,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "8b1a7e721d0d252e918ec70b51397ee64f739091f082731ba3f98aa7a55b463d",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 7,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 800,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "16072aba04b182eac102b67aadeda9c092b23c391243ece52476a39a279dda61",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 8,
+          "sleep": [
+            0,
+            0,
+            400,
+            500
+          ],
+          "capacity": 800,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 400,
+          "challenge": 200,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 9,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "92836d89545d7c9a500accd253d5d948abf07f831f18b37d3b98161ae77f3a2f",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 10,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "323e98be3a0e5358eebc0f997101305922ecc087e5f38bbe0b9bfba5e90390f5",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 11,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "80cae8bb2145e3ec29e44f8bd3fc600025febe83319a7a68666b57ea8ccb65ab",
+          "rewardReason": "3/5"
+        },
+        {
+          "logical": 12,
+          "sleep": [
+            0,
+            0,
+            0,
+            500
+          ],
+          "capacity": 1000,
+          "inhibited": true,
+          "active": true,
+          "maintained": true,
+          "spare": 2,
+          "options": [
+            "withhold"
+          ],
+          "outcome": "Chosen",
+          "chosen": "withhold",
+          "probabilities": [
+            {
+              "action": "withhold",
+              "p": "1/1"
+            }
+          ],
+          "draws": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd",
+          "drawCount": 0,
+          "journal": "6a63b608b8a7f6c8ffd01789dd220e5cc3b2efbc55de6c549d26d97613e1d2e5",
+          "journalCount": 1,
+          "identity": "-15/224",
+          "formation": "ace195a3a20044241e301eed74b5a91ba492fe56adc10ebb8be4ccb41fa34327",
+          "learned": "779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1",
+          "mean": 600,
+          "physicalDebt": 0,
+          "physicalBurden": 0,
+          "challenge": 0,
+          "competence": 300,
+          "motorAllowed": true,
+          "goal": "3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32",
+          "maintenance": "584bbdc43cb3b52e57f918a6c7cfd0731626c5edbf14ec52d85ecda349fa3bdc",
+          "rewardReason": "3/5"
+        }
+      ],
+      "physical": [
+        {
+          "logical": 8,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 9,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 10,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 11,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        },
+        {
+          "logical": 12,
+          "available": true,
+          "status": "Withheld",
+          "chosen": "withhold"
+        }
+      ],
+      "decisions": "d5c5733238ca865efdc2b7fe5452aac5836847136cd148a4865c380ae1186a4d",
+      "presentation": "187010c56840689a141f90ab5face7629445d4cd6153a142aa396e2994a0b1f4",
+      "prefixes": [
+        {
+          "logical": 0,
+          "native": 1,
+          "bytes": 91880,
+          "save": "34e4029186b89a22a5bdc1ec52752804a326a010f995507e3af65beedf0a9acc",
+          "terminal": false,
+          "next": "0ee315a9d9688149dca2ec213ff0bfb6bb3f396a322d0acdb0ce42b67f784444"
+        },
+        {
+          "logical": 12,
+          "native": 101,
+          "bytes": 6686559,
+          "save": "b1d24338c02de63f12974fd13d0795a6e50972226d16673f172f8a721b2f60f8",
+          "next": "b1d24338c02de63f12974fd13d0795a6e50972226d16673f172f8a721b2f60f8",
+          "terminal": true
+        }
+      ],
+      "safe": "0487b78ba4a191388122972d8449aa77515094d1a3b94ba44216ad8acaadf9db",
+      "safeBytes": 758873,
+      "closureInstants": 3,
+      "terminalClock": 101,
+      "elapsed": 118.17474199999997
     }
   },
   "boundary": {
