@@ -1344,3 +1344,10 @@ history/MeanHistory -> shared decision alongside genuine protection. Full zero-
 adaptation reward projection108 cases; no reserve/pleasure conflation. Original
 sleep20/52 remains pending. MEC001/003/011..019/022 retain original roles; no reduction.
 [Result](ASSEMBLED_CHARACTER_M214_RESULT.md).
+
+M215 closes BRIEF12.1-6 on0.141: original20 sleep/control runs and52 full-save
+prefixes, plus2 fixed inert-withholding controls. Same acquired reward/protective
+identity, shared control/arbitration and one state/save; no production change.
+MEC001/003/011..019/022 retain ports/controls/corpus/comparators, no reduction.
+Whole12.1/intoxication and final replay remain open.
+[Result](ASSEMBLED_CHARACTER_M215_RESULT.md).

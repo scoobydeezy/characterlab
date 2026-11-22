@@ -184,3 +184,168 @@ M215 PASS Full/Recovered/3 2 prefixes; safe bytes 789614 seconds 118.490 probe8 
    Start at  17:27:48
    Duration  433.37s (transform 3.36s, setup 0ms, collect 5.01s, tests 427.84s, environment 0ms, prepare 140ms)
 
+
+M215 B-sensors exit=0 elapsed=431.153s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/BlindRested/0
+M215 START Full/BlindRested/0
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/BlindRested/0
+M215 PASS Full/BlindRested/0 2 prefixes; safe bytes 853041 seconds 187.992 probe8 {"logical":8,"sleep":[null,0,0,500],"capacity":null,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"b28e4f495aa71120d2a3a144d49b9c4635819f885fd094d9392b36640c28568a","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"a62e83097e8c165cf75a50e5b3f1fa2f88538f905375f3b5388ec6ae955593e8","mean":600,"physicalDebt":0,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledSleepCohort.test.ts > cohort215 Full/BlindRested/0 187997ms
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/BlindDeprived/0
+M215 START Full/BlindDeprived/0
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/BlindDeprived/0
+M215 PASS Full/BlindDeprived/0 2 prefixes; safe bytes 853041 seconds 120.200 probe8 {"logical":8,"sleep":[null,0,0,500],"capacity":null,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"b28e4f495aa71120d2a3a144d49b9c4635819f885fd094d9392b36640c28568a","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"a62e83097e8c165cf75a50e5b3f1fa2f88538f905375f3b5388ec6ae955593e8","mean":600,"physicalDebt":600,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledSleepCohort.test.ts > cohort215 Full/BlindDeprived/0 120205ms
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/FalseRested/0
+M215 START Full/FalseRested/0
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/FalseRested/0
+M215 PASS Full/FalseRested/0 2 prefixes; safe bytes 758397 seconds 116.698 probe8 {"logical":8,"sleep":[0,0,0,500],"capacity":1000,"inhibited":true,"active":true,"maintained":true,"spare":2,"options":["withhold"],"chosen":"withhold","probabilities":[{"action":"withhold","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","drawCount":0,"journal":"b28e4f495aa71120d2a3a144d49b9c4635819f885fd094d9392b36640c28568a","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"a62e83097e8c165cf75a50e5b3f1fa2f88538f905375f3b5388ec6ae955593e8","mean":600,"physicalDebt":600,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledSleepCohort.test.ts > cohort215 Full/FalseRested/0 116704ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 30 skipped (33)
+   Start at  17:36:07
+   Duration  430.61s (transform 3.48s, setup 0ms, collect 5.17s, tests 424.91s, environment 0ms, prepare 131ms)
+
+
+M215 B-execution-maintenance exit=1 elapsed=240.717s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/FailedExecution/0
+M215 START Full/FailedExecution/0
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/FailedExecution/0
+M215 PASS Full/FailedExecution/0 2 prefixes; safe bytes 789052 seconds 186.721 probe8 {"logical":8,"sleep":[600,0,0,500],"capacity":700,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"b28e4f495aa71120d2a3a144d49b9c4635819f885fd094d9392b36640c28568a","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"a62e83097e8c165cf75a50e5b3f1fa2f88538f905375f3b5388ec6ae955593e8","mean":600,"physicalDebt":0,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledSleepCohort.test.ts > cohort215 Full/FailedExecution/0 186726ms
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/Unmaintained/0
+M215 START Full/Unmaintained/0
+
+ × src/test/assembledSleepCohort.test.ts > cohort215 Full/Unmaintained/0 47746ms
+   → expected 2n to be 3n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSleepCohort.test.ts > cohort215 Full/Unmaintained/0
+AssertionError: expected 2n to be 3n // Object.is equality
+
+- Expected
++ Received
+
+- 3n
++ 2n
+
+ ❯ capture src/test/assembledSleepCohort.test.ts:42:156
+
+ ❯ runCase src/test/assembledSleepCohort.test.ts:53:27
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 31 skipped (33)
+   Start at  17:44:11
+   Duration  240.15s (transform 3.48s, setup 0ms, collect 5.16s, tests 234.47s, environment 0ms, prepare 132ms)
+
+
+M215 B repair: Unmaintained logical10/11 has only withholding available after maintenance loss, hence no protective nucleus and legitimate NoReasons (419 tag2). Prior capture incorrectly required Chosen at every instant. Permit exactly those two rows, assert empty nuclei and sole withholding candidate; all probes still require actual chosen decisions. No production/source/law change. Retain failed B command, do not rerun its passing FailedExecution case.
+
+M215 B-maintenance-repair exit=0 elapsed=187.518s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/Unmaintained/0
+M215 START Full/Unmaintained/0
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 Full/Unmaintained/0
+M215 PASS Full/Unmaintained/0 2 prefixes; safe bytes 692404 seconds 181.393 probe8 {"logical":8,"sleep":[600,0,0,500],"capacity":700,"inhibited":false,"active":true,"maintained":false,"spare":3,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"1/1"},{"action":"withhold","p":"0/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","drawCount":0,"journal":"b28e4f495aa71120d2a3a144d49b9c4635819f885fd094d9392b36640c28568a","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"a62e83097e8c165cf75a50e5b3f1fa2f88538f905375f3b5388ec6ae955593e8","mean":600,"physicalDebt":0,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"bde8c3d490c6bbb70af36cfceeb8710a6b6135735610d33cc36e24f261c41c82","rewardReason":"3/5"}
+
+ ✓ src/test/assembledSleepCohort.test.ts > cohort215 Full/Unmaintained/0 181400ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 32 skipped (33)
+   Start at  17:49:48
+   Duration  186.98s (transform 3.39s, setup 0ms, collect 5.05s, tests 181.40s, environment 0ms, prepare 126ms)
+
+
+M215 read-only original correspondence: SLEEP_CONTROL_RUN_16_REV1 semantic rows10/11 are NoActiveReasons, null chosen, empty draws/probabilities. Repaired native NoReasons is equivalent to the frozen original, not a waived phenomenon. Added exact static correspondence to the pending final comparator.
+
+M215 B-nocontrol exit=0 elapsed=435.521s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 NoControl/Rested/0
+M215 START NoControl/Rested/0
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 NoControl/Rested/0
+M215 PASS NoControl/Rested/0 2 prefixes; safe bytes 853461 seconds 189.487 probe8 {"logical":8,"sleep":[100,0,0,500],"capacity":950,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"b28e4f495aa71120d2a3a144d49b9c4635819f885fd094d9392b36640c28568a","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"a62e83097e8c165cf75a50e5b3f1fa2f88538f905375f3b5388ec6ae955593e8","mean":600,"physicalDebt":0,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledSleepCohort.test.ts > cohort215 NoControl/Rested/0 189493ms
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 NoControl/Deprived/0
+M215 START NoControl/Deprived/0
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 NoControl/Deprived/0
+M215 PASS NoControl/Deprived/0 2 prefixes; safe bytes 853515 seconds 119.916 probe8 {"logical":8,"sleep":[600,0,0,500],"capacity":700,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"b28e4f495aa71120d2a3a144d49b9c4635819f885fd094d9392b36640c28568a","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"a62e83097e8c165cf75a50e5b3f1fa2f88538f905375f3b5388ec6ae955593e8","mean":600,"physicalDebt":600,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledSleepCohort.test.ts > cohort215 NoControl/Deprived/0 119921ms
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 NoControl/Recovered/0
+M215 START NoControl/Recovered/0
+
+stdout | src/test/assembledSleepCohort.test.ts > cohort215 NoControl/Recovered/0
+M215 PASS NoControl/Recovered/0 2 prefixes; safe bytes 853491 seconds 120.042 probe8 {"logical":8,"sleep":[600,0,0,500],"capacity":700,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"b28e4f495aa71120d2a3a144d49b9c4635819f885fd094d9392b36640c28568a","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"a62e83097e8c165cf75a50e5b3f1fa2f88538f905375f3b5388ec6ae955593e8","mean":600,"physicalDebt":0,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledSleepCohort.test.ts > cohort215 NoControl/Recovered/0 120048ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 30 skipped (33)
+   Start at  17:53:03
+   Duration  434.98s (transform 3.35s, setup 0ms, collect 4.99s, tests 429.46s, environment 0ms, prepare 127ms)
+
+
+M215 B-inert exit=0 elapsed=172.492s cap=450
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepCohort.test.ts > inert215 fixed rested withheld execution boundary
+M215 INERT PASS fixed rested seed0, three blocked withholding attempts; entire safe stream byte-equal, no positive reward failure hidden
+
+ ✓ src/test/assembledSleepCohort.test.ts > inert215 fixed rested withheld execution boundary 166436ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 32 skipped (33)
+   Start at  18:00:29
+   Duration  171.96s (transform 3.39s, setup 0ms, collect 5.05s, tests 166.44s, environment 0ms, prepare 132ms)
+
+
+M215 B-compare exit=0 elapsed=10.467s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSleepCohort.test.ts > compare215 full frozen twenty-case gate
+M215 execution sensory interaction ["assembled-reward-experience/0.1/sample","assembled-reward-experience/0.1/receipt","assembled-numeric-reward/0.1","assembled-numeric-reward/0.1/reasons"]
+M215 COMPLETE20/52: all original main, hidden/biased sensing, execution, maintenance and NoControl comparisons; held acquired histories; actual probability differences;32 advancing/20 true terminal saves
+
+ ✓ src/test/assembledSleepCohort.test.ts > compare215 full frozen twenty-case gate 4504ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 32 skipped (33)
+   Start at  18:03:38
+   Duration  9.92s (transform 3.36s, setup 0ms, collect 4.99s, tests 4.50s, environment 0ms, prepare 136ms)
+
+
+M215 B-types exit=0 elapsed=21.776s cap=120
+
+M215 B-preservation exit=0 elapsed=7.699s cap=60
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4435}
+PASS: Git index contains no files at or above50,000,000 bytes.
+M215 PRESERVATION PASS2 test files/no production change; frozen controls unchanged; original20 runs/52 prefixes32 advancing20 terminal; fixed supplementary inert pair; only BRIEF12.1-6 closes;21/15/132 and prior family scopes retained; limits {'A1': 1020.288, 'A2': 1292.813, 'B': 1499.6440000000002}
