@@ -35,3 +35,267 @@ SchedulerContractError: strategy display domain
    Start at  08:19:01
    Duration  68.67s (transform 3.35s, setup 0ms, collect 5.00s, tests 63.35s, environment 0ms, prepare 102ms)
 
+
+A packaging repair before retry: strategy receipt IDs must be1..16; use unused10..13, not100..103. Previous invalid source retained in Git. No admitted run or behavioral comparison changed.
+
+M218 A-reserve-receipt-repair exit=1 elapsed=145.250s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbodimentCurrent.test.ts (12 tests | 1 failed | 11 skipped) 139268ms
+   × trajectory218 fast current receiving path 139268ms
+     → Cannot read properties of undefined (reading 'kind')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 fast current receiving path
+TypeError: Cannot read properties of undefined (reading 'kind')
+ ❯ encodeValue src/substrate/canonicalEncoding.ts:136:17
+    134|   if (value === true) return output.push(Tag.True), undefined;
+    135| 
+    136|   switch (value.kind) {
+       |                 ^
+    137|     case 'unsigned':
+    138|       output.push(Tag.Unsigned, ...encodeUnsigned(value.value));
+ ❯ Module.canonicalEncode src/substrate/canonicalEncoding.ts:101:3
+ ❯ Module.dataKey src/campaign2/canonicalData.ts:6:57
+ ❯ src/test/assembledEmbodimentCurrent.test.ts:15:72
+ ❯ capture src/test/assembledEmbodimentCurrent.test.ts:15:23
+ ❯ src/test/assembledEmbodimentCurrent.test.ts:19:151
+ ❯ src/test/assembledEmbodimentCurrent.test.ts:19:144
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 skipped (12)
+   Start at  08:21:04
+   Duration  144.65s (transform 3.37s, setup 0ms, collect 5.01s, tests 139.27s, environment 0ms, prepare 104ms)
+
+
+A reader repair: an empty trace output list must be skipped before reading its first tag. The native run reached41; assertion reader failed, no behavioral result accepted. Complete declared trajectory now records1/31/41/61 and true101 termination, with planned repeat31 and full continuation. No scenario or acceptance change.
+
+Tolerance scenario predeclaration: current practice2..4, one normally displayed positive route, no adopted protective goal; actual exposures only. Samples3/5/7; delayed40 at2; compare original Reciprocal/Unattenuated at identical seed0 and source. No authored tolerance or hidden success. Native timing differs from M39; consumed earned magnitudes and production potential law must agree, actual later reason must differ. Original80 quantization null remains frozen control, not asserted invariant under current composition.
+
+M218 A-trajectories exit=1 elapsed=436.333s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbodimentCurrent.test.ts (40 tests | 3 failed | 37 skipped) 430265ms
+   × trajectory218 fast full current receiving path 287745ms
+     → cognitive record grammar: unsupported receiving record version
+   × trajectory218 slow full current receiving path 72190ms
+     → cognitive record grammar: unsupported receiving record version
+   × trajectory218 no-delivery full current receiving path 70330ms
+     → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 fast full current receiving path
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 slow full current receiving path
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 no-delivery full current receiving path
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:36:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:200:271
+ ❯ capture src/test/assembledEmbodimentCurrent.test.ts:22:44
+ ❯ src/test/assembledEmbodimentCurrent.test.ts:30:37
+ ❯ src/test/assembledEmbodimentCurrent.test.ts:30:30
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 37 skipped (40)
+   Start at  08:24:16
+   Duration  435.75s (transform 3.39s, setup 0ms, collect 5.05s, tests 430.26s, environment 0ms, prepare 104ms)
+
+
+A calibrated-reader repair: model0.143 quantization begins with an explicit calibration diagnostic, followed by Record484. The three completed simulations failed in a legacy first-item reader, before a comparison was accepted. Select the typed484 record; retain calibration data in full trace. No production, fixture, law or acceptance change. 672.051s spent before repaired rerun.
+
+Predeclared self-amendment: original normal M117 POSITION_SOURCE observations were omitted when reusing the reward-only M217 builder. Supply those unchanged source events, producing task evidence through normal perception, never injecting beliefs. The original no-position scenario correctly reports Unavailable and cannot pass the liveness gate. Preserve failure; early31 liveness now precedes expensive continuation. Transfer600s to A from B/C/D (200 each), total7200 unchanged: A2400, B/C/D1600 each. No further calibration/seed/contrast changes.
+
+M218 A-calibrated-reader exit=1 elapsed=471.871s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > trajectory218 fast full current receiving path
+M218 TRAJECTORY fast [{"t":1,"level":"79/1","reads":["268","455"],"joins":[],"absence":[],"interval":"0ace0301020101068c0101020106a00101","sample":"0acd03010601010bdb08020102010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401030205010ace0301020101068c0101020106a0010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[],"net":[]},{"t":31,"level":"49/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201066401","sample":"0acd03010601010bdb0802940302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401033e05010ace0301020101065001020106640106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]},{"t":41,"level":"69/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010678010201068c0101","sample":"0acd03010601010bdb0802b50302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401035205010ace03010201010678010201068c010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]},{"t":61,"level":"49/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201066401","sample":"0acd03010601010bdb0802d60302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401037a05010ace0301020101065001020106640106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]}]
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > trajectory218 slow full current receiving path
+M218 TRAJECTORY slow [{"t":1,"level":"159/2","reads":["268","455"],"joins":[],"absence":[],"interval":"0ace0301020101068c0101020106a00101","sample":"0acd03010601010bdb08020102010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401030205010ace0301020101068c0101020106a0010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[],"net":[]},{"t":31,"level":"129/2","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010678010201068c0101","sample":"0acd03010601010bdb0802940302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401033e05010ace03010201010678010201068c010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]},{"t":41,"level":"179/2","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace030102010106a00101020106b40101","sample":"0acd03010601010bdb0802b50302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401035205010ace030102010106a00101020106b4010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]},{"t":61,"level":"159/2","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace0301020101068c0101020106a00101","sample":"0acd03010601010bdb0802d60302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401037a05010ace0301020101068c0101020106a0010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]}]
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > trajectory218 no-delivery full current receiving path
+M218 TRAJECTORY no-delivery [{"t":1,"level":"79/1","reads":["268","455"],"joins":[],"absence":[],"interval":"0ace0301020101068c0101020106a00101","sample":"0acd03010601010bdb08020102010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401030205010ace0301020101068c0101020106a0010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[],"net":[]},{"t":31,"level":"49/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201066401","sample":"0acd03010601010bdb0802940302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401033e05010ace0301020101065001020106640106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]},{"t":41,"level":"39/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace0301020101063c010201065001","sample":"0acd03010601010bdb0802b50302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401035205010ace0301020101063c01020106500106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]},{"t":61,"level":"19/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010614010201062801","sample":"0acd03010601010bdb0802d60302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401037a05010ace0301020101061401020106280106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]}]
+
+ ❯ src/test/assembledEmbodimentCurrent.test.ts (42 tests | 3 failed | 39 skipped) 465812ms
+   × trajectory218 fast full current receiving path 298366ms
+     → expected [ …(2) ] to have a length of 5 but got 2
+   × trajectory218 slow full current receiving path 84569ms
+     → expected [ …(2) ] to have a length of 5 but got 2
+   × trajectory218 no-delivery full current receiving path 82875ms
+     → expected [ …(2) ] to have a length of 5 but got 2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 fast full current receiving path
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 slow full current receiving path
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 no-delivery full current receiving path
+AssertionError: expected [ …(2) ] to have a length of 5 but got 2
+
+- Expected
++ Received
+
+- 5
++ 2
+
+ ❯ src/test/assembledEmbodimentCurrent.test.ts:35:229
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 39 skipped (42)
+   Start at  08:32:15
+   Duration  471.29s (transform 3.39s, setup 0ms, collect 5.06s, tests 465.81s, environment 0ms, prepare 103ms)
+
+
+M218 A-position-fast exit=1 elapsed=140.365s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbodimentCurrent.test.ts (42 tests | 1 failed | 41 skipped) 134378ms
+   × trajectory218 fast full current receiving path 134377ms
+     → expected [ …(2) ] to have a length of 5 but got 2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 fast full current receiving path
+AssertionError: expected [ …(2) ] to have a length of 5 but got 2
+
+- Expected
++ Received
+
+- 5
++ 2
+
+ ❯ src/test/assembledEmbodimentCurrent.test.ts:32:200
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 41 skipped (42)
+   Start at  08:40:37
+   Duration  139.79s (transform 3.38s, setup 0ms, collect 5.05s, tests 134.38s, environment 0ms, prepare 102ms)
+
+
+M218 A-source-inventory exit=124 elapsed=60.137s cap=60
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+Inventory60s timed out during pure fixture construction, not simulation; no acceptance. Cache immutable current fixture template/profile bytes locally to avoid rebuilding deep historical builders, without caching runs or outcomes. Retry inventory with120s (within remaining A). Two liveness failures stop behavioral retries until the missing forecast producer is identified; no further speculative source additions.
+
+M218 A-source-inventory-cached exit=0 elapsed=68.350s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > diagnostic218 missing live appraisal source inventory
+M218 SOURCE INVENTORY original {"event/assembled-priority-display":[1,8,9,10,11,12,13,14,31,41,61],"event/deliberation-opportunity":[10,12,31,41,61],"event/assembled-identity-context":[10,12,31,41,61],"event/assembled-self-context":[10,12,31,41,61],"event/assembled-values-context":[10,12,31,41,61],"event/assembled-practice-setting":[9,10,12,31,41,61],"event/assembled-strategy-display":[7,8],"event/assembled-social-source":[7,8,10],"event/regulatory-diagnostic-probe":[7],"event/assembled-reappraisal-source":[7,1,2,3,4,5,6,8,9],"event/assembled-position-source":[1,2,3,4,5,6,7,8,9],"event/assembled-reason-reading":[10,12,31,41,61],"event/assembled-performance-setting":[10],"event/assembled-body-sample":[1,31,41,61],"event/assembled-body-delivery":[31]}
+M218 SOURCE INVENTORY current {"event/assembled-strategy-display":[1,2,3,8,13],"event/assembled-priority-display":[1],"event/assembled-sleep-source":[1,2,3,4,5,6,7,8,9,10,11,12,13,31,41,61],"event/assembled-reward-source":[1,2,3,4,5,6,7,8,9,10,11,12,13,31,41,61],"event/assembled-habit-source":[2,3,4,5,6,7,8,9,10,11,12,13,31,41,61],"event/assembled-control-source":[2,3,4,5,6,7,8,9,10,11,12,13,31,41,61],"event/assembled-practice-setting":[2,3,4,5,6,7,8,9,10,11,12,13,31,41,61],"event/assembled-self-context":[2,3,4,5,6,7,8,9,10,11,12,13,31,41,61],"event/assembled-values-context":[2,3,4,5,6,7,8,9,10,11,12,13,31,41,61],"event/assembled-identity-context":[2,3,4,5,6,7,8,9,10,11,12,13,31,41,61],"event/deliberation-opportunity":[2,3,4,5,6,7,8,9,10,11,12,13,31,41,61],"event/execution-opportunity-source":[9,10,11,12,13,31,41,61],"event/assembled-body-sample":[1,31,41,61],"event/assembled-body-delivery":[31],"event/assembled-position-source":[1,2,3,4,5,6,7,8,9]}
+
+ ✓ src/test/assembledEmbodimentCurrent.test.ts (43 tests | 42 skipped) 62390ms
+   ✓ diagnostic218 missing live appraisal source inventory 62389ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 42 skipped (43)
+   Start at  08:45:28
+   Duration  67.79s (transform 3.39s, setup 0ms, collect 5.06s, tests 62.39s, environment 0ms, prepare 104ms)
+
+
+Identified producer: original M117 has regulatory-diagnostic-probe7, current reward-only inputs omitted it. Runtime routes its M1 evidence through memory formation to measurement-prediction application (362); position evidence is a separate lane and cannot substitute. Restore the unchanged probe7 for reserve/boundary runs. Tolerance uses that same ordinary probe at1 before its predeclared3/5/7 receiving gates. This is evidence scheduling, not authored belief/law/seed selection. No repeated blind liveness attempt: source inventory and static producer path establish this amendment.
+
+Before any sleep replay: compare all20/12 receiving rows with M215 on19 explicit semantic fields (axes, capacity, inhibition, access, outcome, chosen/probabilities/draws, acquired journal count/identity, mean, physical debt and reward reason). Versioned serialized reward-state hashes are not semantic equality. Current whole safe-stream negative controls still compare complete bytes, without filtering reward receipts.
+
+M218 A-measurement-fast exit=1 elapsed=69.973s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledEmbodimentCurrent.test.ts (43 tests | 1 failed | 42 skipped) 64016ms
+   × trajectory218 fast full current receiving path 64015ms
+     → original source clock: at most100 exclusive original instants
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledEmbodimentCurrent.test.ts > trajectory218 fast full current receiving path
+SchedulerContractError: original source clock: at most100 exclusive original instants
+ ❯ fail src/assembled/sourceClock.ts:15:37
+
+ ❯ Module.compileSourceClock src/assembled/sourceClock.ts:33:77
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:70:55
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:69
+ ❯ Module.rewardStart src/test/assembledRewardExperience.test.ts:58:220
+ ❯ src/test/assembledEmbodimentCurrent.test.ts:31:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 42 skipped (43)
+   Start at  08:47:08
+   Duration  69.40s (transform 3.39s, setup 0ms, collect 5.05s, tests 64.02s, environment 0ms, prepare 105ms)
+
+
+Source-clock repair: probe7 conflicts with the inherited deliberation7; the accepted clock requires exclusive original instants. Move the same ordinary measurement event to free setup1 for all body cases, before any deliberation; preserve its payload and all compared body schedules. No scheduler/domain widening. M215 early receipts omit the redundant outcome field: normalize absent outcome to Chosen only when a concrete chosen action exists, otherwise NoReasons; current outcome remains explicitly asserted.
+
+Pure reader performance repair before remaining A cases: memoize canonical decoding by immutable snapshot byte-array identity. Previously each of4 captures decoded the entire trace plus both sample/absence output streams repeatedly. All typed-record filtering and assertions remain, no simulated run/result reuse. Current running fast case retains its loaded reader; its result is not invalidated by identical decoding reuse.
+
+M218 A-exclusive-measurement-fast exit=0 elapsed=344.602s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > trajectory218 fast full current receiving path
+M218 TRAJECTORY fast [{"t":1,"level":"79/1","reads":["268","455"],"joins":[],"absence":[],"interval":"0ace0301020101068c0101020106a00101","sample":"0acd03010601010bdb08020102010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401030205010ace0301020101068c0101020106a0010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[],"net":[]},{"t":31,"level":"49/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201066401","sample":"0acd03010601010bdb0802b80302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401033e05010ace0301020101065001020106640106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","1/6","49/120","49/120"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","1/6","49/120","49/120"]],"net":["49/169"]},{"t":41,"level":"69/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010678010201068c0101","sample":"0acd03010601010bdb0802d90302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401035205010ace03010201010678010201068c010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","0/1","7/20","7/20"]],"net":["7/27"]},{"t":61,"level":"49/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201066401","sample":"0acd03010601010bdb0802fa0302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401037a05010ace0301020101065001020106640106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","1/6","49/120","49/120"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","1/6","49/120","49/120"]],"net":["49/169"]}]
+
+ ✓ src/test/assembledEmbodimentCurrent.test.ts (43 tests | 42 skipped) 338576ms
+   ✓ trajectory218 fast full current receiving path 338575ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 42 skipped (43)
+   Start at  08:49:07
+   Duration  344.05s (transform 3.38s, setup 0ms, collect 5.03s, tests 338.58s, environment 0ms, prepare 102ms)
+
+
+M218 A-remaining exit=124 elapsed=540.114s cap=540
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > trajectory218 slow full current receiving path
+M218 TRAJECTORY slow [{"t":1,"level":"159/2","reads":["268","455"],"joins":[],"absence":[],"interval":"0ace0301020101068c0101020106a00101","sample":"0acd03010601010bdb08020102010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401030205010ace0301020101068c0101020106a0010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[],"net":[]},{"t":31,"level":"129/2","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010678010201068c0101","sample":"0acd03010601010bdb0802b80302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401033e05010ace03010201010678010201068c010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","0/1","7/20","7/20"]],"net":["7/27"]},{"t":41,"level":"179/2","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace030102010106a00101020106b40101","sample":"0acd03010601010bdb0802d90302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401035205010ace030102010106a00101020106b4010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","0/1","7/20","7/20"]],"net":["7/27"]},{"t":61,"level":"159/2","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace0301020101068c0101020106a00101","sample":"0acd03010601010bdb0802fa0302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401037a05010ace0301020101068c0101020106a0010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","0/1","7/20","7/20"]],"net":["7/27"]}]
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > trajectory218 no-delivery full current receiving path
+M218 TRAJECTORY no-delivery [{"t":1,"level":"79/1","reads":["268","455"],"joins":[],"absence":[],"interval":"0ace0301020101068c0101020106a00101","sample":"0acd03010601010bdb08020102010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401030205010ace0301020101068c0101020106a0010106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[],"net":[]},{"t":31,"level":"49/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201066401","sample":"0acd03010601010bdb0802b80302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401033e05010ace0301020101065001020106640106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","1/6","49/120","49/120"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","1/6","49/120","49/120"]],"net":["49/169"]},{"t":41,"level":"39/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace0301020101063c010201065001","sample":"0acd03010601010bdb0802d90302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401035205010ace0301020101063c01020106500106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","1/3","7/15","7/15"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","1/3","7/15","7/15"]],"net":["7/22"]},{"t":61,"level":"19/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010614010201062801","sample":"0acd03010601010bdb0802fa0302010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401037a05010ace0301020101061401020106280106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","2/3","7/12","7/12"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","2/3","7/12","7/12"]],"net":["7/19"]}]
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > boundary218 alias41 current sensing
+M218 SENSING alias41 [{"t":10,"level":"41/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201067801","sample":"0acd03010601010bdb0802b70202010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401031405010ace0301020101065001020106780106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","0/1","7/20","7/20"]],"net":["7/27"]},{"t":12,"level":"39/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010628010201065001","sample":"0acd03010601010bdb0802f60202010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401031805010ace0301020101062801020106500106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e","7/10","1/3","7/15","7/15"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","1/3","7/15","7/15"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","1/3","7/15","7/15"]],"net":["7/22"]}]
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > boundary218 alias49 current sensing
+M218 SENSING alias49 [{"t":10,"level":"49/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201067801","sample":"0acd03010601010bdb0802b70202010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401031405010ace0301020101065001020106780106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","0/1","7/20","7/20"]],"net":["7/27"]},{"t":12,"level":"47/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201067801","sample":"0acd03010601010bdb0802f60202010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401031805010ace0301020101065001020106780106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","0/1","7/20","7/20"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","0/1","7/20","7/20"]],"net":["7/27"]}]
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > boundary218 fine41 current sensing
+M218 SENSING fine41 [{"t":10,"level":"41/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace03010201010650010201066401","sample":"0acd03010601010bdb0802b70202010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401031405010ace0301020101065001020106640106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e","7/10","1/6","49/120","49/120"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","1/6","49/120","49/120"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","1/6","49/120","49/120"]],"net":["49/169"]},{"t":12,"level":"39/1","reads":["268","455"],"joins":[true],"absence":[],"interval":"0ace0301020101063c010201065001","sample":"0acd03010601010bdb0802f60202010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401031805010ace0301020101063c01020106500106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e","7/10","1/3","7/15","7/15"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","7/10","1/3","7/15","7/15"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","7/10","1/3","7/15","7/15"]],"net":["7/22"]}]
+
+stdout | src/test/assembledEmbodimentCurrent.test.ts > boundary218 denied current sensing
+M218 SENSING denied [{"t":10,"level":null,"reads":["268"],"joins":[true],"absence":["0acf03010501010bdb0802b70202010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401031405010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465"],"interval":null,"sample":null,"rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]},{"t":12,"level":null,"reads":["268"],"joins":[true],"absence":["0acf03010501010bdb0802b70202010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401031405010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","0acf03010501010bdb0802f50202010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401031805010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465"],"interval":null,"sample":null,"rows":[["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","050b556e617661696c61626c65"],["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","050b556e617661696c61626c65"]],"net":["0/1"]}]
+
+
+A checkpoint2367.463/2400s: fast/slow/no-delivery, aliases41/49, fine41 and denied saved. The grouped remainder hit its540s cap during unfinished work; unavailable/tolerance/comparison remain. No accepted family. Proceed with predeclared B1600, then self-approve only a concrete transfer of measured unused B time for unchanged pending A cases under total7200; no budget reset or passing-case replay.
+
+M218 A-types-final exit=1 elapsed=0.093s cap=30
+error TS5058: The specified path does not exist: 'tsconfig.app.json'.
+
+M218 A-types-project exit=0 elapsed=21.761s cap=30
