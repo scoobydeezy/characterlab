@@ -254,3 +254,132 @@ M217 PASS Full/Fast/3 2 prefixes; safe bytes 758873 seconds 118.175 probe8 {"log
    Start at  22:45:35
    Duration  426.29s (transform 3.30s, setup 0ms, collect 4.92s, tests 420.98s, environment 0ms, prepare 102ms)
 
+
+M217 D-sensing exit=0 elapsed=434.290s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/BlindSober/0
+M217 START Full/BlindSober/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/BlindSober/0
+M217 PASS Full/BlindSober/0 2 prefixes; safe bytes 908030 seconds 188.693 probe8 {"logical":8,"sleep":[0,0,null,500],"capacity":null,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":0,"challenge":0,"competence":300,"motorAllowed":true,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/BlindSlow/0
+M217 START Full/BlindSlow/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/BlindSlow/0
+M217 PASS Full/BlindSlow/0 2 prefixes; safe bytes 908030 seconds 122.059 probe8 {"logical":8,"sleep":[0,0,null,500],"capacity":null,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":700,"challenge":350,"competence":300,"motorAllowed":false,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/FalseSober/0
+M217 START Full/FalseSober/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/FalseSober/0
+M217 PASS Full/FalseSober/0 2 prefixes; safe bytes 758213 seconds 116.641 probe8 {"logical":8,"sleep":[0,0,0,500],"capacity":1000,"inhibited":true,"active":true,"maintained":true,"spare":2,"options":["withhold"],"outcome":"Chosen","chosen":"withhold","probabilities":[{"action":"withhold","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","drawCount":0,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":700,"challenge":350,"competence":300,"motorAllowed":false,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledIntoxicationCohort.test.ts (32 tests | 29 skipped) 427412ms
+   ✓ cohort217 Full/BlindSober/0 188699ms
+   ✓ cohort217 Full/BlindSlow/0 122065ms
+   ✓ cohort217 Full/FalseSober/0 116647ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 29 skipped (32)
+   Start at  22:53:05
+   Duration  433.24s (transform 3.49s, setup 0ms, collect 5.18s, tests 427.41s, environment 0ms, prepare 329ms)
+
+
+M217 D-execution exit=1073807364 elapsed=158.118s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/Interference/0
+M217 START Full/Interference/0
+
+
+M217 D-execution-resume exit=0 elapsed=334.487s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/Interference/0
+M217 START Full/Interference/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/Interference/0
+M217 PASS Full/Interference/0 2 prefixes; safe bytes 758213 seconds 204.309 probe8 {"logical":8,"sleep":[0,0,0,500],"capacity":1000,"inhibited":true,"active":true,"maintained":true,"spare":2,"options":["withhold"],"outcome":"Chosen","chosen":"withhold","probabilities":[{"action":"withhold","p":"1/1"}],"draws":"0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd","drawCount":0,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":0,"challenge":0,"competence":300,"motorAllowed":true,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/HighCompetence/1
+M217 START Full/HighCompetence/1
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 Full/HighCompetence/1
+M217 PASS Full/HighCompetence/1 2 prefixes; safe bytes 859117 seconds 123.118 probe8 {"logical":8,"sleep":[0,0,700,500],"capacity":650,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"e5b139c37195646b0a8f96b8e651fddfb0aa9b66550d1791c241fa6e359acd83","drawCount":2,"journal":"4a741361c81d1ca7d30a3ef093bd22d95a65b188a14dc567c496caf42384a650","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":700,"challenge":350,"competence":850,"motorAllowed":true,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledIntoxicationCohort.test.ts (32 tests | 30 skipped) 327443ms
+   ✓ cohort217 Full/Interference/0 204318ms
+   ✓ cohort217 Full/HighCompetence/1 123125ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 30 skipped (32)
+   Start at  07:56:58
+   Duration  333.84s (transform 4.01s, setup 0ms, collect 5.90s, tests 327.44s, environment 0ms, prepare 122ms)
+
+
+M217 D-no-control exit=0 elapsed=440.142s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 NoControl/Sober/0
+M217 START NoControl/Sober/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 NoControl/Sober/0
+M217 PASS NoControl/Sober/0 2 prefixes; safe bytes 908659 seconds 190.424 probe8 {"logical":8,"sleep":[0,0,0,500],"capacity":1000,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":0,"challenge":0,"competence":300,"motorAllowed":true,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 NoControl/Slow/0
+M217 START NoControl/Slow/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 NoControl/Slow/0
+M217 PASS NoControl/Slow/0 2 prefixes; safe bytes 908678 seconds 121.694 probe8 {"logical":8,"sleep":[0,0,700,500],"capacity":650,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":700,"challenge":350,"competence":300,"motorAllowed":false,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 NoControl/Fast/0
+M217 START NoControl/Fast/0
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > cohort217 NoControl/Fast/0
+M217 PASS NoControl/Fast/0 2 prefixes; safe bytes 908667 seconds 121.839 probe8 {"logical":8,"sleep":[0,0,400,500],"capacity":800,"inhibited":false,"active":true,"maintained":true,"spare":2,"options":["drug","withhold"],"outcome":"Chosen","chosen":"drug","probabilities":[{"action":"drug","p":"32886777347/68719476736"},{"action":"withhold","p":"35832699389/68719476736"}],"draws":"376e13586500461d6b3b8c3ee22bc36e013f6add991cd58fe1ed950538e5b8f2","drawCount":2,"journal":"e8289715198ed45e668ae8f6439084cae64e6b137a78c5b452b0292e8cd395bc","journalCount":1,"identity":"15/224","formation":"aa196a37a45cbc929bc75da7ae2397a0058b4400f78273c24ce29d8e258ccc8d","learned":"779b519edb19aa88cd081c47f6da877aa9c7d4eca8ebf28a53b9861987330db1","mean":600,"physicalDebt":0,"physicalBurden":400,"challenge":200,"competence":300,"motorAllowed":true,"goal":"3871318f99f856f160d3157a581b30aadba6ef705e21ad337b23d6b023a1ad32","maintenance":"04ba6dc45b812689703a1a1b98b7aaac57a15d093ab868bfc4cbbabf90ded61f","rewardReason":"3/5"}
+
+ ✓ src/test/assembledIntoxicationCohort.test.ts (32 tests | 29 skipped) 433978ms
+   ✓ cohort217 NoControl/Sober/0 190431ms
+   ✓ cohort217 NoControl/Slow/0 121701ms
+   ✓ cohort217 NoControl/Fast/0 121845ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 29 skipped (32)
+   Start at  08:02:43
+   Duration  439.56s (transform 3.47s, setup 0ms, collect 5.15s, tests 433.98s, environment 0ms, prepare 107ms)
+
+
+M217 D-comparison exit=0 elapsed=9.081s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntoxicationCohort.test.ts > compare217 full original intoxication gate
+M217 FULL PASS20 original runs/55 prefixes;5 models; all original comparisons; held history; whole masked and inert observer equality; no whole12.1 acceptance
+
+ ✓ src/test/assembledIntoxicationCohort.test.ts (32 tests | 31 skipped) 3064ms
+   ✓ compare217 full original intoxication gate 3063ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 31 skipped (32)
+   Start at  08:10:11
+   Duration  8.51s (transform 3.37s, setup 0ms, collect 5.10s, tests 3.06s, environment 0ms, prepare 103ms)
+
+
+M217 D-types-final exit=0 elapsed=21.627s cap=120
+
+M217 D-preservation exit=0 elapsed=7.741s cap=120
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4437}
+PASS: Git index contains no files at or above50,000,000 bytes.
+M217 PRESERVATION PASS:6 production/3 test files; frozen C0-C3/reference/controls unchanged; clause7 P->E on0.143 only; full original20/55; complete masked observer and equal-experience learning;21/15/132; failures/interruption retained; packages {'A': 877.282, 'B': 1171.676, 'C': 1273.589, 'D': 1397.7450000000001}
+
+M217 D-final-size exit=0 elapsed=0.367s cap=30
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M217 FINAL BUDGETS A=877.282/1800s, B=1171.676/1800s, C=1273.589/1800s, D=1405.853/1800s; timed total=4728.400/7200s. Checkpoint size-check/commit command walls add5.713s conservatively (A1.905,B1.412,C2.396); no limit exceeded.

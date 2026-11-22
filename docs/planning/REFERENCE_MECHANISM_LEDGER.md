@@ -1359,3 +1359,10 @@ No second learned competence owner, reduction or alternative runtime. Original
 repeat/restore/rollback pass. MEC001/003/011..019/022 retain all roles. Full20/55 and
 whole masked observer/reward-receipt correspondence remain open;12.1-7 only partial.
 [Result](ASSEMBLED_CHARACTER_M216_RESULT.md).
+
+M217 repairs reward evidence/admission in existing owners: known own attempt plus
+permitted benefit, never hidden Applied. Full original intoxication20/55 passes on
+0.143 with whole masked streams, learned-zero and independent motor/control gates.
+Old0.1 disclosure failure and all original competitors remain; no reduction.
+MEC001/003/011..019/022 retain their roles. Whole12.1 current-version gate remains.
+[Result](ASSEMBLED_CHARACTER_M217_RESULT.md).
