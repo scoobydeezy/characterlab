@@ -107,7 +107,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined,model.spatialMeaning?{C,settings:model.spatialMeaning}:undefined,model.commitmentAdoption,model.timeLimit):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key),model.timeLimit):prioritized;
  const monitored=model.performance?withPerformanceState(forecasted,model.strategy!,model.expectationEnabled,model.selfBeliefEnabled?C:undefined,model.values,model.causalEnabled,model.interferenceEnabled,model.timeLimit,model.obstructionWitness?model.social!.targets:undefined,model.stakeholderKnowledge?model.socialWitness:undefined,model.interferenceAcquisition):forecasted;
- const habitual=model.habit?withHabitState(monitored,C,model.timeLimit,model.body?.reward?.observed?'observed':!!model.body?.reward,model.body?.reward?.multiple?model.body.reward.actions:undefined):monitored;
+ const habitual=model.habit?withHabitState(monitored,C,model.timeLimit,model.body?.reward?.information?'informed':model.body?.reward?.observed?'observed':!!model.body?.reward,model.body?.reward?.multiple?model.body.reward.actions:undefined):monitored;
  const controlled=model.control?withControlState(habitual,C,model.mitigationEnabled?3:model.sharedAffectSources?2:model.reappraisal!==undefined,model.fatigue!==undefined,model.rumination,model.timeLimit):habitual;
  const communicating=model.communication?withCommunicationState(controlled,[...(model.communication.topic?[]:[C]),...model.communication.recipients],model.communication.topic,model.communication.expectation,model.commitmentWitness?tasks.map(t=>t.key):[],model.timeLimit):controlled;
  const socialized=model.social?withSocialState(communicating,C,model.social.target,model.social.targets,!!model.loss,!!model.embarrassment,model.social.beliefTrials,model.socialWitness?.observers,model.timeLimit):communicating;
@@ -146,6 +146,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if([346n,362n,415n].includes(e.path.rootStateTypeId))invalidModel('initial learned memory, prediction and identity must be empty');
    if(e.path.rootStateTypeId===373n&&e.path.fieldId===1n&&u(f(statusRecord(e.value,372n),1n))!==1n)invalidModel('initial tasks must be Open');
   }
+  if(model.body?.reward?.reportObserver){const binding=state.read({rootStateTypeId:268n,fieldId:1n,selectors:[{kind:'mapKey',key:model.body.reward.reportObserver}]});if(!binding.presence||key(f(rec(binding.value!,267n),1n))!==key(C))invalidModel('report observer must bind holder');}
   prior.base.domains.validateStatic(state);prior.base.domains.validateReferences(state,0n);return state;
  }
  return Object.freeze({stateModel,initialState,tasks,identityKey,identityK,prior,definition,

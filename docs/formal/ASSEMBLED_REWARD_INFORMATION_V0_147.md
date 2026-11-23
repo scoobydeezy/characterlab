@@ -9,7 +9,7 @@ unchanged under their versions. No new owner, event scheduler or alternate model
 
 Source [.4,permitted,bias,learn,[practiceAction],[report]]; report is
 [action,integerMagnitude0..1000] and at most one exists. Action must be declared.
-Report plus instructed practice rejects; report plus actual attempt rejects at
+Report plus instructed practice rejects; report plus actual satisfier attempt rejects at
 settlement. One idle report per instant is this bounded source domain.
 The stand-in is an external labelled information panel; its claims can be false.
 Declared action labels establish report topic under a controlled identity channel.
@@ -18,7 +18,8 @@ psychology. No report writes learned state at admission or substitutes world tru
 
 An independent outward observation reserves the existing C1 Current lane, passes
 11/12/13/14, freezes a same-observer experience with its observation support, then
-publishes its safe receipt20. Permission=false removes action and value together.
+publishes its safe receipt20. Permission=false emits no report observation or children, whether a hidden report
+is present or absent. Neither hidden topic, value nor presence changes cognition.
 Body current/consequence sensing is unchanged. Report learning occurs via the
 existing phase124 receipt ->130 evidence ->140 expectation authority, available
 only at later decisions. Withheld learning changes neither belief nor history.

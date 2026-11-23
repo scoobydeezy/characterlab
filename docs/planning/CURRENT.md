@@ -44,6 +44,12 @@ No new dice coupling claim: single-option probability1 versus no active reason.
 Information and own attempted outcome at the same instant are rejected, never
 silently prioritized. Empty/foreign report identities/domains reject.
 
+## Review repair before final acceptance
+Denied report presence still allocates an empty observation. Suppress that branch
+when permission is false; compare denied-positive/negative with denied-absent.
+Retain the earlier control evidence; rerun only this affected control group.
+Positive primary/continuation paths are unchanged. Same1800s and12-file limits.
+
 ## Verification and stop
 One validation job. Cumulative1800s incl failures/timeouts;600s max/command.
 Primary/control partition <=540s; privacy/contradiction/admission <=480s;
