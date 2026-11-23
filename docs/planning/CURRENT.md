@@ -1,55 +1,42 @@
-# Current work — M237 active
-Test actual execution permission -> physical contact -> perceived goal completion.
-Parent afe18d24. This is a bounded correspondence, not literal item-world acceptance.
-## Bounded card — before implementation
-1. Same live choice/attempt can yield two actual contacts or zero under the declared
-   protocol execution gate; only the nonzero contact changes physical displacement.
-2. Ordinary permitted sensing of attained5.2 fulfills the same goal and removes
-   later pursuit. Denied execution/negative reading and silence keep it Open.
-3. External two-contact exposure without an available route reaches the same criterion;
-   exact continuation/rollback at its existing goal-owner write remain required.
-Character/registry0.150; SeparateGoalPlan/Factored/TwoFailures, reference0.85/
-SourceCoverage0.5, phase4, seed7 fixed. No production/formal/law/owner changes.
-Two test/helper paths <=12; one runtime per run. No alternate psychology selector.
+# Current work — M237 complete
+Execution permission now has a checked end-to-end consequence: actual contact
+changes physical state; ordinary sensed evidence can fulfill the goal and stop
+pursuit. Denied execution and missing criterion evidence keep pursuit active.
+[Result](ASSEMBLED_CHARACTER_M237_RESULT.md);
+[evidence](ASSEMBLED_CHARACTER_M237_EVIDENCE.json).
+Parent afe18d24; preimplementation card c07d957b. Character/registry0.150 unchanged.
+Two new test/helper paths; no production/formal/control changes or new owner/law.
+Reference0.85/SourceCoverage0.5, SeparateGoalPlan/Factored/TwoFailures, seed7 fixed.
 
-## Exact fixture and correspondence
-Derive M235 visibleSuccess: nonsocial B, body10/cap100/rate0/grid1/threshold60,
-no initial goals/adaptation; no practice/reward/Need sources; required contexts.
-Set shared physical action contact counts2 (legal1/2 domain), desired5.2..5.3;
-registered regulation reference50/scale10/rate0/displacement step1. A/B body doses0,
-delays0, availability/opportunity true, difficulty0 and impairment0.
-Probe1 reads5; adopt2; choice/attempt3; ordinary criterion probe4; deliberation5.
-Four cases: permitted, denied (only protocol-execution permission false), silent
-(permitted, omit probe4), external (denied, no route displays, actual external count2
-at3 replaces deliberation/context3). Never author belief or final observation.
-Permitted/denied use identical inputs/S0/seed but physical model permission differs;
-all psychological laws/calibration fixed. Verify normalized registries match exactly.
-At3 positive motive/reasons/choice A and planned count2 in both; actual433/307 counts
-2 vs0; adaptation302 displacement2 vs absent/0. Body Applied vsBlocked follows the
-same actual receipt, unlike M233's body-only obstruction with nonzero contacts.
-Probe4 reads5.2 vs5.0; permitted/external Fulfilled4 and no pursuit5;
-denied/silent Open5, A attempts again and eventual Expired101. No random draws.
-External requires no actual attempt at3; authored actual exposure uses normal source.
-Criterion producer203 -> carriage337/M1-342 -> prediction/memory/goal140; assert
-actual consumed evidence and terminal observation reference, live later status read.
-Only native permitted contact2 corresponds to original successful delivery at the
-first relevant attempt; scalar physical state is not original transient Boolean world.
-Original multi-instant changing blockage, item identity, inversion and general world
-mapping remain open. Do not relabel body Applied as proof of item delivery.
+## Evidence and interpretation
+Nonsocial B5.2..5.3/deadline101, body10, empty initial goals/adaptation; no practice/
+reward/Need sources. Shared planned contact count2; reference50/scale10/step1.
+Probe1, adoption2, action3, optional probe4, deliberation5.
+Permitted/denied have identical inputs, S0, seed and actual decision3. Model source
+differs only in protocol-execution permission; normalized registry bytes agree.
+Actual433/307 contacts2 vs0 and adaptation2 vs0/absent; body Applied vsBlocked.
+Permitted: sensed5.2 -> Fulfilled4, no pursuit5. Denied: sensed5 -> Open, acts5.
+Silent: actual contact2 but no criterion4 -> Open, acts5. Both later expire101.
+External: normal actual source2, no available route/attempt -> sensed5.2 -> Fulfilled.
+Actual203/337/342 evidence reaches memory, prediction and the existing goal owner.
+Terminal observation reference and later read are asserted; no random draws.
+Forged settlement rejects. Fault after fulfillment4 preserves prior instant;
+public restore3 vs independent repeat exact snapshots/saves4/5/101 and all clocks.
+Six selected tests and repository checks pass within1800s. Two test-inspection
+repairs and one command-path typo retained; laws/scenarios/gates unchanged.
+M231/M233–236 evidence retained by exact hash; original control dependencies unchanged.
 
-## Checks, limits and completion
-Four cases <=600s; physical-model difference and evidence-source controls <=180s;
-repeat/public restore3 through4/5/101 and fault after fulfillment4 <=450s;
-types/boundaries/research/size <=120s; cumulative1800s incl failures, max600s/job.
-One long job at a time; evidence<=20 files/5MiB, one compact result/current/register.
-Preserve M231/M233–236 exact evidence hashes; no unchanged historical/full-C2 rerun.
-No accepted law or denominator changes; self-approved ordinary fixture/test repairs
-must retain failures and be recorded before rerun. No seed/threshold search.
-Done: fixed comparisons, privacy/source boundaries, recovery and repository checks
-pass, commit/stop. Update exact remaining mapping requirements without a new register.
-Consulted goal-strategy-public0.1, criterion-sensing0.1, existing protocol execution,
-MEC011/015..020/022, EXP004/013, RO012/014/019/020; retained scoped dispositions.
-E75/P33/N11/U13=132;21members/15families; accepted4/15. Family12.2/12.7 OPEN; no UI.
+## Exact remaining work
+M233 body failure with nonzero protocol contact remains a distinct physical channel,
+not proof of delivery success. M237 establishes only a bounded first-contact mapping.
+Original changing blocker/competence within a run, item/destination identity,
+per-instant Boolean attainment and full sensor correspondence remain unresolved.
+Next: make changing execution conditions concrete at the actual-contact boundary,
+while preserving distinct body-effect and protocol-contact semantics.
+No complete original delivery-world or family12.2/12.7 acceptance is claimed.
+Write the next bounded card before implementation. No unrelated breadth or UI.
+MEC011/015..020/022, EXP004/013, RO012/014/019/020 retain scoped dispositions.
+E75/P33/N11/U13=132;21members/15families; accepted4/15. No reduction.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
