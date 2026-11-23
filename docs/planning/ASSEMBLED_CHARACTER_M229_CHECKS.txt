@@ -1,0 +1,96 @@
+M229 initial-types exit=0 elapsed=21.591s cap=60s
+M229 test-types exit=0 elapsed=21.417s cap=60s
+M229 cohort-A exit=0 elapsed=357.579s cap=420s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A diversified
+M229 PASS diversified {"means":["1000","1000","1000"],"effects":["Applied","Applied","Applied"],"observerBytes":632122}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A diversified 134228ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A falseTraining
+M229 PASS falseTraining {"means":["1000","1000","1000"],"effects":["Applied","Applied","Applied"],"observerBytes":632122}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A falseTraining 75484ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A deniedFeedback
+M229 PASS deniedFeedback {"means":["1000","1000","1000"],"effects":["Applied","Applied","Applied"],"observerBytes":629773}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A deniedFeedback 71256ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A hiddenBlocked
+M229 PASS hiddenBlocked {"means":["1000","1000","1000"],"effects":["Blocked","Blocked","Blocked"],"observerBytes":629773}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A hiddenBlocked 70418ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 42 skipped (46)
+   Start at  10:22:19
+   Duration  357.01s (transform 3.44s, setup 0ms, collect 5.15s, tests 351.39s, environment 0ms, prepare 141ms)
+
+M229 cohort-B exit=0 elapsed=282.554s cap=360s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B falseSuccess
+M229 PASS falseSuccess {"means":["1000","1000","1000"],"effects":["Blocked","Blocked","Blocked"],"observerBytes":632122}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B falseSuccess 133376ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B trueSuccess
+M229 PASS trueSuccess {"means":["1000","1000","1000"],"effects":["Applied","Applied","Applied"],"observerBytes":632122}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B trueSuccess 71694ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B failure
+M229 PASS failure {"means":["1000","667","750"],"effects":["Blocked","Applied","Applied"],"observerBytes":632315}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B failure 71246ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 43 skipped (46)
+   Start at  10:28:27
+   Duration  281.98s (transform 3.47s, setup 0ms, collect 5.18s, tests 276.32s, environment 0ms, prepare 162ms)
+
+M229 safe-comparisons exit=0 elapsed=6.244s cap=30s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 whole safe views and pre-outcome meaning
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 45 skipped (46)
+   Start at  10:33:19
+   Duration  5.67s (transform 3.49s, setup 0ms, collect 5.20s, tests 44ms, environment 0ms, prepare 143ms)
+
+M229 continuation exit=0 elapsed=299.531s cap=360s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 failed delivery repeat and restore
+M229 repeated9
+
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 failed delivery repeat and restore
+M229 restored9
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 failed delivery repeat and restore 293272ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 45 skipped (46)
+   Start at  10:33:36
+   Duration  298.97s (transform 3.48s, setup 0ms, collect 5.19s, tests 293.27s, environment 0ms, prepare 136ms)
+
+M229 admission-compatibility exit=0 elapsed=134.019s cap=210s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 closed sensing and exact earlier model 127734ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 45 skipped (46)
+   Start at  10:38:44
+   Duration  133.46s (transform 3.47s, setup 0ms, collect 5.25s, tests 127.73s, environment 0ms, prepare 146ms)
+
+M229 final-types exit=0 elapsed=21.653s cap=60s
+M229 reference-boundary exit=0 elapsed=3.194s cap=30s
+Reference boundary check passed.
+M229 research exit=0 elapsed=3.457s cap=30s
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+Final preservation/accounting: six production/test paths; frozen Campaign0-3 source, prior contracts and baseline unchanged. Three evidence/result files 461464 bytes before this receipt; planning caps pass. Measured1151.239s +10s manual/size allowance =1161.239/1800s; no extension. All ten intended tests and repository checks pass without failed validation.
