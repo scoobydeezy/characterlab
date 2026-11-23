@@ -1,42 +1,55 @@
-# Current work — M235 complete
-The character changes route after two perceived failures while retaining its goal.
-Hidden success/failure preserves compared cognition; different private causes of
-the same observed failure produce identical complete state.
-[Result](ASSEMBLED_CHARACTER_M235_RESULT.md);
-[evidence](ASSEMBLED_CHARACTER_M235_EVIDENCE.json).
-Preimplementation card a8cda2d8; parent4cd66cc7. Character/registry0.150 unchanged.
-Two new test/helper paths; no production/formal/control changes or new owner.
-SeparateGoalPlan/Factored, reference0.85/SourceCoverage0.5, TwoFailures, seed7 fixed.
+# Current work — M236 active
+Test why the continuing character keeps goal, selected route and outcome distinct.
+Parent ee81ad80; M235 complete. No production or law change planned.
+## Bounded card — before implementation
+1. On current0.150, preserve one adopted goal and positive motivation through failed
+   execution, route switching, a no-route gap and resumption via live actual action.
+2. Compare all four original goal-strategy-component0.1 candidates on actual prior
+   state/evidence operands. Show where each reduction control loses a distinction.
+3. Exact native repeat/checkpoint continuation; retain original four-law full runs.
+One new test file <=12 paths; no new owner/runtime/configuration selector/framework.
+Character/registry0.150, SeparateGoalPlan/Factored, TwoFailures, reference0.85/
+SourceCoverage0.5, phase4 and seed7 remain fixed. Controls run only in test analysis.
 
-## Evidence and retained limits
-Five fixed native cases: environmental failure, intrinsic failure, visible success,
-hidden failure, hidden success. Nonsocial B, goal7..9/deadline101, body10, no initial
-goals, no practice/reward/Need source; both routes observed available2..9.
-Positive choices require live motive/reasons and probability1; no random draws.
-Actual observations120 -> journal/expectation140 -> prior-journal planning reads.
-Visible failures choose A/A/B at3/4/5; others A/A/A. Goals stay Open then expire101.
-No feedback is not failure; availability remains KnownAvailable.
-Visible-cause pair complete state equal; hidden pair cognition and both pairs'
-permitted output/decision/body views equal. Original failed projection retained.
-Self-approved physical correction:455/4 is the unsensed reward anchor, not cognition;
-exact changed paths455/1,4, reward0 vs1000, no reward source/sample, all other bytes
-equal. No law/input/behavior changes; stored original evidence re-evaluated.
-Rollback after actual learning4; public restore3 vs repeat full saves4/5/101 and
-all clocks/termination; primary checkpoint/terminal match. Forged learning rejects.
-Seven selected functional tests and final repository checks pass within1800s.
-M231 original19/four laws/94 prefixes and M234 exact evidence hashes preserved.
-Zero-dose Applied is execution status, not original item delivery/goal fulfillment.
-Original-world correspondence and alternative-law receiving controls remain open.
-Family12.2/full goal strategy OPEN; F12.7 and final replay unchanged.
+## Scenario, comparisons and expected witnesses
+Use M231 switchGap inputs/registry unchanged except declared model version0.150:
+original main1..6 maps to native2..7; probe1, nonsocial B7..9/deadline101,
+body10/cap100/rate0/grid1/threshold60, importance/urgency1, no initial goals,
+no practice/reward/Need source, required identity/self/Values contexts retained.
+Actual actions none,A,A,B,none,B; all goals Open2..7, Expired101. Blocked until7.
+Positive motive remains at6 despite no route/action; no new adoption before7.
+For each opportunity obtain goal/plan/route observations and latest perceived
+failure from actual prior373/996/1000 state. Map route times minus1 and task identity
+explicitly to the original kernel's finite operands. No hidden outcome/cause input.
+Assert exact trace reads of prior knowledge/plan/outcome plus goal/instruction;
+actual planner report enters candidate production and selected route reaches action.
+Before each contrast require live prior goal/evidence and relevant motive/consumer.
+SeparateGoalPlan must match actual selection/availability at all6 opportunities.
+FailureAbandonsGoal drops goal at4 after actual observed failure3; native retains A.
+FixedRoute selects unavailable A at5; native B. GoalEqualsPlan drops goal at6 when
+both routes unavailable; native retains goal/motive and resumes B at7.
+Compare immutable input bytes before/after all4 evaluations; no counterfactual
+result is written into native state. These are local consumed-input comparisons,
+not full alternative assembled trajectories or a universal reference-law victory.
+Full historical main alternatives remain in M231's19-run/94-prefix evidence.
 
-## Next bounded work
-Resolve alternative-law receiving dispositions and remaining original-world mapping
-for goal/strategy persistence in the same character, consulting original controls.
-Write the next finite card before implementation; no unrelated breadth, no UI.
-Do not replay unchanged controls habitually; select checks from changed dependencies.
-No original phenomenon, meaningful comparator or final acceptance requirement waived.
-E75/P33/N11/U13=132;21members/15families; accepted4/15. No reduction.
-MEC011/015..020/022, EXP004/013, RO012/014/020 retain scoped roles.
+## Checks, limits, interpretation and done
+One native witness <=300s; repeat from pristine and public restore4 through5/6/7/101
+full state/output/trace/save equality <=450s, same clocks/termination <=48 settlements.
+Counterfactual/local comparison and retained control hash binding <=120s; types,
+boundaries/research/size <=120s. Cumulative1800s incl failures; max600s/job, one job.
+20 evidence files/5MiB; one compact result, existing register only, no new checklist.
+No production/control closure change: preserve M231/M233/M234/M235 evidence hashes
+and original full alternative save hashes; do not redundantly replay those suites.
+No new rollback test: M231 knowledge/plan-related and M235 learning rollback paths
+are unchanged. Differences from local controls are reduction-control distinctions;
+TwoFailures remains an independent interaction, not a replacement goal law.
+Done when declared witness/comparisons/recovery/repository checks pass; commit/stop.
+Original item-delivery world mapping/full goal-family acceptance remains OPEN;
+this test does not equate zero-dose execution with original destination attainment.
+Consulted goal-strategy component/public0.1, strategy/performance0.1, M9/R3;
+MEC011/015..020/022, EXP004/013, RO012/014/019/020 retain existing scope.
+E75/P33/N11/U13=132;21members/15families; accepted4/15; no reduction or UI.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
