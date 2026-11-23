@@ -32,9 +32,9 @@ function evidenceSupport(v:CanonicalValue){
  if(typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===399n&&v.schema.schemaVersion===2n){expect(uint(f(v,1n))).toBe(3n);const receipt=f(v,2n);expect(typeof receipt!=='boolean'&&receipt.kind==='typedIdentifier'&&receipt.namespaceId===1164n).toBe(true);return key(receipt);}
  return key(f(rec(v,399n),2n));
 }
-function capture(x:X,t:number){
+function capture(x:X,t:number,live=true){
  const os=items(decode(x.run.snapshot().outputs),'list'),candidate=os.find(v=>tag(v,'assembled-action-reward/candidates')&&uint(items(v,'list')[1])===BigInt(t));expect(candidate,'live candidate receiving').toBeDefined();
- const c=items(candidate!,'list');expect(readQ(c[2]).numerator,'live common task motive').toBeGreaterThan(0n);
+ const c=items(candidate!,'list');if(live)expect(readQ(c[2]).numerator,'live common task motive').toBeGreaterThan(0n);
  const d=rec(os.find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===409n&&at(f(v,2n))===BigInt(t))!,409n),ctx=rec(f(d,3n),408n),raw=rec(f(ctx,2n),403n),status=rec(f(d,4n),419n),chosen=uint(f(status,1n))===3n?rec(f(status,2n),420n):undefined;
  const action=(a:CanonicalValue)=>x.b.actions.findIndex(b=>key(a)===key(b)),candidateAction=(v:CanonicalValue)=>action(f(rec(v,395n),2n));
  const signals=items(f(raw,3n),'set').map(v=>rec(v,402n)).filter(v=>key(f(rec(f(v,1n),401n),2n))===key(x.b.task)).map(v=>{const k=rec(f(v,1n),401n),basis=f(rec(f(v,3n),400n),1n);if(typeof basis==='boolean'||basis.kind!=='map')throw Error('basis');return {action:candidateAction(f(k,1n)),role:Number(uint(f(k,3n))),value:fraction(f(v,2n)),supports:basis.entries.map(([k])=>evidenceSupport(k))};}).sort((a,b)=>a.action-b.action||a.role-b.role);
@@ -81,3 +81,5 @@ it('reports227 closed set admission and retained single report bytes',async()=>{
  const x=await oldStart({amount:1000}),old=compileReward(items(decode(x.b.s.registry),'list')[57],true,true,true);expect(()=>rewardSource(list([text('assembled-reward-experience/0.4'),true,signed(0),true,list([]),list([a,z])]),old)).toThrow('report capacity');
  await finish(x);const oldEvidence=JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M226_EVIDENCE.json','utf8'));expect(hash(x.run.save())).toBe(oldEvidence.primary.helpful.terminal);put('admissionCompatibility',{duplicate:true,capacity:true,foreign:true,domain:true,legacyRejects:true,terminal:hash(x.run.save())});
 },230000);
+
+export {capture,learned,hash,exact,finish,original,fullProbability};

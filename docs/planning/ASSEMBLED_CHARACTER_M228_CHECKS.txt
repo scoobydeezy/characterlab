@@ -1,0 +1,91 @@
+M228 types exit=0 elapsed=21.519s cap=60s
+Pre-run scenario correction: strategy observations at30 enter120/130/140 learning and cannot affect same-instant phase70 candidates. Restore availability via observation10 for the originally required final choice11. Original plan54882ab8 retained; no behavioral run or law changed.
+M228 availability exit=0 elapsed=339.271s cap=420s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 availability and competing alternatives
+M228 PASS diversified {"acquired":[{"count":2,"mean":"1000"},{"count":2,"mean":"1000"}],"choices":[1,1,1],"draws":0}
+
+stdout | src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 availability and competing alternatives
+M228 PASS unavailable {"acquired":[{"count":2,"mean":"1000"},{"count":2,"mean":"1000"}],"choices":[-1,-1,-1],"draws":0}
+
+stdout | src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 availability and competing alternatives
+M228 PASS restoredA {"acquired":[{"count":4,"mean":"1000"},{"count":0,"mean":null}],"choices":[-1,-1,0],"draws":0}
+
+stdout | src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 availability and competing alternatives
+M228 PASS bothAvailable {"acquired":[{"count":2,"mean":"1000"},{"count":2,"mean":"1000"}],"choices":[1,1,1],"draws":7}
+
+ ✓ src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 availability and competing alternatives 333335ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  09:48:29
+   Duration  338.70s (transform 3.29s, setup 0ms, collect 4.89s, tests 333.34s, environment 0ms, prepare 152ms)
+
+M228 learning-boundaries exit=0 elapsed=264.932s cap=360s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 inactive motive and unlearned practice
+M228 PASS noDemand {"acquired":[{"count":2,"mean":"1000"},{"count":2,"mean":"1000"}],"choices":[-1,-1,-1],"draws":0}
+
+stdout | src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 inactive motive and unlearned practice
+M228 PASS unseenTraining {"acquired":[{"count":0,"mean":null},{"count":0,"mean":null}],"choices":[-1,-1,-1],"draws":0}
+
+stdout | src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 inactive motive and unlearned practice
+M228 PASS withheldLearning {"acquired":[{"count":0,"mean":null},{"count":0,"mean":null}],"choices":[-1,-1,-1],"draws":0}
+
+ ✓ src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 inactive motive and unlearned practice 258968ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  09:54:16
+   Duration  264.37s (transform 3.31s, setup 0ms, collect 4.91s, tests 258.97s, environment 0ms, prepare 144ms)
+
+M228 continuation exit=0 elapsed=275.713s cap=360s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 restored opportunity repeats and continues
+M228 repeated10
+
+stdout | src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 restored opportunity repeats and continues
+M228 restored10
+
+ ✓ src/test/assembledSubstitutionBoundaries.test.ts > boundaries228 restored opportunity repeats and continues 269541ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  09:58:55
+   Duration  275.15s (transform 3.44s, setup 0ms, collect 5.08s, tests 269.54s, environment 0ms, prepare 173ms)
+
+M228 captured-receiving exit=0 elapsed=0.066s cap=30s
+PASS: all 21 captured probe Base/admission correspondences; first-use support IDs exactly match acquired expectation evidence.
+M228 final-types exit=0 elapsed=22.063s cap=60s
+M228 reference-boundary exit=0 elapsed=3.142s cap=30s
+Reference boundary check passed.
+M228 research exit=1 elapsed=3.643s cap=30s
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+Research-check repair: the M228 active card omitted the mandatory CURRENT obligation-count table. Restore the unchanged0 active/18 conditional/0 unowned row; no registry disposition changes. Keep failed check and rerun only research.
+M228 research-count-row-repair exit=0 elapsed=3.422s cap=30s
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+Final preservation/accounting: three test paths, zero production/contract changes; frozen Campaign0-3 and baseline unchanged. Three evidence/result files 214624 bytes before this receipt; planning caps pass. Measured933.771s +10s manual/size allowance =943.771/1800s; no extension.
