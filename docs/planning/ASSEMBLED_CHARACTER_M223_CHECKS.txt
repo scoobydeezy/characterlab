@@ -1,0 +1,263 @@
+
+M223 primary-admission-and-coverage exit=1 elapsed=62.438s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMultiCurrent.test.ts (7 tests | 1 failed | 6 skipped) 56632ms
+   × multi223 primary: genuine families cite acquired shared or independent receipts and reach native decision/action 56631ms
+     → social witness observer mapping
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMultiCurrent.test.ts > multi223 primary: genuine families cite acquired shared or independent receipts and reach native decision/action
+SchedulerContractError: social witness observer mapping
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/socialWitness.ts:19:44
+ ❯ src/assembled/socialWitness.ts:23:73
+ ❯ Module.compileSocialWitness src/assembled/socialWitness.ts:23:37
+ ❯ Module.compileCharacterModel src/assembled/model.ts:375:43
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:28:110
+ ❯ Module.start src/test/fixtures/assembledMultiCurrent.ts:44:273
+ ❯ src/test/assembledMultiCurrent.test.ts:13:80
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  17:45:11
+   Duration  61.85s (transform 3.21s, setup 0ms, collect 4.77s, tests 56.63s, environment 0ms, prepare 143ms)
+
+
+Migration correction before rerun: current stakeholder admission requires a fourth local-actor map in each passive observer row. Add bijective private authored aliases for existing known people; retain original observer/holder/target fields and every report. Also document the existing BODY_DELIVERY two-field -> three-field false extension as representation-only. No belief, event, gain or acceptance change.
+
+M223 primary-local-observer-map exit=1 elapsed=0.982s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledMultiCurrent.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMultiCurrent.test.ts [ src/test/assembledMultiCurrent.test.ts ]
+Error: Transform failed with 1 error:
+C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/fixtures/assembledMultiCurrent.ts:29:188: ERROR: Expected "]" but found ")"
+  Plugin: vite:esbuild
+  File: C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/fixtures/assembledMultiCurrent.ts:29:188
+
+  Expected "]" but found ")"
+  27 |   slots[8]=list([...ret,list([]),ret[2]]);slots[9]=list([...access,text('PresentationFrequency')]);
+  28 |   const social=items(slots[50],'list'),people=items(items(slots[19],'list')[1],'list').map(v=>items(v,'list')[0]);
+  29 |   slots[50]=list([...social.slice(0,3),list(items(social[3],'list').map((v,i)=>list([...items(v,'list'),list(people.map((p,j)=>list([p,ref(sid(1038,'content/m223-observer-'+i+'-person-'+j)))])))]))]);
+     |                                                                                                                                                                                              ^
+  30 |   const habit=items(slots[16],'list')[1],defs=items(slots[0],'set'),template=defs.find(v=>key(f(rec(v,171n),1n))===key(habit))!;
+  31 |   const zero=replace(replace(replace(template,1n,unused),3n,text('bounded-protocol-execution/0.2-candidate')),4n,r(391,[u(0)]));
+
+ ❯ failureErrorWithLog ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:1472:15
+ ❯ ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:755:50
+ ❯ responseCallbacks.<computed> ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:622:9
+ ❯ handleIncomingPacket ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:677:12
+ ❯ Socket.readFromStdout ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:600:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  17:47:06
+   Duration  446ms (transform 37ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 158ms)
+
+
+Syntax repair: split the nested observer mapping expression into named actors/observers to correct one closing delimiter. No executed model or comparison change; type check before native rerun.
+
+M223 types-adapter exit=0 elapsed=21.528s cap=180
+
+M223 primary-complete-migration exit=0 elapsed=187.493s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiCurrent.test.ts > multi223 primary: genuine families cite acquired shared or independent receipts and reach native decision/action
+M223 first reference [ '485/576', '91/576' ] alternatives [
+  [ 'GroundAggregate', [ '485/576', '91/576' ], [] ],
+  [ 'GroundPairwise', [ '485/576', '91/576' ], [] ],
+  [ 'GroundUncovered', [ '485/576', '91/576' ], [] ],
+  [ 'FamilyNormalized', [ '485/576', '91/576' ], [] ]
+] descriptionDice 4 [ '1271/1296', '25/1296' ]
+
+stdout | src/test/assembledMultiCurrent.test.ts > multi223 primary: genuine families cite acquired shared or independent receipts and reach native decision/action
+M223 last reference [ '485/576', '91/576' ] alternatives [
+  [ 'GroundAggregate', [ '485/576', '91/576' ], [] ],
+  [ 'GroundPairwise', [ '485/576', '91/576' ], [] ],
+  [ 'GroundUncovered', [ '485/576', '91/576' ], [] ],
+  [ 'FamilyNormalized', [ '341/432', '91/432' ], [] ]
+] descriptionDice 4 [ '1271/1296', '25/1296' ]
+
+stdout | src/test/assembledMultiCurrent.test.ts > multi223 primary: genuine families cite acquired shared or independent receipts and reach native decision/action
+M223 collective reference [ '485/576', '91/576' ] alternatives [
+  [ 'GroundAggregate', [ '485/576', '91/576' ], [ '1/8' ] ],
+  [ 'GroundPairwise', [ '485/576', '91/576' ], [ '1/8' ] ],
+  [ 'GroundUncovered', [ '485/576', '91/576' ], [ '1/4' ] ],
+  [ 'FamilyNormalized', [ '485/576', '91/576' ], [ '3/32' ] ]
+] descriptionDice 5 [ '575/576', '1/576' ]
+
+stdout | src/test/assembledMultiCurrent.test.ts > multi223 primary: genuine families cite acquired shared or independent receipts and reach native decision/action
+M223 duplicate reference [ '485/576', '91/576' ] alternatives [
+  [ 'GroundAggregate', [ '485/576', '91/576' ], [] ],
+  [ 'GroundPairwise', [ '485/576', '91/576' ], [] ],
+  [ 'GroundUncovered', [ '485/576', '91/576' ], [] ],
+  [ 'FamilyNormalized', [ '485/576', '91/576' ], [] ]
+] descriptionDice 5 [ '575/576', '1/576' ]
+M223 PRIMARY PASS two genuine producers; actual source/decision/action; independent/shared coverage; collective and duplicate zero; all complete-input alternatives
+
+ ✓ src/test/assembledMultiCurrent.test.ts (7 tests | 6 skipped) 181645ms
+   ✓ multi223 primary: genuine families cite acquired shared or independent receipts and reach native decision/action 181645ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  17:48:21
+   Duration  186.93s (transform 3.22s, setup 0ms, collect 4.80s, tests 181.65s, environment 0ms, prepare 146ms)
+
+
+M223 types-complete-tests exit=0 elapsed=21.623s cap=180
+
+M223 evidence-family-version-and-migration-controls exit=1 elapsed=325.816s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiCurrentControls.test.ts > multi223 evidence: denied and hidden evidence, opposite sign and zero remain distinct
+M223 BOUNDARY PASS hidden raw/decision exact; denied missing; knownZero separate; opposite sign reaches probability [ '485/576', '91/576' ] [ '0/1', '1/1' ] [ '341/432', '91/432' ]
+
+stdout | src/test/assembledMultiCurrentControls.test.ts > multi223 family: only acquired Value linkage changes the second family, never the shared fact
+M223 VERSION CORRESPONDENCE rules/assembled-character/0.145-candidate same source labels/families/grounds/roles/strengths/support sizes and probabilities as0.112
+
+stdout | src/test/assembledMultiCurrentControls.test.ts > multi223 family: only acquired Value linkage changes the second family, never the shared fact
+M223 VERSION CORRESPONDENCE rules/assembled-character/0.145-candidate same source labels/families/grounds/roles/strengths/support sizes and probabilities as0.112
+M223 FAMILY PASS identical permitted receipts and Commitment signals; Value only present/absent; native probabilities [ '485/576', '91/576' ] [ '1/2', '1/2' ] modes Auto PlayerFacingRoll
+
+stdout | src/test/assembledMultiCurrentControls.test.ts > multi223 absent descriptors differ from known-zero rejected support
+M223 NONE PASS no descriptors/rejections, separately acquired Value still live
+
+ ❯ src/test/assembledMultiCurrentControls.test.ts (11 tests | 1 failed | 7 skipped) 319908ms
+   ✓ multi223 evidence: denied and hidden evidence, opposite sign and zero remain distinct 192534ms
+   ✓ multi223 family: only acquired Value linkage changes the second family, never the shared fact 100534ms
+   ✓ multi223 absent descriptors differ from known-zero rejected support 26413ms
+   × multi223 migration preserves original actions starting state and source declarations 427ms
+     → expected { Object (path, presence, ...) } to deeply equal { presence: true, value: { …(3) } }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMultiCurrentControls.test.ts > multi223 migration preserves original actions starting state and source declarations
+AssertionError: expected { Object (path, presence, ...) } to deeply equal { presence: true, value: { …(3) } }
+
+- Expected
++ Received
+
+  Object {
++   "path": Object {
++     "fieldId": 1n,
++     "rootStateTypeId": 268n,
++     "selectors": Array [
++       Object {
++         "key": Object {
++           "kind": "typedIdentifier",
++           "namespaceId": 1000n,
++           "payload": Object {
++             "kind": "text",
++             "value": "observer/bridge-subject",
++           },
++         },
++         "kind": "mapKey",
++       },
++     ],
++   },
+    "presence": true,
+    "value": Object {
+      "fields": Map {
+        1n => Object {
+          "kind": "typedIdentifier",
+          "namespaceId": 1002n,
+          "payload": Object {
+            "kind": "typedIdentifier",
+            "namespaceId": 1037n,
+            "payload": Object {
+              "kind": "typedIdentifier",
+              "namespaceId": 1038n,
+              "payload": Object {
+                "kind": "text",
+                "value": "character/bridge-subject",
+              },
+            },
+          },
+        },
+      },
+      "kind": "record",
+      "schema": Object {
+        "fields": Array [
+          Object {
+            "id": 1n,
+            "name": "CharacterId",
+            "required": true,
+          },
+        ],
+        "name": "CharacterObserverBindingValue",
+        "schemaVersion": 1n,
+        "typeId": 267n,
+      },
+    },
+  }
+
+ ❯ src/test/assembledMultiCurrentControls.test.ts:62:61
+     60|  for(const i of [10,11])for(const v of items(items(old[i],'list')[i===…
+     61|  const before=restoreAuthoritativeState(decode(b.old.d.initialState)),…
+     62|  for(const e of before.entries())expect(after.read(e.path)).toEqual({p…
+       |                                                             ^
+     63|  const added=after.entries().filter(e=>!before.read(e.path).presence);…
+     64|  const observers=items(items(old[50],'list')[3],'list'),current=items(…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 passed | 7 skipped (11)
+   Start at  17:52:38
+   Duration  325.23s (transform 3.24s, setup 0ms, collect 4.82s, tests 319.91s, environment 0ms, prepare 145ms)
+
+
+Migration assertion repair: AuthoritativeState.read returns path as well as presence/value; the expected object omitted path. Compare complete before.read(path) with after.read(path). Original values and scenario are unchanged. Rerun only migration plus the still-pending persistence check.
+
+M223 persistence-and-corrected-migration exit=0 elapsed=177.094s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiCurrentControls.test.ts > multi223 persistence keeps acquired sources and all settled bytes through terminal
+M223 PERSISTENCE PASS acquired receipt only strictly later; learned S0 rejected; repeat/save6 every full state/output/trace/save through101
+
+stdout | src/test/assembledMultiCurrentControls.test.ts > multi223 migration preserves original actions starting state and source declarations
+M223 MIGRATION PASS original action/procedure definitions and all starting values preserved; only three physical anchors added; passive observer identities retained
+
+ ✓ src/test/assembledMultiCurrentControls.test.ts (11 tests | 9 skipped) 171272ms
+   ✓ multi223 persistence keeps acquired sources and all settled bytes through terminal 170280ms
+   ✓ multi223 migration preserves original actions starting state and source declarations 991ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  17:58:44
+   Duration  176.53s (transform 3.21s, setup 0ms, collect 4.78s, tests 171.27s, environment 0ms, prepare 146ms)
+
+
+M223 types-final exit=0 elapsed=21.605s cap=180
+
+M223 boundaries exit=0 elapsed=3.072s cap=180
+Reference boundary check passed.
+
+M223 research exit=0 elapsed=3.517s cap=180
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4443}
+
+M223 preservation exit=0 elapsed=0.473s cap=180
+PASS: only eight intended paths changed; zero production/contract/control changes; registry only appends one report; planning limits pass; new evidence 2 files/20339 bytes. Trailing display whitespace normalized, all diagnostic lines retained.
+
+M223 staged-git-size exit=0 elapsed=0.376s cap=180
+PASS: Git index contains no files at or above50,000,000 bytes.
