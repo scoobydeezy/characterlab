@@ -1,55 +1,38 @@
-# Current work — M224 current bodily-need replay
-The character's existing bodily evidence must still change live appraisal and
-reasons after the Need receiving path was added. Family12.2 remains OPEN.
-Parent d8e4fb58; owner bounded self-approval continues. No production change planned.
+# Current work — M224 bodily-need replay complete
+The current character preserves perceived bodily depletion/relief through live
+appraisal and reasons, while hidden body differences stay behind perception.
+[Result](ASSEMBLED_CHARACTER_M224_RESULT.md); model/registry0.145 unchanged.
+One character/state/scheduler/trace/save; bounded self-approval continues.
 
-## Bounded card — before implementation
-Capability: preserve depletion/relief and epistemic sensing distinctions on0.145.
-Baseline: C-BODY:4..11 / F-12.2 bodily-need evidence; original M117 sixteen/79
-controls retained, using the exact eight current-receiving M220 BODY scenarios.
-Model/registry0.145; body0.2, Need responses0.1; fixed reference0.85/SourceCoverage.
-One character/state/scheduler/trace/save. No new law or calibration.
+## Completed comparison
+All eight M220 BODY scenarios replay on0.145 with original inputs/S0/seeds.
+Original58 registry slots are hash-checked; only empty Need responses are appended.
+Fast/slow depletion, delivery/no-delivery, coarse/fine sensing and denied/unavailable
+readings match the preserved physical, appraisal and actual reason evidence.
+Relief changes later reason7/27 versus7/22; sampling precedes delivery.
+Hidden41/49 safe streams are exactly equal until observation distinguishes them.
+Unavailable sensing does not read physical state or manufacture known zero.
+Fast repeat31 and save31 continuation through101 preserve complete save bytes.
+Nine targeted checks pass; zero production changes. Repository receipts in result.
+Stop behavioral verification after these passes absent a concrete change/failure.
 
-Scene: nonsocial tasks, normal position/priority/opportunity/body channels,
-task B target[10,10], deadlines101, seed0; no learned starting state.
-Kinetic initial80/cap100, rate1 vs1/2, samples1/31/41/61, delivery30 at31
-versus an explicit zero delivery. Alias initial51/59, rate1, grid20 at10/12;
-fine-grid10 and denied/unavailable controls. Original scenario declarations remain.
-M220 input, S0 and seeds are byte-identical. Registry extends only by empty Need
-responses, with0.145 identity; empty responses isolate the original comparison.
-
-Compare all eight cases to preserved M220 exact physical levels, observation
-intervals, availability, appraisal factors and actual net reasons. Assert live
-appraisal/reason joins before comparing known evidence; denied/unavailable remain
-Unknown and must not read physical state. Hidden41/49 coarse evidence must produce
-identical complete safe cognition until disclosure; fine sensing breaks the alias.
-Changed identity/schema bytes use an explicit semantic correspondence, never equal
-cross-version run/save hashes. Preserve all original controls/nulls and alternatives.
-Fast case repeats to31; save31 restores identical bytes and complete continuation101.
-No sampled-winner claim; shared seeds do not imply coupled dice.
-
-Files: at most3 test/helper files; existing EmbodimentCurrent test/replay helper.
-Zero production/formal edits. CURRENT, one result/check log, existing register and
-obligation reportReview only. At most20 evidence files /5MiB.
-Checks serial: fast/slow/no-delivery separately; remaining five sensing cases;
-finite comparison; types, boundaries, research, frozen-path preservation, git-size.
-Expected verification <=1500s; hard1800s cumulative, each command <=600s.
-Failures count. Record and repair fixture/representation defects within this cap;
-do not change the eight scenarios, laws or expected phenomena to obtain a pass.
-Frozen control dependencies unchanged: no full historical suite invalidation.
-
-Done: all eight current cases and declared continuation/negative/correspondence
-checks pass, or record a concrete unresolved difference; no family acceptance.
-Then stop verification. Next integration gap is learned alternative acquisition:
-declared Need instructions and route switching do not prove learned efficacy.
-Original substitution requires learned A/B relief histories, not supplied options.
-F-12.9:4/5 remain missing; goal/strategy comparison also remains to reconcile.
-No unrelated breadth, UI, alternate runtime, or autonomous peers.
+## Next family12.2 integration
+Integrate learned alternative efficacy through the existing shared owners and
+ordinary candidate/reason path: concentrated versus diversified relief histories,
+then an effective B when A is unavailable. The original shared relief TASK is
+not physiological Need. Declared Need responses/known-route switching are not proof.
+L5 already selects MeanHistory; retain LatestHistory and the other original controls.
+F-12.9:4/5 native substitution remains missing. Reconcile goal/strategy comparisons
+after that connection, then decide the finite family12.2 gate.
+Need receiving, priority, acquired Commitment/Value and BODY now have current
+receiving evidence; all six clauses have version-scoped witnesses, not acceptance.
+No new breadth, UI, alternate runtime or autonomous peers.
 
 ## Pinned scope
 E75/P33/N11/U13=132;21members/15families.
 Accepted4/15:12.1@0.144,12.3@0.126,12.5@0.129,12.14@0.135.
-Whole-candidate acceptance remains open. Conditional obligations retain triggers.
+Family12.2 and whole-candidate acceptance remain open.
+Reference0.85/SourceCoverage unchanged; conditional obligations retain triggers.
 
 | Registry | Current count |
 |---|---|
