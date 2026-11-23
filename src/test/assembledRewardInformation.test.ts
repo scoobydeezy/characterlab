@@ -51,13 +51,13 @@ it('information226 primary report knowledge reaches ordinary execution',async()=
 },530000);
 it('information226 denied withheld and contrary information',async()=>{
  const result:any={};
- for(const [name,options]of [['deniedPositive',{amount:1000,denied:true}],['deniedNegative',{amount:0,denied:true}],['withheld',{amount:1000,withheld:true}],['contrary',{amount:0,action:0}]]as const){
+ for(const [name,options]of [['deniedPositive',{amount:1000,denied:true}],['deniedNegative',{amount:0,denied:true}],['absentDenied',{denied:true}],['withheld',{amount:1000,withheld:true}],['contrary',{amount:0,action:0}]]as const){
   const x=await start(options);await through(x.run,8n);const acquired=learned(x),contrary=name==='contrary';expect(acquired.map(h=>h.count)).toEqual([4,0]);expect(acquired.map(h=>h.mean)).toEqual([contrary?'800':'1000',null]);
-  const os=items(decode(x.run.snapshot().outputs),'list'),samples=os.filter(v=>tag(v,INFORMATION_SAMPLE));expect(samples).toHaveLength(1);if(name.startsWith('denied'))expect(items(items(samples[0],'list')[4],'list')).toHaveLength(0);
+  const os=items(decode(x.run.snapshot().outputs),'list'),samples=os.filter(v=>tag(v,INFORMATION_SAMPLE));expect(samples).toHaveLength(name.startsWith('denied')||name==='absentDenied'?0:1);
   await through(x.run,11n);const probes=[9,10,11].map(t=>capture(x,t));expect(probes.map(p=>p.chosen)).toEqual([-1,-1,-1]);result[name]={acquired,probes};console.info('M226 CONTROL',name,JSON.stringify(result[name]));
  }
- expect(result.deniedPositive).toEqual(result.deniedNegative);const denied=await original('deniedInfo'),contrary=await original('correctedConcentrated');expect(denied.slice(5).map(r=>r.chosen)).toEqual([-1,-1,-1]);expect(contrary[5].belief[0]).toBe('4/5');const seed=await start({amount:1000}),inputs=items(decode(seed.b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(at(a[0])===9n&&key(a[2])===key(REWARD_SOURCE)){const p=[...items(a[3],'list')];p[5]=list([list([seed.b.actions[1],u(0)])]);a[3]=list(p);}return list(a);}),overlap=cachedMemory(await createCharacterRun(seed.m,{...seed.b.d,orderedInputs:enc(list(inputs))}));await through(overlap,8n);const before=overlap.snapshot();await expect(overlap.settleNextInstant()).rejects.toThrow('information and action overlap');const after=overlap.snapshot();expect(after.clock).toBe(before.clock);bytes(before.state,after.state);bytes(before.outputs,after.outputs);bytes(before.trace,after.trace);
- put('controls',{...result,denied,contraryOriginal:contrary,overlapRejectedAndRolledBack:true});
+ expect(result.deniedPositive).toEqual(result.deniedNegative);expect(result.deniedPositive).toEqual(result.absentDenied);const denied=await original('deniedInfo'),contrary=await original('correctedConcentrated');expect(denied.slice(5).map(r=>r.chosen)).toEqual([-1,-1,-1]);expect(contrary[5].belief[0]).toBe('4/5');const seed=await start({amount:1000}),inputs=items(decode(seed.b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(at(a[0])===9n&&key(a[2])===key(REWARD_SOURCE)){const p=[...items(a[3],'list')];p[5]=list([list([seed.b.actions[1],u(0)])]);a[3]=list(p);}return list(a);}),overlap=cachedMemory(await createCharacterRun(seed.m,{...seed.b.d,orderedInputs:enc(list(inputs))}));await through(overlap,8n);const before=overlap.snapshot();await expect(overlap.settleNextInstant()).rejects.toThrow('information and action overlap');const after=overlap.snapshot();expect(after.clock).toBe(before.clock);bytes(before.state,after.state);bytes(before.outputs,after.outputs);bytes(before.trace,after.trace);
+ put('controlsPresenceRepair',{...result,denied,contraryOriginal:contrary,overlapRejectedAndRolledBack:true});
 },470000);
 it('information226 repeat restore and closed admission',async()=>{
  const x=await start({amount:1000}),repeat=cachedMemory(await createCharacterRun(x.m,x.b.d));await through(x.run,8n);await through(repeat,8n);exact(x.run,repeat);console.info('M226 repeated8');
@@ -77,3 +77,15 @@ it('information226 repeat restore and closed admission',async()=>{
 it('information226 retained M225 acquired alternative witness',async()=>{
  const result:any={};for(const diverse of [false,true]){const x=await legacyStart({diverse});await through(x.run,7n);const history=learned(x);expect(history.map(h=>[h.count,h.mean])).toEqual(diverse?[[2,'1000'],[2,'1000']]:[[4,'1000'],[0,null]]);await through(x.run,11n);const probes=[9,10,11].map(t=>capture(x,t));expect(probes.map(p=>p.chosen)).toEqual(diverse?[1,1,1]:[-1,-1,-1]);await finish(x);const old=JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M225_EVIDENCE.json','utf8')).primary[diverse?'diverse':'concentrated'];expect(hash(x.run.save())).toBe(old.terminal);result[diverse?'diverse':'concentrated']={history,probes,terminal:hash(x.run.save())};}put('compatibility',result);
 },295000);
+
+it('information226 denied report presence cannot abort an attempt',async()=>{
+ const seed=await start({amount:1000}),result:any[]=[];
+ for(const present of [false,true]){
+  const inputs=items(decode(seed.b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(at(a[0])===9n&&key(a[2])===key(REWARD_SOURCE)){const p=[...items(a[3],'list')];p[1]=false;p[5]=list(present?[list([seed.b.actions[1],u(0)])]:[]);a[3]=list(p);}return list(a);});
+  const x={...seed,run:cachedMemory(await createCharacterRun(seed.m,{...seed.b.d,orderedInputs:enc(list(inputs))}))};await through(x.run,9n);
+  const acquired=learned(x),probe=capture(x,9);expect(probe.chosen).toBe(1);expect(probe.effects).toEqual([{action:1,status:'Applied'}]);expect(acquired[1]).toEqual({count:0,mean:'1000',samples:[{at:8,attempted:false,amount:'1000'}]});
+  const samples=items(decode(x.run.snapshot().outputs),'list').filter(v=>tag(v,INFORMATION_SAMPLE)&&at(items(v,'list')[3])===9n);expect(samples).toHaveLength(0);
+  result.push({acquired,probe});
+ }
+ expect(result[0]).toEqual(result[1]);put('deniedAttempt',{absent:result[0],present:result[1]});console.info('M226 denied report presence preserves actual B attempt and cognitive projections');
+},180000);

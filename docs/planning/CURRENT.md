@@ -1,71 +1,43 @@
-# Current work — M226 active
-The next connection is learning about an untried alternative from a perceived
-report, then using that belief in the same character's ordinary decision/execution.
-M225 is complete at f6919a8c; family12.2 remains OPEN.
+# Current work — M226 complete
+The character learns about an untried alternative from a permitted observed report,
+then chooses and executes it when the usual action is unavailable. Reported
+knowledge updates expectation without fabricating performed history.
+[Result](ASSEMBLED_CHARACTER_M226_RESULT.md); [checks](ASSEMBLED_CHARACTER_M226_CHECKS.txt);
+[evidence](ASSEMBLED_CHARACTER_M226_EVIDENCE.json).
+Model/registry0.147; reward-experience0.4; numeric expectation0.3.
+Planf4cb2cb1; unaccepted review checkpointf48b71d4; parentf6919a8c.
 
-## Bounded card — committed before implementation
-Capability1: permitted action-labelled reports update expectation823, never
-performed history821. Capability2: known helpful B can be used after A is removed.
-Capability3: unknown, known failure and denied information remain distinguishable.
-Model/registry0.147; reward-experience0.4 over0.3; numeric expectation0.3.
-Baseline: F-12.9:4/5 bounded substitution controls, supporting open family12.2.
-No denominator/acceptance changes: E75/P33/N11/U13=132;21members/15families.
-Accepted4/15 retain their recorded versions. Reference0.85/SourceCoverage0.5 fixed.
+## What is established
+Four A practices followed by a helpful B report leave B untried but known helpful.
+B then reaches ordinary reasons, decision and actual execution on all three probes.
+A failure report leaves known zero; absent/denied/withheld reports leave B unknown.
+Original MeanHistory controls agree on the declared projections.
+A contrary A report preserves four performed successes and produces expectation4/5.
+Reports use an explicit holder-bound outward observer and C1 frozen experience.
+The same scheduler, state, reward expectation823 and performed history821 remain.
+No new owner, standalone runtime or alternate psychological pipeline.
 
-## Seam and files
-Extend existing reward observation handler/C1 current lane with one controlled
-external action-labelled report; declared outward observer must bind to holder.
-No new state owner/runtime. Expectation keeps its own admitted numeric samples;
-performed history remains own attempted observations with cue, not report history.
-MeanHistory/ties-even and Residual stay fixed; D3 competence stays separate.
-Production: model.ts, traceBinding.ts, rewardExperience.ts, habit.ts,
-habitExecution.ts, actionReward.ts, state.ts; inputs.ts only if admission requires.
-Tests: fixtures/assembledRewardInformation.ts, assembledRewardInformation.test.ts.
-At most10 named production/test paths;12 hard cap including transient files.
-Contract: ASSEMBLED_REWARD_INFORMATION_V0_147.md (versioned before implementation).
-Ledger MEC001/003/004/011..020/022 and EXP001/003/004 retain dispositions;
-RO001/008/010/012/015/020 and historical019/021 retain scopes/triggers.
-C1 phase reservations, frozen experience, observation support and holder binding
-must precede learning. Direct governed labels are a bounded channel, not general
-recognition or autonomous partners. No truth success read by the learning consumer.
+## Verification and correction
+Primary, expanded privacy, withheld/contrary, overlap rollback and admission pass.
+Exact repeat8 and restore8 ->101 pass, full bytes at8/11/101.
+Retained M225 concentrated/diversified terminal saves match their original hashes.
+Initial missing-observer setup failure is preserved; the fixture declares it now.
+Review also found denied report presence affecting event allocation/overlap.
+Final code uses perceived information; denied present/absent reports now match
+both without action and during actual B execution. Unperceived outcomes do not learn.
+Old source/control evidence stays atf48b71d4 and in append-only receipts.
+Types, boundaries, research and size checks pass. Nine production/test paths;
+verification within1800s including failure and repair, without extension.
+Passing checks end verification; no unchanged positive/continuation reruns.
 
-## Predeclared scenario and comparison
-Reuse M225 common task, social reports1..3, body10, four A practices4..7,
-idle8 then A unavailable/B available9..11; seed0, same model/S0.
-Panel stand-in reports at8 via declared outward observer: B1000 vs B0 vs absent.
-Neither arm performs B before9. Assert live common task motive and actual
-candidate/belief/reason consumption; helpful report produces actual B execution.
-Negative/absent arms produce no B. Match original MeanHistory knownAlternative,
-knownFailure, concentrated/deniedInfo projections at mapped opportunity indices.
-Denied positive versus denied negative reports must yield identical cognitive
-belief/candidate/raw/choice projections; withheld acquisition also stays unknown.
-A contrary report0 after four successes must retain mean800 (original4/5).
-No new dice coupling claim: single-option probability1 versus no active reason.
-Information and own attempted outcome at the same instant are rejected, never
-silently prioritized. Empty/foreign report identities/domains reject.
-
-## Review repair before final acceptance
-Denied report presence still allocates an empty observation. Suppress that branch
-when permission is false; compare denied-positive/negative with denied-absent.
-Retain the earlier control evidence; rerun only this affected control group.
-Positive primary/continuation paths are unchanged. Same1800s and12-file limits.
-
-## Verification and stop
-One validation job. Cumulative1800s incl failures/timeouts;600s max/command.
-Primary/control partition <=540s; privacy/contradiction/admission <=480s;
-repeat/restore alone <=360s; retained M225 primary <=300s; types/boundary/
-research/size and reserve <=120s. Adjust scheduling before execution if needed,
-never drop assertions. New evidence <=20 files/5MiB; append-only failed receipts.
-Exact repeat/save at8 and restore8, complete continuation through101, bytes
-at8/11/101; intervening clocks and termination agree. No learned S0.
-Affected compatibility: M225 primary, separate evidence destination/read-only
-replay assertions to avoid overwriting old evidence. Frozen dependency closure
-unchanged; no full C2 run. Concrete defects justify targeted reruns only.
-Done only when report -> belief -> reason -> execution, original projections,
-privacy/timing/ownership/admission, continuation and required checks pass.
-Then compact result and stop. Full substitution comparisons and goal/strategy
-reconciliation remain before12.2 acceptance; no UI/Campaign4.
-
+## Next integration
+Finish the remaining full substitution controls, including cue/history competitors,
+simultaneous information and non-grid comparisons; then goal/strategy reconciliation
+and family12.2 acceptance. Write the next bounded card before implementation.
+Controlled action-labelled reports do not qualify natural language/recognition.
+F-12.9:4/5 retain full-comparison N; this bounded witness is not family acceptance.
+E75/P33/N11/U13=132;21members/15families; accepted4/15 on recorded versions.
+Reference0.85/SourceCoverage0.5 unchanged. No UI or Campaign4.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

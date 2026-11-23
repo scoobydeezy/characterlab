@@ -9,8 +9,8 @@ unchanged under their versions. No new owner, event scheduler or alternate model
 
 Source [.4,permitted,bias,learn,[practiceAction],[report]]; report is
 [action,integerMagnitude0..1000] and at most one exists. Action must be declared.
-Report plus instructed practice rejects; report plus actual satisfier attempt rejects at
-settlement. One idle report per instant is this bounded source domain.
+Report plus instructed practice rejects; perceived report plus actual satisfier attempt rejects at
+settlement. One admitted idle report per instant is this bounded source domain.
 The stand-in is an external labelled information panel; its claims can be false.
 Declared action labels establish report topic under a controlled identity channel.
 This does not qualify natural recognition, source reliability or multi-character
