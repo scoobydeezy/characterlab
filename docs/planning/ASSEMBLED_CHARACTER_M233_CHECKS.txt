@@ -1,0 +1,108 @@
+M233 initial-types exit=0 elapsed=22.916s cap=120s
+M233 native-main exit=0 elapsed=103.008s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalCompletionCurrent.test.ts > goal233 native main
+M233 state main 2 1
+M233 state main 3 1
+M233 state main 4 1
+M233 state main 5 1
+M233 state main 6 1
+M233 state main 7 1
+M233 state main 8 2
+M233 state main 9 2
+M233 PASS main
+
+ ✓ src/test/assembledGoalCompletionCurrent.test.ts > goal233 native main 96864ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  13:01:20
+   Duration  102.43s (transform 3.38s, setup 0ms, collect 5.05s, tests 96.86s, environment 0ms, prepare 144ms)
+
+M233 native-controls exit=0 elapsed=144.510s cap=600s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalCompletionCurrent.test.ts > goal233 native noCriterion
+M233 state noCriterion 2 1
+M233 state noCriterion 3 1
+M233 state noCriterion 4 1
+M233 state noCriterion 5 1
+M233 state noCriterion 6 1
+M233 state noCriterion 7 1
+M233 state noCriterion 9 1
+M233 PASS noCriterion
+
+ ✓ src/test/assembledGoalCompletionCurrent.test.ts > goal233 native noCriterion 93098ms
+stdout | src/test/assembledGoalCompletionCurrent.test.ts > goal233 native simultaneous
+M233 state simultaneous 2 0
+M233 state simultaneous 3 0
+M233 state simultaneous 4 0
+M233 state simultaneous 5 1
+M233 state simultaneous 6 1
+M233 state simultaneous 7 2
+M233 state simultaneous 8 2
+M233 PASS simultaneous
+
+ ✓ src/test/assembledGoalCompletionCurrent.test.ts > goal233 native simultaneous 14715ms
+stdout | src/test/assembledGoalCompletionCurrent.test.ts > goal233 native noLater
+M233 state noLater 2 0
+M233 state noLater 3 0
+M233 state noLater 4 0
+M233 state noLater 5 1
+M233 state noLater 6 1
+M233 state noLater 8 1
+M233 PASS noLater
+
+ ✓ src/test/assembledGoalCompletionCurrent.test.ts > goal233 native noLater 10848ms
+stdout | src/test/assembledGoalCompletionCurrent.test.ts > goal233 native noAdoption
+M233 state noAdoption 2 0
+M233 state noAdoption 3 0
+M233 state noAdoption 4 0
+M233 state noAdoption 5 0
+M233 state noAdoption 6 0
+M233 state noAdoption 7 0
+M233 state noAdoption 8 0
+M233 PASS noAdoption
+
+ ✓ src/test/assembledGoalCompletionCurrent.test.ts > goal233 native noAdoption 10929ms
+ ✓ src/test/assembledGoalCompletionCurrent.test.ts > goal233 terminal adoption and retained controls 8593ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 7 skipped (12)
+   Start at  13:05:07
+   Duration  143.93s (transform 3.56s, setup 0ms, collect 5.25s, tests 138.18s, environment 0ms, prepare 146ms)
+
+M233 rollback-continuation exit=0 elapsed=95.034s cap=450s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGoalCompletionCurrent.test.ts > goal233 mixed stage rollback and continuation 88963ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  13:07:47
+   Duration  94.45s (transform 3.37s, setup 0ms, collect 5.00s, tests 88.96s, environment 0ms, prepare 171ms)
+
+M233 boundaries exit=0 elapsed=3.816s cap=120s
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+M233 research exit=0 elapsed=4.050s cap=120s
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+M233 staged-size exit=0 elapsed=0.844s cap=120s
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M233 preservation PASS: 2 new test/helper paths; production/formal/control dependencies unchanged versus3abc43dc. Evidence/result/check3 files <0.1MiB. Planning caps pass.
+M233 accounting: 374.178s measured +10s preservation/accounting allowance =384.178/1800s; all commands <=600s.
