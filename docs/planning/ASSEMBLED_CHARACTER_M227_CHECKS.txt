@@ -1,0 +1,178 @@
+M227 types-initial exit=0 elapsed=21.661s cap=90s
+M227 types-tests exit=0 elapsed=22.053s cap=60s
+M227 primary exit=1 elapsed=127.112s cap=420s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution 121114ms
+   → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:37:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:216:329
+ ❯ src/test/assembledRewardReportSet.test.ts:33:379
+ ❯ src/test/assembledRewardReportSet.test.ts:33:362
+ ❯ capture src/test/assembledRewardReportSet.test.ts:33:115
+ ❯ src/test/assembledRewardReportSet.test.ts:48:58
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  08:57:39
+   Duration  126.52s (transform 3.32s, setup 0ms, collect 4.94s, tests 121.11s, environment 0ms, prepare 147ms)
+
+M227 diagnostic repair: generic receivingRecord intentionally excludes399/2 ValueReceiptEvidenceAtom. The trace was already decoded/validated; inspect that evidence atom with canonical dataRecord. Failure occurred in test capture after both learned updates, not in simulation. No inputs/laws/gates changed.
+M227 primary-evidence-reader-correction exit=1 elapsed=129.073s cap=420s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution 123185ms
+   → requires 399/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution
+SchedulerContractError: requires 399/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ src/test/assembledRewardReportSet.test.ts:34:379
+ ❯ src/test/assembledRewardReportSet.test.ts:34:362
+ ❯ capture src/test/assembledRewardReportSet.test.ts:34:115
+ ❯ src/test/assembledRewardReportSet.test.ts:49:58
+ ❯ src/test/assembledRewardReportSet.test.ts:49:51
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  09:00:43
+   Duration  128.50s (transform 3.25s, setup 0ms, collect 4.84s, tests 123.19s, environment 0ms, prepare 139ms)
+
+M227 reader analysis after second failure: canonicalData.dataRecord also explicitly requires version1; previous repair was wrong. Exact accepted399/2 schema is ValueReceiptEvidenceAtom, tag3 and receipt namespace1164. Read this already-decoded variant explicitly, retaining strict version1 fallback. Add the exact399/2 reader precondition before expensive fixture creation. Active assembly AGENTS owner amendment2026-10-29 authorizes ordinary repairs; repeated unchanged failures require analysis, not a new permission. No laws/inputs/claims/budget changed.
+M227 primary-exact-receipt-reader exit=1 elapsed=129.114s cap=420s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution
+M227 PRIMARY concentrated {"acquired":[{"count":4,"mean":"800","supports":["0b8c0902c101","0b8c0902e601","0b8c09028b02","0b8c0902b002","0b8c0902c102"],"samples":[{"at":4,"attempted":true,"amount":"1000"},{"at":5,"attempted":true,"amount":"1000"},{"at":6,"attempted":true,"amount":"1000"},{"at":7,"attempted":true,"amount":"1000"},{"at":8,"attempted":false,"amount":"0"}]},{"count":0,"mean":"0","supports":["0b8c0902c202"],"samples":[{"at":8,"attempted":false,"amount":"0"}]}],"probes":[{"at":9,"motive":"1/1","beliefs":["800","0"],"habit":["15/16","0/1"],"admitted":[true,false],"chosen":0,"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"signals":[{"action":0,"role":1,"value":"4/5","supports":["0b8c09028b02","0b8c0902b002","0b8c0902c101","0b8c0902c102","0b8c0902e601"]}],"raw":"cf92591ae99c9b6b2a6904bc2ad6a1ed600831c7c89b217fc6f92a577fcb0726","effects":[{"action":0,"status":"Applied"}]},{"at":10,"motive":"1/1","beliefs":["800","0"],"habit":["15/16","0/1"],"admitted":[true,false],"chosen":0,"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"signals":[{"action":0,"role":1,"value":"4/5","supports":["0b8c09028b02","0b8c0902b002","0b8c0902c101","0b8c0902c102","0b8c0902e601"]}],"raw":"f1cb1003f27771cc86f82aa34dd49e91d4bc90b7a75f30813bdbe0122663b585","effects":[{"action":0,"status":"Applied"}]},{"at":11,"motive":"1/1","beliefs":["800","0"],"habit":["15/16","0/1"],"admitted":[true,false],"chosen":0,"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"signals":[{"action":0,"role":1,"value":"4/5","supports":["0b8c09028b02","0b8c0902b002","0b8c0902c101","0b8c0902c102","0b8c0902e601"]}],"raw":"8bf19a5ca9728bdc8ef2aac129cbd85ae09a23cb5f1cc443728dff09d2a3303e","effects":[{"action":0,"status":"Applied"}]}]}
+
+ × src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution 123235ms
+   → expected [ { action: +0, value: '1/1' }, …(1) ] to deeply equal [ { action: +0, value: '1/1' } ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution
+AssertionError: expected [ { action: +0, value: '1/1' }, …(1) ] to deeply equal [ { action: +0, value: '1/1' } ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "action": 0,
+      "value": "1/1",
+    },
++   Object {
++     "action": 1,
++     "value": "0/1",
++   },
+  ]
+
+ ❯ src/test/assembledRewardReportSet.test.ts:60:35
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  09:06:38
+   Duration  128.53s (transform 3.23s, setup 0ms, collect 4.81s, tests 123.24s, environment 0ms, prepare 141ms)
+
+M227 probability correspondence amendment before rerun: concentrated reference omits B; assembled retains explicit B probability0 while common-task admission is false. Zero-extend both distributions over the already-declared A/B domain, retaining original raw lists. Capture actual origin/motive and compiled-reason ownership; require B has no common-task origin or active reason. This classifies extra zero-support context rather than deleting it. No simulation/calibration/scenario change. Prior failed strict-array comparison retained.
+M227 primary-declared-probability-domain exit=0 elapsed=288.175s cap=420s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution
+M227 PRIMARY concentrated {"acquired":[{"count":4,"mean":"800","supports":["0b8c0902c101","0b8c0902e601","0b8c09028b02","0b8c0902b002","0b8c0902c102"],"samples":[{"at":4,"attempted":true,"amount":"1000"},{"at":5,"attempted":true,"amount":"1000"},{"at":6,"attempted":true,"amount":"1000"},{"at":7,"attempted":true,"amount":"1000"},{"at":8,"attempted":false,"amount":"0"}]},{"count":0,"mean":"0","supports":["0b8c0902c202"],"samples":[{"at":8,"attempted":false,"amount":"0"}]}],"probes":[{"at":9,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0],"motive":"1/1","beliefs":["800","0"],"habit":["15/16","0/1"],"admitted":[true,false],"chosen":0,"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"signals":[{"action":0,"role":1,"value":"4/5","supports":["0b8c09028b02","0b8c0902b002","0b8c0902c101","0b8c0902c102","0b8c0902e601"]}],"raw":"cf92591ae99c9b6b2a6904bc2ad6a1ed600831c7c89b217fc6f92a577fcb0726","effects":[{"action":0,"status":"Applied"}]},{"at":10,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0],"motive":"1/1","beliefs":["800","0"],"habit":["15/16","0/1"],"admitted":[true,false],"chosen":0,"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"signals":[{"action":0,"role":1,"value":"4/5","supports":["0b8c09028b02","0b8c0902b002","0b8c0902c101","0b8c0902c102","0b8c0902e601"]}],"raw":"f1cb1003f27771cc86f82aa34dd49e91d4bc90b7a75f30813bdbe0122663b585","effects":[{"action":0,"status":"Applied"}]},{"at":11,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0],"motive":"1/1","beliefs":["800","0"],"habit":["15/16","0/1"],"admitted":[true,false],"chosen":0,"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"signals":[{"action":0,"role":1,"value":"4/5","supports":["0b8c09028b02","0b8c0902b002","0b8c0902c101","0b8c0902c102","0b8c0902e601"]}],"raw":"8bf19a5ca9728bdc8ef2aac129cbd85ae09a23cb5f1cc443728dff09d2a3303e","effects":[{"action":0,"status":"Applied"}]}]}
+
+stdout | src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution
+M227 PRIMARY diversified {"acquired":[{"count":2,"mean":"667","supports":["0b8c0902c101","0b8c09028b02","0b8c0902c102"],"samples":[{"at":4,"attempted":true,"amount":"1000"},{"at":6,"attempted":true,"amount":"1000"},{"at":8,"attempted":false,"amount":"0"}]},{"count":2,"mean":"667","supports":["0b8c0902e601","0b8c0902b002","0b8c0902c202"],"samples":[{"at":5,"attempted":true,"amount":"1000"},{"at":7,"attempted":true,"amount":"1000"},{"at":8,"attempted":false,"amount":"0"}]}],"probes":[{"at":9,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0,1],"motive":"1/1","beliefs":["667","667"],"habit":["3/4","3/4"],"admitted":[true,true],"chosen":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"signals":[{"action":0,"role":1,"value":"667/1000","supports":["0b8c09028b02","0b8c0902c101","0b8c0902c102"]},{"action":1,"role":1,"value":"667/1000","supports":["0b8c0902b002","0b8c0902c202","0b8c0902e601"]}],"raw":"d41b8e3fbfe05036de859930b666b359903b0b4cf55e9bc01ba43641e401c076","effects":[{"action":0,"status":"Applied"}]},{"at":10,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0,1],"motive":"1/1","beliefs":["667","667"],"habit":["3/4","3/4"],"admitted":[true,true],"chosen":1,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"signals":[{"action":0,"role":1,"value":"667/1000","supports":["0b8c09028b02","0b8c0902c101","0b8c0902c102"]},{"action":1,"role":1,"value":"667/1000","supports":["0b8c0902b002","0b8c0902c202","0b8c0902e601"]}],"raw":"666903b33186feab5f809c53ace61fad1b411d5e7e4efb30236c8b4299e3353b","effects":[{"action":1,"status":"Applied"}]},{"at":11,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0,1],"motive":"1/1","beliefs":["667","667"],"habit":["3/4","3/4"],"admitted":[true,true],"chosen":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"signals":[{"action":0,"role":1,"value":"667/1000","supports":["0b8c09028b02","0b8c0902c101","0b8c0902c102"]},{"action":1,"role":1,"value":"667/1000","supports":["0b8c0902b002","0b8c0902c202","0b8c0902e601"]}],"raw":"8b5c21ba2018742b03db6f4191c187407c217307e2b65927aaa90a8352d4404d","effects":[{"action":0,"status":"Applied"}]}]}
+
+stdout | src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution
+M227 PRIMARY otherCue {"acquired":[{"count":2,"mean":"667","supports":["0b8c0902c101","0b8c09028b02","0b8c0902c102"],"samples":[{"at":4,"attempted":true,"amount":"1000"},{"at":6,"attempted":true,"amount":"1000"},{"at":8,"attempted":false,"amount":"0"}]},{"count":2,"mean":"667","supports":["0b8c0902e601","0b8c0902b002","0b8c0902c202"],"samples":[{"at":5,"attempted":true,"amount":"1000"},{"at":7,"attempted":true,"amount":"1000"},{"at":8,"attempted":false,"amount":"0"}]}],"probes":[{"at":9,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0,1],"motive":"1/1","beliefs":["667","667"],"habit":["0/1","0/1"],"admitted":[true,true],"chosen":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"signals":[{"action":0,"role":1,"value":"667/1000","supports":["0b8c09028b02","0b8c0902c101","0b8c0902c102"]},{"action":1,"role":1,"value":"667/1000","supports":["0b8c0902b002","0b8c0902c202","0b8c0902e601"]}],"raw":"d41b8e3fbfe05036de859930b666b359903b0b4cf55e9bc01ba43641e401c076","effects":[{"action":0,"status":"Applied"}]},{"at":10,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0,1],"motive":"1/1","beliefs":["667","667"],"habit":["0/1","0/1"],"admitted":[true,true],"chosen":1,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"signals":[{"action":0,"role":1,"value":"667/1000","supports":["0b8c09028b02","0b8c0902c101","0b8c0902c102"]},{"action":1,"role":1,"value":"667/1000","supports":["0b8c0902b002","0b8c0902c202","0b8c0902e601"]}],"raw":"666903b33186feab5f809c53ace61fad1b411d5e7e4efb30236c8b4299e3353b","effects":[{"action":1,"status":"Applied"}]},{"at":11,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0,1],"motive":"1/1","beliefs":["667","667"],"habit":["0/1","0/1"],"admitted":[true,true],"chosen":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"signals":[{"action":0,"role":1,"value":"667/1000","supports":["0b8c09028b02","0b8c0902c101","0b8c0902c102"]},{"action":1,"role":1,"value":"667/1000","supports":["0b8c0902b002","0b8c0902c202","0b8c0902e601"]}],"raw":"8b5c21ba2018742b03db6f4191c187407c217307e2b65927aaa90a8352d4404d","effects":[{"action":0,"status":"Applied"}]}]}
+
+ ✓ src/test/assembledRewardReportSet.test.ts > reports227 primary corrected repertoires and changed cues reach execution 282317ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  09:11:15
+   Duration  287.62s (transform 3.23s, setup 0ms, collect 4.82s, tests 282.32s, environment 0ms, prepare 146ms)
+
+M227 order-privacy exit=0 elapsed=308.485s cap=420s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledRewardReportSet.test.ts > reports227 report ordering and denied presence preserve receiving 302599ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  09:17:57
+   Duration  307.92s (transform 3.23s, setup 0ms, collect 4.82s, tests 302.60s, environment 0ms, prepare 142ms)
+
+M227 continuation exit=0 elapsed=308.979s cap=360s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardReportSet.test.ts > reports227 repeat and restore the simultaneous update
+M227 repeated8
+
+stdout | src/test/assembledRewardReportSet.test.ts > reports227 repeat and restore the simultaneous update
+M227 restored8
+
+ ✓ src/test/assembledRewardReportSet.test.ts > reports227 repeat and restore the simultaneous update 302951ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  09:23:14
+   Duration  308.40s (transform 3.30s, setup 0ms, collect 4.91s, tests 302.95s, environment 0ms, prepare 138ms)
+
+M227 admission-compatibility exit=0 elapsed=132.402s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledRewardReportSet.test.ts > reports227 closed set admission and retained single report bytes 126516ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  09:28:32
+   Duration  131.82s (transform 3.24s, setup 0ms, collect 4.83s, tests 126.52s, environment 0ms, prepare 152ms)
+
+M227 final-types exit=0 elapsed=21.198s cap=60s
+M227 reference-boundary exit=0 elapsed=3.069s cap=30s
+Reference boundary check passed.
+M227 research exit=0 elapsed=3.447s cap=30s
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+Final accounting: six production/test paths; three evidence/result files132361 bytes before this receipt; frozen Campaign0-3 trees and baseline unchanged. AGENTS120/CURRENT44/work-order250/register248 lines; register65420 CRLF bytes. git diff --check and npm run check:git-size PASS. Measured validation1494.768s plus10s manual/size allowance =1504.768/1800s; no extension. All four intended tests passed; prior failures retained.
