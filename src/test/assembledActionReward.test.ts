@@ -1,3 +1,7 @@
+// M225 measured verification partitions: continuation alone (~288s, cap360s),
+// controls/privacy together, admission separately. Keep all scenarios and bytes.
+// Retained Need + reward checks: select assembledNeed.test.ts only; it already
+// imports the reward test. Selecting both files executes that legacy check twice.
 import {it,expect} from 'vitest';
 import {start,fixture,through,rec,f,uint,items,key,decode,enc,list,text,signed,q,C,u,at,type CanonicalValue,type Options} from './fixtures/assembledActionReward';
 import {habitPath,rewardPath,habitJournal,rewardValue} from '../assembled/habit';
@@ -65,7 +69,7 @@ it('reward225 continuation and closed learning admission',async()=>{
  await expect(createCharacterRun(x.m,{...x.b.d,initialState:enc(new AuthoritativeState([...initial.entries(),entry]).canonicalValue())})).rejects.toThrow('initial habit/reward must be absent');
  let done=false;for(let n=0;n<48;n++){const more=await x.run.settleNextInstant();for(const r of [repeat,restored]){expect(await r.settleNextInstant()).toBe(more);expect(r.snapshot().clock).toBe(x.run.snapshot().clock);if(more&&[11n,101n].includes(x.run.snapshot().clock))exact(x.run,r);}if(!more){done=true;break;}}expect(done).toBe(true);expect(x.run.snapshot().clock).toBe(101n);
  put('continuation',{checkpoint:hash(save),terminal:hash(x.run.save()),learned:learned(x)});console.info('M225 CONTINUATION PASS full bytes at7/11/101, complete final trace/output/save; learned S0 rejected');
-},590000);
+},360000);
 it('reward225 action and source grammar reject invalid bindings',async()=>{
  const x=await start(),b=x.b,slots=items(decode(b.s.registry),'list'),d=items(slots[57],'list'),compiled=compileReward(slots[57],true,true);
  expect(()=>compileReward(list([d[0],list([b.actions[0],b.actions[0]]),...d.slice(2)]),true,true)).toThrow('action domain');

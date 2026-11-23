@@ -2,8 +2,8 @@
 The character now learns which actions delivered an experienced benefit, then uses
 a learned alternative when its usual action is unavailable. Practice of A alone
 leaves B unknown; practice of both produces actual B execution on all three probes.
-Status: CHECKPOINT — behavioral connection passes; M225 is NOT ACCEPTED.
-Continuation/admission and the retained0.145 runtime check remain unfinished.
+Status: COMPLETE — bounded learned-alternative integration; family12.2 remains OPEN.
+Owner resumed the unaccepted checkpoint; repair plan564b1ab5 preserves its failures.
 Plan73b9aafc; parent79d8b653. Model/registry0.146.
 [Contract](../formal/ASSEMBLED_ACTION_REWARD_V0_146.md);
 [checks](ASSEMBLED_CHARACTER_M225_CHECKS.txt);
@@ -40,7 +40,10 @@ practice; later probes have none.
 |Hidden physical outcome|Applied versus Blocked, but equal masked zero receipts: same histories/mean0, raw reason hashes, probabilities and choices.|
 |Learning timing|Training receipts show both unknown at4 and only A learned before5. Separate histories have4/0 versus2/2 entries.|
 |Repeat|Complete snapshot/save equality at practice7 passed in the isolated attempt.|
-|Unfinished|Restore/continuation, the admission test and the retained0.145 runtime check have no passing receipt. Corrected-history MeanHistory/LatestHistory comparison is also pending in that test.|
+|Continuation|Full snapshot/save equality at7/11/101; every intervening clock/termination checked. Final complete save also equals the retained primary diversified result.|
+|Admission|Duplicate/foreign actions, foreign learned path, learned S0 and old declaration misuse reject.|
+|Retained law contrast|Original corrected history: MeanHistory4/5 versus LatestHistory0. Reference unchanged.|
+|Compatibility|Original single-action learned600 -> later reason3/5 and changed probability still passes, including restore. On0.145 direct Need retains two task-free nuclei with probabilities1/2,1/2 and execution.|
 
 Probe outcomes are degenerate probability1 versus NoReasons, not a shared-dice
 sampled-winner claim. No claim that habit is necessary: expectation explains this
@@ -60,25 +63,46 @@ Five controls passed before their combined command hit600s. Only unfinished
 continuation/admission reran, capped260s to reserve the remaining total budget.
 That attempt reached repeated practice7 but timed out before the restored7 marker.
 Its selected-checkpoint7/11/101 policy did not solve the bottleneck; no continuation
-pass is inferred. Both timeouts remain. Stop at the repeated-blocker guardrail.
+pass was inferred then. Both timeouts remain. Work stopped at that guardrail before
+the owner authorized the measured follow-up.
 Two explicit post-run receipt assertions (probe benefit and zero motive) are also
 checked against retained evidence without rerunning unchanged simulations.
 
 Frozen Campaign0–3 sources/contracts and prior evidence are untouched. Original
 substitution controls execute only in tests; production imports no such factory.
-The planned old0.145 direct-Need runtime control is still pending. No full frozen-C2
-rerun: its dependency closure is unchanged. Reference0.85/SourceCoverage0.5 remain.
+The retained0.145 direct-Need runtime control now passes. No full frozen-C2 rerun:
+its dependency closure is unchanged. Reference0.85/SourceCoverage0.5 remain.
 MEC001/003/011..020/022 keep their port/control/corpus/candidate dispositions.
 RO001/008/010/012/015/020 and historical019/021 retain scopes and triggers;
 no obligation or historical qualification is closed or rewritten.
 
-## Next action and remaining family gate
-First profile the save/restore segment, before another integration or blind retry.
-Static inspection of character.ts shows prepared restore reexecutes the complete
-prefix; moving later comparison checkpoints cannot remove that work. The exact
-cost within encoding, decoding and replay is not yet measured. Preserve complete
-save validation and every original scenario/acceptance requirement. Replan a finite
-performance repair and finish the outstanding M225 checks before accepting0.146.
+## Measured verification repair
+The continuation was slow, not stuck. With stage measurements it passed in287.93s
+(293.928s including collection), with every original check intact. The prior260s
+isolated cap could not fit that work; the combined600s job also included five controls.
+Save7 is3,194,208 bytes. Copy0.994s, decode1.660s, prefix replay32.736s and final
+save reencoding0.435s rule out the suspected byte-copy/decoder bottleneck.
+Separate admission timing: fixture construction57.203s, model preparation1.441s,
+run creation0.256s. The untouched continuation/admission implementation passes.
+
+Fixture-only CPU sampling located allocation/encoding work; a sparse-edit helper
+candidate preserved all pinned input/S0/registry bytes but changed59.913s to58.999s.
+That is not a material gain. Candidate1af1e637 is preserved in Git, then reverted.
+All temporary instrumentation was removed; the follow-up changes no production code.
+Schedule continuation alone with360s headroom, controls/privacy in their own job,
+and admission separately. Retained compatibility uses assembledNeed.test.ts only:
+it imports the reward test. Selecting both files here unintentionally executed
+native214 twice (105.066s and105.273s); retain/count both, do not rerun again.
+This fixes redundant/overpacked verification without changing psychology, dropping
+scenario events, importing saved psychological state or weakening full-byte restore.
+
+Scope-accounting mistake: original10 paths plus temporary character instrumentation,
+helper candidate and an unused boundary-test path briefly totaled13 against the
+cumulative12-path card. This was not preapproved. The temporary code was removed;
+the unused test never ran. Record the overrun rather than retroactively calling it
+within budget. Final retained M225 implementation/test footprint remains10 paths.
+
+## Remaining family gate
 Information about an untried alternative still needs a normal perception/learning
 connection. Complete the remaining substitution controls, including unknown versus
 reported failure, contrary feedback, cue/history competitors and non-grid fractions.
@@ -90,12 +114,17 @@ E75/P33/N11/U13=132;21members/15families; accepted4/15 on their recorded version
 Whole-candidate replay and assembly acceptance remain open. No UI work authorized.
 
 ## Verification receipt
-Six completed behavioral checks (primary pair, four controls, privacy). Repeat7
-also reached exact equality. No passing restore/admission/full-milestone claim.
-Types, boundaries, research, evidence and frozen-path preservation checks pass.
-Ten production/test files; two evidence files, under60KiB. Register65,475 CRLF bytes;
-CURRENT44 lines. Research0 active/18 conditional/4 closed/0 unowned;103 verdicts
-and4445 reports. Staged size/whitespace checks finish checkpoint packaging.
-Measured verification1682.559s before packaging;10s reserved for plan/packaging
-overhead gives1692.559/1800s. No budget extension. The unused budget does not
-license a third unchanged attempt; M225 remains unaccepted.
+All eight M225 behavioral/admission/continuation checks now have passing evidence.
+Two retained compatibility claims pass in three executions (one accidental repeat).
+Two fixture profiles also verify exact pinned bytes; the ineffective candidate is
+rejected. Final types/boundary/research/preservation checks pass; staged size/whitespace
+complete packaging.
+The original package used1682.559s plus10s reserved overhead=1692.559/1800s;
+its two timeouts/failures remain. Follow-up timing is appended below separately.
+Follow-up measured742.255s before packaging +10s reserved overhead
+=752.255/1800s. Combined packages2444.814/3600s, with all
+failures, profiles and duplicate execution counted. No follow-up timeout/extension.
+Research0 active/18 conditional/4 closed/0 unowned;103 verdicts/4445 reports.
+Two evidence files remain below5MiB; reconciliation65,453 CRLF bytes.
+Retained implementation/test footprint10 paths; temporary13-path overrun recorded
+above. No obligation, family, full-corpus or assembly closure follows. Stop here.

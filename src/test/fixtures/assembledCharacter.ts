@@ -7,23 +7,11 @@ import type {Campaign2ModelSource} from '../../campaign2/factory';
 export const successor=(s:Campaign2ModelSource=source()):Campaign2ModelSource=>({...s,rulesVersion:CHARACTER_RULES,registrySchemaVersion:CHARACTER_REGISTRY});
 export function replace(v:CanonicalValue,n:bigint,next:CanonicalValue){const d=rec(v,(v as Extract<CanonicalValue,{kind:'record'}>).schema.typeId);return record(d.schema,new Map([...d.fields].map(([k,x])=>[k,k===n?next:x])));}
 export function changeDefinition(s:Campaign2ModelSource,name:string,field:bigint,value:CanonicalValue){
- // Fixtures make many sparse edits. Decode strictly, but keep untouched branches
- // instead of rebuilding every record/map before encoding the same bytes again.
- const original=decode(s.registry);
- function edit(v:CanonicalValue):CanonicalValue {
-  if(typeof v==='boolean')return v;
-  if(v.kind==='record'){
-   if(v.schema.typeId===171n){const id=f(v,1n);if(typeof id!=='boolean'&&id.kind==='typedIdentifier'&&typeof id.payload!=='boolean'&&id.payload.kind==='text'&&id.payload.value===name){
-    const body=f(v,4n),prior=rec(body,(body as Extract<CanonicalValue,{kind:'record'}>).schema.typeId).fields.get(field);
-    return prior===undefined||key(prior)===key(value)?v:replace(v,4n,replace(body,field,value));
-   }}
-   const rows=[...v.fields].map(([k,x])=>[k,edit(x)] as const);return rows.every(([k,x])=>x===v.fields.get(k))?v:record(v.schema,new Map(rows));
-  }
-  if(v.kind==='list'||v.kind==='set'){const rows=v.items.map(edit);return rows.every((x,i)=>x===v.items[i])?v:{...v,items:rows};}
-  if(v.kind==='map'){const rows=v.entries.map(([k,x])=>[edit(k),edit(x)] as const);return rows.every(([k,x],i)=>k===v.entries[i][0]&&x===v.entries[i][1])?v:{...v,entries:rows};}
-  return v; // The frozen traversal also leaves identifier payloads untouched.
- }
- const changed=edit(original);return {...s,registry:changed===original?s.registry.slice():enc(changed)};
+ return {...s,registry:enc(walk(decode(s.registry),v=>{
+  if(typeof v==='boolean'||v.kind!=='record'||v.schema.typeId!==171n)return v;
+  const id=f(v,1n);if(typeof id==='boolean'||id.kind!=='typedIdentifier'||typeof id.payload==='boolean'||id.payload.kind!=='text'||id.payload.value!==name)return v;
+  return replace(v,4n,replace(f(v,4n),field,value));
+ }))};
 }
 export function workLimit(s:Campaign2ModelSource,n:bigint){const slots=items(decode(s.parameters),'list');return {...s,parameters:enc(list([replace(slots[0],1n,unsigned(n))]))};}
 export function nonPreset(){

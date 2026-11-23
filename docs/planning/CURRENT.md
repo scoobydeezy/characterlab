@@ -1,46 +1,38 @@
-# Current work — M225 continuation-performance repair
-Owner continuation after checkpointc3485472 authorizes this bounded follow-up.
-Finish M225; no new psychological capability or broader integration.
-[Existing result](ASSEMBLED_CHARACTER_M225_RESULT.md); prior failures stay preserved.
+# Current work — M225 complete
+The character learns an effective alternative from perceived outcomes and uses it
+when its usual action is unavailable. The primary pair, controls, admission,
+repeat/restore and complete continuation now pass in the one shared simulation.
+[Result](ASSEMBLED_CHARACTER_M225_RESULT.md); [checks](ASSEMBLED_CHARACTER_M225_CHECKS.txt);
+[evidence](ASSEMBLED_CHARACTER_M225_EVIDENCE.json).
+Model/registry0.146; plan73b9aafc; checkpointc3485472; repair plan564b1ab5.
 
-## Bounded card — before repair
-Capability: the unchanged0.146 character restores and continues its learned A/B
-history within a practical verification budget, with complete save validation.
-Baseline F-12.2:6 / F-12.9:4,5 and all M225 scenarios/laws/gates stay fixed.
-Primary and five controls already pass; do not rerun unless a change invalidates them.
-First instrument the stalled segment: test capture, save, byte admission, decode,
-prefix replay and final equality. One diagnostic <=300s, same fixture/seed/prefix7.
-No unchanged third attempt. Measurements determine the repair.
+## What is established
+Four A-only practices leave B unknown; diversified A/B practice leads to actual B
+on all three opportunities after A becomes unavailable. Same model/S0/seed0.
+No direct Need responses in this task-domain comparison. Normal social evidence.
+Denied/withheld learning, expired task, unavailable B and masked-zero privacy pass.
+Exact repeat7 and restore7 -> full continuation101 pass; complete bytes at7/11/101.
+Final restored save also equals the preserved primary result.
+Foreign/duplicate actions, foreign learned state and learned S0 reject.
+Retained old Need receiving and single-action reward learning pass.
 
-Scope: character.ts boundary/restore and existing M225 test/fixture if needed;
-one focused boundary test file allowed. <=12 production/test files cumulatively
-for M225 (10 already); no shared frozen C0-C3 dependency edits or source copies.
-Temporary profiling is removed before acceptance. No general profiling framework.
-Keep exact plain-data admission, defensive input copies, actual prefix execution,
-RNG/identity bookkeeping and complete final canonical byte equality.
-Any representation optimization must document its safety conditions before use;
-no trusted-hash substitute, imported psychological state or decoder waiver.
+## Verification correction
+Measured continuation287.93s; prior260s cap was too short. Run it alone with360s
+headroom; keep controls/privacy separate. Compatibility selects assembledNeed.test.ts
+alone because it already imports the reward test. The accidental repeat is recorded.
+Save validation/replay and all production code remain unchanged by the follow-up.
+Fixture construction57s dominates startup; sparse-helper optimization had no
+material gain and was reverted (candidate1af1e637 preserved). No broader cleanup.
+Original and resumed budgets/failures are recorded separately in the same result.
+Temporary-path count briefly exceeded the cumulative cap by one; removed and
+recorded, not retroactively approved. Retained M225 footprint10 code/test files.
+Stop verification after final passes; no unchanged passing comparisons rerun.
 
-Predeclared remaining checks: exact repeat7, restore7 and continuation7..101,
-complete state/output/trace/save comparisons at7/11/101; all intermediate events
-remain. Action-specific history timing; learned S0/foreign path/source rejection;
-original corrected MeanHistory/LatestHistory comparison; old0.145 Need receiving.
-If public byte handling changes, check hostile/accessor/proxy/extra-property inputs,
-mutated saved bytes, defensive snapshotting and ordinary copied-buffer restore.
-Use the smallest existing compatible fixture for boundary-only failure checks.
-Types, boundaries, research, frozen-path preservation and Git size/whitespace.
-
-Follow-up verification <=1800s total, <=600s/command; profiling/failures count.
-This is the explicitly resumed repair package, not a reset of original receipts:
-prior1692.559/1800s remains in the same result and append-only check log.
-Expected follow-up <=1400s. <=20 total evidence files/5MiB; no raw save dumps.
-One job at a time; two unchanged blockers/five unchanged revisions stop.
-Done only when performance cause is measured, repair passes its safety checks and
-all outstanding M225 checks pass. Otherwise preserve an explicit unaccepted checkpoint.
-
-## Preserved scope
-One character/state/scheduler/trace/save; no law/reference/seed/completion changes.
-Need family12.2 and full substitution/goal-strategy acceptance remain open.
+## Next integration
+Information about an untried alternative must enter through normal perception and
+learning. Finish remaining original substitution controls, then reconcile goal/
+strategy evidence and decide family12.2 acceptance. Write its bounded card first.
+F-12.9:4/5 retain full-comparison N labels; a bounded witness is not family acceptance.
 E75/P33/N11/U13=132;21members/15families; accepted4/15 on recorded versions.
 Reference0.85/SourceCoverage0.5 unchanged. No UI or Campaign4 work.
 | Registry | Current count |
