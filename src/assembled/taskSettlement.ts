@@ -1,3 +1,4 @@
+import {CRITERION_VERSION,LEGACY_PROBE_VERSION} from './criterionSensing';
 /** M97 bounded successor of campaign2/taskExecution.ts at83472585.
  * Only status receiving grammar and trace version change; no factory/scheduler. */
 /** task-commitment/0.2-candidate. Private source admission, preflight and owned lifecycle writes. */
@@ -26,7 +27,7 @@ function stage(message:string):never{throw new SchedulerContractError('TASK_STAG
 function compare(a:CanonicalValue,b:CanonicalValue){if(typeof a==='boolean'||a.kind!=='rational'||typeof b==='boolean'||b.kind!=='rational')fail('task exact rational required');return a.numerator*b.denominator-b.numerator*a.denominator;}
 /** Shared terminal deadline value; scheduling and owner authentication upstream. */
 export function taskDeadlineValue(prior:CanonicalValue|undefined){return prior!==undefined&&u(f(statusRecord(prior,372n),1n))===1n?r(372,[unsigned(3)]):undefined;}
-export function createCommitmentTaskExecution(model:Model,modelIdentity:CanonicalValue,runIdentity:CanonicalValue,facts:readonly TaskPendingFact[]){
+export function createCommitmentTaskExecution(model:Model,modelIdentity:CanonicalValue,runIdentity:CanonicalValue,facts:readonly TaskPendingFact[],producerVersion=LEGACY_PROBE_VERSION){
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),prepared:Map<string,ScheduledEvent>|undefined,active=false,sealed=false,instant=0n;
  const plans=new Map<string,{event:ScheduledEvent;state:AuthoritativeState;tasks:Model['tasks'];reads:ActualReadRecord[];subjects:TypedIdentifierValue[];sources:TypedIdentifierValue[];domain:StatePathPattern[];observation?:CanonicalValue;x?:CanonicalValue}>(),targets=new Set<string>();
  const isEvent=(e:ScheduledEvent)=>e.eventTypeId.namespaceId===1001n&&names.includes(name(e));
@@ -36,7 +37,7 @@ export function createCommitmentTaskExecution(model:Model,modelIdentity:Canonica
   if(txt(f(evidence,3n))!==MEMORY_VERSION||key(f(observation,4n))!==key(f(definition,1n))||key(f(observation,3n))!==key(f(definition,2n))||key(f(carried,3n))!==key(f(definition,3n)))fail('task M1 definition');
   const at=f(observation,5n);if(typeof at==='boolean'||at.kind!=='signed'||at.value!==instant)fail('task observation time differs from admitted instant');
   const interval=rec(f(observation,6n),204n),x=f(interval,2n);
-  if(f(interval,1n)!==true||f(interval,3n)!==true||key(x)!==key(f(interval,4n))||typeof x==='boolean'||x.kind!=='rational'||x.numerator<0n||x.numerator>10n*x.denominator||(10n*x.numerator)%x.denominator!==0n||key(f(observation,8n))!==key(rational(1,1))||u(f(observation,7n))!==1n||txt(f(observation,11n))!=='regulatory-diagnostic-probe/0.1-candidate')fail('task exact safe point');
+  if(f(interval,1n)!==true||f(interval,3n)!==true||key(x)!==key(f(interval,4n))||typeof x==='boolean'||x.kind!=='rational'||x.numerator<0n||x.numerator>10n*x.denominator||(10n*x.numerator)%x.denominator!==0n||key(f(observation,8n))!==key(rational(1,1))||u(f(observation,7n))!==1n||txt(f(observation,11n))!==producerVersion)fail('task exact safe point');
   return {evidence,observation,x};
  }
  return Object.freeze({isEvent,eventTypes:()=>names.map(n=>atom(1001,n)),
@@ -68,7 +69,7 @@ export function createCommitmentTaskExecution(model:Model,modelIdentity:Canonica
     if(value)operations.push({kind:'set',path:t.path,expected:{presence:true,value:prior.value!},newValue:value});
    }
    const owned={...patch,operations},applied=model.stateModel.applyPatch(state,owned,atom(1025,'authority/prospective-commitments'),{writableRoots:[373n],targetPaths:p.tasks.map(t=>t.path)});
-   return {nextState:applied.state,patch:owned,trace(){return traceRecordValue({traceSchemaVersion:TRACE_CONTRACT_VERSION,modelIdentity,runIdentity,event:p.event,seamId:atom(1036,'seam/task-commitment'),seamVersion:TASK_VERSION,recordKind:event.eventTypeId,subjectIds:p.subjects,sourceRecordIds:p.sources,registeredReadDomain:p.domain,actualReadRecords:reads,inputProjection:p.event.payload,outputProjection:list([]),randomDrawRecords:[],quantizationOperations:[],statePatch:owned,structuralMutationDiffs:applied.diffs,emittedEvents:[],invariantResults:[]});}};
+   return {nextState:applied.state,patch:owned,trace(){return traceRecordValue({traceSchemaVersion:TRACE_CONTRACT_VERSION,modelIdentity,runIdentity,event:p.event,seamId:atom(1036,'seam/task-commitment'),seamVersion:producerVersion===CRITERION_VERSION?'assembled-criterion-fulfillment/0.1':TASK_VERSION,recordKind:event.eventTypeId,subjectIds:p.subjects,sourceRecordIds:p.sources,registeredReadDomain:p.domain,actualReadRecords:reads,inputProjection:p.event.payload,outputProjection:list([]),randomDrawRecords:[],quantizationOperations:[],statePatch:owned,structuralMutationDiffs:applied.diffs,emittedEvents:[],invariantResults:[]});}};
   },
   prepareCommit(state:AuthoritativeState){if(!active||prepared||plans.size||[...pending.values()].some(e=>e.dueAt<=instant))stage('unfinished task instant');for(const t of model.tasks)if(t.deadline<=instant){const prior=model.stateModel.read(state,t.path);if(prior.presence&&u(f(statusRecord(prior.value!,372n),1n))===1n)stage('expired open task at quiescence');}prepared=new Map([...pending].map(([k,e])=>[k,structuredClone(e)]));},
   commit(){if(!prepared)stage('task commit not prepared');checkpoint=prepared;},

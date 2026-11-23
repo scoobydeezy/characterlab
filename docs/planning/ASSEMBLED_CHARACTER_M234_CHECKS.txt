@@ -1,0 +1,184 @@
+M234 initial-types exit=2 elapsed=21.964s cap=120s
+src/assembled/criterionSensing.ts(27,33): error TS2339: Property 'numerator' does not exist on type 'CanonicalValue'.
+  Property 'numerator' does not exist on type 'false'.
+src/assembled/criterionSensing.ts(27,53): error TS2339: Property 'denominator' does not exist on type 'CanonicalValue'.
+  Property 'denominator' does not exist on type 'false'.
+M234 native-primary exit=1 elapsed=64.251s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledFalseCriterion.test.ts > criterion234 native falsePositive 57858ms
+   → source output requires exactly one matching basis consumer
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledFalseCriterion.test.ts > criterion234 native falsePositive
+SchedulerContractError: source output requires exactly one matching basis consumer
+ ❯ fail src/campaign2/transitionIngressV04.ts:32:131
+
+ ❯ stage src/campaign2/transitionIngressV04.ts:81:60
+ ❯ Object.observeMeasurement src/campaign2/transitionIngressV04.ts:133:14
+ ❯ src/assembled/runtime.ts:208:235
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'TRANSITION_INGRESS_VIOLATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 36 skipped (37)
+   Start at  13:28:24
+   Duration  63.64s (transform 3.55s, setup 0ms, collect 5.32s, tests 57.86s, environment 0ms, prepare 158ms)
+
+M234 repair before rerun: initial types needed explicit rational narrowing; first native source failed its old338 producer-version match. Derive only the carriage producer-version registration in the successor; preserve its other bytes and original controls. No fixture/law/gate change.
+M234 receiving-types exit=0 elapsed=21.608s cap=120s
+M234 native-primary-repaired exit=1 elapsed=71.627s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledFalseCriterion.test.ts > criterion234 native falsePositive 65373ms
+   → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledFalseCriterion.test.ts > criterion234 native falsePositive
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:37:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:216:329
+ ❯ src/test/assembledFalseCriterion.test.ts:49:105
+ ❯ runCase src/test/assembledFalseCriterion.test.ts:49:91
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 39 skipped (40)
+   Start at  13:30:49
+   Duration  71.05s (transform 3.51s, setup 0ms, collect 5.24s, tests 65.37s, environment 0ms, prepare 145ms)
+
+M234 fixture-inspection repair: the memory assertion treated every root346 leaf as a measurement episode, including body-memory lists. Inspect only registered measurement field1; make the validation-only compatibility projection explicitly field1 too. No scenario or acceptance change.
+M234 native-primary-memory-inspection exit=1 elapsed=68.194s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledFalseCriterion.test.ts > criterion234 native falsePositive 61907ms
+   → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledFalseCriterion.test.ts > criterion234 native falsePositive
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:37:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:216:329
+ ❯ src/test/assembledFalseCriterion.test.ts:49:126
+ ❯ runCase src/test/assembledFalseCriterion.test.ts:49:112
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 39 skipped (40)
+   Start at  13:32:36
+   Duration  67.60s (transform 3.52s, setup 0ms, collect 5.24s, tests 61.91s, environment 0ms, prepare 149ms)
+
+M234 diagnostic correction before another run: filtering346/1 alone was insufficient. Source memory.ts shows all episodic kinds intentionally share that field, distinguished by keys/value grammar. The test now selects measurement345 records and requires exactly2 at5 /3 at7 before checking exact342 evidence. This preserves shared ownership and the full memory-consumption gate; no further unchanged retry.
+M234 native-measurement-kind exit=0 elapsed=77.420s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFalseCriterion.test.ts > criterion234 native falsePositive
+M234 PASS falsePositive
+
+ ✓ src/test/assembledFalseCriterion.test.ts > criterion234 native falsePositive 71131ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 39 skipped (40)
+   Start at  13:34:24
+   Duration  76.85s (transform 3.53s, setup 0ms, collect 5.27s, tests 71.13s, environment 0ms, prepare 150ms)
+
+M234 native-controls exit=0 elapsed=127.434s cap=600s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledFalseCriterion.test.ts > criterion234 native negative
+M234 PASS negative
+
+ ✓ src/test/assembledFalseCriterion.test.ts > criterion234 native negative 74812ms
+stdout | src/test/assembledFalseCriterion.test.ts > criterion234 native positive
+M234 PASS positive
+
+ ✓ src/test/assembledFalseCriterion.test.ts > criterion234 native positive 14096ms
+stdout | src/test/assembledFalseCriterion.test.ts > criterion234 native falseNegative
+M234 PASS falseNegative
+
+ ✓ src/test/assembledFalseCriterion.test.ts > criterion234 native falseNegative 17142ms
+stdout | src/test/assembledFalseCriterion.test.ts > criterion234 native silent
+M234 PASS silent
+
+ ✓ src/test/assembledFalseCriterion.test.ts > criterion234 native silent 11992ms
+ ✓ src/test/assembledFalseCriterion.test.ts > criterion234 privacy and admission 3127ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 35 skipped (40)
+   Start at  13:36:00
+   Duration  126.86s (transform 3.51s, setup 0ms, collect 5.23s, tests 121.17s, environment 0ms, prepare 150ms)
+
+M234 recovery exit=0 elapsed=93.176s cap=450s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledFalseCriterion.test.ts > criterion234 rollback and continuation 86872ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 39 skipped (40)
+   Start at  13:38:18
+   Duration  92.60s (transform 3.55s, setup 0ms, collect 5.28s, tests 86.87s, environment 0ms, prepare 143ms)
+
+M234 truthful-control exit=0 elapsed=133.478s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledFalseCriterion.test.ts > criterion234 truthful legacy control 127185ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 39 skipped (40)
+   Start at  13:40:29
+   Duration  132.91s (transform 3.51s, setup 0ms, collect 5.25s, tests 127.19s, environment 0ms, prepare 147ms)
+
+M234 final-types exit=0 elapsed=21.847s cap=120s
+M234 boundaries exit=0 elapsed=3.580s cap=120s
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+M234 research exit=0 elapsed=3.979s cap=120s
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+M234 staged-size exit=0 elapsed=0.849s cap=120s
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+M234 preservation PASS: 8 production/2 test-helper paths; C2/C3/substrate/observation/semanticBinding/reference unchanged versus6a322ce3. Three evidence/result/check files <0.2MiB; planning caps pass.
+M234 accounting: 709.407s measured +10s planning-size/preservation/accounting allowance =719.407/1800s including failures; all jobs <=600s.

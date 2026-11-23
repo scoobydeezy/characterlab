@@ -32,7 +32,9 @@ No callback, learned-state injection or additional scheduler is admitted.
 ## Carriage, state and consumers
 Observation203 -> authenticated carriage337 -> M1 evidence342 remains the route.
 Carriage/M1 schemas, units, occurrence extraction and parent association do not
-change. A version-bound validator verifies the new producer and reuses the old
+change. Derive the carriage341 registration by changing only its nested338
+producer-version field to the new producer; retain every other registered field.
+A version-bound validator verifies the new producer and reuses the old
 closed observation validation on a detached producer-normalized copy; it does not
 return that copy as evidence. Stored/read/emitted observations retain new version.
 Old models reject successor producer/source. Unknown producer strings reject.

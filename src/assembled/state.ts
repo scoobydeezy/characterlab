@@ -1,3 +1,4 @@
+import {compileCriterionBase,legacyCriterionMemory} from './criterionSensing';
 import {rewardAnchor} from './rewardExperience';
 import {PROTECTION_CHANNEL} from './protectiveIdentity';
 import {sleepAnchor} from './sleepControl';
@@ -43,7 +44,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const rows=items(slots[0],'set').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n).map(v=>rec(v,171n));
  const row=(stable:CanonicalValue)=>rows.find(v=>key(f(v,1n))===key(stable))??invalidModel('missing cognitive state definition');
  const definition=(name:string)=>f(row(typedIdentifier(1027,text('definition/'+name))),4n);
- const prior=await compilePredictionModel(predictionModelReviewSource());
+ const originalPrior=await compilePredictionModel(predictionModelReviewSource());
+ const prior=model.criterionSensing?{...originalPrior,base:compileCriterionBase(originalPrior.base)}:originalPrior;
  if(key(decodeCognitive(model.content.characterContentBytes()))!==key(decodeCognitive(prior.source.content)))invalidModel('cognitive character differs from inherited component');
  const contents=items(decodeCognitive(model.source.content),'set').map(v=>rec(v,170n));
  const tasks=contents.filter(v=>txt(id(f(v,2n)).payload)==='semantic-kind/task-commitment').map(content=>{
@@ -80,7 +82,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  }
  function validateState(state:AuthoritativeState){
   structural.validateState(state);
-  const entries=state.entries();prior.stateModel.validateState(new AuthoritativeState(entries.filter(e=>e.path.rootStateTypeId!==373n&&e.path.rootStateTypeId!==415n)));
+  const entries=state.entries();const inherited=new AuthoritativeState(entries.filter(e=>e.path.rootStateTypeId!==373n&&e.path.rootStateTypeId!==415n));prior.stateModel.validateState(model.criterionSensing?legacyCriterionMemory(inherited,prior.base.measurement.validateOutput):inherited);
   const adopted=new Set<string>();
   for(const e of entries){validateEntry(e.path,e.value);if(e.path.rootStateTypeId===373n&&e.path.fieldId===1n)adopted.add(key((e.path.selectors[0] as {kind:'mapKey';key:CanonicalValue}).key));}
   for(const e of entries)if(e.path.rootStateTypeId===373n&&e.path.fieldId===2n&&!adopted.has(key((e.path.selectors[0] as {kind:'mapKey';key:CanonicalValue}).key)))invalidModel('instruction requires actually adopted task');

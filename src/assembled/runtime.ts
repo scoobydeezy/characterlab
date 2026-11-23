@@ -1,3 +1,5 @@
+import {CRITERION_VERSION,LEGACY_PROBE_VERSION} from './criterionSensing';
+import {createCriterionPredictionExecution} from './predictionReceiving';
 import {createRewardExecution} from './rewardExperience';
 import {createSleepExecution,SLEEP_SOURCE} from './sleepControl';
 import {stakeholderEvents} from './stakeholderKnowledge';
@@ -123,12 +125,12 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const cognitive=createCognitiveExecution(model,component,inputs,()=>body?.evidence(),()=>episodes?.currentRecalls()??[],strategy,priority,habit,control,social,relationship,values,causal,reappraisal,model.bodyMemoryUse?(event,operands,report)=>episodes!.qualifyUse(event,operands,report):undefined,meaning,model.significanceEnabled?(event,workspace,attribution,report)=>episodes!.qualifySignificance(event,workspace,attribution,report):undefined,spatialMeaning,actionMemory,reasonEvidence,workMaintenance,model.timeLimit);
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
- const predictionRuntime=createPredictionExecution(prediction,modelIdentity,inputs.runIdentity.value,[]);
- const trace=compileCharacterTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel);
+ const predictionRuntime=(model.criterionSensing?createCriterionPredictionExecution:createPredictionExecution)(prediction,modelIdentity,inputs.runIdentity.value,[]);
+ const trace=compileCharacterTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel,model.criterionSensing?CRITERION_VERSION:LEGACY_PROBE_VERSION);
  stateModel.validateState(initialState);domains.validateStatic(initialState);domains.validateReferences(initialState,0n);
  const stress=model.body?.stress?createStressExecution(model.body.stress,component.tasks[0].character,stateModel,modelIdentity,inputs.runIdentity.value):undefined;
  const initial=inputs.initial;
- const taskRuntime=(model.commitmentLifecycle?createCommitmentTaskExecution:createTaskExecution)(task,modelIdentity,inputs.runIdentity.value,initial.deadlines.map(event=>({event})));
+ const taskRuntime=(model.commitmentLifecycle?createCommitmentTaskExecution:createTaskExecution)(task,modelIdentity,inputs.runIdentity.value,initial.deadlines.map(event=>({event})),model.criterionSensing?CRITERION_VERSION:LEGACY_PROBE_VERSION);
  let ingress:ReturnType<typeof beginTransitionIngressV04>|undefined;
  let consequence:ReturnType<typeof base.bridge.begin>|undefined;
  let exposureSource:ReturnType<NonNullable<typeof inputs.hiddenExposure>['begin']>|undefined;
