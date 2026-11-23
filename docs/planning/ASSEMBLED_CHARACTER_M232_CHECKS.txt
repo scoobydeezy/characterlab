@@ -1,0 +1,389 @@
+M232 initial-types exit=0 elapsed=21.835s cap=120s
+M232 native-primary exit=1 elapsed=64.434s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed20 58070ms
+   → M232 requires unchanged canonical empty adaptation baseline
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed20
+Error: M232 requires unchanged canonical empty adaptation baseline
+ ❯ fixture src/test/fixtures/assembledGoalFulfillmentCurrent.ts:15:112
+
+ ❯ Module.start src/test/fixtures/assembledGoalFulfillmentCurrent.ts:22:48
+ ❯ runCase src/test/assembledGoalFulfillmentCurrent.test.ts:33:16
+ ❯ src/test/assembledGoalFulfillmentCurrent.test.ts:64:55
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 39 skipped (40)
+   Start at  12:19:25
+   Duration  63.85s (transform 3.56s, setup 0ms, collect 5.31s, tests 58.07s, environment 0ms, prepare 139ms)
+
+
+Fixture precondition failure: inherited root302 is not empty. Before rerun explicitly remove initial adaptation leaves in both arms, retaining the failed assumption; assert ordinary probe1 yields5. All subsequent changes arise from actual exposure4. Model/laws, count20/0, desired7..9, seed7 and acceptance stay fixed. Native goal-consumer trace assertion completed before rerun.
+M232 native-primary-fresh-baseline exit=1 elapsed=69.768s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed20
+M232 status revealed20 2 1
+M232 status revealed20 3 1
+
+ × src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed20 63513ms
+   → magnitude lies outside its declared lattice domain
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed20
+SchedulerContractError: magnitude lies outside its declared lattice domain
+ ❯ Object.validateMagnitude src/campaign2/adaptationDomains.ts:97:73
+     95|       }else{
+     96|         const maximum=spec!.value===297n?scales.get(spec!.name):spec!.…
+     97|         if(magnitude<0n||(maximum!==undefined&&magnitude>maximum))thro…
+       |                                                                         ^
+     98|       }
+     99|     },
+ ❯ src/campaign2/adaptationEvaluation.ts:95:23
+ ❯ executeNext src/campaign2/adaptationEvaluation.ts:81:47
+ ❯ Object.execute src/campaign2/adaptationEvaluation.ts:125:32
+ ❯ Object.execute src/assembled/runtime.ts:390:32
+ ❯ execute src/assembled/runtime.ts:417:529
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledGoalFulfillmentCurrent.ts:23:137
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'ADAPTATION_MAGNITUDE_OUT_OF_RANGE', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 39 skipped (40)
+   Start at  12:20:59
+   Duration  69.18s (transform 3.49s, setup 0ms, collect 5.20s, tests 63.51s, environment 0ms, prepare 136ms)
+
+
+At actual exposure4 count20 exceeded an unchanged adaptation magnitude domain. Self-approved fixture amendment before rerun: use original M147-qualified contact1 (versus0), desired interval51/10..52/10 in every arm, baseline5/displacement1/permitted readout51/10. Preserve both failed runs; no domain expansion, altered equation, seed search or weakened liveness/action/terminal gate. Case labels now1 rather than20.
+M232 native-primary-qualified-contact exit=1 elapsed=71.883s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed1
+M232 status revealed1 2 1
+M232 status revealed1 3 1
+M232 status revealed1 4 1
+M232 status revealed1 5 2
+
+ × src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed1 65652ms
+   → expected '063405' to be '06660a' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed1
+AssertionError: expected '063405' to be '06660a' // Object.is equality
+
+Expected: "06660a"
+Received: "063405"
+
+ ❯ runCase src/test/assembledGoalFulfillmentCurrent.test.ts:41:106
+     39|   const observation=records(outputs,203n).find(v=>at(f(rec(v,203n),5n)…
+     40|   if([5,7].includes(t)){
+     41|    expect(observation).toBeDefined();const o=rec(observation!,203n);ex…
+       |                                                                                                          ^
+     42|    const settlement=named(x,'event/task-measurement-settlement',BigInt…
+     43|    const diffs=items(f(settlement[0],17n),'list').map(v=>rec(v,148n));…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 39 skipped (40)
+   Start at  12:22:49
+   Duration  71.30s (transform 3.49s, setup 0ms, collect 5.20s, tests 65.65s, environment 0ms, prepare 140ms)
+
+
+Current readout was52/10 and goal fulfilled5 as required; expectation51/10 came from older M147 fixture. Correct test to current registered displacement step2, explicitly resolve the actual evaluation RuleId to its registry record and assert step2/actual D2 at4. Target interval51/10..52/10, all inputs/laws/gates unchanged. This is a stale expected-value error, not an interaction or law change.
+M232 native-primary-current-step exit=1 elapsed=70.595s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed1
+M232 status revealed1 2 1
+M232 status revealed1 3 1
+
+ × src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed1 64291ms
+   → expected 1n to be 2n // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed1
+AssertionError: expected 1n to be 2n // Object.is equality
+
+- Expected
++ Received
+
+- 2n
++ 1n
+
+ ❯ runCase src/test/assembledGoalFulfillmentCurrent.test.ts:37:466
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 39 skipped (40)
+   Start at  12:25:16
+   Duration  70.00s (transform 3.54s, setup 0ms, collect 5.27s, tests 64.29s, environment 0ms, prepare 149ms)
+
+
+Registered displacement step asserted2 failed: actual step1. No behavioral rerun until bounded90s source-only diagnostic identifies analytical reference operands as well as adaptation step. Retain wrong expectation; inspect exact registry, not tune law or search outcomes. Diagnostic is charged within1800s.
+M232 source-diagnostic exit=1 elapsed=63.381s cap=100s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 source diagnostic 57093ms
+   → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 source diagnostic
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:37:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:216:329
+ ❯ src/test/assembledGoalFulfillmentCurrent.test.ts:82:129
+ ❯ src/test/assembledGoalFulfillmentCurrent.test.ts:82:122
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 40 skipped (41)
+   Start at  12:27:25
+   Duration  62.79s (transform 3.52s, setup 0ms, collect 5.26s, tests 57.09s, environment 0ms, prepare 144ms)
+
+
+Source diagnostic used the receiving-record codec on every heterogeneous registry row and failed before inspecting operands. Correct diagnostic to inspect canonical record fields directly; production codecs are unchanged. No scenario run added.
+M232 source-diagnostic-records exit=0 elapsed=62.743s cap=100s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 source diagnostic
+M232 exact registry operands [{"kind":"record","schema":{"typeId":"171","schemaVersion":"1"},"fields":[["1",{"kind":"typedIdentifier","namespaceId":"1029","payload":{"kind":"text","value":"variable/fixture-regulation"}}],["2",{"kind":"typedIdentifier","namespaceId":"1023","payload":{"kind":"text","value":"registry/regulatory-variable"}}],["3",{"kind":"text","value":"regulatory-reference/0.5-candidate"}],["4",{"kind":"record","schema":{"typeId":"283","schemaVersion":"1"},"fields":[["1",{"kind":"record","schema":{"typeId":"280","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"10"}],["2",{"kind":"signed","value":"0"}],["3",{"kind":"signed","value":"100"}]]}],["2",{"kind":"record","schema":{"typeId":"282","schemaVersion":"1"},"fields":[["1",{"kind":"map","entries":[[{"kind":"record","schema":{"typeId":"281","schemaVersion":"1"},"fields":[["1",{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}}]]},{"kind":"record","schema":{"typeId":"121","schemaVersion":"1"},"fields":[["1",{"kind":"signed","value":"50"}],["2",{"kind":"unsigned","value":"0"}],["3",{"kind":"typedIdentifier","namespaceId":"1030","payload":{"kind":"text","value":"parameter/fixture-reference"}}],["4",{"kind":"unsigned","value":"0"}]]}]]}],["2",{"kind":"map","entries":[[{"kind":"typedIdentifier","namespaceId":"1030","payload":{"kind":"text","value":"parameter/fixture-reference"}},{"kind":"record","schema":{"typeId":"120","schemaVersion":"1"},"fields":[["1",{"kind":"typedIdentifier","namespaceId":"1030","payload":{"kind":"text","value":"parameter/fixture-reference"}}],["2",{"kind":"signed","value":"0"}],["3",{"kind":"unsigned","value":"1"}],["4",{"kind":"signed","value":"0"}],["5",{"kind":"signed","value":"100"}]]}]]}]]}]]}]]},{"kind":"record","schema":{"typeId":"171","schemaVersion":"1"},"fields":[["1",{"kind":"typedIdentifier","namespaceId":"1035","payload":{"kind":"text","value":"rule/fixture-tolerance"}}],["2",{"kind":"typedIdentifier","namespaceId":"1023","payload":{"kind":"text","value":"registry/adaptation-rule"}}],["3",{"kind":"text","value":"adaptation-input/0.31-candidate"}],["4",{"kind":"record","schema":{"typeId":"311","schemaVersion":"1"},"fields":[["1",{"kind":"record","schema":{"typeId":"312","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}],["2",{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}}]]}],["2",{"kind":"typedIdentifier","namespaceId":"1031","payload":{"kind":"text","value":"regulatory-adaptation"}}],["3",{"kind":"typedIdentifier","namespaceId":"1032","payload":{"kind":"text","value":"leaf/tolerance"}}],["4",{"kind":"record","schema":{"typeId":"313","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}],["2",{"kind":"typedIdentifier","namespaceId":"1029","payload":{"kind":"text","value":"variable/fixture-regulation"}}]]}],["5",{"kind":"record","schema":{"typeId":"314","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}]]}],["6",{"kind":"signed","value":"1"}]]}]]},{"kind":"record","schema":{"typeId":"171","schemaVersion":"1"},"fields":[["1",{"kind":"typedIdentifier","namespaceId":"1035","payload":{"kind":"text","value":"rule/fixture-sensitization"}}],["2",{"kind":"typedIdentifier","namespaceId":"1023","payload":{"kind":"text","value":"registry/adaptation-rule"}}],["3",{"kind":"text","value":"adaptation-input/0.31-candidate"}],["4",{"kind":"record","schema":{"typeId":"311","schemaVersion":"1"},"fields":[["1",{"kind":"record","schema":{"typeId":"312","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}],["2",{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}}]]}],["2",{"kind":"typedIdentifier","namespaceId":"1031","payload":{"kind":"text","value":"regulatory-adaptation"}}],["3",{"kind":"typedIdentifier","namespaceId":"1032","payload":{"kind":"text","value":"leaf/sensitization"}}],["4",{"kind":"record","schema":{"typeId":"313","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}],["2",{"kind":"typedIdentifier","namespaceId":"1029","payload":{"kind":"text","value":"variable/fixture-regulation"}}]]}],["5",{"kind":"record","schema":{"typeId":"314","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}]]}],["6",{"kind":"signed","value":"1"}]]}]]},{"kind":"record","schema":{"typeId":"171","schemaVersion":"1"},"fields":[["1",{"kind":"typedIdentifier","namespaceId":"1035","payload":{"kind":"text","value":"rule/fixture-accumulated-load"}}],["2",{"kind":"typedIdentifier","namespaceId":"1023","payload":{"kind":"text","value":"registry/adaptation-rule"}}],["3",{"kind":"text","value":"adaptation-input/0.31-candidate"}],["4",{"kind":"record","schema":{"typeId":"311","schemaVersion":"1"},"fields":[["1",{"kind":"record","schema":{"typeId":"312","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}],["2",{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}}]]}],["2",{"kind":"typedIdentifier","namespaceId":"1031","payload":{"kind":"text","value":"regulatory-adaptation"}}],["3",{"kind":"typedIdentifier","namespaceId":"1032","payload":{"kind":"text","value":"leaf/accumulated-load"}}],["4",{"kind":"record","schema":{"typeId":"313","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"3"}],["3",{"kind":"typedIdentifier","namespaceId":"1033","payload":{"kind":"text","value":"load/fixture-load"}}]]}],["5",{"kind":"record","schema":{"typeId":"314","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}]]}],["6",{"kind":"signed","value":"1"}]]}]]},{"kind":"record","schema":{"typeId":"171","schemaVersion":"1"},"fields":[["1",{"kind":"typedIdentifier","namespaceId":"1035","payload":{"kind":"text","value":"rule/fixture-procedural-competence"}}],["2",{"kind":"typedIdentifier","namespaceId":"1023","payload":{"kind":"text","value":"registry/adaptation-rule"}}],["3",{"kind":"text","value":"adaptation-input/0.31-candidate"}],["4",{"kind":"record","schema":{"typeId":"311","schemaVersion":"1"},"fields":[["1",{"kind":"record","schema":{"typeId":"312","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"2"}],["3",{"kind":"typedIdentifier","namespaceId":"1034","payload":{"kind":"text","value":"procedure/fixture-practice"}}]]}],["2",{"kind":"typedIdentifier","namespaceId":"1031","payload":{"kind":"text","value":"procedural-skill"}}],["3",{"kind":"typedIdentifier","namespaceId":"1032","payload":{"kind":"text","value":"leaf/procedural-competence"}}],["4",{"kind":"record","schema":{"typeId":"313","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"4"}]]}],["5",{"kind":"record","schema":{"typeId":"314","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}]]}],["6",{"kind":"signed","value":"1"}]]}]]},{"kind":"record","schema":{"typeId":"171","schemaVersion":"1"},"fields":[["1",{"kind":"typedIdentifier","namespaceId":"1035","payload":{"kind":"text","value":"rule/fixture-regulatory-displacement"}}],["2",{"kind":"typedIdentifier","namespaceId":"1023","payload":{"kind":"text","value":"registry/adaptation-rule"}}],["3",{"kind":"text","value":"adaptation-input/0.31-candidate"}],["4",{"kind":"record","schema":{"typeId":"311","schemaVersion":"1"},"fields":[["1",{"kind":"record","schema":{"typeId":"312","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}],["2",{"kind":"typedIdentifier","namespaceId":"1002","payload":{"kind":"typedIdentifier","namespaceId":"1037","payload":{"kind":"typedIdentifier","namespaceId":"1038","payload":{"kind":"text","value":"character/bridge-subject"}}}}]]}],["2",{"kind":"typedIdentifier","namespaceId":"1031","payload":{"kind":"text","value":"regulatory-adaptation"}}],["3",{"kind":"typedIdentifier","namespaceId":"1032","payload":{"kind":"text","value":"leaf/regulatory-displacement"}}],["4",{"kind":"record","schema":{"typeId":"313","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"2"}],["2",{"kind":"typedIdentifier","namespaceId":"1029","payload":{"kind":"text","value":"variable/fixture-regulation"}}]]}],["5",{"kind":"record","schema":{"typeId":"314","schemaVersion":"1"},"fields":[["1",{"kind":"unsigned","value":"1"}]]}],["6",{"kind":"signed","value":"1"}]]}]]}]
+
+ ✓ src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 source diagnostic 56512ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 40 skipped (41)
+   Start at  12:28:53
+   Duration  62.17s (transform 3.48s, setup 0ms, collect 5.19s, tests 56.51s, environment 0ms, prepare 150ms)
+
+
+Exact source diagnostic: regulatory reference anchor50, rate0/scale1, measurement scale10; displacement step1. The extra contact is produced by ordinary action3 through protocol-actual-fact/regulatory-adaptation, not a changed step or moving reference. Before rerun: desired52/10..53/10 in all cases; route pair external1/0 means D2/D1 at4 and early fulfillment5 vs own-second-action fulfillment7. No-route pair uses2/0 external contacts so D2/0 without an attempt. Assert actual action3 adaptation trace and step1. Hidden1/0 unchanged: same actions with no further measurement; goal remains open. Retain all earlier failures and wrong diagnoses; no law/calibration/seed/gate weakening. This is an explicit controlled interaction comparison, not an unexplained output exception.
+M232 native-primary-source-backed exit=0 elapsed=82.892s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed1
+M232 status revealed1 2 1
+M232 status revealed1 3 1
+M232 status revealed1 4 1
+M232 status revealed1 5 2
+M232 status revealed1 6 2
+M232 status revealed1 7 2
+M232 status revealed1 8 2
+M232 PASS revealed1
+
+ ✓ src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed1 76656ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 40 skipped (41)
+   Start at  12:31:51
+   Duration  82.32s (transform 3.50s, setup 0ms, collect 5.21s, tests 76.66s, environment 0ms, prepare 142ms)
+
+M232 native-controls-and-privacy exit=1 elapsed=140.219s cap=600s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed0
+M232 status revealed0 2 1
+M232 status revealed0 3 1
+M232 status revealed0 4 1
+M232 status revealed0 5 1
+M232 status revealed0 6 1
+M232 status revealed0 7 2
+M232 status revealed0 8 2
+M232 PASS revealed0
+
+ ✓ src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native revealed0 79470ms
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden1
+M232 status hidden1 2 1
+M232 status hidden1 3 1
+M232 status hidden1 4 1
+M232 status hidden1 6 1
+M232 status hidden1 8 1
+
+ × src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden1 14643ms
+   → expected 1 to be +0 // Object.is equality
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden0
+M232 status hidden0 2 1
+M232 status hidden0 3 1
+M232 status hidden0 4 1
+M232 status hidden0 6 1
+M232 status hidden0 8 1
+
+ × src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden0 14555ms
+   → expected 1 to be +0 // Object.is equality
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native externalNoRoute2
+M232 status externalNoRoute2 2 1
+M232 status externalNoRoute2 3 1
+M232 status externalNoRoute2 4 1
+M232 status externalNoRoute2 5 2
+M232 status externalNoRoute2 6 2
+M232 status externalNoRoute2 7 2
+M232 status externalNoRoute2 8 2
+M232 PASS externalNoRoute2
+
+ ✓ src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native externalNoRoute2 13286ms
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native externalNoRoute0
+M232 status externalNoRoute0 2 1
+M232 status externalNoRoute0 3 1
+M232 status externalNoRoute0 4 1
+M232 status externalNoRoute0 5 1
+M232 status externalNoRoute0 6 1
+M232 status externalNoRoute0 7 1
+M232 status externalNoRoute0 8 1
+M232 PASS externalNoRoute0
+
+ ✓ src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native externalNoRoute0 11984ms
+ × src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 privacy source and retained controls
+   → Cannot read properties of undefined (reading 'protectedState')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden1
+ FAIL  src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden0
+AssertionError: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ runCase src/test/assembledGoalFulfillmentCurrent.test.ts:54:14
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 privacy source and retained controls
+TypeError: Cannot read properties of undefined (reading 'protectedState')
+ ❯ src/test/assembledGoalFulfillmentCurrent.test.ts:69:100
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 3 passed | 35 skipped (41)
+   Start at  12:33:26
+   Duration  139.63s (transform 3.50s, setup 0ms, collect 5.22s, tests 133.94s, environment 0ms, prepare 147ms)
+
+
+Remaining cohort: revealed0 and both no-route cases PASS. Both hidden cases preserve Open goal but choose B8 rather than expected A8: retained fixture supplies both routes, and existing monitor switches after two observed A failures. Amend expected route to A3/A6/B8, requiring the actual monitor count2/switch=true and two failure receipts. No input/model/gate changes. Dependent privacy test lacked hidden receipts and failed; rerun only hidden pair and privacy after preserving completed cases.
+M232 hidden-monitor-and-privacy exit=0 elapsed=102.360s cap=300s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden1
+M232 status hidden1 2 1
+M232 status hidden1 3 1
+M232 status hidden1 4 1
+M232 status hidden1 6 1
+M232 status hidden1 8 1
+M232 PASS hidden1
+
+ ✓ src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden1 77603ms
+stdout | src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden0
+M232 status hidden0 2 1
+M232 status hidden0 3 1
+M232 status hidden0 4 1
+M232 status hidden0 6 1
+M232 status hidden0 8 1
+M232 PASS hidden0
+
+ ✓ src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 native hidden0 18131ms
+ ✓ src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 privacy source and retained controls 417ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 38 skipped (41)
+   Start at  12:36:30
+   Duration  101.80s (transform 3.47s, setup 0ms, collect 5.19s, tests 96.15s, environment 0ms, prepare 147ms)
+
+M232 fulfillment-rollback exit=0 elapsed=103.296s cap=450s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGoalFulfillmentCurrent.test.ts > goal232 repeat restore and fulfillment rollback 97066ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 40 skipped (41)
+   Start at  12:38:21
+   Duration  102.73s (transform 3.48s, setup 0ms, collect 5.19s, tests 97.07s, environment 0ms, prepare 145ms)
+
+M232 final-types exit=0 elapsed=21.350s cap=120s
+M232 boundaries exit=0 elapsed=3.585s cap=120s
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+M232 research exit=1 elapsed=3.983s cap=120s
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+Research checker requires the existing CURRENT table row; final rewrite moved unchanged counts into prose. Restore table format, counts unchanged; rerun only research check.
+M232 research-format-fix exit=0 elapsed=3.889s cap=120s
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+PASS preservation: no production/formal/frozen-control changes; planning limits;2 test/helper paths;3 evidence/result/check files,230910 bytes; all6 native receipts/privacy/recovery present. Final preservation/accounting included in10s allowance.
+M232 git-size exit=0 elapsed=0.843s cap=120s
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+FINAL M232 verification: 887.056s measured +10s preservation/accounting allowance = 897.056/1800s. All8 functional tests, source diagnostic and required checks pass.
