@@ -1,44 +1,56 @@
-# Current work — M227 complete
-The character can receive information about two alternatives together, retain
-each expectation separately and use both in actual decisions and execution.
-[M227 result](ASSEMBLED_CHARACTER_M227_RESULT.md); model/registry0.148,
-reward-experience0.5 over0.4; numeric expectation0.3 unchanged.
-Family12.2 and full F-12.9:4/5 remain OPEN.
+# Current work — M228 active
+The next gate separates retained knowledge from current opportunity and motive,
+and checks learned alternatives in an actual two-action contest.
+M227 complete1bc866e9; family12.2 and full F-12.9:4/5 remain OPEN.
 
-## Completed bounded connection
-Two distinct permitted reports traverse C1 with independent observation/receipt
-support. The one shared phase140 prepares both updates from frozen B0 and commits
-them under expectation823; neither report enters performed history821.
-Concentrated correction yields means800/0, diversified667/667. Their actual
-first-probe probabilities are1/0 versus1/2,1/2; decisions reach physical execution.
-Changed cue removes Residual strength but positive expectation preserves access.
-No new runtime, owner, law, motive, calibration or scene-name dispatch.
+## Bounded card — before implementation
+1. Preserve learned alternatives across unavailable/inactive-motive intervals;
+   restoring A's availability must restore actual A execution without relearning.
+2. Exercise both known alternatives through shared reasons, dice and execution.
+3. Show unseen practice and withheld learning do not create efficacy knowledge.
+No production change planned: model/registry0.148, reward0.5, MeanHistory/Residual.
+Use existing C1, strategy knowledge, task motives, history821/expectation823.
+Reference0.85/SourceCoverage0.5 unchanged. No new law, owner or factory.
 
-Original five-law controls for all three selected cases remain executable.
-Native667/1000 is the existing representation of original2/3, not exact equality.
-Original omitted B versus native inactive B0 preserves probability mass, not
-identical candidate context. Raw rows/origins/reasons remain in evidence.
-No same-seed sampled-winner equivalence or habit-necessity claim.
+## Scenario and exact correspondence
+Same M227 social reports1..3/body10/common task; four practices4..7, idle8,
+probes9..11; seed0. No panel reports. Reward learning enabled after8.
+Seven native cases: diversified, unavailable, noDemand, restoredA, bothAvailable,
+unseenTraining and withheldLearning. A unavailable/B available after8 by default.
+restoredA uses four A practices and a normal availability observation at11.
+bothAvailable admits both routes at8; unavailable admits neither.
+noDemand uses the established task-expiry-at8 control: learned goal/history remain,
+but the common task motive is0. This corresponds to the original zero-motive
+decision boundary, not a claim of physiological satiation or mutable importance.
+unseenTraining denies reward evidence during4..7; withheldLearning admits evidence
+but blocks its acquisition throughout. Physical practice remains four attempts.
+All other ordinary declarations, laws, action contacts and sources stay fixed.
 
-Order reversal, denied/absent reports, learning withheld, repeat/restore8->101,
-closed admission and exact M226 single-report terminal compatibility pass.
-Three diagnostic/comparison failures and their corrections remain in checks.
-Six production/test paths; verification 1494.768s measured +10s allowance = 1504.768/1800s; no extension.
-Types, boundaries, research, evidence limits and staged Git size pass.
+Run unchanged original MeanHistory and LatestHistory controls for the six named
+cases; withheldLearning maps to original diversified/NoLearning.
+Compare acquired known/unknown means, performed history, admissions, live motive,
+actual Base support/reasons, probe choices where degenerate and actual execution.
+For bothAvailable compare first-probe A/B probabilities, retain subsequent
+probabilities and addressed draw records; do not assert same-seed winner coupling.
+No probability mass silently lost through omitted versus explicit-zero rows.
+Assert positive motive before each active comparison; explicitly assert0 for
+the inactive-motive control. Every selected action must have an execution receipt.
+Retain all differences; no unclassified mismatch can close this bounded gate.
 
-## Next bounded work
-Continue the original full29-run substitution requirements: reconcile remaining
-receipt/availability controls against the current shared character before
-claiming full substitution. Then complete family12.2 goal/strategy reconciliation.
-Write the next comparison/card before implementation; preserve original cases,
-law controls, quantization distinctions, liveness gates and final scope.
-No additional breadth or UI. Passing M227 ends its verification.
-
-Frozen Campaign0–3 source/contracts, baseline and earlier evidence are unchanged.
-MEC001/003/004/011..020/022, EXP001/003/004 dispositions retained.
-RO010/015 report/cue boundaries remain; RO001/008/012/020 limits retained.
+## Files, checks and limits
+Three expected test paths: new fixtures/assembledSubstitutionBoundaries.ts,
+assembledSubstitutionBoundaries.test.ts, reusable exports from M227 test helpers.
+No production or frozen C0-C3/control/baseline edits; hard cap12 paths.
+MEC001/003/004/011..020/022 and EXP001/003/004 dispositions consulted/preserved.
+RO010/015 boundary domains and RO001/008/012/020 limits remain; no debt closed.
+One job;1800s cumulative incl failures;600s max/command;20 evidence files/5MiB.
+Native four-case group <=420s, three-case group <=360s; repeat/restore <=360s;
+types/boundaries/research/size <=90s;570s reserve for evidenced repairs.
+Repeat restoredA at10; restore10 then compare complete state/output/trace/save
+at10/11/101 and all intermediate clocks/termination. Final save must match primary.
+No unaffected M227/C2 reruns: no production or control dependency change planned.
+Done when seven boundary runs, retained original comparisons, continuation and
+repository checks pass, with compact result and existing register updated.
+Full29-run substitution, receipt/physical-outcome controls and goal/strategy
+reconciliation remain before12.2 acceptance. No new family/clauses or UI closure.
 E75/P33/N11/U13=132;21members/15families; accepted4/15 on recorded versions.
-Reference0.85/SourceCoverage0.5 unchanged.
-| Registry | Current count |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
