@@ -1,0 +1,184 @@
+M230 types exit=0 elapsed=21.930s cap=60s
+
+Pre-B review correction: bothAvailable later habit strengths follow acquired practice plus actual prior native choices, rather than the uncoupled original winners. First-probe original probabilities and all fixed laws/scenarios remain unchanged. No failed run prompted this correction; it enforces the predeclared no-same-seed-coupling rule. Native-A was already loaded and is unaffected.
+
+Pre-rollback efficiency correction: use the independently created run already returned by start() for the unfaulted control, replaying it through8 and requiring exact checkpoint equality. Both fault targets and both recovered runs still use public restore8. Removes an unused run and one redundant save decode/validation; all declared checkpoints and acceptance assertions remain.
+M230 native-A exit=0 elapsed=581.166s cap=600s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 A concentrated
+M230 PASS concentrated -1,-1,-1 1000,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 A concentrated 123332ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 A knownFailure
+M230 PASS knownFailure -1,-1,-1 1000,0
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 A knownFailure 64313ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 A deniedInfo
+M230 PASS deniedInfo -1,-1,-1 1000,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 A deniedInfo 63935ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 A absentInfo
+M230 PASS absentInfo -1,-1,-1 1000,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 A absentInfo 64049ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 A noDemand
+M230 PASS noDemand -1,-1,-1 1000,1000
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 A noDemand 65922ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 A unavailable
+M230 PASS unavailable -1,-1,-1 1000,1000
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 A unavailable 64544ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 A unseenTraining
+M230 PASS unseenTraining -1,-1,-1 ,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 A unseenTraining 64381ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 A withheldLearning
+M230 PASS withheldLearning -1,-1,-1 ,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 A withheldLearning 64344ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed | 46 skipped (54)
+   Start at  11:03:51
+   Duration  580.59s (transform 3.55s, setup 0ms, collect 5.28s, tests 574.82s, environment 0ms, prepare 150ms)
+
+
+Pre-rollback source audit: habit learning carries timeDomainVersion(reward0.6, EXTENDED_TIME_LIMIT), not the bare reward version. Target HABIT_LEARN at140 with a reward-owner823 write and require the exact extended version/diff; arbitration must contain actual random draws. This corrects the unexecuted fault hook and strengthens liveness without changing scenarios, laws, checkpoints or budgets.
+
+Pre-frozen audit: the original plan itself also has checkout CRLF. Working SHA256 d626901caf9c3b973e2fde2fbae15b972d10ba284549841f631128cb69e4bd23; exact Git blob ec0dbfcb SHA256 7aaa7af4af9d5c1d8fcf5f25ff1d8eb8dfebc9b6b2b053a2ccbedb8a27b2ab5e matches the original result, and parsed content is identical. Bind that exact original plan blob, require full parsed equality to the working plan, and leave original files untouched.
+M230 native-B exit=0 elapsed=549.856s cap=600s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 B knownAlternative
+M230 PASS knownAlternative 1,1,1 1000,1000
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 B knownAlternative 132939ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 B correctedConcentrated
+M230 PASS correctedConcentrated 0,0,0 800,0
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 B correctedConcentrated 69972ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 B correctedDiversified
+M230 PASS correctedDiversified 0,1,0 667,667
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 B correctedDiversified 72221ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 B otherCue
+M230 PASS otherCue 0,1,0 667,667
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 B otherCue 72834ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 B restoredA
+M230 PASS restoredA -1,-1,0 1000,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 B restoredA 63757ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 B bothAvailable
+M230 PASS bothAvailable 1,1,1 1000,1000
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 B bothAvailable 71624ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 B withheldInformation
+M230 PASS withheldInformation -1,-1,-1 ,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 B withheldInformation 60293ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed | 47 skipped (54)
+   Start at  11:13:40
+   Duration  549.29s (transform 3.47s, setup 0ms, collect 5.17s, tests 543.64s, environment 0ms, prepare 144ms)
+
+M230 frozen-matrix exit=0 elapsed=41.291s cap=120s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 all original frozen runs and prefixes
+M230 frozen LatestHistory diversified
+M230 frozen MeanHistory diversified
+M230 frozen ExpectationOnly diversified
+M230 frozen HistoryOnly diversified
+M230 frozen NoLearning diversified
+M230 frozen LatestHistory concentrated
+M230 frozen LatestHistory knownAlternative
+M230 frozen LatestHistory knownFailure
+M230 frozen LatestHistory unavailable
+M230 frozen LatestHistory noDemand
+M230 frozen LatestHistory restoredA
+M230 frozen LatestHistory correctedConcentrated
+M230 frozen LatestHistory correctedDiversified
+M230 frozen LatestHistory otherCue
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 all original frozen runs and prefixes
+M230 frozen LatestHistory bothAvailable
+M230 frozen LatestHistory unseenTraining
+M230 frozen LatestHistory falseTraining
+M230 frozen LatestHistory deniedFeedback
+M230 frozen LatestHistory hiddenBlocked
+M230 frozen LatestHistory failure
+M230 frozen LatestHistory falseSuccess
+M230 frozen LatestHistory trueSuccess
+M230 frozen LatestHistory deniedInfo
+M230 frozen LatestHistory absentInfo
+M230 frozen ExpectationOnly concentrated
+M230 frozen ExpectationOnly correctedDiversified
+M230 frozen HistoryOnly knownAlternative
+M230 frozen MeanHistory correctedConcentrated
+M230 frozen NoLearning knownAlternative
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 all original frozen runs and prefixes 35031ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 53 skipped (54)
+   Start at  11:23:01
+   Duration  40.73s (transform 3.51s, setup 0ms, collect 5.23s, tests 35.03s, environment 0ms, prepare 140ms)
+
+
+Self-approved budget redistribution BEFORE rollback: native A/B and frozen checks used1172.313s of1320s, saving147.687s. The source confirms public restore executes the full accepted prefix; the specified fault/control/recovery test needs five prefix executions. Reallocate90s of unused allocation to rollback (360->450s command, 350->440s test) to avoid a foreseeable partial-run timeout. Cumulative1800s and per-command600s hard limits, all checkpoints, scenarios, laws and test count unchanged. No extension of total budget and no extra contrast authorized.
+M230 final-types exit=0 elapsed=21.571s cap=60s
+M230 privacy-mapping exit=0 elapsed=6.191s cap=30s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 full information privacy and finite coverage
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 53 skipped (54)
+   Start at  11:24:46
+   Duration  5.62s (transform 3.48s, setup 0ms, collect 5.18s, tests 21ms, environment 0ms, prepare 146ms)
+
+M230 rollback exit=0 elapsed=400.383s cap=450s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 rollback after arbitration and learning
+M230 recovered after-arbitration
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 rollback after arbitration and learning
+M230 recovered after-learning
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 rollback after arbitration and learning 394041ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 53 skipped (54)
+   Start at  11:25:00
+   Duration  399.80s (transform 3.50s, setup 0ms, collect 5.20s, tests 394.04s, environment 0ms, prepare 140ms)
+
+M230 reference-boundary exit=0 elapsed=3.592s cap=30s
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+M230 research exit=0 elapsed=3.905s cap=30s
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+M230 staged-size exit=0 elapsed=0.851s cap=30s
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+Final preservation/accounting: two test paths, zero production/formal changes; frozen Campaign0-3 dependencies, baseline and original artifacts unchanged. All18 planned tests passed. Original29 runs/261 prefixes exact; native15 current cases + seven retainedM229 cases. One active validation job throughout. Measured1630.736s +10s accounting/preservation allowance =1640.736/1800s. The pre-rollback90s redistribution used existing savings; no total-budget extension. AGENTS120/CURRENT33/work-order250/register248 lines; register65385 CRLF bytes. Three evidence/result/check files below0.5MiB. No clause/family status promoted; stop on pass.
