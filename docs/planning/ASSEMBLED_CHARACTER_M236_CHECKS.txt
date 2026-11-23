@@ -1,0 +1,44 @@
+M236 types exit=0 elapsed=21.899s cap=120s
+M236 native-and-controls exit=0 elapsed=94.477s cap=420s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGoalStrategyAlternatives.test.ts > goal236 native comparisons on actual consumed operands 88541ms
+ ✓ src/test/assembledGoalStrategyAlternatives.test.ts > goal236 preserved alternative controls
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 6 skipped (8)
+   Start at  14:22:12
+   Duration  93.91s (transform 3.27s, setup 0ms, collect 4.89s, tests 88.55s, environment 0ms, prepare 140ms)
+
+M236 continuation exit=0 elapsed=121.768s cap=450s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGoalStrategyAlternatives.test.ts > goal236 exact repeat and public continuation 115812ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  14:24:06
+   Duration  121.21s (transform 3.29s, setup 0ms, collect 4.92s, tests 115.81s, environment 0ms, prepare 145ms)
+
+M236 boundaries exit=0 elapsed=3.713s cap=120s
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+M236 research exit=0 elapsed=3.888s cap=120s
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+M236 staged-size exit=0 elapsed=0.838s cap=120s
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+Final accounting: 246.583s timed +10s planning-size/preservation/accounting allowance = 256.583/1800s. Three selected functional tests/types/boundary/research/staged-size pass. One new test path; production/formal/historical controls unchanged against ee81ad80. Source clarification before implementation: strategy-enabled candidates consume planner selection, not adopted-instruction reads; immutable leaf bytes checked instead. No executed failure or further verification after pass.
