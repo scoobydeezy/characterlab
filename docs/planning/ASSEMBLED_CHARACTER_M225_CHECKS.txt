@@ -1,0 +1,313 @@
+
+M225 initial-types exit=2 elapsed=22.117s cap=180
+src/assembled/habitExecution.ts(36,212): error TS18048: 'reward' is possibly 'undefined'.
+src/assembled/habitExecution.ts(36,259): error TS18048: 'reward' is possibly 'undefined'.
+src/assembled/habitExecution.ts(37,167): error TS18048: 'reward' is possibly 'undefined'.
+src/assembled/habitExecution.ts(37,227): error TS18048: 'reward' is possibly 'undefined'.
+src/assembled/habitExecution.ts(37,249): error TS2322: Type '{ record: ActualReadRecord; path: StatePath; presence: boolean; value?: CanonicalValue; }' is not assignable to type '{ value: CanonicalValue | undefined; record: ActualReadRecord; }'.
+  Property 'value' is optional in type '{ record: ActualReadRecord; path: StatePath; presence: boolean; value?: CanonicalValue | undefined; }' but required in type '{ value: CanonicalValue | undefined; record: ActualReadRecord; }'.
+src/assembled/habitExecution.ts(37,269): error TS18048: 'reward' is possibly 'undefined'.
+src/assembled/habitExecution.ts(37,417): error TS18048: 'reward' is possibly 'undefined'.
+src/assembled/habitExecution.ts(43,280): error TS2322: Type '{ record: ActualReadRecord; path: StatePath; presence: boolean; value?: CanonicalValue; }' is not assignable to type '{ value: CanonicalValue | undefined; record: ActualReadRecord; }'.
+  Property 'value' is optional in type '{ record: ActualReadRecord; path: StatePath; presence: boolean; value?: CanonicalValue | undefined; }' but required in type '{ value: CanonicalValue | undefined; record: ActualReadRecord; }'.
+
+M225 types-with-fixture exit=2 elapsed=21.566s cap=180
+src/test/assembledActionReward.test.ts(31,237): error TS2345: Argument of type 'true | { readonly kind: "unsigned"; readonly value: bigint; } | { readonly kind: "signed"; readonly value: bigint; } | { readonly kind: "bytes"; readonly value: Uint8Array<ArrayBufferLike>; } | ... 6 more ... | { ...; }' is not assignable to parameter of type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+  Type 'boolean' is not assignable to type '{ readonly kind: "record"; readonly schema: RecordSchema; readonly fields: ReadonlyMap<bigint, CanonicalValue>; }'.
+
+M225 types-corrected-reader exit=0 elapsed=21.309s cap=180
+
+M225 primary-acquired-alternatives exit=1 elapsed=63.704s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledActionReward.test.ts (13 tests | 1 failed | 12 skipped) 57918ms
+   × reward225 primary acquired alternatives change ordinary execution 57918ms
+     → strategy display domain
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+SchedulerContractError: strategy display domain
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/strategy.ts:16:44
+ ❯ Module.display src/assembled/strategy.ts:24:542
+ ❯ src/assembled/inputs.ts:83:464
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:83:30
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledActionReward.ts:47:242
+ ❯ src/test/assembledActionReward.test.ts:40:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  19:10:51
+   Duration  63.13s (transform 3.28s, setup 0ms, collect 4.87s, tests 57.92s, environment 0ms, prepare 104ms)
+
+
+M225 primary-corrected-receipt-domain exit=1 elapsed=64.782s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledActionReward.test.ts (13 tests | 1 failed | 12 skipped) 59094ms
+   × reward225 primary acquired alternatives change ordinary execution 59093ms
+     → identity context time/phase/duplicate/opportunity
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+SchedulerContractError: identity context time/phase/duplicate/opportunity
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ src/assembled/inputs.ts:113:338
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:113:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledActionReward.ts:47:242
+ ❯ src/test/assembledActionReward.test.ts:40:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  19:12:20
+   Duration  64.21s (transform 3.22s, setup 0ms, collect 4.80s, tests 59.09s, environment 0ms, prepare 103ms)
+
+
+M225 primary-corrected-idle-context exit=1 elapsed=70.221s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledActionReward.test.ts (13 tests | 1 failed | 12 skipped) 64518ms
+   × reward225 primary acquired alternatives change ordinary execution 64514ms
+     → requires 403/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+SchedulerContractError: requires 403/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ Module.actionRewardRaw src/assembled/actionReward.ts:37:12
+ ❯ Object.raw src/assembled/habitExecution.ts:37:210
+ ❯ Object.execute src/assembled/execution.ts:279:45
+ ❯ src/assembled/runtime.ts:269:33
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:373:26
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledActionReward.ts:48:137
+ ❯ src/test/assembledActionReward.test.ts:40:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  19:13:54
+   Duration  69.65s (transform 3.23s, setup 0ms, collect 4.81s, tests 64.52s, environment 0ms, prepare 104ms)
+
+
+M225 primary-current-receiving-reader exit=1 elapsed=94.366s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+M225 TRAINING false {"history":[{"count":4,"mean":"0"},{"count":0,"mean":null}],"training":[{"at":4,"motive":"1/1","beliefs":[null,null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"dd2825e67ad7210261eac7bd302d5d5acdd316912e25bd017b51cf4fca60806d","receipts":[{"gain":["0"],"action":[0]}],"effects":[{"action":0,"status":"Blocked"}]},{"at":5,"motive":"1/1","beliefs":["0",null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"f890aaf83f99bd29eba436da8346e1846f30d9d9115a88d89981fe7582020698","receipts":[{"gain":["0"],"action":[0]}],"effects":[{"action":0,"status":"Blocked"}]},{"at":6,"motive":"1/1","beliefs":["0",null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"23aace38964d8d22c96441df8a11b1f2f0e54bf628fb123609e8eb07e2cd7b29","receipts":[{"gain":["0"],"action":[0]}],"effects":[{"action":0,"status":"Blocked"}]},{"at":7,"motive":"1/1","beliefs":["0",null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"8c8cd5b710c4b6aebf3419588a347325a038efb69b208596bac590ef462adf12","receipts":[{"gain":["0"],"action":[0]}],"effects":[{"action":0,"status":"Blocked"}]}]}
+
+ ❯ src/test/assembledActionReward.test.ts (13 tests | 1 failed | 12 skipped) 88665ms
+   × reward225 primary acquired alternatives change ordinary execution 88664ms
+     → expected [ [ '0' ], [ '0' ], [ '0' ], [ '0' ] ] to deeply equal [ [ '1000' ], [ '1000' ], …(2) ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+AssertionError: expected [ [ '0' ], [ '0' ], [ '0' ], [ '0' ] ] to deeply equal [ [ '1000' ], [ '1000' ], …(2) ]
+
+- Expected
++ Received
+
+  Array [
+    Array [
+-     "1000",
++     "0",
+    ],
+    Array [
+-     "1000",
++     "0",
+    ],
+    Array [
+-     "1000",
++     "0",
+    ],
+    Array [
+-     "1000",
++     "0",
+    ],
+  ]
+
+ ❯ src/test/assembledActionReward.test.ts:41:190
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  19:15:33
+   Duration  93.78s (transform 3.21s, setup 0ms, collect 4.78s, tests 88.66s, environment 0ms, prepare 102ms)
+
+
+M225 primary-explicit-permitted-execution exit=1 elapsed=178.336s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+M225 TRAINING false {"history":[{"count":4,"mean":"1000"},{"count":0,"mean":null}],"training":[{"at":4,"motive":"1/1","beliefs":[null,null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"dd2825e67ad7210261eac7bd302d5d5acdd316912e25bd017b51cf4fca60806d","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":5,"motive":"1/1","beliefs":["1000",null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"f890aaf83f99bd29eba436da8346e1846f30d9d9115a88d89981fe7582020698","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":6,"motive":"1/1","beliefs":["1000",null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"23aace38964d8d22c96441df8a11b1f2f0e54bf628fb123609e8eb07e2cd7b29","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":7,"motive":"1/1","beliefs":["1000",null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"8c8cd5b710c4b6aebf3419588a347325a038efb69b208596bac590ef462adf12","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]}]}
+
+stdout | src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+M225 TRAINING true {"history":[{"count":2,"mean":"1000"},{"count":2,"mean":"1000"}],"training":[{"at":4,"motive":"1/1","beliefs":[null,null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"dd2825e67ad7210261eac7bd302d5d5acdd316912e25bd017b51cf4fca60806d","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":5,"motive":"1/1","beliefs":["1000",null],"admitted":[false,true],"chosen":1,"status":3,"probabilities":["0/1","1/1"],"raw":"62f1150e3f809c270cd94abd0b30b8535dfcc8b0156d67e7995175408bfdd2d5","receipts":[{"gain":["1000"],"action":[1]}],"effects":[{"action":1,"status":"Applied"}]},{"at":6,"motive":"1/1","beliefs":["1000","1000"],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"23aace38964d8d22c96441df8a11b1f2f0e54bf628fb123609e8eb07e2cd7b29","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":7,"motive":"1/1","beliefs":["1000","1000"],"admitted":[false,true],"chosen":1,"status":3,"probabilities":["0/1","1/1"],"raw":"058f373afc67b72a3bcdd2a5391ab4fb789727a33d473a5e0ff0159482886586","receipts":[{"gain":["1000"],"action":[1]}],"effects":[{"action":1,"status":"Applied"}]}]}
+
+ ❯ src/test/assembledActionReward.test.ts (13 tests | 1 failed | 12 skipped) 172648ms
+   × reward225 primary acquired alternatives change ordinary execution 172647ms
+     → magnitude lies outside its declared lattice domain
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+SchedulerContractError: magnitude lies outside its declared lattice domain
+ ❯ Object.validateMagnitude src/campaign2/adaptationDomains.ts:97:73
+     95|       }else{
+     96|         const maximum=spec!.value===297n?scales.get(spec!.name):spec!.…
+     97|         if(magnitude<0n||(maximum!==undefined&&magnitude>maximum))thro…
+       |                                                                         ^
+     98|       }
+     99|     },
+ ❯ src/campaign2/adaptationEvaluation.ts:95:23
+ ❯ executeNext src/campaign2/adaptationEvaluation.ts:81:47
+ ❯ Object.execute src/campaign2/adaptationEvaluation.ts:125:32
+ ❯ Object.execute src/assembled/runtime.ts:390:32
+ ❯ Object.execute src/assembled/runtime.ts:417:529
+ ❯ Object.execute src/assembled/runtime.ts:434:278
+ ❯ Object.execute src/assembled/runtime.ts:446:96
+ ❯ Object.execute src/assembled/runtime.ts:454:294
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  19:19:12
+   Duration  177.75s (transform 3.16s, setup 0ms, collect 4.74s, tests 172.65s, environment 0ms, prepare 103ms)
+
+
+M225 admission-and-adaptation-domain-diagnostic exit=1 elapsed=61.610s cap=120
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledActionReward.test.ts (13 tests | 1 failed | 12 skipped) 55949ms
+   × reward225 action and source grammar reject invalid bindings 55948ms
+     → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActionReward.test.ts > reward225 action and source grammar reject invalid bindings
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:37:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:216:329
+ ❯ src/test/assembledActionReward.test.ts:71:93
+ ❯ src/test/assembledActionReward.test.ts:71:72
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  19:25:20
+   Duration  61.02s (transform 3.16s, setup 0ms, collect 4.75s, tests 55.95s, environment 0ms, prepare 102ms)
+
+
+M225 primary-one-contact-actions exit=0 elapsed=196.231s cap=400
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+M225 TRAINING false {"history":[{"count":4,"mean":"1000"},{"count":0,"mean":null}],"training":[{"at":4,"motive":"1/1","beliefs":[null,null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"dd2825e67ad7210261eac7bd302d5d5acdd316912e25bd017b51cf4fca60806d","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":5,"motive":"1/1","beliefs":["1000",null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"f890aaf83f99bd29eba436da8346e1846f30d9d9115a88d89981fe7582020698","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":6,"motive":"1/1","beliefs":["1000",null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"23aace38964d8d22c96441df8a11b1f2f0e54bf628fb123609e8eb07e2cd7b29","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":7,"motive":"1/1","beliefs":["1000",null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"8c8cd5b710c4b6aebf3419588a347325a038efb69b208596bac590ef462adf12","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]}]}
+
+stdout | src/test/assembledActionReward.test.ts > reward225 primary acquired alternatives change ordinary execution
+M225 TRAINING true {"history":[{"count":2,"mean":"1000"},{"count":2,"mean":"1000"}],"training":[{"at":4,"motive":"1/1","beliefs":[null,null],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"dd2825e67ad7210261eac7bd302d5d5acdd316912e25bd017b51cf4fca60806d","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":5,"motive":"1/1","beliefs":["1000",null],"admitted":[false,true],"chosen":1,"status":3,"probabilities":["0/1","1/1"],"raw":"62f1150e3f809c270cd94abd0b30b8535dfcc8b0156d67e7995175408bfdd2d5","receipts":[{"gain":["1000"],"action":[1]}],"effects":[{"action":1,"status":"Applied"}]},{"at":6,"motive":"1/1","beliefs":["1000","1000"],"admitted":[true,false],"chosen":0,"status":3,"probabilities":["1/1"],"raw":"23aace38964d8d22c96441df8a11b1f2f0e54bf628fb123609e8eb07e2cd7b29","receipts":[{"gain":["1000"],"action":[0]}],"effects":[{"action":0,"status":"Applied"}]},{"at":7,"motive":"1/1","beliefs":["1000","1000"],"admitted":[false,true],"chosen":1,"status":3,"probabilities":["0/1","1/1"],"raw":"058f373afc67b72a3bcdd2a5391ab4fb789727a33d473a5e0ff0159482886586","receipts":[{"gain":["1000"],"action":[1]}],"effects":[{"action":1,"status":"Applied"}]}]}
+M225 PRIMARY PASS same model/S0; acquired B -> actual B on all three probes
+
+ ✓ src/test/assembledActionReward.test.ts (13 tests | 12 skipped) 190567ms
+   ✓ reward225 primary acquired alternatives change ordinary execution 190567ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 12 skipped (13)
+   Start at  19:27:12
+   Duration  195.67s (transform 3.19s, setup 0ms, collect 4.75s, tests 190.57s, environment 0ms, prepare 102ms)
+
+
+M225 controls-privacy-continuation-admission exit=124 elapsed=600.121s cap=600
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionReward.test.ts > reward225 control denied
+M225 CONTROL PASS denied
+
+stdout | src/test/assembledActionReward.test.ts > reward225 control withheld
+M225 CONTROL PASS withheld
+
+stdout | src/test/assembledActionReward.test.ts > reward225 control noDemand
+M225 CONTROL PASS noDemand
+
+stdout | src/test/assembledActionReward.test.ts > reward225 control unavailable
+M225 CONTROL PASS unavailable
+
+
+M225 unfinished-continuation-admission-selected-checkpoints exit=124 elapsed=260.131s cap=260
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActionReward.test.ts > reward225 continuation and closed learning admission
+M225 continuation start
+
+stdout | src/test/assembledActionReward.test.ts > reward225 continuation and closed learning admission
+M225 continuation repeated practice7
+
+
+M225 checkpoint-types exit=0 elapsed=20.868s cap=120
+
+M225 checkpoint-boundaries exit=0 elapsed=3.114s cap=60
+Reference boundary check passed.
+
+M225 checkpoint-research exit=0 elapsed=3.522s cap=60
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M225 checkpoint-evidence-preservation-limits exit=0 elapsed=0.561s cap=60
+Retained primary receipts, zero motive, original primary correspondence and six completed evidence sections pass; no continuation/admission receipt.
+Reconciliation CRLF bytes: 65475
+Ten production/test files, frozen paths unchanged, two evidence files: 59142 bytes.
+Obligation dispositions/verdicts unchanged; checkpoint is explicitly unaccepted.
+
+M225 checkpoint-staged-git-size exit=0 elapsed=0.368s cap=30
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+PACKAGING PASS: staged git diff --check; explicit17-file checkpoint; size and whitespace checks pass. Plan/packaging overhead reserved10s. M225 remains NOT ACCEPTED.
