@@ -1,0 +1,237 @@
+M231 initial-types exit=2 elapsed=21.808s cap=60s
+src/test/assembledGoalStrategyCurrent.test.ts(48,33): error TS2339: Property 'kind' does not exist on type 'CanonicalValue'.
+  Property 'kind' does not exist on type 'false'.
+
+Initial types: add Boolean narrowing to the test motive assertion; no production or fixture change. Source audit correction: goalStrategyRuntime is not one of the four repaired wrappers in VER-C3-PUBLIC-QUIESCENCE-001. Current source equals its preserved quiescence-inventory snapshot but differs from the original GOAL plan hash; retain both hashes and test exact original settled outputs/saves, without claiming source-byte equality or assigning an unproven cause.
+M231 native-primary exit=1 elapsed=65.323s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledGoalStrategyCurrent.test.ts > goal231 native switchGap 58420ms
+   → original source clock: at most100 exclusive original instants
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalStrategyCurrent.test.ts > goal231 native switchGap
+SchedulerContractError: original source clock: at most100 exclusive original instants
+ ❯ fail src/assembled/sourceClock.ts:15:37
+
+ ❯ Module.compileSourceClock src/assembled/sourceClock.ts:33:77
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:70:55
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:69
+ ❯ Module.start src/test/fixtures/assembledGoalStrategyCurrent.ts:42:214
+ ❯ runCase src/test/assembledGoalStrategyCurrent.test.ts:37:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INPUT_NOT_ADMITTED', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 41 skipped (42)
+   Start at  11:46:28
+   Duration  64.36s (transform 3.53s, setup 0ms, collect 5.26s, tests 58.42s, environment 0ms, prepare 314ms)
+
+
+Native-primary setup failure: measurement and deliberation both at1 violate sourceClock exclusive original instants. Before rerun, translate every goal frame and its issued/validUntil times by+1; measurement remains1. Native2..7 maps original1..6; checkpoint4/fault5/continuation5,7,101. Importance, urgency, body, task bounds, laws, seed, original comparisons and binary gates unchanged. Original error retained; this is source scheduling, not psychological interaction.
+M231 native-primary-clock-fix exit=1 elapsed=66.499s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledGoalStrategyCurrent.test.ts > goal231 native switchGap 60196ms
+   → identity context missing for opportunity
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalStrategyCurrent.test.ts > goal231 native switchGap
+SchedulerContractError: identity context missing for opportunity
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:114:74
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledGoalStrategyCurrent.ts:42:208
+ ❯ runCase src/test/assembledGoalStrategyCurrent.test.ts:37:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 41 skipped (42)
+   Start at  11:48:48
+   Duration  65.91s (transform 3.54s, setup 0ms, collect 5.28s, tests 60.20s, environment 0ms, prepare 143ms)
+
+
+Second admission failure: required identity context omitted. Reviewed all opportunity-completeness checks; identity, self and Values contexts are mandatory. Copy the three unchanged context records from the current fixture at each translated opportunity, preserving reference settings. No belief injection, new law or altered route comparison.
+M231 native-primary-context-fix exit=1 elapsed=65.101s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledGoalStrategyCurrent.test.ts > goal231 native switchGap 58842ms
+   → execution opportunity complete action coverage
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalStrategyCurrent.test.ts > goal231 native switchGap
+SchedulerContractError: execution opportunity complete action coverage
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.opportunitySource src/assembled/externalObstruction.ts:36:79
+ ❯ src/assembled/inputs.ts:181:507
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:181:42
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledGoalStrategyCurrent.ts:48:208
+ ❯ runCase src/test/assembledGoalStrategyCurrent.test.ts:37:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 41 skipped (42)
+   Start at  11:50:39
+   Duration  64.52s (transform 3.52s, setup 0ms, collect 5.24s, tests 58.84s, environment 0ms, prepare 146ms)
+
+
+Third admission failure: execution availability must cover the whole admitted action set, not only task B routes. Declare all action-body actions; keep original availability on B routes and unused actions available. Existing model/input rules unchanged; no action outside the sole adopted goal becomes a candidate.
+M231 native-primary-coverage-fix exit=0 elapsed=93.404s cap=240s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalStrategyCurrent.test.ts > goal231 native switchGap
+M231 instant switchGap 2 {"selected":2,"action":-1,"motive":"060001","effects":[]}
+M231 instant switchGap 3 {"selected":0,"action":0,"motive":"060201","effects":["Blocked"]}
+M231 instant switchGap 4 {"selected":0,"action":0,"motive":"060201","effects":["Blocked"]}
+M231 instant switchGap 5 {"selected":1,"action":1,"motive":"060201","effects":["Blocked"]}
+M231 instant switchGap 6 {"selected":2,"action":-1,"motive":"060201","effects":[]}
+M231 instant switchGap 7 {"selected":1,"action":1,"motive":"060201","effects":["Applied"]}
+M231 PASS switchGap
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 native switchGap 87106ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 41 skipped (42)
+   Start at  11:54:38
+   Duration  92.84s (transform 3.50s, setup 0ms, collect 5.24s, tests 87.11s, environment 0ms, prepare 161ms)
+
+M231 native-controls exit=0 elapsed=127.964s cap=600s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalStrategyCurrent.test.ts > goal231 native retained
+M231 instant retained 2 {"selected":2,"action":-1,"motive":"060001","effects":[]}
+M231 instant retained 3 {"selected":0,"action":0,"motive":"060201","effects":["Blocked"]}
+M231 instant retained 4 {"selected":0,"action":0,"motive":"060201","effects":["Blocked"]}
+M231 PASS retained
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 native retained 70241ms
+stdout | src/test/assembledGoalStrategyCurrent.test.ts > goal231 native denied
+M231 instant denied 2 {"selected":2,"action":-1,"motive":"060001","effects":[]}
+M231 instant denied 3 {"selected":2,"action":-1,"motive":"060201","effects":[]}
+M231 instant denied 4 {"selected":2,"action":-1,"motive":"060201","effects":[]}
+M231 instant denied 5 {"selected":1,"action":1,"motive":"060201","effects":["Blocked"]}
+M231 PASS denied
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 native denied 11932ms
+stdout | src/test/assembledGoalStrategyCurrent.test.ts > goal231 native noDisplay
+M231 instant noDisplay 2 {"selected":2,"action":-1,"motive":"060001","effects":[]}
+M231 instant noDisplay 3 {"selected":2,"action":-1,"motive":"060201","effects":[]}
+M231 instant noDisplay 4 {"selected":2,"action":-1,"motive":"060201","effects":[]}
+M231 instant noDisplay 5 {"selected":1,"action":1,"motive":"060201","effects":["Blocked"]}
+M231 PASS noDisplay
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 native noDisplay 11777ms
+stdout | src/test/assembledGoalStrategyCurrent.test.ts > goal231 native expiry
+M231 instant expiry 2 {"selected":2,"action":-1,"motive":"060001","effects":[]}
+M231 instant expiry 3 {"selected":0,"action":0,"motive":"060201","effects":["Blocked"]}
+M231 instant expiry 4 {"selected":2,"action":-1,"motive":"060201","effects":[]}
+M231 PASS expiry
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 native expiry 10020ms
+stdout | src/test/assembledGoalStrategyCurrent.test.ts > goal231 native duplicate
+M231 instant duplicate 2 {"selected":2,"action":-1,"motive":"060001","effects":[]}
+M231 instant duplicate 3 {"selected":0,"action":0,"motive":"060201","effects":["Blocked"]}
+M231 instant duplicate 4 {"selected":0,"action":0,"motive":"060201","effects":["Blocked"]}
+M231 PASS duplicate
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 native duplicate 12229ms
+stdout | src/test/assembledGoalStrategyCurrent.test.ts > goal231 native noAdoption
+M231 instant noAdoption 2 {"selected":2,"action":-1,"motive":"060001","effects":[]}
+M231 instant noAdoption 3 {"selected":2,"action":-1,"motive":"060001","effects":[]}
+M231 instant noAdoption 4 {"selected":2,"action":-1,"motive":"060001","effects":[]}
+M231 PASS noAdoption
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 native noAdoption 5453ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 36 skipped (42)
+   Start at  11:56:23
+   Duration  127.40s (transform 3.54s, setup 0ms, collect 5.28s, tests 121.65s, environment 0ms, prepare 144ms)
+
+M231 original-matrix exit=0 elapsed=24.733s cap=120s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 frozen matrix 18450ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 41 skipped (42)
+   Start at  11:58:42
+   Duration  24.16s (transform 3.52s, setup 0ms, collect 5.26s, tests 18.45s, environment 0ms, prepare 149ms)
+
+
+Before privacy/admission: assign180s from unused600s native-control allocation (actual127.964s), retaining total1800s and max600s/job. No new comparison; this covers predeclared denied/absent, malformed/conflicting input and foreign-writer checks.
+M231 privacy-admission exit=0 elapsed=66.901s cap=180s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 privacy and admission 60566ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 41 skipped (42)
+   Start at  11:59:58
+   Duration  66.33s (transform 3.56s, setup 0ms, collect 5.31s, tests 60.57s, environment 0ms, prepare 135ms)
+
+M231 repeat-restore-rollback exit=0 elapsed=133.491s cap=450s
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGoalStrategyCurrent.test.ts > goal231 repeat restore and knowledge rollback 127114ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 41 skipped (42)
+   Start at  12:01:14
+   Duration  132.91s (transform 3.57s, setup 0ms, collect 5.29s, tests 127.11s, environment 0ms, prepare 165ms)
+
+M231 final-types exit=0 elapsed=22.238s cap=120s
+M231 boundaries exit=0 elapsed=3.680s cap=120s
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+M231 research exit=0 elapsed=4.056s cap=120s
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+PASS preservation: no production/formal/frozen-control changes; planning/evidence budgets; two new test paths. Final preservation/accounting included in10s allowance.
+M231 git-size exit=0 elapsed=0.840s cap=120s
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+FINAL M231 verification: 696.038s measured +10s preservation/accounting allowance = 706.038/1800s. All10 focused tests and required checks pass.
