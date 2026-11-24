@@ -1,43 +1,59 @@
-# Current work — M244 review complete; Need-family acceptance open
-All six Need/motivational distinctions have assembled witnesses. The remaining gate
-is their transfer into the current composition, not another phenomenon or law choice.
-[Decision](ASSEMBLED_CHARACTER_M244_RESULT.md);
-[evidence](ASSEMBLED_CHARACTER_M244_EVIDENCE.json).
-Parent8140bd3f; pre-review cardfb5f4483; character/registry0.154 unchanged.
-Zero production/test/contract edits and zero new simulation runs.
+# Current work — M245 active Need in the current character
+M244 left family12.2 acceptance open. This package tests direct bodily Need and
+Commitment together in the existing0.154 item-goal composition; no production change.
+Parent e762131b. Owner continuation/self-approval; bounded comparison disposition below.
 
-## Findings
-M221–224 prove direct Need, BODY, importance/urgency and acquired motives on0.145;
-M229–230 prove substitution on0.149. M241–243 close goal/criterion mapping on0.154.
-Actual19 current run artifacts contain63 raw-reason records and63 Positive pressure
-reports, but zero direct-Need descriptions or learned reward-expectation root823.
-Those isolated goal runs do not qualify active Need/learned alternatives on0.154.
-Eleven relevant kernels/owners are unchanged. Their evidence and controls remain valid.
-The composition changed: scalar probe -> item predicate, probe110 ->120, registry59
-->60, bound target1..1, physical assessment and joint settlement. Older fixture
-version labels alone cannot establish the current receiving/learning correspondence.
-No regression or new missing capability is asserted. Exact six-clause map is in M244.
+## Bounded card, before code
+Capabilities (2): (1) selected bodily pressure creates ordinary shared choices without
+an adopted task; (2) Need and an adopted Commitment retain separate grounds for one
+action and affect actual decision probabilities, execution and continuation.
+Scope: BRIEF-12.2 clauses3–6, partial G1 of M244. Acquired Value, G2 BODY/priority and
+G3 learned alternatives stay pending. No family acceptance or denominator change.
+Files: new src/test/fixtures/assembledNeedCurrent.ts and
+src/test/assembledNeedCurrent.test.ts (2 production/test files; zero production edits).
+Retain model/registry0.154; Need receiving0.1, item-location0.2, item probe0.2,
+criterion sensing0.1 and joint settlement unchanged. Existing M221/M223 controls remain.
 
-## Next bounded gate
-Bridge the existing Need-family comparisons to the fixed current candidate:
-G1 active Need/Commitment/acquired Value; G2 importance/urgency and BODY receiving;
-G3 learned alternatives with existing MeanHistory and physical/criterion semantics.
-Start with active Need/shared motive receiving; pin the actual sensor/task mapping
-before coding. No authored psychology, fabricated sensor equivalence or tuning.
-Use existing scenarios; compare live sources/nuclei/probabilities/execution and
-required privacy/continuation. Retain unaffected historical controls by hashes.
-Keep the candidate fixed during closure; only a diagnosed integration defect warrants
-versioned production changes and targeted invalidation. No unrelated breadth or
-historical-suite reruns by habit; existing package budgets apply, split before coding.
-Task substitution remains a valid clause6 witness; physiological substitution,
-general option discovery, new needs/items and family12.7 breadth are not added gates.
+## Scenario and semantic correspondence
+Reuse M241 capable item-goal fixture unchanged in task targets, item declarations,
+sensor inputs, physical opportunity, competence, laws and seed7. Task B is nonsocial,
+its criterion is the parcel at its declared destination (target1..1); no scalar-probe
+reinterpretation, authored bias, fabricated belief or learned S0. Interoception is
+body10/cap100/rate0/grid1/threshold60, sampled through the existing selected channel.
+Enable slot59's two existing governed Need instructions from M221. Their declaration
+asserts adopted responses, not learned efficacy or physiological relief.
+M221 correspondence is the Need pressure/source/receiving projection only; the current
+item task is not relabeled the older scalar task. This is a current interaction test,
+not byte equivalence of changed scenarios. M241's unchanged goal evidence remains.
+Need-only removes priority/adoption inputs (S0 has no goals); joint retains them.
+Compare responses2 versus0; response1, reserve100, denied interoception, and hidden
+body11/19 with grid10 retain the original Need controls. All other settings fixed.
+At2 require positive current pressure, two Need nuclei, no task grounds, exact1/2
+probabilities and actual execution for Need-only. Response1 yields one option; positive
+pressure without responses, known zero and unknown produce no Need reason.
+At3 joint/control require live Commitment; joint requires live Need, same-action
+separate grounds and changed exact production probabilities. Inspect actual raw input,
+nuclei and execution, not sampled winner equality. Same seed is not coupled dice;
+no cross-run sampled-choice claim. Classify any goal/physical interaction explicitly.
+Hidden aliases must have identical perceived Need/source/nucleus/probability projections.
 
-## Verification and status
-Read-only evidence and preservation/research/size checks pass; 26.825/300s,
-including10s packaging. One inspection decoder error is corrected and retained.
-RO019/021 remain CLOSED; other relevant conditional obligations retain their triggers.
-All earlier evidence/decisions remain scoped to their recorded versions.
-E75/P33/N11/U13=132;21members/15families; accepted4/15; final assembly OPEN.
+## Checks, risks and limits
+Native primary/joint and five boundary arms: active receiving and source separation;
+hidden alias pair: no hidden-body leak; repeat/save at1 through every settled instant
+to terminal (cap48), injected receiving failure: exact atomic rollback. Public decision
+view validation and item/criterion traces check disclosure and actual consumer joins.
+Types, boundaries, research, preservation and staged size checks once. Historical full
+runs retained by unchanged-file hashes, not rerun. No generic kernel requalification.
+One validation job; <=600s/command, <=1800s cumulative including10s packaging.
+<=20 evidence files/5MiB; plan/result/checks/one compressed native JSON, no new verifier.
+Done iff declared current receiving/behavior/negative/continuation checks pass within
+budget and differences are classified. Preserve failures; diagnose before targeted
+rerun. Stop at passing package; do not silently extend it to all G1/G2/G3.
+Ledger MEC020 stays PORT/control, CTL001/002 controls, RET010 prohibited; no retirement
+or reduction. RO008/020 remain conditional; RO019/021 remain closed with triggers.
+
+## Status
+E75/P33/N11/U13=132;21members/15families; accepted4/15; family12.2/assembly OPEN.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
