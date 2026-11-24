@@ -38,7 +38,11 @@ misleading,7 correct. Hidden control removes obstruction, same perceived reports
 Only report6/8 must be physically applied; attempt4 is blocked. A-only opportunities
 4/6/8 declared explicitly. Ordinary topic runs on0.157; original0.30 control retained,
 0.156 rejects new topic (its pre-existing modern-expression defect is not rewritten).
-No laws, seeds, probability targets, scope or budget change. Failure log preserved.
+Second primary93.496s reached correct1/10->9/10 frozen claims but all physical effects
+were Blocked. Preserved-byte diagnosis63.923s and inherited RoleBinding source show
+static protocol execution=false. Enable that governed physical permission in both
+arms; preserve the denied-execution evidence. No laws, seeds, probability targets,
+scope or budget change. Repeated unchanged blocker has not been retried.
 
 ## Checks, risks and budgets
 1 types; primary live connection and denied correction (<=600s each).
