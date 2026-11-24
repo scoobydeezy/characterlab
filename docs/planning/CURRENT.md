@@ -1,41 +1,59 @@
-# Current work — M241 complete
-The character's existing physical assessment now governs whether an item moves.
-Insufficient skill or obstruction leaves it unmoved despite attempted contact.
-Successful placement can be perceived and fulfill the goal, stopping later pursuit.
-[Result](ASSEMBLED_CHARACTER_M241_RESULT.md);
-[evidence](ASSEMBLED_CHARACTER_M241_EVIDENCE.json).
-Parent091c48e2; preimplementation card/contract58286d90.
-Character/registry0.154; item-location/0.2; six production/test paths.
-One state/owner/scheduler/save; no new psychology, success formula or catalog.
+# Current work — M242 remaining original goal/route replay
+The next check joins route persistence, physical delivery and perceived fulfillment
+on the current character, including all seven original main instants.
+Status: ACTIVE — bounded replay; no new mechanism or family acceptance.
+Parent94052b9d; character/registry0.154-candidate, item-location/0.2,
+strategy0.1, goal-strategy-component0.1-candidate; all laws unchanged.
 
-## Evidence and interpretation
-Nonsocial B1..1/deadline101, body10, zero body dose/delay, empty learned/goals;
-seed7; reference0.85/SourceCoverage0.5, SeparateGoalPlan/Factored/TwoFailures;
-development4, K0, impairment0, practiceOFF. Difficulty0 versus1 uses the existing law.
-Seven native cases pass. Same chosen action/contact2: capable placement fulfills3,
-then no choice4; insufficient skill/opportunity deny movement and preserve pursuit.
-Protocol denial has contact0/no placement. External placement works without action.
-No-criterion skill/opportunity failure pair has identical full state4/terminal and
-permitted output under the preserved observer projection, despite private causes.
-Trace: actual433 -> authenticated physical assessment110 -> item owner110 ->
-criterion120 -> memory/prediction/goal140 -> next decision. No private item IDs leak.
-Original fulfilled/hiddenCause/retained match goal, exact first route/action,
-physical success/destination and criterion at each original instant (native2..4).
-Bootstrap1 and explicit relocation4 remain declared extras, not whole-model equality.
-Receiver association/duplicate/zero-contact guards and internal-source rejection pass.
-Fault after assessed movement rolls back state/output/trace/clock. Repeat/restore2
-match full state/output/trace/save3/4/101. Old0.153 matched terminal is byte-identical.
-Old0.153 incompetent-but-moving limitation remains captured as a historical control.
-Ten functional tests, captured-route identity, types and repository checks pass;
-verification 489.012s/1800s, no extension. One negative-test error expectation repaired.
+## Preimplementation card
+Capability: keep the same goal through failures and a route gap, then stop after
+perceived delivery; distinguish denied evidence, expiry, duplicates and no adoption.
+Scope: original main/noOutcome/hiddenSuccess/expiry/denied/noDisplay/duplicate/
+noAdoption, unchanged and untruncated, seed7. One registry and initial state.
+Two test paths: fixtures/assembledGoalRouteReplay.ts and
+assembledGoalRouteReplay.test.ts under src/test. No production/formal changes.
+Nonsocial B1..1/deadline101, body10/cap100/rate0/grid1/threshold60;
+importance/urgency1, phase4/K0/impairment0, practiceOFF, zero body dose/delay.
+Reference0.85/SourceCoverage0.5; SeparateGoalPlan/Factored/TwoFailures fixed.
+Live channels: route displays, body sample, permitted execution feedback, criterion
+only when original declares it. No social evidence or authored psychological state.
+Original time1..7 -> native2..8; bootstrap probe1. Receipt times shift+1.
+Explicit world source100 restores the item to origin at each frame (destination
+only for original external placement). This maps the original per-instant world;
+location persists between events. Execution110 and criterion120 follow normally.
+Open routes/obstruction control opportunity; competence controls existing difficulty.
+Adoption, display visibility, feedback visibility and criterion follow original rows.
 
-## Exact remaining work
-Replay the remaining original goal/route cases and meaningful alternatives on the
-current assembled model. This closes the bounded competence-to-location seam,
-not full goal-strategy replay or family12.2/12.7 acceptance. Broader domains remain
-in final replay; this witness uses zero body dose/delay and one known task predicate.
-No general object-recognition claim, catalog expansion, UI or reduction.
-MEC011/019/020, EXP013, RO012/014/019/020 and foundation constraints remain.
+## Predeclared comparison and checks
+Compare actual original factory versus native at EVERY source instant: goal status,
+route identity, availability classes when the native planner has an active goal,
+physical success/destination, permitted execution feedback and criterion polarity.
+Preserve immutable goal instruction; require live planner/candidate consumption,
+positive motives/reasons and probability1 for actions. Assert empty draw lists;
+no seed-only coupling claim. Main must fulfill7 and make no choice8.
+Evaluate four original candidate laws on captured native prior operands in main;
+these are local counterfactual controls, never alternate production trajectories.
+Missing/expired routes, duplicate receipts and no-adoption are explicit negatives.
+Denied/noDisplay permitted views must match. Hidden noOutcome/hiddenSuccess must
+match protected cognition/views; only declared physical item/reward state may differ.
+Any additional difference must be diagnosed/classified, never silently normalized.
+Repeat/restore main at save4; compare full state/output/trace/save5..8/101 and clock.
+Retain M241 ownership/rollback and M23119-run/94-prefix original evidence by hashes:
+unchanged dependency closures do not justify rerunning those full suites.
+Risks: timing/meaning drift, hidden-truth leakage, receipt duplication, false finish,
+TwoFailures interaction, incomplete source frames, changed save continuation.
+
+## Budgets and stop
+One job at a time; <=600s/command, <=1800s cumulative verification including failures.
+Native/source replay<=950s, privacy/local controls<=250s, repeat/restore<=420s,
+types/repository/preservation<=170s plus10s planning/staging allowance.
+Two planned source/test files (ceiling12); <=20 evidence files/5MiB.
+Standing bounded self-approval permits diagnosed setup repairs with failures retained;
+no retuning, seed search, new law, waived phenomenon or denominator change.
+Done: eight complete projections pass or each difference has an evidenced disposition;
+unclassified differences block closure. Required privacy/continuation/checks must pass.
+Then stop. Remaining whole-family/current-candidate coverage is stated explicitly.
+MEC011/019/020, EXP013, RO012/014/019/020 retain their dispositions.
 E75/P33/N11/U13=132;21members/15families; accepted4/15; final assembly OPEN.
 | Registry | Current count |
 |---|---|
