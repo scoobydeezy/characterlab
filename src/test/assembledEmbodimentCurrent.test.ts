@@ -1,4 +1,4 @@
-import {replay220,replay224,candidate224,correspondence224} from './fixtures/assembledEmbodimentReplay';
+import {replay220,replay224,replay247,candidate247,correspondence247} from './fixtures/assembledEmbodimentReplay';
 import {it,expect} from 'vitest';
 // @ts-expect-error Node-only evidence.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
@@ -12,8 +12,8 @@ import {BODY_SAMPLE} from '../assembled/body';
 import {JOINT_APPRAISAL} from '../assembled/appraisal';
 import {readQ} from '../campaign2/cognitiveMath';
 import {rational as q,type CanonicalValue} from '../substrate/canonicalEncoding';
-const reserve=(...args:Parameters<typeof historicalReserve>)=>candidate224(historicalReserve(...args));
-const file=replay224?'docs/planning/ASSEMBLED_CHARACTER_M224_BODY_EVIDENCE.json':replay220?'docs/planning/ASSEMBLED_CHARACTER_M220_BODY_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M218_EVIDENCE.json';
+const reserve=(...args:Parameters<typeof historicalReserve>)=>candidate247(historicalReserve(...args));
+const file=replay247?'docs/planning/ASSEMBLED_CHARACTER_M247_EVIDENCE.json':replay224?'docs/planning/ASSEMBLED_CHARACTER_M224_BODY_EVIDENCE.json':replay220?'docs/planning/ASSEMBLED_CHARACTER_M220_BODY_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M218_EVIDENCE.json';
 const fraction=(v:CanonicalValue)=>{const x=readQ(v);return x.numerator+'/'+x.denominator;};
 const decodedStreams=new WeakMap<Uint8Array,readonly CanonicalValue[]>();
 const records=(bytes:Uint8Array,id:bigint)=>{let stream=decodedStreams.get(bytes);if(!stream){stream=items(decode(bytes),'list');decodedStreams.set(bytes,stream);}return stream.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===id).map(v=>rec(v,id));};
@@ -29,17 +29,35 @@ function capture(run:Run,t:bigint){
  return {t:Number(t),level:quant.length?fraction(f(rec(quant[0],484n),1n)):null,reads,joins,absence:records(run.snapshot().outputs,463n).map(key),interval:sample?key(f(sample,5n)):null,sample:sample?key(sample):null,rows:joint.flatMap(j=>items(j[4],'list').map(v=>items(v,'list').map(x=>typeof x!=='boolean'&&x.kind==='rational'?fraction(x):key(x)))),net:reasons.flatMap(r=>items(f(r,3n),'list').map(v=>fraction(f(rec(f(rec(v,407n),2n),406n),3n))))};
 }
 
-const put=(name:string,value:any)=>{const correspondence=correspondence224(name,value);if(correspondence)value={...value,correspondence};const d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};expect(d[name]).toBeUndefined();d[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');};
+const put=(name:string,value:any)=>{const d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};expect(d[name]).toBeUndefined();
+ // Retain native evidence before correspondence assertions, including a failed comparison.
+ if(replay247){d[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');}
+ const correspondence=correspondence247(name,value);if(correspondence)value={...value,correspondence};d[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');};
+function native247(run:Run,times:readonly bigint[]){
+ if(!replay247)return {};
+ const os=items(decode(run.snapshot().outputs),'list');
+ const causal=times.map(t=>{
+  const ts=traceAt(run,t),produced=ts.flatMap(projected),contexts=produced.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===408n);
+  const decisions=records(run.snapshot().outputs,409n).filter(v=>at(f(v,2n))===t);
+  const consumed=decisions.map(d=>({context:contexts.some(c=>key(c)===key(f(d,3n))),chosen:uint(f(rec(f(d,4n),419n),1n))===3n,
+   executed:os.some(o=>typeof o!=='boolean'&&o.kind==='record'&&o.schema.typeId===433n&&key(f(rec(f(rec(f(rec(f(o,2n),432n),2n),431n),2n),425n),2n))===key(d))}));
+  const raw=enc(list([...ts,...decisions,...os.filter(o=>typeof o!=='boolean'&&o.kind==='record'&&o.schema.typeId===433n)]));
+  return {t:String(t),consumed,bytes:raw.length,sha256:hash(raw),deflate:deflateSync(raw).toString('base64')};
+ });
+ return {native:{model:'0.155',clock:String(run.snapshot().clock),causal}};
+}
+function live247(value:any){if(!replay247)return;for(const row of value.native.causal){expect(row.consumed.length,'actual decision at '+row.t).toBeGreaterThan(0);for(const c of row.consumed){expect(c.context,'actual context consumed').toBe(true);if(c.chosen)expect(c.executed,'chosen decision reaches execution').toBe(true);}}}
+
 async function finish(run:Run){for(let n=0;await run.settleNextInstant();n++)expect(n).toBeLessThan(64);expect(run.snapshot().clock).toBe(101n);}
 for(const profile of ['fast','slow','no-delivery'] as const)it('trajectory218 '+profile+' full current receiving path',async()=>{
  const x=await start(reserve(profile));let checkpoint:string|undefined,next:string|undefined;
  if(profile==='fast'){const repeat=await start(reserve(profile));await through(x.run,31n);const live=capture(x.run,31n);expect(live.rows.length).toBeGreaterThan(0);for(const a of live.rows)expect(a).toHaveLength(5);await through(repeat.run,31n);eqbytes(x.run.save(),repeat.run.save());const save=x.run.save();checkpoint=hash(save);const restored=cachedMemory(await restorePreparedCharacterRun(x.handle,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save}));eqbytes(save,restored.save());await finish(x.run);await finish(restored);eqbytes(x.run.save(),restored.save());next=hash(x.run.save());}else await finish(x.run);
  const rows=[1n,31n,41n,61n].map(t=>capture(x.run,t));console.info('M218 TRAJECTORY',profile,JSON.stringify(rows));
  expect(rows.map(r=>r.level)).toEqual(profile==='fast'?['79/1','49/1','69/1','49/1']:profile==='slow'?['159/2','129/2','179/2','159/2']:['79/1','49/1','39/1','19/1']);
- const pressures=profile==='fast'?['1/6','0/1','1/6']:profile==='slow'?['0/1','0/1','0/1']:['1/6','1/3','2/3'];for(const [i,r]of rows.slice(1).entries()){expect(r.rows.length).toBeGreaterThan(0);for(const a of r.rows){expect(a).toHaveLength(5);expect(a[2]).toBe(pressures[i]);}expect(r.net.length).toBeGreaterThan(0);if(replay224){expect(r.joins.length).toBeGreaterThan(0);expect(r.joins.every(Boolean)).toBe(true);}}
- put(profile,{rows,checkpoint,next,input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),registry:hash(x.b.s.registry),terminal:hash(x.run.save())});
+ const pressures=profile==='fast'?['1/6','0/1','1/6']:profile==='slow'?['0/1','0/1','0/1']:['1/6','1/3','2/3'];for(const [i,r]of rows.slice(1).entries()){expect(r.rows.length).toBeGreaterThan(0);for(const a of r.rows){expect(a).toHaveLength(5);expect(a[2]).toBe(pressures[i]);}expect(r.net.length).toBeGreaterThan(0);if(replay224||replay247){expect(r.joins.length).toBeGreaterThan(0);expect(r.joins.every(Boolean)).toBe(true);}}
+ const value={rows,checkpoint,next,input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),registry:hash(x.b.s.registry),terminal:hash(x.run.save()),...native247(x.run,[31n,41n,61n])};put(profile,value);live247(value);
 },600000);
-for(const profile of ['alias41','alias49','fine41','denied','unavailable'] as const)it('boundary218 '+profile+' current sensing',async()=>{const x=await start(reserve(profile));await through(x.run,10n);const before=safe(x.run,items(decode(x.run.snapshot().outputs),'list')),a=capture(x.run,10n);await through(x.run,12n);const b=capture(x.run,12n);if(profile==='denied'||profile==='unavailable'){expect(a.sample).toBeNull();expect(a.level).toBeNull();expect(a.reads).not.toContain('455');expect(a.absence.length).toBeGreaterThan(0);expect(a.rows.length).toBeGreaterThan(0);for(const r of a.rows)expect(r[1]).toBe(key(text('Unavailable')));}else{for(const r of [a,b]){expect(r.rows.length).toBeGreaterThan(0);expect(r.joins.every(Boolean)).toBe(true);expect(r.net.length).toBeGreaterThan(0);for(const row of r.rows)expect(row).toHaveLength(5);}}await finish(x.run);console.info('M218 SENSING',profile,JSON.stringify([a,b]));put(profile,{rows:[a,b],safe:hash(before),safeBytes:before.length,input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),registry:hash(x.b.s.registry),safeCompressed:deflateSync(before).toString('base64'),terminal:hash(x.run.save())});},600000);
+for(const profile of ['alias41','alias49','fine41','denied','unavailable'] as const)it('boundary218 '+profile+' current sensing',async()=>{const x=await start(reserve(profile));await through(x.run,10n);const before=safe(x.run,items(decode(x.run.snapshot().outputs),'list')),a=capture(x.run,10n);await through(x.run,12n);const b=capture(x.run,12n);if(profile==='denied'||profile==='unavailable'){expect(a.sample).toBeNull();expect(a.level).toBeNull();expect(a.reads).not.toContain('455');expect(a.absence.length).toBeGreaterThan(0);expect(a.rows.length).toBeGreaterThan(0);for(const r of a.rows)expect(r[1]).toBe(key(text('Unavailable')));}else{for(const r of [a,b]){expect(r.rows.length).toBeGreaterThan(0);expect(r.joins.every(Boolean)).toBe(true);expect(r.net.length).toBeGreaterThan(0);for(const row of r.rows)expect(row).toHaveLength(5);}}await finish(x.run);console.info('M218 SENSING',profile,JSON.stringify([a,b]));const value={rows:[a,b],safe:hash(before),safeBytes:before.length,input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),registry:hash(x.b.s.registry),safeCompressed:deflateSync(before).toString('base64'),terminal:hash(x.run.save()),...native247(x.run,[10n,12n])};put(profile,value);live247(value);},600000);
 
 it('tolerance218 current earned delivery and receiving',async()=>{const result:any={};for(const law of ['Reciprocal','Unattenuated'] as const){const x=await start(tolerance(law));await through(x.run,7n);const effects=labels(x.run,'assembled-tolerance-effect/0.1').map(a=>({at:Number(at(a[1])),magnitude:Number(uint(a[4])),requested:fraction(a[5]),potential:fraction(a[6])})),rows=[3n,5n,7n].map(t=>capture(x.run,t));console.info('M218 TOLERANCE',law,JSON.stringify({effects,rows}));expect(effects.length).toBeGreaterThanOrEqual(3);expect(effects[0].magnitude).toBeGreaterThan(0);expect(effects[1].magnitude).toBeGreaterThan(effects[0].magnitude);for(const e of effects){expect(e.requested).toBe('40/1');expect(traceAt(x.run,BigInt(e.at)).some(t=>items(f(t,11n),'list').some(v=>uint(f(rec(f(rec(v,147n),2n),140n),1n))===302n))).toBe(true);}for(const r of rows){expect(r.rows.length).toBeGreaterThan(0);for(const a of r.rows)expect(a).toHaveLength(5);expect(r.joins.every(Boolean)).toBe(true);expect(r.net.length).toBeGreaterThan(0);}await finish(x.run);result[law]={effects,rows,input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),registry:hash(x.b.s.registry),terminal:hash(x.run.save())};}expect(result.Reciprocal.effects.map((e:any)=>e.magnitude)).toEqual(result.Unattenuated.effects.map((e:any)=>e.magnitude));expect(result.Reciprocal.effects[0].potential).not.toBe(result.Unattenuated.effects[0].potential);expect(result.Reciprocal.rows[1].net).not.toEqual(result.Unattenuated.rows[1].net);put('tolerance',result);},600000);
 
@@ -50,6 +68,29 @@ it('compareReserve218 finite current reserve gate',()=>{
  if(replay224)for(const profile of ['fast','slow','no-delivery','alias41','alias49','fine41','denied','unavailable'] as const){const a=reserve(profile),b=historicalReserve(profile),slots=items(decode(a.s.registry),'list');expect(slots).toHaveLength(59);eqbytes(enc(list(slots.slice(0,58))),b.s.registry);expect(hash(b.s.registry)).toBe(prior[profile].registry);expect(items(items(slots[58],'list')[1],'list')).toHaveLength(0);eqbytes(a.d.orderedInputs,b.d.orderedInputs);eqbytes(a.d.initialState,b.d.initialState);eqbytes(a.d.runSeed,b.d.runSeed);expect(d[profile].correspondence.pass).toBe(true);}
  eqbytes(fast.d.initialState,slow.d.initialState);eqbytes(fast.d.orderedInputs,slow.d.orderedInputs);eqbytes(fast.d.runSeed,slow.d.runSeed);for(const [name,b]of [['fast',fast],['slow',slow]]as const){expect(d[name].input).toBe(hash(b.d.orderedInputs));expect(d[name].initial).toBe(hash(b.d.initialState));expect(d[name].registry).toBe(hash(b.s.registry));}
  expect(Object.keys(d).sort()).toEqual(['fast','slow','no-delivery','alias41','alias49','fine41','denied','unavailable'].sort());
+ if(replay247)for(const profile of ['fast','slow','no-delivery','alias41','alias49','fine41','denied','unavailable'] as const){
+  const b=historicalReserve(profile),a=reserve(profile),slots=items(decode(a.s.registry),'list');
+  expect(slots).toHaveLength(60);eqbytes(enc(list(slots.slice(0,58))),b.s.registry);
+  const old220=JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M220_BODY_EVIDENCE.json','utf8'))[profile];
+  const old224=JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M224_BODY_EVIDENCE.json','utf8'))[profile];
+  expect(hash(b.s.registry),'original registry artifact').toBe(old220.registry);
+  expect(hash(b.d.initialState),'original initial artifact').toBe(old224.initial);
+  expect(hash(b.d.orderedInputs),'original stimulus artifact').toBe(old224.input);
+  expect(items(items(slots[58],'list')[1],'list')).toHaveLength(0);
+  expect(items(items(slots[59],'list')[4],'list')).toHaveLength(0);
+  eqbytes(a.d.orderedInputs,b.d.orderedInputs);eqbytes(a.d.runSeed,b.d.runSeed);
+  const original=restoreAuthoritativeState(decode(b.d.initialState)),current=restoreAuthoritativeState(decode(a.d.initialState));
+  expect(current.entries().length).toBe(original.entries().length+1);
+  for(const e of original.entries())expect(current.read(e.path)).toEqual(original.read(e.path));
+  expect(current.entries().filter(e=>e.path.rootStateTypeId===1600n)).toHaveLength(1);
+  expect(d[profile].correspondence.pass).toBe(true);live247(d[profile]);
+  for(const row of d[profile].native.causal){
+   const raw=inflateSync(Uint8Array.from(atob(row.deflate),c=>c.charCodeAt(0)));expect(raw.length).toBe(row.bytes);expect(hash(raw)).toBe(row.sha256);
+   const decisions=records(raw,409n);expect(decisions).toHaveLength(row.consumed.length);
+   row.decisionSummary=decisions.map(d=>{const status=rec(f(d,4n),419n),tag=uint(f(status,1n));return {status:String(tag),probabilities:tag===3n?items(f(rec(f(status,2n),420n),2n),'list').map(v=>fraction(f(rec(v,421n),2n))):[]};});
+  }
+  console.info('M247 CAUSAL',profile,JSON.stringify(d[profile].native.causal.map((r:any)=>({t:r.t,consumed:r.consumed,decisions:r.decisionSummary}))));
+ }
  const row=(p:string,t:number)=>d[p].rows.find((r:any)=>r.t===t);
  expect(row('fast',31).level).toBe(row('no-delivery',31).level);
  expect(row('fast',41).net).not.toEqual(row('no-delivery',41).net);
@@ -62,7 +103,7 @@ it('compareReserve218 finite current reserve gate',()=>{
  expect([row('alias41',12).level,row('alias49',12).level]).toEqual(['39/1','47/1']);
  expect(row('alias41',12).interval).not.toBe(row('alias49',12).interval);
  expect(row('alias41',12).net).not.toEqual(row('alias49',12).net);
- d.reserveQualification={pass:true,candidate:replay224?'0.145':replay220?'0.144':'0.143',clauses:[1,2,3,4,5],claim:'live appraisal and actual reason; no cross-model sampled-choice causality',originalControls:['M117 sixteen/79','M39 original80 null and laws']};
+ d.reserveQualification={pass:true,candidate:replay247?'0.155':replay224?'0.145':replay220?'0.144':'0.143',clauses:[1,2,3,4,5],claim:'live appraisal and actual reason; no cross-model sampled-choice causality',originalControls:['M117 sixteen/79','M39 original80 null and laws']};
  writeFileSync(file,JSON.stringify(d,null,2)+'\n');console.info('M218 RESERVE current five-clause gate PASS; tolerance remains open');
 });
 
@@ -83,3 +124,5 @@ it('diagnosticTolerance218 actual no-action chain',async()=>{
 });
 
 it('compareEmbodiment218 finite current receiving gate',()=>{const d=JSON.parse(readFileSync(file,'utf8'));expect(d.reserveQualification?.pass).toBe(true);expect(d.tolerance).toBeDefined();expect(Object.keys(d.tolerance).sort()).toEqual(['Reciprocal','Unattenuated']);});
+
+import {restoreAuthoritativeState} from '../substrate/state';

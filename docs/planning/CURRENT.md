@@ -1,62 +1,41 @@
-# Current work — M247 BODY transfer to the fixed current character
-M246 preserved acquired Commitment/Value and scalar sensing on model0.155.
-Now transfer the established bodily depletion/relief and sensing distinctions to
-that same candidate. Family12.2 and assembly remain OPEN.
-Parent515ffcaf; previous [result](ASSEMBLED_CHARACTER_M246_RESULT.md).
+# Current work — M247 BODY transfer passed
+The current character preserves bodily depletion, relief and sensing distinctions
+on model0.155 while sharing its state with the item world. Perceived pressure changes
+reasons consumed by decisions; hidden physical differences remain hidden.
+[Result](ASSEMBLED_CHARACTER_M247_RESULT.md); [evidence](ASSEMBLED_CHARACTER_M247_EVIDENCE.json).
+Parent515ffcaf; pre-code card686f704b; model/registry0.155 unchanged.
 
-## Bounded card — committed before code
-Capabilities: (1) perceived depletion/relief reaches live appraisal and actual
-reasons/decision consumption; (2) physical aliases remain hidden until sensing
-separates them; denied/unavailable sensing stays distinct from known zero.
-G2a BODY only. Prior BODY verification1117.843s motivates splitting before code:
-G2b retained importance/current urgency follows, then G3 learned alternatives.
-This split preserves all G2 comparisons; no new family breadth or waived gate.
-Baseline: family12.2 bodily truth/motivation seam; retained M224 eight-case BODY
-projection (M220/M117 controls), not a new family12.1 or12.2 acceptance claim.
-Model/registry fixed0.155; sensor binding0.3, body0.2, current joint140 and original
-appraisal/reason/decision laws unchanged. No production/formal change planned.
-Files: explicit selector in assembledEmbodimentReplay, existing BODY test, one
-current sensor fixture helper if needed (<=3 test files; absolute ceiling12).
-Historical selectors/defaults and artifacts must retain their prior behavior.
+## What passed
+All eight original M224 BODY cases retain input/seed/task meanings and original58
+registry slots. S0 adds only one physical item location; empty Need and unbound
+item0.3 slots retain scalar probe110. No production/formal or psychological-law edits.
+Fast/slow depletion, relief/no relief, coarse aliases, finer sensing, denied and
+unavailable sensing match every preserved physical/appraisal/reason row exactly.
+At41 relief versus none gives pressure0 versus1/3 and reason7/27 versus7/22.
+Hidden aliases have identical complete observer streams at10; later sensing separates
+them. Denied/unavailable sampling never reads physical455 and stays Unavailable.
+All19 compared decision contexts are live and consumed by actual execution. These
+scenarios have one eligible action/P1: reason changes are not a choice-change claim.
+Exact repeat/save31 through101, original scenario/hash mapping and causal evidence
+integrity pass. Historical defaults/evidence and frozen simulation sources preserved.
+No failure, scenario/law amendment, production repair or runtime-budget extension.
 
-## Predeclared comparison and scenario
-Reuse all eight M224 original inputs, seed0, task definitions and original58
-registry slots; append empty Need slot and unbound item-world declaration0.3.
-S0 preserves every original entry and adds only a physical item location; no
-learned starting state. Item movement uses one existing action, never task retargeting.
-Nonsocial tasks; normal position/priority/opportunity/body channels. Task B target
-[10,10], deadline101. No item criterion replaces the scalar diagnostic probe.
-Fast/slow: reserve80/cap100, rate1 versus1/2, samples1/31/41/61; delivery30 at31
-versus zero delivery. Aliases51/59, rate1, grid20 at10/12; original grid10,
-denied and unavailable controls. Keep stimulus/task/law/seed bytes unchanged.
-Require exact prior physical/sample/absence/appraisal/reason rows for all8.
-Check live concern/reason joins and decision-to-execution consumption at compared
-known probes. Capture actual probability/context; no sampled-winner/coupling claim.
-Require fast/no-delivery reason separation41; coarse aliases equal complete safe
-streams10, later separation12, fine-grid distinction; denied sensing never reads455.
-Different model/run identity and added physical item state are declared mappings,
-not byte-equivalence claims. Any further difference must be classified with evidence.
+## Next bounded gate
+G2a BODY is complete. Next G2b: original retained importance/current urgency matrix,
+evidence controls and continuation on fixed0.155, then G3 learned alternatives under
+MeanHistory. Preserve original stimuli/targets/laws and genuine scalar correspondence.
+G2 was split before coding to keep each complete gate inside the30-minute budget.
+No new needs, item catalog or family12.7 breadth. Family12.2 acceptance stays OPEN
+until the named current transfers and finite family decision are complete.
 
-## Checks, failure risks and budgets
-Fast exact repeat/save31->terminal101; compare full save bytes at checkpoint and
-terminal (original M224 gate). Selected raw native records preserve causal evidence.
-Eight native cases, finite correspondence gate, types, boundaries, research,
-frozen-source/evidence preservation, whitespace and staged size; one job at a time.
-Run groups under600s each, cumulative1800s including10s packaging. If a group is
-predicted longer, split commands, not comparisons. <=20 evidence files/5MiB.
-Retain failures; diagnose locally under standing self-approval. No law retuning,
-seed search, hidden authored cognition or repeat of passing checks without cause.
-Risks: current sensor/criterion changes task meaning; new physical item leaks into
-safe observation; changed reason semantics or execution ordering; save loses owners.
-Binary done: all8 native projections and declared live/privacy/persistence gates
-pass on0.155, differences classified, required checks pass within budgets.
-One compact result/log/evidence; stop verification after pass. No verifier framework.
-
-## Preservation and next
-MEC001/003/011..020/022 retain port/control/corpus dispositions; CTL007 candidate,
-RET010 prohibited. Frozen C0/C1/C2/C3/reference and historical evidence untouched.
-RO008/020 conditional; RO019/021 closed with unchanged triggers. No reduction/UI.
-E75/P33/N11/U13=132;21members/15families;accepted4/15; final replay remains open.
+## Verification and scope
+Eight native cases and one aggregate pass; types/boundaries/research/preservation/
+whitespace/size pass. Verification1212.714/1800s including10s packaging.
+Two test/helper files, zero production changes; <=600s/command,1800s total including
+10s packaging; <=20 evidence files/5MiB. Final receipt is recorded in the result.
+MEC001/003/011..020/022 preserved; CTL007 candidate; RET010 prohibited.
+RO008/020 conditional; RO019/021 closed with unchanged triggers; no reduction or UI.
+E75/P33/N11/U13=132;21members/15families;accepted4/15;assembly OPEN.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
