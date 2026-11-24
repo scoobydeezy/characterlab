@@ -6,6 +6,7 @@ import {REWARD_PAIRED_SENSING,REWARD_SOURCE} from '../../assembled/rewardExperie
 import {OPPORTUNITY,OPPORTUNITY_SOURCE} from '../../assembled/externalObstruction';
 import {prepareCharacterModel,createCharacterRun} from '../../assembled/character';
 import {cachedMemory} from './assembledMemoryFinal';
+import {replay250,candidate249} from './assembledSubstitutionCurrent';
 export type Case='diversified'|'falseTraining'|'deniedFeedback'|'hiddenBlocked'|'falseSuccess'|'trueSuccess'|'failure';
 export function blocked(name:Case,t:number){return name==='falseTraining'&&t<=7||['hiddenBlocked','falseSuccess'].includes(name)&&t>=9||name==='failure'&&t===9;}
 export function fixture(name:Case){
@@ -18,6 +19,6 @@ export function fixture(name:Case){
  return {...b,s:{...b.s,rulesVersion:REWARD_PAIRED_SENSING_RULES,registrySchemaVersion:REWARD_PAIRED_SENSING_REGISTRY,registry:enc(list(slots))},d:{...b.d,orderedInputs:enc(list(inputs))}};
 }
 const models=new Map<string,ReturnType<typeof prepareCharacterModel>>();
-export async function start(name:Case){const b=fixture(name),k=key(decode(b.s.registry));let p=models.get(k);if(!p){p=prepareCharacterModel(b.s);models.set(k,p);}const m=await p;return {b,m,run:cachedMemory(await createCharacterRun(m,b.d))};}
+export async function start(name:Case){const b=replay250?candidate249(fixture(name),name):fixture(name),k=key(decode(b.s.registry));let p=models.get(k);if(!p){p=prepareCharacterModel(b.s);models.set(k,p);}const m=await p;return {b,m,run:cachedMemory(await createCharacterRun(m,b.d))};}
 export {through,rec,f,uint,items,key,decode,enc,list,text,signed,q,C,u,set,at};
 export type {CanonicalValue};

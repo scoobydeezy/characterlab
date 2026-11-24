@@ -1,4 +1,4 @@
-import {replay249,groups249,native249} from './fixtures/assembledSubstitutionCurrent';
+import {replay249,replay250,groups249,groups250,native249} from './fixtures/assembledSubstitutionCurrent';
 import {it,expect,vi} from 'vitest';
 import {start,groups,through,rec,f,uint,items,key,decode,enc,list,text,at,type Case} from './fixtures/assembledSubstitutionReplay';
 import {capture,learned,hash,exact,finish,original,fullProbability} from './assembledRewardReportSet.test';
@@ -17,7 +17,7 @@ import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 import {deflateSync,inflateSync} from 'node:zlib';
 // @ts-expect-error Exact committed artifact bytes.
 import {execFileSync} from 'node:child_process';
-const file=replay249?'docs/planning/ASSEMBLED_CHARACTER_M249_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M230_EVIDENCE.json',read=(p:string)=>JSON.parse(readFileSync(p,'utf8')),saved=()=>read(file);
+const file=replay250?'docs/planning/ASSEMBLED_CHARACTER_M250_EVIDENCE.json':replay249?'docs/planning/ASSEMBLED_CHARACTER_M249_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M230_EVIDENCE.json',read=(p:string)=>JSON.parse(readFileSync(p,'utf8')),saved=()=>read(file);
 const put=(name:string,value:unknown)=>{const d=existsSync(file)?saved():{};expect(d[name]).toBeUndefined();d[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');};
 const compressed=(b:Uint8Array)=>({hash:hash(b),bytes:b.length,deflate:deflateSync(b).toString('base64')});
 const unpack=(s:string)=>new Uint8Array(inflateSync(Uint8Array.from(atob(s),c=>c.charCodeAt(0))));
@@ -46,7 +46,7 @@ async function runCase(name:Case){
  const final=learned(x),native=native249(x.b,x.run);await finish(x);const observer=['deniedInfo','absentInfo'].includes(name)?compressed(safe(x.run,items(decode(x.run.snapshot().outputs),'list'))):undefined;
  put(name,{...native,trained,acquired,probes,final,control,draws,checkpoint,observer,initial:hash(x.b.d.initialState),registry:hash(x.b.s.registry),inputs:hash(x.b.d.orderedInputs),terminal:hash(x.run.save())});console.info('M230 PASS',name,probes.map(p=>p.chosen).join(','),probes[0].beliefs.join(','));
 }
-for(const [group,names] of Object.entries(replay249?groups249:groups))for(const name of names)it((replay249?'transfer249 ':'replay230 ')+group+' '+name,()=>runCase(name),180000);
+for(const [group,names] of Object.entries(replay250?groups250:replay249?groups249:groups))for(const name of names)it((replay250?'transfer250 ':replay249?'transfer249 ':'replay230 ')+group+' '+name,()=>runCase(name),180000);
 it('replay230 all original frozen runs and prefixes',async()=>{
  const plan=read('docs/planning/SUBSTITUTION_PLAN_REV1.json'),prior=read('docs/planning/SUBSTITUTION_RESULT_REV1.json'),views=read('docs/planning/SUBSTITUTION_VIEWS_REV1.json'),sources:any[]=[];
  expect(plan.models).toHaveLength(5);expect(plan.runs).toHaveLength(29);
@@ -104,4 +104,20 @@ it.skipIf(!replay249)('transfer249 privacy and bounded current coverage',()=>{
  expect(fullProbability(d.bothAvailable.probes[0].probabilities)).toEqual(['1/2','1/2']);
  put('mapping249',{nativeCases:11,reference:'MeanHistory/Residual',version:'0.155',privacy:true,remaining:['unseenTraining','correctedConcentrated','correctedDiversified','otherCue','restoredA','falseTraining','deniedFeedback','hiddenBlocked','falseSuccess','trueSuccess','failure'],scope:'G3a only; other11 transfer cases and family acceptance remain open'});
  console.info('M249 GATE PASS11 cases; acquired alternatives, original stimuli, unknown/zero, withheld/availability/no-demand and exact permitted privacy');
+});
+
+it.skipIf(!replay250)('transfer250 finite substitution coverage',()=>{
+ const d=saved(),prior=read('docs/planning/ASSEMBLED_CHARACTER_M249_EVIDENCE.json');
+ const outcome=['diversified','falseTraining','deniedFeedback','hiddenBlocked','falseSuccess','trueSuccess','failure'];
+ const current=[...groups250.A,...outcome],all=[...Object.values(groups249).flat(),...current];
+ expect(current).toHaveLength(12);expect(new Set(all).size).toBe(22);
+ for(const name of current){expect(d[name].native.rules).toBe('rules/assembled-character/0.155-candidate');expect(d[name].native.mapping.pass).toBe(true);for(const field of ['state','outputs','trace4to11']){const p=d[name].native[field],b=unpack(p.deflate);expect(b.length).toBe(p.bytes);expect(hash(b)).toBe(p.hash);}}
+ expect(d.diversified.terminal,'same current baseline, additional observer measurement').toBe(prior.diversified.terminal);
+ for(let i=0;i<3;i++)for(const field of ['motive','beliefs','habit','admitted','chosen','probabilities','signals','raw','effects'])expect(d.diversified.probes[i][field]).toEqual(prior.diversified.probes[i][field]);
+ expect(d.unseenTraining.probes.map((p:any)=>p.chosen)).toEqual([-1,-1,-1]);
+ expect(d.correctedConcentrated.probes[0].beliefs).toEqual(['800','0']);expect(d.correctedDiversified.probes[0].beliefs).toEqual(['667','667']);
+ expect(fullProbability(d.correctedDiversified.probes[0].probabilities)).toEqual(['1/2','1/2']);expect(d.otherCue.probes[0].habit).toEqual(['0/1','0/1']);expect(d.restoredA.probes.map((p:any)=>p.chosen)).toEqual([-1,-1,0]);
+ expect(d.comparisons.fullSafePairs).toHaveLength(3);expect(d.comparisons.preOutcomeMeaning).toBe(true);expect(d.continuation.terminal).toBe(d.failure.terminal);
+ put('mapping250',{nativeCases:22,currentCases:12,remainingCases:0,reference:'MeanHistory/Residual',version:'0.155',retainedM249:hash(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M249_EVIDENCE.json')),baselineRepeat:'full observer/expression comparison absent from M249; exact terminal/projections retained',lawDisposition:'M230 dispositions retained; no alternate native law, no habit necessity or broader12.9 qualification'});
+ console.info('M250 G3 COMPLETE22 native cases, correction/availability/outcome boundaries and current failure continuation; family review next');
 });

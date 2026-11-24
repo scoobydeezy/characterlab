@@ -1,0 +1,152 @@
+M250 types exit=0 elapsed=23.172s cap=180s timeout=False
+
+M250 correction-cue-availability exit=0 elapsed=444.155s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer250 A unseenTraining
+M230 PASS unseenTraining -1,-1,-1 ,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer250 A unseenTraining 128154ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer250 A correctedConcentrated
+M230 PASS correctedConcentrated 0,0,0 800,0
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer250 A correctedConcentrated 80991ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer250 A correctedDiversified
+M230 PASS correctedDiversified 0,1,0 667,667
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer250 A correctedDiversified 83529ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer250 A otherCue
+M230 PASS otherCue 0,1,0 667,667
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer250 A otherCue 77586ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer250 A restoredA
+M230 PASS restoredA -1,-1,0 1000,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer250 A restoredA 67443ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 41 skipped (46)
+   Start at  14:31:31
+   Duration  443.59s (transform 3.61s, setup 0ms, collect 5.38s, tests 437.71s, environment 0ms, prepare 138ms)
+
+
+M250 outcome-training-hidden exit=0 elapsed=376.385s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A diversified
+M229 PASS diversified {"means":["1000","1000","1000"],"effects":["Applied","Applied","Applied"],"observerBytes":632082}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A diversified 138962ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A falseTraining
+M229 PASS falseTraining {"means":["1000","1000","1000"],"effects":["Applied","Applied","Applied"],"observerBytes":632082}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A falseTraining 79984ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A deniedFeedback
+M229 PASS deniedFeedback {"means":["1000","1000","1000"],"effects":["Applied","Applied","Applied"],"observerBytes":629733}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A deniedFeedback 75990ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A hiddenBlocked
+M229 PASS hiddenBlocked {"means":["1000","1000","1000"],"effects":["Blocked","Blocked","Blocked"],"observerBytes":629733}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 A hiddenBlocked 75113ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 42 skipped (46)
+   Start at  14:40:01
+   Duration  375.81s (transform 3.51s, setup 0ms, collect 5.27s, tests 370.05s, environment 0ms, prepare 146ms)
+
+
+M250 outcome-false-positive-failure exit=0 elapsed=305.356s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B falseSuccess
+M229 PASS falseSuccess {"means":["1000","1000","1000"],"effects":["Blocked","Blocked","Blocked"],"observerBytes":632082}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B falseSuccess 140334ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B trueSuccess
+M229 PASS trueSuccess {"means":["1000","1000","1000"],"effects":["Applied","Applied","Applied"],"observerBytes":632082}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B trueSuccess 82383ms
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B failure
+M229 PASS failure {"means":["1000","667","750"],"effects":["Blocked","Applied","Applied"],"observerBytes":632275}
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 B failure 76352ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 43 skipped (46)
+   Start at  14:46:31
+   Duration  304.79s (transform 3.50s, setup 0ms, collect 5.21s, tests 299.07s, environment 0ms, prepare 138ms)
+
+
+M250 full-privacy-pre-outcome exit=0 elapsed=6.297s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 whole safe views and pre-outcome meaning
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 45 skipped (46)
+   Start at  14:51:57
+   Duration  5.73s (transform 3.53s, setup 0ms, collect 5.25s, tests 58ms, environment 0ms, prepare 143ms)
+
+
+M250 failure-repeat-restore exit=0 elapsed=308.514s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 failed delivery repeat and restore
+M229 repeated9
+
+stdout | src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 failed delivery repeat and restore
+M229 restored9
+
+ ✓ src/test/assembledRewardOutcomeBoundaries.test.ts > outcomes229 failed delivery repeat and restore 302204ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 45 skipped (46)
+   Start at  14:52:23
+   Duration  307.95s (transform 3.51s, setup 0ms, collect 5.23s, tests 302.20s, environment 0ms, prepare 149ms)
+
+
+M250 finite-substitution-coverage exit=0 elapsed=6.615s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer250 finite substitution coverage
+M250 G3 COMPLETE22 native cases, correction/availability/outcome boundaries and current failure continuation; family review next
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer250 finite substitution coverage 377ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 45 skipped (46)
+   Start at  14:58:08
+   Duration  6.04s (transform 3.51s, setup 0ms, collect 5.23s, tests 377ms, environment 0ms, prepare 146ms)
+
+
+M250 boundaries exit=0 elapsed=3.711s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M250 research exit=0 elapsed=3.917s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M250 preservation exit=0 elapsed=0.949s cap=120s timeout=False
+PASS: 12 lossless current cases, 22-case mapping, preserved four kernels, exact nine-file scope, document/artifact budgets.
+
+M250 git-size exit=0 elapsed=0.873s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+

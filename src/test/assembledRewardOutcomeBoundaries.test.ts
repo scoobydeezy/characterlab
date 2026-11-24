@@ -1,3 +1,4 @@
+import {replay250,native249} from './fixtures/assembledSubstitutionCurrent';
 import {it,expect} from 'vitest';
 import {start,fixture,blocked,through,rec,f,uint,items,key,decode,enc,list,text,signed,u,at,type Case} from './fixtures/assembledRewardOutcomeBoundaries';
 import {capture,learned,hash,exact,finish} from './assembledRewardReportSet.test';
@@ -12,7 +13,7 @@ import {cachedMemory} from './fixtures/assembledMemoryFinal';
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 // @ts-expect-error Lossless evidence compression.
 import {deflateSync,inflateSync} from 'node:zlib';
-const file='docs/planning/ASSEMBLED_CHARACTER_M229_EVIDENCE.json';
+const file=replay250?'docs/planning/ASSEMBLED_CHARACTER_M250_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M229_EVIDENCE.json';
 const saved=()=>JSON.parse(readFileSync(file,'utf8'));
 const put=(name:string,value:unknown)=>{const d=existsSync(file)?saved():{};expect(d[name]).toBeUndefined();d[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');};
 type X=Awaited<ReturnType<typeof start>>;
@@ -35,8 +36,8 @@ async function check(name:Case){
  const controls={MeanHistory:await original(name,'MeanHistory'),LatestHistory:await original(name,'LatestHistory')};
  for(const [i,p]of probes.entries()){const o=controls.MeanHistory.rows[i+5];expect(p.admitted).toEqual(o.admitted);expect(p.habit).toEqual(o.habit);expect(p.chosen).toBe(o.chosen);expect(o.belief).toEqual(['1/1',name==='failure'?['1/1','2/3','3/4'][i]:'1/1']);}
  if(name==='failure')expect(controls.LatestHistory.rows.slice(5).map(v=>v.chosen)).toEqual([1,-1,-1]);
- const final=learned(x);if(denied)expect(final).toEqual(acquired);await finish(x);const observer=safe(x.run,items(decode(x.run.snapshot().outputs),'list'));
- put(name,{acquired,training,probes,final,controls,observer:{hash:hash(observer),bytes:observer.length,deflate:deflateSync(observer).toString('base64')},initial:hash(x.b.d.initialState),registry:hash(x.b.s.registry),inputs:hash(x.b.d.orderedInputs),terminal:hash(x.run.save())});console.info('M229 PASS',name,JSON.stringify({means:probes.map(p=>p.beliefs[1]),effects:probes.map(p=>p.effects[0].status),observerBytes:observer.length}));
+ const final=learned(x),native=native249(x.b,x.run);if(denied)expect(final).toEqual(acquired);await finish(x);const observer=safe(x.run,items(decode(x.run.snapshot().outputs),'list'));
+ put(name,{...native,acquired,training,probes,final,controls,observer:{hash:hash(observer),bytes:observer.length,deflate:deflateSync(observer).toString('base64')},initial:hash(x.b.d.initialState),registry:hash(x.b.s.registry),inputs:hash(x.b.d.orderedInputs),terminal:hash(x.run.save())});console.info('M229 PASS',name,JSON.stringify({means:probes.map(p=>p.beliefs[1]),effects:probes.map(p=>p.effects[0].status),observerBytes:observer.length}));
 }
 for(const name of ['diversified','falseTraining','deniedFeedback','hiddenBlocked']as const)it('outcomes229 A '+name,()=>check(name),200000);
 for(const name of ['falseSuccess','trueSuccess','failure']as const)it('outcomes229 B '+name,()=>check(name),200000);
