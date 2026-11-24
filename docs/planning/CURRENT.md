@@ -1,47 +1,43 @@
-# Current work — M244 Need-family acceptance review
-Decide whether the completed character evidence satisfies all six pinned12.2 clauses
-and their required comparisons. This package adds no mechanism or runtime experiment.
-Status: ACTIVE. Parent8140bd3f; current character/registry0.154-candidate.
+# Current work — M244 review complete; Need-family acceptance open
+All six Need/motivational distinctions have assembled witnesses. The remaining gate
+is their transfer into the current composition, not another phenomenon or law choice.
+[Decision](ASSEMBLED_CHARACTER_M244_RESULT.md);
+[evidence](ASSEMBLED_CHARACTER_M244_EVIDENCE.json).
+Parent8140bd3f; pre-review cardfb5f4483; character/registry0.154 unchanged.
+Zero production/test/contract edits and zero new simulation runs.
 
-## Bounded review card
-Observable outcome: a justified family acceptance decision, or an exact remaining gate
-with its invalidated evidence and smallest necessary next comparison named.
-Pinned scope: BRIEF-12.2-1..6, unchanged family JSON/baseline and Research Brief12.2;
-BODY/EMB/MULTISOURCE, importance/urgency, substitution and goal/strategy controls.
-Review M221–224 receiving, M225–230 substitution and M231–243 goal/criterion evidence,
-plus the exact original qualification/obligation sources those comparisons retain.
-Check actual source/test assertions and saved evidence, not result summaries alone.
-Track each clause's producer -> consumer -> observable result, alternatives, privacy,
-repeat/restore/rollback and scope. Do not promote absent tests or a source-only pass.
-Distinguish recorded-version proof from current-candidate proof: inspect changes after
-0.145 and0.149 against affected paths, domains and fixture assumptions before carry-forward.
-A versioned control remaining executable is not automatically current integration.
-No alternative native pipelines, law changes, parameter retuning or source rewriting.
+## Findings
+M221–224 prove direct Need, BODY, importance/urgency and acquired motives on0.145;
+M229–230 prove substitution on0.149. M241–243 close goal/criterion mapping on0.154.
+Actual19 current run artifacts contain63 raw-reason records and63 Positive pressure
+reports, but zero direct-Need descriptions or learned reward-expectation root823.
+Those isolated goal runs do not qualify active Need/learned alternatives on0.154.
+Eleven relevant kernels/owners are unchanged. Their evidence and controls remain valid.
+The composition changed: scalar probe -> item predicate, probe110 ->120, registry59
+->60, bound target1..1, physical assessment and joint settlement. Older fixture
+version labels alone cannot establish the current receiving/learning correspondence.
+No regression or new missing capability is asserted. Exact six-clause map is in M244.
 
-## Files, checks and limits
-Zero production/test edits and zero new simulation runs. No new verifier/framework.
-One compact M244 result (<=120 lines), CURRENT and existing reconciliation row updates;
-one small evidence/check receipt with hashes/disposition facts if useful. No new ledger.
-Analysis budget60 minutes; one active job; <=600s/job and <=300s total validation:
-evidence/source preservation and accounting120s, research60s, size/format60s,
-packaging60s. <=20 evidence files/5MiB; CURRENT<=80, register<=250 lines/64KiB.
-Preserve all historical contracts, verdicts, raw evidence and comparison failures.
-Run check:research and check:git-size once when final documents are staged/ready.
-No type or runtime reruns without a named changed dependency or unresolved failure;
-if a fresh runtime witness is required, record the finite next package and stop review.
+## Next bounded gate
+Bridge the existing Need-family comparisons to the fixed current candidate:
+G1 active Need/Commitment/acquired Value; G2 importance/urgency and BODY receiving;
+G3 learned alternatives with existing MeanHistory and physical/criterion semantics.
+Start with active Need/shared motive receiving; pin the actual sensor/task mapping
+before coding. No authored psychology, fabricated sensor equivalence or tuning.
+Use existing scenarios; compare live sources/nuclei/probabilities/execution and
+required privacy/continuation. Retain unaffected historical controls by hashes.
+Keep the candidate fixed during closure; only a diagnosed integration defect warrants
+versioned production changes and targeted invalidation. No unrelated breadth or
+historical-suite reruns by habit; existing package budgets apply, split before coding.
+Task substitution remains a valid clause6 witness; physiological substitution,
+general option discovery, new needs/items and family12.7 breadth are not added gates.
 
-## Decision rule
-Accept only if all six required distinctions and pinned comparison obligations have
-adequate assembled evidence, all differences have established dispositions, and no
-unresolved defect/law conflict/current-version carry-forward gap blocks that claim.
-Otherwise keep family OPEN and identify the exact blocker; do not add unrelated goals,
-physiological needs, item catalogs, option discovery or historical TODOs to the gate.
-Conditional broader debts remain conditional; no baseline denominator reduction.
-Acceptance, if earned, is for this family's pinned scope, not final assembly or UI.
-MEC001/003/011..020/022 and applicable RO001/008/010/012/014/015/019/020/021 retain
-port/control/corpus/candidate roles and reopen triggers; no reduction is proposed.
-Stop after the decision and required checks. No recursive review or verifier chain.
-E75/P33/N11/U13=132;21members/15families; accepted4/15 pending this review.
+## Verification and status
+Read-only evidence and preservation/research/size checks pass; 26.825/300s,
+including10s packaging. One inspection decoder error is corrected and retained.
+RO019/021 remain CLOSED; other relevant conditional obligations retain their triggers.
+All earlier evidence/decisions remain scoped to their recorded versions.
+E75/P33/N11/U13=132;21members/15families; accepted4/15; final assembly OPEN.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

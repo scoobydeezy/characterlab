@@ -1,0 +1,42 @@
+M244 captured-evidence exit=1 elapsed=1.499s cap=120s timeout=False
+C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\campaign2\canonicalData.ts:8
+  throw new __vite_ssr_import_1__.SchedulerContractError("INVALID_CONFIGURATION", message);
+        ^
+
+SchedulerContractError: requires 403/1
+    at invalidModel (C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\campaign2\canonicalData.ts:8:9)
+    at Module.dataRecord (C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\campaign2\canonicalData.ts:12:133)
+    at C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\inspect-m244.ts:22:143
+    at Array.map (<anonymous>)
+    at C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\inspect-m244.ts:22:110
+    at ViteNodeRunner.runModule (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/vite-node/dist/client.mjs:399:5)
+    at ViteNodeRunner.directRequest (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/vite-node/dist/client.mjs:381:5)
+    at ViteNodeRunner.cachedRequest (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/vite-node/dist/client.mjs:206:14)
+    at ViteNodeRunner.executeFile (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/vite-node/dist/client.mjs:169:12)
+    at CAC.run (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/vite-node/dist/cli.mjs:99:5) {
+  code: 'INVALID_CONFIGURATION',
+  candidateTransitionData: undefined
+}
+
+Node.js v24.20.0
+
+M244 captured-evidence-corrected exit=0 elapsed=10.404s cap=120s timeout=False
+{"cases":19,"needDescriptions":0,"rawRecords":63,"positivePressureReports":63,"casesWithExpectationRoot823":0}
+versions [ 'rules/assembled-character/0.154-candidate' ]
+
+M244 research exit=0 elapsed=3.913s cap=60s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M244 preservation exit=0 elapsed=0.164s cap=120s timeout=False
+PASS source/formal/baseline/obligation preservation, all reviewed evidence hashes, eleven unchanged kernel comparisons,19 captured cases, document caps; 3 artifacts/26235 bytes. Zero production/test edits or runtime experiments.
+M244 staged-git-size exit=0 elapsed=0.845s cap=60s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
