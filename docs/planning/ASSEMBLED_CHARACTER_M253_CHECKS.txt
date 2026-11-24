@@ -1,0 +1,90 @@
+M253 types exit=2 elapsed=22.505s cap=120s timeout=False
+src/test/assembledBeliefConfidence.test.ts(2,53): error TS2307: Cannot find module 'node:fs' or its corresponding type declarations.
+src/test/assembledBeliefConfidence.test.ts(3,26): error TS2307: Cannot find module 'node:crypto' or its corresponding type declarations.
+src/test/assembledBeliefConfidence.test.ts(4,27): error TS2307: Cannot find module 'node:zlib' or its corresponding type declarations.
+src/test/assembledBeliefConfidence.test.ts(46,94): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/test/assembledBeliefConfidence.test.ts(52,27): error TS2307: Cannot find module 'node:zlib' or its corresponding type declarations.
+src/test/assembledBeliefConfidence.test.ts(54,56): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+
+M253 types-corrected exit=0 elapsed=22.217s cap=120s timeout=False
+
+M253 primary exit=0 elapsed=158.386s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBeliefConfidence.test.ts > confidence253 primary: native confidence stays separate from truth and correction
+M253 PRIMARY 1/C8/9 ->8/9/C9/10 ->8/17/C17/18; actual joint appraisal, reasons and execution; complete queue
+
+ ✓ src/test/assembledBeliefConfidence.test.ts > confidence253 primary: native confidence stays separate from truth and correction 152426ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  15:28:08
+   Duration  157.81s (transform 3.31s, setup 0ms, collect 4.92s, tests 152.43s, environment 0ms, prepare 144ms)
+
+
+M253 boundaries exit=0 elapsed=274.986s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledBeliefConfidence.test.ts > confidence253 boundaries: accurate uncertainty, denied and unknown
+M253 BOUNDARIES mean0/C1/2 accurate; denial/no-opportunity retain1/C8/9; unknown remains absent
+
+ ✓ src/test/assembledBeliefConfidence.test.ts > confidence253 boundaries: accurate uncertainty, denied and unknown 268908ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  15:31:28
+   Duration  274.42s (transform 3.40s, setup 0ms, collect 5.05s, tests 268.91s, environment 0ms, prepare 146ms)
+
+
+M253 privacy-continuation exit=0 elapsed=527.216s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledBeliefConfidence.test.ts > confidence253 privacy and continuation 521153ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  15:36:14
+   Duration  526.64s (transform 3.35s, setup 0ms, collect 4.97s, tests 521.15s, environment 0ms, prepare 143ms)
+
+
+M253 old-formula exit=0 elapsed=87.419s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledBeliefConfidence.test.ts > confidence253 old version and formula boundaries 81522ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  15:45:59
+   Duration  86.85s (transform 3.27s, setup 0ms, collect 4.87s, tests 81.52s, environment 0ms, prepare 145ms)
+
+
+M253 boundaries-repository exit=0 elapsed=3.743s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M253 research exit=0 elapsed=3.887s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M253 types-final-io exit=0 elapsed=22.121s cap=120s timeout=False
+
+M253 preservation exit=0 elapsed=0.913s cap=120s timeout=False
+PASS: complete five-file production diff accounting; old behavior/update/arbitration preserved;24 lossless blocks; native0.156/old0.155 identities; exact13-file package/7 source files; documents and evidence within caps.
+
+M253 git-size exit=0 elapsed=0.853s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+

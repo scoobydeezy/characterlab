@@ -1,42 +1,37 @@
-# Current work — M253 native belief confidence and correction
-M25287fe577c maps all nine Family12.4 clauses. Owner delegates bounded self-approval
-through family completion. Next: uncertain/correct and confident/wrong estimates in
-one existing perception/person-belief/appraisal/decision path.
+# Current work — M253 native confidence/correction complete
+The character now carries explicit evidence-weight confidence with its learned belief
+through social and joint appraisal. Eight misleading reports give a confident wrong
+belief; later contradictions revise belief while accumulated confidence increases.
+One correct report remains low-confidence; unavailable evidence stays unknown.
+[M253 result](ASSEMBLED_CHARACTER_M253_RESULT.md); [evidence](ASSEMBLED_CHARACTER_M253_EVIDENCE.json).
+Parent87fe577c; card/contract4853a208; model/registry0.156.
 
-## Active card — before implementation
-Capabilities: (1) native scoped confidence readout, (2) correction with independent
-confidence/correctness, (3) privacy and exact continuation. BRIEF12.4:1/2/3; no whole-family claim.
-Contract: belief-public0.1 evidence weight C=n/(n+1), equal-quality unique binary claims.
-New model0.156 extends0.155; appended appraisal readout only; same mean/update, one
-person owner, no confidence multiplier or separate store. Confidence uses the same
-actual effective history as the consumed mean (including recalled subset when used).
-Production files: model.ts,traceBinding.ts,social.ts,socialExecution.ts,runtime.ts.
-Tests: one fixture + one native test. <=7 source files; preserve all older behavior.
-Scenario: M246 current unbound-scalar scene, body10/seed0; two social tasks and unknown
-third. Replace social reports with recognized trial evidence at1..17:8 misleading
-positive then9 negative, fixed false world. Move existing opportunities4/6/8 to9/10/18,
-make both existing social task urgencies1, no acquired receipt/Value support. Same
-normal visual/voice/body channels; no learned S0 or authored intermediate.
-Controls: one accurate false report ->mean0/confidence1/2;8 misleading ->mean1/C8/9,
-then8/9/C9/10 and8/17/C17/18. Qualified absence vs denied/no-opportunity retains
-known versus unknown; hidden actual outcome/opportunity changes preserve cognition.
-Native report must be carried into actual joint appraisal; live reason/decision and
-execution at the declared consumer, or identify/repair setup before comparing.
-Capture exact production inputs/probabilities; no sampled-winner coupling claim.
-All original M126 horizons/controls remain; this package is not wholesale C-BELIEF replay.
-Checks: pure parity with original confidence and mean, unknown/nonbinary filtering;
-current primary/control/privacy; repeat/save8 through full queue; old0.155 readout
-absence with same scenario; types,boundaries,research,preservation,Git-size.
-Risk: current rich perception grammar, receipt duplication, recalled subset, prior50
-versus consequence140, unrelated late sources. Amend bounded setup explicitly before
-rechecking, retain failures; no parameter/seed search or arbitrary confidence law.
-Budget600s/job,1800s cumulative including10s packaging;20 artifacts/5MiB. Split if needed.
-Done: genuine native source->readout->appraisal/decision connection and controls pass;
-record exact limits, then continue causal/error/control gates, no unrelated breadth.
+## Completed connection and limits
+Actual perception -> person owner -> mean/confidence -> joint appraisal -> reasons
+and decision/execution. Mean/update/arbitration laws unchanged; no confidence multiplier,
+new owner/store/scheduler. Confidence n/(n+1) is bounded evidence weight, not calibrated
+correctness. Effective recalled subset and retained history remain distinct.
+Original17-report horizon, first-contradiction prior-state gate, accurate/denied/
+no-opportunity/unknown controls pass. Hidden world preserves full state/outputs.
+Independent repeat and save8 restoration match every later state/output/trace/save
+through terminal exhaustion. Old0.155 shape and17 original-formula prefixes pass.
+Type-import correction retained; no runtime failure, seed search or scenario retuning.
+Five production/two test files; one result/evidence/log; no original artifact changed.
 
-## Preserved status
-21members/15families/132clauses; E75/P33/N11/U13;accepted5/15;Family12.4 OPEN.
-RO010 broader calibration/source domains stays conditional. No reduction/UI/peers.
+## Next — Family12.4 completion remains authorized
+M252's finite nine-clause map remains. Next current causal explanation comparisons:
+actual failure, hidden cause, mistaken diagnosis and permitted correction. Inspect the
+existing causal-appraisal downstream connection explicitly; a report alone is not proof
+that a changed explanation affects later behavior. Then close repeated-error/action-
+contingency/control gates and make the finite family acceptance decision.
+No new UI/catalog/peer work, generic confidence law or whole-character acceptance.
+
+## Verification/status
+All declared functional/types/boundary/research/preservation/size checks pass.
+1134.246s/1800s including10s packaging; longest527.216s/600s. No extension.
+Three artifacts below1.6MiB; seven source files. Passing ends package verification.
+E77/P31/N11/U13=132;21members/15families;accepted5/15;Family12.4/assembly OPEN.
+Original meaningful controls and RO010's broader calibration/source limits remain.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

@@ -3,6 +3,8 @@ Local port under owner-delegated Family12.4 completion,2026-11-24, before code.
 Model/registry0.156 extends0.155. BELIEF_PUBLIC_CONTRACT belief-public/0.1 supplies
 C=n/(n+1), a bounded evidence-weight confidence diagnostic, not calibrated certainty.
 SourceGroupedMean/unique receipts and prior50/consequence140 remain unchanged.
+Distinct admitted receipts count as equal evidence units in this bounded model;
+uniqueness does not establish empirical independence or source reliability.
 
 The actual social appraisal appends [assembled-belief-confidence/0.1, optionalMean,
 uniqueBinarySupportCount, optionalConfidence, supportObservationIds]. Only admitted

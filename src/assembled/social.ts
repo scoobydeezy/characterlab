@@ -2,7 +2,8 @@ import {LEGACY_TIME_LIMIT,assertTimeLimit,type TimeLimit} from './timeDomain';
 /** assembled-character-social/0.1: source-grouped attributed commitment. */
 import {evaluationTuple} from './embarrassment';
 import {returnTuple} from './attachment';
-import {list,text,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {list,text,unsigned as u,type CanonicalValue} from '../substrate/canonicalEncoding';
+import {qValue} from '../campaign2/cognitiveMath';
 import {ExactRational as Q} from '../substrate/exactMath';
 import {validateSemanticReferent} from '../substrate/referentOrigin';
 import {AuthoritativeState,StateAuthorityRegistry,applyStatePatch,restoreAuthoritativeState,statePathValue,type StatePath,type StatePatch} from '../substrate/state';
@@ -41,6 +42,13 @@ export function validateSocialSources(events:readonly {payload:CanonicalValue}[]
 export const personPath=(C:CanonicalValue,target:CanonicalValue):StatePath=>({rootStateTypeId:810n,fieldId:1n,selectors:[{kind:'mapKey',key:list([C,target])}]});
 export const personHistory=(v:CanonicalValue|undefined):readonly CanonicalValue[]=>v===undefined?[]:items(items(v,'list')[1],'list');
 export const personMean=(v:CanonicalValue|undefined)=>{const xs=personHistory(v).filter(o=>items(items(o,'list')[6],'list').length===1);return xs.length?Q.of(BigInt(xs.filter(o=>items(items(o,'list')[6],'list')[0]===true).length),BigInt(xs.length)):undefined;};
+export const BELIEF_CONFIDENCE='assembled-belief-confidence/0.1';
+/** Proposition-local evidence weight of the exact effective history, never correctness. */
+export function personConfidence(v:CanonicalValue|undefined){
+ const rows=personHistory(v).filter(o=>items(items(o,'list')[6],'list').length===1),mean=personMean(v),n=BigInt(rows.length),support=rows.map(o=>items(o,'list')[0]);
+ require(new Set(support.map(key)).size===support.length,'duplicate confidence support');
+ return list([text(BELIEF_CONFIDENCE),list(mean===undefined?[]:[qValue(mean)]),u(n),list(n?[qValue(Q.of(n,n+1n))]:[]),list(support)]);
+}
 export function personUpdate(prior:CanonicalValue|undefined,obs:CanonicalValue){const a=items(obs,'list'),xs=personHistory(prior);if((items(a[6],'list').length!==1&&!(a.length>=9&&returnTuple(a[8]).length||a.length===10&&evaluationTuple(a[9]).some(x=>x!==undefined)))||!uint(a[5])||xs.some(v=>{const b=items(v,'list');return key(b[4])===key(a[4])&&key(b[5])===key(a[5]);}))return prior;return list([text(SOCIAL),list([...xs,obs])]);}
 export function withSocialState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,target:CanonicalValue,targets:readonly CanonicalValue[]=[target],loss=false,embarrassment=false,beliefTrials=false,observers:readonly {holder:CanonicalValue;target:CanonicalValue}[]=[],timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);
  require(targets.every(t=>key(C)!==key(t)),'target cannot be self');const paths=[...targets.map(t=>personPath(C,t)),...observers.map(o=>personPath(o.holder,o.target))],fresh=(p:StatePath)=>p.rootStateTypeId===810n;
