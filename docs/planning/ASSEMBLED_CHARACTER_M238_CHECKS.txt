@@ -1,0 +1,225 @@
+M238 types-initial exit=0 elapsed=23.706s cap=120s timeout=False
+
+M238 native-dynamic exit=1 elapsed=66.264s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledProtocolPermission.test.ts > goal238 native dynamic 59205ms
+   → protocol permission complete action coverage
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtocolPermission.test.ts > goal238 native dynamic
+SchedulerContractError: protocol permission complete action coverage
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.protocolPermissionSource src/assembled/protocolPermission.ts:13:125
+ ❯ src/assembled/inputs.ts:192:494
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:192:40
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledProtocolPermission.ts:24:208
+ ❯ runCase src/test/assembledProtocolPermission.test.ts:41:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  08:23:33
+   Duration  65.12s (transform 3.53s, setup 0ms, collect 5.24s, tests 59.21s, environment 0ms, prepare 346ms)
+
+
+REPAIR before rerun: fixture initially supplied only its two pursued actions. The model declares a third action; complete-map admission correctly rejected it before execution. Read the full declared action set from the existing action-body registry and supply the same Boolean for all. No laws, attempted actions, times, seed or gates changed. Initial implementation edit script also stopped on an indentation assertion before writing execution.ts; corrected the exact anchor.
+M238 types-with-tests exit=2 elapsed=22.021s cap=120s timeout=False
+src/test/assembledProtocolPermission.test.ts(95,227): error TS2322: Type '{ eventId: bigint; eventSequence: bigint; dueAt: bigint; phase: bigint; eventTypeId: any; payload: CanonicalValue; dependencies: CanonicalValue; causalParentEventIds: never[]; }' is not assignable to type 'ScheduledEvent'.
+  Types of property 'dueAt' are incompatible.
+    Type 'bigint' is not assignable to type 'SimInstant'.
+      Type 'bigint' is not assignable to type '{ readonly [instantBrand]: true; }'.
+src/test/assembledProtocolPermission.test.ts(98,34): error TS2322: Type 'bigint' is not assignable to type 'SimInstant'.
+  Type 'bigint' is not assignable to type '{ readonly [instantBrand]: true; }'.
+
+REPAIR: the new source unit test used plain bigint timestamps. Use substrate simInstant for its ScheduledEvent; production types had already passed.
+M238 native-dynamic-corrected exit=1 elapsed=64.754s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledProtocolPermission.test.ts > goal238 native dynamic 58744ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtocolPermission.test.ts > goal238 native dynamic
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:35:2923
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:131:14
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.start src/test/fixtures/assembledProtocolPermission.ts:25:208
+ ❯ runCase src/test/assembledProtocolPermission.test.ts:42:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  08:25:50
+   Duration  64.18s (transform 3.36s, setup 0ms, collect 4.99s, tests 58.74s, environment 0ms, prepare 148ms)
+
+
+REPAIR before rerun: runtime construction rejected 0.151 because traceBinding.ts retains an explicit model-version allowlist. Add 0.151 while preserving exact model/run equality and all prior versions. Card expanded from7 to8 production/test paths, below12; no scenario or proof change.
+Pre-continuation check refinement: restore3 through5 also compares exact snapshots/save, specifically testing the still-queued physical permission change. Original restore5/rollback6/terminal checks remain; same budget.
+M238 native-dynamic-version-fix exit=1 elapsed=68.055s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledProtocolPermission.test.ts > goal238 native dynamic 62047ms
+   → scheduled event type has no registered handler
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtocolPermission.test.ts > goal238 native dynamic
+SchedulerContractError: scheduled event type has no registered handler
+ ❯ fail src/substrate/scheduler.ts:667:9
+    665| 
+    666| function fail(code: SchedulerFailureCode, message: string): never {
+    667|   throw new SchedulerContractError(code, message);
+       |         ^
+    668| }
+    669| 
+ ❯ DeterministicScheduler.#settleNextInstant src/substrate/scheduler.ts:369:23
+ ❯ Object.settleNextInstant src/assembled/character.ts:45:66
+ ❯ Module.through src/test/fixtures/assembledGoalStrategyCurrent.ts:50:137
+ ❯ runCase src/test/assembledProtocolPermission.test.ts:44:3
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'UNKNOWN_EVENT_TYPE', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  08:27:24
+   Duration  67.45s (transform 3.34s, setup 0ms, collect 4.96s, tests 62.05s, environment 0ms, prepare 149ms)
+
+
+REPAIR before rerun: the edit script missed the source handler registration due to indentation; scheduler correctly rejected the new event as unhandled. Register it in the existing handler map and explicitly mark it compiler-input-only. Verified constructor, lifecycle, source admission, version flag and execution bindings directly before rerun. No comparison changes.
+M238 native-dynamic-handler-fix exit=0 elapsed=88.395s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledProtocolPermission.test.ts > goal238 native dynamic 82385ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 12 skipped (13)
+   Start at  08:29:03
+   Duration  87.82s (transform 3.36s, setup 0ms, collect 4.98s, tests 82.39s, environment 0ms, prepare 147ms)
+
+
+M238 controls-and-admission exit=1 elapsed=160.910s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledProtocolPermission.test.ts > goal238 native denied 83180ms
+ ✓ src/test/assembledProtocolPermission.test.ts > goal238 native default 22664ms
+ ✓ src/test/assembledProtocolPermission.test.ts > goal238 native staticDenied 24781ms
+ ✓ src/test/assembledProtocolPermission.test.ts > goal238 native silent 21943ms
+ × src/test/assembledProtocolPermission.test.ts > goal238 admission privacy and authenticated source 2269ms
+   → protocol permission complete action coverage
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProtocolPermission.test.ts > goal238 admission privacy and authenticated source
+SchedulerContractError: protocol permission complete action coverage
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ protocolPermissionSource src/assembled/protocolPermission.ts:13:125
+ ❯ Object.execute src/assembled/protocolPermission.ts:37:4
+ ❯ src/test/assembledProtocolPermission.test.ts:94:86
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 passed | 8 skipped (13)
+   Start at  08:30:45
+   Duration  160.31s (transform 3.36s, setup 0ms, collect 5.00s, tests 154.84s, environment 0ms, prepare 137ms)
+
+
+REPAIR before targeted boundary rerun: all five native arms pass. The standalone source-authentication test retained the old three-action cap, but the current actionDomain allows4 and this fixture declares4. Use the existing current cap4; production already uses model.actionLimit and is unchanged. Earlier prose saying a third action was imprecise: the full model has four declared actions, with two pursued routes. No native reruns needed.
+M238 admission-corrected-and-continuation exit=0 elapsed=140.507s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledProtocolPermission.test.ts > goal238 admission privacy and authenticated source 61562ms
+ ✓ src/test/assembledProtocolPermission.test.ts > goal238 fulfillment rollback and continuation 60761ms
+ ✓ src/test/assembledProtocolPermission.test.ts > goal238 retained 0.150 execution witness 12167ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 10 skipped (13)
+   Start at  08:34:03
+   Duration  139.94s (transform 3.36s, setup 0ms, collect 4.97s, tests 134.49s, environment 0ms, prepare 153ms)
+
+
+M238 types-final exit=0 elapsed=21.887s cap=120s timeout=False
+
+M238 boundaries exit=0 elapsed=3.688s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M238 research exit=1 elapsed=4.249s cap=180s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+REPAIR: research checker rejected the active card because its standard CURRENT obligation-count table was omitted. Restore unchanged0 active/18 conditional/0 unowned counts in final CURRENT; no obligation status changed.
+M238 research-final exit=0 elapsed=3.968s cap=180s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M238 staged-size exit=0 elapsed=0.857s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+PRESERVATION: original Campaign2/3/substrate/observation/semanticBinding/reference unchanged from ae7d4d43; M231/M233-237 evidence hashes match; eight evidence entries; planning/file/output assertions passed.
+Whitespace check flagged only verbatim tool diagnostics (blank source lines and trailing log newline). Preserve those raw diagnostics; check code/docs normally and logs with blank-at-eol/eof disabled.
+FINAL ACCOUNTING: measured=669.261s +10s plan-size/preservation/accounting allowance = 679.261s /1800s. All commands<=600s. No extension. Eight selected functional tests pass; passed cases not rerun.
