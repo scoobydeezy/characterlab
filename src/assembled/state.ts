@@ -1,3 +1,5 @@
+import {withItemWorldState} from './itemWorld';
+import {compileItemProbe} from './itemProbe';
 import {compileCriterionBase,legacyCriterionMemory} from './criterionSensing';
 import {rewardAnchor} from './rewardExperience';
 import {PROTECTION_CHANNEL} from './protectiveIdentity';
@@ -45,7 +47,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const row=(stable:CanonicalValue)=>rows.find(v=>key(f(v,1n))===key(stable))??invalidModel('missing cognitive state definition');
  const definition=(name:string)=>f(row(typedIdentifier(1027,text('definition/'+name))),4n);
  const originalPrior=await compilePredictionModel(predictionModelReviewSource());
- const prior=model.criterionSensing?{...originalPrior,base:compileCriterionBase(originalPrior.base)}:originalPrior;
+ const prior=model.criterionSensing?{...originalPrior,base:compileCriterionBase(originalPrior.base,model.itemWorld?compileItemProbe(originalPrior.base.probe,model.itemWorld):undefined)}:originalPrior;
  if(key(decodeCognitive(model.content.characterContentBytes()))!==key(decodeCognitive(prior.source.content)))invalidModel('cognitive character differs from inherited component');
  const contents=items(decodeCognitive(model.source.content),'set').map(v=>rec(v,170n));
  const tasks=contents.filter(v=>txt(id(f(v,2n)).payload)==='semantic-kind/task-commitment').map(content=>{
@@ -56,6 +58,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   return {key:taskKey,path,character,referent,specId,spec,predictionDefinitionId:f(spec,2n),minimum:f(spec,3n),maximum:f(spec,4n),activeFrom:from.value,deadline:deadline.value};
  }).sort((a,b)=>key(a.key)<key(b.key)?-1:1);
  const byKey=new Map(tasks.map(t=>[key(t.key),t]));
+ if(model.itemWorld){const target=tasks.find(t=>key(t.key)===key(model.itemWorld!.task))!;if(key(target.minimum)!==key({kind:'rational',numerator:1n,denominator:1n})||key(target.maximum)!==key(target.minimum))invalidModel('item location goal requires target1..1');}
  const C=tasks[0].character,identityKey=r(412,[C,typedIdentifier(1041,text('CommitmentFidelity'))]);
  if(model.tolerance&&!prior.base.reg.hasVariable(model.tolerance.variable))invalidModel('unknown tolerance regulatory variable');
  const identityK=readQ(f(rec(definition('task-reason-source'),436n),2n));
@@ -119,7 +122,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const qualified=model.eligibilityEnabled?withQualifiedIdentityState(recognized,identityKey,id(f(rec(f(identityRegistration,6n),322n),2n)),model.timeLimit,model.protection?r(412,[C,PROTECTION_CHANNEL],2):undefined):recognized;
  const believed=model.effectEvidence?withEffectBelief(qualified,C,model.effectEvidence):qualified;
  const associated=model.affectMemory?.learned?withAssociationState(believed,C,model.affectMemory.learned):believed;
- const ownedState=model.workMaintenance?withWorkMaintenanceState(associated,C,model.workMaintenance,tasks.length,model.timeLimit):associated;
+ const maintainedState=model.workMaintenance?withWorkMaintenanceState(associated,C,model.workMaintenance,tasks.length,model.timeLimit):associated;
+ const ownedState=model.itemWorld?withItemWorldState(maintainedState,model.itemWorld):maintainedState;
  const stateModel=model.extendedTime?Object.freeze({...ownedState,restoreState(bytes:Uint8Array){const s=restoreAuthoritativeState(decodeSuccessor(bytes));ownedState.validateState(s);return s;}}):ownedState;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);

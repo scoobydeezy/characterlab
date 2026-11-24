@@ -18,11 +18,11 @@ export function criterionSource(payload:CanonicalValue){
 export function criterionInteger(truth:bigint,bias:bigint){if(truth<0n||truth>100n||bias< -100n||bias>100n)fail('integer domain');const n=truth+bias;return n<0n?0n:n>100n?100n:n;}
 export function legacyCriterionObservation(value:CanonicalValue){const o=rec(value,203n);if(txt(f(o,11n))!==CRITERION_VERSION)fail('producer version');return replaceCriterionField(o,11n,text(LEGACY_PROBE_VERSION));}
 type Base=Awaited<ReturnType<typeof compilePredictionModel>>['base'];
-export function compileCriterionBase(base:Base):Base{
+export function compileCriterionBase(base:Base,override?:Base['probe']):Base{
  const v=rec(base.probe.variableDefinition,280n);if(key(f(v,1n))!==key({kind:'unsigned',value:10n})||key(f(v,2n))!==key({kind:'signed',value:0n})||key(f(v,3n))!==key({kind:'signed',value:100n}))fail('requires original scale10 domain0..100');
  const validateInput=(value:CanonicalValue)=>base.measurement.validateInput(legacyCriterionObservation(value));
  const validateOutput=(value:CanonicalValue)=>{const c=rec(value,337n);validateInput(f(c,2n));base.measurement.validateOutput(replaceCriterionField(c,2n,legacyCriterionObservation(f(c,2n))));};
- const probe={...base.probe,begin(instant:bigint){const original=base.probe.begin(instant);let bias=0n;return {...original,execute(...args:Parameters<typeof original.execute>){const [event]=args;if(event.phase===110n)bias=criterionSource(event.payload).bias;const result=original.execute(...args);if(event.phase!==120n||!result.outputs.length)return result;
+ const rawProbe=override??base.probe;const probe={...rawProbe,begin(instant:bigint){const original=rawProbe.begin(instant);let bias=0n;return {...original,execute(...args:Parameters<typeof original.execute>){const [event]=args;if(event.phase===110n)bias=criterionSource(event.payload).bias;const result=original.execute(...args);if(event.phase!==120n||!result.outputs.length)return result;
  const o=rec(result.outputs[0],203n),point=f(rec(f(o,6n),204n),2n);if(typeof point==='boolean'||point.kind!=='rational'||point.numerator*10n%point.denominator!==0n)fail('original exact point');
  const exact=point as Extract<CanonicalValue,{kind:'rational'}>,n=criterionInteger(exact.numerator*10n/exact.denominator,bias),q=rational(n,10n),interval=replaceCriterionField(replaceCriterionField(f(o,6n),2n,q),4n,q);
  return {...result,outputs:[replaceCriterionField(replaceCriterionField(o,6n,interval),11n,text(CRITERION_VERSION))]};}};}};

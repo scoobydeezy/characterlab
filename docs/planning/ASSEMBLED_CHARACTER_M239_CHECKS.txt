@@ -1,0 +1,92 @@
+M239 types-initial exit=2 elapsed=22.016s cap=120s timeout=False
+src/assembled/runtime.ts(284,44): error TS2339: Property 'kind' does not exist on type 'CanonicalValue'.
+  Property 'kind' does not exist on type 'false'.
+
+REPAIR before tests: type check caught missing Boolean narrowing on the new actual-output branch. Added the canonical-value guard; no behavior/comparison changes.
+M239 types-with-tests exit=2 elapsed=23.077s cap=120s timeout=False
+src/test/assembledItemAttainment.test.ts(85,441): error TS2353: Object literal may only specify known properties, and 'expected' does not exist in type 'RemovePatchOperation'.
+
+REPAIR before native run: removal-negative test used the set-operation expected shape; use the substrate RemovePatchOperation expectedOldValue. Production guard unchanged.
+Review repair before idempotent controls: a repeated delivery already at destination has no patch; preserve state directly rather than delegating an empty world-owner patch into unrelated inherited owners. Matched first delivery is unaffected; wrong-item/place/hidden controls exercise repetition.
+M239 native-matched exit=0 elapsed=109.280s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 native matched 102380ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  09:12:51
+   Duration  108.70s (transform 3.89s, setup 0ms, collect 5.85s, tests 102.38s, environment 0ms, prepare 142ms)
+
+
+Review repair before controls: exclude the configured cognitive reappraisal action from world movement admission. The physical contract forbids mental operations moving items; add its negative model-admission case. Existing physical fixture/model bytes and matched path unchanged.
+M239 controls-and-admission exit=0 elapsed=138.202s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 native wrongItem 75447ms
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 native wrongPlace 17504ms
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 native hidden 14323ms
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 native falsePositive 13222ms
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 native external 7670ms
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 model source and ownership boundaries 4015ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 8 skipped (14)
+   Start at  09:15:36
+   Duration  137.64s (transform 3.33s, setup 0ms, collect 4.96s, tests 132.18s, environment 0ms, prepare 150ms)
+
+
+Pre-recovery refinement: also inject a failure immediately after the new physical owner writes at3, proving new world location cannot partially commit. Existing genuine-fulfillment4 fault and restore3 checks remain; same file/time/output limits.
+Before final acceptance: carry the existing M237 denied-execution fixture through0.152 as one negative arm. Risk: a new physical owner could accidentally move an item even when actual433 contacts are zero; old0.151 regression cannot catch that new branch. Same target/body/laws/seed, model permission false, no new tuning. Original six cases/gates remain; one added negative within original budgets.
+M239 recovery-and-old-version exit=0 elapsed=118.245s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 rollback and continuation 93701ms
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 retained 0.151 witness 18488ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 12 skipped (14)
+   Start at  09:18:27
+   Duration  117.66s (transform 3.36s, setup 0ms, collect 4.99s, tests 112.19s, environment 0ms, prepare 149ms)
+
+
+M239 denied-location-control exit=0 elapsed=79.947s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledItemAttainment.test.ts > goal239 native blocked 73856ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  09:20:35
+   Duration  79.37s (transform 3.38s, setup 0ms, collect 5.04s, tests 73.86s, environment 0ms, prepare 158ms)
+
+
+M239 types-final exit=0 elapsed=22.334s cap=120s timeout=False
+
+M239 boundaries exit=0 elapsed=3.668s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M239 research exit=0 elapsed=3.932s cap=180s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+PASS preservation: Campaign2/3/substrate/observation/semanticBinding/reference unchanged from bff81b22; M237/M238 evidence hashes unchanged. Ten evidence entries, eleven production/test paths, planning line/byte and evidence budgets pass.
+M239 staged-size exit=0 elapsed=0.871s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+FINAL ACCOUNTING: 521.572s measured +10s plan-size/preservation/accounting allowance = 531.572s/1800s. Every command<=600s; no extensions; passed cases not rerun.
