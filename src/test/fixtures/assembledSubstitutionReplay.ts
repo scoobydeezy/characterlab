@@ -10,7 +10,8 @@ export const groups={
  A:['concentrated','knownFailure','deniedInfo','absentInfo','noDemand','unavailable','unseenTraining','withheldLearning'],
  B:['knownAlternative','correctedConcentrated','correctedDiversified','otherCue','restoredA','bothAvailable','withheldInformation']
 } as const;
-export type Case=typeof groups[keyof typeof groups][number];
+import {candidate249} from './assembledSubstitutionCurrent';
+export type Case=typeof groups[keyof typeof groups][number]|'diversified';
 export function fixture(name:Case){
  const b=prior('diversified'),concentrated=['concentrated','knownAlternative','knownFailure','deniedInfo','absentInfo','correctedConcentrated','restoredA','withheldInformation'].includes(name),corrected=['correctedConcentrated','correctedDiversified','otherCue'].includes(name),withheld=['withheldLearning','withheldInformation'].includes(name);
  const inputs=items(decode(b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')],t=at(a[0]);
@@ -27,6 +28,6 @@ export function fixture(name:Case){
  return {...b,s,d:{...b.d,orderedInputs:enc(list(inputs))}};
 }
 const models=new Map<string,ReturnType<typeof prepareCharacterModel>>();
-export async function start(name:Case){const b=fixture(name),k=key(decode(b.s.registry));let p=models.get(k);if(!p){p=prepareCharacterModel(b.s);models.set(k,p);}const m=await p;return {b,m,run:cachedMemory(await createCharacterRun(m,b.d))};}
+export async function start(name:Case){const b=candidate249(fixture(name),name),k=key(decode(b.s.registry));let p=models.get(k);if(!p){p=prepareCharacterModel(b.s);models.set(k,p);}const m=await p;return {b,m,run:cachedMemory(await createCharacterRun(m,b.d))};}
 export {through,rec,f,uint,items,key,decode,enc,list,text,signed,q,C,u,set,at};
 export type {CanonicalValue};

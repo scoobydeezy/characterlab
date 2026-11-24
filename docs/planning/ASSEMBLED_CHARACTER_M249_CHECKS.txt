@@ -1,0 +1,136 @@
+M249 types exit=0 elapsed=22.293s cap=180s timeout=False
+
+M249 acquisition-core exit=0 elapsed=360.810s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 A diversified
+M230 PASS diversified 1,1,1 1000,1000
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 A diversified 139790ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 A concentrated
+M230 PASS concentrated -1,-1,-1 1000,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 A concentrated 68066ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 A knownFailure
+M230 PASS knownFailure -1,-1,-1 1000,0
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 A knownFailure 68051ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 A knownAlternative
+M230 PASS knownAlternative 1,1,1 1000,1000
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 A knownAlternative 78589ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 47 skipped (51)
+   Start at  13:51:00
+   Duration  360.23s (transform 3.50s, setup 0ms, collect 5.24s, tests 354.50s, environment 0ms, prepare 142ms)
+
+
+M249 privacy-opportunity-demand exit=0 elapsed=341.927s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 B deniedInfo
+M230 PASS deniedInfo -1,-1,-1 1000,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 B deniedInfo 127132ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 B absentInfo
+M230 PASS absentInfo -1,-1,-1 1000,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 B absentInfo 68798ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 B unavailable
+M230 PASS unavailable -1,-1,-1 1000,1000
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 B unavailable 69321ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 B noDemand
+M230 PASS noDemand -1,-1,-1 1000,1000
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 B noDemand 70361ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 47 skipped (51)
+   Start at  13:57:12
+   Duration  341.36s (transform 3.52s, setup 0ms, collect 5.25s, tests 335.61s, environment 0ms, prepare 149ms)
+
+
+M249 withheld-learning-contest exit=0 elapsed=283.829s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 C withheldLearning
+M230 PASS withheldLearning -1,-1,-1 ,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 C withheldLearning 127014ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 C withheldInformation
+M230 PASS withheldInformation -1,-1,-1 ,
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 C withheldInformation 68695ms
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 C bothAvailable
+M230 PASS bothAvailable 1,1,1 1000,1000
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 C bothAvailable 81834ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 48 skipped (51)
+   Start at  14:03:06
+   Duration  283.26s (transform 3.50s, setup 0ms, collect 5.21s, tests 277.54s, environment 0ms, prepare 142ms)
+
+
+M249 privacy-mapping exit=0 elapsed=6.580s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > transfer249 privacy and bounded current coverage
+M249 GATE PASS11 cases; acquired alternatives, original stimuli, unknown/zero, withheld/availability/no-demand and exact permitted privacy
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > transfer249 privacy and bounded current coverage 308ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 50 skipped (51)
+   Start at  14:08:04
+   Duration  6.00s (transform 3.52s, setup 0ms, collect 5.25s, tests 309ms, environment 0ms, prepare 148ms)
+
+
+M249 rollback-recovery exit=0 elapsed=409.488s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 rollback after arbitration and learning
+M230 recovered after-arbitration
+
+stdout | src/test/assembledSubstitutionReplay.test.ts > replay230 rollback after arbitration and learning
+M230 recovered after-learning
+
+ ✓ src/test/assembledSubstitutionReplay.test.ts > replay230 rollback after arbitration and learning 403097ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 50 skipped (51)
+   Start at  14:08:19
+   Duration  408.92s (transform 3.52s, setup 0ms, collect 5.25s, tests 403.10s, environment 0ms, prepare 141ms)
+
+
+M249 boundaries exit=0 elapsed=3.820s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M249 research exit=0 elapsed=3.926s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M249 preservation exit=0 elapsed=0.977s cap=120s timeout=False
+M249 PRESERVATION PASS:3 test/helper files only; original builder and4 learning kernels identical to M230; production/frozen/formal/prior evidence unchanged;11 native records/hash scopes and2 rollback receipts verified; other11 explicit; document/artifact limits pass; 2915895 bytes
+
+M249 git-size exit=0 elapsed=0.846s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
