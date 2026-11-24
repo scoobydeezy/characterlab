@@ -1,30 +1,35 @@
-# Current work — Family12.2 accepted on0.155
-The character distinguishes felt pressure, retained importance, current urgency and
-motives from actionable reasons. Independent motives can support one action; one
-motive can support alternatives. Learned outcomes affect later use, and goals survive
-route changes until permitted evidence fulfills them.
-[M251 acceptance](ASSEMBLED_CHARACTER_M251_RESULT.md);
-[evidence](ASSEMBLED_CHARACTER_M251_EVIDENCE.json). Parentbca58303; card83b771ba.
+# Current work — M252 Family12.4 integration intake
+Owner2026-11-24 authorizes work toward Family12.4 completion under bounded self-approval.
+The shared character already learns and corrects permitted evidence. Native confidence,
+hidden-cause/mistaken-attribution, repeated-error and controllability coverage need review.
+Family12.2 accepted0.155 in738d2a8e. One character integrating Campaigns0–3 remains the aim.
 
-## Completed under owner self-approval
-All six pinned clauses accepted. G1 Need/acquired motives M245/M246; G2 body/priority
-M247/M248; G3 all22 substitution cases M249/M250. No required case waived.
-M241–243 bound goal evidence carries through an exact seven-file diff review and
-M246's actual cross-version bound-path comparison; all later production is unchanged.
-Source/reason/probability meaning is preserved, without a cross-model winner claim.
-MeanHistory/Residual, reward0.6,0.85/SourceCoverage and reference laws remain fixed.
-Historical failures, nulls, alternative laws, original controls and hashes retained.
+## Active card — before implementation
+Capability: resolve the nine pinned12.4 requirements into retained evidence and exact
+missing production/receiving connections, then select the first behavioral package.
+Scope: F12.4:1..9; C-BELIEF and relevant LEARN/causal evidence. No broader family audit.
+Read original Brief/Architecture, BELIEF/LEARN/attribution contracts and M125/126,
+M29/35/36/51/79/114/116 and recent action-outcome evidence where applicable.
+Consult MEC001/002/006 and EXP001/002/005 before any seam; preserve alternatives.
+Comparison: distinguish native live consumers from comparison-only diagnostics;
+confidence cannot be inferred solely from stored support or falsely treated as accuracy.
+Trace each requirement through admitted evidence, owned estimate/attribution and its
+actual appraisal/reason/decision consumer; retain unknown/zero and hidden-truth boundaries.
+Files: CURRENT, existing reconciliation F12.4 row, one compact result/evidence/check log.
+Zero production/test/formal changes or runtime runs in this intake. Source analysis90min;
+verification300s total including10s packaging,120s/check; <=20artifacts/5MiB.
+Checks: exact nine-clause mapping, cited source hashes, document budgets, research,
+preservation and Git-size. No historical suite replay or speculative verifier track.
+Done: finite requirement table and next bounded behavioral card with predeclared
+comparison. Genuine unsupported law/authority conflicts remain explicit; self-approval
+permits ordinary implementation/comparison amendments, not shrinking final scope.
+Continue into the next package when the evidence determines a lawful implementation.
 
-## Verification and boundaries
-M250 verification1489.944s/1800s. M251 finite evidence review passes: six clauses,
-333 lossless blocks,11 unchanged kernels, exact bound-path disposition. Research,
-preservation/size checks pass;21.576s/300s including10s packaging.
-Zero production/test changes or runtime experiments in M251; no new verifier/ledger.
-Stop at this family decision. No next milestone activated. Final whole-candidate replay,
-assembly acceptance, UI, broad12.7/12.9 claims and item catalog remain separate.
-Conditional RO001/008/010/012/014/015/020 and closed RO019/021 triggers remain.
-E75/P33/N11/U13=132;21members/15families;accepted5/15 on recorded versions:
-12.1@0.144,12.2@0.155,12.3@0.126,12.5@0.129,12.14@0.135. Assembly OPEN.
+## Preserved state
+Model0.155/reference0.85/SourceCoverage fixed until a justified versioned seam amendment.
+21members/15families/132clauses; E75/P33/N11/U13;accepted5/15;assembly OPEN.
+Family12.4 currently E3/7/9,P1/2/4/5/6/8; these are scoped evidence, not acceptance.
+No UI, item catalog, autonomous peers, reduction or whole-character acceptance.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
