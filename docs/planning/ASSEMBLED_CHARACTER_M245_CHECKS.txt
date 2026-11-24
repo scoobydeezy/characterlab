@@ -1,0 +1,994 @@
+M245 types exit=0 elapsed=22.665s cap=300s timeout=False
+
+M245 primary exit=0 elapsed=68.042s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledNeedCurrent.test.ts > need245 primary current Need acts without task adoption
+M245 PRIMARY PASS current0.154; pressure49/60; two Need reasons/options; no task; P1/2 each; actual execution
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 primary current Need acts without task adoption 62023ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  11:44:36
+   Duration  67.49s (transform 3.36s, setup 0ms, collect 5.02s, tests 62.02s, environment 0ms, prepare 146ms)
+
+
+M245 joint exit=1 elapsed=81.128s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledNeedCurrent.test.ts > need245 joint independent sources change actual decision probabilities 75024ms
+   → expected [ { kind: 'record', …(2) }, …(1) ] to deeply equal [ { kind: 'record', …(2) }, …(1) ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledNeedCurrent.test.ts > need245 joint independent sources change actual decision probabilities
+AssertionError: expected [ { kind: 'record', …(2) }, …(1) ] to deeply equal [ { kind: 'record', …(2) }, …(1) ]
+
+- Expected
++ Received
+
+  Array [
+    Object {
+      "fields": Map {
+        1n => Object {
+          "fields": Map {
+            1n => Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1002n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1037n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1038n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "character/bridge-subject",
+                      },
+                    },
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1027n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "definition/protocol-contact-one",
+                  },
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "CharacterId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ProtocolActionDefinitionId",
+                    "required": true,
+                  },
+                ],
+                "name": "ProceduralCandidateKey",
+                "schemaVersion": 1n,
+                "typeId": 395n,
+              },
+            },
+            2n => Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1002n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1037n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1038n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "character/bridge-subject",
+                      },
+                    },
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1002n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1037n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1038n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "content/task-b",
+                      },
+                    },
+                  },
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "CharacterId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "TaskReferent",
+                    "required": true,
+                  },
+                ],
+                "name": "TaskCommitmentKey",
+                "schemaVersion": 1n,
+                "typeId": 371n,
+              },
+            },
+            3n => Object {
+              "kind": "unsigned",
+              "value": 1n,
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "CandidateKey",
+                "required": true,
+              },
+              Object {
+                "id": 2n,
+                "name": "TaskCommitmentKey",
+                "required": true,
+              },
+              Object {
+                "id": 3n,
+                "name": "SourceRole",
+                "required": true,
+              },
+            ],
+            "name": "TaskRawSignalKey",
+            "schemaVersion": 1n,
+            "typeId": 401n,
+          },
+        },
+        2n => Object {
+          "denominator": 1n,
+          "kind": "rational",
+          "numerator": 1n,
+        },
+        3n => Object {
+          "fields": Map {
+            1n => Object {
+              "entries": Array [
+                Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "unsigned",
+                        "value": 1n,
+                      },
+                      2n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                          2n => Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1164n,
+                            "payload": Object {
+                              "kind": "unsigned",
+                              "value": 12n,
+                            },
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "VariantTag",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "ObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "FeatureObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 4n,
+                              "name": "EventFeatureObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 5n,
+                              "name": "PerceivedBindingId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 6n,
+                              "name": "ClassificationEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 7n,
+                              "name": "EventClassificationEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 8n,
+                              "name": "RecognitionCueEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 9n,
+                              "name": "RecognitionResolutionId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 10n,
+                              "name": "CausalRoleEvidenceId",
+                              "required": false,
+                            },
+                          ],
+                          "name": "CharacterEvidenceRef",
+                          "schemaVersion": 1n,
+                          "typeId": 237n,
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "VariantTag",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "ObservationReference",
+                          "required": false,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "QualificationOccurrenceId",
+                          "required": false,
+                        },
+                      ],
+                      "name": "ReasonEvidenceAtom",
+                      "schemaVersion": 1n,
+                      "typeId": 399n,
+                    },
+                  },
+                  Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 1n,
+                  },
+                ],
+                Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "unsigned",
+                        "value": 1n,
+                      },
+                      2n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                          2n => Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1164n,
+                            "payload": Object {
+                              "kind": "unsigned",
+-                             "value": 34n,
++                             "value": 50n,
+                            },
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "VariantTag",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "ObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "FeatureObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 4n,
+                              "name": "EventFeatureObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 5n,
+                              "name": "PerceivedBindingId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 6n,
+                              "name": "ClassificationEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 7n,
+                              "name": "EventClassificationEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 8n,
+                              "name": "RecognitionCueEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 9n,
+                              "name": "RecognitionResolutionId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 10n,
+                              "name": "CausalRoleEvidenceId",
+                              "required": false,
+                            },
+                          ],
+                          "name": "CharacterEvidenceRef",
+                          "schemaVersion": 1n,
+                          "typeId": 237n,
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "VariantTag",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "ObservationReference",
+                          "required": false,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "QualificationOccurrenceId",
+                          "required": false,
+                        },
+                      ],
+                      "name": "ReasonEvidenceAtom",
+                      "schemaVersion": 1n,
+                      "typeId": 399n,
+                    },
+                  },
+                  Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 1n,
+                  },
+                ],
+              ],
+              "kind": "map",
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "Weights",
+                "required": true,
+              },
+            ],
+            "name": "ReasonEvidenceBasis",
+            "schemaVersion": 1n,
+            "typeId": 400n,
+          },
+        },
+      },
+      "kind": "record",
+      "schema": Object {
+        "fields": Array [
+          Object {
+            "id": 1n,
+            "name": "Key",
+            "required": true,
+          },
+          Object {
+            "id": 2n,
+            "name": "SignedStrength",
+            "required": true,
+          },
+          Object {
+            "id": 3n,
+            "name": "EvidenceBasis",
+            "required": true,
+          },
+        ],
+        "name": "TaskRawSignal",
+        "schemaVersion": 1n,
+        "typeId": 402n,
+      },
+    },
+    Object {
+      "fields": Map {
+        1n => Object {
+          "fields": Map {
+            1n => Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1002n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1037n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1038n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "character/bridge-subject",
+                      },
+                    },
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1027n,
+                  "payload": Object {
+                    "kind": "text",
+                    "value": "definition/protocol-contact-one",
+                  },
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "CharacterId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "ProtocolActionDefinitionId",
+                    "required": true,
+                  },
+                ],
+                "name": "ProceduralCandidateKey",
+                "schemaVersion": 1n,
+                "typeId": 395n,
+              },
+            },
+            2n => Object {
+              "fields": Map {
+                1n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1002n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1037n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1038n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "character/bridge-subject",
+                      },
+                    },
+                  },
+                },
+                2n => Object {
+                  "kind": "typedIdentifier",
+                  "namespaceId": 1002n,
+                  "payload": Object {
+                    "kind": "typedIdentifier",
+                    "namespaceId": 1037n,
+                    "payload": Object {
+                      "kind": "typedIdentifier",
+                      "namespaceId": 1038n,
+                      "payload": Object {
+                        "kind": "text",
+                        "value": "content/task-b",
+                      },
+                    },
+                  },
+                },
+              },
+              "kind": "record",
+              "schema": Object {
+                "fields": Array [
+                  Object {
+                    "id": 1n,
+                    "name": "CharacterId",
+                    "required": true,
+                  },
+                  Object {
+                    "id": 2n,
+                    "name": "TaskReferent",
+                    "required": true,
+                  },
+                ],
+                "name": "TaskCommitmentKey",
+                "schemaVersion": 1n,
+                "typeId": 371n,
+              },
+            },
+            3n => Object {
+              "kind": "unsigned",
+              "value": 2n,
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "CandidateKey",
+                "required": true,
+              },
+              Object {
+                "id": 2n,
+                "name": "TaskCommitmentKey",
+                "required": true,
+              },
+              Object {
+                "id": 3n,
+                "name": "SourceRole",
+                "required": true,
+              },
+            ],
+            "name": "TaskRawSignalKey",
+            "schemaVersion": 1n,
+            "typeId": 401n,
+          },
+        },
+        2n => Object {
+          "denominator": 1200n,
+          "kind": "rational",
+          "numerator": 109n,
+        },
+        3n => Object {
+          "fields": Map {
+            1n => Object {
+              "entries": Array [
+                Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "unsigned",
+                        "value": 1n,
+                      },
+                      2n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                          2n => Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1115n,
+                            "payload": Object {
+                              "kind": "unsigned",
+                              "value": 3n,
+                            },
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "VariantTag",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "ObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "FeatureObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 4n,
+                              "name": "EventFeatureObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 5n,
+                              "name": "PerceivedBindingId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 6n,
+                              "name": "ClassificationEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 7n,
+                              "name": "EventClassificationEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 8n,
+                              "name": "RecognitionCueEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 9n,
+                              "name": "RecognitionResolutionId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 10n,
+                              "name": "CausalRoleEvidenceId",
+                              "required": false,
+                            },
+                          ],
+                          "name": "CharacterEvidenceRef",
+                          "schemaVersion": 1n,
+                          "typeId": 237n,
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "VariantTag",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "ObservationReference",
+                          "required": false,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "QualificationOccurrenceId",
+                          "required": false,
+                        },
+                      ],
+                      "name": "ReasonEvidenceAtom",
+                      "schemaVersion": 1n,
+                      "typeId": 399n,
+                    },
+                  },
+                  Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 1n,
+                  },
+                ],
+                Array [
+                  Object {
+                    "fields": Map {
+                      1n => Object {
+                        "kind": "unsigned",
+                        "value": 1n,
+                      },
+                      2n => Object {
+                        "fields": Map {
+                          1n => Object {
+                            "kind": "unsigned",
+                            "value": 1n,
+                          },
+                          2n => Object {
+                            "kind": "typedIdentifier",
+                            "namespaceId": 1115n,
+                            "payload": Object {
+                              "kind": "unsigned",
+-                             "value": 32n,
++                             "value": 48n,
+                            },
+                          },
+                        },
+                        "kind": "record",
+                        "schema": Object {
+                          "fields": Array [
+                            Object {
+                              "id": 1n,
+                              "name": "VariantTag",
+                              "required": true,
+                            },
+                            Object {
+                              "id": 2n,
+                              "name": "ObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 3n,
+                              "name": "FeatureObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 4n,
+                              "name": "EventFeatureObservationId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 5n,
+                              "name": "PerceivedBindingId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 6n,
+                              "name": "ClassificationEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 7n,
+                              "name": "EventClassificationEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 8n,
+                              "name": "RecognitionCueEvidenceId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 9n,
+                              "name": "RecognitionResolutionId",
+                              "required": false,
+                            },
+                            Object {
+                              "id": 10n,
+                              "name": "CausalRoleEvidenceId",
+                              "required": false,
+                            },
+                          ],
+                          "name": "CharacterEvidenceRef",
+                          "schemaVersion": 1n,
+                          "typeId": 237n,
+                        },
+                      },
+                    },
+                    "kind": "record",
+                    "schema": Object {
+                      "fields": Array [
+                        Object {
+                          "id": 1n,
+                          "name": "VariantTag",
+                          "required": true,
+                        },
+                        Object {
+                          "id": 2n,
+                          "name": "ObservationReference",
+                          "required": false,
+                        },
+                        Object {
+                          "id": 3n,
+                          "name": "QualificationOccurrenceId",
+                          "required": false,
+                        },
+                      ],
+                      "name": "ReasonEvidenceAtom",
+                      "schemaVersion": 1n,
+                      "typeId": 399n,
+                    },
+                  },
+                  Object {
+                    "denominator": 1n,
+                    "kind": "rational",
+                    "numerator": 1n,
+                  },
+                ],
+              ],
+              "kind": "map",
+            },
+          },
+          "kind": "record",
+          "schema": Object {
+            "fields": Array [
+              Object {
+                "id": 1n,
+                "name": "Weights",
+                "required": true,
+              },
+            ],
+            "name": "ReasonEvidenceBasis",
+            "schemaVersion": 1n,
+            "typeId": 400n,
+          },
+        },
+      },
+      "kind": "record",
+      "schema": Object {
+        "fields": Array [
+          Object {
+            "id": 1n,
+            "name": "Key",
+            "required": true,
+          },
+          Object {
+            "id": 2n,
+            "name": "SignedStrength",
+            "required": true,
+          },
+          Object {
+            "id": 3n,
+            "name": "EvidenceBasis",
+            "required": true,
+          },
+        ],
+        "name": "TaskRawSignal",
+        "schemaVersion": 1n,
+        "typeId": 402n,
+      },
+    },
+  ]
+
+ ❯ src/test/assembledNeedCurrent.test.ts:41:290
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 skipped (10)
+   Start at  11:45:55
+   Duration  80.52s (transform 3.37s, setup 0ms, collect 5.02s, tests 75.02s, environment 0ms, prepare 151ms)
+
+
+M245 correspondence exit=1 elapsed=6.167s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledNeedCurrent.test.ts > need245 correspondence resolves retained joint evidence identities
+   → expected [] to have a length of 1 but got +0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledNeedCurrent.test.ts > need245 correspondence resolves retained joint evidence identities
+AssertionError: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ src/test/assembledNeedCurrent.test.ts:52:121
+
+ ❯ src/test/assembledNeedCurrent.test.ts:49:30
+ ❯ taskMeaning src/test/assembledNeedCurrent.test.ts:47:67
+ ❯ compareJoint src/test/assembledNeedCurrent.test.ts:59:13
+ ❯ src/test/assembledNeedCurrent.test.ts:64:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  11:48:42
+   Duration  5.57s (transform 3.34s, setup 0ms, collect 4.97s, tests 180ms, environment 0ms, prepare 144ms)
+
+
+M245 correspondence-resolved exit=0 elapsed=6.198s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledNeedCurrent.test.ts > need245 correspondence resolves retained joint evidence identities
+M245 CORRESPONDENCE PASS saved native outputs; each source resolved; full task meaning equal; probabilities377/432,55/432 versus1
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 correspondence resolves retained joint evidence identities
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  11:49:18
+   Duration  5.63s (transform 3.35s, setup 0ms, collect 4.99s, tests 179ms, environment 0ms, prepare 170ms)
+
+
+M245 controls-continuation exit=1 elapsed=86.806s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledNeedCurrent.test.ts > need245 response zero unknown boundaries
+M245 BOUNDARY PASS one response vs positive/no-response vs known zero vs unknown; no surrogate task
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 response zero unknown boundaries 71203ms
+stdout | src/test/assembledNeedCurrent.test.ts > need245 hidden bodily truth aliases
+M245 PRIVACY PASS physical11/19, same selected bin, same Need/reason/probability
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 hidden bodily truth aliases 6798ms
+ × src/test/assembledNeedCurrent.test.ts > need245 exact repeat restore rollback and current physical perception 2758ms
+   → only an active quiescent run can produce a continuation save
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledNeedCurrent.test.ts > need245 exact repeat restore rollback and current physical perception
+SaveContractError: only an active quiescent run can produce a continuation save
+ ❯ saveFail src/substrate/persistence.ts:267:9
+    265| 
+    266| function saveFail(message: string): never {
+    267|   throw new SaveContractError(message);
+       |         ^
+    268| }
+    269| 
+ ❯ Module.createCanonicalSave src/substrate/persistence.ts:91:46
+ ❯ Object.save src/assembled/runtime.ts:550:14
+ ❯ Object.save src/assembled/character.ts:48:20
+ ❯ src/test/assembledNeedCurrent.test.ts:79:264
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed | 8 skipped (11)
+   Start at  11:49:34
+   Duration  86.22s (transform 3.37s, setup 0ms, collect 5.02s, tests 80.76s, environment 0ms, prepare 142ms)
+
+
+M245 continuation-corrected exit=0 elapsed=119.307s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledNeedCurrent.test.ts > need245 exact repeat restore rollback and current physical perception
+M245 CONTINUATION PASS repeat/restore exact at every remaining instant; atomic receiving rollback; current movement and probe120 10
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 exact repeat restore rollback and current physical perception 113274ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  11:51:36
+   Duration  118.74s (transform 3.35s, setup 0ms, collect 4.99s, tests 113.27s, environment 0ms, prepare 150ms)
+
+
+M245 final-types exit=0 elapsed=22.358s cap=300s timeout=False
+
+M245 boundaries exit=0 elapsed=3.740s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M245 research exit=0 elapsed=3.880s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M245 preservation exit=0 elapsed=0.283s cap=120s timeout=False
+M245 PRESERVATION PASS unchanged production/formal/frozen controls; exactly2 new test files; document/evidence bounds pass
+
+M245 git-size exit=0 elapsed=0.854s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
