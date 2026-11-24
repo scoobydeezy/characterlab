@@ -1,0 +1,180 @@
+M246 types-instrument exit=2 elapsed=23.356s cap=300s timeout=False
+src/assembled/model.ts(358,108): error TS2554: Expected 2 arguments, but got 3.
+src/assembled/state.ts(61,72): error TS2345: Argument of type 'CanonicalValue | undefined' is not assignable to parameter of type 'CanonicalValue'.
+  Type 'undefined' is not assignable to type 'CanonicalValue'.
+
+M246 types-tests exit=0 elapsed=22.291s cap=300s timeout=False
+
+M246 primary exit=0 elapsed=179.139s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiSensor.test.ts > multi246 primary acquired families retain independent shared and covered sources
+M246 PRIMARY PASS four acquired source arrangements; scalar302 probe110; exact485/576,91/576; distinct Commitment/Value; actual execution
+
+ ✓ src/test/assembledMultiSensor.test.ts > multi246 primary acquired families retain independent shared and covered sources 172932ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  12:19:14
+   Duration  178.56s (transform 3.45s, setup 0ms, collect 5.13s, tests 172.93s, environment 0ms, prepare 147ms)
+
+
+M246 controls exit=0 elapsed=294.865s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiSensor.test.ts > multi246 controls value linkage privacy sign unknown zero and historical correspondence
+M246 CONTROLS PASS original0.145 correspondence; Value-only change485/576 to1/2; hidden exact; missing/zero/opposite/absent distinctions
+
+ ✓ src/test/assembledMultiSensor.test.ts > multi246 controls value linkage privacy sign unknown zero and historical correspondence 288699ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  12:22:37
+   Duration  294.30s (transform 3.35s, setup 0ms, collect 5.01s, tests 288.70s, environment 0ms, prepare 144ms)
+
+
+M246 continuation-admission-ordering exit=1 elapsed=252.052s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledMultiSensor.test.ts > multi246 admission repeat restore learned-state rejection and rollback 190221ms
+   → promise resolved "true" instead of rejecting
+ × src/test/assembledMultiSensor.test.ts > multi246 joint scalar observation and action settle together 55720ms
+   → expected true to deeply equal { kind: 'rational', …(2) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMultiSensor.test.ts > multi246 admission repeat restore learned-state rejection and rollback
+AssertionError: promise resolved "true" instead of rejecting
+
+- Expected: 
+[Error: rejected promise]
+
++ Received: 
+true
+
+ ❯ src/test/assembledMultiSensor.test.ts:73:432
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledMultiSensor.test.ts > multi246 joint scalar observation and action settle together
+AssertionError: expected true to deeply equal { kind: 'rational', …(2) }
+
+- Expected: 
+Object {
+  "denominator": 1n,
+  "kind": "rational",
+  "numerator": 3n,
+}
+
++ Received: 
+true
+
+ ❯ src/test/assembledMultiSensor.test.ts:91:498
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 8 skipped (10)
+   Start at  12:28:40
+   Duration  251.47s (transform 3.38s, setup 0ms, collect 5.03s, tests 245.94s, environment 0ms, prepare 143ms)
+
+
+M246 saved-joint exit=0 elapsed=8.920s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiSensor.test.ts > multi246 saved joint measurement correspondence
+M246 SAVED JOINT PASS actual scalar observation endpoints; choice/execution8; prior native restore was exact; intervening scheduled events 5
+
+ ✓ src/test/assembledMultiSensor.test.ts > multi246 saved joint measurement correspondence 2828ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  12:35:23
+   Duration  8.34s (transform 3.39s, setup 0ms, collect 5.05s, tests 2.83s, environment 0ms, prepare 150ms)
+
+
+M246 rollback-item-preservation exit=1 elapsed=92.313s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiSensor.test.ts > multi246 rollback and admission follow-up
+M246 ROLLBACK/ADMISSION PASS fault intercepted at receiving, exact prior instant restored; old/malformed bindings and wrong scalar phase reject
+
+ ✓ src/test/assembledMultiSensor.test.ts > multi246 rollback and admission follow-up 80306ms
+ × src/test/assembledMultiSensor.test.ts > multi246 item-path preservation and live Need survive the successor 5889ms
+   → required field ModelIdentity is absent
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledMultiSensor.test.ts > multi246 item-path preservation and live Need survive the successor
+CanonicalEncodingError: required field ModelIdentity is absent
+ ❯ fail src/substrate/canonicalEncoding.ts:430:9
+    428| 
+    429| function fail(message: string): never {
+    430|   throw new CanonicalEncodingError(message);
+       |         ^
+    431| }
+    432| 
+ ❯ encodeRecord src/substrate/canonicalEncoding.ts:214:27
+ ❯ encodeValue src/substrate/canonicalEncoding.ts:182:7
+ ❯ Module.canonicalEncode src/substrate/canonicalEncoding.ts:101:3
+ ❯ Module.dataKey src/campaign2/canonicalData.ts:6:57
+ ❯ src/test/assembledMultiSensor.test.ts:86:102
+ ❯ normalized src/test/assembledMultiSensor.test.ts:86:67
+ ❯ src/test/assembledMultiSensor.test.ts:87:222
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 10 skipped (12)
+   Start at  12:35:57
+   Duration  91.72s (transform 3.39s, setup 0ms, collect 5.05s, tests 86.19s, environment 0ms, prepare 145ms)
+
+
+M246 item-preservation-corrected exit=0 elapsed=97.288s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledMultiSensor.test.ts > multi246 item-path preservation and live Need survive the successor
+M246 ITEM/NEED PASS old/new deterministic state/output and identity-normalized trace; item probe120; exact restore; current Need49/60 two reasons/P1/2 execution
+
+ ✓ src/test/assembledMultiSensor.test.ts > multi246 item-path preservation and live Need survive the successor 91188ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  12:39:08
+   Duration  96.72s (transform 3.39s, setup 0ms, collect 5.07s, tests 91.19s, environment 0ms, prepare 144ms)
+
+
+M246 final-types exit=0 elapsed=22.140s cap=300s timeout=False
+
+M246 boundaries exit=0 elapsed=3.732s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M246 research exit=0 elapsed=4.047s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M246 preservation exit=0 elapsed=0.467s cap=120s timeout=False
+M246 PRESERVATION PASS frozen sources unchanged;8 kernels unchanged since M223;exactly7 production+2 test files;only planned new contract;document/evidence bounds pass
+
+M246 git-size exit=0 elapsed=0.851s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+

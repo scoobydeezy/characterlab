@@ -25,7 +25,8 @@ const suppressed=()=>carrier(1);
 export function compileItemProbe(base:ReturnType<typeof compileProbeExecution>,world:ItemWorld,postExecution=false){
  const {C,channel,variableDefinition,definitionId,available,permitted}=base;
  const scale=f(variableDefinition,1n);if(typeof scale==='boolean'||scale.kind!=='unsigned')fail('bad item sensor scale');
- const path=itemPath(world.item),selector=path.selectors[0],pattern:StatePathPattern={rootStateTypeId:1600n,fieldId:1n,selectors:[{kind:'exact',selector}]};
+ const {item,destination}=world;if(!world.task||!item||!destination)fail('item probe requires criterion binding');
+ const path=itemPath(item!),selector=path.selectors[0],pattern:StatePathPattern={rootStateTypeId:1600n,fieldId:1n,selectors:[{kind:'exact',selector}]};
  return Object.freeze({C,channel,variableDefinition,definitionId,available,permitted,path,pattern,eventTypes:()=>PROBE_EVENT_NAMES.map((_,i)=>eventType(i)),
   validateReadEvidence(reads:readonly ActualReadRecord[]){
    if(reads.length!==(available?1:0))fail('probe trace read count');
@@ -48,7 +49,7 @@ export function compileItemProbe(base:ReturnType<typeof compileProbeExecution>,w
       if(!available){consumeRuntimeOrdinalPadding();return {outputs,reads,freeze:undefined,plan:emit(event,1,suppressed())};}
       const projection=new ContractReadProjection(state,[pattern],{displacement:{kind:'direct',accessorId:PROBE_ACCESSOR,path}}),leaf=projection.read('displacement');reads.push(...projection.actualReadRecords());
       if(leaf===undefined||!world.places.some(p=>key(p)===key(leaf)))fail('missing item location');
-      const n=key(leaf)===key(world.destination)?10n:0n;
+      const n=key(leaf)===key(destination!)?10n:0n;
       const truth=probeRecord(334,[typedIdentifier(1123,unsigned(allocator.allocateRuntimeId())),definitionId,signed(instant),signed(n)]);outputs.push(truth);
       return {outputs,reads,freeze:undefined,plan:emit(event,1,permitted?carrier(2,[[2n,truth],[3n,definitionId]]):suppressed())};
      }

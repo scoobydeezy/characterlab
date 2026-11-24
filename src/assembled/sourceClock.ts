@@ -25,7 +25,7 @@ export async function compileSourceClock(model:Awaited<ReturnType<typeof compile
   if(typeof at==='boolean'||at.kind!=='signed'||typeof phase==='boolean'||phase.kind!=='unsigned')fail('time/phase scalar');
   const time=simInstant((at as Extract<CanonicalValue,{kind:'signed'}>).value),p=(phase as Extract<CanonicalValue,{kind:'unsigned'}>).value,kind=id(event);
   const cognitive=key(kind)===key(DELIBERATION_EVENT),probe=key(kind)===key(PROBE_SOURCE_EVENT);
-  if(!cognitive&&!probe)fail('original kind');if(time<1n||time>(probe?model.timeLimit-1n:model.timeLimit)||p!==(cognitive?40n:model.jointCriterion?120n:110n))fail('time/phase domain');
+  if(!cognitive&&!probe)fail('original kind');if(time<1n||time>(probe?model.timeLimit-1n:model.timeLimit)||p!==(cognitive?40n:model.jointCriterion&&model.itemWorld?.task?120n:110n))fail('time/phase domain');
   if(key(dependencies)!==key(list([])))fail('empty dependencies required');
   if(cognitive){const cue=rec(payload,377n);model.content.validateRecordRoles(enc(cue));if(key(f(cue,2n))!==key(typedIdentifier(1027,text('definition/task-workspace'))))fail('agenda');}
   else if(key(f(rec(model.criterionSensing?criterionSource(payload).cue:payload,333n),1n))!==key(typedIdentifier(1027,text('definition/regulatory-diagnostic-probe'))))fail('probe definition');

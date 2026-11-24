@@ -1,5 +1,5 @@
 import {ACTION_BODY,ACTION_BODY_EVENT} from './actionBody';
-export const ITEM_EXECUTION='item-location/0.2';
+export const ITEM_EXECUTION='item-location/0.2',SENSOR_BINDING='item-location/0.3';
 /** Data-defined physical locations; one owner inside the assembled state. */
 import {list,text,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState,StateAuthorityRegistry,applyStatePatch,restoreAuthoritativeState,statePathValue,type StatePath,type StatePatch,type ActualReadRecord} from '../substrate/state';
@@ -16,13 +16,13 @@ export const ITEM_SOURCE=sid(1001,'event/item-location-source'),ITEM_OWNER=sid(1
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b);
 const require=(b:boolean,s:string)=>{if(!b)invalidModel('item location '+s);};
 export const itemPath=(item:CanonicalValue):StatePath=>({rootStateTypeId:1600n,fieldId:1n,selectors:[{kind:'mapKey',key:item}]});
-export function compileItemWorld(v:CanonicalValue,actions:readonly CanonicalValue[],tasks:readonly CanonicalValue[]){
- const a=items(v,'list');require(a.length===5&&txt(a[0])===ITEM_WORLD,'declaration');
+export function compileItemWorld(v:CanonicalValue,actions:readonly CanonicalValue[],tasks:readonly CanonicalValue[],sensorBinding=false){
+ const a=items(v,'list');require(a.length===5&&(txt(a[0])===ITEM_WORLD||sensorBinding&&txt(a[0])===SENSOR_BINDING),'declaration');
  const domain=(v:CanonicalValue,ns:bigint)=>{const rows=items(v,'set');require(rows.length>=1&&rows.length<=1024&&new Set(rows.map(key)).size===rows.length,'domain capacity/duplicates');for(const row of rows){const i=id(row);require(i.namespaceId===ns&&typeof i.payload!=='boolean'&&i.payload.kind==='text'&&i.payload.value.length>0&&i.payload.value.length<=128,'nominal item/place identity');}return rows;};
  const objects=domain(a[1],1601n),places=domain(a[2],1602n),rows=items(a[3],'list'),seen=new Set<string>();require(rows.length>=1&&rows.length<=actions.length,'move capacity');
  const moves=rows.map(v=>{const r=items(v,'list');require(r.length===3&&actions.some(x=>eq(x,r[0]))&&objects.some(x=>eq(x,r[1]))&&places.some(x=>eq(x,r[2]))&&!seen.has(key(r[0])),'move action/item/place');seen.add(key(r[0]));return {action:r[0],item:r[1],place:r[2]};});
- const c=items(a[4],'list');require(c.length===3&&tasks.some(x=>eq(x,c[0]))&&objects.some(x=>eq(x,c[1]))&&places.some(x=>eq(x,c[2])),'criterion task/item/place');
- return {objects,places,moves,task:c[0],item:c[1],destination:c[2]};
+ const c=items(a[4],'list'),unbound=sensorBinding&&txt(a[0])===SENSOR_BINDING&&c.length===0;require(unbound||c.length===3&&tasks.some(x=>eq(x,c[0]))&&objects.some(x=>eq(x,c[1]))&&places.some(x=>eq(x,c[2])),'criterion task/item/place');
+ return {objects,places,moves,task:unbound?undefined:c[0],item:unbound?undefined:c[1],destination:unbound?undefined:c[2]};
 }
 export type ItemWorld=ReturnType<typeof compileItemWorld>;
 export function itemLocationSource(v:CanonicalValue,s:ItemWorld){const a=items(v,'list');require(a.length===3&&txt(a[0])===ITEM_WORLD&&s.objects.some(x=>eq(x,a[1]))&&s.places.some(x=>eq(x,a[2])),'source item/place');return {item:a[1],place:a[2]};}

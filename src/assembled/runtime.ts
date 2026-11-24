@@ -131,7 +131,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
  const predictionRuntime=(model.criterionSensing?createCriterionPredictionExecution:createPredictionExecution)(prediction,modelIdentity,inputs.runIdentity.value,[]);
- const trace=compileCharacterTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel,model.jointCriterion?POST_ITEM_PROBE:model.itemWorld?ITEM_PROBE:model.criterionSensing?CRITERION_VERSION:LEGACY_PROBE_VERSION);
+ const trace=compileCharacterTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel,model.itemWorld?.task?(model.jointCriterion?POST_ITEM_PROBE:ITEM_PROBE):model.criterionSensing?CRITERION_VERSION:LEGACY_PROBE_VERSION);
  stateModel.validateState(initialState);domains.validateStatic(initialState);domains.validateReferences(initialState,0n);
  const stress=model.body?.stress?createStressExecution(model.body.stress,component.tasks[0].character,stateModel,modelIdentity,inputs.runIdentity.value):undefined;
  const initial=inputs.initial;
