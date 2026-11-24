@@ -29,3 +29,8 @@ This demonstrates revisable communicative behavior. It does not establish altere
 arbitration, diagnostic seeking, calibrated probabilities, exhaustive causes, source
 reliability or autonomous partners. MEC001/002/006 and RO010 limits remain; no research
 verdict or denominator change. Original M35/M29 contracts and comparisons are controls.
+
+Integration repair before retry: 0.157 communication reads admitted expression records
+with assembled receivingRecord, including Protection426/2. Earlier models keep their
+old reader; their pre-existing modern-expression rejection is preserved as a defect
+of those frozen versions. This is schema consumption, not a new expression law.

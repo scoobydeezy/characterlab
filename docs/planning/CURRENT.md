@@ -29,13 +29,24 @@ Same-instant diagnostic at6 must not rewrite expression90 before learning140.
 Hidden physical success versus failure with identical evidence must preserve the
 causal inference/expression claim/recipient projection; physical outputs may differ.
 
+## Recorded repair/amendment before retry
+First primary71.780s failed at expression426/2 rejected by old426/1 reader.
+0.157 uses the existing assembled receiving decoder; older versions stay frozen.
+Setup review also found forced failure without a physical obstruction. Add existing
+world obstruction4 by a declared stand-in, no witness/cause access; diagnostics5 are
+misleading,7 correct. Hidden control removes obstruction, same perceived reports.
+Only report6/8 must be physically applied; attempt4 is blocked. A-only opportunities
+4/6/8 declared explicitly. Ordinary topic runs on0.157; original0.30 control retained,
+0.156 rejects new topic (its pre-existing modern-expression defect is not rewritten).
+No laws, seeds, probability targets, scope or budget change. Failure log preserved.
+
 ## Checks, risks and budgets
 1 types; primary live connection and denied correction (<=600s each).
 2 missing outcome, same-instant correction, delivery/access denial and hidden-world
 controls: distinguish absent from zero and private interpretation from public report.
 3 independent repeat and save6 continuation: exact state/output/trace/save at every
 later settled instant through exhausted queue, <=600s. No truncated scenario.
-4 old0.156 topic rejection/unchanged ordinary communication; admission invalid task,
+4 old0.156 topic rejection/old0.30 and current ordinary communication; admission invalid task,
 invalid ticket and contrary-causal rejection; unchanged inferCause original controls.
 5 boundary/research/preservation/git-size. One job; <=1800s total incl10s packaging;
 <=600s/job, <=20 artifacts/5MiB. Original dependency closures unchanged; retain their
