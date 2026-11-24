@@ -1,0 +1,54 @@
+M243 types exit=0 elapsed=23.057s cap=120s timeout=False
+
+M243 correspondence exit=0 elapsed=94.066s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledCriterionCurrent.test.ts > goal243 reuse current external 59195ms
+ ✓ src/test/assembledCriterionCurrent.test.ts > goal243 native externalHidden 6881ms
+ ✓ src/test/assembledCriterionCurrent.test.ts > goal243 native absentExternal 6430ms
+ ✓ src/test/assembledCriterionCurrent.test.ts > goal243 native falseCriterion 7609ms
+ ✓ src/test/assembledCriterionCurrent.test.ts > goal243 native adoptionCriterion 7824ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 7 skipped (12)
+   Start at  11:14:34
+   Duration  93.49s (transform 3.42s, setup 0ms, collect 5.10s, tests 87.94s, environment 0ms, prepare 147ms)
+
+
+M243 privacy-continuation exit=0 elapsed=81.742s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledCriterionCurrent.test.ts > goal243 hidden privacy and retained evidence 1307ms
+ ✓ src/test/assembledCriterionCurrent.test.ts > goal243 repeat and continuation 74406ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 10 skipped (12)
+   Start at  11:16:31
+   Duration  81.17s (transform 3.35s, setup 0ms, collect 5.00s, tests 75.71s, environment 0ms, prepare 136ms)
+
+
+M243 boundaries exit=0 elapsed=3.649s cap=90s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M243 research exit=0 elapsed=3.882s cap=90s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M243 preservation exit=0 elapsed=0.381s cap=90s timeout=False
+PASS unchanged production/control/formal/fixture trees and four prior evidence files; exactly one test path; document limits; 3 artifacts/220199 bytes; five cases plus privacy/continuation.
+M243 staged-git-size exit=0 elapsed=0.842s cap=90s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
