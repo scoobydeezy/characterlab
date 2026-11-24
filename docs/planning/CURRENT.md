@@ -1,41 +1,54 @@
-# Current work — M240 complete
-An action and its criterion observation now share one instant in one character.
-Execution moves the item; ordinary perception can fulfill its goal in that instant,
-stopping the next pursuit. Hidden attainment alone cannot fulfill it.
-[Result](ASSEMBLED_CHARACTER_M240_RESULT.md);
-[evidence](ASSEMBLED_CHARACTER_M240_EVIDENCE.json).
-Parent830f3cce; preimplementation card/contractcbba7bd3.
-Character/registry0.153; item-location-probe/0.2;9 production/test paths.
-One state/scheduler/save; same laws, owners, domains and item-location semantics.
+# Current work — M241 active
+Item movement will consume the character's existing completed physical assessment.
+Contact alone must not move an item when skill or physical opportunity prevents it.
+Parent091c48e2; one model/state/scheduler/save, no new owner or psychology.
 
-## Evidence and interpretation
-Nonsocial B1..1/deadline101, body10, empty learned/goals; seed7;
-reference0.85/SourceCoverage0.5, SeparateGoalPlan/Factored/TwoFailures unchanged.
-Deliberation40 and probe120 coexist; execution110 precedes the physical read.
-Joint140 candidates use the same prior state and merge only disjoint owned writes.
-Probe accounting retains exactly7 runtime allocations/14 descendants.
-Seven native cases pass: matched, blocked, external, hidden/absent external,
-false criterion, adoption-time criterion. Positive evidence at new adoption leaves
-it Open; later positive evidence fulfills. Subsequent unseen removal does not reopen.
-Six unmodified original cases match goal/action/truth/criterion at all three frames
-(original1..3 -> native2..4); bootstrap1/explicit relocations remain declared extras.
-Hidden/absent terminal state bytes agree; all outputs agree except three stress
-causal event IDs, each mapped through its actual appraisal trace. Raw mismatch kept.
-Wrong phase/duplicate kind and old-version joint input are rejected.
-Faults during identity and goal settlement roll back prior state/output/trace and clock.
-Repeat/restore2 reproduce state/output/trace/save at3/4/101 and terminal bytes.
-Old0.152 M239 matched terminal remains byte-identical; control trees untouched.
-Ten milestone tests/repository checks pass in802.773s/1800s; no extension.
-One source-trace defect and test setup/performance repairs are recorded in result.
+## Bounded card — before implementation
+Capabilities: competence/physical feasibility -> item location -> perceived goal
+fulfillment and subsequent pursuit. Character/registry0.154; item-location/0.2.
+Contract ASSEMBLED_ITEM_EXECUTION_CONTRACT.md. Preserve prior0.152/0.153 behavior.
+MEC011/019/020, EXP013; FND1..6; family12.2/12.7; RO012/014/019/020 unchanged.
+Six production/test paths: model,runtime,itemWorld,traceBinding plus fixture/test.
+No body, skill, obstruction or learning law changes. No new component or registry.
+Move after authenticated action-body-effect110, using its actual Applied/Queued
+assessment (protocol contact, skill, motor and obstruction gates). Body delay is
+body-delivery timing; accepted item placement stays110 before criterion120.
+Withheld/Blocked or zero-contact execution never moves items. External placement
+uses the same owner independently. No reports are authored by the scenario.
 
-## Exact remaining work
-Resolve competence-to-location correspondence, then the remaining original cases
-and meaningful alternatives. Six projections are not complete original replay.
-One known instrument/task predicate is not general multi-object goal recognition.
-No catalog expansion, UI, family closure or reduction follows this pass.
-Family12.2/12.7 and final assembly OPEN; denominator and dispositions unchanged.
-MEC019/020, EXP013 and RO012/014/019/020 retain their scoped requirements.
-E75/P33/N11/U13=132;21members/15families; accepted4/15.
+## Predeclared comparison
+M240 matched scenario: nonsocial B1..1/deadline101, body10, zero body dose/delay,
+empty learned/goals, seed7; reference0.85/SourceCoverage0.5,
+SeparateGoalPlan/Factored/TwoFailures, development4, practiceOFF unchanged.
+Seven native arms: capable, difficulty1, external opportunity denied, protocol
+permission denied, no-criterion difficulty1, no-criterion opportunity denied,
+and external placement with no route. K0 and impairment0 remain fixed.
+Capable/difficulty1/opportunity-denied compare the same contact2 and chosen action;
+live criterion3 is positive only for capable. It fulfills3 and suppresses choice4;
+failed arms stay Open and continue. Protocol denial has contact0, no placement.
+External placement still fulfills without an action. No-criterion failure pair
+retains identical cognitive state/decisions/evidence despite distinct private causes.
+Original unmodified fulfilled, hiddenCause and retained controls compare goal,
+selected route/action, execution success and criterion presence at all3 original
+instants (native2..4). Native bootstrap1 and explicit relocation4 are declared extras.
+No-criterion arms have no relocation, so all physical truth remains false.
+Full original replay, alternative laws and family acceptance remain open.
+
+## Checks / risks / limits
+Assert live chosen action, actual skill/opportunity report, item predicate and goal
+consumer before claims; trace actual433 -> body-effect assessment -> owned move
+-> probe120 -> goal140 -> next decision. No private cause/ID injected into beliefs.
+Check false gate, foreign report/outcome/action and duplicate effect rejection;
+source admission cannot author internal effect events. Preserve original controls.
+Repeat/restore beforejoint3, exact state/output/trace/save3/4/101; injected fault
+after item movement rolls back state/output/trace/clock. Old0.153 matched exact
+terminal and old0.153 incompetent-but-moving control make the changed seam explicit.
+Types, boundaries, research, preservation and staged Git-size check once as needed.
+One long job, <=600s/command, <=1800s cumulative verification; <=12 code/test paths,
+<=20 evidence files/5MiB. Record failure/repair before targeted rerun; no blind retries.
+Done only when the native causal gates, original projections and controls pass.
+At limits checkpoint; never remove scope or retune laws to achieve a pass.
+E75/P33/N11/U13=132;21members/15families; accepted4/15. No UI/catalog/reduction.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
