@@ -1,3 +1,5 @@
+import {ACTION_BODY,ACTION_BODY_EVENT} from './actionBody';
+export const ITEM_EXECUTION='item-location/0.2';
 /** Data-defined physical locations; one owner inside the assembled state. */
 import {list,text,type CanonicalValue} from '../substrate/canonicalEncoding';
 import {AuthoritativeState,StateAuthorityRegistry,applyStatePatch,restoreAuthoritativeState,statePathValue,type StatePath,type StatePatch,type ActualReadRecord} from '../substrate/state';
@@ -37,17 +39,27 @@ export function withItemWorldState(base:ReturnType<typeof compileCampaign2StateM
  const result=base.applyPatch(without(state),p,owner,scope),next=new AuthoritativeState([...result.state.entries(),...state.entries().filter(e=>fresh(e.path))]);local(next);return {...result,state:next};
  }});
 }
-export function createItemWorld(s:ItemWorld,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue){
+export function createItemWorld(s:ItemWorld,C:CanonicalValue,stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,competentItems=false){
  let active=false,at=0n;const used=new Set<bigint>();const fail=(why:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','item location '+why);};
  function move(event:ScheduledEvent,state:AuthoritativeState,item:CanonicalValue,place:CanonicalValue,input:CanonicalValue,source?:CanonicalValue){
   const path=itemPath(item),prior=stateModel.read(state,path),reads:ActualReadRecord[]=[{accessorId:ITEM_ACCESSOR,path,presence:prior.presence,value:prior.value,derivedSources:[]}];
   const patch:StatePatch={operations:eq(prior.value!,place)?[]:[{kind:'set',path,expected:{presence:true,value:prior.value!},newValue:place}]};
   const result=patch.operations.length?stateModel.applyPatch(state,patch,ITEM_OWNER,{writableRoots:[1600n],targetPaths:[path]}):{state,diffs:[]};
-  return {nextState:result.state,trace:()=>traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/item-location'),seamVersion:ITEM_WORLD,recordKind:event.eventTypeId,subjectIds:[id(C)],sourceRecordIds:source?[id(source)]:[],registeredReadDomain:[pattern(path)],actualReadRecords:reads,inputProjection:list([input,item,place]),outputProjection:list([]),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:result.diffs,emittedEvents:[],invariantResults:[]})};
+  return {nextState:result.state,trace:()=>traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/item-location'),seamVersion:competentItems?ITEM_EXECUTION:ITEM_WORLD,recordKind:event.eventTypeId,subjectIds:[id(C)],sourceRecordIds:source?[id(source)]:[],registeredReadDomain:[pattern(path)],actualReadRecords:reads,inputProjection:list([input,item,place]),outputProjection:list([]),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:result.diffs,emittedEvents:[],invariantResults:[]})};
  }
  return Object.freeze({
  begin(instant:bigint){if(active)fail('already active');active=true;at=instant;used.clear();},close(){active=false;used.clear();},prepareCommit(){if(!active||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unconsumed source');},
- execution(event:ScheduledEvent,state:AuthoritativeState,output:CanonicalValue){if(!active||event.dueAt!==at||event.phase!==110n||!eq(event.eventTypeId,sid(1001,'event/protocol-execution')))fail('execution origin');const o=rec(output,433n),action=protocolAttemptAction(f(o,2n)),binding=s.moves.find(m=>eq(m.action,action));return binding&&uint(f(o,3n))>0n?move(event,state,binding.item,binding.place,output,f(o,1n)):undefined;},
+ execution(event:ScheduledEvent,state:AuthoritativeState,output:CanonicalValue){if(competentItems)fail('legacy execution disabled');if(!active||event.dueAt!==at||event.phase!==110n||!eq(event.eventTypeId,sid(1001,'event/protocol-execution')))fail('execution origin');const o=rec(output,433n),action=protocolAttemptAction(f(o,2n)),binding=s.moves.find(m=>eq(m.action,action));return binding&&uint(f(o,3n))>0n?move(event,state,binding.item,binding.place,output,f(o,1n)):undefined;},
+ /** Called only after the body owner authenticated and completed this event. */
+ effect(event:ScheduledEvent,state:AuthoritativeState,outputs:readonly CanonicalValue[]){
+  if(!competentItems||!active||event.dueAt!==at||event.phase!==110n||!eq(event.eventTypeId,ACTION_BODY_EVENT)||used.has(event.eventId))fail('effect origin/version/duplicate');
+  const o=rec(event.payload,433n),attempt=rec(f(o,2n),432n),action=protocolAttemptAction(attempt),rows=outputs.filter(v=>typeof v!=='boolean'&&v.kind==='list'&&eq(v.items[0],text(ACTION_BODY)));
+  if(rows.length!==1)fail('one completed physical assessment required');const a=items(rows[0],'list');
+  if(a.length!==7||!eq(a[1],f(o,1n))||!eq(a[2],f(attempt,1n))||!eq(a[3],action)||typeof a[4]==='boolean'||a[4].kind!=='rational'||a[4].numerator<0n)fail('physical assessment association');
+  const status=txt(a[5]),count=uint(f(o,3n));if(!['Applied','Queued','Blocked','Withheld'].includes(status)||status==='Withheld'&&count!==0n||['Applied','Queued'].includes(status)&&count===0n)fail('physical assessment disposition');
+  used.add(event.eventId);const binding=s.moves.find(m=>eq(m.action,action));
+  return binding&&count>0n&&['Applied','Queued'].includes(status)?move(event,state,binding.item,binding.place,list([o,rows[0]]),f(o,1n)):undefined;
+ },
  execute(context:EventHandlerContext<AuthoritativeState>){const e=context.event;if(!active||e.dueAt!==at||e.phase!==100n||!eq(e.eventTypeId,ITEM_SOURCE)||used.has(e.eventId)||!originals.some(x=>key(scheduledEventValue(x))===key(scheduledEventValue(e))))fail('unbound source');used.add(e.eventId);const b=itemLocationSource(e.payload,s),result=move(e,context.state,b.item,b.place,e.payload);return {nextState:result.nextState,outputs:[],emittedEvents:[],traceContributions:[],traceFactory(children:readonly ScheduledEvent[]){if(children.length)fail('source children');return [result.trace()];}};}
  });
 }

@@ -1,54 +1,42 @@
-# Current work — M241 active
-Item movement will consume the character's existing completed physical assessment.
-Contact alone must not move an item when skill or physical opportunity prevents it.
-Parent091c48e2; one model/state/scheduler/save, no new owner or psychology.
+# Current work — M241 complete
+The character's existing physical assessment now governs whether an item moves.
+Insufficient skill or obstruction leaves it unmoved despite attempted contact.
+Successful placement can be perceived and fulfill the goal, stopping later pursuit.
+[Result](ASSEMBLED_CHARACTER_M241_RESULT.md);
+[evidence](ASSEMBLED_CHARACTER_M241_EVIDENCE.json).
+Parent091c48e2; preimplementation card/contract58286d90.
+Character/registry0.154; item-location/0.2; six production/test paths.
+One state/owner/scheduler/save; no new psychology, success formula or catalog.
 
-## Bounded card — before implementation
-Capabilities: competence/physical feasibility -> item location -> perceived goal
-fulfillment and subsequent pursuit. Character/registry0.154; item-location/0.2.
-Contract ASSEMBLED_ITEM_EXECUTION_CONTRACT.md. Preserve prior0.152/0.153 behavior.
-MEC011/019/020, EXP013; FND1..6; family12.2/12.7; RO012/014/019/020 unchanged.
-Six production/test paths: model,runtime,itemWorld,traceBinding plus fixture/test.
-No body, skill, obstruction or learning law changes. No new component or registry.
-Move after authenticated action-body-effect110, using its actual Applied/Queued
-assessment (protocol contact, skill, motor and obstruction gates). Body delay is
-body-delivery timing; accepted item placement stays110 before criterion120.
-Withheld/Blocked or zero-contact execution never moves items. External placement
-uses the same owner independently. No reports are authored by the scenario.
+## Evidence and interpretation
+Nonsocial B1..1/deadline101, body10, zero body dose/delay, empty learned/goals;
+seed7; reference0.85/SourceCoverage0.5, SeparateGoalPlan/Factored/TwoFailures;
+development4, K0, impairment0, practiceOFF. Difficulty0 versus1 uses the existing law.
+Seven native cases pass. Same chosen action/contact2: capable placement fulfills3,
+then no choice4; insufficient skill/opportunity deny movement and preserve pursuit.
+Protocol denial has contact0/no placement. External placement works without action.
+No-criterion skill/opportunity failure pair has identical full state4/terminal and
+permitted output under the preserved observer projection, despite private causes.
+Trace: actual433 -> authenticated physical assessment110 -> item owner110 ->
+criterion120 -> memory/prediction/goal140 -> next decision. No private item IDs leak.
+Original fulfilled/hiddenCause/retained match goal, exact first route/action,
+physical success/destination and criterion at each original instant (native2..4).
+Bootstrap1 and explicit relocation4 remain declared extras, not whole-model equality.
+Receiver association/duplicate/zero-contact guards and internal-source rejection pass.
+Fault after assessed movement rolls back state/output/trace/clock. Repeat/restore2
+match full state/output/trace/save3/4/101. Old0.153 matched terminal is byte-identical.
+Old0.153 incompetent-but-moving limitation remains captured as a historical control.
+Ten functional tests, captured-route identity, types and repository checks pass;
+verification 489.012s/1800s, no extension. One negative-test error expectation repaired.
 
-## Predeclared comparison
-M240 matched scenario: nonsocial B1..1/deadline101, body10, zero body dose/delay,
-empty learned/goals, seed7; reference0.85/SourceCoverage0.5,
-SeparateGoalPlan/Factored/TwoFailures, development4, practiceOFF unchanged.
-Seven native arms: capable, difficulty1, external opportunity denied, protocol
-permission denied, no-criterion difficulty1, no-criterion opportunity denied,
-and external placement with no route. K0 and impairment0 remain fixed.
-Capable/difficulty1/opportunity-denied compare the same contact2 and chosen action;
-live criterion3 is positive only for capable. It fulfills3 and suppresses choice4;
-failed arms stay Open and continue. Protocol denial has contact0, no placement.
-External placement still fulfills without an action. No-criterion failure pair
-retains identical cognitive state/decisions/evidence despite distinct private causes.
-Original unmodified fulfilled, hiddenCause and retained controls compare goal,
-selected route/action, execution success and criterion presence at all3 original
-instants (native2..4). Native bootstrap1 and explicit relocation4 are declared extras.
-No-criterion arms have no relocation, so all physical truth remains false.
-Full original replay, alternative laws and family acceptance remain open.
-
-## Checks / risks / limits
-Assert live chosen action, actual skill/opportunity report, item predicate and goal
-consumer before claims; trace actual433 -> body-effect assessment -> owned move
--> probe120 -> goal140 -> next decision. No private cause/ID injected into beliefs.
-Check false gate, foreign report/outcome/action and duplicate effect rejection;
-source admission cannot author internal effect events. Preserve original controls.
-Repeat/restore beforejoint3, exact state/output/trace/save3/4/101; injected fault
-after item movement rolls back state/output/trace/clock. Old0.153 matched exact
-terminal and old0.153 incompetent-but-moving control make the changed seam explicit.
-Types, boundaries, research, preservation and staged Git-size check once as needed.
-One long job, <=600s/command, <=1800s cumulative verification; <=12 code/test paths,
-<=20 evidence files/5MiB. Record failure/repair before targeted rerun; no blind retries.
-Done only when the native causal gates, original projections and controls pass.
-At limits checkpoint; never remove scope or retune laws to achieve a pass.
-E75/P33/N11/U13=132;21members/15families; accepted4/15. No UI/catalog/reduction.
+## Exact remaining work
+Replay the remaining original goal/route cases and meaningful alternatives on the
+current assembled model. This closes the bounded competence-to-location seam,
+not full goal-strategy replay or family12.2/12.7 acceptance. Broader domains remain
+in final replay; this witness uses zero body dose/delay and one known task predicate.
+No general object-recognition claim, catalog expansion, UI or reduction.
+MEC011/019/020, EXP013, RO012/014/019/020 and foundation constraints remain.
+E75/P33/N11/U13=132;21members/15families; accepted4/15; final assembly OPEN.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

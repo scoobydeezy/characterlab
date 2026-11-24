@@ -1,0 +1,107 @@
+M241 types exit=0 elapsed=22.006s cap=120s timeout=False
+
+M241 native exit=0 elapsed=158.616s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 native capable 72366ms
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 native incompetent 15283ms
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 native obstructed 15201ms
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 native denied 15167ms
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 native hiddenIncompetent 13133ms
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 native hiddenObstructed 13088ms
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 native external 8238ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed | 5 skipped (12)
+   Start at  10:16:38
+   Duration  158.04s (transform 3.42s, setup 0ms, collect 5.11s, tests 152.48s, environment 0ms, prepare 149ms)
+
+
+M241 correspondence-boundaries exit=1 elapsed=66.884s cap=240s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledItemCompetence.test.ts > goal241 original correspondence privacy and boundaries 60750ms
+   → expected [Function] to throw error including 'original kind' but got 'unknown record schema 403/4'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledItemCompetence.test.ts > goal241 original correspondence privacy and boundaries
+AssertionError: expected [Function] to throw error including 'original kind' but got 'unknown record schema 403/4'
+
+Expected: "original kind"
+Received: "unknown record schema 403/4"
+
+ ❯ src/test/assembledItemCompetence.test.ts:100:74
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 14 skipped (15)
+   Start at  10:19:47
+   Duration  66.30s (transform 3.40s, setup 0ms, collect 5.06s, tests 60.75s, environment 0ms, prepare 162ms)
+
+
+
+Negative-test repair before rerun: a forged ACTION_BODY source containing the modern actual433 was rejected first by the governed input codec (unknown record403/4), before original-kind admission. Preserve that exact rejection; additionally submit the same forbidden event with canonical empty payload to reach and assert the original-kind boundary. No production, scenario, law or acceptance change. Original projections/privacy/receiver guards passed before this final assertion.
+M241 correspondence-boundary-repair exit=0 elapsed=67.934s cap=240s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 original correspondence privacy and boundaries 61876ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  10:21:52
+   Duration  67.37s (transform 3.39s, setup 0ms, collect 5.05s, tests 61.88s, environment 0ms, prepare 149ms)
+
+
+M241 persistence-prior exit=0 elapsed=109.402s cap=500s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 rollback repeat and continuation 84149ms
+ ✓ src/test/assembledItemCompetence.test.ts > goal241 retained version and former competence gap 19127ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 13 skipped (15)
+   Start at  10:23:18
+   Duration  108.83s (transform 3.40s, setup 0ms, collect 5.07s, tests 103.28s, environment 0ms, prepare 150ms)
+
+
+M241 types-final exit=0 elapsed=21.988s cap=120s timeout=False
+
+
+Review correction: native tests asserted the exact first action but the original projection asserted only action presence. Add exact source route1/none assertion to the original test and verify it directly from the already captured unmodified source traces; no scenario rerun or evidence replacement. This closes the predeclared selected-route identity check.
+M241 captured-route-identity exit=0 elapsed=1.133s cap=60s timeout=False
+fulfilled [0,1,0] equals native first-route mapping
+hiddenCause [0,1,1] equals native first-route mapping
+retained [0,1,1] equals native first-route mapping
+
+M241 types-route-assertion exit=0 elapsed=22.117s cap=120s timeout=False
+
+M241 boundaries exit=0 elapsed=3.703s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M241 research exit=0 elapsed=4.050s cap=180s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M241 preservation exit=0 elapsed=0.328s cap=60s timeout=False
+PASS frozen trees/prior evidence;6 production/test paths; planning limits; 3 evidence files/645040 bytes.
+M241 git-size exit=0 elapsed=0.851s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
