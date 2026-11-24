@@ -8,6 +8,7 @@ import {DISPLAY} from '../../assembled/strategy';
 import {prepareCharacterModel,createCharacterRun} from '../../assembled/character';
 import {cachedMemory} from './assembledMemoryFinal';
 import {restoreAuthoritativeState} from '../../substrate/state';
+import {candidate248,consumed248} from './assembledPriorityReplay';
 export type Options={importance?:number|null;initialUrgency?:number;adoptionVisible?:boolean;urgencyVisible?:boolean;omitAt?:number};
 export function fixture(o:Options={}){
  const b=prior({goals:true}),original=items(decode(b.d.orderedInputs),'list'),adopt=items(original.find(v=>key(items(v,'list')[2])===key(PRIORITY_DISPLAY))!,'list'),ps=items(items(adopt[3],'list')[1],'list'),task=items(ps[0],'list')[0];
@@ -25,7 +26,7 @@ export function fixture(o:Options={}){
  return {...b,task,importance,urgencies,d:{...b.d,orderedInputs:enc(list(rows))}};
 }
 let prepared:ReturnType<typeof prepareCharacterModel>|undefined;
-export async function start(o:Options={}){const b=fixture(o),m=await(prepared??(prepared=prepareCharacterModel(b.s)));return {b,m,run:cachedMemory(await createCharacterRun(m,b.d))};}
+export async function start(o:Options={}){const b=candidate248(fixture(o)),m=await(prepared??(prepared=prepareCharacterModel(b.s)));return {b,m,run:cachedMemory(await createCharacterRun(m,b.d))};}
 export type Run=Awaited<ReturnType<typeof start>>['run'];
 export async function through(run:Run,t:bigint){for(let n=0;run.snapshot().clock<t;n++){if(n>=40||!await run.settleNextInstant())throw Error('M222 did not reach '+t);}if(run.snapshot().clock!==t)throw Error('M222 skipped instant');}
 export function capture(run:Run,task:CanonicalValue,t:number){
@@ -34,6 +35,7 @@ export function capture(run:Run,task:CanonicalValue,t:number){
  const operand=items(items(items(report,'list')[2],'list').find(v=>key(items(v,'list')[0])===key(task))!,'list');
  const d=rec(os.find(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===409n&&at(f(v,2n))===BigInt(t))!,409n),ctx=rec(f(d,3n),408n),raw=rec(f(ctx,2n),403n),ns=items(f(ctx,3n),'list'),status=rec(f(d,4n),419n);
  const prob=uint(f(status,1n))===3n?items(f(rec(f(status,2n),420n),2n),'list').map(v=>f(rec(v,421n),2n)):[];
+ consumed248({d,os});
  return {operand,d,raw,ns,prob,state:restoreAuthoritativeState(decode(run.snapshot().state)).read(importancePath(task)),os};
 }
 export {decode,items,key,enc,list,text,u,signed,C,rec,f,at,q};
