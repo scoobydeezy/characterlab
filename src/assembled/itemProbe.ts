@@ -1,3 +1,4 @@
+export const POST_ITEM_PROBE='item-location-probe/0.2';
 import {simInstant} from '../substrate/time';
 /** M239 bounded successor of campaign2/probeExecution at bff81b22: world read only. */
 import {canonicalEncode,record,unsigned,signed,list,text,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
@@ -21,7 +22,7 @@ const eventType=(i:number)=>atom(1001,PROBE_EVENT_NAMES[i]);
 function fail(s:string):never {throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION',s);}
 function carrier(tag:number,fields:readonly [bigint,CanonicalValue][]=[]){return record(schemas.find(s=>s.typeId===335n)!,new Map([[1n,unsigned(tag)],...fields]));}
 const suppressed=()=>carrier(1);
-export function compileItemProbe(base:ReturnType<typeof compileProbeExecution>,world:ItemWorld){
+export function compileItemProbe(base:ReturnType<typeof compileProbeExecution>,world:ItemWorld,postExecution=false){
  const {C,channel,variableDefinition,definitionId,available,permitted}=base;
  const scale=f(variableDefinition,1n);if(typeof scale==='boolean'||scale.kind!=='unsigned')fail('bad item sensor scale');
  const path=itemPath(world.item),selector=path.selectors[0],pattern:StatePathPattern={rootStateTypeId:1600n,fieldId:1n,selectors:[{kind:'exact',selector}]};
@@ -38,7 +39,7 @@ export function compileItemProbe(base:ReturnType<typeof compileProbeExecution>,w
    function emit(source:ScheduledEvent,index:number,payload:CanonicalValue){return stage(source,[{dueAt:simInstant(instant),phase:index>=6?130n:119n+BigInt(index),eventTypeId:eventType(index),payload,dependencies:list([])}]);}
    return Object.freeze({
     execute(event:ScheduledEvent,state:AuthoritativeState,allocator:{allocateRuntimeId():bigint}){
-     live();const index=PROBE_EVENT_NAMES.indexOf(txt(event.eventTypeId.payload));if(index<0||event.dueAt!==instant||event.phase!==(index===0?110n:index>=6?130n:119n+BigInt(index)))fail('probe slot');
+     live();const index=PROBE_EVENT_NAMES.indexOf(txt(event.eventTypeId.payload));if(index<0||event.dueAt!==instant||event.phase!==(index===0?(postExecution?120n:110n):index>=6?130n:119n+BigInt(index)))fail('probe slot');
      if(index===0){if(sourceUsed)fail('repeated probe source');sourceUsed=true;}else{const expected=generated.get(event.eventId);if(!expected||key(scheduledEventValue(expected))!==key(scheduledEventValue(event)))fail('unadmitted probe child');generated.delete(event.eventId);}
      let paddingRemaining=index===0&&!available?1:index===1&&!permitted?2:index>=6?1:0;
      const consumeRuntimeOrdinalPadding=():void=>{if(paddingRemaining<=0)fail('illegal padding slot');paddingRemaining--;allocator.allocateRuntimeId();};

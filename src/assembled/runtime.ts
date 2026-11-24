@@ -1,3 +1,4 @@
+import {POST_ITEM_PROBE} from './itemProbe';
 import {createItemWorld,ITEM_SOURCE,ITEM_PROBE} from './itemWorld';
 import {createProtocolPermission,PROTOCOL_PERMISSION_SOURCE,PROTOCOL_PERMISSION_VERSION} from './protocolPermission';
 import {CRITERION_VERSION,LEGACY_PROBE_VERSION} from './criterionSensing';
@@ -130,7 +131,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  const probeModel=base.probe,measurement=base.measurement,domains=base.domains,shared=bindings.admission,evaluator=bindings.evaluator;
  const memoryRuntime=createMemoryExecution(memory,measurement.validateOutput,modelIdentity,inputs.runIdentity.value,[]);
  const predictionRuntime=(model.criterionSensing?createCriterionPredictionExecution:createPredictionExecution)(prediction,modelIdentity,inputs.runIdentity.value,[]);
- const trace=compileCharacterTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel,model.itemWorld?ITEM_PROBE:model.criterionSensing?CRITERION_VERSION:LEGACY_PROBE_VERSION);
+ const trace=compileCharacterTraceBinding(modelIdentity,inputs.runIdentity.value,probeModel,model.jointCriterion?POST_ITEM_PROBE:model.itemWorld?ITEM_PROBE:model.criterionSensing?CRITERION_VERSION:LEGACY_PROBE_VERSION);
  stateModel.validateState(initialState);domains.validateStatic(initialState);domains.validateReferences(initialState,0n);
  const stress=model.body?.stress?createStressExecution(model.body.stress,component.tasks[0].character,stateModel,modelIdentity,inputs.runIdentity.value):undefined;
  const initial=inputs.initial;
@@ -140,7 +141,10 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
  let exposureSource:ReturnType<NonNullable<typeof inputs.hiddenExposure>['begin']>|undefined;
  let probe:ReturnType<typeof probeModel.begin>|undefined,probeSource:ReturnType<typeof beginProbeSourceInstant>|undefined;
   let carriagePadding:import('../substrate/scheduler').ScheduledEvent|undefined,probeInstant=false,runtimeCount=0,childCount=0;
-  const counted=(allocator:{allocateRuntimeId():bigint})=>({allocateRuntimeId(){if(probeInstant)runtimeCount++;return allocator.allocateRuntimeId();}});
+  const probeEvents=new Set<bigint>();
+  const probeMember=(event:ScheduledEvent)=>probeInstant&&(!model.jointCriterion||probeEvents.has(event.eventId));
+  const counted=(allocator:{event:ScheduledEvent;allocateRuntimeId():bigint})=>({allocateRuntimeId(){if(probeMember(allocator.event))runtimeCount++;return allocator.allocateRuntimeId();}});
+  const countProbeChildren=(parent:ScheduledEvent,children:readonly ScheduledEvent[])=>{if(probeMember(parent)){childCount+=children.length;if(model.jointCriterion)for(const child of children)probeEvents.add(child.eventId);}};
   const clone=(state:AuthoritativeState)=>new AuthoritativeState(state.entries());
   const handlers=new Map<string,EventHandler<AuthoritativeState>>();
   const registerHandler=(eventKey:string,handler:EventHandler<AuthoritativeState>)=>{
@@ -206,10 +210,10 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
   });
   for(const eventType of probeModel.eventTypes()??[])registerHandler(key(eventType),context=>{
    if(!probe||!ingress||!probeSource)throw new SchedulerContractError('INPUT_NOT_ADMITTED','probe outside live instant');
-   if(key(context.event.eventTypeId)===key(PROBE_SOURCE_EVENT)){probeSource.admit(context.event);probeInstant=true;}
+   if(key(context.event.eventTypeId)===key(PROBE_SOURCE_EVENT)){probeSource.admit(context.event);probeInstant=true;probeEvents.add(context.event.eventId);}
    const result=probe.execute(context.event,context.state,counted(context)),plan=result.freeze?ingress.observeSemanticFreeze(context.event,[canonicalEncode(result.freeze)]):undefined;
    const emissions=result.plan.emissions();
-   const carriageSlot=context.event.phase===120n;
+   const carriageSlot=key(context.event.eventTypeId)===key(probeModel.eventTypes()[1]);
    let carriagePlan:ReturnType<NonNullable<typeof ingress>['observeMeasurement']>|undefined;
    if(carriageSlot&&probeModel.permitted){if(result.outputs.length!==1)throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','missing diagnostic observation');measurement.validateInput(result.outputs[0]);carriagePlan=ingress.observeMeasurement(context.event,canonicalEncode(result.outputs[0]));}
    else if(carriageSlot&&result.outputs.length)throw new SchedulerContractError('TRANSITION_OUTPUT_VIOLATION','suppressed producer emitted evidence');
@@ -217,11 +221,11 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
    if(carriageSlot&&(emissions.length!==1||extra.length!==1))throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','carriage slot multiplicity');
    return {nextState:context.state,outputs:result.outputs,emittedEvents:[...emissions,...extra,...(plan?.emissions()??[])],traceContributions:[],traceFactory:children=>{
     result.plan.bindAllocatedChildren(children.slice(0,emissions.length));
-    if(probeInstant)childCount+=children.length;
+    countProbeChildren(context.event,children);
     if(carriagePlan)carriagePlan.bindAllocatedChildren(children.slice(emissions.length,emissions.length+1));
     else if(carriageSlot){if(carriagePadding)throw new SchedulerContractError('TRANSITION_INGRESS_VIOLATION','duplicate padding');carriagePadding=structuredClone(children[emissions.length]);}
     plan?.bindAllocatedChildren(children.slice(emissions.length+extra.length));
-    return trace?[trace.record(context.event,result.outputs,children,undefined,{readDomain:context.event.phase===110n?[probeModel.pattern]:[],actualReadRecords:result.reads,patch:{operations:[]},diffs:[]})]:[];
+    return trace?[trace.record(context.event,result.outputs,children,undefined,{readDomain:key(context.event.eventTypeId)===key(PROBE_SOURCE_EVENT)?[probeModel.pattern]:[],actualReadRecords:result.reads,patch:{operations:[]},diffs:[]})]:[];
    }};
   });
   for(const registered of shared.registrations()){
@@ -234,7 +238,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
       const cap=ingress.admit(context.event),occurrence=ingress.allocateEvidIdentity(cap,counted(context)),payload=admittedInputFacts(cap).payload;
       const output=executeEvid(evidOperands(isEvaluation,payload,occurrence));
       const plan=ingress.completeEvid(cap,[canonicalEncode(output)],{operations:[]},context.state.canonicalValue(),context.state.canonicalValue());
-      return {nextState:context.state,outputs:[output],emittedEvents:plan.emissions(),traceContributions:[],traceFactory:children=>{plan.bindAllocatedChildren(children);if(probeInstant)childCount+=children.length;return trace?[trace.record(context.event,[output],children,registration)]:[];}};
+      return {nextState:context.state,outputs:[output],emittedEvents:plan.emissions(),traceContributions:[],traceFactory:children=>{plan.bindAllocatedChildren(children);countProbeChildren(context.event,children);return trace?[trace.record(context.event,[output],children,registration)]:[];}};
     });
   }
   if(measurement){
@@ -245,20 +249,20 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     const output=executeMeasurementIntake(payload,measurement.unit,occurrence);
     const terminal=ingress.completeMeasurement(cap,canonicalEncode(output));
     const memoryPlan=memoryRuntime.observeIntake(context.event,output);
-    return {nextState:context.state,outputs:[output],emittedEvents:memoryPlan?.emissions()??terminal.emissions(),traceContributions:[],traceFactory:children=>{terminal.bindAllocatedChildren(memoryPlan?[]:children);memoryPlan?.bindAllocatedChildren(children);childCount+=children.length;return trace?[trace.record(context.event,[output],children,shared.decode(measurement.registration))]:[];}};
+    return {nextState:context.state,outputs:[output],emittedEvents:memoryPlan?.emissions()??terminal.emissions(),traceContributions:[],traceFactory:children=>{terminal.bindAllocatedChildren(memoryPlan?[]:children);memoryPlan?.bindAllocatedChildren(children);countProbeChildren(context.event,children);return trace?[trace.record(context.event,[output],children,shared.decode(measurement.registration))]:[];}};
    });
    registerHandler(key(CARRIAGE_PADDING),context=>{
     if(!carriagePadding||key(scheduledEventValue(context.event))!==key(scheduledEventValue(carriagePadding)))throw new SchedulerContractError('INPUT_NOT_ADMITTED','unassociated carriage padding');
     carriagePadding=undefined;counted(context).allocateRuntimeId();
     const memoryPlan=memoryRuntime.observeIntake(context.event);
-    return {nextState:context.state,outputs:[],emittedEvents:memoryPlan?.emissions()??[],traceContributions:[],traceFactory:children=>{memoryPlan?.bindAllocatedChildren(children);childCount+=children.length;return trace?[trace.record(context.event,[],children)]:[];}};
+    return {nextState:context.state,outputs:[],emittedEvents:memoryPlan?.emissions()??[],traceContributions:[],traceFactory:children=>{memoryPlan?.bindAllocatedChildren(children);countProbeChildren(context.event,children);return trace?[trace.record(context.event,[],children)]:[];}};
    });
   }
   for(const eventType of memoryRuntime.eventTypes()??[])registerHandler(key(eventType),context=>{
     const result=memoryRuntime.execute(context.event,context.state,counted(context));
     const isM1=['event/measurement-episode-evidence','event/measurement-episode-evidence-padding'].some(n=>key(context.event.eventTypeId)===key({kind:'typedIdentifier',namespaceId:1001n,payload:text(n)}));
     const extra=isM1?predictionRuntime.observeM1(context.event,result.outputs[0]):undefined,old=result.plan.emissions(),extraEvents=extra?.emissions()??[],prospective=isM1?taskRuntime.observeM1(context.event,result.outputs[0]):undefined;
-    return {nextState:result.nextState,outputs:result.outputs,emittedEvents:[...old,...extraEvents,...(prospective?.emissions()??[])],traceContributions:[],traceFactory:children=>{result.plan.bindAllocatedChildren(children.slice(0,old.length));extra?.bindAllocatedChildren(children.slice(old.length,old.length+extraEvents.length));prospective?.bindAllocatedChildren(children.slice(old.length+extraEvents.length));if(probeInstant)childCount+=children.length;return [result.trace(children)];}};
+    return {nextState:result.nextState,outputs:result.outputs,emittedEvents:[...old,...extraEvents,...(prospective?.emissions()??[])],traceContributions:[],traceFactory:children=>{result.plan.bindAllocatedChildren(children.slice(0,old.length));extra?.bindAllocatedChildren(children.slice(old.length,old.length+extraEvents.length));prospective?.bindAllocatedChildren(children.slice(old.length+extraEvents.length));countProbeChildren(context.event,children);return [result.trace(children)];}};
   });
   for(const eventType of predictionRuntime.eventTypes()??[])registerHandler(key(eventType),context=>{
     const result=predictionRuntime.execute(context.event,context.state,counted(context));
@@ -301,7 +305,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
     adaptationSettlement:{version:'adaptation-settlement/0.2-candidate',
       beforeInstant(state,instant){
         domains.validateStatic(state);domains.validateReferences(state,instant);stress?.begin(instant);sleep?.begin(instant);reward?.begin(instant);reportedMeaning?.begin(instant);workMaintenance?.begin(instant);reappraisal?.begin(instant);position?.begin(instant);reasonEvidence?.begin(instant);effects?.begin(instant);currentPosition=undefined;
-        probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);obstruction?.begin(instant);protocolPermission?.begin(instant);itemWorld?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);horizon?.begin(instant);performance?.begin(instant);values?.begin(instant);causal?.begin(instant);habit?.begin(instant);control?.begin(instant);communication?.begin(instant);social?.begin(instant);relationship?.begin(instant);
+        probeEvents.clear();probeInstant=false;runtimeCount=0;childCount=0;carriagePadding=undefined;memoryRuntime.begin(instant);predictionRuntime.begin(instant);taskRuntime.begin(instant);cognitive.begin(instant);body?.begin(instant);obstruction?.begin(instant);protocolPermission?.begin(instant);itemWorld?.begin(instant);episodes?.begin(instant);procedure?.begin(instant);strategy?.begin(instant);priority?.begin(instant);horizon?.begin(instant);performance?.begin(instant);values?.begin(instant);causal?.begin(instant);habit?.begin(instant);control?.begin(instant);communication?.begin(instant);social?.begin(instant);relationship?.begin(instant);
         ingress=beginTransitionIngressV04(shared,instant);
 
         consequence=model.adaptBoundary?base.bridge.begin(instant):undefined;exposureSource=inputs.hiddenExposure?.begin(instant);probe=probeModel.begin(instant);probeSource=inputs.beginProbe(instant);
@@ -361,7 +365,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
         const practiceStage=practiceEvents.length?procedure!.prepare(practiceEvents,state):undefined;
         events=events.filter(e=>!procedure?.isPractice(e));
         function joinedStage(){
-        function inheritedStage(events:readonly ScheduledEvent[]): {execute(context:EventHandlerContext<AuthoritativeState>): {nextState:AuthoritativeState;outputs:readonly CanonicalValue[];emittedEvents:readonly import('../substrate/scheduler').EventEmission[];traceContributions:readonly CanonicalValue[]};finish():AuthoritativeState;finalizeTrace():readonly CanonicalValue[]}{
+        function inheritedStage(events:readonly ScheduledEvent[],partition:'normal'|'measurement'|'action'='normal'): {execute(context:EventHandlerContext<AuthoritativeState>): {nextState:AuthoritativeState;outputs:readonly CanonicalValue[];emittedEvents:readonly import('../substrate/scheduler').EventEmission[];traceContributions:readonly CanonicalValue[]};finish():AuthoritativeState;finalizeTrace():readonly CanonicalValue[]}{
          const effectEvents=events.filter(e=>effects?.isLearning(e));
          if(effectEvents.length){
           const next=effects!.prepare(effectEvents,state),rest=events.filter(e=>!effects!.isLearning(e)),previous=rest.length?inheritedStage(rest):undefined;
@@ -370,7 +374,20 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
            finish(){if(finished||cursor!==events.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete effect stage');finished=true;return next.finish(previous?.finish()??state);},
            finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','effect trace before completion');const rows=[...(previous?.finalizeTrace()??[]),...next.traces()];return events.flatMap(e=>rows.filter(t=>key(f(rec(f(rec(t,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
          }
-        cognitive.validateParticipants(events);
+        // Joint candidates use the same B0. Existing stages retain source admission,
+        // authority checks and traces; only disjoint owner results may be combined.
+        if(model.jointCriterion&&partition==='normal'&&events.some(e=>key(e.eventTypeId)===key(cognitive.identityEventType()))&&events.some(e=>memoryRuntime.isEvent(e)||predictionRuntime.isEvent(e))){
+         const measured=(e:ScheduledEvent)=>memoryRuntime.isEvent(e)||predictionRuntime.isEvent(e)||taskRuntime.isEvent(e);
+         const measurementEvents=events.filter(measured),actionEvents=events.filter(e=>!measured(e));
+         const measurementStage=inheritedStage(measurementEvents,'measurement'),actionStage=inheritedStage(actionEvents,'action');
+         let cursor=0,finished=false;
+         const owned=(e:ReturnType<AuthoritativeState['entries']>[number])=>[346n,362n,373n].includes(e.path.rootStateTypeId);
+         const projection=(s:AuthoritativeState,select:boolean)=>key(new AuthoritativeState(s.entries().filter(e=>owned(e)===select)).canonicalValue());
+         return {execute(context){if(finished||cursor>=events.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(events[cursor++])))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','joint criterion execution order');return (measured(context.event)?measurementStage:actionStage).execute(context);},
+          finish(){if(finished||cursor!==events.length)throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','incomplete joint criterion');finished=true;const m=measurementStage.finish(),a=actionStage.finish();if(projection(m,false)!==projection(state,false)||projection(a,true)!==projection(state,true))throw new SchedulerContractError('ADAPTATION_STAGE_VIOLATION','joint criterion owner overlap');const candidate=new AuthoritativeState([...a.entries().filter(e=>!owned(e)),...m.entries().filter(owned)]);stateModel.validateState(candidate);return candidate;},
+          finalizeTrace(){if(!finished)throw new SchedulerContractError('TRACE_VALIDATION_FAILURE','joint trace before settlement');const rows=[...measurementStage.finalizeTrace(),...actionStage.finalizeTrace()];return events.flatMap(e=>rows.filter(t=>key(f(rec(f(rec(t,160n),4n),130n),1n))===key({kind:'unsigned',value:e.eventId})));}};
+        }
+        if(partition!=='measurement')cognitive.validateParticipants(events);
         function prepareGroup(events:readonly ScheduledEvent[]){
         function inherited(events:readonly ScheduledEvent[]){
         if(events.some(e=>memoryRuntime.isEvent(e)||predictionRuntime.isEvent(e))){
@@ -421,7 +438,7 @@ export function createCharacterRuntime(model:Awaited<ReturnType<typeof compileCh
         // Source/subject/target admission precedes every group's prior evaluation.
         for(const event of events){if(taskRuntime.isEvent(event))taskRuntime.preflight(event,state);else if(memoryRuntime.isEvent(event))memoryRuntime.preflightFormation(event,state);else if(predictionRuntime.isEvent(event))predictionRuntime.preflightApplication(event,state);}
         const baseStage=baseEvents.length?inherited(baseEvents):undefined;
-        taskRuntime.sealPreflight();
+        if(partition!=='action')taskRuntime.sealPreflight();
         let cursor=0,finished=false,executing=false;const results:ReturnType<typeof taskRuntime.execute>[]=[],traceOrder:{task?:ReturnType<typeof taskRuntime.execute>}[]=[];
         return {execute(context:EventHandlerContext<AuthoritativeState>){if(finished||executing||cursor>=events.length||key(scheduledEventValue(context.event))!==key(scheduledEventValue(events[cursor])))bad('task stage execution lifecycle');executing=true;try{cursor++;if(taskRuntime.isEvent(context.event)){const result=taskRuntime.execute(context.event,state);results.push(result);traceOrder.push({task:result});return {nextState:state,outputs:[],emittedEvents:[],traceContributions:[]};}traceOrder.push({});return baseStage!.execute(context);}finally{executing=false;}},
           finish(){if(finished||executing||cursor!==events.length)bad('incomplete task stage');finished=true;let candidate=baseStage?.finish()??state;for(const result of results)candidate=stateModel.applyPatch(candidate,result.patch,{kind:'typedIdentifier',namespaceId:1025n,payload:text('authority/prospective-commitments')},{writableRoots:[373n],targetPaths:result.patch.operations.map(o=>o.path)}).state;return candidate;},
