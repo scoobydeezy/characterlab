@@ -1,38 +1,42 @@
-# Current work — M252 intake complete; native confidence next
-Owner2026-11-24 authorizes work toward Family12.4 completion under bounded self-approval.
-The shared character already learns and corrects permitted evidence. Native confidence,
-hidden-cause/mistaken-attribution, repeated-error and controllability coverage need review.
-Family12.2 accepted0.155 in738d2a8e. One character integrating Campaigns0–3 remains the aim.
+# Current work — M253 native belief confidence and correction
+M25287fe577c maps all nine Family12.4 clauses. Owner delegates bounded self-approval
+through family completion. Next: uncertain/correct and confident/wrong estimates in
+one existing perception/person-belief/appraisal/decision path.
 
-## Completed intake card
-Capability: resolve the nine pinned12.4 requirements into retained evidence and exact
-missing production/receiving connections, then select the first behavioral package.
-Scope: F12.4:1..9; C-BELIEF and relevant LEARN/causal evidence. No broader family audit.
-Read original Brief/Architecture, BELIEF/LEARN/attribution contracts and M125/126,
-M29/35/36/51/79/114/116 and recent action-outcome evidence where applicable.
-Consult MEC001/002/006 and EXP001/002/005 before any seam; preserve alternatives.
-Comparison: distinguish native live consumers from comparison-only diagnostics;
-confidence cannot be inferred solely from stored support or falsely treated as accuracy.
-Trace each requirement through admitted evidence, owned estimate/attribution and its
-actual appraisal/reason/decision consumer; retain unknown/zero and hidden-truth boundaries.
-Files: CURRENT, existing reconciliation F12.4 row, one compact result/evidence/check log.
-Zero production/test/formal changes or runtime runs in this intake. Source analysis90min;
-verification300s total including10s packaging,120s/check; <=20artifacts/5MiB.
-Checks: exact nine-clause mapping, cited source hashes, document budgets, research,
-preservation and Git-size. No historical suite replay or speculative verifier track.
-Done: finite requirement table and next bounded behavioral card with predeclared
-comparison. Genuine unsupported law/authority conflicts remain explicit; self-approval
-permits ordinary implementation/comparison amendments, not shrinking final scope.
-Continue into the next package when the evidence determines a lawful implementation.
+## Active card — before implementation
+Capabilities: (1) native scoped confidence readout, (2) correction with independent
+confidence/correctness, (3) privacy and exact continuation. BRIEF12.4:1/2/3; no whole-family claim.
+Contract: belief-public0.1 evidence weight C=n/(n+1), equal-quality unique binary claims.
+New model0.156 extends0.155; appended appraisal readout only; same mean/update, one
+person owner, no confidence multiplier or separate store. Confidence uses the same
+actual effective history as the consumed mean (including recalled subset when used).
+Production files: model.ts,traceBinding.ts,social.ts,socialExecution.ts,runtime.ts.
+Tests: one fixture + one native test. <=7 source files; preserve all older behavior.
+Scenario: M246 current unbound-scalar scene, body10/seed0; two social tasks and unknown
+third. Replace social reports with recognized trial evidence at1..17:8 misleading
+positive then9 negative, fixed false world. Move existing opportunities4/6/8 to9/10/18,
+make both existing social task urgencies1, no acquired receipt/Value support. Same
+normal visual/voice/body channels; no learned S0 or authored intermediate.
+Controls: one accurate false report ->mean0/confidence1/2;8 misleading ->mean1/C8/9,
+then8/9/C9/10 and8/17/C17/18. Qualified absence vs denied/no-opportunity retains
+known versus unknown; hidden actual outcome/opportunity changes preserve cognition.
+Native report must be carried into actual joint appraisal; live reason/decision and
+execution at the declared consumer, or identify/repair setup before comparing.
+Capture exact production inputs/probabilities; no sampled-winner coupling claim.
+All original M126 horizons/controls remain; this package is not wholesale C-BELIEF replay.
+Checks: pure parity with original confidence and mean, unknown/nonbinary filtering;
+current primary/control/privacy; repeat/save8 through full queue; old0.155 readout
+absence with same scenario; types,boundaries,research,preservation,Git-size.
+Risk: current rich perception grammar, receipt duplication, recalled subset, prior50
+versus consequence140, unrelated late sources. Amend bounded setup explicitly before
+rechecking, retain failures; no parameter/seed search or arbitrary confidence law.
+Budget600s/job,1800s cumulative including10s packaging;20 artifacts/5MiB. Split if needed.
+Done: genuine native source->readout->appraisal/decision connection and controls pass;
+record exact limits, then continue causal/error/control gates, no unrelated breadth.
 
-## Preserved state
-Model0.155/reference0.85/SourceCoverage fixed until a justified versioned seam amendment.
-21members/15families/132clauses; E75/P33/N11/U13;accepted5/15;assembly OPEN.
-Family12.4 currently E3/7/9,P1/2/4/5/6/8; these are scoped evidence, not acceptance.
-No UI, item catalog, autonomous peers, reduction or whole-character acceptance.
+## Preserved status
+21members/15families/132clauses; E75/P33/N11/U13;accepted5/15;Family12.4 OPEN.
+RO010 broader calibration/source domains stays conditional. No reduction/UI/peers.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-
-M252 maps all nine clauses; no evidence status promoted. Next M253 ports the existing
-bounded confidence diagnostic into actual appraisal, preserving correction and privacy.
