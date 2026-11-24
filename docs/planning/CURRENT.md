@@ -1,38 +1,47 @@
-# Current work — M243 complete
-The current character distinguishes perceived attainment, unseen delivery, false
-positive perception and evidence arriving during goal adoption. Five remaining
-criterion correspondences now pass without changing the simulation.
-[Result](ASSEMBLED_CHARACTER_M243_RESULT.md);
-[evidence](ASSEMBLED_CHARACTER_M243_EVIDENCE.json).
-Parent64f74879; preimplementation card4fe30ae0; character/registry0.154 unchanged.
-One new test path; no production/formal/fixture/law/calibration change.
+# Current work — M244 Need-family acceptance review
+Decide whether the completed character evidence satisfies all six pinned12.2 clauses
+and their required comparisons. This package adds no mechanism or runtime experiment.
+Status: ACTIVE. Parent8140bd3f; current character/registry0.154-candidate.
 
-## Evidence and interpretation
-Nonsocial B1..1/deadline101, body10, zero dose/delay, phase4/K0/practiceOFF, seed7.
-Reference0.85/SourceCoverage0.5; SeparateGoalPlan/Factored/TwoFailures fixed.
-M240 original inputs unchanged; external reuses current M241 raw evidence, verified
-against current ModelIdentity and registry/S0/input hashes. Four missing cases ran.
-All15 original instants match goal, action absence, destination and exact criterion.
-Actual trace binds world read120 -> observation -> memory -> prediction/goal140.
-Adoption-time settlement reads no prior goal and makes no fulfillment mutation.
-False-positive perception fulfills despite origin location; hidden truth does not.
-Hidden/absent terminal state and complete output agree under M240's trace-authenticated
-mapping of three stress event references. No new output exclusion/normalization.
-Independent repeat/restore2 is byte-exact3/4/101 and termination. No random draws.
-Seven focused tests and types/repository checks pass; 217.619/1800s including
-planning/staging allowance, no extension or executed failure. Historical evidence
-and unchanged production/control dependencies remain preserved.
+## Bounded review card
+Observable outcome: a justified family acceptance decision, or an exact remaining gate
+with its invalidated evidence and smallest necessary next comparison named.
+Pinned scope: BRIEF-12.2-1..6, unchanged family JSON/baseline and Research Brief12.2;
+BODY/EMB/MULTISOURCE, importance/urgency, substitution and goal/strategy controls.
+Review M221–224 receiving, M225–230 substitution and M231–243 goal/criterion evidence,
+plus the exact original qualification/obligation sources those comparisons retain.
+Check actual source/test assertions and saved evidence, not result summaries alone.
+Track each clause's producer -> consumer -> observable result, alternatives, privacy,
+repeat/restore/rollback and scope. Do not promote absent tests or a source-only pass.
+Distinguish recorded-version proof from current-candidate proof: inspect changes after
+0.145 and0.149 against affected paths, domains and fixture assumptions before carry-forward.
+A versioned control remaining executable is not automatically current integration.
+No alternative native pipelines, law changes, parameter retuning or source rewriting.
 
-## Exact remaining work
-The five current-version criterion gaps are closed. All16 original scenario names
-have scoped0.154 projections across M241–243, with meaningful local alternatives
-and original full alternative trajectories preserved. This is not family acceptance.
-Next: bounded family12.2 acceptance review of Need/motive, substitution and goal/
-strategy evidence; name any exact remaining gate rather than extending replay by habit.
-Family12.7 broader goals/prospection and final whole-candidate replay remain open.
-MEC011/019/020, EXP013, RO012/014/019/020 and foundations retain their dispositions.
-No general object recognition, catalog, UI or reduction is authorized.
-E75/P33/N11/U13=132;21members/15families; accepted4/15; final assembly OPEN.
+## Files, checks and limits
+Zero production/test edits and zero new simulation runs. No new verifier/framework.
+One compact M244 result (<=120 lines), CURRENT and existing reconciliation row updates;
+one small evidence/check receipt with hashes/disposition facts if useful. No new ledger.
+Analysis budget60 minutes; one active job; <=600s/job and <=300s total validation:
+evidence/source preservation and accounting120s, research60s, size/format60s,
+packaging60s. <=20 evidence files/5MiB; CURRENT<=80, register<=250 lines/64KiB.
+Preserve all historical contracts, verdicts, raw evidence and comparison failures.
+Run check:research and check:git-size once when final documents are staged/ready.
+No type or runtime reruns without a named changed dependency or unresolved failure;
+if a fresh runtime witness is required, record the finite next package and stop review.
+
+## Decision rule
+Accept only if all six required distinctions and pinned comparison obligations have
+adequate assembled evidence, all differences have established dispositions, and no
+unresolved defect/law conflict/current-version carry-forward gap blocks that claim.
+Otherwise keep family OPEN and identify the exact blocker; do not add unrelated goals,
+physiological needs, item catalogs, option discovery or historical TODOs to the gate.
+Conditional broader debts remain conditional; no baseline denominator reduction.
+Acceptance, if earned, is for this family's pinned scope, not final assembly or UI.
+MEC001/003/011..020/022 and applicable RO001/008/010/012/014/015/019/020/021 retain
+port/control/corpus/candidate roles and reopen triggers; no reduction is proposed.
+Stop after the decision and required checks. No recursive review or verifier chain.
+E75/P33/N11/U13=132;21members/15families; accepted4/15 pending this review.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
