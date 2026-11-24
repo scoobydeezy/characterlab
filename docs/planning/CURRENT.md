@@ -1,41 +1,60 @@
-# Current work — M247 BODY transfer passed
-The current character preserves bodily depletion, relief and sensing distinctions
-on model0.155 while sharing its state with the item world. Perceived pressure changes
-reasons consumed by decisions; hidden physical differences remain hidden.
-[Result](ASSEMBLED_CHARACTER_M247_RESULT.md); [evidence](ASSEMBLED_CHARACTER_M247_EVIDENCE.json).
-Parent515ffcaf; pre-code card686f704b; model/registry0.155 unchanged.
+# Current work — M248 retained importance and current urgency transfer
+M247 completed the BODY transfer to fixed model0.155. Next prove retained importance
+and fresh urgency still combine in actual competing decisions on that same character.
+Parentd35fb1cb; prior [result](ASSEMBLED_CHARACTER_M247_RESULT.md).
 
-## What passed
-All eight original M224 BODY cases retain input/seed/task meanings and original58
-registry slots. S0 adds only one physical item location; empty Need and unbound
-item0.3 slots retain scalar probe110. No production/formal or psychological-law edits.
-Fast/slow depletion, relief/no relief, coarse aliases, finer sensing, denied and
-unavailable sensing match every preserved physical/appraisal/reason row exactly.
-At41 relief versus none gives pressure0 versus1/3 and reason7/27 versus7/22.
-Hidden aliases have identical complete observer streams at10; later sensing separates
-them. Denied/unavailable sampling never reads physical455 and stays Unavailable.
-All19 compared decision contexts are live and consumed by actual execution. These
-scenarios have one eligible action/P1: reason changes are not a choice-change claim.
-Exact repeat/save31 through101, original scenario/hash mapping and causal evidence
-integrity pass. Historical defaults/evidence and frozen simulation sources preserved.
-No failure, scenario/law amendment, production repair or runtime-budget extension.
+## Bounded card — committed before code
+Capabilities: (1) retained importance with changing current urgency changes actual
+production decision probabilities; (2) missing/denied importance or urgency remains
+unknown, known zero stays distinct, and fresh evidence restores the response.
+G2b only; family12.2 clauses2/4 and existing M222 comparisons. No new phenomenon.
+Model/registry0.155 fixed; sensor binding0.3, priority0.1/0.2, original Factored and
+importance-urgency-component0.1 semantics, reference0.85/SourceCoverage unchanged.
+No production/formal edits planned. Files: existing priority fixture and two tests,
+one bounded replay/evidence helper (<=4 test files; absolute ceiling12).
+Explicit M248 selector; historical fixture/default behavior/evidence preserved.
 
-## Next bounded gate
-G2a BODY is complete. Next G2b: original retained importance/current urgency matrix,
-evidence controls and continuation on fixed0.155, then G3 learned alternatives under
-MeanHistory. Preserve original stimuli/targets/laws and genuine scalar correspondence.
-G2 was split before coding to keep each complete gate inside the30-minute budget.
-No new needs, item catalog or family12.7 breadth. Family12.2 acceptance stays OPEN
-until the named current transfers and finite family decision are complete.
+## Predeclared scenario and mapping
+Original M222 nonsocial tasks; seed0; body10/cap100/rate0/grid1/threshold60; two Need
+responses remain independent competitors. Importance is perceived at1, then six
+opportunities2..7 have urgencies[initial,0,unknown,1,0,0]. Routes available through7.
+Reward learning/Value context disabled; no protective meaning or learned S0.
+Preserve original59 registry slots, all task targets, inputs/seed bytes and all S0
+entries. Append only unbound item0.3 and one physical item location. One existing
+action maps to item movement; no item criterion, scalar reinterpretation or bias.
+Four cells cross importance1/2 or1 with initial urgency0 or1. All24 motive strengths
+must equal original Factored/1000; Refold agrees while all five component alternatives
+retain their actual outputs. Original frames1..6 map to native2..7, as M222.
+I1/U0 and I1/2/U1 initially give motive1/2 and P1/2 each. Later common urgency1 must
+give motives1 versus1/2 and P377/432,55/432 versus1/2,1/2. Known lower-motive null
+remains BelowThreshold; positive Base1 activates the same receiving path.
+Before comparison assert live operands, Need competitors and actual nuclei; compare
+exact production arbitration on actual captured raw sources/options/nuclei. Verify
+actual decisions reach execution. No sampled-winner or same-seed coupling claim.
 
-## Verification and scope
-Eight native cases and one aggregate pass; types/boundaries/research/preservation/
-whitespace/size pass. Verification1212.714/1800s including10s packaging.
-Two test/helper files, zero production changes; <=600s/command,1800s total including
-10s packaging; <=20 evidence files/5MiB. Final receipt is recorded in the result.
-MEC001/003/011..020/022 preserved; CTL007 candidate; RET010 prohibited.
-RO008/020 conditional; RO019/021 closed with unchanged triggers; no reduction or UI.
-E75/P33/N11/U13=132;21members/15families;accepted4/15;assembly OPEN.
+## Required checks and failure risks
+Run the original matrix, zero/absent importance, denied adoption/urgency, omitted
+urgency/return, lower-motive null and live receiving-to-execution tests on0.155.
+Exact repeat and saves1/5: every following settled state/output/trace/save through101.
+Keep compressed native records, original/current source hashes and explicit mappings
+in one evidence file; immutable historical controls remain untouched. No old full
+suite rerun without dependency changes; all five laws still execute in the matrix.
+Types, boundaries, research, frozen-source/artifact preservation, whitespace and size.
+Risks: item declaration changes goal/sensor meaning; fresh urgency persists incorrectly;
+unknown becomes zero; receiving hides retained importance; save loses retained state.
+One job at a time; <=600s each, <=1800s cumulative including10s packaging; <=20files/
+5MiB. Split commands before a predicted overrun, never trim comparisons. Ordinary
+bugs/setup diagnoses use standing self-approval, preserve failures and targeted reruns.
+No parameter/seed search, law change, authored psychology or silent acceptance change.
+Binary done: full matrix and boundary/continuation/consumer gates pass on fixed0.155,
+all differences classified and required repository checks pass inside limits. Stop.
+
+## Preservation and next
+MEC001/011..020/022 keep dispositions; CTL007 candidate; RET010 prohibited. Frozen
+C0/C1/C2/C3/reference, original contracts/evidence preserved. RO008/020 conditional;
+RO019/021 closed with unchanged triggers. No new reduction, debt closure or UI.
+Next G3 learned alternatives under MeanHistory, then finite family12.2 decision.
+E75/P33/N11/U13=132;21members/15families;accepted4/15; family/assembly OPEN.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
