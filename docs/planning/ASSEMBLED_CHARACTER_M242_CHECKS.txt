@@ -1,0 +1,200 @@
+M242 types exit=0 elapsed=22.539s cap=120s timeout=False
+
+M242 native-main exit=1 elapsed=66.795s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native main
+M242 main {"row":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+
+ × src/test/assembledGoalRouteReplay.test.ts > goal242 native main 60691ms
+   → expected '0a8603010101010b8308051f646566696e697…' to be '0b8308051f646566696e6974696f6e2f74617…' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalRouteReplay.test.ts > goal242 native main
+AssertionError: expected '0a8603010101010b8308051f646566696e697…' to be '0b8308051f646566696e6974696f6e2f74617…' // Object.is equality
+
+Expected: "0b8308051f646566696e6974696f6e2f7461736b2d696e737472756374696f6e2d6f6e65"
+Received: "0a8603010101010b8308051f646566696e6974696f6e2f7461736b2d696e737472756374696f6e2d6f6e65"
+
+ ❯ runCase src/test/assembledGoalRouteReplay.test.ts:78:85
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 skipped (13)
+   Start at  10:44:30
+   Duration  66.22s (transform 3.40s, setup 0ms, collect 5.08s, tests 60.69s, environment 0ms, prepare 147ms)
+
+
+M242 native-main-corrected exit=1 elapsed=70.449s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native main
+M242 main {"row":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 main {"row":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]},"expected":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]}}
+
+ × src/test/assembledGoalRouteReplay.test.ts > goal242 native main 64345ms
+   → expected [ …(2) ] to have a length of 1 but got 2
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGoalRouteReplay.test.ts > goal242 native main
+AssertionError: expected [ …(2) ] to have a length of 1 but got 2
+
+- Expected
++ Received
+
+- 1
++ 2
+
+ ❯ runCase src/test/assembledGoalRouteReplay.test.ts:79:99
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 14 skipped (15)
+   Start at  10:46:31
+   Duration  69.87s (transform 3.40s, setup 0ms, collect 5.07s, tests 64.35s, environment 0ms, prepare 146ms)
+
+
+M242 captured-planner-inspection exit=1 elapsed=0.870s cap=60s timeout=False
+C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\substrate\canonicalEncoding.ts:403
+  throw new CanonicalEncodingError(message);
+        ^
+
+CanonicalEncodingError: unknown record schema 906/1
+    at fail (C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\substrate\canonicalEncoding.ts:403:9)
+    at Reader.readRecord (C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\substrate\canonicalEncoding.ts:333:18)
+    at Reader.readValue (C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\substrate\canonicalEncoding.ts:249:21)
+    at C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\substrate\canonicalEncoding.ts:243:77
+    at Reader.readMany (C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\substrate\canonicalEncoding.ts:351:64)
+    at Reader.readValue (C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\substrate\canonicalEncoding.ts:243:26)
+    at Module.canonicalDecode (C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\substrate\canonicalEncoding.ts:85:24)
+    at Module.decodeEmbodied (C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\src\campaign3\embodiedCodecs.ts:166:39)
+    at C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\inspect-m242.ts:11:67
+    at ViteNodeRunner.runModule (file:///C:/Users/scoob/Documents/GitHub/characterlab/node_modules/vite-node/dist/client.mjs:399:5)
+
+Node.js v24.20.0
+
+M242 captured-planner-codec exit=0 elapsed=1.100s cap=60s timeout=False
+[{"kind":"list","items":[{"kind":"text","value":"assembled-strategy-evaluation/0.1"},{"kind":"unsigned","value":"1"},{"kind":"unsigned","value":"2"},{"kind":"list","items":[]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-strategy-evaluation/0.1"},{"kind":"unsigned","value":"2"},{"kind":"unsigned","value":"3"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"unsigned","value":"0"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"KnownAvailable"},{"kind":"typedIdentifier","namespaceId":"1164","payload":{"kind":"unsigned","value":"25"}}]},{"kind":"list","items":[{"kind":"text","value":"KnownAvailable"},{"kind":"typedIdentifier","namespaceId":"1164","payload":{"kind":"unsigned","value":"26"}}]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-performance-evaluation/0.1"},{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"unsigned","value":"3"},{"kind":"unsigned","value":"2"},{"kind":"unsigned","value":"0"},{"kind":"unsigned","value":"0"},false,{"kind":"list","items":[]}]}]}]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-strategy-evaluation/0.1"},{"kind":"unsigned","value":"2"},{"kind":"unsigned","value":"3"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"unsigned","value":"0"},{"kind":"list","items":[{"kind":"list","items":[{"kind":"text","value":"KnownAvailable"},{"kind":"typedIdentifier","namespaceId":"1164","payload":{"kind":"unsigned","value":"25"}}]},{"kind":"list","items":[{"kind":"text","value":"KnownAvailable"},{"kind":"typedIdentifier","namespaceId":"1164","payload":{"kind":"unsigned","value":"26"}}]}]},{"kind":"list","items":[{"kind":"text","value":"assembled-performance-evaluation/0.1"},{"kind":"record","schema":{"typeId":"371","schemaVersion":"1","name":"TaskCommitmentKey","fields":[{"id":"1","name":"CharacterId","required":true},{"id":"2","name":"TaskReferent","required":true}]},"fields":{}},{"kind":"unsigned","value":"3"},{"kind":"unsigned","value":"2"},{"kind":"unsigned","value":"0"},{"kind":"unsigned","value":"0"},false,{"kind":"list","items":[]}]}]}]}]}]
+
+M242 native-eight exit=0 elapsed=180.477s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native main
+M242 main {"row":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 main {"row":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]},"expected":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]}}
+M242 main {"row":{"at":4,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]},"expected":{"at":4,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]}}
+M242 main {"row":{"at":5,"goal":1,"route":2,"success":false,"destination":false,"feedback":[false],"criterion":[]},"expected":{"at":5,"goal":1,"route":2,"success":false,"destination":false,"feedback":[false],"criterion":[]}}
+M242 main {"row":{"at":6,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":6,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 main {"row":{"at":7,"goal":2,"route":2,"success":true,"destination":true,"feedback":[true],"criterion":[true]},"expected":{"at":7,"goal":2,"route":2,"success":true,"destination":true,"feedback":[true],"criterion":[true]}}
+M242 main {"row":{"at":8,"goal":2,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":8,"goal":2,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 native main 96624ms
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native noOutcome
+M242 noOutcome {"row":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 noOutcome {"row":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 noOutcome {"row":{"at":4,"goal":1,"route":1,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":4,"goal":1,"route":1,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 native noOutcome 12127ms
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native hiddenSuccess
+M242 hiddenSuccess {"row":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 hiddenSuccess {"row":{"at":3,"goal":1,"route":1,"success":true,"destination":true,"feedback":[],"criterion":[]},"expected":{"at":3,"goal":1,"route":1,"success":true,"destination":true,"feedback":[],"criterion":[]}}
+M242 hiddenSuccess {"row":{"at":4,"goal":1,"route":1,"success":true,"destination":true,"feedback":[],"criterion":[]},"expected":{"at":4,"goal":1,"route":1,"success":true,"destination":true,"feedback":[],"criterion":[]}}
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 native hiddenSuccess 12370ms
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native expiry
+M242 expiry {"row":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 expiry {"row":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]},"expected":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]}}
+M242 expiry {"row":{"at":4,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":4,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 native expiry 10551ms
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native denied
+M242 denied {"row":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 denied {"row":{"at":3,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":3,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 denied {"row":{"at":4,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":4,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 denied {"row":{"at":5,"goal":1,"route":2,"success":false,"destination":false,"feedback":[false],"criterion":[]},"expected":{"at":5,"goal":1,"route":2,"success":false,"destination":false,"feedback":[false],"criterion":[]}}
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 native denied 12141ms
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native noDisplay
+M242 noDisplay {"row":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 noDisplay {"row":{"at":3,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":3,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 noDisplay {"row":{"at":4,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":4,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 noDisplay {"row":{"at":5,"goal":1,"route":2,"success":false,"destination":false,"feedback":[false],"criterion":[]},"expected":{"at":5,"goal":1,"route":2,"success":false,"destination":false,"feedback":[false],"criterion":[]}}
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 native noDisplay 12201ms
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native duplicate
+M242 duplicate {"row":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":1,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 duplicate {"row":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]},"expected":{"at":3,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]}}
+M242 duplicate {"row":{"at":4,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]},"expected":{"at":4,"goal":1,"route":1,"success":false,"destination":false,"feedback":[false],"criterion":[]}}
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 native duplicate 12930ms
+stdout | src/test/assembledGoalRouteReplay.test.ts > goal242 native noAdoption
+M242 noAdoption {"row":{"at":2,"goal":0,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":2,"goal":0,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 noAdoption {"row":{"at":3,"goal":0,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":3,"goal":0,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+M242 noAdoption {"row":{"at":4,"goal":0,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]},"expected":{"at":4,"goal":0,"route":0,"success":false,"destination":false,"feedback":[],"criterion":[]}}
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 native noAdoption 5394ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed | 7 skipped (15)
+   Start at  10:48:59
+   Duration  179.91s (transform 3.42s, setup 0ms, collect 5.09s, tests 174.34s, environment 0ms, prepare 141ms)
+
+
+M242 privacy-preservation exit=0 elapsed=64.760s cap=150s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 privacy and preservation 58684ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  10:52:21
+   Duration  64.20s (transform 3.39s, setup 0ms, collect 5.07s, tests 58.69s, environment 0ms, prepare 144ms)
+
+
+M242 repeat-continuation exit=0 elapsed=133.373s cap=420s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGoalRouteReplay.test.ts > goal242 repeat and continuation 127287ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  10:53:43
+   Duration  132.80s (transform 3.38s, setup 0ms, collect 5.04s, tests 127.29s, environment 0ms, prepare 145ms)
+
+
+M242 final-types exit=0 elapsed=22.144s cap=120s timeout=False
+
+M242 boundaries exit=0 elapsed=3.631s cap=90s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M242 research exit=0 elapsed=3.881s cap=90s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M242 preservation exit=0 elapsed=0.421s cap=90s timeout=False
+PASS frozen source/dependency trees and five evidence files unchanged; exactly two test paths; document limits; 3 artifacts/903377 bytes.
+M242 staged-git-size exit=0 elapsed=0.848s cap=90s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
