@@ -1,10 +1,10 @@
-# Current work — M252 Family12.4 integration intake
+# Current work — M252 intake complete; native confidence next
 Owner2026-11-24 authorizes work toward Family12.4 completion under bounded self-approval.
 The shared character already learns and corrects permitted evidence. Native confidence,
 hidden-cause/mistaken-attribution, repeated-error and controllability coverage need review.
 Family12.2 accepted0.155 in738d2a8e. One character integrating Campaigns0–3 remains the aim.
 
-## Active card — before implementation
+## Completed intake card
 Capability: resolve the nine pinned12.4 requirements into retained evidence and exact
 missing production/receiving connections, then select the first behavioral package.
 Scope: F12.4:1..9; C-BELIEF and relevant LEARN/causal evidence. No broader family audit.
@@ -33,3 +33,6 @@ No UI, item catalog, autonomous peers, reduction or whole-character acceptance.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+M252 maps all nine clauses; no evidence status promoted. Next M253 ports the existing
+bounded confidence diagnostic into actual appraisal, preserving correction and privacy.

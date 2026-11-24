@@ -1,0 +1,178 @@
+{
+  "milestone": "M252",
+  "parent": "738d2a8e",
+  "card": "c6c5985a",
+  "clauses": [
+    {
+      "id": "BRIEF-12.4-1",
+      "text": "uncertain but approximately correct belief;",
+      "status": "PARTIAL",
+      "retained": "M125/M126 acquired accurate mean; M114/116 scalar uncertainty",
+      "remaining": "Confidence must be an explicit native bounded readout, distinct from correctness, with a live consumer."
+    },
+    {
+      "id": "BRIEF-12.4-2",
+      "text": "confidently wrong belief;",
+      "status": "PARTIAL",
+      "retained": "M126 mean1 on8 misleading reports; confidence8/9 only comparator",
+      "remaining": "Port accepted support-confidence readout and preserve erroneous belief, resistance and later correction."
+    },
+    {
+      "id": "BRIEF-12.4-3",
+      "text": "contradictory evidence;",
+      "status": "ESTABLISHED",
+      "retained": "M125/M1268+9; M79 conflicting perceived episodes",
+      "remaining": "Current composition correspondence and actual consumer, retaining original horizons and no-op controls."
+    },
+    {
+      "id": "BRIEF-12.4-4",
+      "text": "hidden cause;",
+      "status": "PARTIAL",
+      "retained": "M35 latent cause after actual failed attempt",
+      "remaining": "Current complete original14-case correspondence; hidden cause evaluated only by researcher."
+    },
+    {
+      "id": "BRIEF-12.4-5",
+      "text": "mistaken attribution;",
+      "status": "PARTIAL",
+      "retained": "M35 wrong diagnostics and correction",
+      "remaining": "Require wrong explanation with fixed contrary world, then permitted correction changing actual appraisal/behavior."
+    },
+    {
+      "id": "BRIEF-12.4-6",
+      "text": "repeated prediction error;",
+      "status": "PARTIAL",
+      "retained": "M29 development filter; M114/116 Gated evidence; M126 repeated contradictions",
+      "remaining": "Explicit prior-prediction/observed-error/update sequence and actual later consumer; no universal scalar."
+    },
+    {
+      "id": "BRIEF-12.4-7",
+      "text": "learning specific action-outcome contingency;",
+      "status": "ESTABLISHED",
+      "retained": "M29 route-specific performance, M249/M250 acquired action efficacy",
+      "remaining": "Map actual action-specific acquired outcomes and unchanged domains; retain belief/skill/physical distinctions."
+    },
+    {
+      "id": "BRIEF-12.4-8",
+      "text": "reduced perceived controllability;",
+      "status": "PARTIAL",
+      "retained": "M36 perceived interference; M74-M79 learned mitigation/control",
+      "remaining": "Reduced control must be consumed by appraisal/reason; qualify original controls, not infer from failure alone."
+    },
+    {
+      "id": "BRIEF-12.4-9",
+      "text": "evidence later correcting prior attribution.",
+      "status": "ESTABLISHED",
+      "retained": "M35 later diagnostic correction; M51/M173 retained evidence attribution",
+      "remaining": "Current correctable attribution correspondence and preserved prior frozen history."
+    }
+  ],
+  "next": "M253 native proposition-local support/confidence and correction through current social/appraisal path",
+  "lawDisposition": "Existing belief-public/0.1 n/(n+1) evidence-weight diagnostic, not calibrated certainty; preserve mean and update, no confidence multiplier or universal uncertainty scalar.",
+  "sequence": [
+    "Native confidence/correction consumer",
+    "Current hidden-cause/misattribution/correction correspondence",
+    "Repeated-error/action-contingency/control receiving and finite family acceptance"
+  ],
+  "sources": [
+    {
+      "path": "docs/planning/campaign3-hq012-exit-review-rev1/families.json",
+      "sha256": "1011e6641b116cd051f8b0dd9eaa9bb0c015d8408cbdf245f9c2be215b028ed4"
+    },
+    {
+      "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+      "sha256": "1deeedad55ad980783222807969895bb69296720461da4e056a0e3cac093682d"
+    },
+    {
+      "path": "docs/planning/RESEARCH_OBLIGATIONS.json",
+      "sha256": "8d1dd26d74b5aefae330418e065581249396b6a560588cb3a84985144ae7548a"
+    },
+    {
+      "path": "docs/formal/BELIEF_PUBLIC_CONTRACT.md",
+      "sha256": "f4f5038b2cdefaba4e10d32dab5aa2e4dd6773d368f1f74f33f2b97bdd22b489"
+    },
+    {
+      "path": "docs/formal/LATENT_CAUSE_COMPONENT_CONTRACT.md",
+      "sha256": "3234e82600bf7149959e47d2255ad88fbfc75bdd2a9d5dd5a219542d5774d1c5"
+    },
+    {
+      "path": "docs/formal/ASSEMBLED_CHARACTER_CAUSAL_ATTRIBUTION_CONTRACT.md",
+      "sha256": "27d5ac8a7e81f77fe9cb073a8f0b15edd434128cb4b46ee676fc0920f34ddf1f"
+    },
+    {
+      "path": "docs/formal/ASSEMBLED_CHARACTER_PERFORMANCE_EXPECTATION_CONTRACT.md",
+      "sha256": "da51f9f27aac2781e0e34669553bed725b5f159533943f48edbfd911a4ab3d48"
+    },
+    {
+      "path": "src/campaign3/beliefMath.ts",
+      "sha256": "2077ae8ba8e9d45d5fc87d1d5a61df8d6214cf06411ef624b109d42a8194361e"
+    },
+    {
+      "path": "src/assembled/social.ts",
+      "sha256": "5ee2b16b2d1b904b6ba379d07abf25334aaa2c495e7f02e2fef4875ae9bcdbb3"
+    },
+    {
+      "path": "src/assembled/socialExecution.ts",
+      "sha256": "1635ff82d6fc0982257c31350974df9f3f4d33a84f61d52dd43d9b73ff8be4e0"
+    },
+    {
+      "path": "src/assembled/causalAttribution.ts",
+      "sha256": "edd6747dfa1eb8e9c8905b07ce5d48aa2110700790121079cd8ea889ea5596b0"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M29_RESULT.md",
+      "sha256": "8e5784735ae6fe7f234d20521824eaf695b298f0363ce2050c4807ec3c451592"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M35_RESULT.md",
+      "sha256": "0edd593b55de3ef30ef55643da3a6fa2dfbdd7c5a2efad505fb6ad525b0c5786"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M36_RESULT.md",
+      "sha256": "80b9793d1a77176e69a6d67109478ac0bddbfcd6e03229b19fb99e2e87a01a98"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M51_RESULT.md",
+      "sha256": "312bc4f277641e55170b43eb53edc66fb14cbfec013d3aebffbd319e2fbffc03"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M79_RESULT.md",
+      "sha256": "606825b699de590b42f03d13e75b0f671180a5200567a5d2a661f20e4b3bcc83"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M114_RESULT.md",
+      "sha256": "3b01846fe02e16771073060f78a492c3df4536372b5b74c200607ee2b982e677"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M116_RESULT.md",
+      "sha256": "11284cb18f22b3054982a950af2c4e15f4802dcf81a839feb69d3111edcb7801"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M125_RESULT.md",
+      "sha256": "3668950851c9c7fc65af833dc8f2b35701c5c58e0ce1c31963103782dad485b9"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M126_RESULT.md",
+      "sha256": "47e7151c487fb5e0a4f28ad4e447685d121154b0de3537ec4fd3e94e2af30453"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M249_RESULT.md",
+      "sha256": "c17f1548fb12f0e6c46efa8745436874819d29bec4956704cc3efd693b8ae3f6"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M250_RESULT.md",
+      "sha256": "95e78ecc12fc1221c3b68609871bdb4bbd3940d950c52d5579eea39130373ac1"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M251_RESULT.md",
+      "sha256": "736aae73a804bab9acbcb87de83e55e66cf205475e004a029d157d0cb0f0aa18"
+    }
+  ],
+  "scope": {
+    "members": 21,
+    "families": 15,
+    "clauses": 132,
+    "familyAccepted": false
+  },
+  "runtimeRuns": 0
+}
