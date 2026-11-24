@@ -1,5 +1,5 @@
 # Assembled Character — reconciliation and requirement evidence
-D1–D5 adopted2026-10-25.0.149;feedback TRUE;21 mapped;12.1 accepted0.144,12.3 accepted0.126,12.5 accepted0.129,12.14 accepted0.135; final replay open.
+D1–D5 adopted2026-10-25.0.155;feedback TRUE;21 mapped;12.1 accepted0.144,12.2 accepted0.155,12.3 accepted0.126,12.5 accepted0.129,12.14 accepted0.135; final replay open.
 ## Adopted decisions (2026-10-25)
 1. **D1 YES:** S1–S4/A1–A3; M2a authorized; control frozen.
 2. **D2 YES WITH CONDITION:** one reference policy; alternatives cannot close a
@@ -27,9 +27,9 @@ F suffixes = BRIEF-<family>-<suffix>; each clause appears once.
 E is version-scoped evidence, not acceptance/current rerun. Cited limits and
 P/N/U remain. Final replay/classification includes E; historical claims do not broaden.
 Evidence index: E75/P33/N11/U13 =132. Not a completion percentage. Mapped members:
-21/21; accepted families:4/15 (12.1@0.144 M220;12.3@0.126 [M176];12.5@0.129 [M190];12.14@0.135 [M207]). Scope unchanged.
+21/21; accepted families:5/15 (12.1@0.144 M220;12.2@0.155 M251;12.3@0.126 [M176];12.5@0.129 [M190];12.14@0.135 [M207]). Scope unchanged.
 [M153] audits15 rows; [M154]–[M156] add bounded memory1/3/6/7/8/10 evidence. Other126 retained.
-Memory0.126; AFFECT0.129; agency0.135; embodiment0.144. Other11 family gates open.
+Memory0.126; AFFECT0.129; agency0.135; embodiment0.144; Need0.155. Other10 family gates open.
 
 | Classification | ID / area or decision | Existing sources / authority | Shared ownership / proposed disposition | Required comparison, risk or unresolved gate |
 |---|---|---|---|---|
@@ -117,7 +117,7 @@ Memory0.126; AFFECT0.129; agency0.135; embodiment0.144. Other11 family gates ope
 | MAPPED | C-REL — PHEN-REL-001 | [M151](ASSEMBLED_CHARACTER_M151_RESULT.md),0.112. | :3..10 own history/equal estimate, rupture/repair/contact, representation controls; :11/12 tracked. | LatestInteraction; original two-observer controls retained; RO-C3-016. |
 | MAPPED | C-LONG — PHEN-LONG-001 | [M152](ASSEMBLED_CHARACTER_M152_RESULT.md),0.113. | :3..10 acquired BIO/skill/REL, forgetting/loss/relearning and comparisons; :11/12 tracked. | D3/NoRust, capacity retention, attempt-associated loss; broader trajectory/final replay remain. |
 | EQUIVALENT (accepted0.144) | F-12.1 — Embodiment and regulation | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/0/clauses); [M3], [M10](ASSEMBLED_CHARACTER_M10_RESULT.md), [M38](ASSEMBLED_CHARACTER_M38_RESULT.md), [M39]. [M153]. | E:1,2,3,4,5,6,7,8; P:none; N:none; U:none. | [M220](ASSEMBLED_CHARACTER_M220_RESULT.md): eight reserve cases, sleep20/52 and intoxication20/55 replay0.144 with exact prior receiving. M219 earned tolerance8 retained unchanged. M117/M39 controls preserved; final whole-candidate replay open. |
-| UNRESOLVED | F-12.2 — Need and motivational ownership | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/1/clauses); [M221–224](ASSEMBLED_CHARACTER_M224_RESULT.md); [M225–230](ASSEMBLED_CHARACTER_M230_RESULT.md); [M231–243](ASSEMBLED_CHARACTER_M243_RESULT.md). | E:1,2,3,4,5,6; P:none; N:none; U:none. | [M250](ASSEMBLED_CHARACTER_M250_RESULT.md):0.155 G3 all22 cases bridged; G1/G2 retained. Finite six-clause acceptance review next; family OPEN. |
+| EQUIVALENT (accepted0.155) | F-12.2 — Need and motivational ownership | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/1/clauses); [M251](ASSEMBLED_CHARACTER_M251_RESULT.md). | E:1,2,3,4,5,6; P:none; N:none; U:none. | G1 M245/246, G2 M247/248, G3 M249/250: all22 substitute cases. M241–243 bound goal path preserved by complete source disposition/current corroboration. Original alternatives retained; final replay open. |
 | ACCEPTED (pinned family) | F-12.3 — Memory and recognition | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/2/clauses); [M173]–[M176]; original controls retained. | E:1,2,3,4,5,6,7,8,9,10; P:none; N:none; U:none. | All10 current0.126 clauses and C-MEM comparisons pass; actual remembered spatial/social appraisal, exact continuation/rollback. LIMIT-MEM;1/15 families. |
 | UNRESOLVED | F-12.4 — Belief and causal learning | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/3/clauses); [M29], [M35], [M36], [M51](ASSEMBLED_CHARACTER_M51_RESULT.md), [M79]. [M153]. | E:3,7,9; P:1,2,4,5,6,8; N:none; U:none. | M114/116 censored evidence; M125/126 wrong belief, contradiction and qualified absence reach appraisal. Support counts are not native confidence. Hidden cause, attribution, prediction error and control contrasts retain P gaps. |
 | EQUIVALENT (accepted0.129) | F-12.5 — Affect and appraisal | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/4/clauses); [M190] eight-clause map. | E:1,2,3,4,5,6,7,8; P:none; N:none; U:none. | Current causal controls mapped; original nulls/scalar competitors retained. No universal affect law. |

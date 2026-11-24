@@ -1,37 +1,30 @@
-# Current work — M251 Family12.2 acceptance review
-The character now passes all22 substitution cases on0.155. M250 committed bca58303;
-verification1489.944s/1800s. G1/G2/G3 transfers are complete; family decision follows.
+# Current work — Family12.2 accepted on0.155
+The character distinguishes felt pressure, retained importance, current urgency and
+motives from actionable reasons. Independent motives can support one action; one
+motive can support alternatives. Learned outcomes affect later use, and goals survive
+route changes until permitted evidence fulfills them.
+[M251 acceptance](ASSEMBLED_CHARACTER_M251_RESULT.md);
+[evidence](ASSEMBLED_CHARACTER_M251_EVIDENCE.json). Parentbca58303; card83b771ba.
 
-## Active bounded card — before review changes
-Owner requests completion of Family12.2 under self-approval. Fixed denominator:
-21members/15families/132clauses. No law, scope, threshold or completion-rule amendment.
-Capability: decide whether one current character meets all six pinned12.2 clauses.
-Model/registry0.155; MeanHistory/Residual, reward0.6,0.85/SourceCoverage fixed.
-Scope: six-clause evidence mapping; bound goal/route correspondence; obligations and
-foundation limits. Read M244 finite gaps, M241–M250 results/evidence and changed sources.
-Compare original pinned clause meanings with actual live production consumers;
-require G1/G2/G3 and existing goal/route evidence on0.155 or a rigorous unaffected-path
-disposition. No claim of cross-model random coupling or equal sampled winners.
-Risk: optional-unbound sensor repair could invalidate bound goal/Need paths; inspect
-all seven changed production files and original bound fixture declarations. Retain
-M246 actual0.154/0.155 comparison; distinguish source equivalence from identity/dice.
-Risk: classification or reference-law limitations mistaken for acceptance; explicitly
-check obligations, failed/corrected controls, unknowns and unclassified differences.
-Files: CURRENT, existing reconciliation register, one compact M251 result/evidence/log.
-No production/test/formal edits or new runtime experiments planned. If a concrete gap
-appears, amend this card before a bounded affected check; no automatic version replay.
-Checks: pinned source/evidence hashes, six-clause coverage and preservation; research;
-Git-size and whitespace. Existing passed runtime/types/boundaries retained because no
-executable dependency changes. At most300s verification including10s packaging,
-120s/check,90minutes source analysis; <=20artifacts/5MiB; zero production/test files.
-Done: accept12.2 only with every clause and G1/G2/G3 supported and no unresolved defect,
-law conflict or required comparison. Otherwise report the exact remaining blocker.
-Stop at Family12.2 decision; whole-character acceptance and UI remain unauthorized.
+## Completed under owner self-approval
+All six pinned clauses accepted. G1 Need/acquired motives M245/M246; G2 body/priority
+M247/M248; G3 all22 substitution cases M249/M250. No required case waived.
+M241–243 bound goal evidence carries through an exact seven-file diff review and
+M246's actual cross-version bound-path comparison; all later production is unchanged.
+Source/reason/probability meaning is preserved, without a cross-model winner claim.
+MeanHistory/Residual, reward0.6,0.85/SourceCoverage and reference laws remain fixed.
+Historical failures, nulls, alternative laws, original controls and hashes retained.
 
-## Preserved status
-E75/P33/N11/U13=132; accepted4/15 before this review. Assembly remains OPEN.
-RO008/020 conditional; RO019/021 closed with unchanged triggers. Original controls,
-frozen sources, alternatives and failures retained. No broader12.9 qualification.
+## Verification and boundaries
+M250 verification1489.944s/1800s. M251 finite evidence review passes: six clauses,
+333 lossless blocks,11 unchanged kernels, exact bound-path disposition. Research,
+preservation/size checks pass;21.576s/300s including10s packaging.
+Zero production/test changes or runtime experiments in M251; no new verifier/ledger.
+Stop at this family decision. No next milestone activated. Final whole-candidate replay,
+assembly acceptance, UI, broad12.7/12.9 claims and item catalog remain separate.
+Conditional RO001/008/010/012/014/015/020 and closed RO019/021 triggers remain.
+E75/P33/N11/U13=132;21members/15families;accepted5/15 on recorded versions:
+12.1@0.144,12.2@0.155,12.3@0.126,12.5@0.129,12.14@0.135. Assembly OPEN.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

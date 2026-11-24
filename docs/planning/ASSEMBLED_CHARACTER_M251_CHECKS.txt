@@ -1,0 +1,20 @@
+M251 acceptance-evidence exit=0 elapsed=6.326s cap=120s timeout=False
+PASS: six pinned clauses, G1/G2/G3,22 substitution cases; exact seven-file diff accounting;11 preserved kernels;333 lossless blocks/245221806 bytes; bound fixtures and all post-M246 production unchanged.
+
+M251 research exit=0 elapsed=3.882s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M251 preservation exit=0 elapsed=0.521s cap=120s timeout=False
+PASS: exact five-document scope; all cited source hashes preserved; six clauses and unchanged denominator; document/artifact limits. No production/test/formal or historical evidence changes.
+
+M251 git-size exit=0 elapsed=0.847s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
