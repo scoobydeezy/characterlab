@@ -1,43 +1,35 @@
-# Current work — M265 delayed-benefit receiving comparison
-M264 passes: perceived future opportunity changes actual reasons/choice and a
-postponed goal survives to later action; correction, privacy and continuation pass.
-[Result](ASSEMBLED_CHARACTER_M264_RESULT.md). Family12.7 remains incomplete.
-Owner2026-11-25 delegates full12.7 completion and bounded self-approved amendments.
+# Current work — Family12.7 reference-policy decision
+The current character postpones a feasible goal, retains it, and later acts on it;
+a corrected forecast changes later action before the predicted opening.
+[M264](ASSEMBLED_CHARACTER_M264_RESULT.md) passes10 current scenarios and exact continuation.
+Owner2026-11-25 delegates full12.7 completion under bounded self-approval.
 
-## M265 card — before code
-Capability: establish whether original same-benefit immediate/later valuation can
-enter the one current reason policy without changing its meaning or inventing drive.
-Scope12.7 clause6, delayed-public0.1; original Hyperbolic/NoDiscount/Exponential
-remain meaningful alternatives. No reference discount law is yet selected in M2 R3.
-This is a finite receiving comparison before implementation, not family acceptance.
-One test path, no production/formal changes, no new state/scheduler or source factory.
-Read original fixtures unchanged; execute main at each of the three original laws,
-plus delay2/4,cost,uncertain,unknown,unavailable,absentOffer,immediateLarge at law1.
-Capture original actual appraisal/raw/reasons/decision/delivery/receipt and sources.
-Send the actually produced positive raw grounds to the current pure reason compiler,
-with current admitted task-dice calibration and SourceCoverage. Preserve semantic
-option/task/role keys and amounts; add no fictitious goal importance or modifiers.
-This is a component receiving comparison, not a native delayed-benefit implementation.
+## M265 completed comparison — integration not accepted
+[Result](ASSEMBLED_CHARACTER_M265_RESULT.md); [evidence](ASSEMBLED_CHARACTER_M265_EVIDENCE.json).
+Eleven unchanged original delayed-benefit runs feed their actual positive grounds to
+the current pure reason compiler. Original Hyperbolic/Exponential main has two active
+nuclei; current reference has zero. Current task activation is37/100. Every legal
+standalone discounted later amount bounds<=1/3, so none can cross it without support.
+This is a reference-policy conflict, not a missing source wire or a bad seed.
+A global activation0 component candidate restores all11 original active-ground counts,
+but M264's earlier weak-motive null changes0->2. ZeroBase stays excluded. No reference
+law, production code or scenario-specific compiler has been changed.
 
-Predeclared checks: exact original anticipated values and actual delayed execution;
-current reference policy and original policy activation/probabilities/classification.
-Check bounds for all legal delay1..4, amount<=1, future probability<=1, nonnegative
-cost: Hyperbolic/Exponential later amount<=1/2. Record zero versus positive rejection.
-If current activation removes required autonomous motivation, classify a law/calibration
-conflict and report it; do not select NoDiscount merely because it passes, rescale
-amounts, relabel Commitment as Value, add synthetic support or lower a local threshold.
-Existing owner-approved reference must not be silently amended by a fixture.
-MEC012..017/019/020/022, P3-012 and RO010/012/014/019/020 preserve dispositions.
+## Required owner ruling
+Recommend a bounded versioned experiment of the global activation0 candidate,
+with affected-family replay before reference adoption; retain37/100 as the control.
+AGENTS/work-order reserve genuine reference-law conflicts for the owner. Comparison
+and adapter repairs used self-approval; this broader policy change has not been adopted.
+No delayed-only activation override, fake modifiers, Value relabelling or source scaling.
+M265 has one test path;600s total/300s per command,20 evidence files/5MiB; no active job
+remaining; final checks pass within budget. Its preimplementation card remains at6a9942af.
 
-Checks once: finite receiving test, types, relevant source hashes, research/preservation,
-evidence integrity, document bounds/git-size. Current runtime bytes unchanged, so M264
-continuation and M263 ownership/rollback retain their dependency basis.
-Budget600s cumulative,300s per command,20 evidence files/5MiB,one validation job.
-Done: all comparisons classified with a concrete integration path, or verified conflict
-requiring the owner ruling reserved by AGENTS/work-order. No substituted acceptance.
-Other full original procrastination/temporal correspondences remain required after
-this gate; no family/clause-count promotion here.7/15 families;E82/P26/N11/U13=132.
-One character remains the target; no UI, Campaign4, autonomous peers or final acceptance.
+## Remaining acceptance
+Resolve the shared policy, implement native offer/wait/delivery/receipt, and complete
+original procrastination/temporal correspondences. Family12.7 is still incomplete.
+Clauses3/4 retain M241–243; instruction forgetting has M259–263 evidence in accepted12.6.
+E82/P26/N11/U13=132;21members/15families;accepted7/15. Final candidate replay stays open.
+One character/state/scheduler/trace/save; no UI, Campaign4 or autonomous partners.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
