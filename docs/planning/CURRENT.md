@@ -1,4 +1,4 @@
-# Current work — M262 finish the attempt-receipt boundary
+# Current work — M262 boundary passed; Family12.6 review next
 Owner2026-11-25 authorizes Family12.6 completion under self-approval. Parent6cc23078.
 M261 retains18 passing schedules/144 ticks and all failures; no production change planned.
 ## Bounded card (before code)
@@ -22,4 +22,11 @@ Done: full boundary test passes with live zero-count outcome and preserved prior
 Then promote12.6-9 only and immediately review first eight-clause affected-version carry
 in the next bounded package. No family acceptance from this boundary alone.
 MEC005/011/012..020/022, EXP004/013 dispositions remain; no reduction/debt closure.
-E81/P27/N11/U13=132;21members/15families;accepted6/15;assembly OPEN.
+E82/P26/N11/U13=132;21members/15families;accepted6/15;assembly OPEN.
+Repair note: first rerun preserved an admission failure because this fixture uses
+reward-evidence0.2 single-action grammar, not the later action-list grammar. Correct
+that field to the B identity; all comparison conditions and budget stay unchanged.
+
+| Registry | Current count |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
