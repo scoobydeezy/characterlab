@@ -1,29 +1,45 @@
-# Current work — M260 intention completion PASS
-The character can act on a remembered instruction, perceive the outcome and retire
-its goal. It can still recall the instruction afterward without attempting it again.
-Missing or negative evidence leaves the goal open; false success evidence can fulfill
-it despite physical failure. This uses the same memory, planner, execution, perception
-and goal owners in model0.158. No production/formal changes in this milestone.
-Result: [M260](ASSEMBLED_CHARACTER_M260_RESULT.md); plan9576c283, parent4f6f3dd1.
-
-## Evidence and limits
-Eight native cases cover two routes, failed execution, hidden outcomes, false/true
-receipts and delayed cue. Actual retained operand, live appraisal/reason, selected
-option, physical item read, observed episode and goal evidence reference are checked.
-Identical evidence preserves goal/recall/reasons/decision at action5 and continuation6
-across different physical outcomes. Full queues, exact repeat/save-restore and reached
-settlement rollback pass. Extra reminder5 is a separate native continuation comparison.
-Two test files; zero new runtime/store/law. Original checks and failed helper/type
-attempts are retained. Budget600s/command,1800s total,20 artifacts/5MiB; no extension.
-
-## Next bounded work
-Complete clause12.6-9's full18-case native source-schedule correspondence, retaining
-all three original comparison laws and M258's486 prefixes; then carry the first eight
-workspace/control clauses on the affected version. Write the next card before coding.
-No new memory mechanics, UI or autonomous-partner dependency is authorized by this pass.
-Family12.6 remains Partial; assembly OPEN. E81/P27/N11/U13=132;21members/15families.
-Accepted6/15:12.1@0.144,12.2@0.155,12.3@0.126,12.4@0.157,12.5@0.129,12.14@0.135.
-Pinned scope and all foundation/conditional-obligation dispositions remain unchanged.
+# Current work — M261 full intention schedules and attempt-dependent receipts
+Close the remaining native18-case intention correspondence, including reports that
+exist only after a real attempt. Parentae2f0fbe; one continuing character, no UI.
+## Bounded card (before code)
+At most2 capabilities: actual attempts enable normal criterion reports; all18 original
+RetainedCue schedules run through the shared memory/planner/goal path over instants1..8.
+Scope12.6-9; first eight clauses still need affected-version carry before acceptance.
+New model/registry0.159 retains0.158; same61 slots and laws. Formal amendment first:
+optional criterion source [attempt-receipt/0.1,cue,bias,actions] samples at120 only
+for a same-instant actual non-withholding attempt of a declared item action. Failed
+execution still counts. No attempt suppresses evidence, not physical truth; existing
+7-allocation/14-child padding, C1 perception and goal settlement remain intact.
+Trace explicitly discloses the consumed execution event/outcome; no persistent gate.
+Files <=10 production/test: model, criterionSensing, sourceClock, state, runtime,
+traceBinding, new schedule fixture/test; up to2 bounded defect repairs if necessary.
+MEC005/011/012-020/022 and EXP004/013 consulted; no reduction or obligation closure.
+Predeclare original intentionCases18 without changing frames, reference RetainedCue.
+Original NoLoss/PersistentAccess54 runs/486 prefixes remain M258 controls, not per-case
+native law switches. Shared seed0/laws; native unit goal ground and live body appraisal
+remain as M259/M260. No stochastic difference claim; expose actual arbitration mode.
+Native mapping: nonsocial instruction/adoption1; permitted neutral2 if supplied;
+board cues each1..8 -> recall next instant; deliberation2..8; availability for previous
+frame opportunity, deadline7; actual cancellation3 where declared. Body30/rate10,
+ordinary body/frame inputs retained, zero body delivery for item actions. Initial
+criterion probe1 supplies evidence0; thereafter gated probes2..8 iff receipts allowed,
+bias+10 for report1. Both routes move one real item. No authored cognition or expected
+outputs in input construction. PrivateBit maps only to hidden work-board truth.
+Compare each original tick's instruction/neutral retention, semantic recall, action
+route, attempted/succeeded, received report and end-of-instant goal. Source timing
+expansion and additional native records are explicit, never full-byte cross-model
+claims. Same evidence/different truth pairs compare safe goal/recall/reason/decision
+projections after receipt as well as before. Require live goal/appraisal/recalled
+operand/reason for positive attempts; absence/loss/cancel/expiry remain negative cases.
+Checks: native18 in three serial groups<=600s each; targeted exact repeat/restore
+before action and reached rollback; malformed/old-version receipt admission; retain
+M260 old witness bytes because shared source/runtime paths change. Types, boundary,
+research, preservation, artifact and staged size checks. No unrelated regressions.
+Budget <=1800s cumulative verification,600s/command,20 evidence files/5MiB; <=128 settled
+instants/run with full queues. Split before exceeding, never trim gates or scenarios.
+Done when18 native schedules have classified correspondence, actual gate consumption,
+privacy and exact continuation pass. Laws/scope stay fixed; failed evidence retained.
+E81/P27/N11/U13=132;21members/15families;accepted6/15; Family12.6/assembly OPEN.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
