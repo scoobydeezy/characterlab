@@ -1,56 +1,56 @@
-# Current work — M270 Need and learned-control replay complete
+# Current work — M271 reserve and earned-tolerance receiving
 Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
-M269 completed12 workspace/control histories plus18 intention schedules, commitd12bf3f2.
-[Latest result](ASSEMBLED_CHARACTER_M270_RESULT.md). Reference0.159/37/100 remains;
-experimental0.160/global0 is not adopted. No law or completion-rule waiver.
+M270 complete6e601beb: [result](ASSEMBLED_CHARACTER_M270_RESULT.md).
+Reference0.159/37/100 remains; global0/model0.160 remains experimental.
+No reference adoption, family promotion, law/completion waiver or UI work.
 
-## M270 completed card — preserved comparison
-Capabilities: (1) direct Need and adopted Commitment remain independent in actual choice;
-(2) learned efficacy changes actual affect/reasons/choice; (3) privacy and continuation.
-Three planned test/helper paths: existing assembledNeedCurrent.test.ts,
-assembledPerceivedControl.test.ts, and one test-only activationFoundations helper.
-No production/formal/fixture-source change; shared model/state/scheduler/save.
-Lift original60 slots to61 with empty intention, exact normalized original60 bytes;
-only version/global threshold0 otherwise changes. All sources/S0/seeds remain exact.
-Need model0.154 and learned-control0.157 remain preserved controls. Existing bound
-item-world0.1 remains admitted under current sensor contract; no sensor retargeting.
-MEC001/003/004/011..020/022 and existing conditional obligations retained.
+## M271 bounded card — before code
+Capabilities: (1) reserve/uncertainty/absence still reach actual appraisal and reasons;
+(2) actual delayed actions earn tolerance that changes later physical effects/reasons;
+(3) exact pending-effect continuation and private-evidence boundaries.
+Three planned test/helper paths: existing assembledEmbodimentCurrent.test.ts,
+assembledActionDomain.test.ts, one test-only activationBody helper. No production/formal
+or fixture-source change. Preserve one composition/state/scheduler/save and fixed laws.
+Original58 slots normalize byte-exactly; append empty Need, unbound item-world0.3 with
+one physical item, and empty intention. Only model/version/global activation otherwise
+changes. Preserve every original initial entry, input and seed; no sensor retargeting.
+MEC001/003/011..020/022, original comparators and conditional obligations remain.
 
-Need: original M245 nonsocial tasks, body10/cap100/rate0/grid1/threshold60, seed7,
-empty initial goals unless ordinary adoption is present, no learned starting state.
-Primary without goal adoption; joint Need+Commitment versus Commitment only; one/no
-response; known zero; unknown; two hidden reserves in the same perceived bin.
-Require live pressure49/60, distinct independent grounds for the same action, actual
-decision/execution, same produced task meaning across the joint pair, changed exact
-probability, and all existing boundary assertions. Match prior captured probability/
-source findings where applicable; preserve any changed finding rather than retune.
+Package A: original M247/M220 eight reserve cases: fast, slow, no-delivery, alias41,
+alias49, fine41, denied, unavailable. Same reserve80, rates1/half, original delivery31,
+threshold40, original task/priority settings, inputs and seeds. At31/41/61 (kinetics)
+and10/12 (sensing), assert live appraisal where known, actual reason consumption and
+execution when chosen. Compare original physical intervals/pressure/appraisal/net rows.
+Keep before/after ordering, coarse alias/fine divergence, absent/denied no455 reads,
+whole safe alias equality and the original full queue through101. Unexpected receiving
+differences remain findings to classify, not equivalent by label. Original fast repeat31
+and complete save31->101 continue unchanged; no checkpoint removal.
 
-Learned control: original M256 nonsocial A/B (third0), body30/cap100/rate10 plus90 at9,
-ordinary panels1..9 and original seed, no learned S0. Control0 versus1 differs in only
-the original report6; appraisal10 stays live. Preserve E119/200, U119/200 versus0,
-actual situation3 versus0 and action probability7/9 versus25/72, both positive bases,
-actual source/receiver trace joins and actual execution. Unknown control remains
-Unavailable; failed execution cannot rewrite prior appraisal, grounds or learning.
-Replay current primary/unknown/failed/hidden cases and compare their proof fields to
-retained M256 current records. Do not rerun its unchanged0.129 legacy control.
+Package B: original M219 ordinary-dose4-action configuration, seed0, reserve10/rate1,
+amount40/delay2, original normal withdrawal8, no learned toleranceS0. Reciprocal reference
+versus Unattenuated physical-effect control retains earned302 magnitudes2/3/4/5,
+potentials40/3,10,8,20/3 versus40 and live receiving3/5/7. Actual executed dose must
+produce the pending receipts; mere configuration does not count. Compare original
+effect and appraisal/reason projections, retaining changes explicitly if any.
+Reuse original four-option conditional arbitration check, repeat/checkpoint3 with
+earned tolerance/pending delivery, complete restore/termination101, and hidden later
+reserve comparison: Unavailable appraisal and equal complete observer stream despite
+unequal private effects. Original admission and0.143 sleep controls are unchanged and
+not rerun. Original failed infinite-exposure fixture remains preserved.
 
-Reuse exact Need repeat/save1/late receiving rollback and learned-control repeat/save9
-through termination. Original hidden-body bin and whole state/output privacy remain.
-Keep default tests/paths unchanged; explicit M270 selection writes separate artifacts.
-Add current-version assertions and evidence correspondence, never weaken existing gates.
-Preserve failed native snapshots and completed outputs before correspondence checks.
-No new contrast, seed search or per-case activation setting.
-
-Checks serial: Need primary/joint/boundaries/hidden/continuation and saved correspondence;
-learned-control primary/boundaries/hidden continuation; types; boundary/research/archive;
-source/evidence integrity, document limits and Git size.
-Budget1800s cumulative/600s command;20 evidence files/5MiB;12 source/test-file ceiling.
-Expected prior successful checks about800s; retain room for bounded diagnosis.
-Done: both native causal connections and all declared controls classified with no defect.
-Then finish residual body/sleep/intoxication receiving; explicit reference decision
-and native delayed offer/wait/delivery/receipt plus original temporal mapping remain.
-Family12.7 is the task, not a bounded replay pass. No UI or autonomous-peer work.
-E82/P26/N11/U13=132;21members/15families;7 accepted on their prior versions.
+Test-only explicit M271 selection writes separate BODY/TOLERANCE artifacts and preserves
+historical defaults. Reuse assertions, retaining failed snapshots before correspondence.
+No new contrast, source calibration, seed search, psychological owner or runtime branch.
+Budget split BEFORE code from known M247~1100s/M219~600s measurements:
+A1800s reserve; B1200s tolerance; C180s final checks; total3180s, <=600s/command.
+Each bounded package <=1800s; one validation job.20 artifacts/5MiB;12 source/test files.
+Checks: selected native gates, existing repeat/restore/privacy, types, reference boundary,
+research/archive, source/evidence integrity, document and staged Git-size limits.
+Done: all eight reserve cases and both tolerance laws/hidden/pending controls classified.
+Then fixed sleep/intoxication cohorts; explicit reference decision and native delayed
+benefit integration/receipt plus original procrastination/temporal mapping remain.
+Family12.7 remains the task; these packages do not substitute for its completion.
+E82/P26/N11/U13=132;21members/15families;7 accepted on prior versions.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
