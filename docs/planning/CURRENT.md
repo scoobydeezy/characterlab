@@ -1,39 +1,48 @@
-# Current work — M267 native replay complete
-The experimental character retains acquired-motive distinctions and the separation
-of retained importance from current urgency. Earlier weak action can create new
-experience and Value, changing later choices. Candidate0.160 remains unadopted.
-[Result](ASSEMBLED_CHARACTER_M267_RESULT.md), [evidence](ASSEMBLED_CHARACTER_M267_EVIDENCE.json),
-[checks](ASSEMBLED_CHARACTER_M267_CHECKS.txt). Plan005301b8 precedes implementation.
+# Current work — M268 changed intoxication and reappraisal receiving
+Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
+Proceed across bounded packages; report each pass in progress, not as family completion.
+Reference0.159/37/100 remains;0.160 is experimental pending affected native replay.
+M267 complete atfb9e2564. No law/denominator waiver or automatic reference adoption.
 
-## Scope and outcome
-Owner continuation2026-11-25, bounded self-approval. Contract positive-activation0.1;
-reference0.159/37/100 and original0.155 results preserved. No production/formal change.
-M246's ten acquired-history arms and one0.159 negative control now have native replay.
-Distinct Commitment/Value grounds, shared ancestry and zero covered-duplicate weight
-remain. Unknown/zero/absent and hidden evidence boundaries pass. Negative history loses
-NoReasons6: an actual action creates receipt6, learned Value and active Value reason8.
-A probability8 changes0->101/144. This is a classified activation/execution/learning
-interaction, not equal-history receiving or a claimed unchanged original null.
-M248's four histories retain all24 Factored motive observations and actual execution.
-Initial equal motives still agree (A13/16); common later urgency gives higher retained
-importance A89/144 versus1/2. Seven zero/absence/privacy/omission controls pass.
-Acquired repeat/save6 and priority repeat/restores1/5 match every following settled
-state/output/trace/save through termination. Original failures/test repairs retained.
-Three new test/helper files plus one explicit-enable argument in an existing replay
-helper, whose default behavior is unchanged. Input/initial/seed/other60 slots exact;
-only empty intention binding, version and activation differ. No fixture retuning.
-Budget1800s total/600s per command;20 artifacts/5MiB;12 source/test paths maximum.
-Native gates pass; final types/boundary/research/artifact/size receipts in CHECKS.
+## M268 bounded card — before code
+Capabilities: (1) permitted reward learning under unequal private intoxication effects;
+(2) chosen reappraisal still changes later affect/reasons/choice; (3) continuation.
+No production/formal changes. At most3 new test/helper files, same61-slot composition.
+Contract positive-activation0.1; SourceCoverage/standing rounding and all laws fixed.
+MEC011..020/022 retained; original C0–3 controls and conditional obligations preserved.
 
-## Next bounded work
-Replay intoxication and reappraisal histories under0.160, then finish residual affected
-family native coverage before a reference-adoption decision. No acceptance carry.
-M267 addresses BRIEF-12.2-2/3/4/5 distinctions, not whole12.2 reacceptance on0.160.
-Native delayed offers/wait/delivery/receipt and original procrastination/temporal
-correspondences remain. Family12.7 and final whole-candidate acceptance stay open.
-Write the next bounded card before code. No UI, autonomous peers, framework or new
-psychological pipeline. MEC001/011..020/022 and conditional debts retain dispositions.
-E82/P26/N11/U13=132;21members/15families;7 accepted on their recorded prior versions.
+Intoxication: original M220 boundary fixtures, seed0, nonsocial tasks, original body
+and genuine600 acquired reward prelude. BlindSober/BlindSlow with pleasure/intoxication
+masked through13; same pair with original saturated pleasure sample9 through10.
+Private motor Applied/Blocked must remain unequal, whole permitted observer equal.
+Masked learning remains count1/mean600; observed zero learns count2/mean300 and reaches
+actual reasons10. Candidate may activate that weak reason; preserve old suppression.
+One matching0.159 BlindSlow/zero run must reproduce original M220 receiving semantics,
+separating the composition lift from activation. No new contrast or seed search.
+Lift original58 slots with empty Need, unbound item-location0.3 plus one physical item,
+and empty intention. Original58 slots/input/seed/initial entries preserved except0.
+Item move is physical, outside the scalar sensor; no authored psychology or new owner.
+
+Reappraisal: original M263 complete/interrupted runs on0.159, unchanged nonsocial
+sources/body/seed; change only version and global threshold0. At10 require live motive
+and actual choice; at11 require frame10 versus0, equal acquired knowledge and prior
+appraisal, changed later appraisal and different actual probabilities/execution.
+Compare original retained raw sources to native produced inputs; classify changed
+nuclei/probabilities and any later-history interaction. Do not infer from equal seeds.
+
+Persist full state/output/trace and source hashes for seven declared native arms.
+Repeat and save9->termination for the zero-learning BlindSlow run; repeat and
+save10->termination for completed reappraisal. Match every settled full byte/save.
+Old negative disclosure/rollback checks remain controls; changed bundle rollback
+already passedM266 and production stays unchanged. No blanket old-control rerun.
+Checks: functional, types, boundary/research, source/artifact integrity and Git size.
+Budget1800s cumulative/600s command,20 evidence files/5MiB,12 source/test file maximum.
+One validation job. Record repairs before targeted reruns; retain failed evidence.
+Done: both changed native gates and continuation classified and complete; next bounded
+residual affected-family replay, then explicit reference decision and native delayed
+integration/procrastination/temporal correspondence. Full12.7 completion still required.
+No UI, autonomous peer, new psychological pipeline or unearned reduction.
+E82/P26/N11/U13=132;21members/15families;7 accepted on prior versions.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
