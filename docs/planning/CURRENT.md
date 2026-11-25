@@ -1,41 +1,35 @@
-# Current work — M257 finite Family12.4 acceptance review
-The character learns uncertain or wrong beliefs, revises explanations and action
-expectations, and lets learned control change actual appraisal and reasons.
-M256 complete at3647766d. Owner delegates full Family12.4 under bounded self-approval.
+# Current work — Family12.4 accepted
+The character learns uncertain or confidently wrong beliefs, corrects explanations,
+updates action-specific expectations and lets reduced control change actual reasons.
+M256 closes the last native gate; M257 accepts all nine pinned clauses on0.157.
+[M257 result](ASSEMBLED_CHARACTER_M257_RESULT.md); [evidence](ASSEMBLED_CHARACTER_M257_EVIDENCE.json);
+[checks](ASSEMBLED_CHARACTER_M257_CHECKS.txt). Parent3647766d; carda0f9a810.
 
-## Bounded card before review
-One capability: decide all nine pinned Belief/causal-learning clauses together on
-reference0.157. Scope stays21members/15families/132clauses; no law or gate amendment.
-Use M252's exact clause map; current M253 confidence, M254 causal disclosure,
-M255 repeated prediction error/action isolation and M256 perceived-control evidence.
-Retain C-BELIEF/M125–126, M29/M35/M79 original competitors and required horizons;
-M249/250 specific learned action alternatives and M189 affect-factor controls.
+## Accepted scope
+M253 confidence/correction; M254 hidden cause/mistaken explanation/later reports;
+M255 repeated prediction errors and action isolation; M256 learned control -> actual
+appraisal/reasons/probabilities/execution. Same fixed reference laws throughout.
+No confidence multiplier, general causal-discovery claim or per-phenomenon pipeline.
+M257 accounts for every production change after M253 and preserves original controls.
+Nine exact clauses,114 lossless blocks, unchanged production/test/formal sources.
+No new runtime experiment or model version; one compact result/evidence/log bundle.
+Exact native repeat/restore, privacy/order/unknown and original comparisons remain.
+All review checks pass in19.805s/300s including10s packaging; longest4.086s.
+Three artifacts below40KiB; no production/test edits or runtime reruns.
+Passing ends verification; no family or whole-assembly scope is waived.
 
-Zero production/test/formal changes, zero new runtime experiments by default.
-One compact result/evidence/check log plus existing CURRENT/register updates.
-Verify every clause's actual consumer, unknown/zero/privacy/order/continuation controls,
-original comparison and limit. Account for the complete five-file0.156->0.157 diff
-before carrying M253 confidence evidence forward; no identity-byte equality claim.
-Review unchanged relevant kernels/fixtures and M254 original14-case/four-law mapping;
-original suite passes are controls, never falsely relabeled native full replay.
-Check preserved evidence hashes, exact pinned clause text, research obligations,
-source preservation, document/artifact limits, Git-size and whitespace.
+## Next direction — not yet active
+Family12.6 Cognitive workspace/control. The register's remaining partial clause is
+intention recovery through episodic memory. M127/128 working access/reminders are
+retained evidence, not proof of forgotten instruction content recovered from memory.
+Before code, pin the original intention comparison and a bounded current consumer
+witness in this file. Review its other eight clauses without reopening unrelated work.
+No UI, autonomous peers, new review framework or final-candidate replay in M257.
 
-Risks: report-only evidence mistaken for changed choice; support confidence mistaken
-for truth/calibration; old-version source assumed unaffected; physical failure or
-unknown mistaken for learned control; required comparison silently waived.
-Classify every difference/limit. Any missing required connection blocks its clause;
-record a concrete next bounded comparison, not a new review chain or completion claim.
-Existing exact tests/types/boundaries are retained when dependencies are unchanged.
-One validation job, <=120s/command, <=300s total including10s packaging;
-<=20 evidence artifacts/5MiB; CURRENT<=80, register<=250lines/64KiB.
-
-Done only if every pinned clause and applicable comparator has adequate native or
-explicit semantic-correspondence evidence, no unresolved defect/law conflict and
-preserved foundations. Otherwise report the exact blocker without changing scope.
-Passing ends review; no additional family, UI, autonomous peers or final-candidate
-replay in this package. E81/P27/N11/U13;accepted5/15 until this decision completes.
-MEC001/002/006/019, EXP001/002/005, RO007/010/011/014/019/020/021 limits remain.
+E81/P27/N11/U13=132;21members/15families;accepted6/15:
+12.1@0.144,12.2@0.155,12.3@0.126,12.4@0.157,12.5@0.129,12.14@0.135.
+Whole assembly and full final-candidate replay remain OPEN. RO010 broader inference,
+confidence calibration/source reliability remain conditional; other limits retained.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

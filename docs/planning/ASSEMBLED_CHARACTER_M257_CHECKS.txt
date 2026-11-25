@@ -1,0 +1,24 @@
+M257 plan-size exit=0 elapsed=0.849s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M257 review-preservation exit=0 elapsed=4.086s cap=120s timeout=False
+Nine exact clauses; five-file version diff accounted; 114 lossless blocks / 112515640 decoded bytes; sources unchanged; no runtime experiment.
+M257 research exit=0 elapsed=3.881s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M257 final-preservation exit=0 elapsed=0.138s cap=120s timeout=False
+{"documentLines": {"AGENTS.md": 120, "docs/planning/CURRENT.md": 34, "docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md": 250, "docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md": 248}, "artifactFiles": 3, "artifactBytes": 33057, "allProductionSinceConfidenceExactlyReviewedFiveFiles": true, "currentSourceFormalBaselineLedgerObligationsUnchanged": true}
+M257 git-size exit=0 elapsed=0.851s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
