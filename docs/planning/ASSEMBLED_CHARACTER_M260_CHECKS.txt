@@ -1,0 +1,103 @@
+M260 types exit=2 elapsed=22.615s cap=600s timeout=False
+src/test/assembledIntentionCompletion.test.ts(24,23): error TS2304: Cannot find name 'outputs'.
+src/test/assembledIntentionCompletion.test.ts(27,36): error TS2304: Cannot find name 'outputs'.
+src/test/assembledIntentionCompletion.test.ts(27,76): error TS7006: Parameter 'v' implicitly has an 'any' type.
+src/test/assembledIntentionCompletion.test.ts(28,35): error TS2304: Cannot find name 'outputs'.
+src/test/assembledIntentionCompletion.test.ts(28,77): error TS7006: Parameter 'v' implicitly has an 'any' type.
+src/test/assembledIntentionCompletion.test.ts(36,21): error TS2304: Cannot find name 'outputs'.
+src/test/assembledIntentionCompletion.test.ts(36,63): error TS7006: Parameter 'v' implicitly has an 'any' type.
+src/test/assembledIntentionCompletion.test.ts(39,23): error TS7006: Parameter 'v' implicitly has an 'any' type.
+src/test/assembledIntentionCompletion.test.ts(40,17): error TS2304: Cannot find name 'outputs'.
+src/test/assembledIntentionCompletion.test.ts(40,57): error TS7006: Parameter 'v' implicitly has an 'any' type.
+src/test/assembledIntentionCompletion.test.ts(41,28): error TS7006: Parameter 'v' implicitly has an 'any' type.
+
+M260 primary exit=0 elapsed=116.008s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledIntentionCompletion.test.ts (7 tests | 6 skipped) 110026ms
+   ✓ completion260 primary memory action perception and goal retirement 110025ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  22:14:50
+   Duration  115.44s (transform 3.33s, setup 0ms, collect 4.95s, tests 110.03s, environment 0ms, prepare 141ms)
+
+
+M260 receipts exit=1 elapsed=132.457s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledIntentionCompletion.test.ts (9 tests | 1 failed | 8 skipped) 126463ms
+   × completion260 receipt boundaries and delayed cue 126462ms
+     → M260 skipped 4
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIntentionCompletion.test.ts > completion260 receipt boundaries and delayed cue
+Error: M260 skipped 4
+ ❯ Module.through src/test/fixtures/assembledIntentionCompletion.ts:36:248
+
+ ❯ src/test/assembledIntentionCompletion.test.ts:56:122
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  22:17:19
+   Duration  131.88s (transform 3.32s, setup 0ms, collect 4.95s, tests 126.46s, environment 0ms, prepare 143ms)
+
+
+M260 late-cue-and-exact exit=0 elapsed=145.362s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledIntentionCompletion.test.ts (10 tests | 8 skipped) 138566ms
+   ✓ completion260 delayed cue 83516ms
+   ✓ completion260 exact repeat restore and reached settlement rollback 55049ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  22:20:17
+   Duration  144.70s (transform 3.73s, setup 0ms, collect 5.57s, tests 138.57s, environment 0ms, prepare 173ms)
+
+
+M260 post-outcome-privacy exit=0 elapsed=133.158s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledIntentionCompletion.test.ts (10 tests | 8 skipped) 127073ms
+   ✓ completion260 receipt boundaries 121881ms
+   ✓ completion260 original receipt correspondence and hidden projections 5191ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 8 skipped (10)
+   Start at  22:22:58
+   Duration  132.59s (transform 3.41s, setup 0ms, collect 5.06s, tests 127.07s, environment 0ms, prepare 142ms)
+
+
+M260 final-types exit=0 elapsed=22.802s cap=600s timeout=False
+
+M260 boundaries exit=0 elapsed=3.273s cap=120s timeout=False
+Reference boundary check passed.
+
+M260 research exit=0 elapsed=3.418s cap=120s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M260 preservation exit=0 elapsed=2.485s cap=120s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M260 artifact-review exit=0 elapsed=0.139s cap=120s timeout=False
+40 lossless blocks, 13041108 decoded bytes; 8 cases, rollback/continuation, planning limits valid.
+3 artifacts, 746140 bytes; cumulative prior checks 581.578s.
+
+M260 git-size exit=0 elapsed=0.868s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M260 packaging allowance=10.000s; staged whitespace check initially found a trailing blank line in this log; removed, no material output changed.
