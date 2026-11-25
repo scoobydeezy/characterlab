@@ -40,3 +40,12 @@ Done: all above gates pass with observed differences classified, or explicit inc
 checkpoint with concrete missing requirement. Next package resolves delayed benefit
 and the complete original procrastination/temporal correspondence before acceptance.
 No UI, Campaign4, autonomous partners, reduction or final assembly acceptance.
+
+## Self-approved comparison amendment before replacement
+The first positive run preserves a null: B urgency0 gives Base1/2 and neither
+option active in the available arm; unavailable A is active. This is the accepted
+current reason calibration interacting with the old M14 setup, not procrastination.
+Use B urgency1 in every replacement arm (Base1, original procrastination immediate
+motive strength), preserving all original raw bytes and the first setup in Git.
+Seed0, laws, forecasts, deadlines and positive gate remain; no threshold tuning.
+One replacement only; failure is diagnosed rather than another strength search.

@@ -1,0 +1,29 @@
+M264 positive exit=1 elapsed=95.588s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledProspectionCurrent.test.ts > family264 postponement consumes perceived opportunity and retains future goal 28871ms
+   → expected null to be '0b8308051f646566696e6974696f6e2f70726…' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledProspectionCurrent.test.ts > family264 postponement consumes perceived opportunity and retains future goal
+AssertionError: expected null to be '0b8308051f646566696e6974696f6e2f70726…' // Object.is equality
+
+- Expected: 
+"0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f"
+
++ Received: 
+null
+
+ ❯ src/test/assembledProspectionCurrent.test.ts:29:27
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  10:28:24
+   Duration  95.00s (transform 3.72s, setup 0ms, collect 65.67s, tests 28.87s, environment 0ms, prepare 149ms)
+
+
