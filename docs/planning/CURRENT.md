@@ -1,35 +1,45 @@
-# Current work — Family12.4 accepted
-The character learns uncertain or confidently wrong beliefs, corrects explanations,
-updates action-specific expectations and lets reduced control change actual reasons.
-M256 closes the last native gate; M257 accepts all nine pinned clauses on0.157.
-[M257 result](ASSEMBLED_CHARACTER_M257_RESULT.md); [evidence](ASSEMBLED_CHARACTER_M257_EVIDENCE.json);
-[checks](ASSEMBLED_CHARACTER_M257_CHECKS.txt). Parent3647766d; carda0f9a810.
+# Current work — M258 intention-recovery boundary and pinned comparison
+Family12.6 has native workspace/control witnesses, but reminder access is not yet
+recovery of an instruction whose only surviving action content is episodic memory.
+Parent8b15daf9; owner continuation under existing bounded self-approval.
 
-## Accepted scope
-M253 confidence/correction; M254 hidden cause/mistaken explanation/later reports;
-M255 repeated prediction errors and action isolation; M256 learned control -> actual
-appraisal/reasons/probabilities/execution. Same fixed reference laws throughout.
-No confidence multiplier, general causal-discovery claim or per-phenomenon pipeline.
-M257 accounts for every production change after M253 and preserves original controls.
-Nine exact clauses,114 lossless blocks, unchanged production/test/formal sources.
-No new runtime experiment or model version; one compact result/evidence/log bundle.
-Exact native repeat/restore, privacy/order/unknown and original comparisons remain.
-All review checks pass in19.805s/300s including10s packaging; longest4.086s.
-Three artifacts below40KiB; no production/test edits or runtime reruns.
-Passing ends verification; no family or whole-assembly scope is waived.
+## Bounded card before work
+Finish the finite intake for Family12.6: map all nine exact clauses, qualify the
+original intention comparator and pin the missing native ownership/consumer seam.
+No production/test/formal edits, model-version change or new law selection.
+Zero new runtime pipelines. One result/evidence/check bundle and existing register.
+The original intention component is a comparison control, never a production import.
 
-## Next direction — not yet active
-Family12.6 Cognitive workspace/control. The register's remaining partial clause is
-intention recovery through episodic memory. M127/128 working access/reminders are
-retained evidence, not proof of forgotten instruction content recovered from memory.
-Before code, pin the original intention comparison and a bounded current consumer
-witness in this file. Review its other eight clauses without reopening unrelated work.
-No UI, autonomous peers, new review framework or final-candidate replay in M257.
+Read original intention-forgetting-component0.1 and54-run/486-prefix qualification,
+M128 WORK integration, current goal/plan/memory/workspace source and mechanism ledger.
+Keep18 original scenarios and RetainedCue/NoLoss/PersistentAccess comparisons intact.
+Required native projection: retained goal/status, retained instruction content,
+actual recalled operand, available option, reason, intent, attempt and received outcome.
+Primary A/B: acquire instruction1 and neutral2; no active instruction at3/4;
+reminder4 supplies no action; recalled surviving instruction causes action5.
+Capacity1 loses content and defeats the same reminder; capacity2 preserves it.
+Retained goal stays Open independently. Both routes must run; no default-route fallback.
+Wrong/absent cue, sole zero-score survivor, cancellation/expiry, unavailable opportunity,
+failed execution, hidden receipt and denied instruction remain separate controls.
+Recall alone may not re-encode, protect, adopt or restore deleted bytes.
 
-E81/P27/N11/U13=132;21members/15families;accepted6/15:
-12.1@0.144,12.2@0.155,12.3@0.126,12.4@0.157,12.5@0.129,12.14@0.135.
-Whole assembly and full final-candidate replay remain OPEN. RO010 broader inference,
-confidence calibration/source reliability remain conditional; other limits retained.
+Before implementation, record exactly why current immutable instruction373/2 and
+selected-plan996 are insufficient and which actual owner must hold each operand.
+Pin C1 permitted observation -> existing episodic346/1 -> current recall/workspace
+-> existing candidate/reason/decision/execution; one goal373 lifecycle and one scheduler.
+No generic instruction framework, archive, new permanent route copy or inferred desire.
+Original unit-strength reasons need explicit correspondence to native importance/urgency,
+not tuning; original resource controls must not change reference retention laws.
+MEC005/011/012..020/022, EXP004/013; RO005/006/007/012/014/019/020 reviewed.
+
+Checks: unchanged15-test original intention suite once; retained source/evidence hashes;
+exact nine-clause map; research, document/artifact/size/whitespace checks.
+One job, <=600s/job, <=900s total including10s packaging; <=20 artifacts/5MiB.
+If original checks fail, retain and diagnose; no rewrite of original laws or fixtures.
+Done: explicit finite native comparison/ownership map and preserved original controls.
+No new assembled clause/family acceptance follows from control-only verification.
+Next package must deliver the memory-to-action connection, not additional intake.
+E81/P27/N11/U13=132;21members/15families;accepted6/15;Family12.6/assembly OPEN.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
