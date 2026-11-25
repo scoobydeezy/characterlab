@@ -22,6 +22,7 @@ import {cognitiveRecord as r,receivingRecord,cloneCognitive} from './codecs';
 import {ExactRational as Q} from '../substrate/exactMath';
 import {ZERO,ONE,absolute,bounded,readQ,qValue,distributionValue} from '../campaign2/cognitiveMath';
 
+export const POSITIVE_ACTIVATION_VERSION='assembled-character-positive-activation/0.1-candidate';
 export const REASON_REFERENCE_VERSION='assembled-character-reason-sources/0.5-candidate';
 export const SOURCE_COVERAGE_VERSION='assembled-character-reason-sources/0.3-candidate';
 export const REASON_SOURCES='assembled-reason-sources/0.1';

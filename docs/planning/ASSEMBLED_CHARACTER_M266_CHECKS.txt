@@ -1,0 +1,208 @@
+M266 native-weak exit=0 elapsed=112.573s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositiveActivation.test.ts > activation266 weak motives reach actual choice while old control stays exact
+M266 native weak motives, actual probability change and exact old0.159 control PASS
+
+ ✓ src/test/assembledPositiveActivation.test.ts > activation266 weak motives reach actual choice while old control stays exact 44654ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  11:59:19
+   Duration  112.00s (transform 3.58s, setup 0ms, collect 66.88s, tests 44.65s, environment 0ms, prepare 143ms)
+
+
+M266 native-boundaries exit=1 elapsed=264.451s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositiveActivation.test.ts > activation266 current strong zero unavailable and denied controls
+M266 global activation preserves zero/feasibility/denied truth boundaries PASS
+
+ ✓ src/test/assembledPositiveActivation.test.ts > activation266 current strong zero unavailable and denied controls 79419ms
+ × src/test/assembledPositiveActivation.test.ts > activation266 correction with expired and surviving competition 63054ms
+   → same actual prior choice: expected '0b8308051f646566696e6974696f6e2f70726…' to be '0b8308051f646566696e6974696f6e2f70726…' // Object.is equality
+ × src/test/assembledPositiveActivation.test.ts > activation266 closed admission trace disclosure persistence and late rollback 56567ms
+   → promise resolved "true" instead of rejecting
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPositiveActivation.test.ts > activation266 correction with expired and surviving competition
+AssertionError: same actual prior choice: expected '0b8308051f646566696e6974696f6e2f70726…' to be '0b8308051f646566696e6974696f6e2f70726…' // Object.is equality
+
+Expected: "0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d6f6e65"
+Received: "0b8308051f646566696e6974696f6e2f70726f746f636f6c2d636f6e746163742d74776f"
+
+ ❯ src/test/assembledPositiveActivation.test.ts:58:63
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledPositiveActivation.test.ts > activation266 closed admission trace disclosure persistence and late rollback
+AssertionError: promise resolved "true" instead of rejecting
+
+- Expected:
+[Error: rejected promise]
+
++ Received:
+true
+
+ ❯ src/test/assembledPositiveActivation.test.ts:70:162
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 1 passed | 6 skipped (9)
+   Start at  12:02:20
+   Duration  263.87s (transform 3.35s, setup 0ms, collect 64.34s, tests 199.04s, environment 0ms, prepare 141ms)
+
+
+M266 corrected-coupling-and-rollback exit=1 elapsed=157.939s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledPositiveActivation.test.ts > activation266 correction with expired and surviving competition 34666ms
+   → cognitive record grammar: unsupported receiving record version
+ × src/test/assembledPositiveActivation.test.ts > activation266 closed admission trace disclosure persistence and late rollback 57931ms
+   → promise resolved "true" instead of rejecting
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPositiveActivation.test.ts > activation266 correction with expired and surviving competition
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:37:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:216:329
+ ❯ src/test/assembledPositiveActivation.test.ts:68:144
+ ❯ draws src/test/assembledPositiveActivation.test.ts:68:137
+ ❯ src/test/assembledPositiveActivation.test.ts:69:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledPositiveActivation.test.ts > activation266 closed admission trace disclosure persistence and late rollback
+AssertionError: promise resolved "true" instead of rejecting
+
+- Expected:
+[Error: rejected promise]
+
++ Received:
+true
+
+ ❯ src/test/assembledPositiveActivation.test.ts:82:217
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 7 skipped (9)
+   Start at  12:08:03
+   Duration  157.35s (transform 3.37s, setup 0ms, collect 64.27s, tests 92.60s, environment 0ms, prepare 148ms)
+
+
+
+M266 scheduling-diagnostic allowance=3.000s; actual trace clocks1/2/3 counts27/2/33 for corrected7-true.
+M266 receiving-screen exit=1 elapsed=4.717s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositiveActivationReplay.test.ts > activation266 admitted global dice replay original delayed packets
+M266 actual admitted candidate dice preserve11 delayed positive-ground counts
+
+ × src/test/assembledPositiveActivationReplay.test.ts > activation266 replay captured receiving and list changed family obligations 1079ms
+   → requires 407/1
+ ✓ src/test/assembledPositiveActivationReplay.test.ts > activation266 admitted global dice replay original delayed packets
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPositiveActivationReplay.test.ts > activation266 replay captured receiving and list changed family obligations
+SchedulerContractError: requires 407/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ src/test/assembledPositiveActivationReplay.test.ts:28:54
+ ❯ src/test/assembledPositiveActivationReplay.test.ts:28:40
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  12:12:28
+   Duration  4.14s (transform 1.66s, setup 0ms, collect 2.57s, tests 1.14s, environment 0ms, prepare 143ms)
+
+
+M266 receiving-screen-reader-repair exit=0 elapsed=21.528s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositiveActivationReplay.test.ts > activation266 replay captured receiving and list changed family obligations
+M266 receiving M220_BODY packets11 changed0
+M266 receiving M220_SLEEP packets15 changed0
+M266 receiving M220_INTOXICATION packets18 changed1
+M266 receiving M245 packets9 changed0
+M266 receiving M246 packets17 changed2
+M266 receiving M248 packets17 changed13
+M266 receiving M256 packets6 changed0
+M266 receiving M261 packets51 changed0
+M266 receiving M263 packets35 changed1
+M266 receiving M235 packets5 changed0
+
+ ✓ src/test/assembledPositiveActivationReplay.test.ts > activation266 replay captured receiving and list changed family obligations 17925ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 1 skipped (2)
+   Start at  12:15:10
+   Duration  20.97s (transform 1.69s, setup 0ms, collect 2.61s, tests 17.93s, environment 0ms, prepare 137ms)
+
+
+M266 corrected-reader-and-clock exit=0 elapsed=131.078s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPositiveActivation.test.ts > activation266 correction with expired and surviving competition
+M266 shared prior dice/history; correction changes probability with surviving competitor PASS
+
+ ✓ src/test/assembledPositiveActivation.test.ts > activation266 correction with expired and surviving competition 3692ms
+stdout | src/test/assembledPositiveActivation.test.ts > activation266 closed admission trace disclosure persistence and late rollback
+M266 admission/trace/persistence/late rollback PASS
+
+ ✓ src/test/assembledPositiveActivation.test.ts > activation266 closed admission trace disclosure persistence and late rollback 61746ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 7 skipped (9)
+   Start at  12:15:47
+   Duration  130.52s (transform 3.32s, setup 0ms, collect 64.61s, tests 65.44s, environment 0ms, prepare 138ms)
+
+
+M266 types exit=0 elapsed=22.943s cap=300s timeout=False
+
+M266 boundaries exit=0 elapsed=3.294s cap=60s timeout=False
+Reference boundary check passed.
+
+M266 research exit=0 elapsed=3.464s cap=120s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M266 preserved-evidence exit=0 elapsed=2.530s cap=180s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M266 integrity exit=0 elapsed=0.395s cap=60s timeout=False
+PASS14 native arms; old control exact; coupled comparison;184 receiving/11 delayed packets; 87 lossless blocks/36242593 decoded bytes; 4 artifacts/1852476 bytes;6 source/test files; frozen sources unchanged; verification 727.517s plus final packaging allowance10s
+M266 packaging: staged Git size PASS; initial whitespace check found trailing blank EOF, removed; final staged whitespace PASS required before commit. Packaging covered by reserved10s.
