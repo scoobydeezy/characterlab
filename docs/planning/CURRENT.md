@@ -1,10 +1,10 @@
-# Current work — M271 reserve and earned-tolerance receiving
+# Current work — M271 complete; Family12.7 continues
 Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
-M270 complete6e601beb: [result](ASSEMBLED_CHARACTER_M270_RESULT.md).
+M271 complete: [result](ASSEMBLED_CHARACTER_M271_RESULT.md); all12 selected tests pass.
 Reference0.159/37/100 remains; global0/model0.160 remains experimental.
 No reference adoption, family promotion, law/completion waiver or UI work.
 
-## M271 bounded card — before code
+## M271 completed card — comparison unchanged
 Capabilities: (1) reserve/uncertainty/absence still reach actual appraisal and reasons;
 (2) actual delayed actions earn tolerance that changes later physical effects/reasons;
 (3) exact pending-effect continuation and private-evidence boundaries.

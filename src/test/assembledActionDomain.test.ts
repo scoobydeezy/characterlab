@@ -1,7 +1,8 @@
-import {it,expect} from 'vitest';
+import {replay271,candidate271,correspondence271,track271,failure271} from './fixtures/assembledActivationBody';
+import {it,expect,afterEach} from 'vitest';
 // @ts-expect-error Node-only test evidence IO.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
-import {fixture,registryChange,dose,decode,items,key,enc,list,text,u,signed,C,rec,f,uint,at,start,state,labels,through,currentSleep,type Run} from './fixtures/assembledActionDomain';
+import {fixture as originalFixture,registryChange,dose,decode,items,key,enc,list,text,u,signed,C,rec,f,uint,at,start as originalStart,state,labels,through,currentSleep,type Run} from './fixtures/assembledActionDomain';
 import {hash,eqbytes,safe} from './assembledIntoxicationCohort.test';
 import {compileCharacterModel,REWARD_EVIDENCE_RULES,REWARD_EVIDENCE_REGISTRY} from '../assembled/model';
 import {prepareCharacterModel,createCharacterRun,restorePreparedCharacterRun} from '../assembled/character';
@@ -17,9 +18,12 @@ import {compileActionBody,ACTION_BODY,ACTION_BODY_RECEIPT_EVENT} from '../assemb
 import {opportunitySource,OPPORTUNITY} from '../assembled/externalObstruction';
 import {JOINT_APPRAISAL} from '../assembled/appraisal';
 import {tolerancePath,TOLERANCE_EFFECT} from '../assembled/tolerance';
+const fixture=(...args:Parameters<typeof originalFixture>)=>candidate271(originalFixture(...args));
+const start=async(...args:Parameters<typeof originalStart>)=>track271(await originalStart(...args));
+afterEach(c=>{if(c.task.result?.state==='fail')failure271(c.task.name);});
 const replace=(v:CanonicalValue,n:bigint,x:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='record')throw Error('test replacement requires record');return record(v.schema,new Map([...v.fields].map(([k,value])=>[k,k===n?x:value])));};
-const file='docs/planning/ASSEMBLED_CHARACTER_M219_EVIDENCE.json',fraction=(v:CanonicalValue)=>{const x=readQ(v);return x.numerator+'/'+x.denominator;};
-const put=(name:string,value:unknown)=>{const d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};expect(d[name]).toBeUndefined();d[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');};
+const file=replay271?'docs/planning/ASSEMBLED_CHARACTER_M271_TOLERANCE_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M219_EVIDENCE.json',fraction=(v:CanonicalValue)=>{const x=readQ(v);return x.numerator+'/'+x.denominator;};
+const put=(name:string,value:unknown)=>{const d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};expect(d[name]).toBeUndefined();d[name]=value;writeFileSync(file,JSON.stringify(d,null,2)+'\n');if(replay271){d[name]={...value as object,correspondence:correspondence271('TOLERANCE',name,value)};writeFileSync(file,JSON.stringify(d,null,2)+'\n');}};
 const records=(run:Run,id:bigint)=>items(decode(run.snapshot().outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===id).map(v=>rec(v,id));
 const traces=(run:Run,t:bigint)=>items(decode(run.snapshot().trace),'list').map(v=>rec(v,160n)).filter(v=>at(f(rec(f(v,4n),130n),2n))===t);
 function view(run:Run,t:bigint,target:CanonicalValue,unavailable=false){
