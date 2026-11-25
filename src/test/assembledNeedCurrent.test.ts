@@ -1,5 +1,6 @@
+import {replay270,start270,path270,metadata270,compare270,POSITIVE_ACTIVATION_RULES} from './fixtures/assembledActivationFoundations';
 import {it,expect,vi} from 'vitest';
-import {start,fixture,through,rec,f,uint,items,key,decode,enc,list,text,q,at,sid,type Options,type CanonicalValue} from './fixtures/assembledNeedCurrent';
+import {start as historicalStart,fixture,through,rec,f,uint,items,key,decode,enc,list,text,q,at,sid,type Options,type CanonicalValue} from './fixtures/assembledNeedCurrent';
 import {NEED,NEED_MOTIVE,NEED_CRITERION} from '../assembled/need';
 import * as needProducer from '../assembled/need';
 import {readQ} from '../campaign2/cognitiveMath';
@@ -13,10 +14,11 @@ import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 // @ts-expect-error Lossless evidence.
 import {deflateSync,inflateSync} from 'node:zlib';
+const start=(...args:Parameters<typeof historicalStart>)=>replay270?start270(fixture(...args)):historicalStart(...args);
 type X=Awaited<ReturnType<typeof start>>;
-const file='docs/planning/ASSEMBLED_CHARACTER_M245_EVIDENCE.json';
+const originalFile='docs/planning/ASSEMBLED_CHARACTER_M245_EVIDENCE.json',file=path270(originalFile);
 const hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),zip=(b:Uint8Array)=>({hash:hash(b),bytes:b.length,deflate:deflateSync(b).toString('base64')});
-const put=(name:string,v:unknown)=>{const data=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};expect(data[name]).toBeUndefined();data[name]=v;writeFileSync(file,JSON.stringify(data,null,2)+'\n');};
+const put=(name:string,v:unknown)=>{const data=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};if(replay270){data._activationCarry=metadata270(originalFile);if(data[name]!==undefined){expect(data[name]).toEqual(v);compare270(originalFile,name,v);return;}}expect(data[name]).toBeUndefined();data[name]=v;writeFileSync(file,JSON.stringify(data,null,2)+'\n');compare270(originalFile,name,v);};
 const bytes=(a:Uint8Array,b:Uint8Array)=>expect(a.length===b.length&&a.every((v,i)=>v===b[i])).toBe(true);
 const exact=(a:X['run'],b:X['run'])=>{const x=a.snapshot(),y=b.snapshot();expect(y.clock).toBe(x.clock);expect(y.status).toBe(x.status);for(const k of ['state','outputs','trace']as const)bytes(x[k],y[k]);bytes(a.save(),b.save());};
 const records=(xs:readonly CanonicalValue[],n:bigint)=>xs.filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===n).map(v=>rec(v,n));
@@ -33,7 +35,7 @@ function persist(name:string,x:X,extra:object={}){const s=x.run.snapshot();put(n
 async function witness(name:string,o:Options,t:bigint,check:(x:X,p:ReturnType<typeof capture>)=>void){const x=await start(o);try{await through(x.run,t);const p=capture(x,t);check(x,p);validateDecisionView(decode(x.run.decisionHistory()));validateDecisionView(decode(x.run.decisionPresentation()));persist(name,x,{prob:p.prob.map(key),need:p.need.length,tasks:p.tasks.length});return {x,p};}catch(e){persist(name+'-failure',x,{error:String(e)});throw e;}}
 function positive(p:ReturnType<typeof capture>,count:number){expect(p.report[2]).toEqual(text('Positive'));expect(p.report[3]).toEqual(q(49,60));expect(p.need).toHaveLength(count);const ns=p.ns.filter(v=>key(f(rec(f(rec(v,407n),1n),404n),2n))===key(NEED_MOTIVE));expect(ns).toHaveLength(count);for(const n of ns){const k=rec(f(rec(n,407n),1n),404n);expect(f(k,3n)).toEqual(NEED_CRITERION);expect(readQ(f(rec(f(rec(n,407n),2n),406n),1n)).numerator).toBeGreaterThan(0n);}}
 it('need245 primary current Need acts without task adoption',async()=>{
- await witness('primary',{},2n,(x,p)=>{expect(x.b.s.rulesVersion).toBe(ITEM_EXECUTION_RULES);positive(p,2);expect(p.tasks).toHaveLength(0);expect(p.ns).toHaveLength(2);expect(p.prob).toEqual([q(1,2),q(1,2)]);expect(p.actual).toBeDefined();});
+ await witness('primary',{},2n,(x,p)=>{expect(x.b.s.rulesVersion).toBe(replay270?POSITIVE_ACTIVATION_RULES:ITEM_EXECUTION_RULES);positive(p,2);expect(p.tasks).toHaveLength(0);expect(p.ns).toHaveLength(2);expect(p.prob).toEqual([q(1,2),q(1,2)]);expect(p.actual).toBeDefined();});
  console.info('M245 PRIMARY PASS current0.154; pressure49/60; two Need reasons/options; no task; P1/2 each; actual execution');
 },590000);
 it('need245 joint independent sources change actual decision probabilities',async()=>{
@@ -60,7 +62,7 @@ function compareJoint(a:ReturnType<typeof capture>,b:ReturnType<typeof capture>)
  return {joint:a.prob.map(key),commitment:b.prob.map(key),taskMeaning:left,distinctGrounds:true,sampledWinnerClaim:false};
 }
 it('need245 correspondence resolves retained joint evidence identities',()=>{
- const d=JSON.parse(readFileSync(file,'utf8')),read=(name:string)=>{const x=d[name],out=new Uint8Array(inflateSync(Uint8Array.from(atob(x.outputs.deflate),c=>c.charCodeAt(0))));expect(hash(out)).toBe(x.outputs.hash);expect(x.rules).toBe(ITEM_EXECUTION_RULES);return captureOutputs(items(decode(out),'list'),3n);};
+ const d=JSON.parse(readFileSync(file,'utf8')),read=(name:string)=>{const x=d[name],out=new Uint8Array(inflateSync(Uint8Array.from(atob(x.outputs.deflate),c=>c.charCodeAt(0))));expect(hash(out)).toBe(x.outputs.hash);expect(x.rules).toBe(replay270?POSITIVE_ACTIVATION_RULES:ITEM_EXECUTION_RULES);return captureOutputs(items(decode(out),'list'),3n);};
  try{put('joint-correspondence-resolved',compareJoint(read('joint'),read('commitment')));}catch(e){put('joint-correspondence-resolved-failure',{error:String(e)});throw e;}
  console.info('M245 CORRESPONDENCE PASS saved native outputs; each source resolved; full task meaning equal; probabilities377/432,55/432 versus1');
 });

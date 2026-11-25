@@ -1,4 +1,5 @@
-import {it,expect} from 'vitest';
+import {replay270,start270,path270,metadata270,compare270} from './fixtures/assembledActivationFoundations';
+import {it,expect,afterEach} from 'vitest';
 // @ts-expect-error Node-only evidence IO.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 // @ts-expect-error Node-only hashing.
@@ -12,10 +13,13 @@ import {readQ} from '../campaign2/cognitiveMath';
 import {ExactRational as Q} from '../substrate/exactMath';
 import {restoreAuthoritativeState} from '../substrate/state';
 import {cachedMemory} from './fixtures/assembledMemoryFinal';
-import {start,fixture,through,rec,f,uint,items,key,decode,enc,list,text,signed,q,outputs,C,u,set,sid,taskA,taskB,type CanonicalValue} from './fixtures/assembledPerceivedControl';
-const file='docs/planning/ASSEMBLED_CHARACTER_M256_EVIDENCE.json',hash=(v:Uint8Array)=>createHash('sha256').update(v).digest('hex'),zip=(v:Uint8Array)=>({hash:hash(v),bytes:v.length,deflate:deflateSync(v).toString('base64')});
-const put=(k:string,v:unknown)=>{const e=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};if(e[k]!==undefined){expect(e[k]).toEqual(v);return;}e[k]=v;writeFileSync(file,JSON.stringify(e,null,2)+'\n');};
+import {start as historicalStart,fixture,through,rec,f,uint,items,key,decode,enc,list,text,signed,q,outputs,C,u,set,sid,taskA,taskB,type CanonicalValue} from './fixtures/assembledPerceivedControl';
+const originalFile='docs/planning/ASSEMBLED_CHARACTER_M256_EVIDENCE.json',file=path270(originalFile),hash=(v:Uint8Array)=>createHash('sha256').update(v).digest('hex'),zip=(v:Uint8Array)=>({hash:hash(v),bytes:v.length,deflate:deflateSync(v).toString('base64')});
+const put=(k:string,v:unknown)=>{const e=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};if(replay270)e._activationCarry=metadata270(originalFile);if(e[k]!==undefined){expect(e[k]).toEqual(v);compare270(originalFile,k,v);return;}e[k]=v;writeFileSync(file,JSON.stringify(e,null,2)+'\n');compare270(originalFile,k,v);};
+async function start(...args:Parameters<typeof historicalStart>){const x=await(replay270&&!args[2]?start270(fixture(...args)):historicalStart(...args));active=x.run;return x;}
 type X=Awaited<ReturnType<typeof start>>;type Run=X['run'];
+let active:Run|undefined;
+afterEach(ctx=>{if(replay270&&ctx.task.result?.state==='fail'&&active){const e=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};put('failure-'+Object.keys(e).filter(k=>k.startsWith('failure-')).length,{test:ctx.task.name,...capture(active)});}active=undefined;});
 const bytes=(a:Uint8Array,b:Uint8Array)=>expect(a.length===b.length&&a.every((v,i)=>v===b[i])).toBe(true);
 function exact(a:Run,b:Run){const x=a.snapshot(),y=b.snapshot();expect(x.clock).toBe(y.clock);for(const k of ['state','outputs','trace'] as const)bytes(x[k],y[k]);bytes(a.save(),b.save());}
 const capture=(r:Run)=>{const s=r.snapshot();return {clock:String(s.clock),state:zip(s.state),outputs:zip(s.outputs),trace:zip(s.trace),save:hash(r.save())};};

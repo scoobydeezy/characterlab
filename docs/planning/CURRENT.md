@@ -1,10 +1,10 @@
-# Current work — M270 affected Need and learned-control receiving
+# Current work — M270 Need and learned-control replay complete
 Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
 M269 completed12 workspace/control histories plus18 intention schedules, commitd12bf3f2.
-[Latest result](ASSEMBLED_CHARACTER_M269_RESULT.md). Reference0.159/37/100 remains;
+[Latest result](ASSEMBLED_CHARACTER_M270_RESULT.md). Reference0.159/37/100 remains;
 experimental0.160/global0 is not adopted. No law or completion-rule waiver.
 
-## M270 bounded card — before code
+## M270 completed card — preserved comparison
 Capabilities: (1) direct Need and adopted Commitment remain independent in actual choice;
 (2) learned efficacy changes actual affect/reasons/choice; (3) privacy and continuation.
 Three planned test/helper paths: existing assembledNeedCurrent.test.ts,

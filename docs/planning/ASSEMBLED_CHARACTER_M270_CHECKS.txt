@@ -1,0 +1,88 @@
+M270 types exit=0 elapsed=26.616s cap=90s timeout=False
+
+M270 need-connections exit=0 elapsed=103.694s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledNeedCurrent.test.ts > need245 primary current Need acts without task adoption
+M245 PRIMARY PASS current0.154; pressure49/60; two Need reasons/options; no task; P1/2 each; actual execution
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 primary current Need acts without task adoption 62182ms
+stdout | src/test/assembledNeedCurrent.test.ts > need245 joint independent sources change actual decision probabilities
+M245 JOINT PASS same task source, same action with independent Need/Commitment grounds, changed exact production probabilities
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 joint independent sources change actual decision probabilities 16334ms
+stdout | src/test/assembledNeedCurrent.test.ts > need245 response zero unknown boundaries
+M245 BOUNDARY PASS one response vs positive/no-response vs known zero vs unknown; no surrogate task
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 response zero unknown boundaries 10865ms
+stdout | src/test/assembledNeedCurrent.test.ts > need245 hidden bodily truth aliases
+M245 PRIVACY PASS physical11/19, same selected bin, same Need/reason/probability
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 hidden bodily truth aliases 7397ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 13 skipped (17)
+   Start at  15:00:19
+   Duration  103.08s (transform 3.82s, setup 0ms, collect 5.73s, tests 96.78s, environment 0ms, prepare 175ms)
+
+
+M270 need-persistence-correspondence exit=0 elapsed=121.273s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledNeedCurrent.test.ts > need245 correspondence resolves retained joint evidence identities
+M245 CORRESPONDENCE PASS saved native outputs; each source resolved; full task meaning equal; probabilities377/432,55/432 versus1
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 correspondence resolves retained joint evidence identities
+stdout | src/test/assembledNeedCurrent.test.ts > need245 exact repeat restore rollback and current physical perception
+M245 CONTINUATION PASS repeat/restore exact at every remaining instant; atomic receiving rollback; current movement and probe120 10
+
+ ✓ src/test/assembledNeedCurrent.test.ts > need245 exact repeat restore rollback and current physical perception 114751ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 15 skipped (17)
+   Start at  15:03:47
+   Duration  120.71s (transform 3.57s, setup 0ms, collect 5.32s, tests 114.93s, environment 0ms, prepare 145ms)
+
+
+M270 learned-control exit=0 elapsed=143.344s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerceivedControl.test.ts > control256 primary current learned efficacy reaches actual reasons
+M256 PRIMARY lower control1->0 with fixed E119/200: U0->119/200, actual situation0->3 and probability25/72->7/9; current decision/expression/attempt
+
+ ✓ src/test/assembledPerceivedControl.test.ts > control256 primary current learned efficacy reaches actual reasons 99917ms
+stdout | src/test/assembledPerceivedControl.test.ts > control256 unknown and failed execution remain distinct
+M256 BOUNDARIES unknown control is Unavailable, known zero produces live reasons; failed completion cannot rewrite prior appraisal/grounds/distribution/learned control
+
+ ✓ src/test/assembledPerceivedControl.test.ts > control256 unknown and failed execution remain distinct 37166ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 13 skipped (15)
+   Start at  15:06:01
+   Duration  142.77s (transform 3.51s, setup 0ms, collect 5.23s, tests 137.08s, environment 0ms, prepare 151ms)
+
+
+M270 control-privacy-continuation exit=0 elapsed=149.747s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledPerceivedControl.test.ts > control256 hidden truth and exact continuation 143501ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  15:08:35
+   Duration  149.18s (transform 3.50s, setup 0ms, collect 5.21s, tests 143.50s, environment 0ms, prepare 141ms)
+
+
+M270 boundaries-research-preservation exit=0 elapsed=9.309s cap=90s timeout=False
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+
+Integrity PASS9 Need/4 efficacy/hidden/continuation/rollback gates;59 blocks/14,340,891 decoded bytes;4 artifacts/797,915 bytes before final receipt; current version/source/document limits PASS. Three test/helper files, no production/formal/fixture/frozen changes. Integrity/packaging charged to10s allowance.
