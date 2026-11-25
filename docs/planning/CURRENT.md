@@ -31,11 +31,11 @@ expansion and additional native records are explicit, never full-byte cross-mode
 claims. Same evidence/different truth pairs compare safe goal/recall/reason/decision
 projections after receipt as well as before. Require live goal/appraisal/recalled
 operand/reason for positive attempts; absence/loss/cancel/expiry remain negative cases.
-Checks: native18 in three serial groups<=600s each; targeted exact repeat/restore
+Checks: native18 in two serial groups of9<=600s each; targeted exact repeat/restore
 before action and reached rollback; malformed/old-version receipt admission; retain
 M260 old witness bytes because shared source/runtime paths change. Types, boundary,
 research, preservation, artifact and staged size checks. No unrelated regressions.
-Budget <=1800s cumulative verification,600s/command,20 evidence files/5MiB; <=128 settled
+Amended budget <=2400s cumulative verification,600s/command,20 evidence files/8MiB; <=128 settled
 instants/run with full queues. Split before exceeding, never trim gates or scenarios.
 Done when18 native schedules have classified correspondence, actual gate consumption,
 privacy and exact continuation pass. Laws/scope stay fixed; failed evidence retained.
@@ -43,6 +43,14 @@ Self-approved source-mapping correction before report runs: original report1 mea
 constant success, not additive bias (+10 on truth10 would yield2, not1). Optional
 source mode0/1/2 preserves measured/constant-success/constant-failure conventions;
 nonzero mode requires bias0. Truth remains separate; no psychology/fixture retuning.
+Self-approved bounded verification amendment: diagnosis found availability source was
+shifted twice (adapter plus normal120/140 perception). At3 instruction/appraisal are
+live but route is KnownUnavailable. Correct every frame's source to its original tick;
+the existing learning stage provides next-tick availability. Preserve the initial16
+completed schedules and noNeutral null/diagnostic; rerun all18, not only the early case.
+The +600s and +3MiB cover only those invalidated runs and lossless preservation, plus
+the already-declared final controls. Two groups of9 amortize preparation; no new gates.
+No further contrasts or budget extension in this milestone; benchmark/laws unchanged.
 E81/P27/N11/U13=132;21members/15families;accepted6/15; Family12.6/assembly OPEN.
 | Registry | Current count |
 |---|---|
