@@ -1,3 +1,4 @@
+import {selectedInstructions} from './intentionMemory';
 import {protocolAttemptAction,PROTOCOL_PERMISSION_VERSION,type createProtocolPermission} from './protocolPermission';
 import {NEED,needCandidates,needRaw} from './need';
 import {SLEEP_ACQUISITION_VERSION} from './sleepControl';
@@ -234,8 +235,9 @@ export function createCognitiveExecution(model:Model,component:State,inputs:Awai
      prediction(){return read({rootStateTypeId:pt.rootStateTypeId,fieldId:pt.fieldId,selectors:[{kind:'mapKey',key:r(360,[C,f(pr,2n)])}]},f(pr,4n)).value;},
     },model.taskLimit).output;
     if(workMaintenance){maintained=workMaintenance.workspace(event,state,output,definition('task-workspace'));output=maintained.output;}
-    if(strategy)strategyPlan=strategy.evaluate(event,maintained?.nextState??state,output);
+    if(strategy&&!model.intentionMemory)strategyPlan=strategy.evaluate(event,maintained?.nextState??state,output);
     if(model.workspace){const capacity=Number(u(f(rec(definition('task-workspace'),378n),2n)));controlWorkspace=control?.workspace(event,maintained?.nextState??state,output,capacity,recallEvidence(),maintained?.neutral??0,!!model.rehearsal?.final);workspaceJoin=controlWorkspace?.joined??sharedWorkspace(output,capacity,instant,recallEvidence(),maintained?.neutral??0,model.workspaceLimit,!!model.rehearsal?.final);extraOutputs=[workspaceJoin.report,...(maintained?[maintained.report]:[]),...(controlWorkspace?[controlWorkspace.report]:[])];if(model.retainedAttribution){retainedAttribution=deriveRetainedAttribution(workspaceJoin.report,workspaceJoin.input,instant,()=>allocator.allocateRuntimeId(),!!model.rehearsal);extraOutputs.push(retainedAttribution);if(model.significanceEnabled)activeAttribution=retainedAttribution;}if(model.memoryContext)activeWorkspace=structuredClone(workspaceJoin.report);}
+    if(strategy&&model.intentionMemory)strategyPlan=strategy.evaluate(event,maintained?.nextState??state,output,model.intentionMemory,selectedInstructions(workspaceJoin?.report));
    }else if(i===1){
     const w=rec(event.payload,381n),selected=items(f(w,4n),'list');
     const criteria=selected.map(v=>{const item=rec(v,379n),t=component.tasks.find(t=>key(t.key)===key(f(item,1n))&&key(t.specId)===key(f(item,2n)));if(!t)fail('unselected criterion');return {taskKey:t.key,specId:t.specId,minimum:readQ(t.minimum),maximum:readQ(t.maximum)};});

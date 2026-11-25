@@ -1,3 +1,4 @@
+import {INTENTION_MEMORY,memoryBound,instructionEpisode,type IntentionMemory} from './intentionMemory';
 import {LEGACY_TIME_LIMIT,assertTimeLimit,timeDomainVersion,type TimeLimit} from './timeDomain';
 /** One planner and one evidence owner inside the shared simulation. */
 import {list,text,unsigned,typedIdentifier,type CanonicalValue} from '../substrate/canonicalEncoding';
@@ -25,10 +26,12 @@ export function createStrategyExecution(C:CanonicalValue,routes:Strategy,stateMo
  begin(instant:bigint){if(active)fail('already active');active=true;at=instant;unbound=0;evaluated=false;currentReport=undefined;used.clear();pending.clear();selected.clear();},
  close(){active=false;pending.clear();selected.clear();used.clear();unbound=0;evaluated=false;currentReport=undefined;},
  prepareCommit(){if(!active||pending.size||unbound||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unfinished instant');},
- evaluate(parent:ScheduledEvent,state:AuthoritativeState,workspace:CanonicalValue){if(!active||evaluated||parent.dueAt!==at||parent.phase!==40n||!eq(parent.eventTypeId,sid(1001,'event/deliberation-opportunity')))fail('planner lifecycle');evaluated=true;
+ evaluate(parent:ScheduledEvent,state:AuthoritativeState,workspace:CanonicalValue,intentionMemory?:IntentionMemory,recalled:readonly CanonicalValue[]=[]){if(!active||evaluated||parent.dueAt!==at||parent.phase!==40n||!eq(parent.eventTypeId,sid(1001,'event/deliberation-opportunity')))fail('planner lifecycle');evaluated=true;
   const tasks=items(f(rec(workspace,381n),4n),'list').map(v=>f(rec(v,379n),1n)),reads:ActualReadRecord[]=[],reports:CanonicalValue[]=[];
   const known=tasks.length?read(state,knowledgePath(C)):undefined;if(known)reads.push(known.record);const observations=journal(known?.value,routes,timeLimit);
-  for(const task of tasks){if(!routes.some(r=>eq(r.task,task)))fail('foreign selected task');const prior=read(state,planPath(task));reads.push(prior.record);const value=chooseStrategy(task,planValue(prior.value,timeLimit),at,observations);const monitoring=performance?.evaluate(parent,state,task,planValue(prior.value,timeLimit),value),chosen=monitoring?.selected??value.selected;if(monitoring)reads.push(...monitoring.reads);selected.set(key(task),chosen);reports.push(list([task,unsigned(chosen),list(value.availability.map(v=>list([text(v.kind),v.source]))),...(monitoring?[monitoring.report]:[])]));}
+  for(const task of tasks){if(!routes.some(r=>eq(r.task,task)))fail('foreign selected task');const prior=read(state,planPath(task));reads.push(prior.record);const value=chooseStrategy(task,planValue(prior.value,timeLimit),at,observations),bound=memoryBound(intentionMemory,task),operands=recalled.map(v=>instructionEpisode(v,intentionMemory)).filter(a=>eq(a[3],task)),operand=operands.length===1?operands[0]:undefined,route=operand?routes.find(r=>eq(r.task,task))!.plans.findIndex(p=>eq(p.instructionId,operand[4])):-1;
+   const accessible=bound?{selected:route>=0&&value.availability[route].usable?route:2,availability:value.availability.map((v,i)=>({...v,usable:v.usable&&i===route}))}:value;
+   const monitoring=performance?.evaluate(parent,state,task,planValue(prior.value,timeLimit),accessible),chosen=monitoring?.selected??accessible.selected;if(monitoring)reads.push(...monitoring.reads);selected.set(key(task),chosen);reports.push(list([task,unsigned(chosen),list(value.availability.map(v=>list([text(v.kind),v.source]))),...(monitoring?[monitoring.report]:[]),...(memoryBound(intentionMemory,task)?[list([text(INTENTION_MEMORY),list(operands.map(a=>list(a)))])]:[])]));}
   const report=list([text(STRATEGY_EVAL),unsigned(parent.eventId),unsigned(at),list(reports)]),plan=children(parent,tasks.length?[emit(90n,PLAN,report)]:[]);
   currentReport=report;return {...plan,report,trace:(allocated:readonly ScheduledEvent[])=>trace(parent,[report],allocated,reads)};
  },
