@@ -49,3 +49,17 @@ Use B urgency1 in every replacement arm (Base1, original procrastination immedia
 motive strength), preserving all original raw bytes and the first setup in Git.
 Seed0, laws, forecasts, deadlines and positive gate remain; no threshold tuning.
 One replacement only; failure is diagnosed rather than another strength search.
+
+Correction-control repair before running: opening5 and correction3 both produce
+factor1 at5, so that setup checks retention but not a causal correction effect.
+Add exactly two arms with opening7, unavailable correction3 versus no correction.
+At5 require live A in both, factor1 versus1/4 and actual action versus NoReasons.
+All existing arms/evidence stay. No law/strength/seed changes or budget extension.
+
+## Completion
+M264 passes:10 current cases, exact independent repeat/restore, live actual reasons
+and execution, causal correction control. [Result](ASSEMBLED_CHARACTER_M264_RESULT.md).
+Family12.7 is not accepted; next is the delayed-benefit/reference-policy comparison.
+| Registry | Current count |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |

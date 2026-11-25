@@ -2,7 +2,7 @@ import {it,expect,afterEach} from 'vitest';
 // @ts-expect-error Node evidence IO.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 // @ts-expect-error Lossless evidence.
-import {deflateSync} from 'node:zlib';
+import {deflateSync,inflateSync} from 'node:zlib';
 // @ts-expect-error Hashing.
 import {createHash} from 'node:crypto';
 import {fixture,names,start,through,finish,rec,f,uint,items,key,decode,list,text,q,outputs,taskA,taskB,actionA,actionB,type Run,type CanonicalValue} from './fixtures/assembledProspectionCurrent';
@@ -12,7 +12,7 @@ import {cachedMemory} from './fixtures/assembledMemoryFinal';
 import {PRIORITY_MOTIVE} from '../assembled/priority';
 import {forecastPath,forecastValue} from '../assembled/horizon';
 const file='docs/planning/ASSEMBLED_CHARACTER_M264_EVIDENCE.json',hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),zip=(b:Uint8Array)=>({hash:hash(b),bytes:b.length,deflate:deflateSync(b).toString('base64')});
-const store=(k:string,v:unknown)=>{v=JSON.parse(JSON.stringify(v,(_k,x)=>typeof x==='bigint'?String(x):x));const e=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};if(e[k])expect(e[k]).toEqual(v);else{e[k]=v;writeFileSync(file,JSON.stringify(e,null,2)+'\n');}};
+const store=(k:string,v:unknown)=>{k='corrected-strength-'+k;v=JSON.parse(JSON.stringify(v,(_k,x)=>typeof x==='bigint'?String(x):x));const e=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};if(e[k])expect(e[k]).toEqual(v);else{e[k]=v;writeFileSync(file,JSON.stringify(e,null,2)+'\n');}};
 let active:Run|undefined;
 const capture=(r:Run)=>{const s=r.snapshot();return {at:String(s.clock),state:zip(s.state),outputs:zip(s.outputs),trace:zip(s.trace),save:hash(r.save())};};
 afterEach(ctx=>{if(ctx.task.result?.state==='fail'&&active){const e=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};store('failure-'+Object.keys(e).filter(k=>k.startsWith('failure-')).length,{test:ctx.task.name,...capture(active)});}active=undefined;});
@@ -40,4 +40,26 @@ it('family264 exact independent repeat and continuation',async()=>{
  const x=await start(fixture('corrected'));active=x.r;const y=await start(fixture('corrected'));await through(x.r,3);await through(y.r,3);expect(hash(y.r.save())).toBe(hash(x.r.save()));const restored=cachedMemory(await restorePreparedCharacterRun(x.m,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save:x.r.save()}));
  const checks=[];for(let n=0;n<128;n++){const more=await x.r.settleNextInstant();expect(await y.r.settleNextInstant()).toBe(more);expect(await restored.settleNextInstant()).toBe(more);for(const r of [y.r,restored]){for(const k of ['state','outputs','trace'] as const)expect(hash(r.snapshot()[k])).toBe(hash(x.r.snapshot()[k]));expect(hash(r.save())).toBe(hash(x.r.save()));}checks.push(String(x.r.snapshot().clock));if(!more)break;if(n===127)throw Error('queue cap');}
  store('continuation',{...capture(x.r),checks,repeat:true,restore:true});console.info('M264 repeat/full-byte continuation PASS');
+},590000);
+
+it('family264 captured traces bind prior forecast and distinct goals to actual reasons',()=>{
+ const evidence=JSON.parse(readFileSync(file,'utf8')),sources=[];
+ for(const name of names){const b=fixture(name);sources.push({name,registry:hash(b.s.registry),parameters:hash(b.s.parameters),initial:hash(b.d.initialState),ordered:hash(b.d.orderedInputs),seed:hash(b.d.runSeed)});}
+ for(const name of ['available','unavailable']){
+  const e=evidence['corrected-strength-'+name+'-3'];expect(e).toBeDefined();
+  const unzip=(v:{deflate:string})=>new Uint8Array(inflateSync(Uint8Array.from(atob(v.deflate),c=>c.charCodeAt(0))));
+  const out=unzip(e.outputs),trace=unzip(e.trace),d=outputs(out,409n).find(v=>at(f(v,2n))===3n)!;
+  const raw=rec(f(rec(f(d,3n),408n),2n),403n),signals=items(f(raw,3n),'set').map(v=>rec(v,402n));
+  for(const task of [taskA,taskB]){const own=signals.filter(v=>{const source=rec(f(v,1n),401n);return key(f(source,2n))===key(task)&&uint(f(source,3n))===1n;});expect(own,'actual distinct task ground').toHaveLength(1);const strength=f(own[0],2n);expect(typeof strength!=='boolean'&&strength.kind==='rational'&&strength.numerator>0n).toBe(true);}
+  const tr=outputs(trace,160n).find(v=>at(f(rec(f(v,4n),130n),2n))===3n&&uint(f(rec(f(v,4n),130n),3n))===60n&&items(f(v,13n),'list').some(v=>typeof v!=='boolean'&&v.kind==='list'&&key(v.items[0])===key(text(PRIORITY_MOTIVE))))!;
+  expect(tr,'actual motive trace').toBeDefined();expect(items(f(tr,11n),'list').length).toBeGreaterThan(1);expect(items(f(tr,9n),'list').length).toBeGreaterThan(1);
+  const st=restoreAuthoritativeState(decode(unzip(e.state))),prior=st.read(forecastPath(taskA));expect(prior.presence).toBe(true);expect(forecastValue(prior.value!,1000000n).observedAt).toBe(1n);
+  for(const task of [taskA,taskB])expect(uint(f(rec(st.read({rootStateTypeId:373n,fieldId:1n,selectors:[{kind:'mapKey',key:task}]}).value!,372n),1n))).toBe(1n);
+ }
+ store('provenance',{sources,liveIndependentRawGrounds:true,priorOnlyForecast:true,unchosenGoalRetained:true});
+});
+
+it('family264 correction changes later behavior before the predicted opening',async()=>{
+ const all=[];for(const name of ['corrected','available'] as const){const x=await start(fixture(name,7));active=x.r;const rows=[];for(const t of [3,5,7]){await through(x.r,t);rows.push(gate(x.r,t));}store('opening7-'+name,{...capture(x.r),rows});await finish(x.r);store('opening7-'+name+'-terminal',{save:hash(x.r.save()),at:x.r.snapshot().clock});all.push(rows);}
+ expect(all[0][0].factor).toEqual(q(1,4));expect(all[1][0].factor).toEqual(q(1,4));expect(all[0][1].factor).toEqual(q(1,1));expect(all[1][1].factor).toEqual(q(1,4));expect(all[0][1].action).toBe(key(actionA));expect(all[1][1].action).toBe(null);expect(all[0][2].factor).toEqual(q(1,1));expect(all[1][2].factor).toEqual(q(1,1));console.info('M264 forecast correction causes later live motive/action change before opening PASS');
 },590000);
