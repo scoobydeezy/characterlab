@@ -1,7 +1,9 @@
 # Assembled episodic instruction — 0.158 candidate
 M259 successor to0.157; old versions unchanged. Family12.6 clause9, not family acceptance.
 Registry slot60: [assembled-intention-memory/0.1, unique task keys]. These tasks
-must also have ordinary strategy routes and work-board bindings. No permanent373/2
+must also have ordinary strategy routes and work-board bindings. With nonempty
+bindings, event retention capacity and scheduled event capacities are at most32,
+matching the reused canonical recall kernel domain (no silent truncation). No permanent373/2
 instruction is admitted for them. Goal status/importance remain their existing owner.
 Permitted PRIORITY_ADOPTION_OBS evidence at130 creates an instruction acquisition
 under existing346/1 at140: [tag, acquisition1125, safe observation, task, instruction,
