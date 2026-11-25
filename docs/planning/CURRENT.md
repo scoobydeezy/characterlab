@@ -1,32 +1,42 @@
-# Current work — M262 boundary passed; Family12.6 review next
-Owner2026-11-25 authorizes Family12.6 completion under self-approval. Parent6cc23078.
-M261 retains18 passing schedules/144 ticks and all failures; no production change planned.
+# Current work — M263 Family12.6 current-version receiving
+Owner2026-11-25 authorizes full Family12.6 completion under bounded self-approval.
+Parentb3aa5dac; M261/262 close clause9. Finish1..8 on the same model0.159.
 ## Bounded card (before code)
-Capability: explicit zero-count withholding must not create a completion receipt.
-Scope12.6-9 only; model0.159/attempt-receipt0.1; reference laws and seed0 unchanged.
-One test file: assembledIntentionSchedules.test.ts. No production/formal changes.
-Repair the boundary fixture coherently: A becomes zero-count withholding; the unused
-reward/habit association moves to its positive-count B route, under the same task.
-No reward/habit input sources or learned history are supplied. Assert those conditions.
-Keep original instruction A, schedule, body30/rate10, gate actions, goal and report rules.
-First assert actual chosen A and zero-count protocol outcome, then no matched gate,
-no criterion report after bootstrap, unchanged item location and Open goal at6.
-Retain all existing old-version/malformed/nonmatching/fixed-failure admission checks.
-Run only that boundary test; old18 schedules/continuation/privacy are not invalidated.
-New evidence contains completed admission/withholding; old M261 blocks remain immutable.
-Checks: boundary test <=600s; types; reference boundary/research/preservation;
-lossless evidence/source integrity, document/artifact limits, staged size/whitespace.
-Budget900s cumulative verification,600s/command; <=20 artifacts/5MiB; <=128 instants/run.
-At most2 test files if a diagnosed fixture defect needs extraction. No production seam.
-Done: full boundary test passes with live zero-count outcome and preserved prior results.
-Then promote12.6-9 only and immediately review first eight-clause affected-version carry
-in the next bounded package. No family acceptance from this boundary alone.
-MEC005/011/012..020/022, EXP004/013 dispositions remain; no reduction/debt closure.
-E82/P26/N11/U13=132;21members/15families;accepted6/15;assembly OPEN.
-Repair note: first rerun preserved an admission failure because this fixture uses
-reward-evidence0.2 single-action grammar, not the later action-list grammar. Correct
-that field to the B identity; all comparison conditions and budget stay unchanged.
-
+At most3 capability groups: finite workspace/access; shared inhibition (habit, load,
+fatigue, recurrence); deliberate adjustment (performance switch, chosen reappraisal).
+No production/formal changes planned. Two new test/helper files, up to2 bounded
+fixture/assertion repairs; no copied runtime or new psychological mechanism.
+Use the existing current0.157 configuration plus empty intention binding at0.159;
+ordinary tasks keep their instructions. The M261 bound-memory path remains tested.
+Nonsocial tasks, seed0, no learned S0. Current sleep channels must supply actual known
+readiness where inhibition is compared; no disabling sleep or other integrated owners.
+Work: nonsocial A/B importance1, third0; initial criterion0, targets1; body30/rate10,
+zero action delivery; task expiry9. Repeat M128 support x distractor2x2, capacity2/3,
+board5/6, reminder7/9, decisions6..10. Require selected task -> live reason/decision;
+goal survives displacement; reminder restores access; expired reminder has no motive.
+Control: same physical tasks, capacity6, A-only, action3 earns real reward/habit;
+control goal4/reminders5/7/9/11, known rested sleep evidence and zero demand.
+Compare rested vs grade2 at4/missing6/recovery8; neutral-card load vs no card at7;
+recurrent unresolved4 with/without interruption7, resolution9. Require actual offered
+A, retained history, live maintenance and consumed capacity/condition before choice.
+Performance: current nonsocial A/B routes, two permitted own outcome reports3/5,
+failed vs successful reports; compare prior count/route and actual action7, goal held.
+Reappraisal: M187 complete/interrupted original source histories, current declarations;
+no social task dependency. Means and body held, actual operation10, frame at140 and
+later live appraisal/decision11. Additional current owners retain normal rules.
+Reference laws/calibration fixed; no sampled winner claim unless draws are coupled.
+Auto choices use actual resolved probability; other choices compare exact probability.
+All original component/alternate controls retained, not relabeled current trajectories.
+Checks in serial groups <=600s: admission/types then work, control/fatigue, recurrence,
+performance, reappraisal. Full queues <=128 instants; one within-version exact restore
+through remaining instants, raw trace/state/output evidence and immutable history.
+Budget predeclared: A(work/control)1800s, B(performance/reappraisal)1200s,
+C(final integrity/review)300s;3300s total;20 artifacts/8MiB (expanded raw current carries).
+Targeted diagnosis/repair inside each package; split before exhausting, no gate removal.
+Done: all nine clauses have current receiving or complete dependency carry, no
+unclassified difference/defect, preserved alternatives and affected foundation checks.
+MEC005/011..020/022, EXP004/013 remain; RO005/006/007/012/014/019/020 unchanged.
+E82/P26/N11/U13=132;21members/15families;accepted6/15;final assembly replay OPEN.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
