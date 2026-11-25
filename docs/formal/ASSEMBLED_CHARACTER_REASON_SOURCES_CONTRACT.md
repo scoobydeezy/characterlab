@@ -238,3 +238,26 @@ active semantic key remain. Empty incoming basis overlap0. Older saves are never
 reinterpreted under0.80. Current card fixes evidence, comparisons and budgets.
 Owner delegates local comparison/amendment decisions through REASON completion;
 no waiver of pinned phenomena, preservation or final21/15/132 acceptance gates.
+
+
+## Positive-activation experiment0.1 — M266, owner authorized2026-11-25
+Status: experimental candidate; not reference adoption. Contract version
+assembled-character-positive-activation/0.1-candidate; model/registry0.160-candidate.
+Retain the0.159 composition,61 slots, all state owners and phase/identity contracts.
+Require task-reason-dice437 field2 exactly0. Other calibration, source coverage,
+role/sign grouping, bound-once, die cutoffs, modifiers and standing rounding remain.
+This applies globally to every group using task calibration, including Commitment
+and Need. Value retains its existing0 threshold. No scenario/source-specific switch.
+The existing compiler already rejects ZeroBase before checking relevance; keep that
+rule unchanged. Negative genuine base may yield an opposing reason; net-zero,
+modifier-only and cancelled source grounds cannot manufacture motivation.
+Model/registry version and committed calibration distinguish the candidate. Old
+versions reject this new threshold; old saves are not reinterpreted. Only topology
+comparison normalizes field2 to its frozen37/100, after exact candidate validation;
+the executed/committed definition stays0. No new model domain other than this bundle.
+Compiler and decision traces disclose positive-activation0.1; other producer contracts
+remain as before. One shared compiler/scheduler/save; no per-phenomenon engine.
+M265 proves old threshold blocks all legal standalone Hyperbolic/Exponential later
+benefits; its zero candidate also changes prior weak-motive nulls. M266 must classify
+those changes and preserve affected comparisons. No automatic family carry, reduction,
+discount-law selection, reference promotion or native delayed-benefit claim follows.
