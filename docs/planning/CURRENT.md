@@ -1,54 +1,56 @@
-# Current work — M269 workspace and intention replay complete
+# Current work — M270 affected Need and learned-control receiving
 Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
-M269 complete: [result](ASSEMBLED_CHARACTER_M269_RESULT.md); prior296c1eef.
-Reference0.159/37/100 remains; experimental0.160/global0 is not adopted.
-No law/denominator waiver. Continue across bounded packages, not UI.
+M269 completed12 workspace/control histories plus18 intention schedules, commitd12bf3f2.
+[Latest result](ASSEMBLED_CHARACTER_M269_RESULT.md). Reference0.159/37/100 remains;
+experimental0.160/global0 is not adopted. No law or completion-rule waiver.
 
-## M269 completed card — preserved comparison
-Capabilities: (1) workspace/control retains its behavioral distinctions under global0;
-(2) all original intention schedules retain recall/loss/action/goal correspondence;
-(3) actual decision consumption, permitted-evidence privacy and exact continuation.
-Five planned test/helper paths: assembledWorkspaceFamily.ts and its existing test;
-assembledIntentionSchedules.ts and its existing test; one test-only activationCarry helper.
-No production/formal change, new state owner, scenario or psychology calibration.
-Same61 slots; only global activation and model/registry version change from0.159.
-MEC005/011..020/022, original laws/controls and18 conditional obligations preserved.
+## M270 bounded card — before code
+Capabilities: (1) direct Need and adopted Commitment remain independent in actual choice;
+(2) learned efficacy changes actual affect/reasons/choice; (3) privacy and continuation.
+Three planned test/helper paths: existing assembledNeedCurrent.test.ts,
+assembledPerceivedControl.test.ts, and one test-only activationFoundations helper.
+No production/formal/fixture-source change; shared model/state/scheduler/save.
+Lift original60 slots to61 with empty intention, exact normalized original60 bytes;
+only version/global threshold0 otherwise changes. All sources/S0/seeds remain exact.
+Need model0.154 and learned-control0.157 remain preserved controls. Existing bound
+item-world0.1 remains admitted under current sensor contract; no sensor retargeting.
+MEC001/003/004/011..020/022 and existing conditional obligations retained.
 
-Reuse original M263 nonsocial sources/body/seed0: five workspace arms (support x
-distraction plus widened capacity), rested/fatigue/neutral load, interrupted/unbroken
-rumination and failure/success route monitoring. Twelve native histories, all original
-assertions retained. Actual liveness, reasons/choice/execution and held goals/history
-must pass. Original rows compared directly; changes cannot be relabelled equivalent.
-M268 already completes the two reappraisal arms; do not rerun them.
+Need: original M245 nonsocial tasks, body10/cap100/rate0/grid1/threshold60, seed7,
+empty initial goals unless ordinary adoption is present, no learned starting state.
+Primary without goal adoption; joint Need+Commitment versus Commitment only; one/no
+response; known zero; unknown; two hidden reserves in the same perceived bin.
+Require live pressure49/60, distinct independent grounds for the same action, actual
+decision/execution, same produced task meaning across the joint pair, changed exact
+probability, and all existing boundary assertions. Match prior captured probability/
+source findings where applicable; preserve any changed finding rather than retune.
 
-Reuse all18 M261 original intention schedules/144 ticks, identical sources/seed/body,
-ordinary acquired instruction episodes, cues, crowding, access and attempted receipts.
-Preserve pointwise original retained content, recalled content, intended action,
-physical success, admitted receipt and separate goal state; compare current hidden/
-false/denied-evidence pairs in their complete existing safe projections.
-Retain original RetainedCue/NoLoss/PersistentAccess controls and failed early-action case.
-Do not rerun old-version controls or admission tests with unchanged dependencies.
-M262 withholding stays separately retained; activation cannot turn zero-count action
-into delivery. New runs use the existing actual attempt/receipt checks.
+Learned control: original M256 nonsocial A/B (third0), body30/cap100/rate10 plus90 at9,
+ordinary panels1..9 and original seed, no learned S0. Control0 versus1 differs in only
+the original report6; appraisal10 stays live. Preserve E119/200, U119/200 versus0,
+actual situation3 versus0 and action probability7/9 versus25/72, both positive bases,
+actual source/receiver trace joins and actual execution. Unknown control remains
+Unavailable; failed execution cannot rewrite prior appraisal, grounds or learning.
+Replay current primary/unknown/failed/hidden cases and compare their proof fields to
+retained M256 current records. Do not rerun its unchanged0.129 legacy control.
 
-Reuse M263 exact save7 continuation through termination; all native histories finish.
-M266/M268 current repeat/rollback/version/continuation evidence remains applicable.
-Test-only explicit replay selection directs new output to M269 WORKSPACE/INTENTION
-artifacts. Historical default fixture behavior and original evidence paths stay intact.
-Candidate adapter asserts original0.159 and exact normalized registry equality;
-no source/input/seed/initial-state changes. No copied suites or alternate runtime.
+Reuse exact Need repeat/save1/late receiving rollback and learned-control repeat/save9
+through termination. Original hidden-body bin and whole state/output privacy remain.
+Keep default tests/paths unchanged; explicit M270 selection writes separate artifacts.
+Add current-version assertions and evidence correspondence, never weaken existing gates.
+Preserve failed native snapshots and completed outputs before correspondence checks.
+No new contrast, seed search or per-case activation setting.
 
-Checks one at a time: workspace groups; intention first9/last9; original aggregate
-privacy/correspondence; types; boundary/research/preservation; integrity and Git size.
-Expected old timings: workspace/control about450s, intention886s, final checks<100s.
-Budget1800s cumulative/600s command;20 evidence files/5MiB;12 production/test files.
-Preserve failed evidence; diagnose and record bounded repairs before targeted reruns.
-Done: all30 native histories and required controls classified with no unresolved defect.
-This clears residual workspace/intention receiving, not whole-family reference adoption.
-Next remaining affected body/sleep/intoxication and motivational/control comparisons,
-then explicit reference decision and native delayed offer/wait/delivery/receipt.
-Family12.7 completion remains the task; original procrastination/temporal mapping open.
-E82/P26/N11/U13=132;21members/15families;7 accepted on prior versions.
+Checks serial: Need primary/joint/boundaries/hidden/continuation and saved correspondence;
+learned-control primary/boundaries/hidden continuation; types; boundary/research/archive;
+source/evidence integrity, document limits and Git size.
+Budget1800s cumulative/600s command;20 evidence files/5MiB;12 source/test-file ceiling.
+Expected prior successful checks about800s; retain room for bounded diagnosis.
+Done: both native causal connections and all declared controls classified with no defect.
+Then finish residual body/sleep/intoxication receiving; explicit reference decision
+and native delayed offer/wait/delivery/receipt plus original temporal mapping remain.
+Family12.7 is the task, not a bounded replay pass. No UI or autonomous-peer work.
+E82/P26/N11/U13=132;21members/15families;7 accepted on their prior versions.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
