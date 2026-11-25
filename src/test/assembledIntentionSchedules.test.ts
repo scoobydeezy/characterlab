@@ -1,4 +1,5 @@
-import {it,expect,vi} from 'vitest';
+import {carryPath,compareCarry,carryMetadata,replay269} from './fixtures/assembledActivationCarry';
+import {it,expect,vi,afterEach} from 'vitest';
 // @ts-expect-error Node evidence IO.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 // @ts-expect-error Lossless evidence.
@@ -24,11 +25,13 @@ import {cognitiveRecord} from '../assembled/codecs';
 import * as trace from '../substrate/trace';
 import {start,fixture,names,rec,f,uint,items,key,decode,enc,list,text,q,u,sid,taskA,origin,target,type Case,type CanonicalValue} from './fixtures/assembledIntentionSchedules';
 import {outputs} from './fixtures/assembledIntentionSchedules';
-const file='docs/planning/ASSEMBLED_CHARACTER_M261_EVIDENCE.json',hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),zip=(b:Uint8Array)=>({hash:hash(b),bytes:b.length,deflate:deflateSync(b).toString('base64')});
+const originalFile='docs/planning/ASSEMBLED_CHARACTER_M261_EVIDENCE.json',file=carryPath(originalFile),hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),zip=(b:Uint8Array)=>({hash:hash(b),bytes:b.length,deflate:deflateSync(b).toString('base64')});
 const saved=()=>existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};
-function put(k:string,v:unknown){const destination=['withheld-action','admission'].includes(k)?'docs/planning/ASSEMBLED_CHARACTER_M262_EVIDENCE.json':file;const e=existsSync(destination)?JSON.parse(readFileSync(destination,'utf8')):{};if(e[k]!==undefined){expect(e[k]).toEqual(v);return;}e[k]=v;writeFileSync(destination,JSON.stringify(e,null,2)+'\n');}
+function put(k:string,v:unknown){const destination=['withheld-action','admission'].includes(k)?carryPath('docs/planning/ASSEMBLED_CHARACTER_M262_EVIDENCE.json'):file;const e=existsSync(destination)?JSON.parse(readFileSync(destination,'utf8')):{};if(replay269)e._activationCarry=carryMetadata(originalFile);if(e[k]!==undefined){expect(e[k]).toEqual(v);compareCarry(originalFile,k,v);return;}e[k]=v;writeFileSync(destination,JSON.stringify(e,null,2)+'\n');compareCarry(originalFile,k,v);}
 const at=(v:CanonicalValue)=>(v as {value:bigint}).value,ev=(v:CanonicalValue)=>rec(f(rec(v,160n),4n),130n),path={rootStateTypeId:373n,fieldId:1n,selectors:[{kind:'mapKey' as const,key:taskA}]};
 type X=Awaited<ReturnType<typeof start>>;type Run=X['run'];
+let active:Run|undefined;
+afterEach(ctx=>{if(replay269&&ctx.task.result?.state==='fail'&&active)put('failure-'+Object.keys(saved()).filter(k=>k.startsWith('failure-')).length,{test:ctx.task.name,...capture(active)});active=undefined;});
 const tags=(os:Uint8Array,tag:string)=>items(decode(os),'list').filter(v=>typeof v!=='boolean'&&v.kind==='list'&&key(v.items[0])===key(text(tag))).map(v=>items(v,'list'));
 function capture(r:Run){const s=r.snapshot();return {at:String(s.clock),state:zip(s.state),outputs:zip(s.outputs),trace:zip(s.trace),save:hash(r.save())};}
 async function finish(r:Run){for(let n=0;n<128;n++)if(!await r.settleNextInstant())return;throw Error('M261 queue cap');}
@@ -46,7 +49,7 @@ function row(x:X,t:bigint){const s=x.run.snapshot(),state=restoreAuthoritativeSt
  const gate=tr.find(v=>key(f(v,6n))===key(text(ATTEMPT_RECEIPT)));if(t>=2n&&x.b.frames[Number(t)-1].receipt){expect(gate).toBeDefined();const audit=items(f(gate!,12n),'list');expect(audit[2]).toBe(attempts.length>0);expect(items(audit[1],'list')).toHaveLength(attempts.length);if(attempts.length)expect(items(items(audit[1],'list')[0],'list')[1]).toEqual(attempts[0]);expect(obs).toHaveLength(attempts.length);}
  return {at:Number(t),retained,recalls,intent,success,received,goal,mode,safe:{goal,recalls,reasons:raw?hash(enc(f(raw,3n))):null,result:result?hash(enc(result)):null}};
 }
-async function scenario(name:Case){const x=await start(name),original=runIntention('RetainedCue',x.b.frames),rows=[];for(let t=1n;t<=8n;t++){while(x.run.snapshot().clock<t)expect(await x.run.settleNextInstant()).toBe(true);expect(x.run.snapshot().clock).toBe(t);const actual=row(x,t);rows.push(actual);put(name+'-prefix'+t,actual);const expected=original.rows[Number(t)-1] as any,world=original.world[Number(t)-1];expect(actual.retained,name+' retained '+t).toEqual(expected.retained.map((v:any)=>v.id).sort());expect(actual.recalls,name+' recall '+t).toEqual(expected.recall);expect(actual.intent,name+' intent '+t).toBe(expected.expression.intent);expect(actual.success,name+' success '+t).toBe(world.success);expect(actual.received,name+' receipt '+t).toBe(expected.observation.received);expect(actual.goal,name+' goal '+t).toBe(expected.goal);}
+async function scenario(name:Case){const x=await start(name),original=runIntention('RetainedCue',x.b.frames),rows=[];active=x.run;for(let t=1n;t<=8n;t++){while(x.run.snapshot().clock<t)expect(await x.run.settleNextInstant()).toBe(true);expect(x.run.snapshot().clock).toBe(t);const actual=row(x,t);rows.push(actual);put(name+'-prefix'+t,actual);const expected=original.rows[Number(t)-1] as any,world=original.world[Number(t)-1];expect(actual.retained,name+' retained '+t).toEqual(expected.retained.map((v:any)=>v.id).sort());expect(actual.recalls,name+' recall '+t).toEqual(expected.recall);expect(actual.intent,name+' intent '+t).toBe(expected.expression.intent);expect(actual.success,name+' success '+t).toBe(world.success);expect(actual.received,name+' receipt '+t).toBe(expected.observation.received);expect(actual.goal,name+' goal '+t).toBe(expected.goal);}
  put(name+'-8',capture(x.run));await finish(x.run);put(name+'-terminal',{save:hash(x.run.save()),rows:rows.length});}
 it('schedule261 final first nine',async()=>{for(const n of names.slice(0,9))await scenario(n);},590000);
 it('schedule261 final last nine',async()=>{for(const n of names.slice(9))await scenario(n);},590000);

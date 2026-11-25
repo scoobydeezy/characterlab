@@ -1,3 +1,4 @@
+import {candidate269} from './assembledActivationCarry';
 /** M263: current single composition, ordinary nonsocial sources, seed0; no learned S0. */
 import {fixture as current,rec,f,uint,items,key,decode,enc,list,text,signed,q,outputs,C,u,set,sid,taskA,taskB,type CanonicalValue} from './assembledPerceivedControl';
 import {fixture as reappraisalPrior} from './assembledReappraisalCurrent';
@@ -60,7 +61,7 @@ export function fixture(mode:Mode,support=false,distractor=3,capacity=mode==='wo
   else rows.push(fatigueFrame(4,mode==='fatigue'?2:0),fatigueFrame(6,0,0,false),fatigueFrame(8,0));
  }
  const initial=restoreAuthoritativeState(decode(b.d.initialState));
- return {s,d:{...b.d,initialState:enc(new AuthoritativeState(initial.entries().filter(e=>e.path.rootStateTypeId!==373n)).canonicalValue()),runSeed:new Uint8Array(32),orderedInputs:enc(list(rows))},mode,times};
+ return candidate269({s,d:{...b.d,initialState:enc(new AuthoritativeState(initial.entries().filter(e=>e.path.rootStateTypeId!==373n)).canonicalValue()),runSeed:new Uint8Array(32),orderedInputs:enc(list(rows))},mode,times});
 }
 export function reappraisal(mode:'complete'|'interrupted'){
  const b=structuredClone(base),old=reappraisalPrior(mode),slots=[...items(decode(b.s.registry),'list')],prior=items(decode(old.s.registry),'list');
@@ -69,7 +70,7 @@ export function reappraisal(mode:'complete'|'interrupted'){
  for(const v of items(prior[0],'set'))if(typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===171n){const id=f(v,1n);if(typeof id!=='boolean'&&id.kind==='typedIdentifier'&&typeof id.payload!=='boolean'&&id.payload.kind==='text'&&['definition/task-a','definition/task-b'].includes(id.payload.value))for(const field of [3n,4n,5n,6n])s=changeDefinition(s,id.payload.value,field,f(f(v,4n) as Extract<CanonicalValue,{kind:'record'}>,field));}
  s=changeDefinition(changeDefinition(s,'definition/protocol-execution',1n,true),'definition/protocol-observation',4n,false);
  // These nonsocial tasks have no social consumer; keep the original perceived threat/operation sources.
- return {s,d:{...b.d,runSeed:old.d.runSeed,orderedInputs:enc(list(items(decode(old.d.orderedInputs),'list').filter(v=>key(items(v,'list')[2])!==key(SOCIAL_SOURCE))))}};
+ return candidate269({s,d:{...b.d,runSeed:old.d.runSeed,orderedInputs:enc(list(items(decode(old.d.orderedInputs),'list').filter(v=>key(items(v,'list')[2])!==key(SOCIAL_SOURCE))))}});
 }
 const models=new Map<string,ReturnType<typeof prepareCharacterModel>>();
 export async function start<T extends ReturnType<typeof fixture>|ReturnType<typeof reappraisal>>(b:T){const k=key(decode(b.s.registry));let p=models.get(k);if(!p){p=prepareCharacterModel(b.s);models.set(k,p);}const m=await p;return {b,m,r:cachedMemory(await createCharacterRun(m,b.d))};}

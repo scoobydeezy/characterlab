@@ -1,3 +1,4 @@
+import {carryPath,compareCarry,carryMetadata,replay269} from './fixtures/assembledActivationCarry';
 import {it,expect,afterEach} from 'vitest';
 // @ts-expect-error Node evidence IO.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
@@ -16,8 +17,8 @@ import {habitPath} from '../assembled/habit';
 import {STRATEGY_EVAL} from '../assembled/strategy';
 import {JOINT_APPRAISAL} from '../assembled/appraisal';
 import {SHARED_AFFECT_APPRAISAL,reappraisalPath,framePath,reappraisalFrame,REAPPRAISAL_MOTIVE} from '../assembled/reappraisal';
-const file='docs/planning/ASSEMBLED_CHARACTER_M263_EVIDENCE.json',hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),zip=(b:Uint8Array)=>({hash:hash(b),bytes:b.length,deflate:deflateSync(b).toString('base64')});
-const store=(k:string,v:unknown)=>{v=JSON.parse(JSON.stringify(v,(_k,x)=>typeof x==='bigint'?String(x):x));const e=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};if(e[k])expect(e[k]).toEqual(v);else{e[k]=v;writeFileSync(file,JSON.stringify(e,null,2)+'\n');}};
+const originalFile='docs/planning/ASSEMBLED_CHARACTER_M263_EVIDENCE.json',file=carryPath(originalFile),hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),zip=(b:Uint8Array)=>({hash:hash(b),bytes:b.length,deflate:deflateSync(b).toString('base64')});
+const store=(k:string,v:unknown)=>{v=JSON.parse(JSON.stringify(v,(_k,x)=>typeof x==='bigint'?String(x):x));const e=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};compareCarry(originalFile,k,v);if(replay269)e._activationCarry=carryMetadata(originalFile);if(e[k])expect(e[k]).toEqual(v);else{e[k]=v;writeFileSync(file,JSON.stringify(e,null,2)+'\n');}};
 let active:Run|undefined;
 async function start<T extends Parameters<typeof baseStart>[0]>(b:T){const x=await baseStart(b);active=x.r;return x;}
 afterEach(ctx=>{if(ctx.task.result?.state==='fail'&&active){const e=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{},n=Object.keys(e).filter(k=>k.startsWith('failure-')).length;store('failure-'+n,{test:ctx.task.name,...capture(active)});}active=undefined;});

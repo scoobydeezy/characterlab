@@ -1,3 +1,4 @@
+import {candidate269} from './assembledActivationCarry';
 /** M261 exact original frames expanded into ordinary native sources. Seed0;
  * nonsocial task, body30/rate10, zero body delivery, item criterion1..1. */
 import {fixture as previous,rec,f,uint,items,key,decode,enc,list,text,signed,q,outputs,C,u,set,sid,taskA,target,origin,destination,type CanonicalValue} from './assembledIntentionCompletion';
@@ -29,7 +30,7 @@ export function fixture(name:Case){
   if(x.cancel)rows.push(list([signed(t),u(30),COMMITMENT_REQUEST,list([taskA,true,x.privateBit]),list([])]));
   if(t>=2&&x.receipt)rows.push(list([signed(t),u(120),PROBE_SOURCE_EVENT,list([text(ATTEMPT_RECEIPT),probe[3],signed(0),list(b.route.plans.map(p=>p.actionId)),...(x.report?[u(x.report)]:[])]),list([])]));
  }
- return {s,d:{...b.d,orderedInputs:enc(list(rows))},name,frames,route:b.route};
+ return candidate269({s,d:{...b.d,orderedInputs:enc(list(rows))},name,frames,route:b.route});
 }
 const models=new Map<string,ReturnType<typeof prepareCharacterModel>>();
 export async function start(name:Case){const b=fixture(name),k=key(decode(b.s.registry));let p=models.get(k);if(!p){p=prepareCharacterModel(b.s);models.set(k,p);}const m=await p;return {b,m,run:cachedMemory(await createCharacterRun(m,b.d))};}

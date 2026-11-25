@@ -1,10 +1,10 @@
-# Current work — M269 affected workspace and intention replay
+# Current work — M269 workspace and intention replay complete
 Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
-M268 complete296c1eef: [result](ASSEMBLED_CHARACTER_M268_RESULT.md).
+M269 complete: [result](ASSEMBLED_CHARACTER_M269_RESULT.md); prior296c1eef.
 Reference0.159/37/100 remains; experimental0.160/global0 is not adopted.
 No law/denominator waiver. Continue across bounded packages, not UI.
 
-## M269 bounded card — before code
+## M269 completed card — preserved comparison
 Capabilities: (1) workspace/control retains its behavioral distinctions under global0;
 (2) all original intention schedules retain recall/loss/action/goal correspondence;
 (3) actual decision consumption, permitted-evidence privacy and exact continuation.
