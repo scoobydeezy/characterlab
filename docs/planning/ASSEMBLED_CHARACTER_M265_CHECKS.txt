@@ -10,12 +10,12 @@ M265 receiving exit=1 elapsed=68.322s cap=300s timeout=False
  FAIL  src/test/assembledDelayedReceiving.test.ts > family265 exact original delayed grounds meet current reference receiving
 CanonicalEncodingError: unknown record schema 1387/1
  ❯ fail src/substrate/canonicalEncoding.ts:430:9
-    428| 
+    428|
     429| function fail(message: string): never {
     430|   throw new CanonicalEncodingError(message);
        |         ^
     431| }
-    432| 
+    432|
  ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:348:18
  ❯ Reader.readValue src/substrate/canonicalEncoding.ts:257:36
  ❯ Reader.readRecord src/substrate/canonicalEncoding.ts:359:34
@@ -81,3 +81,4 @@ PASS: Git index contains no files at or above50,000,000 bytes.
 
 
 M265 packaging allowance=10.000s; total=249.513/600s. Final whitespace and document bounds.
+M265 packaging: normalized trailing spaces in compiler stack excerpt; original remains at e95433a5.
