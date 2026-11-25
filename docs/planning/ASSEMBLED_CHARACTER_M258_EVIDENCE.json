@@ -1,0 +1,385 @@
+{
+  "milestone": "M258",
+  "parent": "8b15daf9",
+  "card": "b2474d7e",
+  "status": "COMPLETE finite comparison intake; native integration OPEN",
+  "clauses": [
+    {
+      "id": "BRIEF-12.6-1",
+      "text": "competing information exceeding active capacity;",
+      "retainedEvidence": "M127/M128",
+      "meaning": "Shared capacity overload reaches live appraisal/reasons and actual probabilities.",
+      "status": "ESTABLISHED scoped witness; family-version carry still required"
+    },
+    {
+      "id": "BRIEF-12.6-2",
+      "text": "distraction displacing a maintained goal;",
+      "retainedEvidence": "M128",
+      "meaning": "Support/distraction2x2 and reminder recover access to retained plan; goal is not deleted.",
+      "status": "ESTABLISHED scoped witness; family-version carry still required"
+    },
+    {
+      "id": "BRIEF-12.6-3",
+      "text": "resisting a habitual response;",
+      "retainedEvidence": "M17/M55",
+      "meaning": "Acquired habit is withheld by a maintained goal; distinct physical execution remains.",
+      "status": "ESTABLISHED scoped witness; family-version carry still required"
+    },
+    {
+      "id": "BRIEF-12.6-4",
+      "text": "failure of inhibition under load;",
+      "retainedEvidence": "M17/M55/M56",
+      "meaning": "Neutral load, fatigue or recurring concern defeats actual control, with reference habit retained.",
+      "status": "ESTABLISHED scoped witness; family-version carry still required"
+    },
+    {
+      "id": "BRIEF-12.6-5",
+      "text": "switching strategy after performance monitoring;",
+      "retainedEvidence": "M15",
+      "meaning": "Own permitted performance reports drive TwoFailures route switch in the continuing character.",
+      "status": "ESTABLISHED scoped witness; family-version carry still required"
+    },
+    {
+      "id": "BRIEF-12.6-6",
+      "text": "rumination consuming active cognition;",
+      "retainedEvidence": "M56",
+      "meaning": "Unresolved content occupies the same workspace and changes inhibition; interruption/rebound and resolution remain.",
+      "status": "ESTABLISHED scoped witness; family-version carry still required"
+    },
+    {
+      "id": "BRIEF-12.6-7",
+      "text": "cognitive fatigue impairing control;",
+      "retainedEvidence": "M55",
+      "meaning": "Experienced fatigue/recovery changes inhibition under fixed competence/history; missing evidence retains experience.",
+      "status": "ESTABLISHED scoped witness; family-version carry still required"
+    },
+    {
+      "id": "BRIEF-12.6-8",
+      "text": "deliberate reappraisal;",
+      "retainedEvidence": "M41",
+      "meaning": "Chosen cognitive operation changes later frame/appraisal; interrupted attempt and unchanged evidence controls remain.",
+      "status": "ESTABLISHED scoped witness; family-version carry still required"
+    },
+    {
+      "id": "BRIEF-12.6-9",
+      "text": "remembering a prospective intention at the relevant moment.",
+      "retainedEvidence": "M128 + original INTENTION",
+      "meaning": "M128 restores a retained plan; it does not recover its action content exclusively from episodic memory. Native instruction-loss/retrieval consumer remains missing.",
+      "status": "PARTIAL"
+    }
+  ],
+  "originalComparator": {
+    "contract": "intention-forgetting-component/0.1-candidate",
+    "source": "src/campaign3/intentionForgetting.ts",
+    "tests": "src/test/intentionForgetting.test.ts",
+    "scenarios": [
+      "main",
+      "noCue",
+      "lost",
+      "wrongCue",
+      "routeB",
+      "lostB",
+      "cancelled",
+      "expired",
+      "noOpportunity",
+      "blocked",
+      "hidden",
+      "hiddenBlocked",
+      "falseReceipt",
+      "trueReceipt",
+      "denied",
+      "deniedB",
+      "noNeutral",
+      "lateCue"
+    ],
+    "laws": [
+      "RetainedCue",
+      "NoLoss",
+      "PersistentAccess"
+    ],
+    "runs": 54,
+    "prefixComparisons": 486,
+    "freshTestsPassed": 15,
+    "nativeCharacterRuns": 0,
+    "preservedEdge": "Present nonmatching cue with sole retained instruction can recover it at zero score; absent cue differs. No new positive-score cutoff."
+  },
+  "ownership": [
+    {
+      "operand": "Goal adoption, importance, lifecycle",
+      "owner": "Existing goal/task373 authority",
+      "requirement": "Keep Open/fulfilled/cancelled/expired independent of memory. No reminder re-adoption. Share existing adoption/lifecycle operations."
+    },
+    {
+      "operand": "Received prospective route/action instruction",
+      "owner": "Existing episodic346/1 authority",
+      "requirement": "Acquire from permitted source through ordinary observation and frozen evidence. No learned starting content or permanent373/2 instruction copy for this admitted memory-bound path."
+    },
+    {
+      "operand": "Retention and real loss",
+      "owner": "Existing episodic retention stage",
+      "requirement": "Compete in the existing event budget; remove actual bytes; empty protection. No second store or archive reader."
+    },
+    {
+      "operand": "Current recall and working access",
+      "owner": "Existing recall delivery/workspace",
+      "requirement": "Reminder carries only cue, never action. Read surviving acquisitions and consume actual selected operand under shared capacity; expose producer/consumer provenance."
+    },
+    {
+      "operand": "Available selected route",
+      "owner": "Existing plan/candidate path",
+      "requirement": "Actual recalled instruction chooses a governed route; prior996 plan or configured fallback cannot restore lost content. Knowledge of possible actions is not memory of which was instructed."
+    },
+    {
+      "operand": "Reason, intent, attempt, execution, received outcome",
+      "owner": "Existing motive/reason/arbitration/expression/execution and observed lifecycle stages",
+      "requirement": "Live task motivation plus actual accessible feasible option. Native grounds and original unit-strength grounds have explicit correspondence, not forced byte equality. Physical truth cannot fulfill a goal without evidence."
+    }
+  ],
+  "nextComparison": {
+    "primary": "Original main/routeB versus lost/lostB, retained goal and instruction1, neutral2, reminder4, actual action5 only when content survives. All laws fixed across native reference arms.",
+    "controls": [
+      "main",
+      "noCue",
+      "lost",
+      "wrongCue",
+      "routeB",
+      "lostB",
+      "cancelled",
+      "expired",
+      "noOpportunity",
+      "blocked",
+      "hidden",
+      "hiddenBlocked",
+      "falseReceipt",
+      "trueReceipt",
+      "denied",
+      "deniedB",
+      "noNeutral",
+      "lateCue"
+    ],
+    "version": "Versioned successor of0.157; contract and package card before implementation.",
+    "packageRule": "At most12 production/test files per package. Because admission, memory ownership and actual planner receiving cross more seams, split source/ownership and receiving into bounded packages if needed; neither alone closes the milestone. No unrelated breadth or further intake between them.",
+    "gates": [
+      "No same-instant consequence use; actual perceived instruction precedes formation and later retrieval.",
+      "Both routes, full queue, denied/false/hidden source controls and no-cue versus wrong-cue distinctions.",
+      "Actual loss versus retained inaccessibility; no restored bytes from task, plan, input history or catalog lookup.",
+      "Cancel/expiry/opportunity/execution/receipt remain independent causes.",
+      "Actual live reason/arbitration/expression/attempt provenance, exact repeat/save restoration and reached atomic rollback.",
+      "All original18 cases and named competitors receive explicit native or semantic correspondence; no source tuning or discarded nulls."
+    ]
+  },
+  "sources": [
+    {
+      "path": "CHARACTER_ARCHITECTURE.md",
+      "sha256": "a5165b3e49c9d73c7bdfc72a9e1e5d2cf91ae1e3a0b25252f056a6f31855e19e",
+      "gitBlob": "0514e50eaef35823810b44f4232a7eb153211a90"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_BASELINE.json",
+      "sha256": "a91ef1478342cee363e7f303c8ae0f2d143d5ff056879eec12e9d521b07b4da9",
+      "gitBlob": "318c7765ae1420f4b2d3f73548c44c48f6804661"
+    },
+    {
+      "path": "docs/planning/campaign3-hq012-exit-review-rev1/families.json",
+      "sha256": "1011e6641b116cd051f8b0dd9eaa9bb0c015d8408cbdf245f9c2be215b028ed4",
+      "gitBlob": "2c136de4ba3257b93cea59d0d96e2487d3f888ee"
+    },
+    {
+      "path": "docs/planning/REFERENCE_MECHANISM_LEDGER.md",
+      "sha256": "1deeedad55ad980783222807969895bb69296720461da4e056a0e3cac093682d",
+      "gitBlob": "9df9f211d752f4973686c30ecc53ab3a75b09208"
+    },
+    {
+      "path": "docs/planning/RESEARCH_OBLIGATIONS.json",
+      "sha256": "8d1dd26d74b5aefae330418e065581249396b6a560588cb3a84985144ae7548a",
+      "gitBlob": "521616b3984813e896d8a1ee90aa2453fdd3b9d1"
+    },
+    {
+      "path": "docs/formal/INTENTION_FORGETTING_COMPONENT_CONTRACT.md",
+      "sha256": "82a4471b845c872b8d16ad7e42a5c6e7587c01201ade15d6bfa2f62f9ec3b83f",
+      "gitBlob": "cbe21bcdb1a1fa6f91161a4ef64b01d37ac9cfe0"
+    },
+    {
+      "path": "docs/planning/CAMPAIGN3_INTENTION_QUALIFICATION.md",
+      "sha256": "7b6e52d4e12bd42cea7e28f8683a4ce92ce67a3a374cd91ff4cb86bdf45558af",
+      "gitBlob": "99aac561bba83b23d363ce6f2249c2fa13893e7a"
+    },
+    {
+      "path": "docs/planning/INTENTION_IMPLEMENTATION_FINDINGS.md",
+      "sha256": "7e585701100f1d42c626893764e3cf774fd3ffe436c9b13e19d1629babd08037",
+      "gitBlob": "2b7d9be88bab5ca6035c127c547feb99c90a3be1"
+    },
+    {
+      "path": "docs/planning/INTENTION_CLOSURE_REV1.json",
+      "sha256": "9b050d5c43c12d45adbded0b9b862a54e83fc0ab2e496739af81c309cd506b1a",
+      "gitBlob": "6601218706ad52e25e91465f63d63b3d29e035c4"
+    },
+    {
+      "path": "src/campaign3/intentionForgetting.ts",
+      "sha256": "19d973a2904bf07353ad69b9bcbd58da074c4a06d88f7c6c86f4646d6893ec42",
+      "gitBlob": "89f785f570351c3aeaf7116df94ce5c7eac0c398"
+    },
+    {
+      "path": "src/test/intentionForgetting.test.ts",
+      "sha256": "05ca0c5dae6e62214128baa4c751ac43145041e044e1795538a71f00d2a22e04",
+      "gitBlob": "2d457efe67db6e1fa1ee4b659872e60981697133"
+    },
+    {
+      "path": "src/test/intentionForgettingFixtures.ts",
+      "sha256": "af726b5d743a54451533044010ebaafb2e90450dc41d6d7366ec7eca8881555e",
+      "gitBlob": "9f1c6cd1554017bd9a4479db2cb672422f8528f0"
+    },
+    {
+      "path": "src/assembled/priorityExecution.ts",
+      "sha256": "8de6d1de91e54241cd4c853472071a15e6c59e77fd828aca317be8c43d1c30d9",
+      "gitBlob": "8e2189abc6b273af5c51cb38263cc2212b08fd27"
+    },
+    {
+      "path": "src/assembled/state.ts",
+      "sha256": "a7c7225b1451a031810f5744e002f95997261b98e36215b5d94a8fee8d263ed2",
+      "gitBlob": "dbf701c08302fe287fd7fa96b6186e69a6ee9493"
+    },
+    {
+      "path": "src/assembled/strategyExecution.ts",
+      "sha256": "efcfa05da4a47c20c3dc7e6aef3193b1f32a874505ce5df614255cad67bc1acb",
+      "gitBlob": "1e8ad00775ace5066c939d2faf8772bf55fb3462"
+    },
+    {
+      "path": "src/assembled/memory.ts",
+      "sha256": "760277406b2bf5a3105f5473c97a4aa0ce49b02ca15ad4d15a25713731cc839b",
+      "gitBlob": "a3b8cd7df2de74fc8718f11a7a1b250b71a5439f"
+    },
+    {
+      "path": "src/assembled/retention.ts",
+      "sha256": "e558421e6e32423c02eebcab282868f0c4d09ae75a90d994a2cabc9d119f6d58",
+      "gitBlob": "2d3a49a89841349045c5079095212b80cbe790a3"
+    },
+    {
+      "path": "src/assembled/workspace.ts",
+      "sha256": "0dc1a5fdacb77a52ffcdf7654ebb579df6fb16d0aa699512fb6457013c6da173",
+      "gitBlob": "cae2996196ea2359727110d851558db28c6260e7"
+    },
+    {
+      "path": "src/assembled/execution.ts",
+      "sha256": "bf890a1f693b8e865c10ad31bba39bcc2f44841b94e67a8e302a27dedf10fc2b",
+      "gitBlob": "a3fc5c2f6f75a813a6aedcb718f03ae9618cb4b5"
+    },
+    {
+      "path": "src/assembled/runtime.ts",
+      "sha256": "48a0fe4b3046337c73b25ee245653616f17ea333204b144bdbca6f1b765c0cc3",
+      "gitBlob": "2e83dd4ae02fa49774f3708e851ba630502e3ddc"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M15_RESULT.md",
+      "sha256": "55d16c6da9b6ca96a8c492c830cdde8dfe8bb53c188348703c794a2ac9c9c1e0",
+      "gitBlob": "ceac57f4ae10d48e7946749cd681c54f1c2f92af"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M17_RESULT.md",
+      "sha256": "f2ff66803d1c3e5b69c9a66683a2360dd7223602815ff906d8aa0d331ae4936b",
+      "gitBlob": "79925d7d94470d1e40bb9dfb10692c0d32912f71"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M41_RESULT.md",
+      "sha256": "c3ebea38c45412bdb84c40e98261a2941691f6c75f42edf362fa82f5d03ad532",
+      "gitBlob": "92a5cac4ff80f464c67b8d6d6b25f27e9674191d"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M55_RESULT.md",
+      "sha256": "92ba1564994ee97b318d40db4caa4969f2b8c0dc4c50b9fbf80a2ca79ebec665",
+      "gitBlob": "0ecf6c412da779a39995d90e936e869d45a01464"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M56_RESULT.md",
+      "sha256": "1f3e2ec1092a3acd4cbfa082238f242803a5f03ce39fcfcff048621caa1143bf",
+      "gitBlob": "c02463e1846f3dba80806411f8668c59925c3971"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M127_RESULT.md",
+      "sha256": "86c2d6bf7caed8ece619c302ab23479913b169f5ad1790b52d04546dd18c13ba",
+      "gitBlob": "3fe7295e6aa0b964c2ae5c7d3c3bb25b5f92a796"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M128_RESULT.md",
+      "sha256": "c64bde8790130d1b242444029d8fec8908aa6ec4642122e3281eb299fbe856f6",
+      "gitBlob": "113b278c16382423f3cf3f6cc1fce9a4f356e95c"
+    },
+    {
+      "path": "docs/planning/ASSEMBLED_CHARACTER_M257_RESULT.md",
+      "sha256": "76ab67264a449c499e87faa81817e442a4a8a29bc1b798bd7aafb0ae34cae422",
+      "gitBlob": "4de72aacba7175018214e44027a493e1a215e3fb"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "RO-C3-005",
+      "status": "CONDITIONAL",
+      "reopenTrigger": "Longer-horizon or conflicting use/significance pressure, or proposed removal/merger of significance protection.",
+      "closureRequirement": "Compare the named protection candidates under discriminating pressure and retain attribution/epistemic constraints; record scoped verdict."
+    },
+    {
+      "id": "RO-C3-006",
+      "status": "CONDITIONAL",
+      "reopenTrigger": "Source order, capacity, role or budget changes; proposal to retire these comparator distinctions.",
+      "closureRequirement": "Use discriminating source/capacity/budget cases and compare exact scores and selected sets, preserving permission boundaries."
+    },
+    {
+      "id": "RO-C3-007",
+      "status": "CONDITIONAL",
+      "reopenTrigger": "Any qualification or reduction extends beyond the admitted GA source/horizon.",
+      "closureRequirement": "Map the proposed claim to named corpus requirements, accept missing source contracts and execute relevant comparisons; split this entry by seam as those claims become active."
+    },
+    {
+      "id": "RO-C3-012",
+      "status": "CONDITIONAL",
+      "reopenTrigger": "Any larger or changing source/lifecycle domain, history deletion, control-order change, alternate maintenance mechanism, claimed cache reduction beyond the tested domain, or newly required Brief12.6 phenomenon.",
+      "closureRequirement": "When triggered, preserve separately traceable retained/active state and replay matched public discrimination tests, including genuine overload, exact single-factor interventions and expired-cue controls. Re-derive indexed access for any new lifecycle or missing-history case; do not silently reuse the fixed-deadline proof. WORK-DESIGN-001 requires isolating the manipulated factor."
+    },
+    {
+      "id": "RO-C3-014",
+      "status": "CONDITIONAL",
+      "reopenTrigger": "A new communication or recognition channel, hidden source correlation, source reliability, another person-model proposition, nested or reciprocal inference, relationship coupling, social appraisal/action or a new projection consumer.",
+      "closureRequirement": "Accept successor contracts and run private-only/access-only/explanation-only pairs preserving observer isolation, mistaken inference and correction, false explanation, correlation and alternative learners. Qualify newly exercised ordering, recognition, relationship and privacy clauses independently."
+    },
+    {
+      "id": "RO-C3-019",
+      "status": "CLOSED",
+      "reopenTrigger": "Current mandatory coverage/exit claim or a proposed reduction depending on these uncovered distinctions; see the individual audit clauses.",
+      "closureRequirement": "Maintain the exact clause register, rank by normative importance and invalidation risk, and use accepted successor contracts/public comparisons for affected cases. Any change to mandatory coverage must be explicit through the authority hierarchy. No generic design of all missing mechanisms is authorized by this bookkeeping entry."
+    },
+    {
+      "id": "RO-C3-020",
+      "status": "CONDITIONAL",
+      "reopenTrigger": "Current mandatory coverage/exit claim or a proposed reduction depending on these uncovered distinctions; see the individual audit clauses.",
+      "closureRequirement": "Before a relevant reduction, preserve direct zero-hop exactly once, observer-safe cues and independent graph/episode lifecycles; compare all declared future queries/horizons and information differences. Add node-local payload or new attribution/calibration only through named contracts and discriminatory controls. Retain current frozen history rather than retroactively relabeling it."
+    }
+  ],
+  "mechanisms": [
+    "MEC-005",
+    "MEC-011",
+    "MEC-012..020",
+    "MEC-022",
+    "EXP-004",
+    "EXP-013"
+  ],
+  "scope": {
+    "members": 21,
+    "families": 15,
+    "clauses": 132,
+    "acceptedFamilies": 6,
+    "evidenceIndex": "E81/P27/N11/U13",
+    "family12_6Accepted": false,
+    "productionTestFormalEdits": 0
+  },
+  "finalPreservation": {
+    "documentLines": {
+      "AGENTS.md": 120,
+      "docs/planning/CURRENT.md": 35,
+      "docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md": 250,
+      "docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md": 248
+    },
+    "artifactCount": 3,
+    "artifactBytes": 28218,
+    "productionTestFormalReferenceUnchanged": true
+  }
+}
