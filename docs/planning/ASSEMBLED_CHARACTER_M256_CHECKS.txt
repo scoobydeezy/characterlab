@@ -1,0 +1,133 @@
+M256 plan-size exit=0 elapsed=0.870s cap=600s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M256 types exit=2 elapsed=4.434s cap=600s timeout=False
+src/test/fixtures/assembledPerceivedControl.ts(40,196): error TS1005: ',' expected.
+src/test/fixtures/assembledPerceivedControl.ts(40,197): error TS1005: ',' expected.
+src/test/fixtures/assembledPerceivedControl.ts(40,200): error TS1005: ',' expected.
+src/test/fixtures/assembledPerceivedControl.ts(40,202): error TS1005: ';' expected.
+src/test/fixtures/assembledPerceivedControl.ts(40,203): error TS1128: Declaration or statement expected.
+src/test/fixtures/assembledPerceivedControl.ts(40,204): error TS1128: Declaration or statement expected.
+src/test/fixtures/assembledPerceivedControl.ts(40,205): error TS1128: Declaration or statement expected.
+
+M256 types-fixed exit=0 elapsed=22.204s cap=600s timeout=False
+
+M256 primary exit=1 elapsed=82.136s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledPerceivedControl.test.ts > control256 primary current learned efficacy reaches actual reasons 76044ms
+   → requires 426/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledPerceivedControl.test.ts > control256 primary current learned efficacy reaches actual reasons
+SchedulerContractError: requires 426/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ src/test/fixtures/assembledComparison.ts:10:221
+ ❯ Module.outputs src/test/fixtures/assembledComparison.ts:10:214
+ ❯ proof src/test/assembledPerceivedControl.test.ts:45:205
+ ❯ src/test/assembledPerceivedControl.test.ts:52:136
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  19:16:52
+   Duration  81.52s (transform 3.37s, setup 0ms, collect 5.00s, tests 76.04s, environment 0ms, prepare 144ms)
+
+
+M256 primary-current-reader exit=0 elapsed=104.429s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerceivedControl.test.ts > control256 primary current learned efficacy reaches actual reasons
+M256 PRIMARY lower control1->0 with fixed E119/200: U0->119/200, actual situation0->3 and probability25/72->7/9; current decision/expression/attempt
+
+ ✓ src/test/assembledPerceivedControl.test.ts > control256 primary current learned efficacy reaches actual reasons 98493ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  19:19:19
+   Duration  103.87s (transform 3.30s, setup 0ms, collect 4.91s, tests 98.49s, environment 0ms, prepare 142ms)
+
+
+M256 boundary-controls exit=0 elapsed=104.400s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerceivedControl.test.ts > control256 unknown and failed execution remain distinct
+M256 BOUNDARIES unknown control is Unavailable, known zero produces live reasons; failed completion cannot rewrite prior appraisal/grounds/distribution/learned control
+
+ ✓ src/test/assembledPerceivedControl.test.ts > control256 unknown and failed execution remain distinct 98452ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  19:21:32
+   Duration  103.84s (transform 3.32s, setup 0ms, collect 4.92s, tests 98.45s, environment 0ms, prepare 135ms)
+
+
+M256 original-correspondence exit=0 elapsed=101.742s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledPerceivedControl.test.ts > control256 original composition correspondence
+M256 original0.129 and current0.157 primary psychological projections agree, including actual probabilities
+
+ ✓ src/test/assembledPerceivedControl.test.ts > control256 original composition correspondence 95829ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  19:25:50
+   Duration  101.17s (transform 3.30s, setup 0ms, collect 4.90s, tests 95.83s, environment 0ms, prepare 147ms)
+
+
+M256 privacy-continuation exit=0 elapsed=151.226s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledPerceivedControl.test.ts > control256 hidden truth and exact continuation 145218ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  19:27:39
+   Duration  150.66s (transform 3.29s, setup 0ms, collect 4.95s, tests 145.22s, environment 0ms, prepare 146ms)
+
+
+M256 final-types exit=0 elapsed=22.312s cap=600s timeout=False
+
+M256 boundaries exit=0 elapsed=3.751s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M256 research exit=0 elapsed=4.015s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M256 preservation exit=0 elapsed=0.352s cap=120s timeout=False
+{"parent": "606d8c2d", "trackedSourceFormalReferenceUnchanged": true, "losslessBlocks": 27, "decodedBytes": 10155978, "documentLines": {"AGENTS.md": 120, "docs/planning/CURRENT.md": 32, "docs/planning/ASSEMBLED_CHARACTER_WORK_ORDER.md": 250, "docs/planning/ASSEMBLED_CHARACTER_RECONCILIATION.md": 248}, "artifacts": 3, "sources": [{"path": "src/test/fixtures/assembledAffectMemoryCurrent.ts", "gitBlob": "6ea14005a851d9c58e828d793642022d96c48ed1", "sha256": "13d0dc54b56599a6940ffcf124eb1d0751a3f1b1e43aea6c74b86d1655e99bb0"}, {"path": "src/test/assembledAffectFactorialCurrent.test.ts", "gitBlob": "f2d06fcf915262c4d27f55775f67a1f25cfa0249", "sha256": "16e151ea503b0058444fdc247baaceaad55c74efd688c3e7dcb671549e1f91a3"}, {"path": "src/test/fixtures/assembledComparison.ts", "gitBlob": "4ff9b5497a85b4bcb3d17fac803d52bc9b7e9896", "sha256": "11354c2fe8f35b0895bb8aa557b5cfa4ea5f02517b95873ae385848eafbdb20e"}, {"path": "src/assembled/reappraisal.ts", "gitBlob": "62230865993763578b46580666b07d0f3e4237c8", "sha256": "a8391863b5f3c22fae97125673bf9aded032a0fcc37c264fa15207734298ea4f"}, {"path": "src/assembled/mitigation.ts", "gitBlob": "01b6598865eeeb0c92cbff779f41988beb1b54ef", "sha256": "493a9efde306ffba9a9a719cd6f8e2c8f9639b55e6077f8a8557c279ca95c6be"}]}
+M256 git-size exit=0 elapsed=0.852s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
