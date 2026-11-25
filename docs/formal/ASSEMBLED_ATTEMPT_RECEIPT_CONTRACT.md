@@ -6,6 +6,11 @@ Fixed-time positive reports alone would incorrectly fulfill before any action.
 
 Model/registry0.159 admits an optional original probe source at120:
 [assembled-attempt-receipt/0.1, ordinary333 cue, signed bias(-100..100), actions].
+An optional fifth unsigned mode is0 (measured),1 (report success), or2 (report failure).
+Nonzero modes require bias0 and report point1 or0 through the ordinary observation
+producer regardless of the separately retained physical truth. They still require
+an actual attempt and obey observation permission. This is the original frame report
+convention, not a character belief initializer. Four-field sources imply mode0.
 Actions is a nonempty unique list of governed actions that move the bound criterion
 item; the source requires an item criterion binding. Old source forms keep behavior.
 Earlier models reject the new source form. Same original input identity/limits apply.

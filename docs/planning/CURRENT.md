@@ -23,7 +23,7 @@ board cues each1..8 -> recall next instant; deliberation2..8; availability for p
 frame opportunity, deadline7; actual cancellation3 where declared. Body30/rate10,
 ordinary body/frame inputs retained, zero body delivery for item actions. Initial
 criterion probe1 supplies evidence0; thereafter gated probes2..8 iff receipts allowed,
-bias+10 for report1. Both routes move one real item. No authored cognition or expected
+explicit report mode1 for original report1 (see source amendment below). Both routes move one real item. No authored cognition or expected
 outputs in input construction. PrivateBit maps only to hidden work-board truth.
 Compare each original tick's instruction/neutral retention, semantic recall, action
 route, attempted/succeeded, received report and end-of-instant goal. Source timing
@@ -39,6 +39,10 @@ Budget <=1800s cumulative verification,600s/command,20 evidence files/5MiB; <=12
 instants/run with full queues. Split before exceeding, never trim gates or scenarios.
 Done when18 native schedules have classified correspondence, actual gate consumption,
 privacy and exact continuation pass. Laws/scope stay fixed; failed evidence retained.
+Self-approved source-mapping correction before report runs: original report1 means
+constant success, not additive bias (+10 on truth10 would yield2, not1). Optional
+source mode0/1/2 preserves measured/constant-success/constant-failure conventions;
+nonzero mode requires bias0. Truth remains separate; no psychology/fixture retuning.
 E81/P27/N11/U13=132;21members/15families;accepted6/15; Family12.6/assembly OPEN.
 | Registry | Current count |
 |---|---|
