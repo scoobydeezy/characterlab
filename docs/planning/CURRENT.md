@@ -1,38 +1,58 @@
-# Current work — M266 experiment complete; Family12.7 open
-The experimental character can act on weak nonzero motives; exact-zero stays inert.
-The candidate changes other accepted scenarios, so it is not the new reference.
-[Result](ASSEMBLED_CHARACTER_M266_RESULT.md), [native evidence](ASSEMBLED_CHARACTER_M266_EVIDENCE.json),
-[receiving screen](ASSEMBLED_CHARACTER_M266_RECEIVING.json), [checks](ASSEMBLED_CHARACTER_M266_CHECKS.txt).
+# Current work — M267 native acquired-motive and importance replay
+Owner continuation2026-11-25 authorizes the next bounded candidate replay.
+Reference0.159/37/100 stays; model0.160/global0 remains experimental.
+Prior [M266](ASSEMBLED_CHARACTER_M266_RESULT.md) found17 changed receiving contexts.
 
-Owner2026-11-25 approved the bounded global0 experiment, not automatic adoption.
-Plan/formal a231f08e precedes implementation. Contract positive-activation0.1;
-model/registry0.160 candidate. Reference0.159/37/100 and original controls remain.
-One compiler/state/scheduler/save; same61 slots. Four production/two test files.
+## Bounded card — before code
+Capabilities: (1) actual acquired Commitment/Value receiving retains independent
+history/coverage/zero/unknown distinctions; (2) retained importance and fresh urgency
+still produce the required later probability separation; (3) exact continuation.
+No production or formal changes. At most3 new test/helper files; old fixtures intact.
+Contract positive-activation0.1, reference SourceCoverage/Factored/standing rounding.
+MEC001/011..020/022 retained; no reduction or conditional debt closure.
 
-## Outcome and limits
-14 native candidate arms retain the12 declared comparisons and2 coupled replacements.
-Weak postponement and forecast correction change actual probabilities and execution.
-Zero/feasibility/denied evidence, exact old-control bytes, version admission, repeat,
-restore and late rollback pass. Original failures and test repairs remain in the result.
-All11 original delayed packets recover their active-ground counts under candidate0.
-184 captured receiving packets:17 nuclei sets and10 distributions/modes change.
-Changes concentrate in acquired motives, retained importance, intoxication and reappraisal.
-Previously active nuclei remain exact; zero-base exclusion remains. This screen is
-component evidence, not full native family replay or native delayed offer/delivery.
-Budget1800s/600per command,20evidence files/5MiB,12source/test paths respected.
-Types/boundary/research/evidence/integrity checks pass. No repeated passed verification.
+Sources: unchanged M246 acquired-source and M248 priority fixture builders and raw
+artifacts. Lift60-slot0.155 to61-slot0.160 with empty intention binding, exact threshold0
+and version bundle only. Input/seed/initial bytes and prior60 slots otherwise identical.
+M248's existing unbound-item transfer is retained, not a new item interpretation.
+Capture source hashes and verify the structural delta before every run.
+An additional0.159 negative-history control isolates version transfer from activation.
 
-## Next bounded work
-Replay affected native histories on0.160, beginning with acquired motives, retained
-importance/urgency, intoxication and reappraisal. Keep original sources/calibrations
-as controls; classify changed nulls against the actual family requirements.
-Full affected-family replay precedes reference adoption. No automatic acceptance carry.
-Then complete original delayed offers/wait/delivery/receipt and procrastination/temporal
-correspondence on the adopted reference. Family12.7 remains OPEN.
-Write the next bounded card before implementation. No UI, autonomous peers, framework,
-new pipeline or frozen C0–3 modification. MEC011..020/022 and existing debts remain.
-E82/P26/N11/U13=132;21members/15families;7 families accepted on prior versions.
-Assembly acceptance and final whole-candidate replay remain open.
+Acquired scenario: social A/B with recognized stand-ins1..3, body10, seed0,
+actual attempts4/6, Value linkage6, comparison8; no learned S0 or authored motive.
+Ten arms: first,last,collective,duplicate,unlinked,hidden,denied,zero,negative,none.
+Require live appraisal/actual reason compilation/decision consumption and execution.
+Check receipt/Value independent grounds, shared ancestry and covered duplicate weight0;
+Value linkage alone must preserve receipts/Commitment. Unknown/known0/negative/absent
+remain distinct. Compare captured actual grounds with old37/100 compilation; classify
+changed nulls and probabilities explicitly. Same seed is not claimed as shared dice.
+If earlier choices change evidence, name that causal chain; never claim equal histories.
+
+Priority scenario: nonsocial, seed0, body10/cap100/rate0/grid1/threshold60; two independent
+Need responses. Importance observed1, opportunities2..7; original six urgency frames.
+Four cells I500/1000 x U0/1000; retain all24 motive/probability/execution observations.
+Require Factored strengths and initial collision; different retained importance under
+later common urgency must still change actual probabilities. Weak BelowThreshold
+becomes Active where M266 predicts; do not require obsolete nulls or retune stimuli.
+Controls: zero/absent importance, denied adoption pair, denied urgency pair, omission/
+return (7 runs). Prove observation/state differences and equal permitted receiving.
+Use original five-law control outputs, not a newly selected law.
+
+Persistence: acquired collective repeat/save6 to termination; priority repeat and
+restore1/5 through termination, full state/output/trace/save at every settled instant.
+Keep original rollback/admission evidence; M266 already verifies changed bundle and
+late rollback, unchanged production means no new rollback run without a new failure.
+Checks: native tests, types, boundaries/research, lossless artifacts and frozen-source
+preservation, document/size limits. One validation job; targeted repair reruns only.
+Budget1800s total/600s per command,20 evidence files/5MiB,12 source/test files maximum.
+No extensions, seed search, hidden threshold/law/parameter tuning or replacement scenes.
+Retain failures before self-approved harness/comparison repairs; genuine law conflicts
+remain explicit and prevent reference adoption. Split next work rather than broaden.
+Done: both native comparison groups and controls classified, continuation passes,
+compact result names findings and remaining affected replay. No family promotion.
+Next separate package: intoxication/reappraisal native histories, then residual affected
+family coverage before adoption. Native delayed delivery and Family12.7 still open.
+E82/P26/N11/U13=132;21members/15families;7 accepted on prior versions. No UI.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
