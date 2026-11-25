@@ -1,51 +1,36 @@
-# Current work — M255 repeated errors revise action expectations
-The character will revise a route-performance expectation after repeated prediction
-errors and communicate the changed estimate. Evidence about another task/action must
-stay separate. Use existing0.157 mechanisms, not a new confidence or inference law.
-Parent0928f8b0; Family12.4 delegated self-approval continues; M254 complete.
+# Current work — M255 repeated errors reach later reports
+The current character revises a task/route expectation after repeated contradictory
+outcomes and communicates its revised estimate. A different action's evidence stays
+separate; missing or ineligible evidence does not become known failure.
+[M255 result](ASSEMBLED_CHARACTER_M255_RESULT.md); [evidence](ASSEMBLED_CHARACTER_M255_EVIDENCE.json).
+Parent0928f8b0; pre-code card8f6ce00d; unchanged model/registry0.157.
 
-## Bounded card before implementation
-BRIEF-12.4-6/7; existing1000/3 observed outcomes and1000/4 task/route expectations,
-expression90 and recipient1072. L5 Development-aware Ramp unchanged, phase0 gain4.
-No production or formal-semantic edit planned. Existing performance-expectation0.1
-contract and M29 controls apply; model remains0.157. Two new fixture/test files,
-cap12 if a demonstrated integration defect needs repair and versioned amendment.
-MEC001/002/006 and EXP001/002 controls/candidates retained; MEC019 actual versus
-perceived result distinct. RO010 remains conditional for broader causal/calibration.
+## Completed connection and limits
+Actual engaged observation -> existing outcome/expectation owner -> prior expression
+-> physical execution/delivery -> recipient perception. A errors1,1/2,1/4 yield
+estimates1/2,3/4,7/8, with event-phase0 gain4. Actual report14 delivers7/8 versus1
+under the same latest success but different histories. B action/route remains separate.
+No new model version, law, production code, owner, store, scheduler or pipeline.
+This verifies repeated-error learning and receiving, not a sampled-choice effect.
+Missing feedback, non-engagement, denied correction and other-action controls pass.
+Hidden difficulty changes actual success without changing the declared belief/report
+projection. Exact repeat and checkpoint8 continuation match every later full
+state/output/trace/save through terminal exhaustion. No scenario amendment or failure.
 
-## Predeclared scenario and correspondence
-Derive M254/M246 current scalar scene: body10/seed0, recognized stand-ins1..3,
-two social tasks, unknown third, no learned S0. Static physical execution enabled.
-Remove causal diagnostics and obstruction. A-only opportunities4/8/10/12/14;
-B-only6, using its existing alternate action/route. All initial route declarations
-remain; complete ordinary frame4 supplies later opportunities. No receipt motives.
-Practice phase0, difficulty0, permitted, no exercise gain change or authored skill.
-Feedback4: false versus true, physically successful in both. B6 reports true.
-A8/10/12 report true;14 has no new outcome report. Topic is A/route0 expectation.
-Native predictions must be absent4, then0 at6/8,1/2 at10,3/4 at12,7/8 at14;
-comparison arm remains1. Current120/140 evidence cannot rewrite expression90.
-Errors on A8/10/12 are1,1/2,1/4, with exact retained phase0 gain4 and half-error update.
-Both arms end with identical latest A outcome but different delivered report14.
-First assert actual chosen A/B actions, route-specific support, live predictions,
-physical application, communication delivery and recipient perception.
-This is changed receiving/report behavior, not a sampled-choice/coupling claim.
+## Next — Family12.4 completion remains authorized
+M252 nine-clause map now has current witnesses for confidence, causal correction,
+repeated errors and task/action-specific expectations. The remaining native gate is
+reduced perceived control consumed by appraisal/reasons. Preserve its existing learned
+mitigation/control semantics: failed action alone is not proof of perceived helplessness.
+Then perform the finite nine-clause family acceptance review, retaining the original
+comparators and current-version correspondence. No extra UI/catalog/peer work.
 
-## Checks and risks
-Primary2 arms: actual producer/update/read/recipient chain and full queue exhaustion.
-Controls: missing initial feedback; positive display without engagement; denied later
-corrections; B-only feedback change cannot change A belief/report. Preserve unknown/0.
-Hidden difficulty4 control (physical failure with identical perceived reports): compare
-expectation supports by semantic source fields, expressions/recipient projections,
-not unrelated physical state or model/run IDs. No truth may enter learned estimate.
-Independent repeat and save8 continuation: exact every later state/output/trace/save
-through terminal. Source/support mismatch, ownership and old controls retained where
-unchanged; native current reads/writes and original Development math rerun for risk.
-Run types, relevant original M29 math, boundaries/research/preservation/git-size.
-One job, <=600s/job; <=1800s total incl10s packaging; <=20 artifacts/5MiB.
-Retain meaningful failures; diagnose and amend setup before retry, no seed search.
-Done only on live expected updates/delivered distinction and all declared checks.
-Then end package verification; reduced perceived control and family review remain.
-E79/P29/N11/U13=132;21members/15families;accepted5/15;Family12.4/assembly OPEN.
+## Verification/status
+All native/types/original-law/boundary/research/preservation/size checks pass.
+975.224s/1800s incl10s packaging; longest393.613s/600s. No extension.
+Two new test/helper files, zero production edits; one compact result/evidence/log.
+E80/P28/N11/U13=132;21members/15families;accepted5/15;Family12.4/assembly OPEN.
+MEC001/002/006/019, EXP001/002 and RO010 broader source/calibration limits remain.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
