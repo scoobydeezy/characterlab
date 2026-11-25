@@ -1,10 +1,10 @@
-# Current work — M272 fixed sleep receiving
+# Current work — M272 complete; Family12.7 continues
 Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
-M271 complete0296c3c6: [result](ASSEMBLED_CHARACTER_M271_RESULT.md).
+M272 complete: [result](ASSEMBLED_CHARACTER_M272_RESULT.md); all20/52+inert pass.
 Reference0.159/37/100 remains; global0/model0.160 remains experimental.
 No reference adoption, family promotion, law/completion waiver or UI work.
 
-## M272 bounded card — before code
+## M272 completed card — original comparison retained
 Capabilities: (1) sensed sleep changes active control and actual choice;
 (2) retained acquired history and hidden/biased sensing boundaries survive;
 (3) original advancing/terminal continuation and withholding execution controls.

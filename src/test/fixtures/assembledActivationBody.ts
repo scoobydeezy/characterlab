@@ -14,9 +14,10 @@ import {sid} from '../../assembled/skill';
 import {set} from '../../substrate/canonicalEncoding';
 import {hash,capture,decode,items,enc,list,text,q,type Run} from './assembledActivationNative';
 export const replay271=env.CHARACTERLAB_ACTIVATION_REPLAY==='M271';
+export const replay272=env.CHARACTERLAB_ACTIVATION_REPLAY==='M272';
 export const normalized271=<T extends Parameters<typeof changeDefinition>[0]>(s:T)=>changeDefinition(s,'definition/task-reason-dice',2n,q(37,100));
-export function candidate271<T extends {s:Parameters<typeof changeDefinition>[0];d:{initialState:Uint8Array}}>(b:T):T{
- if(!replay271)return b;
+export function candidate271<T extends {s:Parameters<typeof changeDefinition>[0];d:{initialState:Uint8Array}}>(b:T,enabled=replay271):T{
+ if(!enabled)return b;
  expect([REWARD_EVIDENCE_RULES,ACTION_DOMAIN_RULES]).toContain(b.s.rulesVersion);
  const slots=[...items(decode(b.s.registry),'list')];expect(slots).toHaveLength(58);
  const item=sid(1601,'item/m271-unobserved'),origin=sid(1602,'place/m271-origin'),destination=sid(1602,'place/m271-destination'),action=sid(1027,'definition/protocol-contact-one');
@@ -35,9 +36,9 @@ export function correspondence271(kind:'BODY'|'TOLERANCE',name:string,value:any)
  return {pass:true,prior:path,sha256:hash(bytes),fields,candidate:'0.160',activation:'0',mapping:'same original58 slots after threshold normalization, inputs/seed and original initial entries; empty Need/intention and unbound private item appended'};
 }
 let active:Run|undefined;
-export function track271<T extends {run:Run}>(x:T):T{if(replay271)active=x.run;return x;}
+export function track271<T extends {run:Run}>(x:T):T{if(replay271||replay272)active=x.run;return x;}
 export function failure271(name:string){
- if(!replay271||!active)return;
- const file='docs/planning/ASSEMBLED_CHARACTER_M271_FAILURES.json',d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):[];
+ if((!replay271&&!replay272)||!active)return;
+ const file='docs/planning/ASSEMBLED_CHARACTER_'+(replay272?'M272':'M271')+'_FAILURES.json',d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):[];
  d.push({name,...capture(active)});writeFileSync(file,JSON.stringify(d,null,2)+'\n');active=undefined;
 }
