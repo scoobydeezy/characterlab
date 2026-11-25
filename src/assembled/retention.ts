@@ -1,3 +1,4 @@
+import {INTENTION_MEMORY,isInstructionPath,instructionPath,instructionEpisode} from './intentionMemory';
 import {POSITION_PRESENTATION_VERSION} from './positionPresentation';
 import {APPEARANCE_EPISODE,fragmentAppearance,isAppearancePath,appearancePath,appearanceEpisode} from './familiarity';
 import {EFFECT_EPISODE,isEffectEpisodePath,effectEpisodePath,validateEffectEpisode} from './effectEvidence';
@@ -47,7 +48,7 @@ export function retainedEpisodeIds(rows:readonly UncreditedEpisode[],now:bigint,
  return survivors.sort((a,b)=>compare(enc(unsigned(a)),enc(unsigned(b))));
 }
 const domain:StatePathPattern={rootStateTypeId:346n,fieldId:1n,selectors:[{kind:'wildcard',selectorKind:'mapKey'}]};
-function holder(path:StatePath,C:CanonicalValue){const selector=path.selectors[0];if(path.rootStateTypeId!==346n||path.fieldId!==1n||path.selectors.length!==1||selector?.kind!=='mapKey')return fail('episode removal path');const k=selector.key,c=(isAppearancePath(path)||isEffectEpisodePath(path)||isBodyEpisodePath(path)||isSocialEpisodePath(path)||isPositionEpisodePath(path))?items(k,'list')[1]:f(rec(k,344n),1n);if(!eq(c,C))fail('foreign episode holder');}
+function holder(path:StatePath,C:CanonicalValue){const selector=path.selectors[0];if(path.rootStateTypeId!==346n||path.fieldId!==1n||path.selectors.length!==1||selector?.kind!=='mapKey')return fail('episode removal path');const k=selector.key,c=(isInstructionPath(path)||isAppearancePath(path)||isEffectEpisodePath(path)||isBodyEpisodePath(path)||isSocialEpisodePath(path)||isPositionEpisodePath(path))?items(k,'list')[1]:f(rec(k,344n),1n);if(!eq(c,C))fail('foreign episode holder');}
 /** Only removal is extended; all existing formation validators/owners stay in force. */
 export function withRetentionState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue){
  const authority=new StateAuthorityRegistry([{pattern:domain,validateValue:()=>{fail('retention is removal only');},removalAllowed:true}],[{mutationAuthorityId:EPISODIC_OWNER,patterns:[domain]}]);
@@ -60,7 +61,8 @@ export function withRetentionState(base:ReturnType<typeof compileCampaign2StateM
 }
 function episode(entry:{path:StatePath;value:CanonicalValue},C:CanonicalValue,kindBudgets=false):UncreditedEpisode&typeof entry{
  holder(entry.path,C);let acquisition:CanonicalValue,acquiredAt:bigint,kind:'diagnostic'|'body'|'event';
- if(isAppearancePath(entry.path)){const a=appearanceEpisode(entry.value);acquisition=a[1];acquiredAt=time(a[5]);kind=kindBudgets?'event':'body';}
+ if(isInstructionPath(entry.path)){const a=instructionEpisode(entry.value);acquisition=a[1];acquiredAt=time(a[5]);kind='event';}
+ else if(isAppearancePath(entry.path)){const a=appearanceEpisode(entry.value);acquisition=a[1];acquiredAt=time(a[5]);kind=kindBudgets?'event':'body';}
  else if(isEffectEpisodePath(entry.path)){const a=validateEffectEpisode(entry.value,C);acquisition=a[1];acquiredAt=time(a[5]);kind=kindBudgets?'event':'body';}
  else if(isPositionEpisodePath(entry.path)){const a=validatePositionEpisode(entry.value);acquisition=a[1];acquiredAt=time(a[5]);kind=kindBudgets?'event':'body';}
  else if(isBodyEpisodePath(entry.path)||isSocialEpisodePath(entry.path)){const a=items(entry.value,'list');if(!(a.length===6||a.length===7&&txt(a[0])===EPISODE&&typeof a[6]==='boolean'||[7,8].includes(a.length)&&txt(a[0])===SOCIAL_EPISODE)||![EPISODE,SOCIAL_EPISODE].includes(txt(a[0])))fail('body episode schema');acquisition=a[1];acquiredAt=time(a[5]);kind=kindBudgets&&isSocialEpisodePath(entry.path)?'event':'body';}
@@ -76,7 +78,7 @@ export function prepareEpisodicRetention(events:readonly ScheduledEvent[],B0:Aut
  if(pressures.length>1||triggers.some(e=>e.dueAt!==at)||pressures.some(e=>!eq(e.payload,list([text(RETENTION),unsigned(limits.diagnostic),unsigned(limits.body),unsigned(limits.event!)]))))fail('pressure schedule/union');
  const prior=B0.entries().filter(e=>e.path.rootStateTypeId===346n&&e.path.fieldId===1n).map(e=>episode(e,C,d.event!==undefined));
  const fresh=formations.map(event=>{if(event.phase!==140n||event.dueAt!==at)fail('formation phase/time');let entry:{path:StatePath;value:CanonicalValue};
-  if(eq(event.eventTypeId,MEMORY_FORMATION)){const a=items(event.payload,'list');entry={path:txt(a[0])===APPEARANCE_EPISODE?appearancePath(C,a[2]):txt(a[0])===EFFECT_EPISODE?effectEpisodePath(C,f(rec(a[2],900n),1n)):txt(a[0])===POSITION_EPISODE?positionEpisodePath(C,a[3]):txt(a[0])===SOCIAL_EPISODE?socialEpisodePath(C,a[2]):bodyEpisodePath(C,f(rec(a[2],461n),1n)),value:event.payload};}
+  if(eq(event.eventTypeId,MEMORY_FORMATION)){const a=items(event.payload,'list');entry={path:txt(a[0])===INTENTION_MEMORY?instructionPath(C,items(a[2],'list')[1]):txt(a[0])===APPEARANCE_EPISODE?appearancePath(C,a[2]):txt(a[0])===EFFECT_EPISODE?effectEpisodePath(C,f(rec(a[2],900n),1n)):txt(a[0])===POSITION_EPISODE?positionEpisodePath(C,a[3]):txt(a[0])===SOCIAL_EPISODE?socialEpisodePath(C,a[2]):bodyEpisodePath(C,f(rec(a[2],461n),1n)),value:event.payload};}
   else{const source=rec(f(rec(event.payload,342n),2n),337n);entry={path:{rootStateTypeId:346n,fieldId:1n,selectors:[{kind:'mapKey',key:r(344,[C,f(source,1n)])}]},value:r(345,[event.payload])};}
   const result=episode(entry,C,d.event!==undefined);if(result.acquiredAt!==at||result.significant||result.useProtection)fail('fresh acquisition time');return result;
  });

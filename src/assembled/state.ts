@@ -1,3 +1,4 @@
+import {memoryBound} from './intentionMemory';
 import {withItemWorldState} from './itemWorld';
 import {compileItemProbe} from './itemProbe';
 import {compileCriterionBase,legacyCriterionMemory} from './criterionSensing';
@@ -73,7 +74,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   const task=byKey.get(key(selector.key));if(!task)invalidModel('task key outside declared holder/instance');
   if(path.fieldId!==1n&&path.fieldId!==2n)invalidModel('task field outside successor');
   if(value===undefined)return;
-  if(path.fieldId===2n){const instruction=f(rec(value,390n),1n);rec(f(row(instruction),4n),389n);if(model.commitmentAdoption&&!model.strategy!.find(t=>key(t.task)===key(task.key))?.plans.some(p=>key(p.instructionId)===key(instruction)))invalidModel('adopted instruction/task reference');return;}
+  if(path.fieldId===2n){if(memoryBound(model.intentionMemory,task.key))invalidModel('memory-bound instruction cannot persist in task state');const instruction=f(rec(value,390n),1n);rec(f(row(instruction),4n),389n);if(model.commitmentAdoption&&!model.strategy!.find(t=>key(t.task)===key(task.key))?.plans.some(p=>key(p.instructionId)===key(instruction)))invalidModel('adopted instruction/task reference');return;}
   const status=statusRecord(value,372n),tag=u(f(status,1n));
   if(tag===2n){
    const reference=rec(f(status,2n),237n),at=f(status,3n),occurrence=id(f(reference,2n));
@@ -104,7 +105,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    for(const op of instructions){if(op.kind!=='set'||state.read(op.path).presence||state.read({...op.path,fieldId:1n}).presence)invalidModel('adopted instruction is immutable');if(!patch.operations.some(p=>p.kind==='set'&&key(statePathValue(p.path))===key(statePathValue({...op.path,fieldId:1n}))&&key(p.newValue)===key(r(372,[{kind:'unsigned',value:1n}]))))invalidModel('instruction requires joint fresh Open adoption');if(scope&&(!scope.writableRoots.includes(373n)||!scope.targetPaths.some(p=>key(statePathValue(p))===key(statePathValue(op.path)))))invalidModel('instruction write scope');}
    const basePatch={operations:patch.operations.filter(o=>!instructions.includes(o))},base=structural.applyPatch(state,basePatch,authority,scope),result=instructions.length?applyStatePatch(base.state,{operations:instructions},authority,instructionAuthority!):{state:base.state,diffs:[]};validateState(result.state);return {state:result.state,diffs:[...base.diffs,...result.diffs]};},
  });
- const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory,model.effectEvidence?.proposition,model.social?.beliefTrials?32n:8n,model.familiarity,model.recollection,model.vivid,model.positionUse,model.positionPresentation):inheritedState;
+ const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory,model.effectEvidence?.proposition,model.social?.beliefTrials?32n:8n,model.familiarity,model.recollection,model.vivid,model.positionUse,model.positionPresentation,model.intentionMemory):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
  const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled,model.skillInterference,model.timeLimit,model.protection?PROTECTION_CHANNEL:undefined):retained;
