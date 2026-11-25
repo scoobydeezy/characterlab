@@ -1,42 +1,33 @@
-# Current work — M263 Family12.6 current-version receiving
-Owner2026-11-25 authorizes full Family12.6 completion under bounded self-approval.
-Parentb3aa5dac; M261/262 close clause9. Finish1..8 on the same model0.159.
-## Bounded card (before code)
-At most3 capability groups: finite workspace/access; shared inhibition (habit, load,
-fatigue, recurrence); deliberate adjustment (performance switch, chosen reappraisal).
-No production/formal changes planned. Two new test/helper files, up to2 bounded
-fixture/assertion repairs; no copied runtime or new psychological mechanism.
-Use the existing current0.157 configuration plus empty intention binding at0.159;
-ordinary tasks keep their instructions. The M261 bound-memory path remains tested.
-Nonsocial tasks, seed0, no learned S0. Current sleep channels must supply actual known
-readiness where inhibition is compared; no disabling sleep or other integrated owners.
-Work: nonsocial A/B importance1, third0; initial criterion0, targets1; body30/rate10,
-zero action delivery; task expiry9. Repeat M128 support x distractor2x2, capacity2/3,
-board5/6, reminder7/9, decisions6..10. Require selected task -> live reason/decision;
-goal survives displacement; reminder restores access; expired reminder has no motive.
-Control: same physical tasks, capacity6, A-only, action3 earns real reward/habit;
-control goal4/reminders5/7/9/11, known rested sleep evidence and zero demand.
-Compare rested vs grade2 at4/missing6/recovery8; neutral-card load vs no card at7;
-recurrent unresolved4 with/without interruption7, resolution9. Require actual offered
-A, retained history, live maintenance and consumed capacity/condition before choice.
-Performance: current nonsocial A/B routes, two permitted own outcome reports3/5,
-failed vs successful reports; compare prior count/route and actual action7, goal held.
-Reappraisal: M187 complete/interrupted original source histories, current declarations;
-no social task dependency. Means and body held, actual operation10, frame at140 and
-later live appraisal/decision11. Additional current owners retain normal rules.
-Reference laws/calibration fixed; no sampled winner claim unless draws are coupled.
-Auto choices use actual resolved probability; other choices compare exact probability.
-All original component/alternate controls retained, not relabeled current trajectories.
-Checks in serial groups <=600s: admission/types then work, control/fatigue, recurrence,
-performance, reappraisal. Full queues <=128 instants; one within-version exact restore
-through remaining instants, raw trace/state/output evidence and immutable history.
-Budget predeclared: A(work/control)1800s, B(performance/reappraisal)1200s,
-C(final integrity/review)300s;3300s total;20 artifacts/8MiB (expanded raw current carries).
-Targeted diagnosis/repair inside each package; split before exhausting, no gate removal.
-Done: all nine clauses have current receiving or complete dependency carry, no
-unclassified difference/defect, preserved alternatives and affected foundation checks.
-MEC005/011..020/022, EXP004/013 remain; RO005/006/007/012/014/019/020 unchanged.
-E82/P26/N11/U13=132;21members/15families;accepted6/15;final assembly replay OPEN.
+# Current work — Family12.6 accepted on0.159
+The character now has reconciled workspace, inhibition, fatigue/rumination,
+monitoring, reappraisal and prospective-intention behavior in one simulation.
+Owner2026-11-25 delegated full Family12.6 completion under self-approval.
+[M262](ASSEMBLED_CHARACTER_M262_RESULT.md) closes the withheld-action receipt boundary;
+[M263](ASSEMBLED_CHARACTER_M263_RESULT.md) completes the first eight-clause current carry.
+All nine pinned clauses have current receiving and preserved comparator dispositions.
+
+## Completed finite work
+M261:18 unchanged original intention schedules/144 tick comparisons, exact repeat/
+restore, rollback, hidden-truth and old-version controls. Its incomplete checkpoint
+and setup failures remain; M262 completes the missing explicit-withholding boundary.
+M263:14 current runs plus exact restoration. Actual overload, support/distraction2x2,
+cue recovery/expiry; earned habit inhibition, neutral load, fatigue/missing/recovery;
+recurrence/interruption/rebound/resolution; performance switch; chosen reappraisal.
+One model/state/scheduler/trace/save; no production/formal changes after M261.
+Two M263 test/helper files; preserved earlier fixtures, controls, failed evidence.
+No new law, calibration, source factory, debt closure, reduction or UI work.
+Predeclared M263 verification A1800/B1200/C300s;3300s total,600s/command;
+20 artifacts/8MiB. All substantive gates pass; final receipts are in its check log.
+
+## Acceptance boundary and next work
+E82/P26/N11/U13=132;21members/15families;accepted7/15.
+Accepted families12.1@0.144,12.2@0.155,12.3@0.126,12.4@0.157,12.5@0.129,
+12.6@0.159,12.14@0.135. Eight family gates and final whole-candidate replay remain.
+Family12.6 completion does not claim universal control-resource laws, natural concern
+or fatigue acquisition, a cache reduction, or final assembly acceptance.
+Next unresolved family is12.7 Goals, persistence and prospection. No new implementation
+card is opened here; this owner-requested Family12.6 completion ends verification.
+Workbench/UI, Campaign4 and autonomous partners remain stopped.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

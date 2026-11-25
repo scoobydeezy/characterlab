@@ -1,5 +1,5 @@
 # Assembled Character — reconciliation and requirement evidence
-Current candidate0.159;feedback TRUE;21 mapped;accepted12.1@0.144,12.2@0.155,12.3@0.126,12.4@0.157,12.5@0.129,12.14@0.135; final replay open.
+Current candidate0.159;feedback TRUE;21 mapped;accepted12.1@0.144,12.2@0.155,12.3@0.126,12.4@0.157,12.5@0.129,12.6@0.159,12.14@0.135; final replay open.
 ## Adopted decisions (2026-10-25)
 1. **D1 YES:** S1–S4/A1–A3; M2a authorized; control frozen.
 2. **D2 YES WITH CONDITION:** one reference policy; alternatives cannot close a
@@ -27,9 +27,9 @@ F suffixes = BRIEF-<family>-<suffix>; each clause appears once.
 E is version-scoped evidence, not acceptance/current rerun. Cited limits and
 P/N/U remain. Final replay/classification includes E; historical claims do not broaden.
 Evidence index: E82/P26/N11/U13 =132. Not a completion percentage. Mapped members:
-21/21; accepted families:6/15 (12.1@0.144 M220;12.2@0.155 M251;12.3@0.126 [M176];12.4@0.157 M257;12.5@0.129 [M190];12.14@0.135 [M207]). Scope unchanged.
+21/21; accepted families:7/15 (12.1@0.144 M220;12.2@0.155 M251;12.3@0.126 [M176];12.4@0.157 M257;12.5@0.129 [M190];12.6@0.159 M263;12.14@0.135 [M207]). Scope unchanged.
 [M153] audits15 rows; [M154]–[M156] add bounded memory1/3/6/7/8/10 evidence. Other126 retained.
-Memory0.126; AFFECT0.129; agency0.135; embodiment0.144; Need0.155. Other10 family gates open.
+Accepted versions above; eight other family gates and final candidate replay remain open.
 
 | Classification | ID / area or decision | Existing sources / authority | Shared ownership / proposed disposition | Required comparison, risk or unresolved gate |
 |---|---|---|---|---|
@@ -121,7 +121,7 @@ Memory0.126; AFFECT0.129; agency0.135; embodiment0.144; Need0.155. Other10 famil
 | ACCEPTED (pinned family) | F-12.3 — Memory and recognition | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/2/clauses); [M173]–[M176]; original controls retained. | E:1,2,3,4,5,6,7,8,9,10; P:none; N:none; U:none. | All10 current0.126 clauses and C-MEM comparisons pass; actual remembered spatial/social appraisal, exact continuation/rollback. LIMIT-MEM;1/15 families. |
 | EQUIVALENT (accepted0.157) | F-12.4 — Belief and causal learning | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/3/clauses); [M257](ASSEMBLED_CHARACTER_M257_RESULT.md). | E:1..9; P:none; N:none; U:none. | Nine-clause acceptance: native confidence, correction, causal reports, error/context learning and control-to-reason effects. Original comparisons/version carry retained; final replay open. |
 | EQUIVALENT (accepted0.129) | F-12.5 — Affect and appraisal | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/4/clauses); [M190] eight-clause map. | E:1,2,3,4,5,6,7,8; P:none; N:none; U:none. | Current causal controls mapped; original nulls/scalar competitors retained. No universal affect law. |
-| UNRESOLVED | F-12.6 — Cognitive workspace and control | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/5/clauses); [M8](ASSEMBLED_CHARACTER_M8_RESULT.md), [M15], [M17], [M41], [M55], [M56]. [M153]. | E:1..9; P:none; N:none; U:none. | M127/128 retained. M259 native0.158 recalled instruction -> A/B action. [M260](ASSEMBLED_CHARACTER_M260_RESULT.md): physical result -> perception -> goal retirement; receipt/privacy/late-cue controls. [M261](ASSEMBLED_CHARACTER_M261_RESULT.md):18 schedules pass; [M262](ASSEMBLED_CHARACTER_M262_RESULT.md) closes withholding. Eight-clause version carry remains. |
+| EQUIVALENT (accepted0.159) | F-12.6 — Cognitive workspace and control | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/5/clauses); [M263](ASSEMBLED_CHARACTER_M263_RESULT.md). | E:1..9; P:none; N:none; U:none. | Fourteen current runs: workspace, inhibition/load/fatigue/rumination, monitoring and reappraisal. M26118 original intention schedules/144 ticks; M262 withholding boundary. Original alternatives retained; final replay open. |
 | UNRESOLVED | F-12.7 — Goals and prospection | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/6/clauses); [M12], [M14], [M15]. [M101]. [M153]. | E:1,2,3,4; P:5,6,7,8; N:none; U:none. | M128 loses working access without deleting the goal; it does not establish forgotten instruction content and episodic recovery. Procrastination/delayed gratification/short-long conflict remain partial; lifecycle alone is insufficient. |
 | UNRESOLVED | F-12.8 — Skill and action competence | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/7/clauses); [M11], [M27], [M29], [M119](ASSEMBLED_CHARACTER_M119_RESULT.md). [M153]. | E:1,2,3,6,7,8; P:5; N:4; U:none. | M119 competence/performance belief and impairment remain distinct. M152 preserves skill after recent episode loss, but does not identify loss of the practice episode. Rust absent: NoRust reference; explicit interference is not disuse. |
 | UNRESOLVED | F-12.9 — Habit, reinforcement, obsession and addiction | [clauses](campaign3-hq012-exit-review-rev1/families.json#/families/8/clauses); [M16](ASSEMBLED_CHARACTER_M16_RESULT.md), [M17], [M39], [M40]. [M153]. | E:1,2,3; P:7; N:4,5,6,8,9,10,11; U:none. | M118 correction; M39 tolerance. [M230](ASSEMBLED_CHARACTER_M230_RESULT.md) substitution reconciled; full reinforcement/resistance comparison open. Dependence, escalating relief, absence/craving and relapse remain missing. |
