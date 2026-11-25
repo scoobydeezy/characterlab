@@ -1,48 +1,50 @@
-# Current work — M272 complete; Family12.7 continues
+# Current work — M273 fixed intoxication receiving
 Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
-M272 complete: [result](ASSEMBLED_CHARACTER_M272_RESULT.md); all20/52+inert pass.
+M272 complete3fbfc4e0: [result](ASSEMBLED_CHARACTER_M272_RESULT.md).
 Reference0.159/37/100 remains; global0/model0.160 remains experimental.
 No reference adoption, family promotion, law/completion waiver or UI work.
 
-## M272 completed card — original comparison retained
-Capabilities: (1) sensed sleep changes active control and actual choice;
-(2) retained acquired history and hidden/biased sensing boundaries survive;
-(3) original advancing/terminal continuation and withholding execution controls.
-Two test/helper paths: assembledSleepCurrent.test.ts and the existing activationBody
-test adapter. No production/formal/original-fixture changes or new psychological owner.
-Reuse exact M220/M218/M215 cohort:20 runs,52 prefixes (32 advancing/20 terminal),
-two supplementary inert-withholding runs. All original seeds0..3 and source declarations.
-Nonsocial tasks, original body/sleep/reward settings, no learned initial psychology.
-The same original58 slots normalize exactly; empty Need/intention and unbound private
-item extend composition as M271. Original inputs/seeds/initial entries remain unchanged.
-Original physical source normalization to M215 stays checked; no sensor retargeting.
+## M273 bounded card — before code
+Capabilities: (1) sensed intoxication changes control and actual choice;
+(2) private motor impairment, learned competence and actual execution stay distinct;
+(3) original continuation and hidden/biased-sensing controls remain intact.
+Two test/helper paths: assembledIntoxicationCohort.test.ts and existing activationBody
+adapter. No production/formal/original-fixture edits, new owner or alternate runtime.
+Reuse all20 original M220/M217 cases and55 prefixes (35 advancing/20 terminal).
+Full seeds0..3 x Sober/Slow/Fast; Full BlindSober/BlindSlow/FalseSober/Interference seed0,
+HighCompetence seed1; all three NoControl seed0. Original nonsocial tasks, body/sleep/
+reward parameters, prescribed sources/seeds and empty learned starting state stay fixed.
+Original58 slots normalize byte-exactly; empty Need/intention and one unbound private
+item extend composition as M271. No source retargeting or placeholder evidence.
+Compare every original receiving row: sensed axes/capacity/inhibition/maintenance,
+options/status/probabilities/choices/draws, identity/journal count/reward mean/reason,
+physical debt/burden/challenge/competence/motor permission and execution outcomes.
+Preserve original prefix locations and full queue through101; exact restored saves.
 
-Compare every original receiving row: sensed axes, capacity, inhibition, maintenance,
-options, decision status/probability/choice/draws, identity/journal count, reward mean/
-reason and physical debt. Keep all existing native joins and per-instant invariants.
-Retain Rested/Deprived/Recovered and NoControl causal comparisons, hidden whole observer
-equality, biased report, FailedExecution sensory difference, Unmaintained NoReasons,
-held acquired history, and three inert-withholding execution opportunities.
-Require current actual decisions/live control at every original observation.
-Changed model/run/raw403 hashes are not cross-version byte-equality claims.
-If a receiving difference appears, preserve complete current failure bytes and classify
-the consumed source/activation/learning edge; no scenario retuning or seed replacement.
-Write each native result before correspondence checks; preserve original artifacts.
-Exact save/restore at every original selected prefix, terminal through101; no trimming.
-MEC003/011..020/022 and original alternative-law/conditional-debt dispositions remain.
+Keep all native liveness/actual decision/attempt joins and original causal comparisons.
+Slow/Fast kinetics, NoControl, HighCompetence, hidden and biased sensing, interference,
+held acquired history and full permitted observer equality remain required.
+M268 already executed current masked and known-zero reward boundaries plus exact
+continuation. Its unchanged-source lossless bytes are explicitly referenced and checked,
+including count1/mean600 mask, count2/mean300 zero, actual reason3/10 at10 and preserved
+activation-policy finding. Do not rerun them or forge the old M217 boundary schema.
+The aggregate has an explicit current-evidence branch with source hash and raw receiving.
+Write native results before correspondence; retain complete failed snapshots if needed.
+Changed identity/raw403 bytes are not cross-version byte-equality claims.
+No seed search, retuning or automatic equivalence label for a mismatch.
+MEC003/011..020/022, original law comparators and conditional obligations remain.
 
-Pre-split from original sleep cohort runtime~3640s; one validation job, <=600s/command.
-A1500s: Full seed0 Rested/Deprived/Recovered plus original two-run inert control.
-B1500s: all nine Full main cases at seeds1..3.
-C1500s: five Full boundary cases and three NoControl seed0 cases.
-D180s: aggregate/types/boundaries/research/archive/integrity/staged size.
-Total4680s; each package<=1800s; at most12 test/production files,20artifacts/5MiB.
-Commands select fixed subsets only; single Vitest worker avoids idle worker startup.
-No further checks after passage without a concrete changed failure/dependency.
-Done:20/52 and inert control retain required phenomena with classified correspondence.
-Then fixed intoxication cohort, explicit reference decision and delayed-benefit integration.
-Family12.7 remains the task; original delayed/procrastination/temporal mappings remain.
-E82/P26/N11/U13=132;21members/15families;7 accepted on prior versions.
+Pre-split from original measured cohort: main seed0~1150s, other main~1260s,
+boundary/control~1255s. A1500s: three Full main seed0; B1600s: nine Full main seeds1..3;
+C1600s: five Full boundary cases plus three NoControl; D180s: aggregate/types/final checks.
+Total4880s; each package<=1800s, <=600s/command, one validation job and one test worker.
+At most12 production/test files,20artifacts/5MiB. No extensions or removed checkpoints.
+Checks: all20/55, original aggregate, retained M268 receiving/continuation, types,
+boundaries/research/archive/source/evidence integrity/document bounds/staged Git-size.
+Done: full fixed cohort and original comparisons classified on experimental0.160.
+Then make the explicit reference decision review concrete; native delayed-benefit
+offer/choice/wait/delivery/receipt and original procrastination/temporal mappings remain.
+Family12.7 remains the task. E82/P26/N11/U13=132;21members/15families;7 prior acceptances.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
