@@ -1,33 +1,42 @@
-# Current work — Family12.6 accepted on0.159
-The character now has reconciled workspace, inhibition, fatigue/rumination,
-monitoring, reappraisal and prospective-intention behavior in one simulation.
-Owner2026-11-25 delegated full Family12.6 completion under self-approval.
-[M262](ASSEMBLED_CHARACTER_M262_RESULT.md) closes the withheld-action receipt boundary;
-[M263](ASSEMBLED_CHARACTER_M263_RESULT.md) completes the first eight-clause current carry.
-All nine pinned clauses have current receiving and preserved comparator dispositions.
+# Current work — M264 future goals in the current character
+The next family is12.7 Goals, persistence and prospection (owner called it1.7).
+Owner2026-11-25 delegates full family completion with bounded self-approved amendments.
+Family12.6 stays accepted;7/15 families, E82/P26/N11/U13=132,21 members remain pinned.
 
-## Completed finite work
-M261:18 unchanged original intention schedules/144 tick comparisons, exact repeat/
-restore, rollback, hidden-truth and old-version controls. Its incomplete checkpoint
-and setup failures remain; M262 completes the missing explicit-withholding boundary.
-M263:14 current runs plus exact restoration. Actual overload, support/distraction2x2,
-cue recovery/expiry; earned habit inhibition, neutral load, fatigue/missing/recovery;
-recurrence/interruption/rebound/resolution; performance switch; chosen reappraisal.
-One model/state/scheduler/trace/save; no production/formal changes after M261.
-Two M263 test/helper files; preserved earlier fixtures, controls, failed evidence.
-No new law, calibration, source factory, debt closure, reduction or UI work.
-Predeclared M263 verification A1800/B1200/C300s;3300s total,600s/command;
-20 artifacts/8MiB. All substantive gates pass; final receipts are in its check log.
+## M264 bounded card — written before code
+Capability: a retained, accessible, feasible goal can lose to an immediate goal now
+and remain available for later pursuit; perceived future opportunity changes actual
+reasons/probabilities without delivering progress or cancelling the unchosen goal.
+Scope12.7 clauses1/2/5/8. Clauses3/4 carry M241–243; clause7 carries M259–263.
+This package does NOT close12.7: deliberate delayed-benefit valuation is absent.
+Source controls: procrastination-public0.2 and temporal-goal-conflict-component0.1;
+M14 HorizonRelative and M248 Factored controls remain immutable. Exact future benefit
+(delayed-public0.1) needs its own bounded successor package after this connection.
 
-## Acceptance boundary and next work
-E82/P26/N11/U13=132;21members/15families;accepted7/15.
-Accepted families12.1@0.144,12.2@0.155,12.3@0.126,12.4@0.157,12.5@0.129,
-12.6@0.159,12.14@0.135. Eight family gates and final whole-candidate replay remain.
-Family12.6 completion does not claim universal control-resource laws, natural concern
-or fatigue acquisition, a cache reduction, or final assembly acceptance.
-Next unresolved family is12.7 Goals, persistence and prospection. No new implementation
-card is opened here; this owner-requested Family12.6 completion ends verification.
-Workbench/UI, Campaign4 and autonomous partners remain stopped.
-| Registry | Current count |
-|---|---|
-| Research obligations | **0 active / 18 conditional / 0 unowned** |
+One current0.159 model/state/scheduler/trace/save; no production or formal edits planned.
+At most3 test/helper paths, one compact result/evidence/log; no new test framework.
+Use M263 current fixture, normal adoption1, nonsocial A/B, no learned S0, seed0;
+zero action-body delivery, A route0/B route1; decisions3/5/7, A deadline9/B deadline5.
+A importance/urgency1; B importance1/urgency0. A observed forecast at1 opens5.
+Before coding pin8 cases: available, unavailable, unknown, deniedAvailable,
+deniedUnavailable, corrected(unavailable report3), noImmediate(B importance0),
+noRoute(A unavailable). Keep laws/calibration and all nonintervention inputs fixed.
+Positive comparison: available vs unavailable has live A appraisal, positive raw
+motive, distinct actual grounds and different exact decision probability at3;
+available executes B3, retains A and executes A after opening/short-goal expiry.
+No sampled winner causal claim without coupled draws; use actual exact probabilities.
+Unknown has no forecast; unavailable has known false; denied pair equal cognition;
+correction3 affects5, not3; noImmediate cannot invent B; noRoute is infeasibility,
+not procrastination. Verify each declared scenario before interpreting behavior.
+
+Checks: affected native gates once, exact independent repeat + save3 restore to
+termination; actual learning140/read provenance; malformed/ownership and rollback
+retain M14/M263 because dependencies unchanged. Types, boundaries, research,
+preservation, evidence integrity, git-size and document bounds once after final edits.
+Budget1800s cumulative,600s/command,20 evidence files/5MiB. One validation job.
+If fixed comparison fails, preserve it and diagnose before a finite self-amendment;
+no blind seed/parameter search, law substitution or weakened family gate.
+Done: all above gates pass with observed differences classified, or explicit incomplete
+checkpoint with concrete missing requirement. Next package resolves delayed benefit
+and the complete original procrastination/temporal correspondence before acceptance.
+No UI, Campaign4, autonomous partners, reduction or final assembly acceptance.
