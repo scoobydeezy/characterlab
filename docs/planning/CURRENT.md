@@ -1,10 +1,10 @@
-# Current work — M268 changed intoxication and reappraisal receiving
+# Current work — M268 native changed connections complete
 Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
 Proceed across bounded packages; report each pass in progress, not as family completion.
 Reference0.159/37/100 remains;0.160 is experimental pending affected native replay.
-M267 complete atfb9e2564. No law/denominator waiver or automatic reference adoption.
+M268 complete: [result](ASSEMBLED_CHARACTER_M268_RESULT.md). Reference decision pending.
 
-## M268 bounded card — before code
+## M268 completed card — preserved comparison
 Capabilities: (1) permitted reward learning under unequal private intoxication effects;
 (2) chosen reappraisal still changes later affect/reasons/choice; (3) continuation.
 No production/formal changes. At most3 new test/helper files, same61-slot composition.
