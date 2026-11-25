@@ -21,8 +21,8 @@ type Fixture={s:{registry:Uint8Array;rulesVersion:string;registrySchemaVersion:s
 type Run=Awaited<ReturnType<typeof createCharacterRun>>;
 const mappings=new WeakMap<object,unknown>();
 const bytes=(a:Uint8Array,b:Uint8Array)=>expect(a.length===b.length&&a.every((v,i)=>v===b[i])).toBe(true);
-export function candidate248<T extends Fixture>(b:T):T {
- if(!replay248)return b;
+export function candidate248<T extends Fixture>(b:T,enabled=replay248):T {
+ if(!enabled)return b;
  expect(b.s.rulesVersion).toBe(NEED_RULES);
  const slots=items(decode(b.s.registry),'list');expect(slots).toHaveLength(59);
  const route=items(items(items(slots[12],'list')[1],'list')[0],'list');

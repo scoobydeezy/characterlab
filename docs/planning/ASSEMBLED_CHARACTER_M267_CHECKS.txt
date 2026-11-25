@@ -1,0 +1,213 @@
+M267 types exit=0 elapsed=22.509s cap=300s timeout=False
+
+M267 acquired-primary exit=0 elapsed=182.956s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActivationAcquired.test.ts > activation267 acquired primary histories retain grounds and coverage
+M267 acquired primary4 PASS independent grounds/ancestry/covered duplicates/current execution
+
+ ✓ src/test/assembledActivationAcquired.test.ts > activation267 acquired primary histories retain grounds and coverage 176703ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  12:32:14
+   Duration  182.37s (transform 3.47s, setup 0ms, collect 5.18s, tests 176.70s, environment 0ms, prepare 147ms)
+
+
+M267 acquired-controls exit=1 elapsed=274.494s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActivationAcquired.test.ts > activation267 acquired controls classify negative history and preserve evidence boundaries 268193ms
+   → expected [ Array(1) ] to include '07080525617373656d626c65642d706572666…'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActivationAcquired.test.ts > activation267 acquired controls classify negative history and preserve evidence boundaries
+AssertionError: expected [ Array(1) ] to include '07080525617373656d626c65642d706572666…'
+ ❯ src/test/assembledActivationAcquired.test.ts:55:99
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 13 skipped (14)
+   Start at  12:35:52
+   Duration  273.91s (transform 3.46s, setup 0ms, collect 5.17s, tests 268.19s, environment 0ms, prepare 145ms)
+
+
+M267 retained-negative-chain exit=1 elapsed=65.106s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActivationAcquired.test.ts > activation267 retained negative chain follows Value consumption 58889ms
+   → negativeroduced is not defined
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActivationAcquired.test.ts > activation267 retained negative chain follows Value consumption
+ReferenceError: negativeroduced is not defined
+ ❯ negativeChain src/test/assembledActivationAcquired.test.ts:67:14
+
+ ❯ src/test/assembledActivationAcquired.test.ts:76:77
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 14 skipped (15)
+   Start at  12:41:09
+   Duration  64.52s (transform 3.46s, setup 0ms, collect 5.19s, tests 58.89s, environment 0ms, prepare 143ms)
+
+
+M267 repaired-types exit=0 elapsed=22.504s cap=300s timeout=False
+
+M267 retained-value-consumer exit=1 elapsed=65.333s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActivationAcquired.test.ts > activation267 retained negative chain follows Value consumption 59117ms
+   → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActivationAcquired.test.ts > activation267 retained negative chain follows Value consumption
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:37:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:216:329
+ ❯ src/test/assembledActivationAcquired.test.ts:68:165
+ ❯ negativeChain src/test/assembledActivationAcquired.test.ts:68:144
+ ❯ src/test/assembledActivationAcquired.test.ts:79:77
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 14 skipped (15)
+   Start at  12:43:16
+   Duration  64.75s (transform 3.46s, setup 0ms, collect 5.17s, tests 59.12s, environment 0ms, prepare 145ms)
+
+
+M267 retained-receipt-schema exit=0 elapsed=65.132s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActivationAcquired.test.ts > activation267 retained negative chain follows Value consumption
+M267 retained native chain PASS activation -> attempt6 -> observed receipt -> learned Value -> actual reason8; no native rerun
+
+ ✓ src/test/assembledActivationAcquired.test.ts > activation267 retained negative chain follows Value consumption 58935ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  12:45:04
+   Duration  64.56s (transform 3.47s, setup 0ms, collect 5.19s, tests 58.94s, environment 0ms, prepare 142ms)
+
+
+M267 priority-matrix exit=1 elapsed=88.862s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledActivationPriority.test.ts > activation267 priority four cells retain importance distinction with all motives active 82624ms
+   → expected [] to have a length of 1 but got +0
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledActivationPriority.test.ts > activation267 priority four cells retain importance distinction with all motives active
+AssertionError: expected [] to have a length of 1 but got +0
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ src/test/assembledActivationPriority.test.ts:17:22
+     15|    const prior=gate(old.outputs,x.b.prior,i+2);expect(f(v.c.raw,3n),'a…
+     16|    const referent=f(rec(x.b.task,371n),2n),receiving=items(items(v.g.c…
+     17|    expect(receiving).toHaveLength(1);expect(receiving[0][1]).toEqual(t…
+       |                      ^
+     18|   }
+     19|   put(name,{...snapshot(x.r),mapping:x.b.mapping,rows:rows.map(v=>v.ro…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 13 skipped (14)
+   Start at  12:46:19
+   Duration  88.28s (transform 3.49s, setup 0ms, collect 5.19s, tests 82.62s, environment 0ms, prepare 149ms)
+
+
+M267 priority-matrix-zero-absence exit=0 elapsed=245.300s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActivationPriority.test.ts > activation267 priority four cells retain importance distinction with all motives active
+M267 priority24 native motives/decisions/executions PASS; initial collision and later separation retained
+
+ ✓ src/test/assembledActivationPriority.test.ts > activation267 priority four cells retain importance distinction with all motives active 239003ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  12:48:27
+   Duration  244.73s (transform 3.48s, setup 0ms, collect 5.20s, tests 239.00s, environment 0ms, prepare 151ms)
+
+
+M267 priority-boundaries-continuation exit=0 elapsed=301.696s cap=590s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActivationPriority.test.ts > activation267 priority boundaries preserve known zero unknown and denied evidence
+M267 priority7 controls PASS zero/absence, privacy and omission/return
+
+ ✓ src/test/assembledActivationPriority.test.ts > activation267 priority boundaries preserve known zero unknown and denied evidence 128129ms
+stdout | src/test/assembledActivationPriority.test.ts > activation267 priority repeat restore1 and restore5 match all settled bytes
+M267 priority repeat/save1/save5 through termination PASS
+
+ ✓ src/test/assembledActivationPriority.test.ts > activation267 priority repeat restore1 and restore5 match all settled bytes 165611ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 12 skipped (14)
+   Start at  12:53:03
+   Duration  300.95s (transform 4.32s, setup 0ms, collect 6.41s, tests 293.74s, environment 0ms, prepare 264ms)
+
+
+M267 acquired-continuation exit=0 elapsed=177.377s cap=360s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledActivationAcquired.test.ts > activation267 acquired repeat and save6 continue exactly
+M267 acquired exact repeat/save6 continuation PASS
+
+ ✓ src/test/assembledActivationAcquired.test.ts > activation267 acquired repeat and save6 continue exactly 171083ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 14 skipped (15)
+   Start at  12:58:25
+   Duration  176.80s (transform 3.50s, setup 0ms, collect 5.23s, tests 171.08s, environment 0ms, prepare 140ms)
+
+
+M267 final-types exit=0 elapsed=22.621s cap=120s timeout=False
+
+M267 boundaries exit=0 elapsed=3.238s cap=60s timeout=False
+Reference boundary check passed.
+
+M267 research exit=0 elapsed=3.415s cap=60s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M267 preserved-evidence exit=0 elapsed=2.506s cap=60s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M267 integrity exit=0 elapsed=0.470s cap=60s timeout=False
+PASS acquired/priority gates, provenance and continuation; 78 lossless blocks/73052976 decoded bytes; 3 artifacts/3538690 bytes; production/frozen controls unchanged; verification1543.049s plus10s packaging
+M267 final packaging: lossless evidence and bounds PASS; staged size/whitespace required before commit; covered by reserved10s.
+M267 staged size PASS; whitespace found two new test files with blank EOF, trimmed; final staged whitespace PASS required before commit. No semantic source change.
