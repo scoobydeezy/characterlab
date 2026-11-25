@@ -48,7 +48,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const row=(stable:CanonicalValue)=>rows.find(v=>key(f(v,1n))===key(stable))??invalidModel('missing cognitive state definition');
  const definition=(name:string)=>f(row(typedIdentifier(1027,text('definition/'+name))),4n);
  const originalPrior=await compilePredictionModel(predictionModelReviewSource());
- const prior=model.criterionSensing?{...originalPrior,base:compileCriterionBase(originalPrior.base,model.itemWorld?.task?compileItemProbe(originalPrior.base.probe,model.itemWorld,model.jointCriterion):undefined)}:originalPrior;
+ const prior=model.criterionSensing?{...originalPrior,base:compileCriterionBase(originalPrior.base,model.itemWorld?.task?compileItemProbe(originalPrior.base.probe,model.itemWorld,model.jointCriterion):undefined,model.attemptReceipt)}:originalPrior;
  if(key(decodeCognitive(model.content.characterContentBytes()))!==key(decodeCognitive(prior.source.content)))invalidModel('cognitive character differs from inherited component');
  const contents=items(decodeCognitive(model.source.content),'set').map(v=>rec(v,170n));
  const tasks=contents.filter(v=>txt(id(f(v,2n)).payload)==='semantic-kind/task-commitment').map(content=>{

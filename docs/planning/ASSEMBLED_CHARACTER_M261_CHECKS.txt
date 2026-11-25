@@ -1,0 +1,220 @@
+M261 initial-types exit=0 elapsed=23.546s cap=600s timeout=False
+
+M261 native-A exit=1 elapsed=67.732s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledIntentionSchedules.test.ts (8 tests | 1 failed | 7 skipped) 61601ms
+   × schedule261 group A retained lost cues 61600ms
+     → strategy receipt conflict
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIntentionSchedules.test.ts > schedule261 group A retained lost cues
+SchedulerContractError: strategy receipt conflict
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/strategy.ts:16:44
+ ❯ Module.validateDisplayHistory src/assembled/strategy.ts:25:506
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:88:20
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledIntentionSchedules.ts:35:208
+ ❯ scenario src/test/assembledIntentionSchedules.test.ts:43:44
+ ❯ src/test/assembledIntentionSchedules.test.ts:45:87
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  00:41:56
+   Duration  67.13s (transform 3.40s, setup 0ms, collect 5.06s, tests 61.60s, environment 0ms, prepare 150ms)
+
+
+M261 native-A-receipt-identity-fix exit=0 elapsed=320.113s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledIntentionSchedules.test.ts (8 tests | 7 skipped) 314050ms
+   ✓ schedule261 group A retained lost cues 314050ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  00:43:43
+   Duration  319.55s (transform 3.36s, setup 0ms, collect 5.00s, tests 314.05s, environment 0ms, prepare 147ms)
+
+
+M261 native-B exit=0 elapsed=304.665s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledIntentionSchedules.test.ts (11 tests | 10 skipped) 298633ms
+   ✓ schedule261 group B lifecycle receipts 298632ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  00:49:22
+   Duration  304.10s (transform 3.35s, setup 0ms, collect 4.99s, tests 298.63s, environment 0ms, prepare 140ms)
+
+
+M261 native-C exit=1 elapsed=241.487s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledIntentionSchedules.test.ts (11 tests | 1 failed | 10 skipped) 235429ms
+   × schedule261 group C receipt denial late 235428ms
+     → noNeutral intent 3: expected +0 to be 1 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIntentionSchedules.test.ts > schedule261 group C receipt denial late
+AssertionError: noNeutral intent 3: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ scenario src/test/assembledIntentionSchedules.test.ts:46:618
+
+ ❯ src/test/assembledIntentionSchedules.test.ts:50:87
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  00:54:47
+   Duration  240.91s (transform 3.36s, setup 0ms, collect 5.00s, tests 235.43s, environment 0ms, prepare 138ms)
+
+
+M261 early-action-diagnosis exit=0 elapsed=74.012s cap=180s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledIntentionSchedules.test.ts > schedule261 diagnose noNeutral early action
+early diagnostic {"workspaceTaskA":true,"selectedInstruction":true,"plans":[{"taskA":true,"route":"2","fields":["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d61","0202","0702070205104b6e6f776e556e617661696c61626c650b8c090206070205104b6e6f776e556e617661696c61626c650b8c090207","07080524617373656d626c65642d706572666f726d616e63652d6576616c756174696f6e2f302e310af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610203020202020200000700","0702051e617373656d626c65642d696e74656e74696f6e2d6d656d6f72792f302e3107010706051e617373656d626c65642d696e74656e74696f6e2d6d656d6f72792f302e310be508020f07070522617373656d626c65642d7072696f726974792d6f62736572766174696f6e2f302e320b8c09020202010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610701060201070007010b8308051f646566696e6974696f6e2f7461736b2d696e737472756374696f6e2d6f6e650af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d610b8308051f646566696e6974696f6e2f7461736b2d696e737472756374696f6e2d6f6e650302"]},{"taskA":false,"route":"2","fields":["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62","0202","0702070205104b6e6f776e556e617661696c61626c650b8c090208070205104b6e6f776e556e617661696c61626c650b8c090209","07080524617373656d626c65642d706572666f726d616e63652d6576616c756174696f6e2f302e310af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d620203020202020200000700"]},{"taskA":false,"route":"2","fields":["0af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e","0202","0702070205104b6e6f776e556e617661696c61626c650b8c09020a070205104b6e6f776e556e617661696c61626c650b8c09020b","07080524617373656d626c65642d706572666f726d616e63652d6576616c756174696f6e2f302e310af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e0203020202020200000700"]}],"appraisals":[["051c617373656d626c65642d626f64792d61707072616973616c2f302e31","0a8003010301010be908023502010afd02010501010be808023302010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637403010b83080519646566696e6974696f6e2f7461736b2d776f726b7370616365040107030afb02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6102010b83080511646566696e6974696f6e2f7461736b2d610afb02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6202010b83080511646566696e6974696f6e2f7461736b2d620afb02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e02010b8308051e646566696e6974696f6e2f636f6e666967757261626c652d67617264656e05010afc0201020101020202010ae90201020101060001020109010aed01010a0101020102010bdb08020d03000400050006000700080009000a00030107030aff02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6102010afe0201020101020202010602010aff02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6202010afe020102010102020201060e010aff02010201010af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e02010afe020102010102030200","0acd03010601010bdb08022d02010be80705176f627365727665722f6272696467652d7375626a65637403010bed07051c6368616e6e656c2f617373656d626c65642d626f64792d6c6576656c0401030605010ace0301020101060001020106020106010528656d626f646965642d6c6576656c2d6f62736572766174696f6e2f302e322d63616e646964617465","0ae301010901010bd208022e02010be80705176f627365727665722f6272696467652d7375626a6563740301020304010900050109000601090007010900080109010ad801010201010be80705176f627365727665722f6272696467652d7375626a65637402010bdb08022d0901052773656d616e7469632d62696e64696e672f302e312d63616e6469646174652353454d2d30303148","070307050af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d6106020a06763c06ee01b00906ee01b00907050af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08050e636f6e74656e742f7461736b2d62060e0a06763c06820db00906820db00907050af302010201010bea070b8d080b8e0805186368617261637465722f6272696467652d7375626a65637402010bea070b8d080b8e08051b636f6e74656e742f636f6e666967757261626c652d67617264656e06000106763c060001060001","0703051c617373656d626c65642d6d656d6f72792d636f6e746578742f302e31050743757272656e740700","07030525617373656d626c65642d736f6369616c2d70656f706c652f302e312f61707072616973616c0708051e617373656d626c65642d736f6369616c2f302e312f61707072616973616c03060bea070b8d080b8e080519636f6e74656e742f7265636f676e6974696f6e2f6f7468657207000700070007040523617373656d626c65642d736f6369616c2d6d656d6f72792d636f6e746578742f302e310700070007000705051f617373656d626c65642d62656c6965662d636f6e666964656e63652f302e3107000200070007000708051e617373656d626c65642d736f6369616c2f302e312f61707072616973616c03060bea070b8d080b8e08051f636f6e74656e742f617373656d626c65642d736f6369616c2f74617267657407000700070007040523617373656d626c65642d736f6369616c2d6d656d6f72792d636f6e746578742f302e310700070007000705051f617373656d626c65642d62656c6965662d636f6e666964656e63652f302e310700020007000700"]]}
+
+ ✓ src/test/assembledIntentionSchedules.test.ts (12 tests | 11 skipped) 68014ms
+   ✓ schedule261 diagnose noNeutral early action 68013ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  01:00:24
+   Duration  73.45s (transform 3.36s, setup 0ms, collect 4.99s, tests 68.01s, environment 0ms, prepare 135ms)
+
+
+M261 corrected-first-nine exit=0 elapsed=439.988s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledIntentionSchedules.test.ts (11 tests | 10 skipped) 433959ms
+   ✓ schedule261 final first nine 433958ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  01:03:06
+   Duration  439.42s (transform 3.36s, setup 0ms, collect 4.98s, tests 433.96s, environment 0ms, prepare 136ms)
+
+
+M261 corrected-last-nine exit=0 elapsed=446.159s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledIntentionSchedules.test.ts (11 tests | 10 skipped) 440125ms
+   ✓ schedule261 final last nine 440125ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  01:10:48
+   Duration  445.57s (transform 3.34s, setup 0ms, collect 4.96s, tests 440.13s, environment 0ms, prepare 151ms)
+
+
+M261 final-controls exit=1 elapsed=262.936s cap=420s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledIntentionSchedules.test.ts (11 tests | 1 failed | 7 skipped) 257000ms
+   ✓ schedule261 continuation rollback and old version carry 232917ms
+   × schedule261 admission and nonmatching withholding gates 24006ms
+     → expected [ { kind: 'record', …(2) } ] to have a length of +0 but got 1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIntentionSchedules.test.ts > schedule261 admission and nonmatching withholding gates
+AssertionError: expected [ { kind: 'record', …(2) } ] to have a length of +0 but got 1
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ src/test/assembledIntentionSchedules.test.ts:68:492
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 passed | 7 skipped (11)
+   Start at  01:18:41
+   Duration  262.36s (transform 3.29s, setup 0ms, collect 4.88s, tests 257.00s, environment 0ms, prepare 138ms)
+
+
+M261 admission-producer-filter-fix exit=1 elapsed=146.054s cap=170s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ❯ src/test/assembledIntentionSchedules.test.ts (11 tests | 1 failed | 10 skipped) 140166ms
+   × schedule261 admission and nonmatching withholding gates 140165ms
+     → reward action/task/habit association
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledIntentionSchedules.test.ts > schedule261 admission and nonmatching withholding gates
+SchedulerContractError: reward action/task/habit association
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileCharacterModel src/assembled/model.ts:400:285
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:28:110
+ ❯ src/test/assembledIntentionSchedules.test.ts:71:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  01:23:54
+   Duration  145.48s (transform 3.27s, setup 0ms, collect 4.86s, tests 140.17s, environment 0ms, prepare 136ms)
+
+
+M261 final-types exit=0 elapsed=22.061s cap=40s timeout=False
+
+M261 final-boundary-research-preservation exit=0 elapsed=9.275s cap=35s timeout=False
+Reference boundary check passed.
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M261 artifact-review exit=0 elapsed=0.343s cap=15s timeout=False
+INCOMPLETE: aggregate admission/withholding gate has no success record.
+112 lossless blocks; 100007111 decoded bytes; 18 corrected schedules/144 ticks,16 preserved schedules plus null/diagnostic verified.
+3 artifacts/5744952 bytes; cumulative prior checks 2358.028s; document limits pass.
+
+M261 git-size exit=0 elapsed=0.830s cap=10s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+M261 packaging allowance=10.000s; incomplete checkpoint, no additional simulation or budget extension.

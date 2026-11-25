@@ -28,7 +28,7 @@ export async function compileSourceClock(model:Awaited<ReturnType<typeof compile
   if(!cognitive&&!probe)fail('original kind');if(time<1n||time>(probe?model.timeLimit-1n:model.timeLimit)||p!==(cognitive?40n:model.jointCriterion&&model.itemWorld?.task?120n:110n))fail('time/phase domain');
   if(key(dependencies)!==key(list([])))fail('empty dependencies required');
   if(cognitive){const cue=rec(payload,377n);model.content.validateRecordRoles(enc(cue));if(key(f(cue,2n))!==key(typedIdentifier(1027,text('definition/task-workspace'))))fail('agenda');}
-  else if(key(f(rec(model.criterionSensing?criterionSource(payload).cue:payload,333n),1n))!==key(typedIdentifier(1027,text('definition/regulatory-diagnostic-probe'))))fail('probe definition');
+  else {const source=model.criterionSensing?criterionSource(payload,model.attemptReceipt):{cue:payload,actions:undefined};if(key(f(rec(source.cue,333n),1n))!==key(typedIdentifier(1027,text('definition/regulatory-diagnostic-probe'))))fail('probe definition');if(source.actions&&(!model.itemWorld?.task||!source.actions.every(a=>model.itemWorld!.moves.some(m=>key(m.action)===key(a)&&key(m.item)===key(model.itemWorld!.item!)))))fail('receipt actions require bound criterion item');}
   return {dueAt:time,phase:p,eventTypeId:kind,payload,dependencies,eventId:BigInt(i),eventSequence:BigInt(i),causalParentEventIds:[]};
  });
  if(events.length>100||new Set(events.map(e=>model.jointCriterion?String(e.dueAt)+':'+key(e.eventTypeId):String(e.dueAt))).size!==events.length)fail('at most100 originals; duplicate source kind/instant');

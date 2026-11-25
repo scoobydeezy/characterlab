@@ -1,6 +1,9 @@
-# Current work — M261 full intention schedules and attempt-dependent receipts
-Close the remaining native18-case intention correspondence, including reports that
-exist only after a real attempt. Parentae2f0fbe; one continuing character, no UI.
+# Current work — M261 checkpoint INCOMPLETE
+All18 original schedules/144 ticks pass on candidate0.159; withholding control
+is blocked by an invalid reward/action declaration. See [result](ASSEMBLED_CHARACTER_M261_RESULT.md).
+No clause promotion or family acceptance. Stop simulation checks at amended budget.
+Next bounded work: coherent withholding fixture repair and its targeted verification;
+then first eight-clause version carry. Parentae2f0fbe; one character, no UI.
 ## Bounded card (before code)
 At most2 capabilities: actual attempts enable normal criterion reports; all18 original
 RetainedCue schedules run through the shared memory/planner/goal path over instants1..8.
@@ -19,8 +22,8 @@ Original NoLoss/PersistentAccess54 runs/486 prefixes remain M258 controls, not p
 native law switches. Shared seed0/laws; native unit goal ground and live body appraisal
 remain as M259/M260. No stochastic difference claim; expose actual arbitration mode.
 Native mapping: nonsocial instruction/adoption1; permitted neutral2 if supplied;
-board cues each1..8 -> recall next instant; deliberation2..8; availability for previous
-frame opportunity, deadline7; actual cancellation3 where declared. Body30/rate10,
+board cues each1..8 -> recall next instant; deliberation2..8; availability at original
+frame tick (usable after normal perception), deadline7; actual cancellation3 where declared. Body30/rate10,
 ordinary body/frame inputs retained, zero body delivery for item actions. Initial
 criterion probe1 supplies evidence0; thereafter gated probes2..8 iff receipts allowed,
 explicit report mode1 for original report1 (see source amendment below). Both routes move one real item. No authored cognition or expected
