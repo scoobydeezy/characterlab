@@ -115,7 +115,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const episodes=model.memory?withEpisodicState(inheritedState,C,model.body!,!!model.affectMemory,model.encoding,!!model.memoryUse,model.bodyMemoryUse,model.positionMemory,model.retainedAttribution,model.significanceEnabled,model.actionMemory,model.effectEvidence?.proposition,model.social?.beliefTrials?32n:8n,model.familiarity,model.recollection,model.vivid,model.positionUse,model.positionPresentation,model.intentionMemory):inheritedState;
  const embodied=model.body?withBodyState(episodes,C,model.body):episodes;
  const retained=model.retention?withRetentionState(embodied,C):embodied;
- const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled,model.skillInterference,model.timeLimit,model.protection?PROTECTION_CHANNEL:undefined):retained;
+ const procedural=model.skill?withSkillState(retained,C,model.procedures,model.formationEnabled,model.skillInterference,model.timeLimit,model.protection?PROTECTION_CHANNEL:undefined,model.skillDisuse):retained;
  const planned=model.strategy?withStrategyState(procedural,C,model.strategy,model.timeLimit):procedural;
  const prioritized=model.priority?withPriorityState(planned,tasks.map(t=>t.key),model.goalMeaning?{C,settings:model.goalMeaning}:undefined,model.spatialMeaning?{C,settings:model.spatialMeaning}:undefined,model.commitmentAdoption,model.timeLimit):planned;
  const forecasted=model.horizon?withHorizonState(prioritized,tasks.map(t=>t.key),model.timeLimit):prioritized;

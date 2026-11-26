@@ -27,14 +27,16 @@ export function compileProcedures(v:CanonicalValue,actions:readonly CanonicalVal
 }
 export function compileSkill(v:CanonicalValue){const a=items(v,'list');if(a.length!==1||txt(a[0])!==SKILL)invalidModel('procedural declaration');return true as const;}
 export function practiceSetting(v:CanonicalValue,allowInterference=false){const a=items(v,'list'),extended=allowInterference&&a.length===7&&txt(a[0])===INTERFERENCE;if((!extended&&(a.length!==6||txt(a[0])!==SKILL))||extended&&typeof a[6]!=='boolean'||uint(a[1])>4n||typeof a[4]!=='boolean'||typeof a[5]!=='boolean')invalidModel('practice setting grammar');const impairment=exact(a[2]),difficulty=exact(a[3]);for(const x of [impairment,difficulty])if(x.compare(Q.of(0n))<0||x.compare(Q.of(1n))>0)invalidModel('practice setting domain');return {phase:Number(uint(a[1])),impairment,difficulty,permitted:a[4] as boolean,practice:a[5] as boolean,...(extended?{interference:a[6] as boolean}:{})};}
-export function skillValue(v?:CanonicalValue,procedure?:CanonicalValue,allowZero=false){if(v===undefined)return {K:Q.of(0n),count:0n};const a=items(v,'list');if(a.length!==(procedure?4:3)||txt(a[0])!==(procedure?PROCEDURES:SKILL)||procedure&&key(a[3])!==key(procedure))invalidModel('skill value grammar/procedure');const K=exact(a[1]),count=uint(a[2]);if(K.compare(Q.of(0n))<0||!allowZero&&K.compare(Q.of(0n))===0||K.compare(Q.of(1n))>0||count<1n||count>100n)invalidModel('skill value domain');return {K,count};}
+export function skillValue(v?:CanonicalValue,procedure?:CanonicalValue,allowZero=false,disuse=false,timeLimit:TimeLimit=LEGACY_TIME_LIMIT):{K:Q;count:bigint;anchorAt?:bigint}{if(v===undefined)return {K:Q.of(0n),count:0n};const a=items(v,'list');
+ if(disuse){if(!procedure||a.length!==5||txt(a[0])!==DISUSE_PROCEDURES||uint(a[4])>timeLimit)invalidModel('disuse skill value grammar/time');const prior=skillValue(list([text(PROCEDURES),a[1],a[2],a[3]]),procedure,true);return {...prior,anchorAt:uint(a[4])};}
+ if(a.length!==(procedure?4:3)||txt(a[0])!==(procedure?PROCEDURES:SKILL)||procedure&&key(a[3])!==key(procedure))invalidModel('skill value grammar/procedure');const K=exact(a[1]),count=uint(a[2]);if(K.compare(Q.of(0n))<0||!allowZero&&K.compare(Q.of(0n))===0||K.compare(Q.of(1n))>0||count<1n||count>100n)invalidModel('skill value domain');return {K,count};}
 export function phaseValue(v:CanonicalValue){const a=items(v,'list');if(a.length!==2||txt(a[0])!==PHASE||uint(a[1])>4n)invalidModel('development phase grammar');return Number(uint(a[1]));}
 export function practiced(K:Q,count:bigint,phase:number,procedure?:CanonicalValue){const gain=developmentalGain('Ramp',phase),candidate=K.add(gain.divide(Q.of(8n))),after=candidate.compare(Q.of(1n))>0?Q.of(1n):candidate;if(count>=100n)invalidModel('practice count bound');return {gain,after,value:list([text(procedure?PROCEDURES:SKILL),q(after),unsigned(count+1n),...(procedure?[procedure]:[])])};}
 /** Closed successor leaves; inherited303 is not a second competence representation. */
-export function withSkillState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,procedures?:Procedures,formation=false,allowZero=false,timeLimit:TimeLimit=LEGACY_TIME_LIMIT,formationChannel?:CanonicalValue){assertTimeLimit(timeLimit);
+export function withSkillState(base:ReturnType<typeof compileCampaign2StateModel>,C:CanonicalValue,procedures?:Procedures,formation=false,allowZero=false,timeLimit:TimeLimit=LEGACY_TIME_LIMIT,formationChannel?:CanonicalValue,disuse=false){assertTimeLimit(timeLimit);
  const distinct=procedures?[...new Map(procedures.map(x=>[key(x.procedure),x.procedure])).values()]:undefined;
  const paths=[...(distinct?distinct.map(p=>skillPath(C,p)):[skillPath(C)]),phasePath(C),...(formation?[formationPath(C),...(formationChannel?[formationPath(C,formationChannel)]:[])]:[])],roots=[785n,1500n,...(formation?[1503n]:[])],isNew=(p:StatePath)=>roots.includes(p.rootStateTypeId),checkPath=(p:StatePath)=>{if(!paths.some(x=>key(statePathValue(x))===key(statePathValue(p))))invalidModel('foreign procedural/development path');};
- const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);if(p.rootStateTypeId===785n)skillValue(v,distinct?items((p.selectors[0] as {key:CanonicalValue}).key,'list')[1]:undefined,allowZero);else if(p.rootStateTypeId===1503n)formationValue(v,timeLimit);else phaseValue(v);};
+ const check=(p:StatePath,v:CanonicalValue)=>{checkPath(p);if(p.rootStateTypeId===785n)skillValue(v,distinct?items((p.selectors[0] as {key:CanonicalValue}).key,'list')[1]:undefined,allowZero,disuse,timeLimit);else if(p.rootStateTypeId===1503n)formationValue(v,timeLimit);else phaseValue(v);};
  const authority=new StateAuthorityRegistry(paths.map(p=>({pattern:pattern(p),validateValue:(v:CanonicalValue)=>check(p,v),removalAllowed:false})),[{mutationAuthorityId:SKILL_OWNER,patterns:paths.filter(p=>p.rootStateTypeId===785n).map(pattern)},{mutationAuthorityId:PHASE_OWNER,patterns:[pattern(phasePath(C))]},...(formation?[{mutationAuthorityId:FORMATION_OWNER,patterns:paths.filter(p=>p.rootStateTypeId===1503n).map(pattern)}]:[])]);
  const without=(s:AuthoritativeState)=>new AuthoritativeState(s.entries().filter(e=>!isNew(e.path)));
  function validateState(s:AuthoritativeState){if(s.entries().some(e=>e.path.rootStateTypeId===303n))invalidModel('legacy303 competence excluded from procedural successor');base.validateState(without(s));for(const e of s.entries().filter(e=>isNew(e.path)))check(e.path,e.value);}
@@ -56,4 +58,20 @@ export function interferedPractice(K:Q,count:bigint,phase:number,eligible:boolea
  const gain=developmentalGain('Ramp',phase),p=eligible?practiced(afterLoss,count,phase,procedure):undefined,after=p?.after??afterLoss;
  const value=p?.value??list([text(procedure?PROCEDURES:SKILL),q(after),unsigned(count),...(procedure?[procedure]:[])]);
  return {afterLoss,after,gain,value,changed:eligible||!after.equals(K)};
+}
+
+/** Approved PeriodicDisuse/0.1; saved competence is an anchor, never a current read. */
+export const DISUSE='PeriodicDisuse/0.1',DISUSE_PROCEDURES='assembled-procedures/0.2',DISUSE_VERSION='assembled-character-procedural-disuse/0.1-candidate';
+export function disusedSkill(value:CanonicalValue|undefined,procedure:CanonicalValue,at:bigint,timeLimit:TimeLimit){
+ if(at<0n||at>timeLimit)invalidModel('disuse evaluation time');
+ const a=skillValue(value,procedure,true,true,timeLimit),anchorAt=a.anchorAt??0n;
+ if(anchorAt>at)invalidModel('future procedural anchor');
+ const intervals=value?(at-anchorAt)/4n:0n,K=a.K.numerator===0n?a.K:a.K.divide(Q.of(2n**intervals));
+ return {K,count:a.count,anchorK:a.K,anchorAt,intervals,present:value!==undefined};
+}
+export function disuseAnnex(s:ReturnType<typeof disusedSkill>){return list([text(DISUSE),s.present,q(s.anchorK),unsigned(s.anchorAt),unsigned(s.intervals)]);}
+export function disusedPractice(value:CanonicalValue|undefined,procedure:CanonicalValue,at:bigint,timeLimit:TimeLimit,phase:number,eligible:boolean,loss:boolean){
+ const before=disusedSkill(value,procedure,at,timeLimit),evolved=interferedPractice(before.K,before.count,phase,eligible,loss,procedure);
+ const anchorAt=eligible?at:before.anchorAt+before.intervals*4n;
+ return {...evolved,before,value:list([text(DISUSE_PROCEDURES),q(evolved.after),unsigned(before.count+(eligible?1n:0n)),procedure,unsigned(anchorAt)])};
 }

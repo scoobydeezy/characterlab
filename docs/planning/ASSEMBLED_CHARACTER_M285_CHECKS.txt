@@ -1,0 +1,286 @@
+M285 types-initial exit=0 elapsed=25.784s cap=600s timeout=False
+
+M285 native-primary exit=1 elapsed=73.359s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock 3036ms
+   → strategy receipt capacity
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock
+SchedulerContractError: strategy receipt capacity
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ require src/assembled/strategy.ts:16:44
+ ❯ Module.validateDisplayHistory src/assembled/strategy.ts:25:721
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:92:20
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledSkillDisuse.ts:40:230
+ ❯ src/test/assembledSkillDisuse.test.ts:46:61
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  09:50:55
+   Duration  71.61s (transform 3.45s, setup 0ms, collect 68.23s, tests 3.04s, environment 0ms, prepare 105ms)
+
+
+
+SETUP REPAIR before rerun: repeated availability displays exceeded the unchanged eight-receipt/task domain. Supply each A/B route once at1; existing per-attempt urgency still selects the declared task. Times, eligible practice, laws, thresholds, seed and actual-action gates unchanged. Work-order authorization was appended on its existing line after the 250-line guard rejected a new line.
+M285 native-static-routes exit=1 elapsed=68.993s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock 2522ms
+   → assembled trace requires exact model/run binding
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock
+SchedulerContractError: assembled trace requires exact model/run binding
+ ❯ Module.compileCharacterTraceBinding src/assembled/traceBinding.ts:37:3223
+
+ ❯ Module.createCharacterRuntime src/assembled/runtime.ts:142:21
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:122
+ ❯ Module.start src/test/fixtures/assembledSkillDisuse.ts:40:230
+ ❯ src/test/assembledSkillDisuse.test.ts:46:61
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  09:53:25
+   Duration  67.31s (transform 3.41s, setup 0ms, collect 64.45s, tests 2.52s, environment 0ms, prepare 102ms)
+
+
+
+IMPLEMENTATION REPAIR: add0.166 to the explicit trace model/run admission list; exact run/model equality remains required. traceBinding.ts is the sixth production path, within12-file package cap. No law or scenario amendment.
+M285 native-trace-binding exit=1 elapsed=81.586s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock 15129ms
+   → expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock
+AssertionError: expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }
+
+- Expected
++ Received
+
+  Object {
+    "kind": "typedIdentifier",
+    "namespaceId": 1027n,
+    "payload": Object {
+      "kind": "text",
+-     "value": "definition/procedure/a",
++     "value": "definition/procedure/b",
+    },
+  }
+
+ ❯ probe src/test/assembledSkillDisuse.test.ts:30:16
+
+ ❯ src/test/assembledSkillDisuse.test.ts:48:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  09:55:49
+   Duration  79.87s (transform 3.41s, setup 0ms, collect 64.40s, tests 15.13s, environment 0ms, prepare 104ms)
+
+
+
+SCENARIO REPAIR: the static-both-routes setup selected procedureB before the first saved checkpoint; urgency alone does not exclude other integrated reason sources. Restore predeclared exclusive A/B availability, updating only the affected route on6/7/9/10. Six receipts/task fit the existing cap. No laws, seed, timings, skill gains or success gates changed; actual procedure liveness remains strict.
+M285 native-exclusive-routes exit=1 elapsed=87.639s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock 21140ms
+   → declared procedure at6: expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock
+AssertionError: declared procedure at6: expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }
+
+- Expected
++ Received
+
+  Object {
+    "kind": "typedIdentifier",
+    "namespaceId": 1027n,
+    "payload": Object {
+      "kind": "text",
+-     "value": "definition/procedure/b",
++     "value": "definition/procedure/a",
+    },
+  }
+
+ ❯ probe src/test/assembledSkillDisuse.test.ts:30:42
+
+ ❯ src/test/assembledSkillDisuse.test.ts:48:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  09:58:29
+   Duration  85.91s (transform 3.40s, setup 0ms, collect 64.44s, tests 21.14s, environment 0ms, prepare 103ms)
+
+
+
+SETUP MAPPING REPAIR: exclusive opening now reaches A3/A4, but B6 executes procedureA. The fixture assumed B route index1; task-relative route indices are not action identities. Derive the appropriate route from the compiled instruction/action mapping for each declared target. No production change; intended actions/times and all behavioral thresholds remain fixed.
+M285 native-mapped-routes exit=1 elapsed=68.241s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock 873ms
+   → declared action absent
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock
+Error: declared action absent
+ ❯ routeFor src/test/fixtures/assembledSkillDisuse.ts:17:215
+
+ ❯ src/test/fixtures/assembledSkillDisuse.ts:29:55
+ ❯ fixture src/test/fixtures/assembledSkillDisuse.ts:27:89
+ ❯ Module.start src/test/fixtures/assembledSkillDisuse.ts:43:55
+ ❯ src/test/assembledSkillDisuse.test.ts:46:67
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:01:15
+   Duration  66.53s (transform 3.41s, setup 0ms, collect 65.31s, tests 874ms, environment 0ms, prepare 106ms)
+
+
+
+Fixture mapping guard corrected: the inactive third task has its own action domain; keep its original instruction rather than resolving the A/B action through it. A/B mappings and all original gates unchanged.
+M285 native-active-mappings exit=1 elapsed=87.219s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock 20708ms
+   → declared procedure at6: expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock
+AssertionError: declared procedure at6: expected { kind: 'typedIdentifier', …(2) } to deeply equal { kind: 'typedIdentifier', …(2) }
+
+- Expected
++ Received
+
+  Object {
+    "kind": "typedIdentifier",
+    "namespaceId": 1027n,
+    "payload": Object {
+      "kind": "text",
+-     "value": "definition/procedure/b",
++     "value": "definition/procedure/a",
+    },
+  }
+
+ ❯ probe src/test/assembledSkillDisuse.test.ts:30:42
+
+ ❯ src/test/assembledSkillDisuse.test.ts:48:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  10:03:28
+   Duration  85.51s (transform 3.57s, setup 0ms, collect 64.46s, tests 20.71s, environment 0ms, prepare 105ms)
+
+
+
+SOURCE TIMING REPAIR: strategy DISPLAY30 -> OBSERVE120 -> EVIDENCE130 -> LEARN140; planner reads knowledge at40. Same-instant route change cannot select the intended action. Display changes now arrive at5/6/8/9 for unchanged attempts6/7/9/10. Preserve failed same-instant sources in git diff/check history and failedExclusiveRouteSave4 archive; no law, attempt or acceptance change.
+M285 native-prior-route-evidence exit=0 elapsed=239.361s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock
+M285 primary main [{"at":3,"K":"0/1","success":true,"engaged":true,"procedure":"A"},{"at":4,"K":"1/2","success":true,"engaged":true,"procedure":"A"},{"at":6,"K":"0/1","success":true,"engaged":true,"procedure":"B"},{"at":7,"K":"1/4","success":false,"engaged":true,"procedure":"A"},{"at":8,"K":"3/8","success":false,"engaged":true,"procedure":"A"},{"at":9,"K":"1/2","success":true,"engaged":true,"procedure":"B"},{"at":10,"K":"1/2","success":true,"engaged":true,"procedure":"A"}]
+
+stdout | src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock
+M285 primary dense [{"at":3,"K":"0/1","success":true,"engaged":true,"procedure":"A"},{"at":4,"K":"1/2","success":true,"engaged":true,"procedure":"A"},{"at":6,"K":"0/1","success":true,"engaged":true,"procedure":"B"},{"at":7,"K":"1/4","success":false,"engaged":true,"procedure":"A"},{"at":8,"K":"3/8","success":false,"engaged":true,"procedure":"A"},{"at":9,"K":"1/2","success":true,"engaged":true,"procedure":"B"},{"at":10,"K":"1/2","success":true,"engaged":true,"procedure":"A"}]
+
+stdout | src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock
+M285 primary old [{"at":3,"K":"0/1","success":true,"engaged":true,"procedure":"A"},{"at":4,"K":"1/2","success":true,"engaged":true,"procedure":"A"},{"at":6,"K":"0/1","success":true,"engaged":true,"procedure":"B"},{"at":7,"K":"1/2","success":true,"engaged":true,"procedure":"A"},{"at":8,"K":"5/8","success":true,"engaged":true,"procedure":"A"},{"at":9,"K":"1/2","success":true,"engaged":true,"procedure":"B"},{"at":10,"K":"3/4","success":true,"engaged":true,"procedure":"A"}]
+
+ ✓ src/test/assembledSkillDisuse.test.ts > primary285: one character rusts and recovers; unrelated body samples and other procedures do not reset its clock 172439ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 8 skipped (9)
+   Start at  10:12:07
+   Duration  237.68s (transform 3.42s, setup 0ms, collect 64.88s, tests 172.44s, environment 0ms, prepare 103ms)
+
+
+
+TEST READER PERFORMANCE: cache decoded trace by immutable settled snapshot for remaining checks; cachedMemory invalidates snapshot on each settlement. Assertions and bytes unchanged. Primary already passed, no reason to repeat it.
+M285 controls-persistence-boundaries exit=255 elapsed=0.044s cap=600s timeout=False
+'persistence285' is not recognized as an internal or external command,
+operable program or batch file.
+
+M285 controls-persistence-boundaries exit=0 elapsed=410.064s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillDisuse.test.ts > controls285: hidden report, denied practice and explicit interference have distinct effects
+M285 control hidden PASS
+
+stdout | src/test/assembledSkillDisuse.test.ts > controls285: hidden report, denied practice and explicit interference have distinct effects
+M285 control blocked PASS
+
+stdout | src/test/assembledSkillDisuse.test.ts > controls285: hidden report, denied practice and explicit interference have distinct effects
+M285 control interference PASS
+
+ ✓ src/test/assembledSkillDisuse.test.ts > controls285: hidden report, denied practice and explicit interference have distinct effects 110482ms
+stdout | src/test/assembledSkillDisuse.test.ts > persistence285: exact repeat and restore before decay and after recovery; computed-update rollback
+M285 persistence/rollback PASS
+
+ ✓ src/test/assembledSkillDisuse.test.ts > persistence285: exact repeat and restore before decay and after recovery; computed-update rollback 183986ms
+stdout | src/test/assembledSkillDisuse.test.ts > boundaries285: version/owner/initial-state guards, old complete bytes and native long-time execution
+M285 boundaries/old bytes/million-time PASS
+
+ ✓ src/test/assembledSkillDisuse.test.ts > boundaries285: version/owner/initial-state guards, old complete bytes and native long-time execution 50061ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 6 skipped (9)
+   Start at  10:16:43
+   Duration  409.50s (transform 3.42s, setup 0ms, collect 64.57s, tests 344.53s, environment 0ms, prepare 105ms)
+
+
+M285 types-final exit=0 elapsed=23.198s cap=600s timeout=False
+
+M285 boundaries exit=0 elapsed=3.358s cap=600s timeout=False
+Reference boundary check passed.
+
+M285 research exit=0 elapsed=3.719s cap=600s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M285 archives exit=0 elapsed=2.539s cap=600s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M285 git-size exit=0 elapsed=0.387s cap=600s timeout=False
+PASS: Git index contains no files at or above50,000,000 bytes.
+

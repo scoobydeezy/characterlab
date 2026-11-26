@@ -1,4 +1,4 @@
-# Current work — M285 native skill disuse
+# Current work — M285 native gates passed; final checks
 Owner2026-11-26 approves M284 PeriodicDisuse/0.1 and delegates Family12.8 completion
 under bounded self-approval. Baseline9e8055fd; old0.165/NoRust stays executable.
 One active package. Continue to a separate bounded family replay package if required.
@@ -12,8 +12,8 @@ Shared785 owner stores timestamped anchor; same scheduler, trace and save.
 Audit: production785 reads are confined to skillExecution; state.ts/skill.ts validate.
 No view or cognition may mistake stored anchor competence for current competence.
 Version model/state/trace; old receiving contracts and frozen C2/C3 remain unchanged.
-Files: model.ts, state.ts, runtime.ts, skill.ts, skillExecution.ts; one fixture,
-native test and bounded control test (<=8 production/test paths; cap12).
+Files: model.ts, state.ts, runtime.ts, skill.ts, skillExecution.ts, traceBinding.ts; one fixture,
+native test and bounded control test (<=9 production/test paths; cap12).
 Formal contract and current/result/check/evidence documents only; no framework.
 
 Predeclared sources: M283 current nonsocial three-task fixture, body30/rate0, seed0,
@@ -43,9 +43,13 @@ Done: native rust/recovery, independent clocks, invariance, boundaries and persi
 pass on0.166. Then finish Family12.8's complete clause/corpus carry in next bounded
 package without unrelated breadth. No acceptance from M285 alone.
 Reference ledger skill/LONG and RO-C3-013/017 dispositions consulted/preserved.
-Current denominator E87/P21/N11/U13=132,21members/15families;8 accepted families.
+Current denominator E88/P21/N10/U13=132,21members/15families;8 accepted families.
 No UI/Campaign4, new factory/state owner, reduction or scope change.
 
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+Native gate/controls/repeat/restore/rollback/old exact bytes/million-time PASS.
+Result: [M285](ASSEMBLED_CHARACTER_M285_RESULT.md). Final checks then commit;
+next bounded package replays the complete skill corpus on0.166.
