@@ -1,4 +1,4 @@
-# Current work — M286 complete SKILL corpus carry
+# Current work — M286 passed; affected witness carry next
 M2850225fa36 integrates approved rust on0.166. Owner delegates full12.8 completion.
 One active package: complete original SKILL public corpus and current-reference carry.
 
@@ -41,8 +41,8 @@ outcome, blocked/no-feedback/threshold/saturation/contradiction controls.
 
 Files: one current fixture/helper, one native replay test, one original corpus test;
 <=3 planned/12 production-test cap, no framework. One compact result/evidence/log.
-Checks: original52/prefix279, native20 split fixed first10/last10 by frozen insertion
-order (one worker/job), types, boundaries/research/archive/integrity/Git size.
+Checks: original52/prefix279, native20 in frozen insertion order: completed0..2 retained, then3..9,10..14 and15..19
+(one worker/job; measured-cost split, same gates), types, boundaries/research/archive/integrity/Git size.
 Budget1800s cumulative,600s/command,20 artifacts/5MiB. Concrete repairs retained;
 no source search, relaxed gates or routine extension. Stop checking at pass.
 Done: all52 original and20 current histories replayed, comparisons classified,
@@ -54,3 +54,6 @@ No UI/Campaign4, reduction or final whole-model acceptance.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
+
+M286 full corpus,20 current restores and classification PASS; see
+[compact result](ASSEMBLED_CHARACTER_M286_RESULT.md). No further M286 checks.

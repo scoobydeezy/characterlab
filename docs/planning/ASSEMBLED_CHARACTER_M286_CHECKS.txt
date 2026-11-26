@@ -1,0 +1,223 @@
+M286 original-corpus exit=1 elapsed=2.142s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillOriginalCarry.test.ts > original286: all52 frozen skill sources retain every279 complete-prefix hash
+   → expected '375cdd3e72c2e1e57b8023823856901d75272…' to be 'f44d073c8667fde78aee11114b72da47f5415…' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillOriginalCarry.test.ts > original286: all52 frozen skill sources retain every279 complete-prefix hash
+AssertionError: expected '375cdd3e72c2e1e57b8023823856901d75272…' to be 'f44d073c8667fde78aee11114b72da47f5415…' // Object.is equality
+
+Expected: "f44d073c8667fde78aee11114b72da47f5415c380e79eab7b1655ec7cec3d4d0"
+Received: "375cdd3e72c2e1e57b8023823856901d7527236a7b7002f4dd13ccddc30cec14"
+
+ ❯ src/test/assembledSkillOriginalCarry.test.ts:18:72
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  10:28:23
+   Duration  1.58s (transform 716ms, setup 0ms, collect 1.09s, tests 201ms, environment 0ms, prepare 101ms)
+
+
+
+Artifact reader correction: frozen hashes describe LF text; Windows checkout has CRLF. Raw hash differed, LF hash matches exactly; decoded canonical bytes unchanged. Validate canonical historical LF representation without modifying frozen files.
+M286 original-corpus-LF exit=0 elapsed=45.287s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillOriginalCarry.test.ts > original286: all52 frozen skill sources retain every279 complete-prefix hash
+M286 original52/prefix279 PASS
+
+ ✓ src/test/assembledSkillOriginalCarry.test.ts > original286: all52 frozen skill sources retain every279 complete-prefix hash 43362ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  10:28:52
+   Duration  44.77s (transform 715ms, setup 0ms, collect 1.09s, tests 43.36s, environment 0ms, prepare 102ms)
+
+
+M286 types-initial exit=0 elapsed=22.703s cap=600s timeout=False
+
+M286 native-first10 exit=1 elapsed=357.402s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillFamily.test.ts > first286: fixed receiver histories0..9
+M286 native 0 k0-p1-e1 [{"at":4,"sourceAt":1,"K":"0/1","engaged":true,"success":false,"practice":false,"anchor":"0/1","anchorAt":0,"count":0,"beliefBefore":"unknown","beliefAfter":"0/1","skillBytes":null},{"at":5,"sourceAt":2,"K":"0/1","engaged":true,"success":false,"practice":true,"anchor":"1/2","anchorAt":5,"count":1,"beliefBefore":"0/1","beliefAfter":"0/1","skillBytes":"b91ec793a121b954493bc8fff171940aba0a02f8183a24c15301e5d7735cd27c"},{"at":6,"sourceAt":3,"K":"1/2","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":6,"count":2,"beliefBefore":"0/1","beliefAfter":"0/1","skillBytes":"c1b2207df82f9394b43e0b04ed44fd1748d60a20b520a01f75f42bef9e8cdd42"},{"at":7,"sourceAt":4,"K":"1/1","engaged":true,"success":false,"practice":false,"anchor":"1/1","anchorAt":6,"count":2,"beliefBefore":"0/1","beliefAfter":"0/1","skillBytes":"c1b2207df82f9394b43e0b04ed44fd1748d60a20b520a01f75f42bef9e8cdd42"},{"at":8,"sourceAt":5,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":6,"count":2,"beliefBefore":"0/1","beliefAfter":"0/1","skillBytes":"c1b2207df82f9394b43e0b04ed44fd1748d60a20b520a01f75f42bef9e8cdd42"},{"at":9,"sourceAt":6,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":6,"count":2,"beliefBefore":"0/1","beliefAfter":"1/8","skillBytes":"c1b2207df82f9394b43e0b04ed44fd1748d60a20b520a01f75f42bef9e8cdd42"}]
+
+stdout | src/test/assembledSkillFamily.test.ts > first286: fixed receiver histories0..9
+M286 native 1 k0.5-p1-e1 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"1/1","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":5,"sourceAt":2,"K":"1/2","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":5,"count":2,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"5fa1a6e05bdd40881fc70545a51c5825e477cbe04ce1438568d5df3d239f9cc8"},{"at":6,"sourceAt":3,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":6,"count":3,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"09e7aa0362d1f6b247985bba7ae3e755d055cdc6b3bf92b9da7ae84f967153a6"},{"at":7,"sourceAt":4,"K":"1/1","engaged":true,"success":false,"practice":false,"anchor":"1/1","anchorAt":6,"count":3,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"09e7aa0362d1f6b247985bba7ae3e755d055cdc6b3bf92b9da7ae84f967153a6"},{"at":8,"sourceAt":5,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":6,"count":3,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"09e7aa0362d1f6b247985bba7ae3e755d055cdc6b3bf92b9da7ae84f967153a6"},{"at":9,"sourceAt":6,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":6,"count":3,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"09e7aa0362d1f6b247985bba7ae3e755d055cdc6b3bf92b9da7ae84f967153a6"}]
+
+stdout | src/test/assembledSkillFamily.test.ts > first286: fixed receiver histories0..9
+M286 native 2 k1-p1-e1 [{"at":4,"sourceAt":1,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":3,"count":2,"beliefBefore":"unknown","beliefAfter":"1/1","skillBytes":"fda322ddb7207372642a8a63aad6b0dac90e6df8b1a5b058a50773b6f85ef760"},{"at":5,"sourceAt":2,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":5,"count":3,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"8e63c83098eb2fec53726ad0114a5d0e33287da3613935f83591218d28307b6e"},{"at":6,"sourceAt":3,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":6,"count":4,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"c645a9dfd977f98a375d40f7d52c033b8933a8943e3720505deb91fe0c5b9639"},{"at":7,"sourceAt":4,"K":"1/1","engaged":true,"success":false,"practice":false,"anchor":"1/1","anchorAt":6,"count":4,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"c645a9dfd977f98a375d40f7d52c033b8933a8943e3720505deb91fe0c5b9639"},{"at":8,"sourceAt":5,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":6,"count":4,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"c645a9dfd977f98a375d40f7d52c033b8933a8943e3720505deb91fe0c5b9639"},{"at":9,"sourceAt":6,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":6,"count":4,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"c645a9dfd977f98a375d40f7d52c033b8933a8943e3720505deb91fe0c5b9639"}]
+
+
+
+Measured-cost command split: native0/1/2 each reached all assertions, exact terminal restore and durable receipt. Stopped first10 job deliberately at357.402s after third receipt, before cap; no claim that interrupted outer test passed. Remaining exact histories3..9 and10..19 run separately; no repeated passing scenarios, removed cases, changed comparisons or budget extension. Coverage audits retained full saves/source hashes, including these three receipts. Added explicit source impairment/difficulty archive checks and complete per-original semantic difference classification; original canonical prefix results remain unchanged.
+
+Before executing remaining histories10..19: split into10..14 and15..19, each fixed five-case batch, because measured two-input history3 costs48.153s plus collection. Original1800s cumulative and600s/command caps unchanged.
+M286 native3-through9 exit=0 elapsed=396.392s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillFamily.test.ts > native286_3
+M286 native 3 physical-0 [{"at":4,"sourceAt":1,"K":"0/1","engaged":true,"success":false,"practice":false,"anchor":"0/1","anchorAt":0,"count":0,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":null},{"at":5,"sourceAt":2,"K":"0/1","engaged":true,"success":false,"practice":false,"anchor":"0/1","anchorAt":0,"count":0,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":null}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_3 48153ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_4
+M286 native 4 physical-1 [{"at":4,"sourceAt":1,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":3,"count":2,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"fda322ddb7207372642a8a63aad6b0dac90e6df8b1a5b058a50773b6f85ef760"},{"at":5,"sourceAt":2,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":3,"count":2,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"fda322ddb7207372642a8a63aad6b0dac90e6df8b1a5b058a50773b6f85ef760"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_4 47091ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_5
+M286 native 5 impair-0 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":5,"sourceAt":2,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_5 47115ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_6
+M286 native 6 impair-0.5 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":false,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":5,"sourceAt":2,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_6 46630ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_7
+M286 native 7 belief-1 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"1/1","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":5,"sourceAt":2,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_7 48163ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_8
+M286 native 8 belief-2 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"0/1","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":5,"sourceAt":2,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"0/1","beliefAfter":"0/1","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_8 48160ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_9
+M286 native 9 skilled-insecure [{"at":4,"sourceAt":1,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":3,"count":2,"beliefBefore":"unknown","beliefAfter":"0/1","skillBytes":"fda322ddb7207372642a8a63aad6b0dac90e6df8b1a5b058a50773b6f85ef760"},{"at":5,"sourceAt":2,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":3,"count":2,"beliefBefore":"0/1","beliefAfter":"0/1","skillBytes":"fda322ddb7207372642a8a63aad6b0dac90e6df8b1a5b058a50773b6f85ef760"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_9 46029ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed | 19 skipped (26)
+   Start at  10:37:28
+   Duration  395.83s (transform 3.42s, setup 0ms, collect 64.14s, tests 331.34s, environment 0ms, prepare 101ms)
+
+
+M286 native10-through14 exit=0 elapsed=365.373s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillFamily.test.ts > native286_10
+M286 native 10 incompetent-confident [{"at":4,"sourceAt":1,"K":"0/1","engaged":true,"success":false,"practice":false,"anchor":"0/1","anchorAt":0,"count":0,"beliefBefore":"unknown","beliefAfter":"1/1","skillBytes":null},{"at":5,"sourceAt":2,"K":"0/1","engaged":true,"success":false,"practice":false,"anchor":"0/1","anchorAt":0,"count":0,"beliefBefore":"1/1","beliefAfter":"1/1","skillBytes":null}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_10 48904ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_11
+M286 native 11 practice-1 [{"at":4,"sourceAt":1,"K":"0/1","engaged":true,"success":false,"practice":true,"anchor":"1/2","anchorAt":4,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2549cdf9d56c80ec682e1c5f8a6be69871c9275824e30eb83af2243c97e0d57c"},{"at":5,"sourceAt":2,"K":"1/2","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":5,"count":2,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"5fa1a6e05bdd40881fc70545a51c5825e477cbe04ce1438568d5df3d239f9cc8"},{"at":6,"sourceAt":3,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":5,"count":2,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"5fa1a6e05bdd40881fc70545a51c5825e477cbe04ce1438568d5df3d239f9cc8"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_11 55780ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_12
+M286 native 12 impair-law-1 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_12 34447ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_13
+M286 native 13 blocked [{"at":4,"sourceAt":1,"K":"1/2","engaged":false,"success":false,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":5,"sourceAt":2,"K":"1/2","engaged":false,"success":false,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":6,"sourceAt":3,"K":"1/2","engaged":false,"success":false,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":7,"sourceAt":4,"K":"1/4","engaged":false,"success":false,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":8,"sourceAt":5,"K":"1/4","engaged":false,"success":false,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":9,"sourceAt":6,"K":"1/4","engaged":false,"success":false,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_13 81360ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_14
+M286 native 14 no-feedback [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":5,"sourceAt":2,"K":"1/2","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":5,"count":2,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"5fa1a6e05bdd40881fc70545a51c5825e477cbe04ce1438568d5df3d239f9cc8"},{"at":6,"sourceAt":3,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":6,"count":3,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"09e7aa0362d1f6b247985bba7ae3e755d055cdc6b3bf92b9da7ae84f967153a6"},{"at":7,"sourceAt":4,"K":"1/1","engaged":true,"success":false,"practice":false,"anchor":"1/1","anchorAt":6,"count":3,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"09e7aa0362d1f6b247985bba7ae3e755d055cdc6b3bf92b9da7ae84f967153a6"},{"at":8,"sourceAt":5,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":6,"count":3,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"09e7aa0362d1f6b247985bba7ae3e755d055cdc6b3bf92b9da7ae84f967153a6"},{"at":9,"sourceAt":6,"K":"1/1","engaged":true,"success":true,"practice":false,"anchor":"1/1","anchorAt":6,"count":3,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"09e7aa0362d1f6b247985bba7ae3e755d055cdc6b3bf92b9da7ae84f967153a6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_14 80241ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 21 skipped (26)
+   Start at  10:44:13
+   Duration  364.82s (transform 3.41s, setup 0ms, collect 63.69s, tests 300.73s, environment 0ms, prepare 101ms)
+
+
+M286 native15-through19 exit=0 elapsed=341.304s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillFamily.test.ts > native286_15
+M286 native 15 saturation [{"at":4,"sourceAt":1,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":4,"count":3,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"62b8d59fdf97f5798a03b6f1479eed393e9e5ae5137ddb923d138b523c225dda"},{"at":5,"sourceAt":2,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":5,"count":4,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"c7f9c755ca50d33c3ab4d7378339fec7206bb963f03eb32d104240ce3f03499f"},{"at":6,"sourceAt":3,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":6,"count":5,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"f572407692db4cf82f50c96c43c389acea0a69a12de0762e90c5c9c62175b66e"},{"at":7,"sourceAt":4,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":7,"count":6,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"d03997daa8753823ec577956c8695e6a9dc6a8481346fe611d3e8618aef63e7d"},{"at":8,"sourceAt":5,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":8,"count":7,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"d70dc29895aaac598ed71dbd8c64f28b0fac226c6f0384f88f21210ccd9f77ec"},{"at":9,"sourceAt":6,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":9,"count":8,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"5852602d7cdf591262eeddb9c7bcb1019c6cbc3877cc7e9a9a4f8b27293e0b60"},{"at":10,"sourceAt":7,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":10,"count":9,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"094f230fdd90e1b99bddde8208e0ce215b136ebd146c2a1bf56cd64a92927182"},{"at":11,"sourceAt":8,"K":"1/1","engaged":true,"success":true,"practice":true,"anchor":"1/1","anchorAt":11,"count":10,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"940cd6712d8ab7ac5e0ed975bfde6c5c8f74f81f7c6b6a6251fcbe2457458740"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_15 108712ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_16
+M286 native 16 contradiction-k0.5-p1-e1 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"1/1","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":5,"sourceAt":2,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"1/1","beliefAfter":"1/2","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"},{"at":6,"sourceAt":3,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"1/2","beliefAfter":"1/2","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_16 59211ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_17
+M286 native 17 threshold-0.4375 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_17 36483ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_18
+M286 native 18 threshold-0.5 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":true,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_18 36502ms
+stdout | src/test/assembledSkillFamily.test.ts > native286_19
+M286 native 19 threshold-0.5625 [{"at":4,"sourceAt":1,"K":"1/2","engaged":true,"success":false,"practice":false,"anchor":"1/2","anchorAt":3,"count":1,"beliefBefore":"unknown","beliefAfter":"unknown","skillBytes":"2dbc94b5d0d80c86528c857b4f1fddc1d630354248efb965e3ed329ac03341c6"}]
+
+ ✓ src/test/assembledSkillFamily.test.ts > native286_19 36170ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 21 skipped (26)
+   Start at  10:50:29
+   Duration  340.74s (transform 3.41s, setup 0ms, collect 63.26s, tests 277.08s, environment 0ms, prepare 102ms)
+
+
+M286 coverage-and-classification exit=1 elapsed=69.603s cap=240s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillFamily.test.ts > coverage286: all histories and named behavioral distinctions 3088ms
+   → Cannot read properties of undefined (reading 'kind')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillFamily.test.ts > coverage286: all histories and named behavioral distinctions
+TypeError: Cannot read properties of undefined (reading 'kind')
+ ❯ encodeValue src/substrate/canonicalEncoding.ts:136:17
+    134|   if (value === true) return output.push(Tag.True), undefined;
+    135|
+    136|   switch (value.kind) {
+       |                 ^
+    137|     case 'unsigned':
+    138|       output.push(Tag.Unsigned, ...encodeUnsigned(value.value));
+ ❯ Module.canonicalEncode src/substrate/canonicalEncoding.ts:101:3
+ ❯ Module.dataKey src/campaign2/canonicalData.ts:6:57
+ ❯ src/test/assembledSkillFamily.test.ts:88:169
+ ❯ src/test/assembledSkillFamily.test.ts:88:122
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 25 skipped (26)
+   Start at  10:56:45
+   Duration  69.02s (transform 3.44s, setup 0ms, collect 65.60s, tests 3.09s, environment 0ms, prepare 105ms)
+
+
+
+Evidence-reader repair: some trace projections are empty lists; archive lookup now checks list length before reading its label. All native executions/restores and behavioral cross-case assertions had already passed; no rerun of those scenarios, no missing evidence or changed gate. Rerun only failed archive/classification check.
+M286 corrected-coverage exit=0 elapsed=112.415s cap=140s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledSkillFamily.test.ts > coverage286: all histories and named behavioral distinctions 45859ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 25 skipped (26)
+   Start at  10:58:52
+   Duration  111.86s (transform 3.42s, setup 0ms, collect 65.64s, tests 45.86s, environment 0ms, prepare 106ms)
+
+
+M286 types-final exit=0 elapsed=25.483s cap=45s timeout=False
+
+M286 boundaries exit=0 elapsed=4.168s cap=20s timeout=False
+Reference boundary check passed.
+
+M286 research exit=0 elapsed=4.650s cap=20s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M286 archives exit=0 elapsed=2.759s cap=20s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+M286 git-size exit=0 elapsed=0.389s cap=10s timeout=False
+PASS: Git index contains no files at or above50,000,000 bytes.
