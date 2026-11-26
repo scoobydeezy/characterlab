@@ -1,0 +1,82 @@
+M289 types-initial exit=0 elapsed=24.201s cap=90s timeout=False
+
+M289 domain-and-free exit=0 elapsed=163.021s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledHabitControlCurrent.test.ts > domain289: current sensor and bounded mean cannot separate positive history from positive estimate 1841ms
+stdout | src/test/assembledHabitControlCurrent.test.ts > native289_free
+M289 PASS free [{"at":9,"motive":"1/1","habit":"15/16","held":false,"spare":"2","removed":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"resolution":"b5172d6c8f1f9f7b565e4acca1c83240ec78d131b4cf7b01d1dd56cc4ecaabe4"},{"at":10,"motive":"1/1","habit":"15/16","held":false,"spare":"2","removed":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"resolution":"487f03fe0e7d7c48616f6bbceed62abee5fa03b87ff14c95bc21fc65a7dcc4ef"},{"at":11,"motive":"1/1","habit":"15/16","held":false,"spare":"2","removed":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"resolution":"198aadeec8e2a159e1d3a3d7491b2dba4debd941bcf508597090c4560f3a99ee"}]
+
+ ✓ src/test/assembledHabitControlCurrent.test.ts > native289_free 92569ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  13:35:23
+   Duration  162.44s (transform 3.55s, setup 0ms, collect 67.65s, tests 94.41s, environment 0ms, prepare 107ms)
+
+
+M289 controlled-continuation exit=0 elapsed=265.850s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitControlCurrent.test.ts > native289_controlled
+M289 PASS controlled [{"at":9,"motive":"1/1","habit":"15/16","held":true,"spare":"1","removed":1,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"resolution":"6d895ae888da0d0220f9765920b768eba77eb3a0dc0cf8866d4c969a0ca9cd02"},{"at":10,"motive":"1/1","habit":"15/16","held":true,"spare":"1","removed":1,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"resolution":"e2d987b9e3c000b10c932094f2164d5a2850547160735270709d52210ddf4820"},{"at":11,"motive":"1/1","habit":"15/16","held":false,"spare":"2","removed":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"resolution":"198aadeec8e2a159e1d3a3d7491b2dba4debd941bcf508597090c4560f3a99ee"}]
+
+ ✓ src/test/assembledHabitControlCurrent.test.ts > native289_controlled 199426ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  13:38:25
+   Duration  265.28s (transform 3.48s, setup 0ms, collect 65.46s, tests 199.43s, environment 0ms, prepare 105ms)
+
+
+M289 alternate-cue-controls exit=0 elapsed=247.586s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitControlCurrent.test.ts > native289_other-cue
+M289 PASS other-cue [{"at":9,"motive":"1/1","habit":"0/1","held":false,"spare":"2","removed":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"resolution":"b5172d6c8f1f9f7b565e4acca1c83240ec78d131b4cf7b01d1dd56cc4ecaabe4"},{"at":10,"motive":"1/1","habit":"0/1","held":false,"spare":"2","removed":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"resolution":"487f03fe0e7d7c48616f6bbceed62abee5fa03b87ff14c95bc21fc65a7dcc4ef"},{"at":11,"motive":"1/1","habit":"0/1","held":false,"spare":"2","removed":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"resolution":"198aadeec8e2a159e1d3a3d7491b2dba4debd941bcf508597090c4560f3a99ee"}]
+
+ ✓ src/test/assembledHabitControlCurrent.test.ts > native289_other-cue 91799ms
+stdout | src/test/assembledHabitControlCurrent.test.ts > native289_controlled-other-cue
+M289 PASS controlled-other-cue [{"at":9,"motive":"1/1","habit":"0/1","held":true,"spare":"1","removed":1,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"resolution":"6d895ae888da0d0220f9765920b768eba77eb3a0dc0cf8866d4c969a0ca9cd02"},{"at":10,"motive":"1/1","habit":"0/1","held":true,"spare":"1","removed":1,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"resolution":"e2d987b9e3c000b10c932094f2164d5a2850547160735270709d52210ddf4820"},{"at":11,"motive":"1/1","habit":"0/1","held":false,"spare":"2","removed":0,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"resolution":"198aadeec8e2a159e1d3a3d7491b2dba4debd941bcf508597090c4560f3a99ee"}]
+
+ ✓ src/test/assembledHabitControlCurrent.test.ts > native289_controlled-other-cue 89447ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  13:43:02
+   Duration  247.03s (transform 3.48s, setup 0ms, collect 65.42s, tests 181.25s, environment 0ms, prepare 103ms)
+
+
+M289 independent-repeat exit=0 elapsed=146.504s cap=360s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledHabitControlCurrent.test.ts > repeat289: complete controlled run repeats exactly 80426ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  13:47:17
+   Duration  145.94s (transform 3.49s, setup 0ms, collect 65.14s, tests 80.43s, environment 0ms, prepare 103ms)
+
+
+M289 boundary exit=0 elapsed=3.409s cap=120s timeout=False
+Reference boundary check passed.
+
+M289 research exit=0 elapsed=3.570s cap=120s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M289 archives exit=0 elapsed=2.534s cap=120s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M289 integrity PASS: 5 lossless blocks / 27953046 decoded bytes; identical registry/S0/acquired histories; cross-cue full resolutions equal; source hashes retained; document/artifact limits pass. Packaging allowance30s.
+M289 git-size exit=0 elapsed=0.874s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.

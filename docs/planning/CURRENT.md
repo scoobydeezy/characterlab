@@ -1,59 +1,35 @@
-# Current work — M289 control over the current learned-action path
-Baseline33e9e762. Initial card38e48a40 retained; revised BEFORE code/native runs.
-Source review: reward sensor resolution10 floors proposed gain1 to0. Lowering
-precision to manufacture habit-only acceptance would change the tested domain.
-With <=16 mean samples and min positive10, any positive history entails mean>=1.
-Record the limitation instead of claiming independent habit behavior.
+# Current work — M289 complete; habit/expectation distinction unresolved
+The character suppresses a learned action under instruction and restores its
+eligibility after withdrawal, retaining its learned history.
+[M289 result](ASSEMBLED_CHARACTER_M289_RESULT.md): native A probability1/2 ->0 ->1/2;
+all observed seed0 choices B. Exact continuation/repeat pass. No changed-winner claim.
 
-## Bounded comparison
-Three capabilities/checks: prove the current-domain implication; actual control
-suppresses and releases the learned action; visible alternate cue distinguishes
-history activation from mean reward. Family12.9 remains open.
-One0.166 runtime/state/scheduler/save. MeanHistory/Residual, activation0, D3/Ramp,
-PeriodicDisuse and sensor precision10 fixed. No production/formal law changes.
-HABIT/CONTROL ledger and RO015 retained; old controls and failed initial proposal stay.
+Reference0.166 remains MeanHistory/Residual, activation0, D3/Ramp and
+PeriodicDisuse H4/half. No production/formal changes. Plan38e48a40 corrected
+before implementation at f0ed57a2; initial gain1 proposal preserved in Git.
+Four native cases cross cue/control; same registry/S0/acquired history.
+False cue removes habit activation but leaves full resolutions unchanged.
+Control works on the learned option; this does not establish habit-specific influence.
 
-Scenario M288 trained: social TASK with normal stand-in evidence1..3, body10/rate0,
-four actual A practices4..7, same physical/perceived gain1000. Information8 A0/B1000,
-both routes available; probes9..11; seed0. MeanA800/B1000, stored A history15/16.
-B is a genuine competing perceived reward option. No learned S0 or belief injection.
-All cases share workspace capacity6 (apparatus, not learned state); accepted control
-enabled. Explicit normal sleep evidence8..11: recovery after8, awake9..11, no exposure,
-all channels permitted, zero bias; load0. This makes readiness live, not assumed.
+## Next bounded decision
+Resolve reward expectation versus independent habit contribution before broader12.9.
+Current sensor precision10 and sample capacity16 make any positive habit history
+imply positive mean reward, which already admits the action. This is domain-specific,
+not a general redundancy/reduction claim. Do not tune precision to manufacture a pass.
+Existing LatestHistory controls separate estimate and habit, but also remove reasons
+for reward-seeking after zero correction (M227); they are not current native acceptance.
+Compare retained alternatives and identify affected12.2/12.9 replays before proposing
+a versioned reference change. Genuine alternative laws still require an owner ruling.
+No active implementation card; write and commit the next bounded card before coding.
 
-Four cases, same model/initial state:
-free; other-cue; controlled; controlled-other-cue.
-Cue false9..11 makes A activation0, retains the same learned journal/mean.
-Control is a normal instruction: adopt9, remind/maintain10, withdraw11.
-Replace inherited control/sleep sources; no training control goal.
-Before each gate assert motive/planner/candidates and control readiness live.
-Free cases: A admitted, positive exact native probability, actual chosen action executes.
-Controlled: A produced before filtering, then actually removed9/10, B probability1
-and execution;11 restores A eligibility/positive probability with unchanged history.
-Compare distributions, not uncoupled sampled winners. Cross-cue paired probabilities
-and full resolutions expected equal within each control condition.
-If later probabilities differ after different actions, inspect actual reason/identity
-inputs; do not claim unchanged values or tune the source to hide the interaction.
+M289 uses2 test/fixture files, three evidence/result/log artifacts.
+Verification within600s/command and1800s cumulative; no extension, law or scope waiver.
+No frozen dependency changed; retain prior controls instead of broad reruns.
+HABIT/CONTROL ledger and conditional obligations retained; no new Campaign3 verdict.
+Family12.9 remains open; E88/P21/N10/U13=132;21members/15families.
+Nine version-scoped accepted families; final whole-candidate replay remains required.
+One character/runtime/state/scheduler/save. No UI/Campaign4 or assembly acceptance.
 
-Domain proof: production rewardSense floors1 to0 at resolution10; exhaustive
-n1..16/positive-position controls on informedExpectation show minimum10 mean>=1.
-Residual all-zero history=0; any admitted habit implies an observed positive, hence
-positive mean in this bounded domain. Document no general reduction across domains,
-precision1, alternative laws or future signed/decaying estimates.
-Native comparisons show control of a learned option, not independent habit necessity.
-
-Files<=3 planned/12 cap: fixture, native/domain tests, optional receipt comparison.
-Retain full lossless saves. Restore controlled save8; compare every later settled
-state/output/trace/save. Independent repeat controlled prefix8/terminal.
-First domain/free; then control/cue in measured groups. One validation job;
-600s/command,1800s total,20 artifacts/5MiB. No seed/magnitude search.
-Checks: native/domain/continuation/repeat, types, boundary/research/archive,
-source/artifact integrity and Git size. Frozen dependencies unchanged; no broad rerun.
-Done: four cases and domain restriction classified with exact limits; update F12.9.
-Independent habit contribution remains an explicit unresolved gate before broader
-dependence/absence/craving/relapse integration. No family acceptance or UI/Campaign4.
-
-E88/P21/N10/U13=132;21members/15families;9 version-scoped accepted families.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
