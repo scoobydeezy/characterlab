@@ -1,3 +1,4 @@
+import {withBenefitState} from './delayedBenefit';
 import {memoryBound} from './intentionMemory';
 import {withItemWorldState} from './itemWorld';
 import {compileItemProbe} from './itemProbe';
@@ -60,6 +61,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  }).sort((a,b)=>key(a.key)<key(b.key)?-1:1);
  const byKey=new Map(tasks.map(t=>[key(t.key),t]));
  if(model.itemWorld?.task){const target=tasks.find(t=>key(t.key)===key(model.itemWorld!.task!))!;if(key(target.minimum)!==key({kind:'rational',numerator:1n,denominator:1n})||key(target.maximum)!==key(target.minimum))invalidModel('item location goal requires target1..1');}
+ if(model.benefit){const t=tasks.find(t=>key(t.key)===key(model.benefit!.task))!;if(t.activeFrom>2n||t.deadline<=6n||model.itemWorld?.task&&key(model.itemWorld.task)===key(t.key))invalidModel('benefit task window/independent criterion');}
  const C=tasks[0].character,identityKey=r(412,[C,typedIdentifier(1041,text('CommitmentFidelity'))]);
  if(model.tolerance&&!prior.base.reg.hasVariable(model.tolerance.variable))invalidModel('unknown tolerance regulatory variable');
  const identityK=readQ(f(rec(definition('task-reason-source'),436n),2n));
@@ -124,7 +126,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const believed=model.effectEvidence?withEffectBelief(qualified,C,model.effectEvidence):qualified;
  const associated=model.affectMemory?.learned?withAssociationState(believed,C,model.affectMemory.learned):believed;
  const maintainedState=model.workMaintenance?withWorkMaintenanceState(associated,C,model.workMaintenance,tasks.length,model.timeLimit):associated;
- const ownedState=model.itemWorld?withItemWorldState(maintainedState,model.itemWorld):maintainedState;
+ const itemState=model.itemWorld?withItemWorldState(maintainedState,model.itemWorld):maintainedState;
+ const ownedState=model.benefit?withBenefitState(itemState,model.benefit):itemState;
  const stateModel=model.extendedTime?Object.freeze({...ownedState,restoreState(bytes:Uint8Array){const s=restoreAuthoritativeState(decodeSuccessor(bytes));ownedState.validateState(s);return s;}}):ownedState;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
@@ -135,6 +138,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if(model.relationship&&e.path.rootStateTypeId===848n)invalidModel('initial relationship history must be absent');
    if(model.social&&e.path.rootStateTypeId===810n)invalidModel('initial person belief must be absent');
    if(model.communication&&e.path.rootStateTypeId===1072n)invalidModel('initial communication knowledge must be absent');
+   if(e.path.rootStateTypeId===1610n)invalidModel('initial benefit history must be absent');
    if(e.path.rootStateTypeId===1330n)invalidModel('initial rumination must be absent');
    if(e.path.rootStateTypeId===1351n)invalidModel('initial fatigue must be absent');
    if(model.control&&(e.path.rootStateTypeId===1014n||e.path.rootStateTypeId===373n&&e.path.fieldId===4n))invalidModel('initial control state must be absent');

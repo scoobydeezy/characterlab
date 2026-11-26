@@ -65,3 +65,22 @@ MEC011 availability/access,012..016 source/dice,017 expression,018 identity cont
 019 attempt/outcome,020 one-shot task and022 time remain PORT/CONTROL as appropriate.
 P3-012 waiting for larger benefit remains distinct from postponing current work.
 RO010/012/014/019/020 stay conditional; no reduction, obligation or family closure.
+
+## Criterion isolation — pre-acceptance implementation correction
+The bound goal no longer uses the scaffold numeric measurement as its fulfillment
+criterion or current appraisal. Generic measurement settlement excludes that task;
+ordinary deadlines/cancellation remain. At phase50 a traced benefit appraisal consumes
+only retained offer/receipt. Current receipt is unknown until observed; prospective
+values are known from the offer independently. Phase80 consumes this actual appraisal
+for option grounds, not a second unconnected valuation. The legacy numeric assessment
+for this task is Unavailable before receipt; a received amount gives its distance to
+the chosen promise. No unobserved placeholder or body-unit conversion is introduced.
+This one-shot contract retains received outcome and plan; receipt-based terminal goal
+retirement is not claimed by the original delayed qualification. Bound task window
+must include choice2 and the complete possible delivery window through6.
+
+Plan validation binds the selected action to the chosen intent and exact offer delay;
+1139 plan and1141 execution occurrences have unsigned payloads. Physical settlement
+requires its plan and exact due instant; retained receipts identify that plan's option
+and cannot predate delivery. A different motive using the same action cannot create
+a benefit plan without the live positive prospective value at the admitted choice.
