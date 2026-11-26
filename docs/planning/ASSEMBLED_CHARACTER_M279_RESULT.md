@@ -75,7 +75,10 @@ rollback, correction/carry, and classification. Types, boundaries, research, arc
 compressed integrity/document limits and Git-size pass. One test path;3 compact
 result/check/evidence artifacts below5MiB. Verification below1200s plus bounded
 packaging, <1800s; longest427.260s/600s,one worker/job,no extension. Final types caught an inferred empty-array type in the test report;
-add its explicit structural type without runtime changes. Preserve the failed check.
+add its explicit structural array type without runtime changes. The first annotation
+omitted its outer array; preserve both failed checks. Commit9c867930 was created
+before the second failure was inspected; this correction completes its type gate,
+without rewriting that history or repeating passed simulations.
 E84/P24/N11/U13=132;21members/15families. No new verdict, reduction, obligation closure,
 UI or assembly acceptance. Continue original procrastination20 and final intention
 carry/reconciliation under the owner's full Family12.7 authorization.

@@ -83,7 +83,16 @@ it('temporal278 saved-cohortA nonvacuous valuation and meaning',()=>{
 const fromHex=(s:string)=>decode(Uint8Array.from(s.match(/../g)!,x=>parseInt(x,16)));
 function nucleusDetails(v:CanonicalValue){return items(f(rec(f(rec(v,409n),3n),408n),3n),'list').map(v=>{const n=rec(v,407n),k=rec(f(n,1n),404n),roles=rec(f(n,2n),406n),signedNumber=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed')throw Error('signed');return String(v.value);};return {task:actionIndex(f(rec(f(k,1n),395n),2n)),base:fraction(f(roles,1n)),standing:fraction(f(roles,2n)),situation:fraction(f(roles,3n)),relevance:fraction(f(n,3n)),die:Number(uint(f(n,4n))),standingModifier:signedNumber(f(n,5n)),situationModifier:signedNumber(f(n,6n))};}).sort((a,b)=>a.task-b.task);}
 it('temporal279 complete correspondence and controls',()=>{
- const d=saved();const mapped:{name:string;ticks:{at:number;after:{status:string;progress:number}[];native:{nuclei:number;choice:number;probability:{task:number;p:string}[]};valuations:{task:number;value:string;factor:string}[]}[]}=[];
+ const d=saved();
+ const mapped: Array<{
+  name:string;
+  ticks:Array<{
+   at:number;
+   after:Array<{status:string;progress:number}>;
+   native:{nuclei:number;choice:number;probability:Array<{task:number;p:string}>};
+   valuations:Array<{task:number;value:string;factor:string}>;
+  }>;
+ }>=[];
  for(const run of native){
   const name=run.law+'/'+run.name,row=d[name];expect(row,name).toBeDefined();const save=rec(decode(unzip(row.save)),132n),out=items(f(save,12n),'list'),hs=horizons(out),actual=records(out,409n),prior=views.views.find((v:{law:string;name:string})=>v.law===run.law&&v.name===run.name).snapshot.rows;
   const ticks=row.ticks.map((t:{at:number;before:{status:string;progress:number}[];after:{status:string;progress:number}[];workspace:number[];receipts:unknown[]},i:number)=>{
