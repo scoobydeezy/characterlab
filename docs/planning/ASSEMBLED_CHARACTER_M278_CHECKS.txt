@@ -1,0 +1,164 @@
+M278 types1 exit=0 elapsed=23.965s cap=600s timeout=False
+
+M278 main1 exit=0 elapsed=124.185s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/main
+M278 HorizonRelative main [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":1,"physical":1}]},{"at":4,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":2,"physical":2}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/main 55462ms
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 admission and original source identity 2775ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 29 skipped (31)
+   Start at  21:25:55
+   Duration  122.52s (transform 3.34s, setup 0ms, collect 63.92s, tests 58.24s, environment 0ms, prepare 101ms)
+
+
+M278 cohort0-rest exit=0 elapsed=343.833s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 NoTemporalBias/main
+M278 NoTemporalBias main [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":1,"physical":1}]},{"at":4,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":2,"physical":2}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 NoTemporalBias/main 55737ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/shortWeak
+M278 HorizonRelative shortWeak [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":1,"physical":1}]},{"at":3,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":2,"physical":2}]},{"at":4,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":2,"physical":2}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/shortWeak 56545ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/longWeak
+M278 HorizonRelative longWeak [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":1,"physical":1}]},{"at":4,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":2,"physical":2}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/longWeak 51431ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/noShort
+M278 HorizonRelative noShort [{"at":1,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Open","progress":1,"physical":1}]},{"at":3,"choice":1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Open","progress":2,"physical":2}]},{"at":4,"choice":1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":5,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/noShort 38887ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/noLong
+M278 HorizonRelative noLong [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Absent","progress":0,"physical":0}]},{"at":3,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Absent","progress":0,"physical":0}]},{"at":4,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Absent","progress":0,"physical":0}]},{"at":5,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Absent","progress":0,"physical":0}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Absent","progress":0,"physical":0}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Absent","progress":0,"physical":0}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Absent","progress":0,"physical":0}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/noLong 30907ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/cancelShort
+M278 HorizonRelative cancelShort [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":-1,"goals":[{"status":"Cancelled","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Cancelled","progress":0,"physical":0},{"status":"Open","progress":1,"physical":1}]},{"at":4,"choice":1,"goals":[{"status":"Cancelled","progress":0,"physical":0},{"status":"Open","progress":2,"physical":2}]},{"at":5,"choice":1,"goals":[{"status":"Cancelled","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Cancelled","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Cancelled","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Cancelled","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 0 HorizonRelative/cancelShort 44223ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 25 skipped (31)
+   Start at  21:28:40
+   Duration  342.20s (transform 3.37s, setup 0ms, collect 64.04s, tests 277.73s, environment 0ms, prepare 102ms)
+
+
+M278 cohort1 exit=0 elapsed=406.511s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/cancelLong
+M278 HorizonRelative cancelLong [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Cancelled","progress":0,"physical":0}]},{"at":3,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Cancelled","progress":0,"physical":0}]},{"at":4,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Cancelled","progress":0,"physical":0}]},{"at":5,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Cancelled","progress":0,"physical":0}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Cancelled","progress":0,"physical":0}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Cancelled","progress":0,"physical":0}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Cancelled","progress":0,"physical":0}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/cancelLong 39252ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/shortUnavailable
+M278 HorizonRelative shortUnavailable [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":1,"physical":1}]},{"at":3,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":2,"physical":2}]},{"at":4,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":5,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/shortUnavailable 44920ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/longUnavailable
+M278 HorizonRelative longUnavailable [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":4,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":5,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"DeadlineMissed","progress":0,"physical":0}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/longUnavailable 39277ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/shortInaccessible
+M278 HorizonRelative shortInaccessible [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":1,"physical":1}]},{"at":3,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":2,"physical":2}]},{"at":4,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":5,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/shortInaccessible 42076ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/longInaccessible
+M278 HorizonRelative longInaccessible [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":4,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":5,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"DeadlineMissed","progress":0,"physical":0}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/longInaccessible 33587ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/missingReceipt
+M278 HorizonRelative missingReceipt [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Open","progress":0,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Open","progress":0,"physical":1},{"status":"Open","progress":0,"physical":1}]},{"at":4,"choice":0,"goals":[{"status":"Open","progress":0,"physical":2},{"status":"Open","progress":0,"physical":1}]},{"at":5,"choice":1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":2},{"status":"Open","progress":0,"physical":2}]},{"at":6,"choice":1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":2},{"status":"Open","progress":0,"physical":3}]},{"at":7,"choice":1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":2},{"status":"Open","progress":0,"physical":4}]},{"at":8,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":2},{"status":"DeadlineMissed","progress":0,"physical":4}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/missingReceipt 62191ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/hiddenBlocked
+M278 HorizonRelative hiddenBlocked [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":4,"choice":0,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":5,"choice":1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":6,"choice":1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":7,"choice":1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":8,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"DeadlineMissed","progress":0,"physical":0}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 1 HorizonRelative/hiddenBlocked 62174ms
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 saved-cohortA nonvacuous valuation and meaning 17281ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed | 24 skipped (32)
+   Start at  21:34:37
+   Duration  404.83s (transform 3.40s, setup 0ms, collect 63.64s, tests 340.76s, environment 0ms, prepare 103ms)
+
+
+M278 types-final exit=0 elapsed=24.035s cap=600s timeout=False
+
+M278 boundaries exit=0 elapsed=3.675s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M278 research exit=1 elapsed=3.867s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+M278 archives exit=0 elapsed=2.965s cap=120s timeout=False
+
+> characterlab@0.1.0 evidence:verify
+> node scripts/restore-evidence.mjs --verify
+
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+M278 research-corrected exit=1 elapsed=3.869s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: CURRENT obligation counts are stale
+    at file:///C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/scripts/check-research-obligations.mjs:75:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.20.0
+
+M278 research-table exit=0 elapsed=3.885s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}

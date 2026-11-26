@@ -1,4 +1,4 @@
-# Current work — M278 original temporal goal qualification
+# Current work — M278 original temporal qualification, package A
 M277 PASS at5eca643d; [result](ASSEMBLED_CHARACTER_M277_RESULT.md).
 Owner directs full Family12.7 under bounded self-approval; no UI/final-scope change.
 
@@ -34,17 +34,28 @@ cross-model sampled choices: model/run addresses differ; exact probability and a
 execution establish effects, all sampled sequence differences recorded/classified.
 Preserve immutable expressions, selective adoption/access/availability/strength,
 completion/cancellation/expiry, actual/false/missing receipts and whole hidden pairs.
-No passing solely on final status. Retained prior original243prefix checks remain;
+Reader correction: nested priority operand carries horizon report; assert presence.
+Revalidate already saved runs offline; retain initial empty extracted arrays. Original
+action/probability identifiers normalize by short/long correspondence, not raw order.
+No simulation/law/source change. No passing solely on final status. Retained prior original243prefix checks remain;
 new risk-based continuation main before choice/retirement and correction before update,
 repeat full main, terminal restore all25 native histories, rollback at changed horizon
 evaluation and common commit. Carry default0.163 source state/output unchanged.
 No every-prefix whole-corpus verification.
 
-Run native cohorts in fixed groups<=8, command<=600s, cumulative<=1800s, one job/worker.
+Measured first history55.462s including terminal restore; split before remaining runs.
+M278 executes first14 native plan entries (groups0/1); M279 executes remaining11
+and continuation/rollback/carry/cross-case classification. All25+2 remain mandatory.
+Same test/source mapping, no unrelated breadth, no incomplete family promotion.
+Run native cohorts in fixed groups<=7, command<=600s, cumulative<=1800s per package,
+one job/worker.
 Types/admission, affected functional checks, boundaries/research/archive/integrity/size.
 <=20 evidence files/5MiB. Full compressed terminal saves + compact tick correspondence;
 avoid duplicated full records already inside saves. Preserve failures/repairs.
-Done:25 native histories +2 frozen diagnostic dispositions, all findings classified,
-probability/meaning/privacy/lifecycle and continuation controls pass. Any unresolved
-difference blocks promotion. Next: procrastination20 and final intention reconciliation.
-Research obligations:0 active /18 conditional /0 unowned.
+Done M278:14 native histories, first-contest values/liveness and terminal restore pass,
+source/admission and repository checks pass; retained result explicitly partial.
+M279 completes11 histories +2 diagnostic dispositions and remaining controls above.
+Any unresolved difference blocks promotion. Then procrastination20/intention reconciliation.
+| Registry | Current count |
+|---|---|
+| Research obligations | **0 active / 18 conditional / 0 unowned** |
