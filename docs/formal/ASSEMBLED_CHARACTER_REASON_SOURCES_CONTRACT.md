@@ -261,3 +261,15 @@ M265 proves old threshold blocks all legal standalone Hyperbolic/Exponential lat
 benefits; its zero candidate also changes prior weak-motive nulls. M266 must classify
 those changes and preserve affected comparisons. No automatic family carry, reduction,
 discount-law selection, reference promotion or native delayed-benefit claim follows.
+
+
+## Reference adoption — owner ruling2026-11-25 after M273
+The owner approves global activation0/ZeroBase retained as the engineering reference,
+following the complete M266–M273 affected native replay. This intentionally admits
+weak motives previously filtered by37/100; it is not behavior-preserving or a verdict
+of universal superiority. Other calibration, SourceCoverage, standing0.85, modifiers
+and addressed dice remain fixed. Preserve0.159/37/100 and all old nulls as controls.
+The owner also selects Hyperbolic1/(1+d) for delayed benefits as an engineering
+default, no superiority verdict; NoDiscount and Exponential remain meaningful controls.
+Neither adoption grants Family12.7 or whole-candidate acceptance. M273 records the
+concrete rationale and effects; prior experiment status remains accurate history.

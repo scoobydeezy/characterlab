@@ -227,12 +227,12 @@ five C2 conditions and Experience mapping; no new denominator. C2 already uses O
 identify actual gaps. Historical gate status does not override later accepted closure.
 
 ## Current authorization boundary
+Owner2026-11-25 adopts global activation0 with ZeroBase retained and Hyperbolic1/(1+d) delayed reference after M273. Engineering defaults, no superiority verdict; other calibration unchanged, previous threshold/curves retained as controls. Continue Family12.7 under bounded self-approval; final scope/acceptance unchanged.
 Owner2026-11-19 delegates AFFECT completion under the same bounded self-approval rules. Owner2026-11-18 delegates memory-family completion with bounded self-approved amendments; laws, pinned scope and final acceptance remain. Prior0.85 adoption stands. Owner2026-11-21 delegates protective identity, explicit withholding and full sleep-control acceptance under bounded self-approval; original20 runs/52 prefixes and BRIEF-12.1-6 remain, with no whole12.1/intoxication waiver.
 Owner2026-11-17 delegates completion of MULTI, REL and LONG with bounded self-approved amendments after M149;18/21 mapped. Laws/scope unchanged; final acceptance open. Shared/UnitBudget; feedback TRUE.
 Original BIO/EPI controls/limits remain; final whole-candidate replay required. No UI, publishing or assembly acceptance.
 
 ## Owner ruling — unknown factors and live gates (2026-11-02)
-
 - Required external participant/observer absent: supply a stand-in through normal
   perceived behavior/reports; never inject placeholder belief. Unknown stays unknown
   until admitted evidence arrives. No autonomous multi-character dependency follows.

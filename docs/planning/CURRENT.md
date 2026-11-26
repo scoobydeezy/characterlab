@@ -1,57 +1,52 @@
-# Current work — M273 complete; reference ruling ready
-Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
-M273 complete: [result](ASSEMBLED_CHARACTER_M273_RESULT.md); all20/55 pass.
-Reference0.159/37/100 remains; global0/model0.160 remains experimental.
-No reference adoption, family promotion, law/completion waiver or UI work.
+# Current work — M274 native delayed benefits
+Owner2026-11-25 directs Family12.7 completion under bounded self-approval.
+Owner now adopts global activation0/ZeroBase retained and Hyperbolic1/(1+d)
+as engineering references; no superiority verdict. All other calibration stays fixed.
+M273 replay committed e9ab9a3a. Old0.159/37/100 and other discount curves remain controls.
 
-## Owner reference decision
-Recommend global activation0 with ZeroBase preserved, and Hyperbolic1/(1+d) as the
-delayed engineering default (no superiority verdict); old policy/curves remain controls.
-AGENTS/work order reserve this reference-law ruling to the owner. Not self-adopted.
-The full native activation replay is complete; Family12.7 still needs native delayed
-offer/wait/delivery/receipt and original procrastination/temporal correspondence.
+## M274 bounded card — shared offer to received outcome
+Capabilities: (1) two options for one retained goal compete through common reasons;
+(2) chosen benefit waits until due and physically settles exactly once;
+(3) only permitted receipts become retained knowledge, including known zero.
+Contract assembled-delayed-benefit/0.1; successor model/registry0.161, inherits0.160.
+One appended declaration binds one existing task, its two governed instructions and
+one benefit, fixed discount law/receipt mode. No new Need or conversion into body units.
+Knowledge, plan and world remain distinct leaves under their legitimate authorities.
+No second runtime/compiler/dice/state/save; actual shared intent and attempt feed delivery.
+Existing tasks and owners still execute. Binding changes the bound task's valuation,
+not scenario-name dispatch. Other motives and modifiers remain independently visible.
 
-## M273 completed card — original comparison retained
-Capabilities: (1) sensed intoxication changes control and actual choice;
-(2) private motor impairment, learned competence and actual execution stay distinct;
-(3) original continuation and hidden/biased-sensing controls remain intact.
-Two test/helper paths: assembledIntoxicationCohort.test.ts and existing activationBody
-adapter. No production/formal/original-fixture edits, new owner or alternate runtime.
-Reuse all20 original M220/M217 cases and55 prefixes (35 advancing/20 terminal).
-Full seeds0..3 x Sober/Slow/Fast; Full BlindSober/BlindSlow/FalseSober/Interference seed0,
-HighCompetence seed1; all three NoControl seed0. Original nonsocial tasks, body/sleep/
-reward parameters, prescribed sources/seeds and empty learned starting state stay fixed.
-Original58 slots normalize byte-exactly; empty Need/intention and one unbound private
-item extend composition as M271. No source retargeting or placeholder evidence.
-Compare every original receiving row: sensed axes/capacity/inhibition/maintenance,
-options/status/probabilities/choices/draws, identity/journal count/reward mean/reason,
-physical debt/burden/challenge/competence/motor permission and execution outcomes.
-Preserve original prefix locations and full queue through101; exact restored saves.
+Scope: F12.7 clauses5..8, delayed-public0.1, MEC011..020/022; RO010/012/014/019/020.
+Production/test paths (<=12): delayedBenefit.ts, model.ts, state.ts, inputs.ts,
+runtime.ts, execution.ts, delayedBenefitExecution.ts, test fixture and native test.
+Parameter slot62; empty binding preserves0.160 behavior. Strict source/state domains,
+authenticated children, common phase140 B0 settlement, trace reads/writes and rollback.
+Offer1 -> perceived/retained at120/140 -> ordinary decision2 -> plan100/attempt110 ->
+due physical delivery110 -> receipt120 -> retained outcome140.
+Offer amount/delay/prediction/cost and physical delivery/visibility are independent.
+No past promise, current waiting or hidden delivery can author a belief or extra motive.
 
-Keep all native liveness/actual decision/attempt joins and original causal comparisons.
-Slow/Fast kinetics, NoControl, HighCompetence, hidden and biased sensing, interference,
-held acquired history and full permitted observer equality remain required.
-M268 already executed current masked and known-zero reward boundaries plus exact
-continuation. Its unchanged-source lossless bytes are explicitly referenced and checked,
-including count1/mean600 mask, count2/mean300 zero, actual reason3/10 at10 and preserved
-activation-policy finding. Do not rerun them or forge the old M217 boundary schema.
-The aggregate has an explicit current-evidence branch with source hash and raw receiving.
-Write native results before correspondence; retain complete failed snapshots if needed.
-Changed identity/raw403 bytes are not cross-version byte-equality claims.
-No seed search, retuning or automatic equivalence label for a mismatch.
-MEC003/011..020/022, original law comparators and conditional obligations remain.
+Predeclared first comparison: original delayed main vs immediateLarge (seed7), all
+original eight offers/world frames unchanged; mapped onto one nonsocial goal and two
+existing actions, no learned S0, normal adoption and route evidence at1.
+Current body30/cap100/rate10; no action-body amount, no social task dependencies.
+Both motive rows must be live before probability comparison. Inspect actual decision,
+intent/attempt and due delivery rather than infer a selected option from reason strength.
+Main/long-delay/cost/uncertain use fixed laws/calibration; no seed/magnitude search.
+Controls: zero later value, unknown/unavailable/absent/denied offer, failed delivery,
+hidden and false receipt, later common evidence, repeated world input no redelivery.
+Use original laws as comparisons, never member-specific reference changes.
 
-Pre-split from original measured cohort: main seed0~1150s, other main~1260s,
-boundary/control~1255s. A1500s: three Full main seed0; B1600s: nine Full main seeds1..3;
-C1600s: five Full boundary cases plus three NoControl; D180s: aggregate/types/final checks.
-Total4880s; each package<=1800s, <=600s/command, one validation job and one test worker.
-At most12 production/test files,20artifacts/5MiB. No extensions or removed checkpoints.
-Checks: all20/55, original aggregate, retained M268 receiving/continuation, types,
-boundaries/research/archive/source/evidence integrity/document bounds/staged Git-size.
-Done: full fixed cohort and original comparisons classified on experimental0.160.
-Then make the explicit reference decision review concrete; native delayed-benefit
-offer/choice/wait/delivery/receipt and original procrastination/temporal mappings remain.
-Family12.7 remains the task. E82/P26/N11/U13=132;21members/15families;7 prior acceptances.
+Verification split before execution: A<=1800s admission/types + first native loop;
+B<=1800s boundary/control cases and repeat/save pending delivery; C<=1800s original
+correspondence/remaining fixed cohort if needed, with exact cases pinned before running.
+<=600s/command, one job/worker;20 evidence files/5MiB per package.
+Record failures before repairs, no silent assertion/fixture changes.
+Pass ends each package's verification. Final check boundaries/research/archive/Git-size.
+Done: actual shared offer/choice/wait/delivery/receipt loop plus controls classified.
+Original26runs/234prefixes and all-stage rollback remain final delayed acceptance gates;
+M274 is not family completion. Then continue original procrastination/temporal mappings.
+E82/P26/N11/U13=132;21members/15families;7 accepted on prior versions.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
