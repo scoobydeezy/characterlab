@@ -1,0 +1,53 @@
+M284 comparison exit=0 elapsed=4.536s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillDisuseProposal.test.ts > comparison284: distinguish disuse from commit gaps and historical post-execution timing
+M284 comparison PASS: captured native NoRust; HalfAtGap clock/order mismatch; proposed exact procedure time invariant
+
+ ✓ src/test/assembledSkillDisuseProposal.test.ts > comparison284: distinguish disuse from commit gaps and historical post-execution timing
+ ✓ src/test/assembledSkillDisuseProposal.test.ts > controls284: independent procedures, decay-before-practice recovery, interference, boundaries and canonical continuation
+stdout | src/test/assembledSkillDisuseProposal.test.ts > controls284: independent procedures, decay-before-practice recovery, interference, boundaries and canonical continuation
+M284 controls PASS: separate clocks; D3 recovery; interference retains phase; canonical round trips; million-unit exact domain
+
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  09:09:40
+   Duration  2.86s (transform 954ms, setup 0ms, collect 2.53s, tests 16ms, environment 0ms, prepare 103ms)
+
+
+M284 types exit=0 elapsed=24.427s cap=600s timeout=False
+
+M284 boundaries exit=0 elapsed=3.776s cap=600s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M284 research exit=0 elapsed=3.884s cap=600s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M284 preservation exit=0 elapsed=2.977s cap=600s timeout=False
+
+> characterlab@0.1.0 evidence:verify
+> node scripts/restore-evidence.mjs --verify
+
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M284 git-size exit=0 elapsed=0.866s cap=600s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+
+Mechanical PASS: source hash, document caps, three artifacts/15279 bytes before final receipt, exact five-file isolation. Measured40.466s plus30s bookkeeping allowance; no extension.

@@ -73,3 +73,59 @@ RO-C3-013/017 remain conditional; no new Campaign3 verdict or obligation closure
 [Work order](ASSEMBLED_CHARACTER_WORK_ORDER.md), Milestones and decision gates:
 “Alternatives retain controls and require an owner ruling”.
 The decision to adopt a genuine new reference law remains pending.
+
+## Measured comparison — plan04476483
+Two deterministic tests pass on the original M283 acquired operand K1/2,count1 at3.
+The saved native execution7 is live and successful under NoRust at difficulty1/2;
+its competence, engagement and impairment are read from the actual archived trace.
+No new learned history is injected into a running character.
+
+| Rule | Sparse commit history: K used at7 / at8 / at11 | Same history plus unrelated commits |
+|---|---|---|
+| NoRust | 1/2 / 1/2 / 1/2 | Unchanged by definition |
+| Historical HalfAtGap | 1/2 / 1/4 / 1/4 | 1/2 / 1/2 / 1/2 |
+| Proposed PeriodicDisuse | 1/4 / 1/4 / 1/8 | Exactly identical |
+
+Sparse times7,8,11 follow acquisition3; dense times4..11 fill the same interval.
+Historical rule executes at7 with old1/2, then halves to1/4 at consolidation.
+Its dense history never reaches a gap4. This is faithful historical semantics,
+classified as a law conflict with procedure-specific elapsed disuse, not a defect.
+The proposed computation predicts failure at7 at the same difficulty; it is NOT
+a native rust execution result. The NoRust computation matches the captured native one.
+
+Controls: boundary6 retains1/2, boundary7 gives1/4; a separate procedure practiced6
+retains1/2 at7. Mature qualifying practice7/8 gives3/8 then1/2 and predicts recovery9.
+No-practice/blocked eligibility does not reset the clock. Interference6 gives1/4
+with anchor3; cutoff7 still halves to1/8. At cutoff7, interference then mature
+practice gives1/8, rather than applying practice before decay.
+Zero/absence, saturation, future/out-of-domain time, invalid count and count100 cap
+are checked. Twelve future evaluation/practice comparisons agree after canonical
+round trips, including before the cutoff and after recovery; these are prototype
+tuple checks, not runtime restore. The million-unit computation remains exact with
+a250,001-bit denominator. Native performance/trace payload costs are still unqualified.
+[Evidence](ASSEMBLED_CHARACTER_M284_EVIDENCE.json) pins the source file/hash and
+preserved decoded save hashes. [Checks](ASSEMBLED_CHARACTER_M284_CHECKS.txt).
+
+## Concrete owner decision
+Recommend authorizing PeriodicDisuse/0.1 with H4/half as the provisional candidate
+for the next native integration milestone, retaining NoRust and exact HalfAtGap
+controls. The clock/phase behavior addresses the required disuse distinction;
+the numerical rate is only an engineering default, not a fitted or superior law.
+NoRust remains the production reference until that ruling. Adoption is not family
+acceptance: a new global skill law changes existing outcomes, so native integration
+must carry and classify the affected witnesses rather than retune them silently.
+Do not close12.8-4 or promote the132-clause index on these kernel results.
+
+One test file, no production/accepted-contract/control changes. No new verdict,
+owner, factory, scheduler, reduction or scope amendment. E87/P21/N11/U13 and
+8 accepted families remain unchanged. After final checks, stop this package
+for that single law decision; no further audit or comparison expansion is needed.
+
+Final verification: two comparison/control tests, types, boundaries, research,
+preserved evidence and staged Git-size checks PASS. No failures or reruns.
+Measured40.466s;30s packaging allowance gives70.466s/1800s; longest24.427s/600s.
+Three artifacts about16KB; all planning limits and source hashes verified. Exact
+five-file isolation from00c9b564 preserves production, contracts and prior evidence.
+The captured execution uses impairment0; broader impairment controls remain versioned
+M119 evidence to carry during native integration, not new M284 qualifications.
+No further verification is needed for this proposal package.

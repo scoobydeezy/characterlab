@@ -1,0 +1,206 @@
+{
+  "status": "PROPOSED kernel comparison only; no native rust acceptance",
+  "plan": "04476483",
+  "source": {
+    "path": "docs/planning/ASSEMBLED_CHARACTER_M283_EVIDENCE.json",
+    "sha256": "358d7e0472813075669ba28c8c045f79be60a7576fa18c12cd8f7f53fe6ad612",
+    "prefix": "0ed51f20f83a2fb56cc9c71b24471eb640db01c378bfe0640df4db0122d27002",
+    "terminal": "28911a1ed84c0311885a0eb31c0eb862cac7770b794da7576ffdabcdc7608f32"
+  },
+  "proposal": "PeriodicDisuse/0.1",
+  "H": "4",
+  "fraction": "1/2",
+  "reference": "0.165/NoRust unchanged",
+  "comparison": {
+    "actualNative7": {
+      "K": "1/2",
+      "success": true
+    },
+    "noRust": [
+      {
+        "at": "7",
+        "before": "1/2",
+        "after": "1/2",
+        "predictedExecution": true,
+        "count": "1"
+      },
+      {
+        "at": "8",
+        "before": "1/2",
+        "after": "1/2",
+        "predictedExecution": true,
+        "count": "1"
+      },
+      {
+        "at": "11",
+        "before": "1/2",
+        "after": "1/2",
+        "predictedExecution": true,
+        "count": "1"
+      }
+    ],
+    "halfAtGap": {
+      "sparse": [
+        {
+          "at": "7",
+          "before": "1/2",
+          "after": "1/4",
+          "predictedExecution": true,
+          "count": "1"
+        },
+        {
+          "at": "8",
+          "before": "1/4",
+          "after": "1/4",
+          "predictedExecution": false,
+          "count": "1"
+        },
+        {
+          "at": "11",
+          "before": "1/4",
+          "after": "1/4",
+          "predictedExecution": false,
+          "count": "1"
+        }
+      ],
+      "dense": [
+        {
+          "at": "4",
+          "before": "1/2",
+          "after": "1/2",
+          "predictedExecution": true,
+          "count": "1"
+        },
+        {
+          "at": "5",
+          "before": "1/2",
+          "after": "1/2",
+          "predictedExecution": true,
+          "count": "1"
+        },
+        {
+          "at": "6",
+          "before": "1/2",
+          "after": "1/2",
+          "predictedExecution": true,
+          "count": "1"
+        },
+        {
+          "at": "7",
+          "before": "1/2",
+          "after": "1/2",
+          "predictedExecution": true,
+          "count": "1"
+        },
+        {
+          "at": "8",
+          "before": "1/2",
+          "after": "1/2",
+          "predictedExecution": true,
+          "count": "1"
+        },
+        {
+          "at": "9",
+          "before": "1/2",
+          "after": "1/2",
+          "predictedExecution": true,
+          "count": "1"
+        },
+        {
+          "at": "10",
+          "before": "1/2",
+          "after": "1/2",
+          "predictedExecution": true,
+          "count": "1"
+        },
+        {
+          "at": "11",
+          "before": "1/2",
+          "after": "1/2",
+          "predictedExecution": true,
+          "count": "1"
+        }
+      ]
+    },
+    "periodic": {
+      "sparse": [
+        {
+          "at": "7",
+          "K": "1/4",
+          "predictedExecution": false
+        },
+        {
+          "at": "8",
+          "K": "1/4",
+          "predictedExecution": false
+        },
+        {
+          "at": "11",
+          "K": "1/8",
+          "predictedExecution": false
+        }
+      ],
+      "dense": [
+        {
+          "at": "4",
+          "K": "1/2",
+          "predictedExecution": true
+        },
+        {
+          "at": "5",
+          "K": "1/2",
+          "predictedExecution": true
+        },
+        {
+          "at": "6",
+          "K": "1/2",
+          "predictedExecution": true
+        },
+        {
+          "at": "7",
+          "K": "1/4",
+          "predictedExecution": false
+        },
+        {
+          "at": "8",
+          "K": "1/4",
+          "predictedExecution": false
+        },
+        {
+          "at": "9",
+          "K": "1/4",
+          "predictedExecution": false
+        },
+        {
+          "at": "10",
+          "K": "1/4",
+          "predictedExecution": false
+        },
+        {
+          "at": "11",
+          "K": "1/8",
+          "predictedExecution": false
+        }
+      ]
+    },
+    "boundary6": "1/2",
+    "boundary7": "1/4"
+  },
+  "controls": {
+    "secondProcedureAt7": "1/2",
+    "practice7": "3/8",
+    "practice8": "1/2",
+    "recovered9": true,
+    "interference6": {
+      "anchorAt": "3",
+      "K": "1/4",
+      "at7": "1/8"
+    },
+    "blockedReset": false,
+    "canonicalContinuations": 12,
+    "maxTime": "1000000",
+    "denominatorBits": 250001,
+    "receivingRuntimeRestore": "NOT TESTED: test-only representation",
+    "nativeRustConsumer": "NOT IMPLEMENTED"
+  }
+}
