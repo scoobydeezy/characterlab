@@ -1,37 +1,50 @@
-# Current work — M284 rust comparison complete; law ruling pending
-The tested proposal makes skill loss depend on each procedure's elapsed disuse,
-not unrelated simulation commits. It is not yet integrated.
-[Exact proposal, evidence and decision](ASSEMBLED_CHARACTER_M284_RESULT.md).
-Baseline00c9b564; plan04476483. Production remains0.165/NoRust.
+# Current work — M285 native skill disuse
+Owner2026-11-26 approves M284 PeriodicDisuse/0.1 and delegates Family12.8 completion
+under bounded self-approval. Baseline9e8055fd; old0.165/NoRust stays executable.
+One active package. Continue to a separate bounded family replay package if required.
 
-## Completed comparison
-Used M283's real acquired competence1/2 at3 and captured actual execution7.
-NoRust reproduces native7 success. Historical HalfAtGap uses1/2 at7, then halves;
-adding unrelated commits prevents that reduction. Its old semantics are preserved.
-PeriodicDisuse/0.1 proposes K(t)=Kanchor/2^floor((t-anchorAt)/4), before execution.
-Sparse and dense event histories agree:1/4 at7/8 and1/8 at11.
-Practice resets only that procedure's clock after unchanged interference/D3 gain.
-Qualifying mature practice7/8 restores1/2; other procedures, blocked eligibility,
-interference phase, zero/saturation, boundaries and canonical tuple continuation pass.
-The million-unit exact arithmetic check passes. H4/half are engineering defaults,
-not empirical calibration or a superiority verdict.
-No native rust execution, runtime restore or family acceptance is claimed.
+## Card before implementation
+Capability: actual acquired skill becomes rusty with procedure-specific elapsed
+time, fails execution, then recovers through actual practice in one character.
+Reference successor0.166; H4/half as approved engineering defaults, no superiority
+verdict. D3/Ramp and impairment/interference/observed-confidence laws unchanged.
+Shared785 owner stores timestamped anchor; same scheduler, trace and save.
+Audit: production785 reads are confined to skillExecution; state.ts/skill.ts validate.
+No view or cognition may mistake stored anchor competence for current competence.
+Version model/state/trace; old receiving contracts and frozen C2/C3 remain unchanged.
+Files: model.ts, state.ts, runtime.ts, skill.ts, skillExecution.ts; one fixture,
+native test and bounded control test (<=8 production/test paths; cap12).
+Formal contract and current/result/check/evidence documents only; no framework.
 
-## Concrete next decision
-Recommend authorizing this exact provisional candidate for native integration,
-retaining NoRust and HalfAtGap as controls. Genuine alternative-law adoption needs
-the owner ruling required by the work order; it is not routine fixture repair.
-After ruling, pin one bounded receiving card: existing785 owner, versioned tuple/
-trace, time-derived execution, common140 practice/interference, no decay event loop.
-Require native training/rust/recovery, independent procedures, unrelated-event
-invariance, privacy/ownership/rollback and continuation. Carry/classify affected
-M119/M152/M283 witnesses without silently retuning failed comparisons.
-No further comparison expansion or validation until a change justifies it.
-
-M283 practice-scene independence stands. Family12.8-4 remains absent.
-E87/P21/N11/U13=132;21members/15families;8 accepted families unchanged.
-Final whole-candidate replay, remaining family acceptance, UI/Campaign4 remain gated.
-No active validation after final checks. No production/accepted-contract changes.
+Predeclared sources: M283 current nonsocial three-task fixture, body30/rate0, seed0,
+normal scene/performance inputs. A/B have independent procedures. Attempts:
+A3 practice phase0/difficulty0; A4 probe1/2; B6 practice0/difficulty0;
+A7/A8 practice phase4/difficulty1/2; B9 probe1/2; A10 probe1/2.
+Expected rust A7=1/4 fails, after7=3/8, after8=1/2; B9=1/2 succeeds,
+A10=1/2 succeeds. Prior A4 succeeds. Live attempted action/procedure/actual
+Applied-or-Blocked output required at each compared point; no authored learning.
+Dense adds unrelated body samples5/8; sparse keeps original memory/scene schedule.
+Compare skill anchors/effective competence/actual execution, not all cognition.
+Old0.165 same history is NoRust control; each difference gets exact equation/phase.
+Hidden performance report cannot block procedural learning or expose skill to beliefs.
+Blocked practice and explicit interference preserve their approved eligibility/order.
+Repeat and restore4 before cutoff and8 after recovery: full-byte continuation to
+natural quiescence (cap128 fails). Common140 reached-fault rollback; owner/foreign
+path/learned S0/malformed anchor/version negatives. Million-unit domain and trace
+size must remain legal; run a live near-limit execution if the source grammar permits.
+Retain old M283 lost fixture byte-for-byte against its archived prefix/terminal.
+Existing M284 operand comparison remains control; no final corpus replay yet.
+Checks: native gate + controls, affected old exact carry, types, boundaries,
+research, archives/hash/document limits and Git size. One job/worker at a time.
+Budget <=600s/command, <=1800s cumulative, <=20 evidence files/5MiB.
+Repair concrete bugs/setup errors locally with failures retained; no seed/parameter
+search or relaxed acceptance. Stop verification at pass; no routine extensions.
+Done: native rust/recovery, independent clocks, invariance, boundaries and persistence
+pass on0.166. Then finish Family12.8's complete clause/corpus carry in next bounded
+package without unrelated breadth. No acceptance from M285 alone.
+Reference ledger skill/LONG and RO-C3-013/017 dispositions consulted/preserved.
+Current denominator E87/P21/N11/U13=132,21members/15families;8 accepted families.
+No UI/Campaign4, new factory/state owner, reduction or scope change.
 
 | Registry | Current count |
 |---|---|
