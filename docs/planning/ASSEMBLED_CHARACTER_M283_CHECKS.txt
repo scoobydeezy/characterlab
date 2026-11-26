@@ -1,0 +1,159 @@
+M283 types exit=1 elapsed=35.405s cap=600s timeout=False
+src/test/assembledSkillMemory.test.ts(60,74): error TS2345: Argument of type 'readonly CanonicalValue[]' is not assignable to parameter of type 'CanonicalValue'.
+  Property 'kind' is missing in type 'readonly CanonicalValue[]' but required in type '{ readonly kind: "map"; readonly entries: readonly (readonly [CanonicalValue, CanonicalValue])[]; }'.
+
+M283 primary exit=1 elapsed=78.710s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillMemory.test.ts > primary283: actual practice scene is lost while learned competence still changes execution 3747ms
+   → identity context time/phase/duplicate/opportunity
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillMemory.test.ts > primary283: actual practice scene is lost while learned competence still changes execution
+SchedulerContractError: identity context time/phase/duplicate/opportunity
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ src/assembled/inputs.ts:121:338
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:121:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledSkillMemory.ts:33:29
+ ❯ src/test/assembledSkillMemory.test.ts:49:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 skipped (7)
+   Start at  08:41:16
+   Duration  76.58s (transform 3.61s, setup 0ms, collect 72.29s, tests 3.75s, environment 0ms, prepare 296ms)
+
+
+
+SELF-APPROVED SETUP REPAIR: removing only opportunity5 left its required identity/self contexts orphaned. Remove the entire inherited input frame5; keep the predeclared retention event5 and attempts3/7. No laws, outcomes, seeds or gate changed. Initial type error wrapped the report array in canonical list.
+M283 primary-corrected-frame exit=0 elapsed=132.562s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillMemory.test.ts > primary283: actual practice scene is lost while learned competence still changes execution
+M283 arm lost K 1/2 episode 0e30b88c125a918fedf937785405daa65dbc40e9b95ed2bce547ea6177fb8152 terminal 101
+
+stdout | src/test/assembledSkillMemory.test.ts > primary283: actual practice scene is lost while learned competence still changes execution
+M283 arm retained K 1/2 episode 0e30b88c125a918fedf937785405daa65dbc40e9b95ed2bce547ea6177fb8152 terminal 101
+
+stdout | src/test/assembledSkillMemory.test.ts > primary283: actual practice scene is lost while learned competence still changes execution
+M283 arm untrained K 0/1 episode 0e30b88c125a918fedf937785405daa65dbc40e9b95ed2bce547ea6177fb8152 terminal 101
+
+ ✓ src/test/assembledSkillMemory.test.ts > primary283: actual practice scene is lost while learned competence still changes execution 61582ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:42:57
+   Duration  130.88s (transform 3.53s, setup 0ms, collect 68.95s, tests 61.58s, environment 0ms, prepare 102ms)
+
+
+M283 controls exit=0 elapsed=132.464s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillMemory.test.ts > controls283: repeat and restore before episode loss; denied report never creates the action annex
+M283 controls PASS
+
+ ✓ src/test/assembledSkillMemory.test.ts > controls283: repeat and restore before episode loss; denied report never creates the action annex 61994ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 6 skipped (7)
+   Start at  08:45:51
+   Duration  130.75s (transform 3.53s, setup 0ms, collect 68.39s, tests 61.99s, environment 0ms, prepare 106ms)
+
+
+M283 archived-owner-check exit=1 elapsed=73.091s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillMemory.test.ts > evidence283: saved causal bytes bind episode removal and procedural execution to their actual owners 1134ms
+   → Cannot read properties of undefined (reading 'kind')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillMemory.test.ts > evidence283: saved causal bytes bind episode removal and procedural execution to their actual owners
+TypeError: Cannot read properties of undefined (reading 'kind')
+ ❯ encodeValue src/substrate/canonicalEncoding.ts:136:17
+    134|   if (value === true) return output.push(Tag.True), undefined;
+    135|
+    136|   switch (value.kind) {
+       |                 ^
+    137|     case 'unsigned':
+    138|       output.push(Tag.Unsigned, ...encodeUnsigned(value.value));
+ ❯ Module.canonicalEncode src/substrate/canonicalEncoding.ts:101:3
+ ❯ Module.dataKey src/campaign2/canonicalData.ts:6:57
+ ❯ src/test/assembledSkillMemory.test.ts:95:131
+ ❯ src/test/assembledSkillMemory.test.ts:95:84
+ ❯ src/test/assembledSkillMemory.test.ts:95:62
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 skipped (8)
+   Start at  08:48:32
+   Duration  71.35s (transform 3.68s, setup 0ms, collect 69.88s, tests 1.14s, environment 0ms, prepare 104ms)
+
+
+
+Archive-reader repair: skip empty canonical list projections before reading label. Also verify denied-report scene formation is live from preserved trace4, so the missing action annex cannot pass vacuously. No simulation or comparison changes.
+M283 archived-owner-corrected exit=0 elapsed=73.269s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillMemory.test.ts > evidence283: saved causal bytes bind episode removal and procedural execution to their actual owners
+M283 archived trace PASS: episodic removal owner; one procedural acquisition; actual execution reads785 without346; full hashes verified
+
+ ✓ src/test/assembledSkillMemory.test.ts > evidence283: saved causal bytes bind episode removal and procedural execution to their actual owners 1957ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 7 skipped (8)
+   Start at  08:50:08
+   Duration  71.57s (transform 3.52s, setup 0ms, collect 69.28s, tests 1.96s, environment 0ms, prepare 103ms)
+
+
+M283 final-types exit=0 elapsed=36.858s cap=600s timeout=False
+
+M283 boundaries exit=0 elapsed=3.899s cap=600s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M283 research exit=0 elapsed=4.161s cap=600s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M283 preservation exit=0 elapsed=3.007s cap=600s timeout=False
+
+> characterlab@0.1.0 evidence:verify
+> node scripts/restore-evidence.mjs --verify
+
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M283 git-size exit=0 elapsed=0.868s cap=600s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
+
+Final mechanical receipt: four decoded archive blocks/3350561 bytes verified; planning caps and frozen-path isolation pass. Bookkeeping allowance30s; total604.294s. Check-log trailing display whitespace normalized without removing diagnostic text.
