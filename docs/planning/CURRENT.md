@@ -23,10 +23,13 @@ adopt1, tasks1unit before5 and3units before8, long opening5. Actual choices/rece
 supply all progress. Add permitted cancellation of short at4 (actual completing
 receipt), or at3 (no completing receipt), or denied request4. Completing receipt must
 win without two writes; cancellation otherwise persists while the sibling continues.
-Hidden-receipt cancellation4 must cancel, never consult physical truth.
+Hidden-receipt cancellation4 and changed hidden physical success must cancel,
+with complete observer equality. Five histories, no new law or breadth.
 Precondition: target Open immediately before each request and comparison has an
 actual attempted/received positive completion where claimed. No authored progress.
-No seeds/magnitudes searched. Null differences remain recorded.
+No seeds/magnitudes searched. Null differences remain recorded. First tests read
+cancellation results from public outputs; correct reader to actual trace projection,
+retaining the failed log. No scenario, mechanism or acceptance change.
 
 Preserve source and full saves, actual receipt/goal/cancellation trace and later choice.
 Exact repeat and restore before receipt/cancellation through termination; inject fault
@@ -34,7 +37,7 @@ at shared140 and before commit to catch partial retirement. Admit old0.162 uncha
 empty/unused new receiving must preserve M276 primary state/output behavior.
 Types, boundaries/research/archive/integrity/Git-size. <=1800s total, <=600s command,
 one job/worker; <=20 evidence files/5MiB. No extension by default.
-Done: four histories, precedence/independence/privacy, exact continuation/rollback and
+Done: five histories, precedence/independence/privacy, exact continuation/rollback and
 old-policy carry pass. Next package: fixed horizon comparator and original temporal27;
 then original procrastination20 and full family reconciliation. No family pass yet.
 

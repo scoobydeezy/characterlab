@@ -1,0 +1,77 @@
+M277 types1 exit=0 elapsed=24.043s cap=120s timeout=False
+
+M277 lifecycle1 exit=1 elapsed=132.205s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCountedSettlement.test.ts > settle277 complete actual receipt and cancellation 15210ms
+   → expected undefined to be defined
+ × src/test/assembledCountedSettlement.test.ts > settle277 early actual receipt and cancellation 9540ms
+   → expected undefined to be defined
+ × src/test/assembledCountedSettlement.test.ts > settle277 denied actual receipt and cancellation 13577ms
+   → expected undefined to be defined
+ × src/test/assembledCountedSettlement.test.ts > settle277 hidden actual receipt and cancellation 13428ms
+   → expected undefined to be defined
+ × src/test/assembledCountedSettlement.test.ts > settle277 hiddenFailed actual receipt and cancellation 13372ms
+   → expected undefined to be defined
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCountedSettlement.test.ts > settle277 complete actual receipt and cancellation
+ FAIL  src/test/assembledCountedSettlement.test.ts > settle277 early actual receipt and cancellation
+ FAIL  src/test/assembledCountedSettlement.test.ts > settle277 denied actual receipt and cancellation
+ FAIL  src/test/assembledCountedSettlement.test.ts > settle277 hidden actual receipt and cancellation
+ FAIL  src/test/assembledCountedSettlement.test.ts > settle277 hiddenFailed actual receipt and cancellation
+AssertionError: expected undefined to be defined
+ ❯ src/test/assembledCountedSettlement.test.ts:27:247
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ Test Files  1 failed (1)
+      Tests  5 failed | 6 skipped (11)
+   Start at  20:58:07
+   Duration  130.53s (transform 3.44s, setup 0ms, collect 65.05s, tests 65.13s, environment 0ms, prepare 102ms)
+
+
+M277 lifecycle2 exit=0 elapsed=193.724s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 complete actual receipt and cancellation
+M277 complete [{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 complete actual receipt and cancellation 26235ms
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 early actual receipt and cancellation
+M277 early [{"status":"4","progress":"0","world":"0"},{"status":"2","progress":"3","world":"3"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 early actual receipt and cancellation 21370ms
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 denied actual receipt and cancellation
+M277 denied [{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 denied actual receipt and cancellation 24675ms
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 hidden actual receipt and cancellation
+M277 hidden [{"status":"4","progress":"0","world":"1"},{"status":"3","progress":"0","world":"5"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 hidden actual receipt and cancellation 27537ms
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 hiddenFailed actual receipt and cancellation
+M277 hiddenFailed [{"status":"4","progress":"0","world":"0"},{"status":"3","progress":"0","world":"0"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 hiddenFailed actual receipt and cancellation 27570ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 6 skipped (11)
+   Start at  21:00:50
+   Duration  192.01s (transform 3.40s, setup 0ms, collect 64.27s, tests 127.39s, environment 0ms, prepare 104ms)
+
+
+M277 continuation exit=0 elapsed=231.778s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 repeat continuation rollback and carry 156035ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  21:04:13
+   Duration  229.88s (transform 4.06s, setup 0ms, collect 73.36s, tests 156.04s, environment 0ms, prepare 121ms)
