@@ -1,33 +1,46 @@
-# Current work — M283 practice-memory independence passed
-The character can lose its detailed observed practice episode and still execute
-using acquired competence. The same later attempt fails without prior learning.
-[Result](ASSEMBLED_CHARACTER_M283_RESULT.md); plan0cd8ef2f, baseline32586c99.
-Candidate0.165; no production code or psychological law changed.
+# Current work — M284 rust law comparison
+Baseline00c9b564; production reference0.165/NoRust unchanged.
+Owner2026-11-26 continuation authorizes preparing the next bounded Family12.8 step.
+M283 proves detailed practice-scene independence; rust12.8-4 remains absent.
 
-## Completed gate
-Actual practice3 raises competence0 ->1/2. Observed action/scene3/4 forms the same
-detailed episode in trained and untrained arms. Accepted capacity pressure5 removes
-that episode in loss arms. Actual execution7 reads its own skill and succeeds only
-with acquired competence; retained versus lost detail does not change the result.
-No later practice; live denied-report control learns without an action-memory annex.
-Episodic removal and procedural update have separate verified owners.
-Full-byte repeat and restore4 through natural terminal101 pass; lossless saves retained.
-This is detailed episodic loss, not erasure of performance-belief provenance.
-Initial admission/type/archive-reader failures and repairs remain in the check log.
+## Card pinned before code
+Capability: a concrete, reviewable procedure-specific disuse proposal, compared
+with NoRust and exact historical HalfAtGap. This package does not integrate/adopt it.
+One test file, zero production changes; one compact result containing exact proposal,
+checks/evidence, CURRENT only. No register expansion or coverage promotion.
+Use actual acquired K1/2,count1 at3 and actual execution operands7 from preserved
+M283 prefix/terminal saves, verified by original hashes. No invented native history.
+Proposal PeriodicDisuse/0.1: H=4 model-time units; effective competence
+K(t)=Kanchor/2^floor((t-anchorAt)/H), exact arithmetic; current competence before
+execution. Only same-procedure qualifying practice resets anchorAt to now after
+existing interference then D3/Ramp gain. Nonpractice interference preserves the
+decay-boundary phase. Query/denied attempt/unrelated activity neither reset nor write.
+Kanchor is stored checkpoint competence, not current competence; count cumulative.
+No autonomous decay events. Proposed shared-owner extension, not another store.
+H4/half are engineering comparison defaults without superiority verdict.
+Full proposal and receiving obligations in M284_RESULT before test implementation.
 
-## Remaining direction
-Family12.8-5 has a direct witness. E87/P21/N11/U13=132;21members/15families.
-Eight families remain accepted; Family12.8 and whole-character acceptance remain open.
-Next12.8 gap: formerly skilled but rusty. NoRust is still the reference.
-Historical HalfAtGap measures inter-commit gaps, not time since procedure practice;
-unrelated shared-simulation activity can prevent its trigger. Do not silently port it
-as a disuse clock or claim explicit interference satisfies rust.
-Next bounded card should compare a precise procedure-specific disuse proposal with
-NoRust/HalfAtGap, including irrelevant-activity invariance, independent procedures,
-recovery and continuation. Genuine alternative reference adoption needs owner ruling.
-Prior D3/Ramp, activation0/ZeroBase, Hyperbolic and HorizonRelative remain unchanged.
-No active validation after final checks; no UI, browser work, Campaign4 or reduction.
-Stop verification after pass; preserve previous family gates and failed evidence.
+Comparison: acquired at3; sparse opportunities7,8,11 versus dense4,5,6,7,8,9,10,11.
+Compare each rule's pre-execution K and post-commit K; original HalfAtGap applies
+after execution. NoRust must reproduce M283 actual7 outcome from captured operands.
+New proposal must be invariant to extra read-only events; historical mismatch
+is retained as a measured counterexample, not called an implementation defect.
+Separate procedure last practiced6 stays independent. Mature practice7/8 recovers
+through unchanged D3 increments; blocked/no-practice, impairment and interference
+remain distinct. Boundary6/7/11, zero/saturation, invalid future time and count cap.
+Canonical state round trip at6 and8 must preserve later proposed computations.
+These are operand/kernel and representation checks, not native continuation or
+an integrated runtime consumer. No Family12.8-4 E/acceptance from these checks.
+Validation: targeted test, types, boundaries, research, preserved evidence, Git size.
+Risk mapping: global clock coupling; retroactive execution; cross-procedure reset;
+practice-before-rust error; interference clock reset; loss of anchor at restore;
+claiming a kernel comparison supplies integrated evidence.
+Budget <=1 test file, <=20 evidence files/5MiB, <=600s per command/1800s total.
+One worker/job; no simulation rerun or parameter/seed search. Stop on declared pass.
+Done: tested exact proposal, preserved controls/differences, receiving plan and
+one concrete owner law decision. Work order reserves genuine reference alternatives.
+No UI, Campaign4, new scheduler/factory, reduced pinned scope or historical edits.
+E87/P21/N11/U13=132;21members/15families;8 families accepted.
 
 | Registry | Current count |
 |---|---|
