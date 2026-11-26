@@ -1,5 +1,5 @@
 # Cue-maintained work and fixed temporal scope
-assembled-work-cue/0.1-candidate and assembled-character-horizon/0.3-candidate.
+assembled-work-cue/0.1 (candidate) and assembled-character-horizon/0.3-candidate.
 Model/registry0.165 inherits0.164. This ports procrastination-public/0.2 operations
 into existing workspace, knowledge, priority and horizon composition.
 
@@ -13,7 +13,8 @@ The actual authenticated observation may feed40 in the same instant and is retai
 by the same knowledge owner at140. No persistent current-observation side store.
 For each eligible bound goal, a present admitted reminder acquires access; prior
 selected access plus current maintenance support retains it. Without either it is
-ineligible. Apply existing shared capacity/ranking after that gate. An ended goal
+ineligible. Apply existing shared capacity/ranking after that gate. A retained uncued card without current ranking evidence uses the
+existing neutral ordering rank0, not an authored importance belief. An ended goal
 cannot acquire/retain access. Unbound tasks retain ordinary eligibility.
 No current observation supplies no cue/support; legacy behavior remains unchanged.
 Workspace trace discloses the actual safe occurrence it consumes. Initial authored

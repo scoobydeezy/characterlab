@@ -14,25 +14,25 @@ import {KNOWLEDGE_OWNER} from './strategy';
 import {WORKSPACE_OWNER} from './control';
 import type {compileCampaign2StateModel} from '../campaign2/stateModel';
 import type {WorkspaceTask} from '../campaign2/cognitiveTransforms';
-export const WORK='assembled-work-maintenance/0.1';
+export const WORK='assembled-work-maintenance/0.1',WORK_CUE='assembled-work-cue/0.1';
 export const WORK_SOURCE=sid(1001,'event/assembled-work-board'),WORK_OBSERVE=sid(1001,'event/assembled-work-observe'),WORK_LEARN=sid(1001,'event/assembled-work-learn');
 const eq=(a:CanonicalValue,b:CanonicalValue)=>key(a)===key(b),fp=(e:ScheduledEvent)=>key(scheduledEventValue(e));
 const require=(b:boolean,s:string)=>{if(!b)invalidModel('work maintenance '+s);};
 const fail=(s:string):never=>{throw new SchedulerContractError('INPUT_NOT_ADMITTED','work maintenance '+s);};
-export function compileWorkMaintenance(v:CanonicalValue,tasks:readonly CanonicalValue[]){
- const a=items(v,'list');require(a.length===3&&txt(a[0])===WORK&&typeof a[1]==='boolean','declaration');
- const bindings=items(a[2],'list');require(bindings.length<=5&&new Set(bindings.map(key)).size===bindings.length&&bindings.every(t=>tasks.some(x=>eq(t,x))),'bindings');
- return {support:a[1]===true,bindings:[...bindings]};
+export function compileWorkMaintenance(v:CanonicalValue,tasks:readonly CanonicalValue[],cueEnabled=false):{support:boolean;bindings:CanonicalValue[];cue?:boolean}{
+ const a=items(v,'list'),cue=txt(a[0])===WORK_CUE;require(cue?cueEnabled&&a.length===2:a.length===3&&txt(a[0])===WORK&&typeof a[1]==='boolean','declaration');
+ const bindings=items(a[cue?1:2],'list');require(bindings.length<=5&&(!cue||bindings.length>0)&&new Set(bindings.map(key)).size===bindings.length&&bindings.every(t=>tasks.some(x=>eq(t,x))),'bindings');
+ return {support:!cue&&a[1]===true,bindings:[...bindings],cue};
 }
 export type WorkMaintenance=ReturnType<typeof compileWorkMaintenance>;
 export function workBoard(v:CanonicalValue,settings:WorkMaintenance){
- const a=items(v,'list');require(a.length===5&&txt(a[0])===WORK&&a.slice(1,4).every(v=>typeof v==='boolean')&&settings.bindings.length>0,'board');
+ const a=items(v,'list');require(a.length===5&&txt(a[0])===(settings.cue?WORK_CUE:WORK)&&a.slice(1,4).every(v=>typeof v==='boolean')&&settings.bindings.length>0,'board');
  const cards=items(a[4],'list'),seen=new Set<bigint>();require(cards.length<=settings.bindings.length+1,'card count');
  for(const c of cards){const x=items(c,'list'),n=uint(x[0]);require(x.length===3&&n>=1n&&n<=BigInt(settings.bindings.length+1)&&typeof x[1]==='boolean'&&uint(x[2])<=3n&&!seen.has(n),'card identity/priority');seen.add(n);}
- return {visible:a[1]===true,reminder:a[2]===true,cards};
+ return {visible:a[1]===true,reminder:a[2]===true,support:a[3]===true,cards};
 }
 export function workObservation(v:CanonicalValue,at:bigint,occurrence:CanonicalValue,s:WorkMaintenance){
- const b=workBoard(v,s);return list([text(WORK),occurrence,u(at),list(b.visible?b.cards.map(c=>items(c,'list')).filter(c=>c[1]===true).sort((a,b)=>Number(uint(a[0])-uint(b[0]))).map(c=>list([c[0],c[2]])):[]),b.visible&&b.reminder]);
+ const b=workBoard(v,s);return list([text(s.cue?WORK_CUE:WORK),occurrence,u(at),list(b.visible?b.cards.map(c=>items(c,'list')).filter(c=>c[1]===true).sort((a,b)=>Number(uint(a[0])-uint(b[0]))).map(c=>list([c[0],c[2]])):[]),b.visible&&b.reminder,...(s.cue?[b.support]:[])]);
 }
 export type WorkCard={id:number;priority:number};
 /** Original rank/protect/reminder operation; eligibility is supplied by actual goal reads. */
@@ -44,7 +44,7 @@ export function selectMaintained(cards:readonly WorkCard[],prior:readonly number
 }
 export const workKnowledgePath=(C:CanonicalValue):StatePath=>({rootStateTypeId:1000n,fieldId:10n,selectors:[{kind:'mapKey',key:C}]}),workAccessPath=(C:CanonicalValue):StatePath=>({...workKnowledgePath(C),rootStateTypeId:1014n,fieldId:2n});
 function observation(v:CanonicalValue,s:WorkMaintenance,timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);
- const a=items(v,'list');require(a.length===5&&txt(a[0])===WORK&&uint(a[2])>=1n&&uint(a[2])<=timeLimit&&typeof a[4]==='boolean','safe observation');
+ const a=items(v,'list');require(a.length===(s.cue?6:5)&&txt(a[0])===(s.cue?WORK_CUE:WORK)&&(!s.cue||typeof a[5]==='boolean')&&uint(a[2])>=1n&&uint(a[2])<=timeLimit&&typeof a[4]==='boolean','safe observation');
  const occurrence=id(a[1]);require(occurrence.namespaceId===1164n&&typeof occurrence.payload!=='boolean'&&occurrence.payload.kind==='unsigned','occurrence');
  let prev=0n;for(const c of items(a[3],'list')){const x=items(c,'list'),n=uint(x[0]);require(x.length===2&&n>prev&&n<=BigInt(s.bindings.length+1)&&uint(x[1])<=3n,'safe cards');prev=n;}return a;
 }
@@ -66,37 +66,38 @@ export function withWorkMaintenanceState(base:ReturnType<typeof compileCampaign2
  }});
 }
 export function createWorkMaintenance(C:CanonicalValue,s:WorkMaintenance,tasks:readonly (WorkspaceTask&{path:StatePath})[],stateModel:ReturnType<typeof compileCampaign2StateModel>,originals:readonly ScheduledEvent[],model:CanonicalValue,run:CanonicalValue,timeLimit:TimeLimit=LEGACY_TIME_LIMIT){assertTimeLimit(timeLimit);
- let active=false,at=0n,unbound=0,selected=false;const used=new Set<bigint>(),pending=new Set<string>();
+ let active=false,at=0n,unbound=0,selected=false;let currentObservation:CanonicalValue|undefined;const used=new Set<bigint>(),pending=new Set<string>();
  const read=(state:AuthoritativeState,p:StatePath)=>{const value=stateModel.read(state,p);return {...value,record:{accessorId:sid(1028,'accessor/work-maintenance'),path:p,presence:value.presence,value:value.value,derivedSources:[]} as ActualReadRecord};};
  function trace(event:ScheduledEvent,input:CanonicalValue,outputs:CanonicalValue[],children:readonly ScheduledEvent[],reads:ActualReadRecord[]=[],patch:StatePatch={operations:[]},diffs:ReturnType<typeof stateModel.applyPatch>['diffs']=[]){
- return traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/assembled-work-maintenance'),seamVersion:timeDomainVersion(WORK,timeLimit),recordKind:event.eventTypeId,subjectIds:[id(C)],sourceRecordIds:[],registeredReadDomain:reads.map(x=>pattern(x.path)),actualReadRecords:reads,inputProjection:input,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});}
+ return traceRecordValue({traceSchemaVersion:'trace/0.2-candidate',modelIdentity:model,runIdentity:run,event,seamId:sid(1036,'seam/assembled-work-maintenance'),seamVersion:timeDomainVersion(s.cue?WORK_CUE:WORK,timeLimit),recordKind:event.eventTypeId,subjectIds:[id(C)],sourceRecordIds:s.cue&&event.phase===40n&&currentObservation?[id(items(currentObservation,'list')[1])]:[],registeredReadDomain:reads.map(x=>pattern(x.path)),actualReadRecords:reads,inputProjection:input,outputProjection:list(outputs),randomDrawRecords:[],quantizationOperations:[],statePatch:patch,structuralMutationDiffs:diffs,emittedEvents:children,invariantResults:[]});}
  function children(parent:ScheduledEvent,emissions:EventEmission[]){let bound=false;unbound++;return (allocated:readonly ScheduledEvent[])=>{if(!active||bound||allocated.length!==emissions.length)fail('child lifecycle');for(const [i,e]of allocated.entries()){const wanted={...emissions[i],eventId:e.eventId,eventSequence:e.eventSequence,causalParentEventIds:[parent.eventId]};if(e.eventId===parent.eventId||e.eventSequence<=parent.eventSequence||fp(e)!==fp(wanted)||pending.has(fp(e)))fail('child mismatch');}for(const e of allocated)pending.add(fp(e));bound=true;unbound--;};}
  const admit=(e:ScheduledEvent,phase:bigint)=>{if(!active||e.dueAt!==at||e.phase!==phase||!pending.delete(fp(e)))fail('unbound child');};
  return Object.freeze({
  eventTypes:()=>[WORK_SOURCE,WORK_OBSERVE,WORK_LEARN],isLearning:(e:ScheduledEvent)=>eq(e.eventTypeId,WORK_LEARN),
- begin(instant:bigint){if(active)fail('active');active=true;at=instant;unbound=0;selected=false;pending.clear();used.clear();},
- close(){active=false;pending.clear();used.clear();unbound=0;selected=false;},
+ begin(instant:bigint){if(active)fail('active');active=true;at=instant;unbound=0;selected=false;currentObservation=undefined;pending.clear();used.clear();},
+ close(){active=false;pending.clear();used.clear();unbound=0;selected=false;currentObservation=undefined;},
  prepareCommit(){if(!active||pending.size||unbound||originals.some(e=>e.dueAt===at&&!used.has(e.eventId)))fail('unfinished');},
  execute(context:EventHandlerContext<AuthoritativeState>){const {event,state}=context;let outputs:CanonicalValue[]=[],emissions:EventEmission[]=[];
- if(eq(event.eventTypeId,WORK_SOURCE)){if(!active||event.dueAt!==at||event.phase!==110n||used.size||!originals.some(e=>fp(e)===fp(event)))fail('source');workBoard(event.payload,s);used.add(event.eventId);emissions=[{dueAt:event.dueAt,phase:120n,eventTypeId:WORK_OBSERVE,payload:event.payload,dependencies:list([])}];}
- else if(eq(event.eventTypeId,WORK_OBSERVE)){admit(event,120n);const safe=workObservation(event.payload,at,typedIdentifier(1164,u(context.allocateRuntimeId())),s);outputs=[safe];emissions=[{dueAt:event.dueAt,phase:140n,eventTypeId:WORK_LEARN,payload:safe,dependencies:list([])}];}
+ if(eq(event.eventTypeId,WORK_SOURCE)){if(!active||event.dueAt!==at||event.phase!==(s.cue?10n:110n)||used.size||!originals.some(e=>fp(e)===fp(event)))fail('source');workBoard(event.payload,s);used.add(event.eventId);emissions=[{dueAt:event.dueAt,phase:s.cue?20n:120n,eventTypeId:WORK_OBSERVE,payload:event.payload,dependencies:list([])}];}
+ else if(eq(event.eventTypeId,WORK_OBSERVE)){admit(event,s.cue?20n:120n);const safe=workObservation(event.payload,at,typedIdentifier(1164,u(context.allocateRuntimeId())),s);if(s.cue)currentObservation=safe;outputs=[safe];emissions=[{dueAt:event.dueAt,phase:140n,eventTypeId:WORK_LEARN,payload:safe,dependencies:list([])}];}
  else fail('learning stage required');const bind=children(event,emissions);return {nextState:state,outputs,emittedEvents:emissions,traceContributions:[],traceFactory(xs:readonly ScheduledEvent[]){bind(xs);return [trace(event,event.payload,outputs,xs)];}};},
  workspace(event:ScheduledEvent,state:AuthoritativeState,base:CanonicalValue,definition:CanonicalValue){
  if(!active||selected||event.phase!==40n||event.dueAt!==at)fail('selection lifecycle');selected=true;
- const k=read(state,workKnowledgePath(C)),a=read(state,workAccessPath(C)),safe=k.presence?observation(k.value!,s,timeLimit):undefined;
- if(safe&&uint(safe[2])>=at)fail('strictly later source');
+ const k=read(state,workKnowledgePath(C)),a=read(state,workAccessPath(C)),safe=s.cue?(currentObservation?observation(currentObservation,s,timeLimit):undefined):k.presence?observation(k.value!,s,timeLimit):undefined,prior=access(a.value,s,tasks.length,timeLimit);
+ if(safe&&(s.cue?uint(safe[2])!==at:uint(safe[2])>=at))fail('strictly later source');
  const reads=[k.record,a.record],statuses=tasks.map(t=>{const v=read(state,t.path);reads.push(v.record);return v.value;});
  const eligible=(i:number)=>statuses[i]!==undefined&&uint(f(rec(statuses[i]!,372n),1n))===1n&&tasks[i].activeFrom<=at&&at<tasks[i].deadline;
- const cards:WorkCard[]=safe?items(safe[3],'list').map(v=>items(v,'list')).filter(x=>{const n=Number(uint(x[0]));return n===s.bindings.length+1||eligible(tasks.findIndex(t=>eq(t.key,s.bindings[n-1])));}).map(x=>({id:Number(uint(x[0])),priority:Number(uint(x[1]))})):[];
+ let cards:WorkCard[]=safe?items(safe[3],'list').map(v=>items(v,'list')).filter(x=>{const n=Number(uint(x[0]));return n===s.bindings.length+1||eligible(tasks.findIndex(t=>eq(t.key,s.bindings[n-1])));}).map(x=>({id:Number(uint(x[0])),priority:Number(uint(x[1]))})):[];
+ if(s.cue){const shown=cards;cards=[...shown.filter(c=>c.id===s.bindings.length+1),...s.bindings.flatMap((task,i)=>{const n=i+1,card=shown.find(c=>c.id===n),ti=tasks.findIndex(t=>eq(t.key,task));return eligible(ti)&&(safe?.[4]===true&&!!card||prior.includes(n)&&safe?.[5]===true)?[{id:n,priority:card?.priority??0}]:[];})];}
  const ordinary=tasks.map((t,i)=>({t,i})).filter(x=>!s.bindings.some(t=>eq(t,x.t.key))).sort((a,b)=>a.t.deadline<b.t.deadline?-1:a.t.deadline>b.t.deadline?1:key(a.t.key)<key(b.t.key)?-1:1);
  const byId=new Map(s.bindings.map((t,i)=>[i+1,t]));for(const [j,x]of ordinary.entries()){const n=s.bindings.length+2+j;byId.set(n,x.t.key);if(eligible(x.i))cards.push({id:n,priority:0});}
  const d=rec(definition,378n),capacity=Number(uint(f(d,2n))),reserved=capacity>=2&&f(d,4n)===true?1:0,enabled=f(d,3n)===true;
- const prior=access(a.value,s,tasks.length,timeLimit),choice=selectMaintained(enabled?cards:[],prior,Math.max(0,capacity-reserved),s.support,safe?.[4]===true),selectedTasks=choice.selected.filter(n=>byId.has(n)).map(n=>tasks.find(t=>eq(t.key,byId.get(n)!))!),neutral=choice.selected.filter(n=>!byId.has(n)).length;
+ const choice=selectMaintained(enabled?cards:[],prior,Math.max(0,capacity-reserved),s.support,safe?.[4]===true),selectedTasks=choice.selected.filter(n=>byId.has(n)).map(n=>tasks.find(t=>eq(t.key,byId.get(n)!))!),neutral=choice.selected.filter(n=>!byId.has(n)).length;
  const w=rec(base,381n),output=r(381,[f(w,1n),C,f(w,3n),list(selectedTasks.map(t=>r(379,[t.key,t.specId]))),selectedTasks.length?f(w,5n):r(380,[u(1)])]);
  const report=list([text(WORK),u(at),list(cards.map(c=>list([u(c.id),u(c.priority)]))),list(prior.map(u)),list(choice.selected.map(u)),u(choice.control),k.value??list([]),list(tasks.map((t,i)=>list([t.key,statuses[i]??list([])]))),u(neutral),output]);
  const patch:StatePatch={operations:[{kind:'set',path:workAccessPath(C),expected:a.presence?{presence:true,value:a.value!}:{presence:false},newValue:list([text(WORK),u(at),list(choice.selected.map(u))])}]};
  const result=stateModel.applyPatch(state,patch,WORKSPACE_OWNER,{writableRoots:[1014n],targetPaths:[workAccessPath(C)]});
- return {output,report,neutral,nextState:result.state,trace:()=>trace(event,list([base,k.value??list([])]),[report],[],reads,patch,result.diffs)};
+ return {output,report,neutral,nextState:result.state,trace:()=>trace(event,list([base,k.value??list([]),...(s.cue?[currentObservation??list([])]:[])]),[report],[],reads,patch,result.diffs)};
  },
  prepare(events:readonly ScheduledEvent[],B0:AuthoritativeState){
  if(events.length!==1)fail('learning multiplicity');const event=events[0];admit(event,140n);observation(event.payload,s,timeLimit);
