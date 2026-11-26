@@ -1,65 +1,49 @@
-# Current work — M280 connect cue-maintained work to postponement
-Temporal qualification PASS0752136a/9c867930; [result](ASSEMBLED_CHARACTER_M279_RESULT.md).
-Owner directs Family12.7 completion under bounded self-approval. No UI/scope change.
+# Current work — M281 finish Family12.7 original replay and acceptance
+M280 cue-maintained postponement PASS; see ASSEMBLED_CHARACTER_M280_RESULT.md.
+Owner directs full12.7 completion under bounded self-approval. No UI/scope change.
 
-## Bounded card — procrastination original cohort, package A
-Capability: an observed reminder acquires work access; support retains it, withdrawn
-support loses it, later reminder restores it; retained accessible feasible work
-competes with a separate immediate motive through ordinary reasons/choice/execution.
-Port accepted procrastination-public/0.2 source/reminder law, not its standalone runtime.
-Model/registry0.165 inherits0.164; same shared goal/knowledge/workspace owners.
-WORK_CUE declaration opts into cue eligibility before existing workspace selection.
-Source10 -> observation20 -> workspace40; knowledge140 retains the safe observation.
-Current observation is authenticated/transient, cleared at instant boundaries.
-Support is the original declared maintenance-resource intervention, distinct from
-hidden board data. Legacy WORK sources/observations and rank/protect stay unchanged.
-No new psychological store, scheduler, factory or scenario dispatch.
-
-Fixed horizon scope binds declared task identities. Reference HorizonRelative1,
-NoTemporalBias2 and preserved PresentFocused3 use the same evaluator. PresentFocused
-weights scoped work1/4 even when forecast unknown/unavailable; unscoped immediate
-task stays1. Same scope for every cohort member. These are retained comparators,
-not new reference selections. NoImmediateMotive4 is an explicit ZeroBase ablation:
-the separate immediate goal remains adopted with importance0, suppressing its raw
-ground through existing priority; preserve the original4th model/source separately.
-This fixed ablation is not used to close a reference-case failure.
-
-Files<=10: model,traceBinding,runtime,horizon,horizonExecution,workMaintenance,inputs;
-one original-source fixture and one test. Versioned contract before implementation.
+## Bounded card — complete correspondence and current intention receiving
+Candidate0.165/work-cue0.1, horizon0.3, counted-goal0.2; no new law or production
+mechanism planned. Same shared state/scheduler/owners and fixed reference policy.
 MEC004/011..020/022 remain port/control/contract; RO012/014/019/020 conditional.
-F12.7-5/7 pending; E84/P24/N11/U13=132. No promotion until original20 qualified.
+Scope: remaining14 of original20 procrastination histories; classify all160 ticks;
+current intention receiving; reconcile all8 clauses with prior accepted witnesses.
+Sources/seed7/laws/magnitudes unchanged from M280. Scenarios are nonsocial, body30,
+zero physical body delivery, work3 receipts by end6, immediate independent goal.
+Clock/source correspondence and original comparator meanings remain as M280.
+No additional contrasts, scenario tuning or inferred absent motives.
 
-Map original20 sources exactly by field. Seed7, work3 positive receipts by step6,
-separate immediate task; no social dependency, body30/cap100/rate10, zero delivery.
-Clock refinement: original action/report step t -> native2t-1; preceding even slot
-admits that step's visible route/feasibility board through normal perception.
-Work deadline12 is after step6 action11, distinguishing by-end6 from before6.
-Capture step6 after boundary12; no additional action opportunity is inserted.
-Future opening6 ->11; forecast settles after current choice, as originally.
-Original at/after6 work adoption rejection remains part of source correspondence;
-native arbitrary goals keep their declared ordinary exclusive deadline semantics.
-First setup used activity target100 outside inherited0..10 admission; preserve it.
-Correct to legal unmet10 before replay; activity importance remains1 (ablation0),
-all laws/seeds/work target/proof gates unchanged. No model-domain enlargement.
-No mapper computes retained access, progress, status, appraisal or choice.
-Physical protocol permission maps feasibility/block independently of positive unit
-outcome and visible/misleading reports. Original immutable sources stay in evidence.
+Files<=3 test/helper paths: existing original test, intention carry test, fixture only
+if correction needed. No new verification framework, UI or alternate production path.
+Run remaining original cases in two bounded groups. Preserve raw source/save and
+terminal restore equality for all20. Compare actual accessible/feasible grounds,
+horizon value, probability, selected action, receipts and separate goal lifecycle.
+Classify every difference using actual dice/roles and observed history. No same-seed
+coupling claim. Native ZeroBase NoReasons versus historical idle fallback is explicit
+when no positive ground exists; never count that as postponement.
+M277 common settlement prioritizes received completion over cancellation/deadline;
+record any original cancellation-first difference without erasing admitted receipts.
 
-Before breadth, run original main candidates1..4 plus noAccess/lostAccess (6 histories).
-Require actual positive work and immediate grounds, actual postponement with retained
-work and later work/consequence; no-access/infeasibility cannot count as postponement.
-Exact probability changes use captured actual inputs; no same-seed coupling claim.
-Predeclare reference primary null honestly; do not retune laws/magnitudes/seeds.
-Repeat/restore main across reminder, retained access and deadline boundary; rollback
-after early observation20 and workspace40 and at commit. Whole denied-board reminder
-comparison; invalid versions/scopes/sources/initial access and ownership reject.
-Carry old0.164 temporal main exactly. Types/boundaries/research/archive/integrity/size.
-Fault test named nonexistent task-workspace; use actual deliberation-opportunity40.
-The untriggered fault allowed a normal commit; preserve failed check, no production repair.
-One job/worker,<=600s/command,<=1800s total,<=20 evidence files/5MiB,no default extension.
-Done:6 original histories, live causal consumer/probability/lifecycle, admission/privacy/
-continuation/rollback/carry pass. Then remaining14 original runs and current intention
-carry/family reconciliation in package B; no unrelated breadth or family pass here.
+Privacy: compare all authoritative cognition except physical counted root1611 and
+all outputs except physical protocol execution433, whose observer channel is disabled.
+Denial must leave full safe cognition equal despite private physical differences;
+no exclusion of belief/memory/learning or decision to force a pass.
+Unknown/unavailable/denied/corrected/false forecasts must retain epistemic distinctions.
+False positive work may cause mistaken fulfillment; hidden work cannot fulfill.
+
+Carry intention main/noCue/lost on0.165 with empty
+delayed/count declarations and unchanged original sources/laws/seed. Compare full
+state and output at8 to M269, allowing only explicitly versioned diagnostic text.
+Check exact0.160 main save plus native main restore; remaining18 original intention
+histories retain M269 evidence since legacy work path/receipt dependencies unchanged.
+Revisit selection if these controls expose a real difference.
+
+Types/boundaries/research/archives, lossless evidence integrity, doc limits/Git-size.
+One job/worker,<=600s/command,<=1800s cumulative,<=20 evidence files/5MiB.
+Done: original20 dispositions with no unexplained difference/defect or waived
+phenomenon; intention carry; all8 family clauses have concrete preserved/current
+receiving. Update one reconciliation register and one compact result. Whole-model
+acceptance and remaining families stay open; no new denominator or obligation closure.
 
 | Registry | Current count |
 |---|---|
