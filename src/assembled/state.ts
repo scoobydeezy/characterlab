@@ -1,3 +1,4 @@
+import {withCountedState,countProgress,countPath} from './countedGoal';
 import {withBenefitState} from './delayedBenefit';
 import {memoryBound} from './intentionMemory';
 import {withItemWorldState} from './itemWorld';
@@ -62,6 +63,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const byKey=new Map(tasks.map(t=>[key(t.key),t]));
  if(model.itemWorld?.task){const target=tasks.find(t=>key(t.key)===key(model.itemWorld!.task!))!;if(key(target.minimum)!==key({kind:'rational',numerator:1n,denominator:1n})||key(target.maximum)!==key(target.minimum))invalidModel('item location goal requires target1..1');}
  if(model.benefit){const t=tasks.find(t=>key(t.key)===key(model.benefit!.task))!;if(t.activeFrom>2n||t.deadline<=6n||model.itemWorld?.task&&key(model.itemWorld.task)===key(t.key))invalidModel('benefit task window/independent criterion');}
+ for(const s of model.counted){const t=tasks.find(t=>key(t.key)===key(s.task))!;if(model.benefit&&key(model.benefit.task)===key(t.key)||model.itemWorld?.task&&key(model.itemWorld.task)===key(t.key))invalidModel('counted goal has incompatible criterion');}
  const C=tasks[0].character,identityKey=r(412,[C,typedIdentifier(1041,text('CommitmentFidelity'))]);
  if(model.tolerance&&!prior.base.reg.hasVariable(model.tolerance.variable))invalidModel('unknown tolerance regulatory variable');
  const identityK=readQ(f(rec(definition('task-reason-source'),436n),2n));
@@ -79,6 +81,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   if(path.fieldId===2n){if(memoryBound(model.intentionMemory,task.key))invalidModel('memory-bound instruction cannot persist in task state');const instruction=f(rec(value,390n),1n);rec(f(row(instruction),4n),389n);if(model.commitmentAdoption&&!model.strategy!.find(t=>key(t.task)===key(task.key))?.plans.some(p=>key(p.instructionId)===key(instruction)))invalidModel('adopted instruction/task reference');return;}
   const status=statusRecord(value,372n),tag=u(f(status,1n));
   if(tag===2n){
+   if(model.counted.some(s=>key(s.task)===key(task.key))&&status.schema.schemaVersion!==4n)invalidModel('counted goal requires counted receipt status');
+   if(status.schema.schemaVersion===4n){const receipt=id(f(status,2n)),at=f(status,3n);if(!model.counted.some(s=>key(s.task)===key(task.key))||receipt.namespaceId!==1164n||typeof at==='boolean'||at.kind!=='signed'||at.value<task.activeFrom||at.value>=task.deadline)invalidModel('counted fulfillment task/time');return;}
    const reference=rec(f(status,2n),237n),at=f(status,3n),occurrence=id(f(reference,2n));
    if(u(f(reference,1n))!==1n||occurrence.namespaceId!==1115n||typeof occurrence.payload==='boolean'||occurrence.payload.kind!=='unsigned')invalidModel('satisfied task requires observation');
    if(typeof at==='boolean'||at.kind!=='signed'||at.value<task.activeFrom||at.value>=task.deadline)invalidModel('task satisfaction outside active window');
@@ -101,6 +105,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
   read(state:AuthoritativeState,path:StatePath){structural.validatePath(path);validateEntry(path);const result=structural.read(state,path);if(result.presence)validateEntry(path,result.value!);return result;},
   applyPatch(state:AuthoritativeState,patch:StatePatch,authority:Parameters<typeof structural.applyPatch>[2],scope?:Parameters<typeof structural.applyPatch>[3]){if(model.commitmentLifecycle)for(const op of patch.operations)if(op.path.rootStateTypeId===373n&&op.path.fieldId===1n){
     const before=state.read(op.path),tag=before.presence?u(f(statusRecord(before.value!,372n),1n)):0n;
+    if(op.kind==='set'&&statusRecord(op.newValue,372n).schema.schemaVersion===4n&&tag!==1n)invalidModel('counted fulfillment requires Open');
     if(tag!==0n&&tag!==1n)invalidModel('terminal commitment cannot change');
     if(op.kind==='set'&&u(f(statusRecord(op.newValue,372n),1n))===4n&&tag!==1n)invalidModel('cancellation requires Open commitment');
    }const instructions=model.commitmentAdoption?patch.operations.filter(o=>o.path.rootStateTypeId===373n&&o.path.fieldId===2n):[];
@@ -127,7 +132,8 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
  const associated=model.affectMemory?.learned?withAssociationState(believed,C,model.affectMemory.learned):believed;
  const maintainedState=model.workMaintenance?withWorkMaintenanceState(associated,C,model.workMaintenance,tasks.length,model.timeLimit):associated;
  const itemState=model.itemWorld?withItemWorldState(maintainedState,model.itemWorld):maintainedState;
- const ownedState=model.benefit?withBenefitState(itemState,model.benefit):itemState;
+ const benefitState=model.benefit?withBenefitState(itemState,model.benefit):itemState;
+ const ownedState=model.counted.length?withCountedState(benefitState,model.counted):benefitState;
  const stateModel=model.extendedTime?Object.freeze({...ownedState,restoreState(bytes:Uint8Array){const s=restoreAuthoritativeState(decodeSuccessor(bytes));ownedState.validateState(s);return s;}}):ownedState;
  function initialState(bytes:Uint8Array){
   const state=stateModel.restoreState(bytes);
@@ -138,6 +144,7 @@ export async function compileCharacterState(model:Awaited<ReturnType<typeof comp
    if(model.relationship&&e.path.rootStateTypeId===848n)invalidModel('initial relationship history must be absent');
    if(model.social&&e.path.rootStateTypeId===810n)invalidModel('initial person belief must be absent');
    if(model.communication&&e.path.rootStateTypeId===1072n)invalidModel('initial communication knowledge must be absent');
+   if(e.path.rootStateTypeId===1611n||e.path.rootStateTypeId===373n&&e.path.fieldId===31n)invalidModel('initial counted history must be absent');
    if(e.path.rootStateTypeId===1610n)invalidModel('initial benefit history must be absent');
    if(e.path.rootStateTypeId===1330n)invalidModel('initial rumination must be absent');
    if(e.path.rootStateTypeId===1351n)invalidModel('initial fatigue must be absent');

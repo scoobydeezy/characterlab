@@ -27,7 +27,7 @@ function stage(message:string):never{throw new SchedulerContractError('TASK_STAG
 function compare(a:CanonicalValue,b:CanonicalValue){if(typeof a==='boolean'||a.kind!=='rational'||typeof b==='boolean'||b.kind!=='rational')fail('task exact rational required');return a.numerator*b.denominator-b.numerator*a.denominator;}
 /** Shared terminal deadline value; scheduling and owner authentication upstream. */
 export function taskDeadlineValue(prior:CanonicalValue|undefined){return prior!==undefined&&u(f(statusRecord(prior,372n),1n))===1n?r(372,[unsigned(3)]):undefined;}
-export function createCommitmentTaskExecution(model:Model,modelIdentity:CanonicalValue,runIdentity:CanonicalValue,facts:readonly TaskPendingFact[],producerVersion=LEGACY_PROBE_VERSION,criterionTask?:CanonicalValue,benefitTask?:CanonicalValue){
+export function createCommitmentTaskExecution(model:Model,modelIdentity:CanonicalValue,runIdentity:CanonicalValue,facts:readonly TaskPendingFact[],producerVersion=LEGACY_PROBE_VERSION,criterionTask?:CanonicalValue,benefitTask?:CanonicalValue,countedTasks:readonly CanonicalValue[]=[]){
  let pending=new Map<string,ScheduledEvent>(),checkpoint=new Map<string,ScheduledEvent>(),prepared:Map<string,ScheduledEvent>|undefined,active=false,sealed=false,instant=0n;
  const plans=new Map<string,{event:ScheduledEvent;state:AuthoritativeState;tasks:Model['tasks'];reads:ActualReadRecord[];subjects:TypedIdentifierValue[];sources:TypedIdentifierValue[];domain:StatePathPattern[];observation?:CanonicalValue;x?:CanonicalValue}>(),targets=new Set<string>();
  const isEvent=(e:ScheduledEvent)=>e.eventTypeId.namespaceId===1001n&&names.includes(name(e));
@@ -55,7 +55,7 @@ export function createCommitmentTaskExecution(model:Model,modelIdentity:Canonica
     model.content.validateRole(enc(observer),enc(r(263,[unsigned(1000)])));const template=decodeStatePattern(f(q,2n)),path={rootStateTypeId:template.rootStateTypeId,fieldId:template.fieldId,selectors:[{kind:'mapKey' as const,key:observer}]};
     if(!domain.some(d=>patternMatches(d,path)))fail('task IDN ReadDomain');const value=model.stateModel.read(state,path);if(!value.presence)throw new StateContractError('REQUIRED_PROJECTION_VALUE_ABSENT','task subject roster absent');
     const C=id(f(rec(value.value!,267n),u(f(q,3n)))),accessor=id(f(q,5n));model.content.validateRole(enc(C),enc(f(q,4n)));subjects.push(C);reads.push({accessorId:accessor,path,presence:true,value:C,derivedSources:[value],transformationId:accessor});
-    selected=model.tasks.filter(t=>(!benefitTask||key(t.key)!==key(benefitTask))&&(!criterionTask||key(t.key)===key(criterionTask))&&key(t.character)===key(C)&&key(t.predictionDefinitionId)===key(model.predictionComponent.definitionId)&&t.activeFrom<=instant&&instant<t.deadline);
+    selected=model.tasks.filter(t=>!countedTasks.some(k=>key(k)===key(t.key))&&(!benefitTask||key(t.key)!==key(benefitTask))&&(!criterionTask||key(t.key)===key(criterionTask))&&key(t.character)===key(C)&&key(t.predictionDefinitionId)===key(model.predictionComponent.definitionId)&&t.activeFrom<=instant&&instant<t.deadline);
    }
    for(const t of selected){model.stateModel.validatePath(t.path);if(!domain.some(d=>patternMatches(d,t.path)))fail('task target ReadDomain');}
    plans.set(ek(event),{event:structuredClone(event),state,tasks:selected,reads,subjects,sources,domain,observation,x});

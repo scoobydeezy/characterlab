@@ -1,0 +1,155 @@
+M276 initial types FAIL: readonly frame assignment and existing counted allocator name collision. Full compiler diagnostics retained in chat; budget charged conservative 60s, cap600. Repaired readonly type and renamed new handler countedGoals. No runtime ran.
+M276 types2 exit=0 elapsed=26.451s cap=120s timeout=False
+
+M276 actual1 exit=1 elapsed=89.676s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCountedGoal.test.ts > count276 actual independent completion changes later choice
+M276 actual [{"at":2,"goals":[{"status":"1","progress":"0","world":"0"},{"status":"1","progress":"1","world":"1"}]},{"at":3,"goals":[{"status":"1","progress":"0","world":"0"},{"status":"1","progress":"2","world":"2"}]},{"at":4,"goals":[{"status":"1","progress":"0","world":"0"},{"status":"2","progress":"3","world":"3"}]},{"at":5,"goals":[{"status":"3","progress":"0","world":"0"},{"status":"2","progress":"3","world":"3"}]},{"at":6,"goals":[{"status":"3","progress":"0","world":"0"},{"status":"2","progress":"3","world":"3"}]},{"at":7,"goals":[{"status":"3","progress":"0","world":"0"},{"status":"2","progress":"3","world":"3"}]},{"at":8,"goals":[{"status":"3","progress":"0","world":"0"},{"status":"2","progress":"3","world":"3"}]}]
+
+ × src/test/assembledCountedGoal.test.ts > count276 actual independent completion changes later choice 23227ms
+   → expected [ '3', '2' ] to deeply equal [ '2', '2' ]
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCountedGoal.test.ts > count276 actual independent completion changes later choice
+AssertionError: expected [ '3', '2' ] to deeply equal [ '2', '2' ]
+
+- Expected
++ Received
+
+  Array [
+-   "2",
++   "3",
+    "2",
+  ]
+
+ ❯ src/test/assembledCountedGoal.test.ts:20:47
+     18| it('count276 actual independent completion changes later choice',async…
+     19|  const {x,ticks}=await run('actual');console.info('M276 actual',JSON.s…
+     20|  expect(ticks.at(-1)!.goals.map(v=>v.status)).toEqual(['2','2']);expec…
+       |                                               ^
+     21|  const first=records(x.r,409n)[0],compiled=rec(f(first,3n),408n);expec…
+     22|  expect(ticks.some(v=>v.goals[0].status==='2'&&v.goals[1].status==='1'…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  20:31:42
+   Duration  87.60s (transform 3.37s, setup 0ms, collect 63.81s, tests 23.23s, environment 0ms, prepare 287ms)
+
+
+M276 actual2 exit=0 elapsed=92.016s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCountedGoal.test.ts > count276 actual independent completion changes later choice
+M276 actual [{"at":2,"goals":[{"status":"1","progress":"0","world":"0"},{"status":"1","progress":"1","world":"1"}]},{"at":3,"goals":[{"status":"1","progress":"0","world":"0"},{"status":"1","progress":"2","world":"2"}]},{"at":4,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"1","progress":"2","world":"2"}]},{"at":5,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]},{"at":6,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]},{"at":7,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]},{"at":8,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 actual independent completion changes later choice 26172ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 5 skipped (6)
+   Start at  20:34:06
+   Duration  90.30s (transform 3.39s, setup 0ms, collect 63.79s, tests 26.17s, environment 0ms, prepare 105ms)
+
+
+M276 privacy1 exit=1 elapsed=189.639s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledCountedGoal.test.ts > count276 receipt control hidden 24767ms
+   → magnitude lies outside its declared lattice domain
+   → only an active quiescent run can produce a continuation save
+ × src/test/assembledCountedGoal.test.ts > count276 receipt control hiddenFailed 23129ms
+   → magnitude lies outside its declared lattice domain
+   → only an active quiescent run can produce a continuation save
+stdout | src/test/assembledCountedGoal.test.ts > count276 receipt control false
+M276 false [{"status":"2","progress":"1","world":"0"},{"status":"2","progress":"3","world":"0"}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 receipt control false 25432ms
+stdout | src/test/assembledCountedGoal.test.ts > count276 receipt control true
+M276 true [{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 receipt control true 24230ms
+ × src/test/assembledCountedGoal.test.ts > count276 receipt control negative 24586ms
+   → magnitude lies outside its declared lattice domain
+   → only an active quiescent run can produce a continuation save
+ × src/test/assembledCountedGoal.test.ts > count276 receipt control noAttempt 909ms
+   → identity context time/phase/duplicate/opportunity
+   → only an active quiescent run can produce a continuation save
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledCountedGoal.test.ts > count276 receipt control hidden
+ FAIL  src/test/assembledCountedGoal.test.ts > count276 receipt control hiddenFailed
+ FAIL  src/test/assembledCountedGoal.test.ts > count276 receipt control negative
+SchedulerContractError: magnitude lies outside its declared lattice domain
+ ❯ Object.validateMagnitude src/campaign2/adaptationDomains.ts:97:73
+     95|       }else{
+     96|         const maximum=spec!.value===297n?scales.get(spec!.name):spec!.…
+     97|         if(magnitude<0n||(maximum!==undefined&&magnitude>maximum))thro…
+       |                                                                         ^
+     98|       }
+     99|     },
+ ❯ src/campaign2/adaptationEvaluation.ts:95:23
+ ❯ executeNext src/campaign2/adaptationEvaluation.ts:81:47
+ ❯ Object.execute src/campaign2/adaptationEvaluation.ts:125:32
+ ❯ Object.execute src/assembled/runtime.ts:444:32
+ ❯ Object.execute src/assembled/runtime.ts:471:529
+ ❯ Object.execute src/assembled/runtime.ts:488:278
+ ❯ Object.execute src/assembled/runtime.ts:513:380
+ ❯ Object.execute src/assembled/runtime.ts:523:378
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'ADAPTATION_MAGNITUDE_OUT_OF_RANGE', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯
+
+ FAIL  src/test/assembledCountedGoal.test.ts > count276 receipt control hidden
+ FAIL  src/test/assembledCountedGoal.test.ts > count276 receipt control hiddenFailed
+ FAIL  src/test/assembledCountedGoal.test.ts > count276 receipt control negative
+ FAIL  src/test/assembledCountedGoal.test.ts > count276 receipt control noAttempt
+SaveContractError: only an active quiescent run can produce a continuation save
+ ❯ saveFail src/substrate/persistence.ts:267:9
+    265|
+    266| function saveFail(message: string): never {
+    267|   throw new SaveContractError(message);
+       |         ^
+    268| }
+    269|
+ ❯ Module.createCanonicalSave src/substrate/persistence.ts:91:46
+ ❯ Object.save src/assembled/runtime.ts:585:14
+ ❯ Object.save src/assembled/character.ts:48:20
+ ❯ capture src/test/assembledCountedGoal.test.ts:13:70
+ ❯ src/test/assembledCountedGoal.test.ts:14:186
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯
+
+ FAIL  src/test/assembledCountedGoal.test.ts > count276 receipt control noAttempt
+SchedulerContractError: identity context time/phase/duplicate/opportunity
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ src/assembled/inputs.ts:121:338
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:121:32
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledCountedGoal.ts:33:237
+ ❯ run src/test/assembledCountedGoal.test.ts:17:64
+ ❯ src/test/assembledCountedGoal.test.ts:27:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/8]⎯
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 2 passed | 6 skipped (12)
+   Start at  20:36:16
+   Duration  187.94s (transform 3.35s, setup 0ms, collect 64.53s, tests 123.05s, environment 0ms, prepare 101ms)
+
+

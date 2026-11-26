@@ -39,7 +39,10 @@ first comparison. Actual world totals never supply cognitive count or retirement
 Completion of one goal must remove only its pressure while the other is pursued.
 No exact old sampled-choice claim. Capture live reasons/probabilities/attempts,
 progress/status, full saves; preserve nulls and classify shared-system interactions.
-No seed or magnitude search. Amend setup only with written reason before rerun.
+No seed or magnitude search. M276 setup amendment: first equal-current-priority
+run completed B and expired A; preserve it. Add original temporal main forecast:
+B has perceived opening5, received1. Same seed7, laws, importance and gate.
+This omitted source is restored before repeating; no law/seed tuning.
 
 Checks: types; focused witness + privacy/failure/no-attempt/admission; exact repeat
 and restore after first action through true termination; affected empty-binding
