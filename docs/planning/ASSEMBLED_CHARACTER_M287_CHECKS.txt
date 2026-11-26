@@ -1,0 +1,357 @@
+M287 admission exit=1 elapsed=68.391s cap=180s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0 584ms
+   → cognitive record grammar: unsupported receiving record version
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+SchedulerContractError: cognitive record grammar: unsupported receiving record version
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ fail src/assembled/codecs.ts:38:36
+ ❯ Module.receivingRecord src/assembled/codecs.ts:218:344
+ ❯ src/test/fixtures/assembledSkillCarry.ts:15:73
+ ❯ src/test/fixtures/assembledSkillCarry.ts:14:147
+ ❯ src/test/fixtures/assembledSkillCarry.ts:14:135
+ ❯ merge src/test/fixtures/assembledSkillCarry.ts:14:122
+ ❯ promote src/test/fixtures/assembledSkillCarry.ts:15:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  11:06:49
+   Duration  67.79s (transform 3.60s, setup 0ms, collect 66.89s, tests 585ms, environment 0ms, prepare 105ms)
+
+
+
+Admission helper correction: slot0 includes non-definition records. Restrict additions to type171 definitions with absent IDs; preserve all original non-definition entries exactly. Strict receivingRecord correctly rejected a non171 row. No model, law or scenario source alteration.
+M287 admission-definition-filter exit=1 elapsed=71.842s cap=180s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0 2584ms
+   → body declaration version/field count/types
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+SchedulerContractError: body declaration version/field count/types
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileBodyDeclaration src/assembled/body.ts:38:179
+ ❯ Module.compileCharacterModel src/assembled/model.ts:361:43
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:28:116
+ ❯ Module.start src/test/fixtures/assembledSkillCarry.ts:33:115
+ ❯ src/test/assembledSkillCarry.test.ts:10:163
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  11:09:37
+   Duration  71.26s (transform 3.41s, setup 0ms, collect 68.35s, tests 2.58s, environment 0ms, prepare 103ms)
+
+
+
+Receiving schema review: old body0.1 has7 fields; current calibrated body0.2 requires8. Preserve capacity/rate/grid/threshold/permissions and append approved zero calibration, with current tag. Preflight now records all declarations and reports every scenario admission error in one job before asserting, avoiding one cold collection per scenario. No simulation/history executed by this diagnostic.
+M287 receiving-schema-preflight exit=1 elapsed=71.804s cap=180s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admission error skill recognition catalog declaration
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admission error long social witness actor coverage
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admitted memory
+
+ × src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0 5419ms
+   → expected [ { name: 'skill', …(1) }, …(1) ] to deeply equal []
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+AssertionError: expected [ { name: 'skill', …(1) }, …(1) ] to deeply equal []
+
+- Expected
++ Received
+
+- Array []
++ Array [
++   Object {
++     "message": "recognition catalog declaration",
++     "name": "skill",
++   },
++   Object {
++     "message": "social witness actor coverage",
++     "name": "long",
++   },
++ ]
+
+ ❯ src/test/assembledSkillCarry.test.ts:12:51
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  11:14:50
+   Duration  71.23s (transform 3.42s, setup 0ms, collect 65.47s, tests 5.42s, environment 0ms, prepare 105ms)
+
+
+
+Reviewed declaration corrections: skill catalog retains exact candidates/appearances/authority and adopts current symbol-domain tag/alphabet; no acquired name binding is added. Old LONG observer rows have3 fields, current rows4: append the matching current observer actor-alias declaration at index3 (not4). Source targets/observations and initial learned skill remain unchanged. Preserve failed declaration operands in evidence.
+M287 admission-symbol-and-actors exit=1 elapsed=72.566s cap=180s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admission error skill encoding: declaration
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admitted long
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admitted memory
+
+ × src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0 6616ms
+   → expected [ { name: 'skill', …(1) } ] to deeply equal []
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+AssertionError: expected [ { name: 'skill', …(1) } ] to deeply equal []
+
+- Expected
++ Received
+
+- Array []
++ Array [
++   Object {
++     "message": "encoding: declaration",
++     "name": "skill",
++   },
++ ]
+
+ ❯ src/test/assembledSkillCarry.test.ts:12:51
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 skipped (6)
+   Start at  11:17:30
+   Duration  71.99s (transform 3.42s, setup 0ms, collect 65.04s, tests 6.62s, environment 0ms, prepare 105ms)
+
+
+
+Complete older declaration review: old encoding0.1 -> current0.7 preserves capacity1/role-calibrated and adds reference historical-shared/UnitBudget. Old authored affect-memory0.1 is retained only in historical control; current receiver uses the adopted learned-association0.2 declaration, with no learned S0 or added social samples. M119 has no social/body encoding channel, so any actual effect must be surfaced by the unchanged histories. Other older supplied declarations already admit for LONG; no blanket replacement of its settings.
+M287 types-initial exit=0 elapsed=23.591s cap=60s timeout=False
+
+M287 admission-and-first-skill exit=1 elapsed=69.750s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admission error skill requires list
+
+ × src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0 3374ms
+   → UNKNOWN: unknown error, open 'C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\docs\planning\ASSEMBLED_CHARACTER_M287_EVIDENCE.json'
+ × src/test/assembledSkillCarry.test.ts > skill287_trained-negative 811ms
+   → requires list
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+Error: UNKNOWN: unknown error, open 'C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\docs\planning\ASSEMBLED_CHARACTER_M287_EVIDENCE.json'
+ ❯ record src/test/assembledSkillCarry.test.ts:8:143
+
+ ❯ src/test/assembledSkillCarry.test.ts:11:183
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { errno: -4094, code: 'UNKNOWN', syscall: 'open', path: 'C:\Users\scoob\.codex\worktrees\assembled-character\characterlab\docs\planning\ASSEMBLED_CHARACTER_M287_EVIDENCE.json' }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/test/assembledSkillCarry.test.ts > skill287_trained-negative
+SchedulerContractError: requires list
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataItems src/campaign2/canonicalData.ts:23:50
+ ❯ Module.lifecycleSource src/assembled/semanticLifecycle.ts:7:59
+ ❯ Module.recognitionSource src/assembled/recognition.ts:43:183
+ ❯ Module.encounterSource src/assembled/encounter.ts:12:13
+ ❯ src/assembled/inputs.ts:114:720
+ ❯ Module.compileCharacterInputs src/assembled/inputs.ts:114:27
+ ❯ Module.createCharacterRun src/assembled/character.ts:43:63
+ ❯ Module.start src/test/fixtures/assembledSkillCarry.ts:37:202
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 15 skipped (17)
+   Start at  11:20:39
+   Duration  69.17s (transform 3.41s, setup 0ms, collect 64.65s, tests 4.19s, environment 0ms, prepare 101ms)
+
+
+
+Old M119 input migration follows existing M145 receiving adapter: original continuity Boolean becomes [old,false,false,false]; existing person-form evidence becomes the same permitted feature with empty event lane; existing appearance cues gain explicit kind/permission; absent additional role lane remains empty; old delivery gets unobserved=false. No new percept, role, identity belief, report, time, seed, practice or physical parameter. Source edit list retained. Evidence file remained valid after transient UNKNOWN/open failure. Full declaration diagnostics are now losslessly compressed; stop redundant per-scenario declaration writes and write admission once.
+M287 migrated-admission-and-first-skill exit=0 elapsed=143.026s cap=300s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admitted skill
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admitted long
+
+stdout | src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0
+M287 admitted memory
+
+ ✓ src/test/assembledSkillCarry.test.ts > admission287: current receiving declarations admit older histories without learned S0 7437ms
+stdout | src/test/assembledSkillCarry.test.ts > skill287_trained-negative
+M287 skill trained-negative [{"at":10,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":12,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":14,"K":"1/2","success":true,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":16,"K":"1/4","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":18,"K":"1/4","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":20,"K":"1/8","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":22,"K":"1/8","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"}]
+
+ ✓ src/test/assembledSkillCarry.test.ts > skill287_trained-negative 69074ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 15 skipped (17)
+   Start at  11:25:08
+   Duration  142.47s (transform 3.43s, setup 0ms, collect 65.59s, tests 76.51s, environment 0ms, prepare 104ms)
+
+
+M287 remaining-skill-histories exit=0 elapsed=385.257s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillCarry.test.ts > skill287_trained-positive
+M287 skill trained-positive [{"at":10,"K":"0/1","success":false,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":12,"K":"0/1","success":false,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":14,"K":"1/2","success":true,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":16,"K":"1/4","success":false,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":18,"K":"1/4","success":false,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":20,"K":"1/8","success":false,"engaged":true,"confidence":"7/8","impairment":"060001"},{"at":22,"K":"1/8","success":false,"engaged":true,"confidence":"7/8","impairment":"060001"}]
+
+ ✓ src/test/assembledSkillCarry.test.ts > skill287_trained-positive 69528ms
+stdout | src/test/assembledSkillCarry.test.ts > skill287_untrained-positive
+M287 skill untrained-positive [{"at":10,"K":"0/1","success":false,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":12,"K":"0/1","success":false,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":14,"K":"0/1","success":false,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":16,"K":"0/1","success":false,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":18,"K":"0/1","success":false,"engaged":true,"confidence":"1/1","impairment":"060001"},{"at":20,"K":"0/1","success":false,"engaged":true,"confidence":"7/8","impairment":"060001"},{"at":22,"K":"0/1","success":false,"engaged":true,"confidence":"7/8","impairment":"060001"}]
+
+ ✓ src/test/assembledSkillCarry.test.ts > skill287_untrained-positive 66647ms
+stdout | src/test/assembledSkillCarry.test.ts > skill287_impaired
+M287 skill impaired [{"at":10,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":12,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":14,"K":"1/2","success":true,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":16,"K":"1/4","success":false,"engaged":true,"confidence":"0/1","impairment":"060604"},{"at":18,"K":"1/4","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":20,"K":"1/8","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":22,"K":"1/8","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"}]
+
+ ✓ src/test/assembledSkillCarry.test.ts > skill287_impaired 62860ms
+stdout | src/test/assembledSkillCarry.test.ts > skill287_blocked
+M287 skill blocked [{"at":10,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":12,"K":"0/1","success":false,"engaged":false,"confidence":"0/1","impairment":"060001"},{"at":14,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":16,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":18,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":20,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"},{"at":22,"K":"0/1","success":false,"engaged":true,"confidence":"0/1","impairment":"060001"}]
+
+ ✓ src/test/assembledSkillCarry.test.ts > skill287_blocked 62181ms
+stdout | src/test/assembledSkillCarry.test.ts > skill287_hidden
+M287 skill hidden [{"at":10,"K":"0/1","success":false,"engaged":true,"confidence":"unknown","impairment":"060001"},{"at":12,"K":"0/1","success":false,"engaged":true,"confidence":"unknown","impairment":"060001"},{"at":14,"K":"1/2","success":true,"engaged":true,"confidence":"unknown","impairment":"060001"},{"at":16,"K":"1/4","success":false,"engaged":true,"confidence":"unknown","impairment":"060001"},{"at":18,"K":"1/4","success":false,"engaged":true,"confidence":"unknown","impairment":"060001"},{"at":20,"K":"1/8","success":false,"engaged":true,"confidence":"unknown","impairment":"060001"},{"at":22,"K":"1/8","success":false,"engaged":true,"confidence":"unknown","impairment":"060001"}]
+
+ ✓ src/test/assembledSkillCarry.test.ts > skill287_hidden 58184ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 12 skipped (17)
+   Start at  11:28:42
+   Duration  384.69s (transform 3.44s, setup 0ms, collect 64.91s, tests 319.40s, environment 0ms, prepare 103ms)
+
+
+M287 memory-carry exit=0 elapsed=168.053s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillCarry.test.ts > memory287_original
+M287 memory original PASS
+
+ ✓ src/test/assembledSkillCarry.test.ts > memory287_original 15853ms
+stdout | src/test/assembledSkillCarry.test.ts > memory287_lost
+M287 memory lost PASS
+
+ ✓ src/test/assembledSkillCarry.test.ts > memory287_lost 40014ms
+stdout | src/test/assembledSkillCarry.test.ts > memory287_retained
+M287 memory retained PASS
+
+ ✓ src/test/assembledSkillCarry.test.ts > memory287_retained 26574ms
+stdout | src/test/assembledSkillCarry.test.ts > memory287_untrained
+M287 memory untrained PASS
+
+ ✓ src/test/assembledSkillCarry.test.ts > memory287_untrained 18689ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 13 skipped (17)
+   Start at  11:35:17
+   Duration  167.49s (transform 3.43s, setup 0ms, collect 66.00s, tests 101.13s, environment 0ms, prepare 102ms)
+
+
+M287 longitudinal-carry exit=0 elapsed=244.497s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillCarry.test.ts > long287: BIO, procedure and REL coexist while the new rust law changes old recovery timing
+M287 LONG current law differences/unchanged non-target histories PASS
+
+ ✓ src/test/assembledSkillCarry.test.ts > long287: BIO, procedure and REL coexist while the new rust law changes old recovery timing 178156ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 16 skipped (17)
+   Start at  11:38:28
+   Duration  243.94s (transform 3.41s, setup 0ms, collect 65.39s, tests 178.16s, environment 0ms, prepare 103ms)
+
+
+M287 acceptance-receipts exit=0 elapsed=0.988s cap=120s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSkillAcceptance.test.ts > Family12.8 complete receipt comparison and lossless evidence integrity
+M287 family acceptance evidence {"family":"12.8","candidate":"0.166","clauses":[1,2,3,4,5,6,7,8],"originalRuns":52,"nativeCorpusHistories":20,"affectedSkillHistories":6,"memoryHistories":4,"longHistories":1,"intentEquality":true,"losslessBlocks":16,"decodedBytes":49434136,"wholeCandidateReplay":false}
+
+ ✓ src/test/assembledSkillAcceptance.test.ts > Family12.8 complete receipt comparison and lossless evidence integrity
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  11:42:54
+   Duration  471ms (transform 27ms, setup 0ms, collect 29ms, tests 150ms, environment 0ms, prepare 101ms)
+
+
+M287 types-final exit=0 elapsed=22.844s cap=90s timeout=False
+
+M287 boundaries exit=0 elapsed=3.394s cap=90s timeout=False
+Reference boundary check passed.
+
+M287 research exit=0 elapsed=3.474s cap=90s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M287 preserved-archives exit=0 elapsed=2.537s cap=90s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M287 staged-size exit=0 elapsed=0.865s cap=60s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
+
