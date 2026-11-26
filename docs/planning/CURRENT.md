@@ -1,54 +1,52 @@
-# Current work — M281 checkpoint; privacy follow-up required
-[Result](ASSEMBLED_CHARACTER_M281_RESULT.md). Source/choice/intention carry passed;
-whole-state privacy premise failed due actual embodied exposure. Family remains open.
-M280 cue-maintained postponement PASS; see ASSEMBLED_CHARACTER_M280_RESULT.md.
-Owner directs full12.7 completion under bounded self-approval. No UI/scope change.
+# Current work — M282 resolve hidden-exposure comparison and accept12.7
+M280 cf88338c; M281 completed original20/160 correspondence and terminal restores,
+but its whole-state privacy premise failed. See ASSEMBLED_CHARACTER_M281_RESULT.md.
+Owner directs full12.7 under bounded self-approval; no new law/UI/scope change.
 
-## Bounded card — complete correspondence and current intention receiving
-Candidate0.165/work-cue0.1, horizon0.3, counted-goal0.2; no new law or production
-mechanism planned. Same shared state/scheduler/owners and fixed reference policy.
-MEC004/011..020/022 remain port/control/contract; RO012/014/019/020 conditional.
-Scope: remaining14 of original20 procrastination histories; classify all160 ticks;
-current intention receiving; reconcile all8 clauses with prior accepted witnesses.
-Sources/seed7/laws/magnitudes unchanged from M280. Scenarios are nonsocial, body30,
-zero physical body delivery, work3 receipts by end6, immediate independent goal.
-Clock/source correspondence and original comparator meanings remain as M280.
-No additional contrasts, scenario tuning or inferred absent motives.
+## Bounded card — distinguish world secrecy from actual embodied exposure
+Candidate0.165, unchanged work-cue0.1/horizon0.3/counted-goal0.2; no production changes.
+Original deniedExecution and hiddenPhysical differ in physical engagement, not only
+the missing work receipt. Accepted M11 procedural law learns without observation;
+C2 regulatory302, body455 and item1600 also respond to actual execution.
+M281 proves differences confined to those roots plus counted physical1611.
+Do not reclassify procedural785 as non-learning or erase it to assert full equality.
+Original source20, all choices/counts and failed whole-state comparison remain.
 
-Files<=3 test/helper paths: existing original test, intention carry test, fixture only
-if correction needed. No new verification framework, UI or alternate production path.
-Run remaining original cases in two bounded groups. Preserve raw source/save and
-terminal restore equality for all20. Compare actual accessible/feasible grounds,
-horizon value, probability, selected action, receipts and separate goal lifecycle.
-Classify every difference using actual dice/roles and observed history. No same-seed
-coupling claim. Native ZeroBase NoReasons versus historical idle fallback is explicit
-when no positive ground exists; never count that as postponement.
-M277 common settlement prioritizes received completion over cancellation/deadline;
-record any original cancellation-first difference without erasing admitted receipts.
+1. Add one physically matched hidden-result control to original deniedExecution:
+same8 frames, visibilityfalse, physical feasibilitytrue, all practice/body/item
+settings/laws/seed7 unchanged; only work-unit positive truth becomesfalse.
+The old deniedExecution run is the positive-truth arm, not regenerated or tuned.
+Require exact ALL state except counted-world1611, including785/302/455/1600,
+and ALL outputs, with actual work/physical-count difference and zero received work.
+This isolates private unit truth while preserving actual motor experience.
+Full terminal restore for the new arm; exact original input correspondence retained.
 
-Privacy: compare all authoritative cognition except physical counted root1611 and
-all outputs except physical execution433 and its truth-fact307, whose observer
-channel is disabled. Source inspection identifies both before the privacy check.
-Denial must leave full safe cognition equal despite private physical differences;
-no exclusion of belief/memory/learning or decision to force a pass.
-Unknown/unavailable/denied/corrected/false forecasts must retain epistemic distinctions.
-False positive work may cause mistaken fulfillment; hidden work cannot fulfill.
+2. Classify original unequal-engagement pair, without claiming whole cognition equal:
+all state outside explicit physical302/455/1600/1611 and procedural785 must agree.
+Preserve/decode all differing leaves; trace their actual owners and sources.
+Require complete actual epistemic/goal/appraisal/raw/reason/decision receiving
+agreement under a declared observer projection; physical/procedural reports remain
+in evidence as differing interactions, never discarded. Any further unequal field
+or private read by decision/appraisal is a defect, not an added exclusion.
+Use actual read traces to prove no direct hidden-world/skill read in cognitive
+workspace/appraisal/motive/reason/arbitration. Body observations may read body truth
+only through their accepted perception path.
+No new parallel pipeline, scenario-specific reference or altered law.
 
-Carry intention main/noCue/lost on0.165 with empty
-delayed/count declarations and unchanged original sources/laws/seed. Compare full
-state and output at8 to M269, allowing only explicitly versioned diagnostic text.
-Check exact0.160 main save plus native main restore; remaining18 original intention
-histories retain M269 evidence since legacy work path/receipt dependencies unchanged.
-Revisit selection if these controls expose a real difference.
+3. Finish M281's unexecuted privacy/semantic assertions on saved evidence:
+denied versus absent forecast, false positive receipt, hidden no-completion,
+no goal, cancellation, unavailable current opportunity, false/corrected forecasts
+and PresentFocused comparator. Reuse all160 captured distributions/classifications;
+no repeat of passed20 histories or intention carry without a new invalidation.
 
-Reader correction: both profiles can list zero-probability ungrounded options.
-Preserve full outputs; enumerate positive grounds and separately assert zeros.
-Types/boundaries/research/archives, lossless evidence integrity, doc limits/Git-size.
-One job/worker,<=600s/command,<=1800s cumulative,<=20 evidence files/5MiB.
-Done: original20 dispositions with no unexplained difference/defect or waived
-phenomenon; intention carry; all8 family clauses have concrete preserved/current
-receiving. Update one reconciliation register and one compact result. Whole-model
-acceptance and remaining families stay open; no new denominator or obligation closure.
+Files<=2 test/helper paths. New compact evidence/check/result <=20files/5MiB.
+One worker/job;<=600s/command,<=1800s cumulative. Preserve failures losslessly;
+canonical byte hashes avoid huge assertion pretty-print expansions.
+Types/boundaries/research/archives/integrity/doc limits/Git-size.
+Done: matched-hidden full-state proof; original interactions classified with no
+remaining unexplained difference/defect; all8 family clauses reconciled in one
+register/result. No denominator change, reduction or whole-model acceptance.
+MEC004/011..020/022 preserved; RO012/014/019/020 remain conditional.
 
 | Registry | Current count |
 |---|---|
