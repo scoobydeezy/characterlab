@@ -1,59 +1,54 @@
-# Current work — M275 delayed qualification COMPLETE
-[Result](ASSEMBLED_CHARACTER_M275_RESULT.md). Continue counted work and goal progress.
-M274 native choose/wait/delivery/receipt PASS at61e38193; [result](ASSEMBLED_CHARACTER_M274_RESULT.md).
-Owner directs Family12.7 completion under bounded self-approval. Global activation0
-and Hyperbolic are adopted engineering references; no law superiority or scope waiver.
+# Current work — M276 counted work and independent goal completion
+M275 delayed qualification PASS at36b27a4c; [result](ASSEMBLED_CHARACTER_M275_RESULT.md).
+Owner directs full Family12.7 under bounded self-approval. Activation0/Hyperbolic
+are adopted engineering references. No change to laws, corpus or final acceptance.
 
-## Bounded card — complete the original delayed correspondence
-Capabilities: original delayed cohort receives a complete native correspondence;
-received outcomes reach later ordinary appraisal; transaction faults leave no effects.
-Use assembled-delayed-benefit/0.1-candidate, model/registry0.161 unchanged.
-No production changes planned; <=3 test/helper files,20 evidence files/5MiB.
-MEC011..020/022 retained; RO010/012/014/019/020 remain conditional, no reductions.
-F12.7-6 primary; other prospection clauses remain until their original mappings finish.
+## Bounded card
+Capabilities: actual attempts produce physical work; admitted receipts accumulate
+per-goal progress; reaching the declared count retires only that goal and changes
+later ordinary choices. One existing runtime/state/scheduler and GOAL_OWNER.
+Contract assembled-counted-goal/0.1-candidate; model/registry0.162 inherits0.161.
+Slot62 declares task, governed instruction, required units1..100, fixed receipt mode.
+Physical counts and observed counts remain distinct. Source cannot author progress.
+Source10 supplies physical permission and receipt visibility; actual protocol attempt110
+precedes receipt120 and common goal settlement140. No attempt means no receipt.
+False-positive/negative apparatus remains explicitly configured; denied evidence
+cannot increment progress. Fixed per-task observation reservations preserve privacy.
+Existing priority, forecast, workspace, reasons, arbitration, intent and deadlines stay.
+Generic scalar measurement cannot fulfill a counted goal; status372/4 binds fulfillment
+to the actual received count evidence. No conversion into a fabricated C1 observation.
 
-Original26 runs exactly as DELAYED_PUBLIC_PLAN_REV1.json:20 Hyperbolic cases plus
-main/delay2/delay4 under NoDiscount and Exponential. Original source frames/seed7
-unchanged, and original artifacts checked by hash. Fixed variants are comparisons;
-only Hyperbolic counts toward reference acceptance. No seed/magnitude search.
-Native mapping retains M274 nonsocial tasks/body30/cap100/rate10/zero action-body,
-no learned S0, ordinary adoption/route evidence1 and choice2. Add a copy of the ordinary
-choice2 context at8 in every arm so receipts learned by7 reach real later appraisal.
-No new offer, hidden input or authored psychological state. Final aggregate checks all20
-prior primary decision bytes against M274: later context must not perturb earlier choice. Existing plans prevent
-reselection. Compare original offer values, available options, actual shared grounds,
-plan/physical delivery, receipt and outcome appraisal with explicit field mappings.
-Current reference compiler/modifiers and addresses can differ from old local dice;
-preserve every sampled difference and identify its actual operands/disposition.
-M274 main/immediateLarge later/later and exact1/2 ->2/3 remain, not a rewritten pass.
-Its known-future zero-net control supplies actual immediate delivery separately.
+Scope F12.7-5/8 foundation, no clause promotion until original cohort mappings finish.
+MEC011..020/022 retained as ports/controls; no reduction. RO010/012/014/019/020
+remain conditional. Original procrastination0.2 and temporal0.1 required-unit semantics
+and independent retirement are the controls. Original sources/variants remain frozen.
+Package A: counted production and native causal witness, <=12 production/test paths:
+countedGoal.ts, countedGoalExecution.ts, model/state/inputs/runtime/execution/
+traceBinding/taskSettlement/codecs.ts, one fixture and one test.
+Package B (next, before cohort replay): same-instant cancellation/receipt precedence
+and original source mappings. Do not broaden between packages. Full original20/27
+runs and their prescribed comparisons remain required for family acceptance.
 
-Prefix mapping: original0..7 restore and advance to next original instant exactly;
-original terminal8 restores and completes native pending deadlines/retention to real
-termination, matching full saves at every step. All234 original prefixes retained;
-also26 explicit native terminal restores,260 total. No queue truncation at8.
-Full saves commit state/output/trace/queue/allocators and random continuation.
-Retain original artifacts by reference, native source identity and compressed terminal
-bytes, all prefix hashes, choices/probabilities and permitted observer boundaries.
-Retain failures before repairs. Every original26 source byte sequence must match plan.
+Predeclared native witness: two nonsocial goals, one needs1 unit and the other3;
+deadlines5/8, ordinary adoption1, choices2..7, body30/cap100/rate10, seed7,
+zero action-body delivery, reference activation0, no learned initial state.
+Distinct governed actions; independent goal importance1 and normal availability.
+Actual/hidden/false-positive/false-negative receipts with physical success/failure
+are paired controls. Liveness: both goals Open and current positive grounds before
+first comparison. Actual world totals never supply cognitive count or retirement.
+Completion of one goal must remove only its pressure while the other is pursued.
+No exact old sampled-choice claim. Capture live reasons/probabilities/attempts,
+progress/status, full saves; preserve nulls and classify shared-system interactions.
+No seed or magnitude search. Amend setup only with written reason before rerun.
 
-Verification packages pinned before tests: A first7 original runs <=1800s;
-B runs8..14 <=1800s; C runs15..21 <=1800s; D runs22..26 plus rollback/integrity <=1800s.
-Run individual or small serial groups <=600s/command, one worker/job. No extension
-by default; stop a package at its cap and retain work. All cases remain mandatory.
-Rollback: inject after each actually reached phase at choice2 and before commit;
-also after the real due-delivery event3 and before its commit. Assert exact scheduler
-state, queue, allocators, outputs, trace and clock, allowing only Failed status.
-Use existing scheduler conformance instrumentation from tests; no production backdoor.
-A fresh restore must reproduce the untouched continuation; forged handle, edited
-input/save, zero-offer, conflicting receipt-mode and wrong-model checks name original
-admission risks, not extra corpus breadth.
-
-Done:26 original runs/234 mappings plus26 native terminals, all-stage/delivery rollback,
-later receipt appraisal, meaningful law controls and all differences classified.
-No family acceptance until procrastination/temporal correspondence also closes.
-Final types, boundaries/research/archive/integrity/Git-size; no frozen C0–3 source edits.
-E83/P25/N11/U13=132;21members/15families;7 accepted on earlier versions.
+Checks: types; focused witness + privacy/failure/no-attempt/admission; exact repeat
+and restore after first action through true termination; affected empty-binding
+compatibility; relevant rollback if transaction code changes; boundaries/research/
+archives/integrity/Git-size. <=600s/command, <=1800s verification package A,
+one job/worker; <=20 evidence files/5MiB. Split before exceeding, never trim assertions.
+Done A: count-to-retirement-to-later-choice loop with all controls passes. Then B.
+No Family12.7 or assembly acceptance claimed by this card. UI remains stopped.
+E83/P25/N11/U13=132;21members/15families;7 earlier accepted families.
 
 | Registry | Current count |
 |---|---|
