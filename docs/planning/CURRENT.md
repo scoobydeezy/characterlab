@@ -1,9 +1,11 @@
-# Current work — M276 counted work and independent goal completion
+# Current work — M276 counted goals COMPLETE
 M275 delayed qualification PASS at36b27a4c; [result](ASSEMBLED_CHARACTER_M275_RESULT.md).
 Owner directs full Family12.7 under bounded self-approval. Activation0/Hyperbolic
 are adopted engineering references. No change to laws, corpus or final acceptance.
 
-## Bounded card
+[Result](ASSEMBLED_CHARACTER_M276_RESULT.md). Next: same-instant lifecycle and original cohorts.
+
+## Bounded card — completed
 Capabilities: actual attempts produce physical work; admitted receipts accumulate
 per-goal progress; reaching the declared count retires only that goal and changes
 later ordinary choices. One existing runtime/state/scheduler and GOAL_OWNER.
@@ -43,6 +45,11 @@ No seed or magnitude search. M276 setup amendment: first equal-current-priority
 run completed B and expired A; preserve it. Add original temporal main forecast:
 B has perceived opening5, received1. Same seed7, laws, importance and gate.
 This omitted source is restored before repeating; no law/seed tuning.
+Second setup amendment after3f0625e2: inherited long action requests TWO physical
+contacts; original temporal actions request ONE unit each. Use one contact for each
+unchanged distinct action in all arms. Preserve prior overload and passing results;
+no change to ADAPT limits/update law or count thresholds. No-attempt control also
+removes context rows that require a declared opportunity, retaining adoption/source.
 
 Checks: types; focused witness + privacy/failure/no-attempt/admission; exact repeat
 and restore after first action through true termination; affected empty-binding

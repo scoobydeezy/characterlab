@@ -14,7 +14,7 @@ const capture=(r:Run)=>{try{return {clock:String(r.snapshot().clock),save:zip(r.
 let active:Run|undefined;afterEach(ctx=>{if(ctx.task.result?.state==='fail'&&active)put('failure-'+Object.keys(saved()).filter(k=>k.startsWith('failure')).length,{name:ctx.task.name,...capture(active)});active=undefined;});
 const records=(r:Run,type:bigint)=>items(decode(r.snapshot().outputs),'list').filter(v=>typeof v!=='boolean'&&v.kind==='record'&&v.schema.typeId===type).map(v=>rec(v,type));
 function goals(r:Run){const state=restoreAuthoritativeState(decode(r.snapshot().state));return [taskA,taskB].map(task=>({status:String(uint(f(rec(state.read(countStatus(task)).value!,372n),1n))),progress:String(countProgress(state.read(countPath(task)).value).count),world:String(countWorld(state.read(countPath(task,true)).value).count)}));}
-async function run(mode:Parameters<typeof fixture>[0]){const x=await start(fixture(mode));active=x.r;await through(x.r,1);expect(goals(x.r).map(v=>v.status)).toEqual(['1','1']);const ticks=[];for(let at=2;at<=8;at++){await through(x.r,at);ticks.push({at,goals:goals(x.r),decisions:records(x.r,409n).map(key)});}await finish(x.r);put(mode!+'-forecast',{ticks,...capture(x.r)});return {x,ticks};}
+async function run(mode:Parameters<typeof fixture>[0]){const x=await start(fixture(mode));active=x.r;await through(x.r,1);expect(goals(x.r).map(v=>v.status)).toEqual(['1','1']);const ticks=[];for(let at=2;at<=8;at++){await through(x.r,at);ticks.push({at,goals:goals(x.r),decisions:records(x.r,409n).map(key)});}await finish(x.r);put(mode!+'-unit1',{ticks,...capture(x.r)});return {x,ticks};}
 it('count276 actual independent completion changes later choice',async()=>{
  const {x,ticks}=await run('actual');console.info('M276 actual',JSON.stringify(ticks.map(v=>({at:v.at,goals:v.goals}))));
  expect(ticks.at(-1)!.goals.map(v=>v.status)).toEqual(['2','2']);expect(ticks.at(-1)!.goals.map(v=>v.progress)).toEqual(['1','3']);expect(ticks.at(-1)!.goals.map(v=>v.world)).toEqual(['1','3']);
@@ -41,20 +41,21 @@ import {createCharacterRun,prepareCharacterModel} from '../assembled/character';
 import {compileCharacterModel,COUNTED_RULES,COUNTED_REGISTRY} from '../assembled/model';
 import {compileCharacterState} from '../assembled/state';
 import {COUNT,COUNT_SOURCE,compileCounted} from '../assembled/countedGoal';
+import {changeDefinition} from './fixtures/assembledCharacter';
 import {GOAL_OWNER} from '../assembled/priority';
 import {cognitiveRecord} from '../assembled/codecs';
 import {u,signed,sid,type CanonicalValue} from './fixtures/assembledCountedGoal';
 import {fixture as benefitFixture} from './fixtures/assembledDelayedBenefit';
 const unzip=(v:{hash:string;bytes:number;deflate:string})=>{const b=new Uint8Array(inflateSync(Uint8Array.from(atob(v.deflate),c=>c.charCodeAt(0))));expect(hash(b)).toBe(v.hash);expect(b.length).toBe(v.bytes);return b;};
 it('count276 full observer privacy and source preservation',()=>{
- const terminal=(name:string)=>rec(decode(unzip(saved()[name+'-forecast'].save)),132n);
+ const terminal=(name:string)=>rec(decode(unzip(saved()[name+'-unit1'].save)),132n);
  for(const [a,b]of [['hidden','hiddenFailed'],['false','true']]){expect(enc(f(terminal(a),12n))).toEqual(enc(f(terminal(b),12n)));const cognition=(v:ReturnType<typeof terminal>)=>restoreAuthoritativeState(f(v,5n)).entries().filter(e=>e.path.rootStateTypeId!==1611n);expect(cognition(terminal(a))).toEqual(cognition(terminal(b)));}
  const b=fixture(),oldInputs=list(items(decode(b.d.orderedInputs),'list').filter(v=>key(items(v,'list')[2])!==key(sid(1001,'event/assembled-horizon-display'))));
- put('source',{registry:zip(b.s.registry),parameters:zip(b.s.parameters),initial:zip(b.d.initialState),seed:zip(b.d.runSeed),inputs:zip(b.d.orderedInputs),preservedNoForecastInputs:zip(enc(oldInputs)),wholeObserverPairs:2,physicalOnlyRoot:'1611'});
+ put('source',{registry:zip(b.s.registry),parameters:zip(b.s.parameters),initial:zip(b.d.initialState),seed:zip(b.d.runSeed),inputs:zip(b.d.orderedInputs),preservedNoForecastInputs:zip(enc(oldInputs)),preservedTwoContactRegistry:zip(changeDefinition(b.s,'definition/protocol-contact-two',1n,u(2)).registry),wholeObserverPairs:2,physicalOnlyRoot:'1611'});
 });
 it('count276 exact repeat continuation and transactional rollback',async()=>{
  const b=fixture(),x=await start(b);active=x.r;await through(x.r,1);const save1=x.r.save();await through(x.r,2);const save2=x.r.save();await through(x.r,3);const save3=x.r.save();await through(x.r,4);const save4=x.r.save();
- await finish(x.r);const terminal=x.r.save();expect(terminal).toEqual(unzip(saved()['actual-forecast'].save));
+ await finish(x.r);const terminal=x.r.save();expect(terminal).toEqual(unzip(saved()['actual-unit1'].save));
  const repeat=await start(b);await through(repeat.r,2);expect(repeat.r.save()).toEqual(save2);
  const restored=cachedMemory(await restorePreparedCharacterRun(x.m,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:save2}));const continuations=[];
  for(let i=0;i<128;i++){const a=await repeat.r.settleNextInstant(),c=await restored.settleNextInstant();expect(c).toBe(a);expect(restored.save()).toEqual(repeat.r.save());continuations.push(hash(restored.save()));if(!a)break;if(i===127)throw Error('continuation cap');}expect(restored.save()).toEqual(terminal);
@@ -74,6 +75,7 @@ it('count276 admission ownership and empty binding carry',async()=>{
  await through(x.r,1);const current=restoreAuthoritativeState(decode(x.r.snapshot().state)),receipt={kind:'typedIdentifier',namespaceId:1164n,payload:u(999)} as CanonicalValue,value=list([text(COUNT),u(1),list([list([receipt,u(2)])])]),patch={operations:[{kind:'set' as const,path:countPath(taskA),expected:{presence:false as const},newValue:value}]};
  expect(()=>state.stateModel.applyPatch(current,patch,sid(1025,'authority/physical-counted-work'))).toThrow();
  expect(()=>state.stateModel.applyPatch(current,{operations:[{kind:'set',path:countStatus(taskA),expected:{presence:true,value:current.read(countStatus(taskA)).value!},newValue:cognitiveRecord(372,[u(2),receipt,signed(2)],4)}]},GOAL_OWNER)).toThrow('sufficient received count');
+ const progressed=state.stateModel.applyPatch(current,patch,GOAL_OWNER).state;expect(()=>state.stateModel.applyPatch(progressed,{operations:[{kind:'set',path:countStatus(taskA),expected:{presence:true,value:progressed.read(countStatus(taskA)).value!},newValue:cognitiveRecord(372,[u(2),receipt,signed(3)],4)}]},GOAL_OWNER)).toThrow('sufficient received count');
  const old=benefitFixture('unknown'),oldSlots=items(decode(old.s.registry),'list'),s={...old.s,rulesVersion:COUNTED_RULES,registrySchemaVersion:COUNTED_REGISTRY,registry:enc(list([...oldSlots,list([text(COUNT),list([])])]))},m=await prepareCharacterModel(s),r=cachedMemory(await createCharacterRun(m,old.d));await finish(r);
  const original=JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M274_EVIDENCE.json','utf8'))['unknown-1-terminal'];expect(r.snapshot().state).toEqual(unzip(original.state));expect(r.snapshot().outputs).toEqual(unzip(original.outputs));
  put('admission',{invalidCount:true,duplicateBinding:true,initialHistory:true,missingSource:true,foreignWriter:true,unearnedFulfillment:true,emptyBindingOriginalStateOutputs:true,emptyBinding:zip(r.save())});

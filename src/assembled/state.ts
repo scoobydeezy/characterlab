@@ -1,4 +1,4 @@
-import {withCountedState,countProgress,countPath} from './countedGoal';
+import {withCountedState} from './countedGoal';
 import {withBenefitState} from './delayedBenefit';
 import {memoryBound} from './intentionMemory';
 import {withItemWorldState} from './itemWorld';

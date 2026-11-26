@@ -153,3 +153,86 @@ Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: unde
    Duration  187.94s (transform 3.35s, setup 0ms, collect 64.53s, tests 123.05s, environment 0ms, prepare 101ms)
 
 
+M276 units1 exit=0 elapsed=235.220s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCountedGoal.test.ts > count276 actual independent completion changes later choice
+M276 actual [{"at":2,"goals":[{"status":"1","progress":"0","world":"0"},{"status":"1","progress":"1","world":"1"}]},{"at":3,"goals":[{"status":"1","progress":"0","world":"0"},{"status":"1","progress":"2","world":"2"}]},{"at":4,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"1","progress":"2","world":"2"}]},{"at":5,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]},{"at":6,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]},{"at":7,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]},{"at":8,"goals":[{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 actual independent completion changes later choice 26655ms
+stdout | src/test/assembledCountedGoal.test.ts > count276 receipt control hidden
+M276 hidden [{"status":"3","progress":"0","world":"1"},{"status":"3","progress":"0","world":"5"}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 receipt control hidden 27816ms
+stdout | src/test/assembledCountedGoal.test.ts > count276 receipt control hiddenFailed
+M276 hiddenFailed [{"status":"3","progress":"0","world":"0"},{"status":"3","progress":"0","world":"0"}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 receipt control hiddenFailed 27853ms
+stdout | src/test/assembledCountedGoal.test.ts > count276 receipt control false
+M276 false [{"status":"2","progress":"1","world":"0"},{"status":"2","progress":"3","world":"0"}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 receipt control false 26124ms
+stdout | src/test/assembledCountedGoal.test.ts > count276 receipt control true
+M276 true [{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 receipt control true 24765ms
+stdout | src/test/assembledCountedGoal.test.ts > count276 receipt control negative
+M276 negative [{"status":"3","progress":"0","world":"1"},{"status":"3","progress":"0","world":"5"}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 receipt control negative 29423ms
+stdout | src/test/assembledCountedGoal.test.ts > count276 receipt control noAttempt
+M276 noAttempt [{"status":"3","progress":"0","world":"0"},{"status":"3","progress":"0","world":"0"}]
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 receipt control noAttempt 5389ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed | 8 skipped (15)
+   Start at  20:42:18
+   Duration  233.51s (transform 3.44s, setup 0ms, collect 65.12s, tests 168.03s, environment 0ms, prepare 104ms)
+
+
+M276 types3 exit=0 elapsed=23.957s cap=120s timeout=False
+
+M276 final1 exit=0 elapsed=263.684s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 full observer privacy and source preservation 16337ms
+stdout | src/test/assembledCountedGoal.test.ts > count276 exact repeat continuation and transactional rollback
+M276 repeat/continuation and five actual mutation rollback boundaries PASS
+
+ ✓ src/test/assembledCountedGoal.test.ts > count276 exact repeat continuation and transactional rollback 168033ms
+ ✓ src/test/assembledCountedGoal.test.ts > count276 admission ownership and empty binding carry 12510ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 12 skipped (15)
+   Start at  20:47:32
+   Duration  262.00s (transform 3.47s, setup 0ms, collect 64.67s, tests 196.88s, environment 0ms, prepare 103ms)
+
+
+M276 boundaries exit=0 elapsed=3.891s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M276 research exit=0 elapsed=3.989s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M276 archives exit=0 elapsed=2.996s cap=120s timeout=False
+
+> characterlab@0.1.0 evidence:verify
+> node scripts/restore-evidence.mjs --verify
+
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+
+Integrity: 22 compressed blocks verified; document/evidence budgets PASS; packaging allowance15s.

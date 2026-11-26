@@ -16,11 +16,12 @@ export function fixture(mode:'actual'|'hidden'|'hiddenFailed'|'false'|'true'|'ne
  const b=base('success'),slots=[...items(decode(b.s.registry),'list')],routes=items(items(slots[12],'list')[1],'list').map(v=>items(v,'list')),A=routes.find(v=>key(v[0])===key(taskA))!,B=routes.find(v=>key(v[0])===key(taskB))!;
  slots.push(list([text(BENEFIT),list([])]),list([text(COUNT),list([[taskA,A[1],u(1)],[taskB,B[2],u(3)]].map(a=>list([...a,u(mode==='false'||mode==='true'?1:mode==='negative'?2:0)])))]));
  let s=changeDefinition({...b.s,rulesVersion:COUNTED_RULES,registrySchemaVersion:COUNTED_REGISTRY,registry:enc(list(slots))},'definition/task-reason-dice',2n,q(0,1));
+ s=changeDefinition(s,'definition/protocol-contact-two',1n,u(1));
  s=changeDefinition(changeDefinition(s,'definition/task-a',6n,signed(5)),'definition/task-b',6n,signed(8));
  const old=items(decode(b.d.orderedInputs),'list').map(v=>items(v,'list')),rows:CanonicalValue[]=[];
  for(const at of [1,2,3,4,5,6,7])for(const prior of old.filter(a=>(a[0] as {value:bigint}).value===(at===1?1n:3n))){
   if(key(prior[2])===key(PERFORMANCE_SETTING))continue;const a=[...prior];a[0]=signed(at);
-  if(mode==='noAttempt'&&key(a[2])===key(sid(1001,'event/deliberation-opportunity')))continue;
+  if(mode==='noAttempt'&&at>1&&key(a[2])!==key(PRIORITY_DISPLAY))continue;
   if(key(a[2])===key(PRIORITY_DISPLAY)){const p=items(a[3],'list');a[3]=list([p[0],list(items(p[1],'list').map(v=>{const x=[...items(v,'list')],value=q(key(x[0])===key(taskA)||key(x[0])===key(taskB)?1:0,1);if(items(x[1],'list').length)x[1]=list([value]);x[3]=list([value]);if(x.length===6&&key(x[0])===key(taskB))x[5]=list([B[2]]);return list(x);}))]);}
   if(key(a[2])===key(DISPLAY)){const p=items(a[3],'list');a[3]=list([p[0],list(items(p[1],'list').map(v=>{const x=[...items(v,'list')];x[3]=key(x[0])===key(taskA)?uint(x[1])===0n:key(x[0])===key(taskB)?uint(x[1])===1n:false;return list(x);}))]);}
   rows.push(list(a));
