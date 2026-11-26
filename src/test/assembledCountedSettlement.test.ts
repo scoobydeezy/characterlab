@@ -29,7 +29,10 @@ it.each(['complete','early','denied','hidden','hiddenFailed'] as const)('settle2
  else expect(immediate[0].status).toBe('4');
  const trace=items(decode(x.r.snapshot().trace),'list').map(v=>rec(v,160n)).find(t=>{const e=rec(f(t,4n),130n);return key(f(e,5n))===key(sid(1001,'event/assembled-commitment-cancel'));});expect(trace).toBeDefined();
  if(name==='complete'){expect(key(f(trace!,6n))).toBe(key(text('assembled-counted-goal/0.2-candidate')));expect(items(f(trace!,9n),'list')).toHaveLength(1);}
- await finish(x.r);const final=goals(x.r);expect(final[1].status).toBe(name.startsWith('hidden')?'3':'2');put(name,{source:zip(x.b.d.orderedInputs),before:zip(before),immediate,final,report:key(list(report!)),trace:zip(enc(trace!)),save:zip(x.r.save())});console.info('M277',name,JSON.stringify(final));
+ await finish(x.r);const physical=items(decode(x.r.snapshot().trace),'list').map(v=>rec(v,160n)).filter(v=>key(f(v,5n))===key(sid(1036,'seam/assembled-counted-goal'))&&key(f(rec(f(v,4n),130n),5n))===key(sid(1001,'event/protocol-execution')));
+ for(const row of physical){const input=items(f(row,12n),'list');expect(input).toHaveLength(2);rec(input[0],433n);const source=rec(input[1],130n);expect(f(source,5n)).toEqual(sid(1001,'event/assembled-counted-source'));expect(f(source,2n)).toEqual(f(rec(f(row,4n),130n),2n));const original=items(decode(x.b.d.orderedInputs),'list').map(v=>items(v,'list')).find(v=>key(v[0])===key(f(source,2n))&&key(v[2])===key(f(source,5n)));expect(original).toBeDefined();expect(f(source,6n)).toEqual(original![3]);}
+ const old=saved()['before-source-disclosure']?.[name];if(old){const prior=rec(decode(unzip(old.save)),132n);expect(x.r.snapshot().state).toEqual(enc(f(prior,5n)));expect(x.r.snapshot().outputs).toEqual(enc(f(prior,12n)));}
+ const final=goals(x.r);expect(final[1].status).toBe(name.startsWith('hidden')?'3':'2');put(name,{source:zip(x.b.d.orderedInputs),before:zip(before),immediate,final,report:key(list(report!)),trace:zip(enc(trace!)),save:zip(x.r.save())});console.info('M277',name,JSON.stringify(final));
 },590000);
 it('settle277 repeat continuation rollback and carry',async()=>{
  const x=await start('complete');active=x.r;await through(x.r,3);const checkpoint=x.r.save();expect(checkpoint).toEqual(unzip(saved().complete.before));const restored=cachedMemory(await restorePreparedCharacterRun(x.m,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save:checkpoint})),continuations=[];
@@ -40,4 +43,10 @@ it('settle277 repeat continuation rollback and carry',async()=>{
  const a=rec(decode(unzip(saved().hidden.save)),132n),b=rec(decode(unzip(saved().hiddenFailed.save)),132n);expect(f(a,12n)).toEqual(f(b,12n));const cognition=(v:typeof a)=>restoreAuthoritativeState(f(v,5n)).entries().filter(e=>e.path.rootStateTypeId!==1611n);expect(cognition(a)).toEqual(cognition(b));
  const carry=await start('carry');await finish(carry.r);const old=JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M276_EVIDENCE.json','utf8')),prior=rec(decode(unzip(old['actual-unit1'].save)),132n);expect(carry.r.snapshot().state).toEqual(enc(f(prior,5n)));expect(carry.r.snapshot().outputs).toEqual(enc(f(prior,12n)));
  put('continuation',{continuations,faults,wholeHiddenObserver:true,carry:zip(carry.r.save()),registry:zip(x.b.s.registry),parameters:zip(x.b.s.parameters),initial:zip(x.b.d.initialState),seed:zip(x.b.d.runSeed)});
+},590000);
+
+it('settle277 partial receipt remains distinct from cancellation',async()=>{
+ const b=scenario('complete'),rows=items(decode(b.d.orderedInputs),'list').map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(COMMITMENT_REQUEST)){a[0]=signed(3);a[3]=list([taskB,true,true]);}return list(a);});b.d.orderedInputs=enc(list(rows));const m=await prepareCharacterModel(b.s),r=cachedMemory(await createCharacterRun(m,b.d));active=r;
+ await through(r,2);expect(goals(r)[1]).toEqual({status:'1',progress:'1',world:'1'});const before=r.save();await through(r,3);const partial=goals(r);expect(partial[1]).toEqual({status:'4',progress:'2',world:'2'});expect(partial[0].status).toBe('1');expect(key(reports(r).at(-1)![2])).toBe(key(text('Cancelled')));
+ await finish(r);expect(goals(r)[0]).toEqual({status:'2',progress:'1',world:'1'});expect(goals(r)[1]).toEqual(partial[1]);put('partial',{source:zip(b.d.orderedInputs),before:zip(before),partial,final:goals(r),save:zip(r.save())});
 },590000);

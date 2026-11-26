@@ -75,3 +75,71 @@ M277 continuation exit=0 elapsed=231.778s cap=600s timeout=False
       Tests  1 passed | 10 skipped (11)
    Start at  21:04:13
    Duration  229.88s (transform 4.06s, setup 0ms, collect 73.36s, tests 156.04s, environment 0ms, prepare 121ms)
+M277 disclosure exit=0 elapsed=363.933s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 complete actual receipt and cancellation
+M277 complete [{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 complete actual receipt and cancellation 29912ms
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 early actual receipt and cancellation
+M277 early [{"status":"4","progress":"0","world":"0"},{"status":"2","progress":"3","world":"3"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 early actual receipt and cancellation 24021ms
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 denied actual receipt and cancellation
+M277 denied [{"status":"2","progress":"1","world":"1"},{"status":"2","progress":"3","world":"3"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 denied actual receipt and cancellation 28227ms
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 hidden actual receipt and cancellation
+M277 hidden [{"status":"4","progress":"0","world":"1"},{"status":"3","progress":"0","world":"5"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 hidden actual receipt and cancellation 32038ms
+stdout | src/test/assembledCountedSettlement.test.ts > settle277 hiddenFailed actual receipt and cancellation
+M277 hiddenFailed [{"status":"4","progress":"0","world":"0"},{"status":"3","progress":"0","world":"0"}]
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 hiddenFailed actual receipt and cancellation 30731ms
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 repeat continuation rollback and carry 152001ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 5 skipped (11)
+   Start at  21:09:24
+   Duration  362.22s (transform 3.53s, setup 0ms, collect 64.85s, tests 296.93s, environment 0ms, prepare 107ms)
+
+
+M277 partial exit=0 elapsed=89.143s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledCountedSettlement.test.ts > settle277 partial receipt remains distinct from cancellation 22444ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  21:15:38
+   Duration  87.45s (transform 3.40s, setup 0ms, collect 64.66s, tests 22.44s, environment 0ms, prepare 105ms)
+
+
+M277 types-final exit=0 elapsed=24.645s cap=600s timeout=False
+
+M277 boundaries exit=0 elapsed=3.832s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M277 research exit=0 elapsed=3.944s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M277 archives exit=0 elapsed=2.958s cap=120s timeout=False
+
+> characterlab@0.1.0 evidence:verify
+> node scripts/restore-evidence.mjs --verify
+
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
