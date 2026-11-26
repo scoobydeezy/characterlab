@@ -1,59 +1,58 @@
-# Current work — M286 passed; affected witness carry next
-M2850225fa36 integrates approved rust on0.166. Owner delegates full12.8 completion.
-One active package: complete original SKILL public corpus and current-reference carry.
+# Current work — M287 affected skill witnesses and Family12.8 acceptance
+Owner delegates full12.8 completion under self-approval. Baseline0693fd48.
+M285 rust and M286 full52-original/20-current corpus PASS; one active package.
 
 ## Card before implementation
-Capability: one character preserves the distinctions between competence, confidence,
-practice and temporary impairment across every frozen SKILL source history.
-No production change, new law, initial learned state or scenario-selected mechanism.
-Reference0.166 / PeriodicDisuse H4/half / D3 Ramp / L5 retained, engineering defaults.
-Ledger SKILL/LONG and RO-C3-013/017 consulted; alternatives remain controls.
+Three capabilities: preserve skill/confidence distinctions on older source histories;
+show procedural performance after actual scene loss; carry learned BIO/skill/REL
+coexistence through the adopted rust law. Same0.166 runtime/state/scheduler/save.
+No production changes planned. PeriodicDisuse H4/half, D3/Ramp, L5, global activation0
+and all current reference laws fixed. No member-selected mechanism or learned S0.
+Ledger SKILL/LONG and conditional RO-C3-009/013/016/017/019 retained; no reduction.
 
-Frozen inputs: SKILL_PUBLIC_EXPERIMENT_PLAN_REV1.json (52 runs), model FREEZE and
-SKILL_PUBLIC_EXPERIMENT_REV1.json (all279 complete-prefix hashes). Execute original
-models unchanged, check all recorded prefix/terminal hashes and keep every variant.
-Current receiver groups only exact (initial competence, seed, complete source bytes):
-20 histories. All52 retain individual original/reference correspondence and differences.
-No sample, source truncation or whole-family acceptance from corpus mapping alone.
+M119: carry six original profiles and source instants10/12/14/16/18/20/22.
+Current receiving declarations add only required current slots/physical initial fields;
+original task/body/route/evidence/exposure history stays explicit. Fixed reference
+activation0 replaces old calibration; any cognitive difference must be traced/classified.
+Learned12K1/2 gives execution14K1/2,16/18K1/4,20/22K1/8; no-practice/blocked stays0.
+Practice follows execution. Normal reports remain fallible and separate from truth.
+Positive trained/untrained intent comparison uses existing instant14 before rust.
+Original16 impairment contrast may no longer change success because both are rusty;
+retain this law difference; M286's current pre-decay impairment contrast supplies it.
 
-One fixed current model, nonsocial A-only route, body30/rate0, ordinary scene/context,
-empty learned S0. Fixed opportunities2/3 at difficulty0 acquire original initialK:
-practice3 forK1/2, practice2+3 forK1; neither forK0. All use the same physical attempts.
-Prefix reports hidden. Original source instants shifted+3, retaining every impairment,
-difficulty, permission, practice, visibility and report polarity. Reports use normal
-performance perception, never direct belief writes. Phase0 through6, phase4 thereafter
-for ALL histories; no per-member tuning. Initial calibration becomes explicit history.
-All other laws/reference defaults identical. Ordinary route display1 precedes planning.
+M283: unchanged original lost schedule on0.166 predicts failed7K1/4, not old success.
+Separate declared extension adds non-practicing probe6 to lost/retained/untrained
+histories: actual practice3, acquired action-conditioned episode4, capacity pressure5,
+probe6 before cutoff. Expect lost/retained K1/2 success and untrained0 failure;
+original7 remains and must rust. The added probe must not reset the anchor.
+Assert real episode presence/removal, unchanged learned skill, actual execution read,
+no archive/episodic substitution. Save4 and full continuation through natural completion.
+This is detailed-scene loss, not erasure of retained performance-report provenance.
 
-At every mapped attempt require live actual procedure/engagement, physical consumer,
-raw skill read, exact effective competence, after-practice anchor/count, and separate
-prior/post observed capability belief. Compare intent/expression/plan in the physical
-low/high pair. Skill gain cannot rescue the current attempt. Classify D3 versus old
-linear/residual, L5 versus old mean/latest/no-learning, rust, impairment alternatives
-and conflation controls explicitly. Use actual native operands for old execution kernel.
-No changed-choice claim; selected execution is the consumer.
-Restore each of20 native terminal saves exactly; one full repeat per source class is
-not required after M285's repeat/stepwise continuation. Terminal restore executes all
-original accepted input instants; natural quiescence cap128 is failure, not truncation.
-Core behavioral assertions: skilled/insecure, unskilled/confident, silent practice,
-temporary impairment/recovery without stored-skill damage, identical intent/different
-outcome, blocked/no-feedback/threshold/saturation/contradiction controls.
+M152: original main source/history on current receiving declarations. Actual BIO4,
+practice6, own cooperation8/9, recent episode loss, interference30, practice34.
+Expected K used30=1/128, interference leaves0, probe32 fails, practice34 gives1/8,
+probe36 fails at3/8. Preserve these approved-law differences; do not tune the source
+until old36 success returns. M285 already supplies actual rust/relearning/recovery.
+Require actual acquisition, retained non-target BIO/REL bytes, live executions and
+trace/owner evidence. Carry current prefix9 restore exactly to completion.
+No inference that all older LONG projections remain qualified on0.166.
 
-Files: one current fixture/helper, one native replay test, one original corpus test;
-<=3 planned/12 production-test cap, no framework. One compact result/evidence/log.
-Checks: original52/prefix279, native20 in frozen insertion order: completed0..2 retained, then3..9,10..14 and15..19
-(one worker/job; measured-cost split, same gates), types, boundaries/research/archive/integrity/Git size.
-Budget1800s cumulative,600s/command,20 artifacts/5MiB. Concrete repairs retained;
-no source search, relaxed gates or routine extension. Stop checking at pass.
-Done: all52 original and20 current histories replayed, comparisons classified,
-terminal restores and boundaries pass. Then bounded M119/M152/M283 affected carry
-and complete eight-clause acceptance; no unrelated breadth.
-E88/P21/N10/U13=132,21members/15families,8 version-scoped accepted families.
-No UI/Campaign4, reduction or final whole-model acceptance.
+Files: one current receiving fixture/helper, memory+skill and LONG carry tests
+(<=4 planned/12 cap); one compact result/evidence/log. No new catalogs/framework.
+Preflight current admission before expensive runs; explicitly record required schema
+adaptations and any setup repairs. Genuine incompatible laws remain escalations.
+Live gates precede comparisons. Failed/corrected evidence and old sources retained.
+Checks: affected native histories, exact declared continuation, source/owner boundaries,
+types, reference/research/archive/integrity/Git size. One worker/job at a time.
+Budget1800s cumulative,600s/command,20 artifacts/5MiB. Split if measured costs require;
+no routine extensions, discarded cases, weakened proof or changed final scope.
+Done: all three carries classified with no missing required phenomenon, all eight
+12.8 clauses have current reference witnesses, then accept family and stop.
+21members/15families/132clauses unchanged. E88/P21/N10/U13;8 accepted families before
+this package. Wider conditional debts and final whole-candidate replay remain.
+No UI/Campaign4, empirical law victory, ontology change or assembly-wide acceptance.
 
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
-
-M286 full corpus,20 current restores and classification PASS; see
-[compact result](ASSEMBLED_CHARACTER_M286_RESULT.md). No further M286 checks.
