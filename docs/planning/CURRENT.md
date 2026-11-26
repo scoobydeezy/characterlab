@@ -1,4 +1,6 @@
-# Current work — M281 finish Family12.7 original replay and acceptance
+# Current work — M281 checkpoint; privacy follow-up required
+[Result](ASSEMBLED_CHARACTER_M281_RESULT.md). Source/choice/intention carry passed;
+whole-state privacy premise failed due actual embodied exposure. Family remains open.
 M280 cue-maintained postponement PASS; see ASSEMBLED_CHARACTER_M280_RESULT.md.
 Owner directs full12.7 completion under bounded self-approval. No UI/scope change.
 
@@ -25,7 +27,8 @@ M277 common settlement prioritizes received completion over cancellation/deadlin
 record any original cancellation-first difference without erasing admitted receipts.
 
 Privacy: compare all authoritative cognition except physical counted root1611 and
-all outputs except physical protocol execution433, whose observer channel is disabled.
+all outputs except physical execution433 and its truth-fact307, whose observer
+channel is disabled. Source inspection identifies both before the privacy check.
 Denial must leave full safe cognition equal despite private physical differences;
 no exclusion of belief/memory/learning or decision to force a pass.
 Unknown/unavailable/denied/corrected/false forecasts must retain epistemic distinctions.
@@ -38,6 +41,8 @@ Check exact0.160 main save plus native main restore; remaining18 original intent
 histories retain M269 evidence since legacy work path/receipt dependencies unchanged.
 Revisit selection if these controls expose a real difference.
 
+Reader correction: both profiles can list zero-probability ungrounded options.
+Preserve full outputs; enumerate positive grounds and separately assert zeros.
 Types/boundaries/research/archives, lossless evidence integrity, doc limits/Git-size.
 One job/worker,<=600s/command,<=1800s cumulative,<=20 evidence files/5MiB.
 Done: original20 dispositions with no unexplained difference/defect or waived

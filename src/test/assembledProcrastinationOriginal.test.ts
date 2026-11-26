@@ -17,7 +17,10 @@ import {createCharacterRun} from '../assembled/character';
 import {DeterministicScheduler} from '../substrate/scheduler';
 import {scheduledEventValue} from '../substrate/persistence';
 const plan=JSON.parse(readFileSync('docs/planning/PROCRASTINATION_PUBLIC_PLAN_REV2.json','utf8')) as {runs:{candidate:number;law:number;name:keyof ReturnType<typeof procrastinationCases>;orderedInputs:string}[]},views=JSON.parse(readFileSync('docs/planning/PROCRASTINATION_PUBLIC_VIEWS_REV2.json','utf8'));
-const file='docs/planning/ASSEMBLED_CHARACTER_M280_EVIDENCE.json',hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),zip=(b:Uint8Array)=>({hash:hash(b),bytes:b.length,deflate:deflateSync(b,{level:9}).toString('base64')});
+// @ts-expect-error Explicit test package selection.
+import {env} from 'node:process';
+const package281=env.CHARACTERLAB_PROCRASTINATION_REPLAY==='M281';
+const file='docs/planning/ASSEMBLED_CHARACTER_'+(package281?'M281':'M280')+'_EVIDENCE.json',hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),zip=(b:Uint8Array)=>({hash:hash(b),bytes:b.length,deflate:deflateSync(b,{level:9}).toString('base64')});
 const saved=()=>existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{};
 function put(k:string,v:unknown){const d=saved();if(d[k])expect(d[k]).toEqual(v);else{d[k]=v;writeFileSync(file,JSON.stringify(d,null,2)+'\n');}}
 const unzip=(v:{hash:string;bytes:number;deflate:string})=>{const b=new Uint8Array(inflateSync(Uint8Array.from(atob(v.deflate),c=>c.charCodeAt(0))));expect(hash(b)).toBe(v.hash);expect(b.length).toBe(v.bytes);return b;};
@@ -33,7 +36,7 @@ const fromHex=(s:string)=>decodeProcrastination(Uint8Array.from(s.match(/../g)!,
 function original(run:typeof plan.runs[number]){const all=items(fromHex(views.views.find((v:[string,unknown])=>v[0]===run.candidate+'/'+run.law+'/'+run.name)[1].outputs),'list'),evals=records(all,1360n),choices=records(all,1364n),updates=records(all,1361n),raw=records(all,1362n);return evals.map((e,i)=>{const g=rec(f(updates[i],2n),1356n),d=choices[i];return {at:i+1,active:f(e,2n),accessible:f(e,3n),immediate:f(e,4n),feasible:f(e,5n),value:fraction(f(rec(f(e,1n),1375n),5n)),forecast:Number(uint(f(e,9n))),choice:actionIndex(f(rec(f(d,7n),395n),2n)),probability:probabilities(f(d,4n)),raw:items(f(raw[i],3n),'list').length,after:{status:['Absent','Open','Fulfilled','Cancelled','DeadlineMissed'][Number(uint(f(g,2n)))],progress:Number(uint(f(g,4n)))}};});}
 let active:Run|undefined;afterEach(ctx=>{if(ctx.task.result?.state==='fail'&&active){let capture;try{capture={save:zip(active.save())};}catch{capture={diagnostic:active.diagnostic()?zip(active.diagnostic()!):null};}put('failure-'+Object.keys(saved()).filter(k=>k.startsWith('failure')).length,{name:ctx.task.name,...capture});}active=undefined;});
 const first=(r:typeof plan.runs[number])=>r.name==='main'||r.name==='noAccess'||r.name==='lostAccess';
-for(const run of plan.runs.filter(first))it('postpone280 '+run.candidate+'/'+run.name,async()=>{
+for(const run of plan.runs.filter(r=>package281?!first(r):first(r)))it((package281?'postpone281 ':'postpone280 ')+run.candidate+'/'+run.name,async()=>{
  const b=fixture(procrastinationCases()[run.name],run.candidate);expect(key(fromHex(run.orderedInputs))).toBe(key(decodeProcrastination(b.original)));const x=await start(b);active=x.r;const old=original(run),ticks=[];let offset=0,prior=goal(x.r);
  for(let t=1;t<=8;t++){
   const at=2*t-1;await through(x.r,at);const all=items(decode(x.r.snapshot().outputs),'list'),out=all.slice(offset);offset=all.length;const ds=records(out,409n).map(decision),hs=horizons(out),ws=records(out,381n).flatMap(v=>items(f(v,4n),'list').map(v=>key(f(rec(v,379n),1n))===key(taskA)?0:1)),receipts=reports(out,COUNT+'/observation').flatMap(v=>items(v[2],'list').map(v=>items(v,'list')[3]));
@@ -47,7 +50,7 @@ for(const run of plan.runs.filter(first))it('postpone280 '+run.candidate+'/'+run
   if(t>=6)expect(after.status).not.toBe('Open');
   ticks.push({step:t,nativeAt:at,before:prior,after,workspace:ws,horizon:hs,decisions:ds,receipts,original:old[t-1]});prior=after;
  }
- await finish(x.r);put(run.candidate+'/'+run.name,{source:zip(b.d.orderedInputs),registry:zip(b.s.registry),original:zip(b.original),initial:hash(b.d.initialState),parameters:hash(b.s.parameters),ticks,save:zip(x.r.save())});
+ await finish(x.r);if(package281){const restored=await restorePreparedCharacterRun(x.m,{initialState:b.d.initialState,orderedInputs:b.d.orderedInputs,save:x.r.save()});expect(restored.save()).toEqual(x.r.save());}put(run.candidate+'/'+run.name,{source:zip(b.d.orderedInputs),registry:zip(b.s.registry),original:zip(b.original),initial:hash(b.d.initialState),parameters:hash(b.s.parameters),ticks,save:zip(x.r.save())});
  if(run.name==='main'&&run.candidate===1){const postponed=ticks.filter(v=>v.before.status==='Open'&&v.workspace.includes(0)&&v.decisions.some(d=>d.nuclei===2&&d.choice===1));expect(postponed.length,'actual live postponement').toBeGreaterThan(0);expect(ticks.some(v=>v.step>postponed[0].step&&v.decisions.some(d=>d.choice===0))).toBe(true);}
  if(run.candidate===4)expect(ticks[3].after).toMatchObject({status:'Fulfilled',progress:3});
  console.info('M280',run.candidate,run.name,JSON.stringify(ticks.map(v=>({step:v.step,choice:v.decisions[0]?.choice??-1,access:v.workspace.includes(0),goal:v.after}))));
@@ -57,6 +60,7 @@ import {compileCharacterState} from '../assembled/state';
 import {workKnowledgePath} from '../assembled/workMaintenance';
 import {fixture as temporalFixture,start as temporalStart} from './fixtures/assembledTemporalOriginal';
 import {temporalCases} from './temporalGoalFixtures';
+if(!package281){
 it('postpone280 admission ownership and actual cue provenance',async()=>{
  const b=fixture(procrastinationCases().main),x=await start(b),model=await compileCharacterModel(b.s),component=await compileCharacterState(model),slots=[...items(decode(b.s.registry),'list')];
  expect(model.workMaintenance?.cue).toBe(true);expect(model.horizonScope).toEqual([taskA]);
@@ -96,3 +100,93 @@ it('postpone280 hidden reminder and exact old temporal carry',async()=>{
  expect(saved()['4/main'].ticks[1].decisions[0].nuclei).toBe(1);
  put('privacy-carry',{wholeDeniedBoard:true,oldTemporalSave:hash(old.r.save()),actualProbability:[a.probability,b.probability],noImmediateGround:true});
 },590000);
+
+}
+function nucleusList(v:CanonicalValue){return items(v,'list').map(v=>{const n=rec(v,407n),k=rec(f(n,1n),404n),r=rec(f(n,2n),406n),sn=(v:CanonicalValue)=>{if(typeof v==='boolean'||v.kind!=='signed')throw Error('signed');return Number(v.value);};return {task:actionIndex(f(rec(f(k,1n),395n),2n)),base:fraction(f(r,1n)),standing:fraction(f(r,2n)),situation:fraction(f(r,3n)),die:Number(uint(f(n,4n))),standingModifier:sn(f(n,5n)),situationModifier:sn(f(n,6n))};}).sort((a,b)=>a.task-b.task);}
+const prior280=()=>JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M280_EVIDENCE.json','utf8'));
+if(package281){
+it('postpone281 terminal restores for first six',async()=>{
+ const d=prior280(),restores=[];
+ for(const run of plan.runs.filter(first)){const x=await start(fixture(procrastinationCases()[run.name],run.candidate)),save=unzip(d[run.candidate+'/'+run.name].save),r=await restorePreparedCharacterRun(x.m,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save});expect(r.save()).toEqual(save);restores.push({name:run.candidate+'/'+run.name,hash:hash(save)});}
+ put('earlier-terminal-restores',restores);
+},590000);
+it('postpone281 complete correspondence and privacy',()=>{
+ const d={...prior280(),...saved()},mapped:Array<{name:string;ticks:any[]}>=[],findings:unknown[]=[];
+ const gcd=(a:number,b:number):number=>b?gcd(b,a%b):a,rat=(a:number,b:number)=>{const g=gcd(a,b);return (a/g)+'/'+(b/g);};
+ let checked=0;
+ for(const run of plan.runs){
+  const name=run.candidate+'/'+run.name,row=d[name];expect(row,name).toBeDefined();
+  const save=rec(decode(unzip(row.save)),132n),out=items(f(save,12n),'list'),ds=records(out,409n);
+  const originals=items(fromHex(views.views.find((v:[string,unknown])=>v[0]===run.candidate+'/'+run.law+'/'+run.name)[1].outputs),'list'),ods=records(originals,1364n);
+  const ticks=row.ticks.map((t:any,i:number)=>{
+   const v=ds.find(v=>key(f(v,2n))===key(signed(t.nativeAt))),n=v?nucleusList(f(rec(f(v,3n),408n),3n)):[],o=nucleusList(f(rec(f(ods[i],3n),1363n),3n)),actual=v?decision(v):{kind:1,nuclei:0,choice:-1,probability:[],bytes:''};
+   if(v)expect(actual.bytes).toBe(t.decisions[0].bytes);
+   expect(n.length).toBeLessThanOrEqual(2);
+   for(const x of n){expect(x.standingModifier).toBe(0);expect(x.situationModifier).toBe(0);const old=o.find(v=>v.task===x.task);if(old){expect(x.base,name+' base '+t.step).toBe(old.base);expect(x.standing).toBe(old.standing);expect(x.situation).toBe(old.situation);}}
+   const p=n.map((x,i)=>{if(n.length===1)return {task:x.task,p:'1/1'};let wins=0;const y=n[1-i];for(let a=1;a<=x.die;a++)for(let b=1;b<=y.die;b++)wins+=a>b?2:a===b?1:0;return {task:x.task,p:rat(wins,2*x.die*y.die)};});
+   expect(actual.probability.filter(v=>v.p!=='0/1'),name+' enumerated '+t.step).toEqual(p);for(const z of actual.probability.filter(v=>v.p==='0/1'))expect(n.some(v=>v.task===z.task)).toBe(false);checked++;
+   const source=procrastinationCases()[run.name][i];
+   if(actual.choice===0){expect(t.workspace).toContain(0);expect(t.before.status).toBe('Open');expect(source.cue??true).toBe(true);expect(source.board??true).toBe(true);}
+   const oldp=t.original.probability.filter((v:{p:string})=>v.p!=='0/1');
+   const changes={probability:JSON.stringify(p)!==JSON.stringify(oldp),choice:actual.choice!==t.original.choice,status:t.after.status!==t.original.after.status,progress:t.after.progress!==t.original.after.progress};
+   if(Object.values(changes).some(Boolean))findings.push({name,step:t.step,changes,nativeNuclei:n,originalNuclei:o,native:actual,original:t.original,before:t.before,after:t.after});
+   return {...t,native:actual,nativeNuclei:n,originalNuclei:o};
+  });mapped.push({name,ticks});
+ }
+ expect(checked).toBe(160);
+ const safe=(name:string)=>{const s=rec(decode(unzip(d[name].save)),132n);return {state:restoreAuthoritativeState(f(s,5n)).entries().filter(e=>e.path.rootStateTypeId!==1611n),outputs:items(f(s,12n),'list').filter(v=>!(typeof v!=='boolean'&&v.kind==='record'&&[433n,307n].includes(v.schema.typeId)))};};
+ put('correspondence',{mapped,findings,checkedConditionalDistributions:checked});
+ expect(safe('1/deniedExecution'),'hidden physical whole cognition').toEqual(safe('1/hiddenPhysical'));
+ expect(safe('1/unknown'),'denied forecast whole cognition').toEqual(safe('1/denied'));
+ const get=(name:string)=>mapped.find(r=>r.name===name)!.ticks;
+ expect(get('1/falseUnitOutcome').at(-1).after).toMatchObject({status:'Fulfilled',progress:3,physical:0});
+ for(const name of ['1/deniedExecution','1/hiddenPhysical'])expect(get(name).at(-1).after).toMatchObject({status:'DeadlineMissed',progress:0});
+ for(const t of get('1/unavailableNow').filter(t=>t.step<6))expect(t.native.choice).not.toBe(0);
+ expect(get('1/noGoal').every(t=>t.after.status==='Absent')).toBe(true);
+ expect(get('1/cancelled').slice(2).every(t=>t.after.status==='Cancelled')).toBe(true);
+ expect(get('1/falseForecast').at(-1).after.status).toBe('DeadlineMissed');
+ const value=(name:string,t:number)=>get(name)[t-1].horizon.find((v:{task:number})=>v.task===0)?.value;
+ expect(value('1/corrected',3)).toBe('1/4');expect(value('1/corrected',4)).toBe('1/1');
+ expect(value('3/unknown',2)).toBe('1/4');expect(value('1/unknown',2)).toBe('1/1');
+ put('semantic-gates',{safePhysical:true,deniedForecast:true,falseReceipt:true,absence:true,cancellation:true,wrongForecast:true,correction:true,presentFocused:true});
+},590000);
+
+it('postpone281 classified findings',()=>{
+ const c=saved().correspondence,findings:unknown[]=[];let ticks=0;
+ for(const run of c.mapped){
+  let originalBefore={status:'Absent',progress:0},priorChoiceDifference=false;
+  for(const t of run.ticks){
+   ticks++;const now=t.nativeNuclei as ReturnType<typeof nucleusList>,old=t.originalNuclei as ReturnType<typeof nucleusList>,causes:string[]=[];
+   const positiveOld=t.original.probability.filter((v:{p:string})=>v.p!=='0/1'),sameGrounds=JSON.stringify(now.map(v=>v.task))===JSON.stringify(old.map(v=>v.task)),sameP=JSON.stringify(t.native.probability.filter((v:{p:string})=>v.p!=='0/1'))===JSON.stringify(positiveOld);
+   if(!now.length&&!old.length){expect(t.native.choice).toBe(-1);expect(t.original.choice).toBe(1);causes.push('Equivalent unmotivated idle: shared ZeroBase NoReasons versus historical defer fallback; no postponement claim.');}
+   else if(sameGrounds){
+    for(let i=0;i<now.length;i++){expect(now[i].base).toBe(old[i].base);expect(now[i].standing).toBe(old[i].standing);expect(now[i].situation).toBe(old[i].situation);}
+    if(!sameP){causes.push('Interaction with adopted global dice calibration on identical source-role operands; exact captured dice enumeration retained.');}
+    if(t.native.choice!==t.original.choice){causes.push('Equivalent admitted stochastic choice domain; no cross-model coupling. Actual differently sampled choice is preserved.');priorChoiceDifference=true;}
+   }else{
+    expect(priorChoiceDifference,'earlier causal divergence '+run.name+'/'+t.step).toBe(true);
+    expect(t.before.status,'eligible-ground change has actual goal state '+run.name+'/'+t.step).not.toBe(originalBefore.status);
+    causes.push('Interaction: earlier sampled action -> actual admitted receipt -> own goal lifecycle -> later eligible ground set.');
+   }
+   const differentAfter=t.after.status!==t.original.after.status||t.after.progress!==t.original.after.progress;
+   if(differentAfter){
+    if(run.name==='1/cancelled'&&t.step===3){expect(t.after.status).toBe('Cancelled');expect(t.original.after.status).toBe('Cancelled');causes.push('Interaction: shared counted-goal0.2 preserves admitted partial receipt before cancellation; historical cancellation-first skips that update.');}
+    else {expect(priorChoiceDifference,'count difference has earlier actual choice '+run.name+'/'+t.step).toBe(true);causes.push('Interaction: accumulated admitted work follows the preserved sampled choices; no cross-goal retirement or hidden completion.');}
+   }
+   if(causes.length)findings.push({name:run.name,step:t.step,causes,nativeGrounds:now,originalGrounds:old,actualProbability:t.native.probability,originalProbability:positiveOld,nativeBefore:t.before,originalBefore,nativeAfter:t.after,originalAfter:t.original.after});
+   originalBefore=t.original.after;
+  }
+ }
+ expect(ticks).toBe(160);put('classified-findings',{ticks,findings,remaining:'none',noCrossModelCoupling:true,referenceRequiredPhenomenon:'Actual live postponement and later received completion in1/main; all predeclared epistemic/lifecycle controls remain.'});
+});
+
+it('postpone281 diagnose private difference',()=>{
+ const d=saved(),a=rec(decode(unzip(d['1/deniedExecution'].save)),132n),b=rec(decode(unzip(d['1/hiddenPhysical'].save)),132n);
+ const sa=restoreAuthoritativeState(f(a,5n)).entries(),sb=restoreAuthoritativeState(f(b,5n)).entries(),path=(e:typeof sa[number])=>e.path.rootStateTypeId+'/'+e.path.fieldId+'/'+e.path.selectors.map(s=>s.kind==='mapKey'?key(s.key):JSON.stringify(s,(_,v)=>typeof v==='bigint'?String(v):v)).join('/');
+ const states=[...new Set([...sa,...sb].map(path))].flatMap(p=>{const x=sa.find(e=>path(e)===p),y=sb.find(e=>path(e)===p);return x&&y&&key(x.value)===key(y.value)?[]:[{path:p,a:x?key(x.value):null,b:y?key(y.value):null}];});
+ const oa=items(f(a,12n),'list'),ob=items(f(b,12n),'list'),tag=(v:CanonicalValue)=>typeof v==='boolean'?String(v):v.kind==='record'?String(v.schema.typeId):v.kind==='list'?key(v.items[0]):v.kind;
+ const outputs=oa.flatMap((v,i)=>ob[i]&&key(v)===key(ob[i])?[]:[{index:i,aTag:tag(v),bTag:ob[i]?tag(ob[i]):'missing',aHash:hash(enc(v)),bHash:ob[i]?hash(enc(ob[i])):null}]);
+ put('privacy-diagnostic',{states,outputCounts:[oa.length,ob.length],outputs});console.info(JSON.stringify({states:states.map(v=>({...v,a:v.a?.slice(0,800),b:v.b?.slice(0,800)})),outputs:outputs.slice(0,35)}));
+});
+
+}
