@@ -1,12 +1,13 @@
+import {replay273,candidate271,track271,failure271} from './fixtures/assembledActivationBody';
 import {replay220,candidate220,correspondence220} from './fixtures/assembledEmbodimentReplay';
-import {it,expect} from 'vitest';
+import {it,expect,afterEach} from 'vitest';
 // @ts-expect-error Node-only lossless evidence compression.
 import {deflateSync,inflateSync} from 'node:zlib';
 // @ts-expect-error Node-only test receipt IO; browser project has no Node declarations.
 import {createHash} from 'node:crypto';
 // @ts-expect-error Node-only test receipt IO.
 import {readFileSync,writeFileSync,existsSync} from 'node:fs';
-import {cohort as historicalFixture,start,cases,caseKey,main,state,decode,items,key,enc,list,text,u,C,rec,f,uint,at,type Case,type Run} from './fixtures/assembledIntoxicationCohort';
+import {cohort as historicalFixture,start as originalStart,cases,caseKey,main,state,decode,items,key,enc,list,text,u,C,rec,f,uint,at,type Case,type Run} from './fixtures/assembledIntoxicationCohort';
 import {restorePreparedCharacterRun,characterModelIdentity} from '../assembled/character';
 import {cachedMemory} from './fixtures/assembledMemoryFinal';
 import {sid,SKILL_ACTUAL,SKILL_UPDATE} from '../assembled/skill';
@@ -23,8 +24,10 @@ import {EXTENDED_TIME_LIMIT} from '../assembled/timeDomain';
 import {cognitiveRecord as r} from '../assembled/codecs';
 import {readQ} from '../campaign2/cognitiveMath';
 import {CanonicalValue} from '../substrate/canonicalEncoding';
-export const file=replay220?'docs/planning/ASSEMBLED_CHARACTER_M220_INTOXICATION_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M217_EVIDENCE.json';
-const fixture=(...args:Parameters<typeof historicalFixture>)=>candidate220(historicalFixture(...args));
+export const file=replay273?'docs/planning/ASSEMBLED_CHARACTER_M273_INTOXICATION_EVIDENCE.json':replay220?'docs/planning/ASSEMBLED_CHARACTER_M220_INTOXICATION_EVIDENCE.json':'docs/planning/ASSEMBLED_CHARACTER_M217_EVIDENCE.json';
+const fixture=(...args:Parameters<typeof historicalFixture>)=>replay273?candidate271(historicalFixture(...args),true):candidate220(historicalFixture(...args));
+const start=async(...args:Parameters<typeof originalStart>)=>track271(await originalStart(...args));
+afterEach(c=>{if(replay273&&c.task.result?.state==='fail')failure271(c.task.name);});
 export const hash=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex'),vh=(v:CanonicalValue)=>hash(enc(v));
 export const eqbytes=(a:Uint8Array,b:Uint8Array)=>{expect(a.length).toBe(b.length);expect(a.every((v,i)=>v===b[i])).toBe(true);};
 export const tag=(v:CanonicalValue)=>typeof v!=='boolean'&&v.kind==='list'&&typeof v.items[0]!=='boolean'&&v.items[0]?.kind==='text'?v.items[0].value:undefined;
@@ -71,7 +74,18 @@ async function runCase(c:Case){
  checks.push({logical:12,native:Number(x.run.snapshot().clock),bytes:save.length,save:hash(save),next:hash(save),terminal:true});
  const result={...c,key:caseKey(c),model:hash(characterModelIdentity(x.handle)),input:hash(x.b.d.orderedInputs),initial:hash(x.b.d.initialState),run:hash(x.run.runIdentity()),rows,physical,decisions:hash(x.run.decisionHistory()),presentation:hash(x.run.decisionPresentation()),prefixes:checks,safe:hash(safeBytes),safeBytes:safeBytes.length,safeCompressed:['Sober','BlindSober','BlindSlow','Interference'].includes(c.scenario)&&c.seed===0&&c.law==='Full'?deflateSync(safeBytes).toString('base64'):undefined,closureInstants:closure,terminalClock:Number(x.run.snapshot().clock),elapsed:(performance.now()-began)/1000};
  const correspondence=correspondence220('docs/planning/ASSEMBLED_CHARACTER_M217_EVIDENCE.json',result.key,result,true);
- const data=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{contract:'assembled-intoxication-cohort/0.1',candidate:replay220?'0.144':'0.143',runs:{}};data.runs??={};expect(data.runs[result.key],'do not silently overwrite a passing cohort case').toBeUndefined();data.runs[result.key]={...result,...(correspondence?{correspondence}:{})};writeFileSync(file,JSON.stringify(data,null,2)+'\n');
+ const data=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):{contract:'assembled-intoxication-cohort/0.1',candidate:replay273?'0.160':replay220?'0.144':'0.143',runs:{}};data.runs??={};expect(data.runs[result.key],'do not silently overwrite a passing cohort case').toBeUndefined();data.runs[result.key]={...result,...(correspondence?{correspondence}:{})};writeFileSync(file,JSON.stringify(data,null,2)+'\n');
+ if(replay273){
+  const priorPath='docs/planning/ASSEMBLED_CHARACTER_M220_INTOXICATION_EVIDENCE.json',bytes=readFileSync(priorPath),old=JSON.parse(bytes.toString()).runs[result.key],source=historicalFixture(c);
+  const receiving=['logical','sleep','capacity','inhibited','active','maintained','spare','options','outcome','chosen','probabilities','draws','drawCount','journalCount','identity','mean','physicalDebt','rewardReason','physicalBurden','challenge','competence','motorAllowed'];
+  expect(result.input).toBe(old.input);expect(hash(source.d.initialState)).toBe(old.initial);
+  expect(result.rows.length).toBe(old.rows.length);
+  for(const [i,row]of result.rows.entries())for(const k of receiving)expect((row as any)[k],result.key+'/'+i+'/'+k+' preserved receiving').toEqual(old.rows[i][k]);
+  for(const k of ['physical','closureInstants','terminalClock'] as const)expect(result[k]).toEqual(old[k]);
+  expect(result.prefixes.map(p=>[p.logical,p.native,p.terminal])).toEqual(old.prefixes.map((p:any)=>[p.logical,p.native,p.terminal]));
+  data.runs[result.key].correspondence={pass:true,prior:priorPath,hash:hash(bytes),receiving,source:{registry:hash(source.s.registry),initial:hash(source.d.initialState),inputs:hash(source.d.orderedInputs),seed:hash(source.d.runSeed)},candidate:'0.160',activation:'0'};
+  writeFileSync(file,JSON.stringify(data,null,2)+'\n');
+ }
  console.info('M217 PASS',result.key,checks.length,'prefixes; safe bytes',safeBytes.length,'seconds',result.elapsed.toFixed(3),'probe8',JSON.stringify(rows[7]));return result;
 }
 for(const c of cases)it('cohort217 '+caseKey(c),()=>runCase(c),600000);
@@ -93,7 +107,17 @@ it('compare217 full original intoxication gate',()=>{
  const low=row('Slow',8,1),high=row('HighCompetence',8,1);expect(high.drawCount).toBeGreaterThan(0);expect(high.chosen).toBe(low.chosen);expect(high.probabilities).toEqual(low.probabilities);expect(high.draws).toBe(low.draws);for(const k of ['capacity','inhibited','active','maintained','spare','options','journal','formation','learned','mean','goal','maintenance','rewardReason','sleep'] as const)expect(high[k]).toEqual(low[k]);expect(get('Slow',1).physical[0]).toMatchObject({chosen:'drug',status:'Blocked'});expect(get('HighCompetence',1).physical[0]).toMatchObject({chosen:'drug',status:'Applied'});
  const stream=(name:string)=>normalizeStoredStream(get(name).safeCompressed!);eqbytes(stream('BlindSober'),stream('BlindSlow'));expect(row('BlindSlow',8)).toMatchObject({capacity:null,motorAllowed:false,physicalBurden:700});expect(row('BlindSober',8).motorAllowed).toBe(true);
  expect(row('FalseSober',8)).toMatchObject({capacity:1000,inhibited:true,physicalBurden:700,motorAllowed:false});eqbytes(stream('Interference'),stream('Sober'));for(const p of get('Interference').physical){expect(p.available).toBe(false);expect(p.chosen).toBe('withhold');expect(p.status).toBe('Withheld');}
+ if(replay273){
+  const path='docs/planning/ASSEMBLED_CHARACTER_M268_EVIDENCE.json',bytes=readFileSync(path),e=JSON.parse(bytes.toString()),mask=e.masked,zero=e['zero-finding'],continuation=e['zero-continuation'];
+  expect(mask).toMatchObject({wholeObserverEqual:true,learnedStateEqual:true,privateAppliedBlocked:true,count:1,mean:600});
+  expect(zero).toMatchObject({wholeObserverEqual:true,privateAppliedBlocked:true,count:2,mean:300,sameProducedSemantics:true});
+  expect(continuation.fullStateOutputTraceSave).toBe(true);
+  const stored=e['zero-slow'].outputs,raw=inflateSync(Uint8Array.from(atob(stored.deflate),c=>c.charCodeAt(0)));expect(raw.length).toBe(stored.bytes);expect(hash(raw)).toBe(stored.hash);
+  const reason=tagged(items(decode(raw),'list'),OBSERVED_REWARD+'/reasons').find(v=>uint(v[1])===10n)!;expect(reason).toBeDefined();expect(reason[2]).toBe(true);expect(rational(reason[5])).toBe('3/10');
+  whole.boundaryReference={path,hash:hash(bytes),candidate:'0.160',masked:mask,knownZero:{count:zero.count,mean:zero.mean,wholeObserverEqual:zero.wholeObserverEqual,privateAppliedBlocked:zero.privateAppliedBlocked,classification:zero.classification},exactContinuation:true,reasonAt10:'3/10'};
+ }else{
  expect(whole.boundary?.fixedMask?.pass).toBe(true);expect(whole.boundary?.fixedLearning?.pass).toBe(true);
  const learningStream=items(decode(inflateSync(Uint8Array.from(atob(whole.boundary.fixedLearning.observer.deflate),c=>c.charCodeAt(0)))),'list'),learningReason=tagged(items(learningStream[0],'list'),OBSERVED_REWARD+'/reasons').find(v=>uint(v[1])===10n)!;expect(learningReason).toBeDefined();expect(learningReason[2]).toBe(true);expect(rational(learningReason[5])).toBe('3/10');
+ }
  whole.qualification={pass:true,originalRuns:20,models:5,selectedPrefixes:55,advancing:35,terminal:20,observerPrivateTags:[...privateTags],blindBytes:stream('BlindSlow').length,interferenceBytes:stream('Interference').length};writeFileSync(file,JSON.stringify(whole,null,2)+'\n');console.info('M217 FULL PASS20 original runs/55 prefixes;5 models; all original comparisons; held history; whole masked and inert observer equality; no whole12.1 acceptance');
 });

@@ -1,10 +1,17 @@
-# Current work — M273 fixed intoxication receiving
+# Current work — M273 complete; reference ruling ready
 Owner2026-11-25 directs continuation until Family12.7 is complete under self-approval.
-M272 complete3fbfc4e0: [result](ASSEMBLED_CHARACTER_M272_RESULT.md).
+M273 complete: [result](ASSEMBLED_CHARACTER_M273_RESULT.md); all20/55 pass.
 Reference0.159/37/100 remains; global0/model0.160 remains experimental.
 No reference adoption, family promotion, law/completion waiver or UI work.
 
-## M273 bounded card — before code
+## Owner reference decision
+Recommend global activation0 with ZeroBase preserved, and Hyperbolic1/(1+d) as the
+delayed engineering default (no superiority verdict); old policy/curves remain controls.
+AGENTS/work order reserve this reference-law ruling to the owner. Not self-adopted.
+The full native activation replay is complete; Family12.7 still needs native delayed
+offer/wait/delivery/receipt and original procrastination/temporal correspondence.
+
+## M273 completed card — original comparison retained
 Capabilities: (1) sensed intoxication changes control and actual choice;
 (2) private motor impairment, learned competence and actual execution stay distinct;
 (3) original continuation and hidden/biased-sensing controls remain intact.

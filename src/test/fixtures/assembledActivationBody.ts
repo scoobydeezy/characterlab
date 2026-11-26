@@ -15,6 +15,7 @@ import {set} from '../../substrate/canonicalEncoding';
 import {hash,capture,decode,items,enc,list,text,q,type Run} from './assembledActivationNative';
 export const replay271=env.CHARACTERLAB_ACTIVATION_REPLAY==='M271';
 export const replay272=env.CHARACTERLAB_ACTIVATION_REPLAY==='M272';
+export const replay273=env.CHARACTERLAB_ACTIVATION_REPLAY==='M273';
 export const normalized271=<T extends Parameters<typeof changeDefinition>[0]>(s:T)=>changeDefinition(s,'definition/task-reason-dice',2n,q(37,100));
 export function candidate271<T extends {s:Parameters<typeof changeDefinition>[0];d:{initialState:Uint8Array}}>(b:T,enabled=replay271):T{
  if(!enabled)return b;
@@ -36,9 +37,9 @@ export function correspondence271(kind:'BODY'|'TOLERANCE',name:string,value:any)
  return {pass:true,prior:path,sha256:hash(bytes),fields,candidate:'0.160',activation:'0',mapping:'same original58 slots after threshold normalization, inputs/seed and original initial entries; empty Need/intention and unbound private item appended'};
 }
 let active:Run|undefined;
-export function track271<T extends {run:Run}>(x:T):T{if(replay271||replay272)active=x.run;return x;}
+export function track271<T extends {run:Run}>(x:T):T{if(replay271||replay272||replay273)active=x.run;return x;}
 export function failure271(name:string){
- if((!replay271&&!replay272)||!active)return;
- const file='docs/planning/ASSEMBLED_CHARACTER_'+(replay272?'M272':'M271')+'_FAILURES.json',d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):[];
+ if((!replay271&&!replay272&&!replay273)||!active)return;
+ const file='docs/planning/ASSEMBLED_CHARACTER_'+(replay273?'M273':replay272?'M272':'M271')+'_FAILURES.json',d=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):[];
  d.push({name,...capture(active)});writeFileSync(file,JSON.stringify(d,null,2)+'\n');active=undefined;
 }
