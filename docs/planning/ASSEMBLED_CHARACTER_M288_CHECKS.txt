@@ -1,0 +1,161 @@
+M288 trained-admission exit=1 elapsed=0.861s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledHabitCurrent.test.ts [ src/test/assembledHabitCurrent.test.ts ]
+Error: Transform failed with 1 error:
+C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledHabitCurrent.test.ts:15:39: ERROR: Expected ";" but found ","
+  Plugin: vite:esbuild
+  File: C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledHabitCurrent.test.ts:15:39
+  
+  Expected ";" but found ","
+  13 |  import {restoreAuthoritativeState,statePathValue} from '../substrate/state';
+  14 |  import {readQ} from '../campaign2/cognitiveMath';
+  15 |  type X=Awaited<ReturnType<typeof open>>,Run=X['r'];
+     |                                         ^
+  16 |  const file='docs/planning/ASSEMBLED_CHARACTER_M288_EVIDENCE.json',hash=(v:Uint8Array)=>createHash('sha256').update(v).digest('hex');
+  17 |  const pack=(v:Uint8Array)=>({sha256:hash(v),length:v.length,deflateBase64:deflateRawSync(v).toString('base64')});
+  
+ ❯ failureErrorWithLog ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:1472:15
+ ❯ ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:755:50
+ ❯ responseCallbacks.<computed> ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:622:9
+ ❯ handleIncomingPacket ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:677:12
+ ❯ Socket.readFromStdout ../../../../Documents/GitHub/characterlab/node_modules/esbuild/lib/main.js:600:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { __vitest_rollup_error__: { plugin: 'vite:esbuild', id: 'C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledHabitCurrent.test.ts', loc: { column: 39, file: 'C:/Users/scoob/.codex/worktrees/assembled-character/characterlab/src/test/assembledHabitCurrent.test.ts', length: 1, line: 15, lineText: 'type X=Awaited<ReturnType<typeof open>>,Run=X[\'r\'];', namespace: '', suggestion: ';' }, frame: '\nExpected ";" but found ","\n13 |  import {restoreAuthoritativeState,statePathValue} from \'../substrate/state\';\n14 |  import {readQ} from \'../campaign2/cognitiveMath\';\n15 |  type X=Awaited<ReturnType<typeof open>>,Run=X[\'r\'];\n   |                                         ^\n16 |  const file=\'docs/planning/ASSEMBLED_CHARACTER_M288_EVIDENCE.json\',hash=(v:Uint8Array)=>createHash(\'sha256\').update(v).digest(\'hex\');\n17 |  const pack=(v:Uint8Array)=>({sha256:hash(v),length:v.length,deflateBase64:deflateRawSync(v).toString(\'base64\')});\n' } }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  12:00:32
+   Duration  305ms (transform 11ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 103ms)
+
+
+M288 types-initial exit=0 elapsed=23.190s cap=90s timeout=False
+
+M288 trained-current exit=1 elapsed=79.502s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledHabitCurrent.test.ts > native288_trained 1737ms
+   → configuration action/instruction cardinality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledHabitCurrent.test.ts > native288_trained
+SchedulerContractError: configuration action/instruction cardinality
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.compileCognitiveDeclarations src/assembled/cognitiveDeclarations.ts:36:96
+ ❯ Module.compileCharacterModel src/assembled/model.ts:365:24
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:28:110
+ ❯ Module.start src/test/fixtures/assembledSkillCarry.ts:46:167
+ ❯ src/test/assembledHabitCurrent.test.ts:55:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 skipped (12)
+   Start at  12:01:23
+   Duration  78.91s (transform 4.00s, setup 0ms, collect 76.84s, tests 1.74s, environment 0ms, prepare 104ms)
+
+
+M288 trained-domain-repair exit=0 elapsed=258.676s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitCurrent.test.ts > native288_trained
+M288 PASS trained {"mean":"800","strength":"15/16","probes":[{"at":9,"motive":"1/1","strength":"15/16","admitted":[true,false],"choice":0,"signals":["4/5"],"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"resolution":"c0462f528e853adcff2de91e35e6025c9c2ac59dd198f67efd8ebd778b9fa267"},{"at":10,"motive":"1/1","strength":"15/16","admitted":[true,false],"choice":0,"signals":["4/5"],"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"resolution":"eff8c1423bc866bd9dec623959d0c6a90f49b930bf7d18dfc4dabf8c330c46dc"},{"at":11,"motive":"1/1","strength":"15/16","admitted":[true,false],"choice":0,"signals":["4/5"],"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"resolution":"cf7eee8b0290deda2b019b8895a3abd4e75e612e704f50f13dcc1673a29cabca"}]}
+
+ ✓ src/test/assembledHabitCurrent.test.ts > native288_trained 191319ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  12:03:45
+   Duration  258.11s (transform 3.59s, setup 0ms, collect 66.39s, tests 191.32s, environment 0ms, prepare 103ms)
+
+
+M288 negative-and-reversal exit=0 elapsed=226.330s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitCurrent.test.ts > native288_untrained
+M288 PASS untrained {"mean":"0","strength":"0/1","probes":[{"at":9,"motive":"1/1","strength":"0/1","admitted":[false,false],"choice":-1,"signals":[],"probabilities":[],"resolution":"9e94cf7c1d2f84bf73a595e774e43feeded448ddaf73bab99d170cc03c58622e"},{"at":10,"motive":"1/1","strength":"0/1","admitted":[false,false],"choice":-1,"signals":[],"probabilities":[],"resolution":"d779ee440e9eccf6d5eac8b4f6547ed80103a4e59ac2d68e94503aed14894c62"},{"at":11,"motive":"1/1","strength":"0/1","admitted":[false,false],"choice":-1,"signals":[],"probabilities":[],"resolution":"a026d320b58531816cd65cc5cb710b4801df87aa361952dd1dc02101f52cabb5"}]}
+
+ ✓ src/test/assembledHabitCurrent.test.ts > native288_untrained 75473ms
+stdout | src/test/assembledHabitCurrent.test.ts > native288_reversed
+M288 PASS reversed {"mean":"400","strength":"3/16","probes":[{"at":9,"motive":"1/1","strength":"3/16","admitted":[true,false],"choice":0,"signals":["2/5"],"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"resolution":"e84bfeb85cd204ef11f6eea43d5721e8ba1a35025df2ee0358f3b2ef41de9d93"},{"at":10,"motive":"1/1","strength":"3/16","admitted":[true,false],"choice":0,"signals":["2/5"],"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"resolution":"e7dd832281599b6bd4b8aa169a3d8101f30e83c02e0cb9c921ca8f5b416a882f"},{"at":11,"motive":"1/1","strength":"3/16","admitted":[true,false],"choice":0,"signals":["2/5"],"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"resolution":"f9b2baebf4f5e5dceb233e8ec0a25e454a6c7a2beeeb3ab392607020454c55b3"}]}
+
+ ✓ src/test/assembledHabitCurrent.test.ts > native288_reversed 83592ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 10 skipped (12)
+   Start at  12:08:16
+   Duration  225.75s (transform 3.62s, setup 0ms, collect 66.30s, tests 159.07s, environment 0ms, prepare 106ms)
+
+
+M288 cues-and-permission exit=0 elapsed=299.059s cap=540s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitCurrent.test.ts > native288_other-cue
+M288 PASS other-cue {"mean":"800","strength":"15/16","probes":[{"at":9,"motive":"1/1","strength":"0/1","admitted":[true,false],"choice":0,"signals":["4/5"],"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"resolution":"c0462f528e853adcff2de91e35e6025c9c2ac59dd198f67efd8ebd778b9fa267"},{"at":10,"motive":"1/1","strength":"0/1","admitted":[true,false],"choice":0,"signals":["4/5"],"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"resolution":"eff8c1423bc866bd9dec623959d0c6a90f49b930bf7d18dfc4dabf8c330c46dc"},{"at":11,"motive":"1/1","strength":"0/1","admitted":[true,false],"choice":0,"signals":["4/5"],"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"resolution":"cf7eee8b0290deda2b019b8895a3abd4e75e612e704f50f13dcc1673a29cabca"}]}
+
+ ✓ src/test/assembledHabitCurrent.test.ts > native288_other-cue 86749ms
+stdout | src/test/assembledHabitCurrent.test.ts > native288_unseen-cue
+M288 PASS unseen-cue {"mean":"800","strength":"15/16","probes":[{"at":9,"motive":"1/1","strength":"0/1","admitted":[false,false],"choice":-1,"signals":[],"probabilities":[],"resolution":"9e94cf7c1d2f84bf73a595e774e43feeded448ddaf73bab99d170cc03c58622e"},{"at":10,"motive":"1/1","strength":"0/1","admitted":[false,false],"choice":-1,"signals":[],"probabilities":[],"resolution":"d779ee440e9eccf6d5eac8b4f6547ed80103a4e59ac2d68e94503aed14894c62"},{"at":11,"motive":"1/1","strength":"0/1","admitted":[false,false],"choice":-1,"signals":[],"probabilities":[],"resolution":"a026d320b58531816cd65cc5cb710b4801df87aa361952dd1dc02101f52cabb5"}]}
+
+ ✓ src/test/assembledHabitCurrent.test.ts > native288_unseen-cue 72895ms
+stdout | src/test/assembledHabitCurrent.test.ts > native288_denied-training
+M288 PASS denied-training {"mean":"0","strength":"0/1","probes":[{"at":9,"motive":"1/1","strength":"0/1","admitted":[false,false],"choice":-1,"signals":[],"probabilities":[],"resolution":"9e94cf7c1d2f84bf73a595e774e43feeded448ddaf73bab99d170cc03c58622e"},{"at":10,"motive":"1/1","strength":"0/1","admitted":[false,false],"choice":-1,"signals":[],"probabilities":[],"resolution":"d779ee440e9eccf6d5eac8b4f6547ed80103a4e59ac2d68e94503aed14894c62"},{"at":11,"motive":"1/1","strength":"0/1","admitted":[false,false],"choice":-1,"signals":[],"probabilities":[],"resolution":"a026d320b58531816cd65cc5cb710b4801df87aa361952dd1dc02101f52cabb5"}]}
+
+ ✓ src/test/assembledHabitCurrent.test.ts > native288_denied-training 72799ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed | 9 skipped (12)
+   Start at  12:12:27
+   Duration  298.49s (transform 3.49s, setup 0ms, collect 65.69s, tests 232.44s, environment 0ms, prepare 103ms)
+
+
+M288 independent-repeat exit=0 elapsed=142.121s cap=360s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledHabitCurrent.test.ts > repeat288: independent trained run matches complete saved evidence 75661ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 11 skipped (12)
+   Start at  12:17:38
+   Duration  141.56s (transform 3.48s, setup 0ms, collect 65.54s, tests 75.66s, environment 0ms, prepare 104ms)
+
+
+M288 types-final exit=0 elapsed=23.835s cap=90s timeout=False
+
+M288 boundaries exit=0 elapsed=3.350s cap=90s timeout=False
+Reference boundary check passed.
+
+M288 research exit=0 elapsed=3.521s cap=90s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M288 preserved-archives exit=0 elapsed=2.512s cap=90s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M288 staged-size exit=0 elapsed=0.874s cap=60s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
