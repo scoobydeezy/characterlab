@@ -52,3 +52,47 @@ for(const run of plan.runs.filter(first))it('postpone280 '+run.candidate+'/'+run
  if(run.candidate===4)expect(ticks[3].after).toMatchObject({status:'Fulfilled',progress:3});
  console.info('M280',run.candidate,run.name,JSON.stringify(ticks.map(v=>({step:v.step,choice:v.decisions[0]?.choice??-1,access:v.workspace.includes(0),goal:v.after}))));
 },590000);
+
+import {compileCharacterState} from '../assembled/state';
+import {workKnowledgePath} from '../assembled/workMaintenance';
+import {fixture as temporalFixture,start as temporalStart} from './fixtures/assembledTemporalOriginal';
+import {temporalCases} from './temporalGoalFixtures';
+it('postpone280 admission ownership and actual cue provenance',async()=>{
+ const b=fixture(procrastinationCases().main),x=await start(b),model=await compileCharacterModel(b.s),component=await compileCharacterState(model),slots=[...items(decode(b.s.registry),'list')];
+ expect(model.workMaintenance?.cue).toBe(true);expect(model.horizonScope).toEqual([taskA]);
+ expect(()=>compileWorkMaintenance(slots[47],[taskA,taskB])).toThrow();
+ for(const bindings of [[],[taskA,taskA],[sid(1030,'foreign')]])expect(()=>compileWorkMaintenance(list([text(WORK_CUE),list(bindings)]),[taskA,taskB],true)).toThrow();
+ expect(()=>compileHorizon(list([text(HORIZON),u(3)]),true,true)).toThrow();
+ for(const scope of [[],[taskA,taskA],[sid(1030,'foreign')]])expect(()=>compileHorizonScope(list([text(HORIZON),u(3),list(scope)]),[taskA,taskB])).toThrow();
+ slots[14]=list([text(HORIZON)]);await expect(compileCharacterModel({...b.s,rulesVersion:HORIZON_POLICY_RULES,registrySchemaVersion:HORIZON_POLICY_REGISTRY,registry:enc(list(slots))})).rejects.toThrow('work maintenance');
+ const rows=items(decode(b.d.orderedInputs),'list'),badPhase=rows.map(v=>{const a=[...items(v,'list')];if(key(a[2])===key(WORK_SOURCE))a[1]=u(110);return list(a);});await expect(createCharacterRun(x.m,{...b.d,orderedInputs:enc(list(badPhase))})).rejects.toThrow('work source time/phase');
+ const initial=restoreAuthoritativeState(decode(b.d.initialState)),access=list([text(WORK),u(1),list([u(1)])]);await expect(createCharacterRun(x.m,{...b.d,initialState:enc(new AuthoritativeState([...initial.entries(),{path:workAccessPath(C),value:access}]).canonicalValue())})).rejects.toThrow('initial control');
+ expect(()=>component.stateModel.applyPatch(initial,{operations:[{kind:'set',path:workAccessPath(C),expected:{presence:false},newValue:access}]},sid(1025,'authority/strategy-knowledge'))).toThrow();
+ for(const at of [6,7,8])expect(()=>fixture(procrastinationCases().main.map(v=>({...v,instruction:v.at===at?1:0})))).toThrow('adoption window');
+ const main=rec(decode(unzip(saved()['1/main'].save)),132n),traces=items(f(main,11n),'list').map(v=>rec(v,160n));let consumed=0;
+ for(const row of traces.filter(v=>key(f(v,5n))===key(sid(1036,'seam/assembled-work-maintenance'))&&uint(f(rec(f(v,4n),130n),3n))===40n)){
+  const input=items(f(row,12n),'list'),obs=items(input[2],'list');expect(key(obs[0])).toBe(key(text(WORK_CUE)));expect(items(f(row,9n),'list')).toEqual([obs[1]]);expect(f(rec(f(row,4n),130n),2n)).toEqual(signed(Number(uint(obs[2]))));const producer=traces.find(v=>key(f(rec(f(v,4n),130n),5n))===key(WORK_OBSERVE)&&items(f(v,13n),'list').some(v=>key(v)===key(input[2])));expect(producer).toBeDefined();expect(uint(f(rec(f(producer!,4n),130n),3n))).toBe(20n);consumed++;
+ }
+ expect(consumed).toBeGreaterThan(0);put('admission-provenance',{consumed,versions:true,foreignScope:true,phase:true,initialAccess:true,owner:true,originalLateAdoption:true});
+},590000);
+it('postpone280 repeat continuation and early-lane rollback',async()=>{
+ const x=await start(fixture(procrastinationCases().main));active=x.r;await through(x.r,2);const checkpoint=x.r.save(),repeat=await start(x.b);await through(repeat.r,2);expect(repeat.r.save()).toEqual(checkpoint);
+ const restored=cachedMemory(await restorePreparedCharacterRun(x.m,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save:checkpoint})),continuations=[];
+ for(let i=0;i<128;i++){const a=await repeat.r.settleNextInstant(),b=await restored.settleNextInstant();expect(b).toBe(a);expect(restored.save()).toEqual(repeat.r.save());continuations.push({at:String(repeat.r.snapshot().clock),hash:hash(repeat.r.save())});if(!a)break;if(i===127)throw Error('continuation cap');}
+ expect(repeat.r.save()).toEqual(unzip(saved()['1/main'].save));expect(continuations.some(v=>v.at==='11')).toBe(true);expect(continuations.some(v=>v.at==='12')).toBe(true);
+ const faults=[];for(const target of ['observation','workspace','commit']){
+  const r=cachedMemory(await restorePreparedCharacterRun(x.m,{initialState:x.b.d.initialState,orderedInputs:x.b.d.orderedInputs,save:checkpoint}));let reached=false;
+  const regular=DeterministicScheduler.prototype.settleNextInstant,spy=vi.spyOn(DeterministicScheduler.prototype,'settleNextInstant').mockImplementation(async function(this:DeterministicScheduler<unknown>){const before=this.exportQuiescentSnapshot();if(before.queue[0]?.dueAt!==3n)return regular.call(this);try{return await this.settleNextInstantForConformance({onBoundary(boundary,event){if(target==='commit'?boundary==='before-commit':boundary==='after-trace-validation'&&!!event&&key(event.eventTypeId)===key(target==='observation'?WORK_OBSERVE:sid(1001,'event/deliberation-opportunity'))){reached=true;throw Error('M280 injected fault');}}});}finally{const after=this.exportQuiescentSnapshot();expect(reached,'fault boundary '+target).toBe(true);expect(enc((after.state as AuthoritativeState).canonicalValue())).toEqual(enc((before.state as AuthoritativeState).canonicalValue()));expect(after.allocators).toEqual(before.allocators);expect(after.queue.map(scheduledEventValue)).toEqual(before.queue.map(scheduledEventValue));expect(after.outputs).toEqual(before.outputs);expect(after.committedTrace).toEqual(before.committedTrace);expect(after.clock).toBe(before.clock);expect(after.status).toBe('Failed');}});
+  try{await expect(r.settleNextInstant()).rejects.toThrow('M280 injected fault');expect(reached).toBe(true);faults.push({target,reached,diagnostic:hash(r.diagnostic()!)});}finally{spy.mockRestore();}
+ }
+ put('continuation',{checkpoint:zip(checkpoint),continuations,faults,terminal:hash(repeat.r.save())});
+},590000);
+it('postpone280 hidden reminder and exact old temporal carry',async()=>{
+ const runs=[];
+ for(const reminder of [true,false]){const b=fixture(procrastinationCases().main.map(v=>({...v,board:false,reminder:v.at===2&&reminder}))),x=await start(b);active=x.r;await finish(x.r);runs.push(x);put('denied-reminder-'+reminder,{source:zip(b.d.orderedInputs),save:zip(x.r.save())});}
+ expect(runs[0].r.snapshot().state).toEqual(runs[1].r.snapshot().state);expect(runs[0].r.snapshot().outputs).toEqual(runs[1].r.snapshot().outputs);expect(goal(runs[0].r)).toMatchObject({progress:0,status:'DeadlineMissed'});
+ const old=await temporalStart(temporalFixture(temporalCases().main,'HorizonRelative'));await finish(old.r);const prior=JSON.parse(readFileSync('docs/planning/ASSEMBLED_CHARACTER_M278_EVIDENCE.json','utf8'));expect(old.r.save()).toEqual(unzip(prior['HorizonRelative/main'].save));
+ const a=saved()['1/main'].ticks[1].decisions[0],b=saved()['2/main'].ticks[1].decisions[0];expect(a.nuclei).toBe(2);expect(b.nuclei).toBe(2);expect(a.probability).not.toEqual(b.probability);
+ expect(saved()['4/main'].ticks[1].decisions[0].nuclei).toBe(1);
+ put('privacy-carry',{wholeDeniedBoard:true,oldTemporalSave:hash(old.r.save()),actualProbability:[a.probability,b.probability],noImmediateGround:true});
+},590000);

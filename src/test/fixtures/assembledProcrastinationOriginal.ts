@@ -22,7 +22,7 @@ export function fixture(input:readonly Frame[],candidate=1){
  slots[14]=list([text(HORIZON),u(candidate===2?2:candidate===3?3:1),list([taskA])]);slots[47]=list([text(WORK_CUE),list([taskA])]);slots[62]=list([text(COUNT),list([list([taskA,A[1],u(3),u(input[0].report??0)])])]);
  let s={...b.s,rulesVersion:WORK_CUE_RULES,registrySchemaVersion:WORK_CUE_REGISTRY,registry:enc(list(slots))};
  s=changeDefinition(changeDefinition(s,'definition/task-a',6n,signed(12)),'definition/task-b',6n,signed(17));
- s=changeDefinition(changeDefinition(s,'definition/task-b',3n,q(100,1)),'definition/task-b',4n,q(100,1));
+ s=changeDefinition(changeDefinition(s,'definition/task-b',3n,q(10,1)),'definition/task-b',4n,q(10,1));
  const removed=[PRIORITY_DISPLAY,DISPLAY,HORIZON_DISPLAY,WORK_SOURCE,COUNT_SOURCE],rows=items(decode(b.d.orderedInputs),'list').filter(v=>!removed.some(t=>key(t)===key(items(v,'list')[2]))).map(v=>{const a=[...items(v,'list')];if(typeof a[0]==='boolean'||a[0].kind!=='signed')throw Error('time');a[0]=signed(2*Number(a[0].value)-1);return list(a);});
  const event=(at:number,phase:number,type:CanonicalValue,payload:CanonicalValue)=>list([signed(at),u(phase),type,payload,list([])]);
  const actions=items(items(slots[10],'list')[2],'set').map(v=>items(v,'list')[0]);

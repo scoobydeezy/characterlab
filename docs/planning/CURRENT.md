@@ -38,6 +38,9 @@ Capture step6 after boundary12; no additional action opportunity is inserted.
 Future opening6 ->11; forecast settles after current choice, as originally.
 Original at/after6 work adoption rejection remains part of source correspondence;
 native arbitrary goals keep their declared ordinary exclusive deadline semantics.
+First setup used activity target100 outside inherited0..10 admission; preserve it.
+Correct to legal unmet10 before replay; activity importance remains1 (ablation0),
+all laws/seeds/work target/proof gates unchanged. No model-domain enlargement.
 No mapper computes retained access, progress, status, appraisal or choice.
 Physical protocol permission maps feasibility/block independently of positive unit
 outcome and visible/misleading reports. Original immutable sources stay in evidence.
@@ -51,6 +54,8 @@ Repeat/restore main across reminder, retained access and deadline boundary; roll
 after early observation20 and workspace40 and at commit. Whole denied-board reminder
 comparison; invalid versions/scopes/sources/initial access and ownership reject.
 Carry old0.164 temporal main exactly. Types/boundaries/research/archive/integrity/size.
+Fault test named nonexistent task-workspace; use actual deliberation-opportunity40.
+The untriggered fault allowed a normal commit; preserve failed check, no production repair.
 One job/worker,<=600s/command,<=1800s total,<=20 evidence files/5MiB,no default extension.
 Done:6 original histories, live causal consumer/probability/lifecycle, admission/privacy/
 continuation/rollback/carry pass. Then remaining14 original runs and current intention
