@@ -1,4 +1,5 @@
 # Current work — M279 finish original temporal qualification
+M279 temporal qualification PASS; [result](ASSEMBLED_CHARACTER_M279_RESULT.md).
 M278 package A PASS at76c0f798; [result](ASSEMBLED_CHARACTER_M278_RESULT.md).
 Owner directs full Family12.7 under bounded self-approval. No UI/scope change.
 
@@ -42,7 +43,8 @@ Groups<=7; command<=600s,cumulative<=1800s,one job/worker. No default extension.
 Types,boundaries,research,archives,compressed integrity,document limits,Git-size.
 Done: all27 dispositions, probability/meaning/privacy/lifecycle and targeted
 continuation/rollback/carry pass; promote F12.7-8 only with no unresolved finding.
-Then original procrastination20 and prior intention reconciliation. No family pass yet.
+F12.7-8 promoted: E84/P24/N11/U13=132. Original procrastination20 and current
+intention reconciliation remain. Next card pending; no family pass yet.
 
 | Registry | Current count |
 |---|---|

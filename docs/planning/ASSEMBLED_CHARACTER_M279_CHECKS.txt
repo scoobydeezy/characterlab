@@ -1,0 +1,128 @@
+M279 cohort2 exit=0 elapsed=427.260s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/falseReceipt
+M278 HorizonRelative falseReceipt [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":0},{"status":"Open","progress":1,"physical":0}]},{"at":4,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":0},{"status":"Open","progress":2,"physical":0}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":0},{"status":"Fulfilled","progress":3,"physical":0}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":0},{"status":"Fulfilled","progress":3,"physical":0}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":0},{"status":"Fulfilled","progress":3,"physical":0}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":0},{"status":"Fulfilled","progress":3,"physical":0}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/falseReceipt 55675ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/trueReceipt
+M278 HorizonRelative trueReceipt [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":1,"physical":1}]},{"at":4,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":2,"physical":2}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/trueReceipt 53203ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/forecastCorrection
+M278 HorizonRelative forecastCorrection [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Open","progress":0,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":0,"goals":[{"status":"Open","progress":0,"physical":2},{"status":"Open","progress":0,"physical":0}]},{"at":4,"choice":0,"goals":[{"status":"Open","progress":0,"physical":3},{"status":"Open","progress":0,"physical":0}]},{"at":5,"choice":1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":3},{"status":"Open","progress":0,"physical":1}]},{"at":6,"choice":1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":3},{"status":"Open","progress":0,"physical":2}]},{"at":7,"choice":1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":3},{"status":"Open","progress":0,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":3},{"status":"DeadlineMissed","progress":0,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/forecastCorrection 66016ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/unknownFuture
+M278 HorizonRelative unknownFuture [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":1,"physical":1}]},{"at":4,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":2,"physical":2}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/unknownFuture 52617ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/unavailableFuture
+M278 HorizonRelative unavailableFuture [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":1,"physical":1}]},{"at":4,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":2,"physical":2}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/unavailableFuture 53196ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/blockedLong
+M278 HorizonRelative blockedLong [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":4,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":6,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":7,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"DeadlineMissed","progress":0,"physical":0}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/blockedLong 61068ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/deniedAdoption
+M278 HorizonRelative deniedAdoption [{"at":1,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":2,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":3,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":4,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":5,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":6,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":7,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":8,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 2 HorizonRelative/deniedAdoption 19450ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed | 25 skipped (32)
+   Start at  21:44:55
+   Duration  425.62s (transform 3.35s, setup 0ms, collect 63.95s, tests 361.23s, environment 0ms, prepare 101ms)
+
+
+M279 cohort3-and-correspondence exit=0 elapsed=267.699s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 3 HorizonRelative/hiddenAdoption
+M278 HorizonRelative hiddenAdoption [{"at":1,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":2,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":3,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":4,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":5,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":6,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":7,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]},{"at":8,"choice":-1,"goals":[{"status":"Absent","progress":0,"physical":0},{"status":"Absent","progress":0,"physical":0}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 3 HorizonRelative/hiddenAdoption 21505ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 3 HorizonRelative/expiredShort
+M278 HorizonRelative expiredShort [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":1,"physical":1}]},{"at":3,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":2,"physical":2}]},{"at":4,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":5,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 3 HorizonRelative/expiredShort 44347ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 3 NoTemporalBias/shortWeak
+M278 NoTemporalBias shortWeak [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":1,"physical":1}]},{"at":3,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":2,"physical":2}]},{"at":4,"choice":1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":5,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"DeadlineMissed","progress":0,"physical":0},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 3 NoTemporalBias/shortWeak 52771ms
+stdout | src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 3 NoTemporalBias/longWeak
+M278 NoTemporalBias longWeak [{"at":1,"choice":-1,"goals":[{"status":"Open","progress":0,"physical":0},{"status":"Open","progress":0,"physical":0}]},{"at":2,"choice":0,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":0,"physical":0}]},{"at":3,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":1,"physical":1}]},{"at":4,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Open","progress":2,"physical":2}]},{"at":5,"choice":1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":6,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":7,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]},{"at":8,"choice":-1,"goals":[{"status":"Fulfilled","progress":1,"physical":1},{"status":"Fulfilled","progress":3,"physical":3}]}]
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal278 cohort 3 NoTemporalBias/longWeak 51908ms
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal279 complete correspondence and controls 31736ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed | 30 skipped (35)
+   Start at  21:52:35
+   Duration  266.04s (transform 3.39s, setup 0ms, collect 63.36s, tests 202.27s, environment 0ms, prepare 101ms)
+
+
+M279 main-continuation exit=0 elapsed=167.040s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal279 main repeat continuation and rollback 101131ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 34 skipped (35)
+   Start at  21:57:20
+   Duration  165.40s (transform 3.37s, setup 0ms, collect 63.84s, tests 101.13s, environment 0ms, prepare 101ms)
+
+
+M279 correction-carry-classification exit=0 elapsed=235.983s cap=600s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal279 correction continuation and old policy carry 169410ms
+ ✓ src/test/assembledTemporalOriginal.test.ts > temporal279 classified findings from captured dice
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 34 skipped (36)
+   Start at  22:00:15
+   Duration  234.32s (transform 3.35s, setup 0ms, collect 64.42s, tests 169.45s, environment 0ms, prepare 101ms)
+
+
+M279 types-final exit=1 elapsed=30.553s cap=600s timeout=False
+src/test/assembledTemporalOriginal.test.ts(86,18): error TS7034: Variable 'mapped' implicitly has type 'any[]' in some locations where its type cannot be determined.
+src/test/assembledTemporalOriginal.test.ts(98,27): error TS7005: Variable 'mapped' implicitly has an 'any[]' type.
+src/test/assembledTemporalOriginal.test.ts(105,102): error TS7006: Parameter 'v' implicitly has an 'any' type.
+src/test/assembledTemporalOriginal.test.ts(105,174): error TS7006: Parameter 'v' implicitly has an 'any' type.
+
+M279 types-corrected exit=1 elapsed=23.922s cap=600s timeout=False
+src/test/assembledTemporalOriginal.test.ts(86,24): error TS2739: Type 'never[]' is missing the following properties from type '{ name: string; ticks: { at: number; after: { status: string; progress: number; }[]; native: { nuclei: number; choice: number; probability: { task: number; p: string; }[]; }; valuations: { task: number; value: string; factor: string; }[]; }[]; }': name, ticks
+src/test/assembledTemporalOriginal.test.ts(96,13): error TS2339: Property 'push' does not exist on type '{ name: string; ticks: { at: number; after: { status: string; progress: number; }[]; native: { nuclei: number; choice: number; probability: { task: number; p: string; }[]; }; valuations: { task: number; value: string; factor: string; }[]; }[]; }'.
+src/test/assembledTemporalOriginal.test.ts(98,34): error TS2339: Property 'find' does not exist on type '{ name: string; ticks: { at: number; after: { status: string; progress: number; }[]; native: { nuclei: number; choice: number; probability: { task: number; p: string; }[]; }; valuations: { task: number; value: string; factor: string; }[]; }[]; }'.
+src/test/assembledTemporalOriginal.test.ts(98,39): error TS7006: Parameter 'x' implicitly has an 'any' type.
+src/test/assembledTemporalOriginal.test.ts(105,102): error TS7006: Parameter 'v' implicitly has an 'any' type.
+src/test/assembledTemporalOriginal.test.ts(105,174): error TS7006: Parameter 'v' implicitly has an 'any' type.
+
+M279 boundaries exit=0 elapsed=3.679s cap=120s timeout=False
+
+> characterlab@0.1.0 check:boundaries
+> node scripts/check-reference-boundary.mjs
+
+Reference boundary check passed.
+
+M279 research exit=0 elapsed=3.861s cap=120s timeout=False
+
+> characterlab@0.1.0 check:research
+> node scripts/check-research-obligations.mjs
+
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M279 archives exit=0 elapsed=2.928s cap=120s timeout=False
+
+> characterlab@0.1.0 evidence:verify
+> node scripts/restore-evidence.mjs --verify
+
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
