@@ -1,58 +1,35 @@
-# Current work — M290 general habit access with learned reward
-Owner2026-11-26 approves restoring general habit proposals before changing MeanHistory.
-Baseline32ab469a; one active milestone. No family acceptance or reference-law change.
-Three capabilities: action-indexed habit offers eligible nonreward task routes;
-equal reward estimates/different acquired cue history change native probabilities;
-existing reward-only admission and deliberate inhibition remain intact.
-Architecture OptionGen/13.2, M16/M118, action-reward0.146 and reward-information0.147
-bound the seam. HABIT ledger preserves separate expectation and acquired history;
-CTL009 universal options remains unaccepted; RO015/010 and original controls retained.
+# Current work — M290 complete: habit access across live tasks
+The character can use acquired habit to offer a response for another active goal.
+Equal mean reward200, different cue histories: A probability1/2 versus0 at all
+three probes. Changing cue removes the effect; control suppresses then releases it.
+[M290 result](ASSEMBLED_CHARACTER_M290_RESULT.md); plan786a0989; baseline32ab469a.
+Current successor0.167; assembled-character-general-habit/0.1-candidate.
+MeanHistory, Residual1/2, precision10/cap16, activation0, D3/Ramp and disuseH4/half stay.
 
-## Version and implementation
-Model/registry0.167 successor; <=0.166 keeps exact old path.
-Keep MeanHistory, Residual1/2, precision10, cap16, activation0, D3/Ramp, disuseH4/half.
-At70 keep reward-task admissions unchanged. For each registered reward action,
-its own cue history may offer routes of OTHER selected live tasks when motive>0
-and route KnownAvailable. Do not use reward belief to license those other origins.
-Merge by candidate/origin identity. No invented route, goal, motive, reason or die.
-Use the existing generic task appraisal/reasons for these added origins.
-Trace the new candidate join and actual history reads under a versioned seam.
-No new owner/state field/scheduler, hidden factory, or source-name dispatch.
+No new motive or habit bonus: ordinary task reasons evaluate the added origin.
+Known route, positive current motive, selected task and acquired cue history required.
+One runtime/state/scheduler/save. Five production files plus two fixture/test files.
+Prior0.166 M289 save repeats exactly; promoted reward-only probabilities agree.
+Controlled restore8 to natural completion and independent recent repeat pass.
+Unknown/unavailable route, missing history, hidden cue, zero motive and duplicates
+checked at the production seam on actual native operands; meaningful failures retained.
+Original1800s cumulative/600s per-command limits held, including pre-reboot failures.
 
-## Predeclared native comparison
-Adapt M289 apparatus: social reward task with normal stand-in reports1..3,
-body10/rate0, workspace6, seed0, four actual A practices4..7.
-Equal perceived gain totals: recent[0,0,0,1000] versus remote[1000,0,0,0].
-Both receive A0/B1000 information8: meanA200/B1000, habitA1/2 versus1/16.
-No learned S0. Same physical practices; permitted sensor biases select the reports.
-At9..11 reward-task urgency absent; a nonsocial second task has importance/urgency1.
-It plans B while its alternative A is known available. Native other-task reason
-must be live in both arms before comparison; all inherited task settings explicit.
-Habit must add A's other-task origin only in recent arm, with an exact positive
-A probability versus0; actual selected actions must execute. Do not claim shared
-random draws or changed sampled winner from equal seeds alone.
-Additional current runs: recent/other cue, recent/control (adopt9, maintain10,
-withdraw11). Require cue removes the new origin and control suppresses/releases it.
-Focused cheap seam checks: unknown/unavailable route, zero motive, hidden cue,
-no acquired history, duplicate origin and unchanged reward-only/information access.
-Capture real operands when possible; unit checks supplement, never replace native gate.
-Exact controlled restore8 to completion; independent recent repeat. Prior0.166
-M289 free save hashes must still match; run its promoted reward-only equivalent
-and compare semantic decision projections (identity changes disclosed).
+## Next bounded milestone
+Reconcile current-reference habit acquisition/reversal and corrective-information
+comparisons before broader dependence/craving/relapse integration. Write and commit
+the next finite card before coding. Do not start another runtime or change laws.
+M289's overlap remains for reward-task admission in precision10/cap16:
+positive reward expectation already admits every sufficiently strong habit there.
+M290 restores independent goal-supported access; it does not prove reward-free
+compulsion or settle that reward-specific contribution. Keep the distinction explicit.
+Original M1180.89 and M230/M249–251 controls retain their version-scoped claims.
 
-## Budgets and checks
-At most8 planned production/test files/12 hard cap: model, runtime, traceBinding,
-habitExecution, actionReward, fixture and native/seam tests (optional separate unit).
-One new formal contract committed before code; one result/evidence/log.
-<=20 artifacts/5MiB,600s per command,1800s total verification; one job at a time.
-Types, focused native groups, continuation/repeat, old-control/reward-only,
-boundary/research/archive/source integrity/Git size. No unrelated frozen C2 rerun:
-shared C2 dependencies are untouched. Preserve failures and repair ordinary setup
-under delegated authority; no seed search or law retuning.
-Done: native causal effect + negatives + old semantics + persistence pass; otherwise
-record the unresolved cause without claiming completion. No breadth before this gate.
-Family12.9 remains open, including independent reward-specific persistence/compulsion.
-E88/P21/N10/U13=132;21members/15families;9 version-scoped accepted families.
+Family12.9 remains open; E88/P21/N10/U13=132;21members/15families.
+Nine version-scoped accepted families; final whole-candidate replay required.
+HABIT ledger and conditional research obligations retained; no new C3 verdict.
+No UI/Campaign4, architectural reduction, or whole-character acceptance.
+
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

@@ -18,8 +18,8 @@ export function rewardMotive(options:CanonicalValue,task:CanonicalValue){
  const motive=rec(f(rec(options,398n),2n),394n),row=items(f(motive,3n),'list').find(v=>eq(f(rec(v,393n),1n),task));
  return row?readQ(f(rec(row,393n),2n)):zero;
 }
-export function actionRewardCandidates(C:CanonicalValue,d:RewardDeclaration,routes:Strategy,read:Read,input:CanonicalValue,planner:CanonicalValue,cue:CanonicalValue|undefined,current:Current,at:bigint,timeLimit:TimeLimit){
- const a=rec(input,398n),demand=rewardMotive(a,d.task),reads:ActualReadRecord[]=[],reports:CanonicalValue[]=[],c=cue?items(cue,'list'):undefined,visible=!!c&&items(c[3],'list').length===1;
+export function actionRewardCandidates(C:CanonicalValue,d:RewardDeclaration,routes:Strategy,read:Read,input:CanonicalValue,planner:CanonicalValue,cue:CanonicalValue|undefined,current:Current,at:bigint,timeLimit:TimeLimit,generalHabit=false){
+ const a=rec(input,398n),demand=rewardMotive(a,d.task),reads:ActualReadRecord[]=[],reports:CanonicalValue[]=[],offers:CanonicalValue[]=[],c=cue?items(cue,'list'):undefined,visible=!!c&&items(c[3],'list').length===1;
  const options=items(f(a,3n),'list').flatMap(v=>{const o=rec(v,397n),before=items(f(o,2n),'set'),origins=before.filter(v=>!eq(f(rec(v,396n),1n),d.task));return origins.length||!before.length?[r(397,[f(o,1n),set(origins)])]:[];});
  const p=items(items(planner,'list')[3],'list').find(v=>eq(items(v,'list')[0],d.task)),route=routes.find(r=>eq(r.task,d.task))!;
  for(const action of d.actions){
@@ -28,10 +28,25 @@ export function actionRewardCandidates(C:CanonicalValue,d:RewardDeclaration,rout
   const index=route.plans.findIndex(r=>eq(r.actionId,action)),known=!!p&&eq(items(items(items(p,'list')[2],'list')[index],'list')[0],text('KnownAvailable'));
   const learned=belief?.mean!==undefined&&belief.mean>0n,eligible=current.practice?!!current.practiceAction&&eq(current.practiceAction,action):visible&&(learned||h.compare(Q.of(1n,2n))>=0),admitted=demand.compare(zero)>0&&known&&eligible;
   if(admitted){const candidate=r(395,[C,action]),origin=r(396,[d.task,route.plans[index].instructionId]),i=options.findIndex(v=>eq(f(rec(v,397n),1n),candidate));if(i<0)options.push(r(397,[candidate,set([origin])]));else options[i]=r(397,[candidate,set([...items(f(rec(options[i],397n),2n),'set'),origin])]);}
+  // Habit supplies access to other live task routes, never their motivation.
+  if(generalHabit&&!current.practice&&visible&&h.compare(Q.of(1n,2n))>=0){
+   for(const row of items(items(planner,'list')[3],'list')){
+    const pr=items(row,'list'),task=pr[0];
+    if(eq(task,d.task)||rewardMotive(a,task).compare(zero)<=0)continue;
+    const mapping=routes.find(v=>eq(v.task,task));if(!mapping)continue;
+    for(const [i,plan] of mapping.plans.entries()){
+     if(!eq(plan.actionId,action)||!eq(items(items(pr[2],'list')[i],'list')[0],text('KnownAvailable')))continue;
+     const candidate=r(395,[C,action]),origin=r(396,[task,plan.instructionId]),at=options.findIndex(v=>eq(f(rec(v,397n),1n),candidate));
+     const origins=at<0?[]:items(f(rec(options[at],397n),2n),'set'),added=!origins.some(v=>eq(v,origin));
+     if(added){const value=r(397,[candidate,set([...origins,origin])]);if(at<0)options.push(value);else options[at]=value;}
+     offers.push(list([action,task,plan.instructionId,added]));
+    }
+   }
+  }
   reports.push(list([action,bp.value??list([]),hp.value??list([]),q(h),known,eligible,admitted]));
  }
  return {output:r(398,[f(a,1n),f(a,2n),list(options.sort((a,b)=>key(f(rec(a,397n),1n))<key(f(rec(b,397n),1n))?-1:1))]),reads,
- report:list([text('assembled-action-reward/candidates'),u(at),q(demand),cue??list([]),list(reports)])};
+ report:list([text('assembled-action-reward/candidates'),u(at),q(demand),cue??list([]),list(reports),...(generalHabit?[list([text('general-habit/origins'),list(offers)])]:[])])};
 }
 export function actionRewardRaw(C:CanonicalValue,d:RewardDeclaration,read:Read,input:CanonicalValue,current:Current,at:bigint,timeLimit:TimeLimit){
  const raw=rec(input,403n),options=rec(f(raw,2n),398n),demand=rewardMotive(options,d.task),reads:ActualReadRecord[]=[],reports:CanonicalValue[]=[];

@@ -1,0 +1,178 @@
+M290 types exit=2 elapsed=25.330s cap=120s timeout=False
+src/test/assembledGeneralHabit.test.ts(74,41): error TS2345: Argument of type 'readonly CanonicalValue[]' is not assignable to parameter of type 'CanonicalValue[]'.
+  The type 'readonly CanonicalValue[]' is 'readonly' and cannot be assigned to the mutable type 'CanonicalValue[]'.
+
+M290 native-recent exit=1 elapsed=69.571s cap=420s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ × src/test/assembledGeneralHabit.test.ts > native290_recent 2103ms
+   → task desired interval domain
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGeneralHabit.test.ts > native290_recent
+SchedulerContractError: task desired interval domain
+ ❯ Module.invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ compileTaskContentContext src/assembled/taskDeclarations.ts:75:202
+ ❯ Module.compileTaskContentDeclarations src/assembled/taskDeclarations.ts:27:9
+ ❯ Module.compileCognitiveDeclarations src/assembled/cognitiveDeclarations.ts:24:22
+ ❯ Module.compileCharacterModel src/assembled/model.ts:366:52
+ ❯ Module.prepareCharacterModel src/assembled/character.ts:28:116
+ ❯ Module.start src/test/fixtures/assembledGeneralHabit.ts:36:166
+ ❯ open src/test/assembledGeneralHabit.test.ts:19:39
+ ❯ src/test/assembledGeneralHabit.test.ts:90:16
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  17:08:20
+   Duration  68.98s (transform 3.61s, setup 0ms, collect 66.52s, tests 2.10s, environment 0ms, prepare 108ms)
+
+
+M290 native-recent-corrected exit=1 elapsed=123.971s cap=420s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGeneralHabit.test.ts > native290_recent
+M290 liveness recent 9 1/1 0/1
+
+ × src/test/assembledGeneralHabit.test.ts > native290_recent 56240ms
+   → requires 171/1
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/test/assembledGeneralHabit.test.ts > native290_recent
+SchedulerContractError: requires 171/1
+ ❯ invalidModel src/campaign2/canonicalData.ts:7:59
+      5| export type IdentityValue=Extract<CanonicalValue,{kind:'typedIdentifie…
+      6| export const dataKey=(value:CanonicalValue)=>bytesToHex(canonicalEncod…
+      7| export function invalidModel(message:string):never {throw new Schedule…
+       |                                                           ^
+      8| export function dataRecord(value:CanonicalValue,typeId:bigint):RecordV…
+      9|   if(typeof value==='boolean'||value.kind!=='record'||value.schema.typ…
+ ❯ Module.dataRecord src/campaign2/canonicalData.ts:9:117
+ ❯ src/assembled/strategy.ts:18:111
+ ❯ Module.compileStrategy src/assembled/strategy.ts:18:104
+ ❯ seamControls src/test/assembledGeneralHabit.test.ts:74:15
+ ❯ src/test/assembledGeneralHabit.test.ts:98:160
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'INVALID_CONFIGURATION', candidateTransitionData: undefined }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 skipped (11)
+   Start at  17:09:58
+   Duration  122.89s (transform 3.51s, setup 0ms, collect 66.09s, tests 56.24s, environment 0ms, prepare 287ms)
+
+
+M290 recent-seam-repaired exit=0 elapsed=167.027s cap=420s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGeneralHabit.test.ts > native290_recent
+M290 liveness recent 9 1/1 0/1
+
+stdout | src/test/assembledGeneralHabit.test.ts > native290_recent
+M290 liveness recent 10 1/1 0/1
+
+stdout | src/test/assembledGeneralHabit.test.ts > native290_recent
+M290 liveness recent 11 1/1 0/1
+M290 PASS recent [{"at":9,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":0,"signals":["1/1","1/1"],"resolution":"780a96d25dc1ba92669bf36a851288b7aef18360647cbd882d1a0fa15d2b2b79"},{"at":10,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":0,"signals":["1/1","1/1"],"resolution":"288af1be7d05fb348127d96657118a02d57f7133efe2657635549ade775207ca"},{"at":11,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":0,"signals":["1/1","1/1"],"resolution":"0ac8c71b9ec17e6ac43af24783ba4529b5534beb6e406324a5a8262db4cad3db"}]
+
+ ✓ src/test/assembledGeneralHabit.test.ts > native290_recent 97729ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  17:12:22
+   Duration  166.47s (transform 3.52s, setup 0ms, collect 68.37s, tests 97.73s, environment 0ms, prepare 105ms)
+
+
+M290 history-and-cue exit=0 elapsed=258.412s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGeneralHabit.test.ts > native290_remote
+M290 liveness remote 9 1/1 0/1
+M290 liveness remote 10 1/1 0/1
+M290 liveness remote 11 1/1 0/1
+M290 PASS remote [{"at":9,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"ce53896679c6450d442fdacb5b9816c6a606d73d56d933446f383e48c37ab1db"},{"at":10,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"a8342b9cf92be752f8bff8312f5530b2b090a1f2b88e65e39a74ac79413e8ff4"},{"at":11,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"b1d17b180c97572065eb94f8bbdde668111681bfaec64f38d0656d88ea0f736f"}]
+
+ ✓ src/test/assembledGeneralHabit.test.ts > native290_remote 90179ms
+stdout | src/test/assembledGeneralHabit.test.ts > native290_other-cue
+M290 liveness other-cue 9 1/1 0/1
+M290 liveness other-cue 10 1/1 0/1
+M290 liveness other-cue 11 1/1 0/1
+M290 PASS other-cue [{"at":9,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"ce53896679c6450d442fdacb5b9816c6a606d73d56d933446f383e48c37ab1db"},{"at":10,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"a8342b9cf92be752f8bff8312f5530b2b090a1f2b88e65e39a74ac79413e8ff4"},{"at":11,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"b1d17b180c97572065eb94f8bbdde668111681bfaec64f38d0656d88ea0f736f"}]
+
+ ✓ src/test/assembledGeneralHabit.test.ts > native290_other-cue 87515ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  19:28:24
+   Duration  256.80s (transform 5.47s, setup 0ms, collect 78.26s, tests 177.70s, environment 0ms, prepare 444ms)
+
+
+M290 controlled-continuation exit=0 elapsed=268.012s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledGeneralHabit.test.ts > native290_controlled
+M290 liveness controlled 9 1/1 0/1
+M290 liveness controlled 10 1/1 0/1
+
+stdout | src/test/assembledGeneralHabit.test.ts > native290_controlled
+M290 liveness controlled 11 1/1 0/1
+M290 PASS controlled [{"at":9,"motive":"1/1","offers":1,"held":true,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"ce53896679c6450d442fdacb5b9816c6a606d73d56d933446f383e48c37ab1db"},{"at":10,"motive":"1/1","offers":1,"held":true,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"a8342b9cf92be752f8bff8312f5530b2b090a1f2b88e65e39a74ac79413e8ff4"},{"at":11,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":0,"signals":["1/1","1/1"],"resolution":"0ac8c71b9ec17e6ac43af24783ba4529b5534beb6e406324a5a8262db4cad3db"}]
+
+ ✓ src/test/assembledGeneralHabit.test.ts > native290_controlled 201160ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  19:33:01
+   Duration  267.44s (transform 3.55s, setup 0ms, collect 65.88s, tests 201.16s, environment 0ms, prepare 104ms)
+
+
+M290 repeat-and-retained exit=0 elapsed=316.202s cap=480s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledGeneralHabit.test.ts > repeat290: independent recent run matches complete evidence 81996ms
+ ✓ src/test/assembledGeneralHabit.test.ts > retained290: old control exact and promoted reward-only semantic agreement 166687ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  19:37:41
+   Duration  315.63s (transform 3.55s, setup 0ms, collect 66.55s, tests 248.68s, environment 0ms, prepare 106ms)
+
+
+M290 types-final exit=0 elapsed=24.259s cap=120s timeout=False
+
+M290 boundary exit=0 elapsed=3.421s cap=120s timeout=False
+Reference boundary check passed.
+
+M290 research exit=0 elapsed=3.711s cap=120s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M290 archives exit=0 elapsed=2.786s cap=120s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M290 integrity PASS: 11 lossless blocks / 43998183 decoded bytes; equal registry/S0/reward means; native probability contrasts; source hashes and document/artifact limits verified. Packaging allowance30s.
+M290 git-size exit=0 elapsed=1.534s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
