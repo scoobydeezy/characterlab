@@ -1,0 +1,123 @@
+M291 types exit=0 elapsed=25.868s cap=120s timeout=False
+
+M291 acquisition-and-correction exit=0 elapsed=252.597s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitRelearning.test.ts > native291_trained
+M291 liveness trained 9 1/1 0/1
+
+stdout | src/test/assembledHabitRelearning.test.ts > native291_trained
+M291 liveness trained 10 1/1 0/1
+
+stdout | src/test/assembledHabitRelearning.test.ts > native291_trained
+M291 liveness trained 11 1/1 0/1
+M291 PASS trained {"mean":"750","alternatives":["7/8","3/4","0/1"],"probes":[{"at":9,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":0,"signals":["1/1","1/1"],"resolution":"780a96d25dc1ba92669bf36a851288b7aef18360647cbd882d1a0fa15d2b2b79"},{"at":10,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":0,"signals":["1/1","1/1"],"resolution":"288af1be7d05fb348127d96657118a02d57f7133efe2657635549ade775207ca"},{"at":11,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":0,"signals":["1/1","1/1"],"resolution":"0ac8c71b9ec17e6ac43af24783ba4529b5534beb6e406324a5a8262db4cad3db"}]}
+
+ ✓ src/test/assembledHabitRelearning.test.ts > native291_trained 94570ms
+stdout | src/test/assembledHabitRelearning.test.ts > native291_untrained
+M291 liveness untrained 9 1/1 0/1
+M291 liveness untrained 10 1/1 0/1
+M291 liveness untrained 11 1/1 0/1
+M291 PASS untrained {"mean":"0","alternatives":["0/1","0/1","0/1"],"probes":[{"at":9,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"ce53896679c6450d442fdacb5b9816c6a606d73d56d933446f383e48c37ab1db"},{"at":10,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"a8342b9cf92be752f8bff8312f5530b2b090a1f2b88e65e39a74ac79413e8ff4"},{"at":11,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"b1d17b180c97572065eb94f8bbdde668111681bfaec64f38d0656d88ea0f736f"}]}
+
+ ✓ src/test/assembledHabitRelearning.test.ts > native291_untrained 90492ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  20:51:30
+   Duration  251.54s (transform 3.61s, setup 0ms, collect 65.85s, tests 185.06s, environment 0ms, prepare 334ms)
+
+
+M291 reversal-continuation exit=0 elapsed=266.042s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitRelearning.test.ts > native291_reversed
+M291 liveness reversed 9 1/1 0/1
+M291 liveness reversed 10 1/1 0/1
+M291 liveness reversed 11 1/1 0/1
+M291 PASS reversed {"mean":"600","alternatives":["7/16","1/2","0/1"],"probes":[{"at":9,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"ce53896679c6450d442fdacb5b9816c6a606d73d56d933446f383e48c37ab1db"},{"at":10,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"a8342b9cf92be752f8bff8312f5530b2b090a1f2b88e65e39a74ac79413e8ff4"},{"at":11,"motive":"1/1","offers":0,"held":false,"probabilities":[{"action":1,"value":"1/1"}],"choice":1,"signals":["1/1"],"resolution":"b1d17b180c97572065eb94f8bbdde668111681bfaec64f38d0656d88ea0f736f"}]}
+
+ ✓ src/test/assembledHabitRelearning.test.ts > native291_reversed 199420ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  20:56:02
+   Duration  265.47s (transform 3.53s, setup 0ms, collect 65.66s, tests 199.42s, environment 0ms, prepare 113ms)
+
+
+M291 correction-privacy exit=0 elapsed=254.515s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledHabitRelearning.test.ts > native291_denied-correction
+M291 liveness denied-correction 9 1/1 0/1
+
+stdout | src/test/assembledHabitRelearning.test.ts > native291_denied-correction
+M291 liveness denied-correction 10 1/1 0/1
+
+stdout | src/test/assembledHabitRelearning.test.ts > native291_denied-correction
+M291 liveness denied-correction 11 1/1 0/1
+M291 PASS denied-correction {"mean":"1000","alternatives":["7/8","3/4","0/1"],"probes":[{"at":9,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"signals":["1/1","1/1"],"resolution":"6125d5b4c80a799c0d07d89332fa7b905836dd9d39fe5f2f9fc45e6117897783"},{"at":10,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"signals":["1/1","1/1"],"resolution":"ed6704790298aa576f8d799d3a8292da03a28d97d15fcee4312d3f86e4d68a00"},{"at":11,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"signals":["1/1","1/1"],"resolution":"54a0f9c52220e541c5584cbb9c56b14f09c9865076704ef7c33fe1bd351fada8"}]}
+
+ ✓ src/test/assembledHabitRelearning.test.ts > native291_denied-correction 94510ms
+stdout | src/test/assembledHabitRelearning.test.ts > native291_absent-correction
+M291 liveness absent-correction 9 1/1 0/1
+
+stdout | src/test/assembledHabitRelearning.test.ts > native291_absent-correction
+M291 liveness absent-correction 10 1/1 0/1
+
+stdout | src/test/assembledHabitRelearning.test.ts > native291_absent-correction
+M291 liveness absent-correction 11 1/1 0/1
+M291 PASS absent-correction {"mean":"1000","alternatives":["7/8","3/4","0/1"],"probes":[{"at":9,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"signals":["1/1","1/1"],"resolution":"6125d5b4c80a799c0d07d89332fa7b905836dd9d39fe5f2f9fc45e6117897783"},{"at":10,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"signals":["1/1","1/1"],"resolution":"ed6704790298aa576f8d799d3a8292da03a28d97d15fcee4312d3f86e4d68a00"},{"at":11,"motive":"1/1","offers":1,"held":false,"probabilities":[{"action":0,"value":"1/2"},{"action":1,"value":"1/2"}],"choice":1,"signals":["1/1","1/1"],"resolution":"54a0f9c52220e541c5584cbb9c56b14f09c9865076704ef7c33fe1bd351fada8"}]}
+
+ ✓ src/test/assembledHabitRelearning.test.ts > native291_absent-correction 93537ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 9 skipped (11)
+   Start at  21:00:47
+   Duration  253.95s (transform 3.54s, setup 0ms, collect 65.52s, tests 188.05s, environment 0ms, prepare 103ms)
+
+
+M291 independent-repeat exit=0 elapsed=67.121s cap=360s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+
+ Test Files  1 skipped (1)
+      Tests  11 skipped (11)
+   Start at  21:07:12
+   Duration  66.56s (transform 3.55s, setup 0ms, collect 66.23s, tests 0ms, environment 0ms, prepare 105ms)
+
+
+M291 independent-repeat-corrected exit=0 elapsed=147.308s cap=360s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledHabitRelearning.test.ts > repeat291: independent reversed run matches complete evidence 80411ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 10 skipped (11)
+   Start at  21:09:00
+   Duration  146.75s (transform 3.53s, setup 0ms, collect 65.96s, tests 80.41s, environment 0ms, prepare 104ms)
+
+
+M291 boundary exit=0 elapsed=3.526s cap=120s timeout=False
+Reference boundary check passed.
+
+M291 research exit=0 elapsed=3.565s cap=120s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M291 archive exit=0 elapsed=2.552s cap=120s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M291 integrity PASS: 6 lossless blocks, 34735338 decoded bytes; 8 retained controls unchanged versus ef93c076; 2 test-source hashes; document limits PASS. Packaging within reserved30s.
+M291 staged-git-size exit=0 elapsed=1.310s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.

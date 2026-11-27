@@ -1,54 +1,42 @@
-# Current work — M291 acquisition, correction and reversal on0.167
-Baselineef93c076; one active milestone. Three capabilities: acquire a response;
-correct expected reward without changing habit; weaken habit after an observed
-unrewarding attempt so its other-task decision influence disappears.
-No production/formal changes planned. Same model/state/scheduler/save.
-MeanHistory/Residual1/2, precision10/cap16, activation0, D3/Ramp, disuseH4/half fixed.
-HABIT ledger/CTL009 and RO015/010 retained. Original HABIT/M118 controls unchanged.
+# Current work — M291 complete; Family12.9 open
+The current0.167 character acquires habit from perceived performed outcomes.
+Information-only correction changes reward expectation without erasing habit.
+A performed attempt perceived as unrewarding weakens habit7/8 ->7/16 and removes
+its other-task choice contribution: A probability1/2 ->0 at three live probes.
+[M291 result](ASSEMBLED_CHARACTER_M291_RESULT.md); plan dcb186ce.
+No production/formal/law changes; same model/state/scheduler/save.
 
-## Predeclared scenario and comparison
-Use M290 general-habit scenario: social reward task with normal evidence1..3;
-nonsocial task B target10..10; body10/rate0, workspace6, seed0.
-Four actual A practices4..7, identical physical opportunities/delivery.
-Three received positive reports4..6 acquire h1/2 ->3/4 ->7/8 in trained/reversed;
-untrained receives zero reports and stays0. No learned S0.
-At7 trained/untrained feedback is denied (actual attempt still executes);
-reversed receives zero, folding h7/8 ->7/16, below existing threshold1/2.
-At8 ordinary information A0/B1000 changes expectation, never performed history.
-Expected A means: trained750, untrained0, reversed600. Different mean is explicit;
-at9..11 original reward-task motive is0, so it cannot explain the other-task effect.
-Other-task motive1 and both routes KnownAvailable; B remains the selected plan.
-Require live appraisal/motive/reasons and actual chosen/executed action at each gate.
-A probability must be1/2 after trained correction,0 after untrained or reversal.
-Retain M290's equal-mean/different-history and cue/control proof as unchanged evidence;
-do not mislabel these new unequal means as another equal-belief experiment.
-Information-only versus performed evidence must be supported by actual receipts,
-owner writes and acquisition traces; committed histories unchanged at free probes.
+## Completed comparison
+Social reward task uses normal stand-in evidence; second task nonsocial.
+Same physical reward/opportunities, four A practices, seed0, body10/rate0.
+Sensor-mediated reports differ; this is not physically unrewarded practice.
+Original reward-task motive0; other-task motive1, live reasons and known routes.
+Unequal means are explicit. M290 retains the separate equal-mean/cue/control proof.
+Five native cases pass acquisition/correction/reversal and denied/absent privacy.
+Actual owner writes distinguish information-only from performed observations.
+Exact continuation from save8 and independent prefix/terminal repeat pass.
+No coupling claim from same seed; native probability change is the decision gate.
+One repeat invocation selected no tests; corrected filter passes, original retained.
+Types/boundary/research/archive pass. Integrity and staged-size receipt in result.
 
-Two additional cases: denied-correction and absent-correction, same trained history.
-At8 perception denied in both; first carries A0/B1000, second no reports.
-Both keep meanA1000/Bunknown and h7/8. Require identical acquired state projections
-and complete decision-resolution records9..11; source/world bytes may differ.
-No coupling or sampled-winner claim from same seed; exact native probabilities gate.
-At4..8 record actual journal/expectation values and owners. Preserve unknown vs zero.
-Linear/NoHistory folds on those actual acquired observations are retained controls:
-after three positives/one negative Residual7/16 vs Linear1/2 vs NoHistory0.
-No variant is selected in the native model; no claim of alternate native behavior.
-Original M118/HABIT complete controls remain executable; hash unchanged test,
-fixture, public contract and mechanism sources instead of rerunning unrelated suites.
+## Next bounded item
+Family12.9 remains open. M289's reward-specific admission overlap remains.
+Next examine dependence on satisfiers/substitutes and the required resistance
+comparisons against the accepted contracts and retained M230/M249–251 evidence.
+Write one finite card before implementation; preserve original HABIT controls.
+Do not treat other-task habit access as reward-free compulsion or family acceptance.
+Escalate genuine alternative-law/ontology/scope decisions; routine repairs remain
+self-approved within one package's fixed laws, comparison and budget.
+No UI, autonomous peers, new standalone runtime or blanket prior-family promotion.
 
-## Files, checks and stopping condition
-Two new fixture/test files planned, hard cap12; no production edits unless a concrete
-defect is identified and recorded first. One result/evidence/log, <=20 artifacts/5MiB.
-600s per command,1800s cumulative, one job. Measured groups: trained/untrained,
-reversed+restore8 through natural completion, denied/absent, independent reversed repeat.
-Full state/output/trace/save continuation and repeat; no early truncation.
-Types, boundary/research/archive, evidence/source integrity and staged Git-size.
-Frozen C2 and original C3 dependencies unchanged; retain their passing control evidence.
-Done when five native cases, observed learning provenance, alternatives and persistence
-pass and differences are classified. No new law, seed search, family waiver or UI.
-M289's reward-specific admission overlap remains; Family12.9 stays open.
+## Limits and retained scope
+M291 used two test/fixture files, no production files; three evidence artifacts.
+Original limits:12 files,20 artifacts/5MiB,600s per command,1800s verification.
+No budget extension. Verification ends after the prescribed passing checks.
+MeanHistory/Residual1/2, precision10/cap16, activation0, D3/Ramp,
+PeriodicDisuse H4/half remain. HABIT ledger, CTL009 and RO015/010 preserved.
 E88/P21/N10/U13=132;21members/15families;9 version-scoped accepted families.
+Final whole-candidate replay and assembly acceptance remain open.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
