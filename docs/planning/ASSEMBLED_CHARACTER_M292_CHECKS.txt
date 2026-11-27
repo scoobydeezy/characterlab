@@ -1,0 +1,132 @@
+M292 types exit=0 elapsed=23.750s cap=120s timeout=False
+
+M292 repertoire exit=0 elapsed=336.941s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSatisfierCurrent.test.ts > native292_concentrated
+M292 probe concentrated 9 {"at":9,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000",null],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"eceb7f244ca74052ecb2b3648bbb27ff5e1761900dbf3cdccc6638daa461162d","effects":[]}
+M292 probe concentrated 10 {"at":10,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000",null],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"4fd74fbacf49e7ead3d7bc7f8a7e2ab551ef14deddbc645bb6c405d825dc78c1","effects":[]}
+M292 probe concentrated 11 {"at":11,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000",null],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"71fb00637a059ccc009935f80e4c7af0be35d4d48055d996586ce5fca186f7fa","effects":[]}
+M292 PASS concentrated {"means":["1000",null],"actions":[-1,-1,-1]}
+
+ ✓ src/test/assembledSatisfierCurrent.test.ts > native292_concentrated 76815ms
+stdout | src/test/assembledSatisfierCurrent.test.ts > native292_diversified
+M292 probe diversified 9 {"at":9,"origins":[{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[1],"motive":"1/1","beliefs":["1000","1000"],"habit":["3/4","3/4"],"admitted":[false,true],"chosen":1,"probabilities":[{"action":1,"value":"1/1"}],"signals":[{"action":1,"role":1,"value":"1/1","supports":["0b8c0902b002","0b8c0902e601"]}],"raw":"9d8f08251cfdca3c1e7b77562738adb00d0ea821deb7ffd5f4530ebeab012bcc","effects":[{"action":1,"status":"Applied"}]}
+M292 probe diversified 10 {"at":10,"origins":[{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[1],"motive":"1/1","beliefs":["1000","1000"],"habit":["3/4","7/8"],"admitted":[false,true],"chosen":1,"probabilities":[{"action":1,"value":"1/1"}],"signals":[{"action":1,"role":1,"value":"1/1","supports":["0b8c0902b002","0b8c0902e601","0b8c0902e602"]}],"raw":"471d9f857f9968c53ff437fe0b5fd3ce85872e34f3edd763e063253d95596ed7","effects":[{"action":1,"status":"Applied"}]}
+M292 probe diversified 11 {"at":11,"origins":[{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[1],"motive":"1/1","beliefs":["1000","1000"],"habit":["3/4","15/16"],"admitted":[false,true],"chosen":1,"probabilities":[{"action":1,"value":"1/1"}],"signals":[{"action":1,"role":1,"value":"1/1","supports":["0b8c09028e03","0b8c0902b002","0b8c0902e601","0b8c0902e602"]}],"raw":"f3219f4d1cf3710a8e34dad1885aed2130de73ead56981c90036ce930b785c02","effects":[{"action":1,"status":"Applied"}]}
+M292 PASS diversified {"means":["1000","1000"],"actions":[1,1,1]}
+
+ ✓ src/test/assembledSatisfierCurrent.test.ts > native292_diversified 192698ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 43 skipped (45)
+   Start at  21:38:07
+   Duration  336.37s (transform 3.85s, setup 0ms, collect 66.47s, tests 269.51s, environment 0ms, prepare 105ms)
+
+
+M292 informational-alternative exit=0 elapsed=238.463s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSatisfierCurrent.test.ts > native292_knownFailure
+M292 probe knownFailure 9 {"at":9,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000","0"],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"ea5c1253528a41c8cdf89473393f6ddd16c063a0de38033b6d495f7d3b1b460d","effects":[]}
+M292 probe knownFailure 10 {"at":10,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000","0"],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"7f72f460036ca421879ada61f23e95701ca1cd6c6ab04b22dd55918929637fb4","effects":[]}
+M292 probe knownFailure 11 {"at":11,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000","0"],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"a740c4a7d11e2c3473027323a0fdd8482de17564ba39ad8c43b67aedd4618bb3","effects":[]}
+M292 PASS knownFailure {"means":["1000","0"],"actions":[-1,-1,-1]}
+
+ ✓ src/test/assembledSatisfierCurrent.test.ts > native292_knownFailure 77243ms
+stdout | src/test/assembledSatisfierCurrent.test.ts > native292_knownAlternative
+M292 probe knownAlternative 9 {"at":9,"origins":[{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[1],"motive":"1/1","beliefs":["1000","1000"],"habit":["15/16","0/1"],"admitted":[false,true],"chosen":1,"probabilities":[{"action":1,"value":"1/1"}],"signals":[{"action":1,"role":1,"value":"1/1","supports":["0b8c0902c102"]}],"raw":"d1117e8cdeef7b7801770134c1bad696ed7c39c1130d560ab5c2ad36ec450093","effects":[{"action":1,"status":"Applied"}]}
+M292 probe knownAlternative 10 {"at":10,"origins":[{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[1],"motive":"1/1","beliefs":["1000","1000"],"habit":["15/16","1/2"],"admitted":[false,true],"chosen":1,"probabilities":[{"action":1,"value":"1/1"}],"signals":[{"action":1,"role":1,"value":"1/1","supports":["0b8c0902c102","0b8c0902e902"]}],"raw":"495409e710a19d9cd184569eed9aeb1ef28bfdc735380750923d8adcb206fd68","effects":[{"action":1,"status":"Applied"}]}
+M292 probe knownAlternative 11 {"at":11,"origins":[{"action":1,"origins":[{"common":true,"motive":"1/1"},{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[1],"motive":"1/1","beliefs":["1000","1000"],"habit":["15/16","3/4"],"admitted":[false,true],"chosen":1,"probabilities":[{"action":1,"value":"1/1"}],"signals":[{"action":1,"role":1,"value":"1/1","supports":["0b8c09029103","0b8c0902c102","0b8c0902e902"]}],"raw":"2c320811c7b63cdbde4a802d084a34895e7db3e37388d6ff08136a5fd36de703","effects":[{"action":1,"status":"Applied"}]}
+M292 PASS knownAlternative {"means":["1000","1000"],"actions":[1,1,1]}
+
+ ✓ src/test/assembledSatisfierCurrent.test.ts > native292_knownAlternative 93423ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 43 skipped (45)
+   Start at  21:43:52
+   Duration  237.90s (transform 3.82s, setup 0ms, collect 66.85s, tests 170.67s, environment 0ms, prepare 105ms)
+
+
+M292 availability-contradiction exit=0 elapsed=235.765s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSatisfierCurrent.test.ts > native292_unavailable
+M292 probe unavailable 9 {"at":9,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000","1000"],"habit":["3/4","3/4"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"eceb7f244ca74052ecb2b3648bbb27ff5e1761900dbf3cdccc6638daa461162d","effects":[]}
+M292 probe unavailable 10 {"at":10,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000","1000"],"habit":["3/4","3/4"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"4fd74fbacf49e7ead3d7bc7f8a7e2ab551ef14deddbc645bb6c405d825dc78c1","effects":[]}
+M292 probe unavailable 11 {"at":11,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000","1000"],"habit":["3/4","3/4"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"71fb00637a059ccc009935f80e4c7af0be35d4d48055d996586ce5fca186f7fa","effects":[]}
+M292 PASS unavailable {"means":["1000","1000"],"actions":[-1,-1,-1]}
+
+ ✓ src/test/assembledSatisfierCurrent.test.ts > native292_unavailable 78894ms
+stdout | src/test/assembledSatisfierCurrent.test.ts > native292_correctedConcentrated
+M292 probe correctedConcentrated 9 {"at":9,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0],"motive":"1/1","beliefs":["800","0"],"habit":["15/16","0/1"],"admitted":[true,false],"chosen":0,"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"signals":[{"action":0,"role":1,"value":"4/5","supports":["0b8c09028b02","0b8c0902b002","0b8c0902c101","0b8c0902c302","0b8c0902e601"]}],"raw":"c22272e515879c26c83c82730da0be10b7577c4a5ad035d35e85cf492ad205b9","effects":[{"action":0,"status":"Applied"}]}
+M292 probe correctedConcentrated 10 {"at":10,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0],"motive":"1/1","beliefs":["800","0"],"habit":["15/16","0/1"],"admitted":[true,false],"chosen":0,"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"signals":[{"action":0,"role":1,"value":"4/5","supports":["0b8c09028b02","0b8c0902b002","0b8c0902c101","0b8c0902c302","0b8c0902e601"]}],"raw":"07b30b208d38d33afb554502af340eb69d0ac683479698aa2aaaf2a807fb7ad6","effects":[{"action":0,"status":"Applied"}]}
+M292 probe correctedConcentrated 11 {"at":11,"origins":[{"action":0,"origins":[{"common":true,"motive":"1/1"}]},{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[0],"motive":"1/1","beliefs":["800","0"],"habit":["15/16","0/1"],"admitted":[true,false],"chosen":0,"probabilities":[{"action":0,"value":"1/1"},{"action":1,"value":"0/1"}],"signals":[{"action":0,"role":1,"value":"4/5","supports":["0b8c09028b02","0b8c0902b002","0b8c0902c101","0b8c0902c302","0b8c0902e601"]}],"raw":"b79dc6217567027697b95b813360d61057a6ef85899436228a194c49e7a83c56","effects":[{"action":0,"status":"Applied"}]}
+M292 PASS correctedConcentrated {"means":["800","0"],"actions":[0,0,0]}
+
+ ✓ src/test/assembledSatisfierCurrent.test.ts > native292_correctedConcentrated 88276ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 43 skipped (45)
+   Start at  21:47:58
+   Duration  235.19s (transform 3.85s, setup 0ms, collect 67.65s, tests 167.17s, environment 0ms, prepare 106ms)
+
+
+M292 information-privacy exit=0 elapsed=214.823s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledSatisfierCurrent.test.ts > native292_deniedInfo
+M292 probe deniedInfo 9 {"at":9,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000",null],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"eceb7f244ca74052ecb2b3648bbb27ff5e1761900dbf3cdccc6638daa461162d","effects":[]}
+M292 probe deniedInfo 10 {"at":10,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000",null],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"4fd74fbacf49e7ead3d7bc7f8a7e2ab551ef14deddbc645bb6c405d825dc78c1","effects":[]}
+M292 probe deniedInfo 11 {"at":11,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000",null],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"71fb00637a059ccc009935f80e4c7af0be35d4d48055d996586ce5fca186f7fa","effects":[]}
+M292 PASS deniedInfo {"means":["1000",null],"actions":[-1,-1,-1]}
+
+ ✓ src/test/assembledSatisfierCurrent.test.ts > native292_deniedInfo 77472ms
+stdout | src/test/assembledSatisfierCurrent.test.ts > native292_absentInfo
+M292 probe absentInfo 9 {"at":9,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000",null],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"eceb7f244ca74052ecb2b3648bbb27ff5e1761900dbf3cdccc6638daa461162d","effects":[]}
+M292 probe absentInfo 10 {"at":10,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000",null],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"4fd74fbacf49e7ead3d7bc7f8a7e2ab551ef14deddbc645bb6c405d825dc78c1","effects":[]}
+M292 probe absentInfo 11 {"at":11,"origins":[{"action":1,"origins":[{"common":false,"motive":null},{"common":false,"motive":null}]}],"reasonActions":[],"motive":"1/1","beliefs":["1000",null],"habit":["15/16","0/1"],"admitted":[false,false],"chosen":-1,"probabilities":[],"signals":[],"raw":"71fb00637a059ccc009935f80e4c7af0be35d4d48055d996586ce5fca186f7fa","effects":[]}
+M292 PASS absentInfo {"means":["1000",null],"actions":[-1,-1,-1]}
+
+ ✓ src/test/assembledSatisfierCurrent.test.ts > native292_absentInfo 69899ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 43 skipped (45)
+   Start at  21:52:04
+   Duration  214.25s (transform 3.99s, setup 0ms, collect 66.51s, tests 147.37s, environment 0ms, prepare 105ms)
+
+
+M292 independent-repeat exit=0 elapsed=147.605s cap=360s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledSatisfierCurrent.test.ts > repeat292: independent diversified prefix and terminal 79909ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 44 skipped (45)
+   Start at  21:56:03
+   Duration  147.05s (transform 3.82s, setup 0ms, collect 66.76s, tests 79.91s, environment 0ms, prepare 104ms)
+
+
+M292 boundary exit=0 elapsed=3.553s cap=120s timeout=False
+Reference boundary check passed.
+
+M292 research exit=0 elapsed=3.503s cap=120s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M292 archive exit=0 elapsed=2.500s cap=120s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M292 integrity PASS: 8 cases, 11 lossless blocks, 46098255 decoded bytes; all11 original frozen source hashes match, 14 controls retained versus e3c60e49, 2 new test-source hashes; one registry/S0 and document limits PASS. Packaging within reserved30s.
+M292 staged-git-size exit=0 elapsed=0.866s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.

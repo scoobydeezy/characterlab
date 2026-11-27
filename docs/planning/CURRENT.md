@@ -1,61 +1,45 @@
-# Current work — M292 learned satisfier reliance on0.167
-Baseline e3c60e49; one active milestone, test/evidence only.
-Capabilities: concentrated versus diversified learning affects substitution;
-information/availability govern usable substitutes; accumulated expectation resists
-one contrary report. Same shared model/state/scheduler/save, no dependence trait.
-Family12.9 clauses4/5 remain open beyond this finite receiving comparison.
+# Current work — M292 complete; Family12.9 open
+The current0.167 character can use a learned substitute when its usual satisfier
+becomes unavailable. Equal successful practice concentrated on A leaves B unknown;
+diversified A/B practice supports actual B use. Useful information can establish B
+without B practice. Known failure, missing evidence and unavailable routes differ.
+[M292 result](ASSEMBLED_CHARACTER_M292_RESULT.md); plan78eb74f4.
+One model/state/scheduler/save; no production, contract or law changes.
 
-## Fixed comparison before implementation
-Reuse original M230 sources for eight cases: concentrated, diversified,
-knownFailure, knownAlternative, unavailable, deniedInfo, absentInfo,
-correctedConcentrated. Four successful A/A/A/A or A/B/A/B practices4..7,
-social TASK with normal stand-in reports1..3, body10/rate0, information8,
-free probes9..11, seed0. No learned starting state.
-Current declaration/source representation uses M287/M288 promotion, restores
-original task/action/instruction domains, and adds only an unbound item location.
-Use M289 workspace6 and normal recovery8/awake9..11 to prevent sleep/readiness
-from masking the compared learning. Original outcomes, permissions, precision10,
-cue, route availability, information and practice schedule remain unchanged.
-Global activation0, MeanHistory/Residual1/2, sample cap16, D3/Ramp,
-PeriodicDisuse H4/half fixed; no per-case law or seed selection.
-At every probe assert live common-task motive, actual candidate/owner consumption,
-known route status, reason basis and actual selected physical execution.
-Require:
-- concentrated: B unknown, no substitute after A removal;
-- diversified: B learned by two practices, chooses/applies B at all three probes;
-- knownFailure: B known0 stays distinct from unknown, no substitute;
-- knownAlternative: B1000 learned informationally, no B practice, actual B use;
-- unavailable: acquired alternatives remain, neither can be used;
-- deniedInfo/absentInfo: unknown B and equal complete permitted-output projections;
-- correctedConcentrated: A800/B0 after correction, retained habit and actual A use.
-Compare native belief/habit/admission and first probability with the unchanged
-MeanHistory component and preserved M249/M250 projections; classify differences.
-Retain LatestHistory, ExpectationOnly, HistoryOnly and NoLearning source controls.
-Do not claim habit necessity, new physiological learning, or same-seed coupling.
-Native later histories follow actual native actions.
+## Completed finite gate
+Eight original task-domain scenarios pass on current receiving. All24 probes
+require live common-task motive, actual learned-owner reads and reason support;
+every chosen action reaches Applied execution. Four equal successful practices
+precede each comparison; no learned starting state or dependence label.
+One contrary report changes A1000 ->800 while preserving habit and later A use.
+Denied/absent information preserve complete permitted streams byte-for-byte.
+Diversified save8 restores every later state/output/trace/save through termination;
+independent run repeats save8 and final save. Original sources/controls preserved.
+Types, boundary/research/archive, evidence integrity and size receipts in result.
+No failed comparison or amendment; eight native tests plus one repeat.
+M249/M250 retain the remaining substitution scenarios on0.155; M292 is not all22.
 
-## Scope, risks, checks and binary stop
-Two new fixture/test files planned; cap12 production/test files.
-No production or formal edits planned; existing dependence-substitutes/0.2 and
-assembled general-habit/0.167 contracts govern their respective scopes.
-Consulted HABIT ledger, MEC001/011..020, EXP001/003/004, CTL009 and RO008/010/015/020;
-preserve distinctions and original29-run/261-prefix controls by source hashes.
-Four paired native groups capped450s each; actual cumulative cap1800s, not sum
-of ceilings. Before each launch ensure remaining budget covers its estimate.
-Restore diversified save8 through natural termination with exact state/output/
-trace/save each settlement; independent diversified repeat matches8 and terminal.
-Types, boundary/research/archive, original-source and lossless evidence integrity,
-document limits and staged Git-size. No unrelated frozen-C2 rerun: no dependency edit.
-Evidence: one result/log/JSON, <=20 files/5MiB. Per-command<=600s; one long job.
-Failure risks: readiness or unrelated motives masking source; altered practice
-domain; unknown collapsed tozero; truth leaking; information training habit;
-learned efficacy not reaching actual reasons; version carry silently changing laws.
-Done only when all eight cases, privacy, continuation/repeat and preservation pass,
-with differences classified. Any unresolved failure stays explicit; no family waiver.
-M290/291 acquired-habit/control/reversal remain retained; M289 reward-specific
-admission overlap remains. Broader reinforcement, absence/craving/relapse and
-remaining resistance comparisons follow, never inferred from this substitution gate.
+## Next bounded item
+Address chosen-outcome feedback and reinforcement on the current character:
+actual choice -> perceived consequence -> changed learned expectation -> later
+reason/choice probability, with matched withheld-outcome controls.
+Consult the original reinforcement contract/matrix and HABIT ledger before the card.
+Preserve all original seeds, nulls and meaningful alternative laws; do not turn
+sampled-winner changes or mere repeated practice into escalation claims.
+Then account for remaining family resistance, absence/craving and relapse gates.
+Write one finite card before implementation. No unrelated breadth or UI.
+
+## Limits and standing scope
+M292: two new test/fixture files; three result/evidence/log artifacts.
+Original cap12 production/test files,20 artifacts/5MiB,600s/job,1800s verification;
+no extension. Stop verification after the prescribed passes.
+MeanHistory/Residual1/2, precision10/cap16, activation0, D3/Ramp and
+PeriodicDisuse H4/half fixed. Controls and conditional obligations retain scope.
+M289 reward-specific admission overlap remains; M290/M291 other-task habit proof
+does not establish reward-free compulsion. Task substitution is not physiological
+dependence, a new Need learning law or full Family12.9 acceptance.
 E88/P21/N10/U13=132;21members/15families;9 version-scoped accepted families.
+Final whole-candidate replay and assembly acceptance remain open.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
