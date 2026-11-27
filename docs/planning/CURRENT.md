@@ -1,63 +1,44 @@
-# Current work — M293 coupled reinforcement, first cohort
-Baseline c5cdc3ee; one active milestone. Test/evidence only on model/registry0.167.
-Observable loop: chosen action -> physical delivery -> permitted outcome -> learned
-expectation -> later reasons/probabilities -> next actual action. No new habit bonus.
-Brief12.9-6 full gate remains open; no family/count promotion.
+# Current work — M293 complete; reinforcement cohort still open
+Perceived success can strengthen the selected action's later probability in the
+current0.167 character. Physical reward alone does not update learned expectation:
+the matched withheld-outcome arm keeps500/500 while continuing to act successfully.
+[M293 result](ASSEMBLED_CHARACTER_M293_RESULT.md); pre-code card73c4f064.
+One model/state/scheduler/save; no production, contract or law changes.
 
-## Predeclared source and laws
-Reuse M292 common social TASK, stand-in reports1..3, body10/rate0, workspace6.
-Map original reinforcement opportunities1..8 to instants4..11: information4 reports
-A0/B0; successful instructed practiceA5/B6; five free opportunities7..11.
-Keep fixed actual unit reward, both known available routes, demand1 and no learned S0.
-Information4 has no deliberation. Clone the existing ordinary opportunity template
-into8 (formerly information-only). Other free opportunities remain ordinary.
-Normal recovery6 and awake7..11 keep readiness live; control receives no adoption.
-Full receives each chosen outcome; withheld denies reward perception only at7..11.
-No physical reward removal, injected belief, choice instruction at free probes,
-law change or difference in demand/availability. No reward magnitude escalation.
-MeanHistory/Residual1/2, precision10/cap16, activation0, D3/Ramp, disuseH4/half fixed.
+## Completed bounded package
+Seeds0..3 run in predeclared full/withheld pairs, all five free opportunities each.
+Common information and actual A/B practice produce mean500/500 and h1/2 each.
+First complete decisions/expressions agree, and every actual draw resolves to the
+shared timed header. Matched raw candidates agree; different bounds remain explicit.
+Admitted first success yields chosen mean667 and next probability2/3 versus1/2.
+Actual action sequences and null pairs are retained in the result, not cherry-picked.
+Both candidates/motive/reasons remain live; actual outcomes update only later state.
+Full seed0 save6 restores every later state/output/trace/save to natural termination;
+independent full seed0 repeat matches6 and terminal. No source or law amendments.
+Types/boundary/research/archive, integrity/preservation/size receipts in the result.
 
-## Coupling, predictions and scope split
-Predeclare timed correspondence7..11 for both task/action reason faces, standing
-rounding and decision tie. Keys use instant/purpose/actor/action/task only, shared
-across arms; no setup outcome reads, key/seed search or map retuning.
-Require every actual draw to resolve to that header. First free resolution and
-expression must agree; shared draws with equal spans/results agree. Later bounds
-may differ; compare first raw candidates under common effective keys, not force
-equal outcomes when spans differ. Preserve all draws and sampled nulls.
-Both start free7 with mean500/500 and h1/2 each. Withheld stays500/500, same journals.
-Full appends only actual chosen performed outcomes; chosen-option mean becomes
-667 at8 after the first success, others stay500. Later exact means follow actual
-sample histories. Actual acquired supports must feed Base reasons and execution.
-Assert liveness, both admissions, actual chosen Applied effects, learned provenance,
-later exact probability change against matched withheld. No habit-necessity claim.
+## Next bounded item — complete the predeclared cohort
+Run seeds4..7 with the SAME committed fixture and timed header, no key/seed retuning.
+Keep all five opportunities, sampled nulls and exact native probability comparisons.
+Then account for original negative controls: missing training/NoLearning, false/
+true success and denied/hidden failure, no demand, unavailable options and failure
+feedback. Split before execution if time/output limits require; waive none.
+Original five-law/31-run/279-prefix matrix and all8 original pairs remain frozen.
+Current keys/model differ; do not claim historical sampled-winner equality.
+The complete reinforcement gate remains open until cohort/control reconciliation.
+No unrelated breadth, extra factory or UI.
 
-Original8 paired seeds0..7 remain mandatory. Split BEFORE coding: M293 runs0..3
-in order (eight native runs); next package4..7 and original negative/control accounting.
-At least one actual later divergence is required for the complete8-pair gate;
-report all sequences here even if no divergence, never replace seeds or weaken gate.
-Retain original five laws/31 runs/279 prefixes; no alternate native pass configuration.
-Declare quantization correspondence (e.g.2/3 ->667/1000); classify any new differences.
-
-## Checks, budgets and done
-Two new fixture/test files; cap12. No production/formal edit planned.
-Read reinforcement-feedback/0.1 and dependence-substitutes/0.2 contracts, HABIT
-ledger/MEC012..019/EXP001/003/009/010, RO008/010/015/020 dispositions.
-Same source/task domain; no broader dependence/physiology/identity reduction claim.
-One job. Four seed-pair commands <=450s; total measured<=1800s (not sum of caps).
-Seed0 full restores save6 through every later settlement in full state/output/trace/
-save; independent seed0 full repeat compares6 and terminal. Natural completion.
-Types, boundary/research/archive, actual coupling and lossless evidence/source integrity,
-document limits, staged Git-size. Original frozen controls retained by hashes;
-unchanged production dependencies do not justify unrelated C2 suite reruns.
-One result/log/JSON, <=20 files/5MiB. Reserve30s packaging within1800s;600s hard/job.
-Risks: dead appraisal/readiness, accidental free instruction, unavailable route,
-denied evidence leaking, current receipt used before execution, unmatched dice,
-quantization/die plateau mistaken for failure or universal monotonic reinforcement.
-Done when all4 pairs satisfy source/learning/probability/coupling and persistence
-gates, with observed choices/nulls recorded and full-cohort remainder explicit.
-No comparison amendment after results without recorded rationale; no blind retries.
+## Limits and retained scope
+M293 used two test/fixture files; one result/log/JSON. Original limits12 files,
+20 artifacts/5MiB,600s/job and1800s verification; no budget extension.
+MeanHistory/Residual1/2, precision10/cap16, activation0, D3/Ramp and disuseH4/half fixed.
+Withholding removes expectation and performed-history updates; this is an
+expectation-mediated feedback witness, not independent habit necessity.
+Rising estimates can leave probabilities on a die plateau. No universal repetition,
+increasing objective reward, physiological dependence, craving or addiction claim.
+M289 reward-specific admission overlap and broader Family12.9 gaps remain.
 E88/P21/N10/U13=132;21members/15families;9 version-scoped accepted families.
+No clause/count promotion; final whole-candidate replay and assembly acceptance open.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |

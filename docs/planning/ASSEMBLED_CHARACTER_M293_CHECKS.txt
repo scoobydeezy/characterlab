@@ -1,0 +1,204 @@
+M293 types exit=0 elapsed=26.208s cap=120s timeout=False
+
+M293 pair-seed0 exit=0 elapsed=399.522s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 full 7 {"means":["500","500"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 full 8 {"means":["667","500"],"p":["2/3","1/3"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 full 9 {"means":["667","667"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 full 10 {"means":["667","750"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 full 11 {"means":["667","800"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 withheld 7 {"means":["500","500"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 withheld 8 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 withheld 9 {"means":["500","500"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 withheld 10 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed0
+M293 probe 0 withheld 11 {"means":["500","500"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+M293 PAIR PASS 0 {"shared":10,"pa":"2/3","choices":[0,1,1,1,0],"control":[0,1,0,1,0],"changed":true}
+
+ ✓ src/test/assembledReinforcementCurrent.test.ts > pair293_seed0 327423ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  09:12:54
+   Duration  398.53s (transform 3.75s, setup 0ms, collect 70.58s, tests 327.42s, environment 0ms, prepare 140ms)
+
+
+M293 pair-seed1 exit=0 elapsed=262.008s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 full 7 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 full 8 {"means":["500","667"],"p":["1/3","2/3"],"chosen":1,"draws":3}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 full 9 {"means":["500","750"],"p":["1/3","2/3"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 full 10 {"means":["667","750"],"p":["1/2","1/2"],"chosen":1,"draws":3}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 full 11 {"means":["667","800"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 withheld 7 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 withheld 8 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 withheld 9 {"means":["500","500"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 withheld 10 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed1
+M293 probe 1 withheld 11 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+M293 PAIR PASS 1 {"shared":10,"pa":"2/3","choices":[1,1,0,1,1],"control":[1,1,0,1,1],"changed":false}
+
+ ✓ src/test/assembledReinforcementCurrent.test.ts > pair293_seed1 190653ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  09:19:46
+   Duration  260.79s (transform 3.96s, setup 0ms, collect 69.41s, tests 190.65s, environment 0ms, prepare 365ms)
+
+
+M293 pair-seed2 exit=0 elapsed=266.976s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 full 7 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 full 8 {"means":["500","667"],"p":["1/3","2/3"],"chosen":0,"draws":3}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 full 9 {"means":["667","667"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 full 10 {"means":["667","750"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 full 11 {"means":["750","750"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 withheld 7 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 withheld 8 {"means":["500","500"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 withheld 9 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":3}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 withheld 10 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed2
+M293 probe 2 withheld 11 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+M293 PAIR PASS 2 {"shared":10,"pa":"2/3","choices":[1,0,1,0,1],"control":[1,0,1,1,1],"changed":true}
+
+ ✓ src/test/assembledReinforcementCurrent.test.ts > pair293_seed2 199410ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  09:24:16
+   Duration  266.41s (transform 3.58s, setup 0ms, collect 66.60s, tests 199.41s, environment 0ms, prepare 105ms)
+
+
+M293 pair-seed3 exit=0 elapsed=264.204s cap=450s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 full 7 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":3}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 full 8 {"means":["500","667"],"p":["1/3","2/3"],"chosen":0,"draws":3}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 full 9 {"means":["667","667"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 full 10 {"means":["750","667"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 full 11 {"means":["750","750"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 withheld 7 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":3}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 withheld 8 {"means":["500","500"],"p":["1/2","1/2"],"chosen":0,"draws":3}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 withheld 9 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 withheld 10 {"means":["500","500"],"p":["1/2","1/2"],"chosen":0,"draws":2}
+
+stdout | src/test/assembledReinforcementCurrent.test.ts > pair293_seed3
+M293 probe 3 withheld 11 {"means":["500","500"],"p":["1/2","1/2"],"chosen":1,"draws":2}
+M293 PAIR PASS 3 {"shared":12,"pa":"2/3","choices":[1,0,0,1,1],"control":[1,0,1,0,1],"changed":true}
+
+ ✓ src/test/assembledReinforcementCurrent.test.ts > pair293_seed3 196665ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  09:28:52
+   Duration  263.63s (transform 3.58s, setup 0ms, collect 66.60s, tests 196.67s, environment 0ms, prepare 104ms)
+
+
+M293 independent-repeat exit=0 elapsed=149.432s cap=360s timeout=False
+
+ RUN  v2.1.9 C:/Users/scoob/.codex/worktrees/assembled-character/characterlab
+
+ ✓ src/test/assembledReinforcementCurrent.test.ts > repeat293: independent full seed0 prefix and terminal 82979ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 13 skipped (14)
+   Start at  09:33:25
+   Duration  148.87s (transform 3.56s, setup 0ms, collect 65.51s, tests 82.98s, environment 0ms, prepare 103ms)
+
+
+M293 boundary exit=0 elapsed=3.953s cap=120s timeout=False
+Reference boundary check passed.
+
+M293 research exit=0 elapsed=3.993s cap=120s timeout=False
+PASS: research obligation references and dispositions {"active":0,"conditional":18,"closed":4,"unowned":0,"verdicts":103,"reports":4445}
+
+M293 archive exit=0 elapsed=2.627s cap=120s timeout=False
+already verified: docs/planning/campaign3-history-universe-rev1/units.jsonl
+already verified: docs/planning/campaign3-history-universe-rev1/occurrences.jsonl
+already verified: docs/planning/BIOLOGICAL_SYSTEM_RESULT_REV1.json
+
+M293 integrity PASS: 4 pairs, changed sequences0/2/3, 17 lossless blocks, 57143000 decoded bytes; 17 original artifacts match frozen hashes, 11 controls unchanged versus c5cdc3ee, 2 new test-source hashes; one registry/S0/header and document limits PASS. Packaging within reserved30s.
+M293 staged-git-size exit=0 elapsed=1.618s cap=120s timeout=False
+
+> characterlab@0.1.0 check:git-size
+> node scripts/check-git-file-sizes.mjs
+
+PASS: Git index contains no files at or above50,000,000 bytes.
