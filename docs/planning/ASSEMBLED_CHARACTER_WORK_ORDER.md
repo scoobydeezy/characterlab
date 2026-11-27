@@ -47,34 +47,29 @@ Old status logs are history, not instructions to resume an experiment.
 
 ## Baseline and preservation
 
-[ASSEMBLED_CHARACTER_BASELINE.json](ASSEMBLED_CHARACTER_BASELINE.json) pins the source
-commit, source records, member versions, requirement keys and family clause IDs. The source records retain full comparison requirements, evidence pointers and limits;
-they are referenced, not recopied. This is a scope pin, not assembly acceptance.
-The final Values closure supersedes the earlier HQ012 open-gate status in its stated
-scope. Dated status text in pinned documents does not reopen completed historical work.
+[ASSEMBLED_CHARACTER_BASELINE.json](ASSEMBLED_CHARACTER_BASELINE.json) pins the source commit, source records, member versions, requirement keys and family
+clause IDs. The source records retain full comparison requirements, evidence pointers and limits; they are referenced, not recopied. This is a scope pin, not
+assembly acceptance. The final Values closure supersedes the earlier HQ012 open-gate status in its stated scope. Dated status text in pinned documents does not
+reopen completed historical work.
 
-M0 confirms this concrete denominator with the owner. Exact control factory/fixture
-and scenario mappings must be resolved from the pinned evidence before implementing
-the affected milestone. Missing mappings are explicit pending items, never guessed
-fixtures or silently waived requirements. New tests do not enlarge the denominator;
-new mandatory phenomena/comparisons require an owner amendment.
+M0 confirms this concrete denominator with the owner. Exact control factory/fixture and scenario mappings must be resolved from the pinned evidence before
+implementing the affected milestone. Missing mappings are explicit pending items, never guessed fixtures or silently waived requirements. New tests do not
+enlarge the denominator; new mandatory phenomena/comparisons require an owner amendment.
 
-All 18 conditional research debts retain their existing triggers. They are not
-automatically immediate tasks and are not closed by deferral. If assembly triggers
-one, identify the claim and applicable obligation before proceeding. Preserve the
-existing 109 verdicts and all original counterexamples and meaningful competitors.
+All 18 conditional research debts retain their existing triggers. They are not automatically immediate tasks and are not closed by deferral. If assembly
+triggers one, identify the claim and applicable obligation before proceeding. Preserve the existing 109 verdicts and all original counterexamples and meaningful
+competitors.
 
 ## Starting checkout and the two carry-forwards
 
-Start assembly at `788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`, immediately before
-the first Workbench commit. The six simulation/formal trees match reviewed Workbench
-HEAD `46e0017a7bc39b05a2ce977036615bd164804d58`; no simulation change is lost.
+Start assembly at `788e1a89ce44ffe9f8c2b56d9078ee1b6b44d535`, immediately before the first Workbench commit. The six simulation/formal trees match reviewed
+Workbench HEAD `46e0017a7bc39b05a2ce977036615bd164804d58`; no simulation change is lost.
 
-Preserve the original checkout and research bytes; assembly uses a separate worktree.
-Do not publish preservation refs without authorization or restart historical audits.
+Preserve the original checkout and research bytes; assembly uses a separate worktree. Do not publish preservation refs without authorization or restart
+historical audits.
 
-Transfer this planning package and the newly trimmed directives; do not import the
-archived logs into the assembly branch (they remain on the preserved branch). Carry:
+Transfer this planning package and the newly trimmed directives; do not import the archived logs into the assembly branch (they remain on the preserved branch).
+Carry:
 
 - The two test changes from `40954e3c`: `src/test/semanticPhaseOrdering.test.ts` and
   `src/test/semanticPhaseRollbackCause.test.ts`. The former test failed on an incorrect
@@ -84,20 +79,15 @@ archived logs into the assembly branch (they remain on the preserved branch). Ca
   pinned reference to the old evidence; do not import its UI or rewrite historical traces.
   A successor repair must identify its changed trace/version semantics.
 
-No other Workbench implementation, catalog or evidence bundle moves by default. Historical controls stay executable and unchanged on the new branch. Reuse tested
-mechanism functions where sound; do not redesign mathematics to ease assembly.
+No other Workbench implementation, catalog or evidence bundle moves by default. Historical controls stay executable and unchanged on the new branch. Reuse
+tested mechanism functions where sound; do not redesign mathematics to ease assembly.
 
-The successor model, admission, composition and runtime live under `src/assembled`.
-Freeze the original Campaign 2 model/factory/runtime, fixtures and contracts as controls;
-do not extend them in place. Reuse unchanged mechanism/substrate functions directly.
-A changed shared dependency must retain its old behavior and old control imports via
-a separate versioned successor; unchanged Campaign 2 files alone do not prove isolation.
-M2 names successor files, reused dependencies, identity/version boundaries and the
-control dependency closure before coding. New composition binds one shared state and
-scheduler; it never dispatches to independent research runtimes. No wholesale runtime
-copy is planned. If an inseparable component needs a bounded port/refactor, M2 must
-name that boundary, justification and control comparison for its single owner review.
-The M1 no-copy rule does not authorize changing the frozen control in place.
+The successor model, admission, composition and runtime live under `src/assembled`. Freeze the original Campaign 2 model/factory/runtime, fixtures and contracts
+as controls; do not extend them in place. Reuse unchanged mechanism/substrate functions directly. A changed shared dependency must retain its old behavior and
+old control imports via a separate versioned successor; unchanged Campaign 2 files alone do not prove isolation. M2 names successor files, reused dependencies,
+identity/version boundaries and the control dependency closure before coding. New composition binds one shared state and scheduler; it never dispatches to
+independent research runtimes. No wholesale runtime copy is planned. If an inseparable component needs a bounded port/refactor, M2 must name that boundary,
+justification and control comparison for its single owner review. The M1 no-copy rule does not authorize changing the frozen control in place.
 
 ## Milestones and decision gates
 
@@ -248,3 +238,13 @@ Original BIO/EPI controls/limits remain; final whole-candidate replay required. 
   no person dependency. Keep laws/kernel, reserve10, delay0/2, amount80, seed0 and
   acceptance gate fixed. Latest owner continuation permits diagnosis/repair after
   failures until M38 completion; owner approved +180s (1980s total); evidence gates remain.
+
+## Post-M293 audit adjustment — 2026-11-27
+- Before further feature integration, carry the nine accepted families to candidate0.167 production at133043a5. Historical acceptance stays version-scoped until each current gate is discharged. One bounded family/affected group at a time; no new audit track.
+- Order:12.3,12.5 with its decision consumers,12.1,12.2,12.4,12.6,12.7,12.8,12.14. Reuse original fixtures, laws, controls and full acceptance criteria. Run affected behavioral gates; retain other evidence only with named producer/consumer/dependency and semantic no-impact proofs. Record dispositions in existing C/F rows, not a second ledger. Split before limits; no smoke-test substitute.
+- Pin changed paths and invalidation risks before each package. A repair repins the candidate and identifies prior checks it invalidates. Later shared law/calibration, state/schema, phase, RNG or causal-path changes trigger affected replay; ten versions without a review triggers dependency review, not automatic full-suite reruns. Final full-candidate replay remains required.
+- M293 seeds4..7 and negative-control reconciliation remain next reinforcement work after this checkpoint, with the committed fixture/header and all original comparisons unchanged. No seed search or retrospective tuning.
+- First, pilot exact-byte archival of completed M261 machine evidence using the existing evidence-archives manifest/restore path. Keep readable results, original paths, byte lengths and SHA-256; verify archive and restored bytes before removing tracked originals. Exact-path ignores only; no evidence deletion, JSON rewriting or history rewrite.
+- Archive completed M162–M293 machine JSON >=1MiB in bounded batches as the checkpoint touches it; no separate backlog gate. Package future such evidence at closure. Keep no tracked raw/archive duplicate. Record compressed and decoded totals at family closure; per-package caps also remain. Existing payload compression is not archival, and this does not remove old Git blobs. Restore required evidence before research/replay.
+- Autonomous peers remain deferred. For each affected open clause, preserve its original comparison using ordinary perceived stand-ins/reports and permitted target-local state. If this cannot suffice, show the clause, failed comparison and minimum missing capability before seeking a scope ruling; never substitute authored observer belief or waive the clause.
+- Mechanical extraction of large owner/runtime files is a post-acceptance candidate, with behavior/trace preservation and no bundled semantic reduction. It is neither current integration work nor authorization for UI/Campaign4. No percent-complete or calendar estimate follows from milestone counts.
