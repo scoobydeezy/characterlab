@@ -1,42 +1,61 @@
-# Current work — M291 complete; Family12.9 open
-The current0.167 character acquires habit from perceived performed outcomes.
-Information-only correction changes reward expectation without erasing habit.
-A performed attempt perceived as unrewarding weakens habit7/8 ->7/16 and removes
-its other-task choice contribution: A probability1/2 ->0 at three live probes.
-[M291 result](ASSEMBLED_CHARACTER_M291_RESULT.md); plan dcb186ce.
-No production/formal/law changes; same model/state/scheduler/save.
+# Current work — M292 learned satisfier reliance on0.167
+Baseline e3c60e49; one active milestone, test/evidence only.
+Capabilities: concentrated versus diversified learning affects substitution;
+information/availability govern usable substitutes; accumulated expectation resists
+one contrary report. Same shared model/state/scheduler/save, no dependence trait.
+Family12.9 clauses4/5 remain open beyond this finite receiving comparison.
 
-## Completed comparison
-Social reward task uses normal stand-in evidence; second task nonsocial.
-Same physical reward/opportunities, four A practices, seed0, body10/rate0.
-Sensor-mediated reports differ; this is not physically unrewarded practice.
-Original reward-task motive0; other-task motive1, live reasons and known routes.
-Unequal means are explicit. M290 retains the separate equal-mean/cue/control proof.
-Five native cases pass acquisition/correction/reversal and denied/absent privacy.
-Actual owner writes distinguish information-only from performed observations.
-Exact continuation from save8 and independent prefix/terminal repeat pass.
-No coupling claim from same seed; native probability change is the decision gate.
-One repeat invocation selected no tests; corrected filter passes, original retained.
-Types/boundary/research/archive pass. Integrity and staged-size receipt in result.
+## Fixed comparison before implementation
+Reuse original M230 sources for eight cases: concentrated, diversified,
+knownFailure, knownAlternative, unavailable, deniedInfo, absentInfo,
+correctedConcentrated. Four successful A/A/A/A or A/B/A/B practices4..7,
+social TASK with normal stand-in reports1..3, body10/rate0, information8,
+free probes9..11, seed0. No learned starting state.
+Current declaration/source representation uses M287/M288 promotion, restores
+original task/action/instruction domains, and adds only an unbound item location.
+Use M289 workspace6 and normal recovery8/awake9..11 to prevent sleep/readiness
+from masking the compared learning. Original outcomes, permissions, precision10,
+cue, route availability, information and practice schedule remain unchanged.
+Global activation0, MeanHistory/Residual1/2, sample cap16, D3/Ramp,
+PeriodicDisuse H4/half fixed; no per-case law or seed selection.
+At every probe assert live common-task motive, actual candidate/owner consumption,
+known route status, reason basis and actual selected physical execution.
+Require:
+- concentrated: B unknown, no substitute after A removal;
+- diversified: B learned by two practices, chooses/applies B at all three probes;
+- knownFailure: B known0 stays distinct from unknown, no substitute;
+- knownAlternative: B1000 learned informationally, no B practice, actual B use;
+- unavailable: acquired alternatives remain, neither can be used;
+- deniedInfo/absentInfo: unknown B and equal complete permitted-output projections;
+- correctedConcentrated: A800/B0 after correction, retained habit and actual A use.
+Compare native belief/habit/admission and first probability with the unchanged
+MeanHistory component and preserved M249/M250 projections; classify differences.
+Retain LatestHistory, ExpectationOnly, HistoryOnly and NoLearning source controls.
+Do not claim habit necessity, new physiological learning, or same-seed coupling.
+Native later histories follow actual native actions.
 
-## Next bounded item
-Family12.9 remains open. M289's reward-specific admission overlap remains.
-Next examine dependence on satisfiers/substitutes and the required resistance
-comparisons against the accepted contracts and retained M230/M249–251 evidence.
-Write one finite card before implementation; preserve original HABIT controls.
-Do not treat other-task habit access as reward-free compulsion or family acceptance.
-Escalate genuine alternative-law/ontology/scope decisions; routine repairs remain
-self-approved within one package's fixed laws, comparison and budget.
-No UI, autonomous peers, new standalone runtime or blanket prior-family promotion.
-
-## Limits and retained scope
-M291 used two test/fixture files, no production files; three evidence artifacts.
-Original limits:12 files,20 artifacts/5MiB,600s per command,1800s verification.
-No budget extension. Verification ends after the prescribed passing checks.
-MeanHistory/Residual1/2, precision10/cap16, activation0, D3/Ramp,
-PeriodicDisuse H4/half remain. HABIT ledger, CTL009 and RO015/010 preserved.
+## Scope, risks, checks and binary stop
+Two new fixture/test files planned; cap12 production/test files.
+No production or formal edits planned; existing dependence-substitutes/0.2 and
+assembled general-habit/0.167 contracts govern their respective scopes.
+Consulted HABIT ledger, MEC001/011..020, EXP001/003/004, CTL009 and RO008/010/015/020;
+preserve distinctions and original29-run/261-prefix controls by source hashes.
+Four paired native groups capped450s each; actual cumulative cap1800s, not sum
+of ceilings. Before each launch ensure remaining budget covers its estimate.
+Restore diversified save8 through natural termination with exact state/output/
+trace/save each settlement; independent diversified repeat matches8 and terminal.
+Types, boundary/research/archive, original-source and lossless evidence integrity,
+document limits and staged Git-size. No unrelated frozen-C2 rerun: no dependency edit.
+Evidence: one result/log/JSON, <=20 files/5MiB. Per-command<=600s; one long job.
+Failure risks: readiness or unrelated motives masking source; altered practice
+domain; unknown collapsed tozero; truth leaking; information training habit;
+learned efficacy not reaching actual reasons; version carry silently changing laws.
+Done only when all eight cases, privacy, continuation/repeat and preservation pass,
+with differences classified. Any unresolved failure stays explicit; no family waiver.
+M290/291 acquired-habit/control/reversal remain retained; M289 reward-specific
+admission overlap remains. Broader reinforcement, absence/craving/relapse and
+remaining resistance comparisons follow, never inferred from this substitution gate.
 E88/P21/N10/U13=132;21members/15families;9 version-scoped accepted families.
-Final whole-candidate replay and assembly acceptance remain open.
 | Registry | Current count |
 |---|---|
 | Research obligations | **0 active / 18 conditional / 0 unowned** |
